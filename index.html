@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deeside & Flintshire Fuel Prices</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,500;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0f1117;
+    --surface: #181b24;
+    --surface-2: #1e2230;
+    --border: #2a2e3d;
+    --text: #e4e6ee;
+    --text-muted: #8b8fa3;
+    --accent: #38bdf8;
+    --accent-glow: rgba(56, 189, 248, 0.15);
+    --green: #34d399;
+    --green-bg: rgba(52, 211, 153, 0.1);
+    --amber: #fbbf24;
+    --amber-bg: rgba(251, 191, 36, 0.1);
+    --red: #f87171;
+    --red-bg: rgba(248, 113, 113, 0.1);
+    --radius: 10px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  .app-header {
+    padding: 20px 28px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    background: var(--surface);
+  }
+
+  .app-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .app-title svg {
+    width: 28px;
+    height: 28px;
+    color: var(--accent);
+    flex-shrink: 0;
+  }
+
+  .app-title h1 {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .app-title h1 span {
+    color: var(--text-muted);
+    font-weight: 400;
+    font-size: 14px;
+    margin-left: 8px;
+  }
+
+  .header-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .fuel-toggle {
+    display: flex;
+    background: var(--bg);
+    border-radius: 8px;
+    padding: 3px;
+    border: 1px solid var(--border);
+  }
+
+  .fuel-toggle button {
+    font-family: 'DM Sans', sans-serif;
+    padding: 7px 16px;
+    border: none;
+    background: transparent;
+    color: var(--text-muted);
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .fuel-toggle button.active {
+    background: var(--accent);
+    color: #0f1117;
+    font-weight: 700;
+  }
+
+  .sort-select {
+    font-family: 'DM Sans', sans-serif;
+    padding: 8px 14px;
+    background: var(--bg);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 13px;
+    cursor: pointer;
+    appearance: none;
+    padding-right: 28px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%238b8fa3' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+  }
+
+  .badge-live {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--green-bg);
+    border: 1px solid rgba(52, 211, 153, 0.2);
+    color: var(--green);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .badge-live .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--green);
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  .main-layout {
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    height: calc(100vh - 73px);
+  }
+
+  @media (max-width: 900px) {
+    .main-layout {
+      grid-template-columns: 1fr;
+      height: auto;
+    }
+    #map { min-height: 50vh; }
+  }
+
+  #map {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+  }
+
+  .leaflet-tile-pane { filter: saturate(0.3) brightness(0.7) contrast(1.2); }
+  .leaflet-container { background: var(--bg); }
+
+  .sidebar {
+    border-left: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    background: var(--surface);
+    overflow: hidden;
+  }
+
+  .stats-bar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .stat {
+    background: var(--surface);
+    padding: 14px 16px;
+    text-align: center;
+  }
+
+  .stat-label {
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+  }
+
+  .stat-value {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .stat-value.low { color: var(--green); }
+  .stat-value.avg { color: var(--amber); }
+  .stat-value.high { color: var(--red); }
+
+  .station-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 8px;
+  }
+
+  .station-list::-webkit-scrollbar { width: 6px; }
+  .station-list::-webkit-scrollbar-track { background: transparent; }
+  .station-list::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+  .station-card {
+    padding: 14px 16px;
+    border-radius: var(--radius);
+    border: 1px solid transparent;
+    margin-bottom: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .station-card:hover {
+    background: var(--surface-2);
+    border-color: var(--border);
+  }
+
+  .station-card.cheapest {
+    background: var(--green-bg);
+    border-color: rgba(52, 211, 153, 0.2);
+  }
+
+  .station-card.below-avg {
+    background: rgba(52, 211, 153, 0.04);
+    border-color: rgba(52, 211, 153, 0.1);
+  }
+
+  .station-card.expensive {
+    background: var(--red-bg);
+    border-color: rgba(248, 113, 113, 0.15);
+  }
+
+  .station-card.active {
+    border-color: var(--accent);
+    background: var(--accent-glow);
+  }
+
+  .station-info {}
+
+  .station-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 3px;
+  }
+
+  .brand-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+
+  .station-name {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.3;
+  }
+
+  .station-address {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 2px;
+  }
+
+  .station-distance {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 3px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .station-price {
+    text-align: right;
+  }
+
+  .price-value {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1;
+  }
+
+  .price-unit {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 2px;
+  }
+
+  .price-updated {
+    font-size: 10px;
+    color: var(--text-muted);
+    margin-top: 4px;
+    opacity: 0.7;
+  }
+
+  .price-diff {
+    font-size: 10px;
+    font-family: 'JetBrains Mono', monospace;
+    margin-top: 2px;
+    opacity: 0.9;
+  }
+
+  .price-diff.above { color: var(--red); }
+  .price-diff.below { color: var(--green); }
+  .price-diff.level { color: var(--text-muted); }
+
+  .price-low { color: var(--green); }
+  .price-mid { color: var(--amber); }
+  .price-high { color: var(--red); }
+
+  .station-tag {
+    display: inline-block;
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 2px 7px;
+    border-radius: 4px;
+    margin-top: 4px;
+  }
+
+  .tag-cheapest { background: var(--green-bg); color: var(--green); border: 1px solid rgba(52,211,153,0.2); }
+  .tag-expensive { background: var(--red-bg); color: var(--red); border: 1px solid rgba(248,113,113,0.15); }
+  .tag-note { background: rgba(251,191,36,0.1); color: var(--amber); border: 1px solid rgba(251,191,36,0.15); }
+
+  .colour-key {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    padding: 8px 16px;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface-2);
+  }
+
+  .key-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .key-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+
+  .key-green { background: var(--green); }
+  .key-amber { background: var(--amber); }
+  .key-red { background: var(--red); }
+
+  .footer-note {
+    padding: 12px 16px;
+    border-top: 1px solid var(--border);
+    font-size: 11px;
+    color: var(--text-muted);
+    text-align: center;
+    line-height: 1.5;
+    background: var(--surface);
+  }
+
+  .footer-note a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .map-popup {
+    font-family: 'DM Sans', sans-serif;
+  }
+  .map-popup .popup-brand {
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 2px;
+  }
+  .map-popup .popup-address {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 6px;
+  }
+  .map-popup .popup-price {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .map-popup .popup-label {
+    font-size: 11px;
+    color: #888;
+  }
+
+  .leaflet-popup-content-wrapper {
+    border-radius: 10px !important;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3) !important;
+  }
+
+  .api-banner {
+    padding: 14px 16px;
+    background: linear-gradient(135deg, rgba(56, 189, 248, 0.08), rgba(56, 189, 248, 0.02));
+    border-bottom: 1px solid var(--border);
+    font-size: 12px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .api-banner svg {
+    width: 16px;
+    height: 16px;
+    color: var(--accent);
+    flex-shrink: 0;
+  }
+
+  .api-banner a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+  }
+</style>
+</head>
+<body>
+
+<header class="app-header">
+  <div class="app-title">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 22V6l9-4 9 4v16"/><path d="M12 2v20"/><path d="M3 10h18"/><circle cx="7" cy="15" r="1.5"/><circle cx="17" cy="15" r="1.5"/></svg>
+    <h1>Fuel Prices <span>Deeside, Flintshire &amp; Chester</span></h1>
+  </div>
+  <div class="header-controls">
+    <div class="badge-live"><span class="dot"></span> Fuel Finder Data</div>
+    <div class="fuel-toggle" id="fuelToggle">
+      <button class="active" data-fuel="unleaded">Unleaded</button>
+      <button data-fuel="diesel">Diesel</button>
+    </div>
+    <select class="sort-select" id="sortSelect">
+      <option value="price-asc">Price: Low → High</option>
+      <option value="price-desc">Price: High → Low</option>
+      <option value="distance">Distance</option>
+      <option value="name">Name A-Z</option>
+    </select>
+  </div>
+</header>
+
+<div class="main-layout">
+  <div id="map"></div>
+  <div class="sidebar">
+    <div class="api-banner">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+      <span>Powered by the <a href="https://www.gov.uk/guidance/access-the-latest-fuel-prices-and-forecourt-data-via-api-or-email" target="_blank">GOV.UK Fuel Finder API</a>. Register for live data via OAuth 2.0.</span>
+    </div>
+    <div class="stats-bar" id="statsBar">
+      <div class="stat"><div class="stat-label">UK Average</div><div class="stat-value avg" id="statNatl">—</div></div>
+      <div class="stat"><div class="stat-label">Local Cheapest</div><div class="stat-value low" id="statLow">—</div></div>
+      <div class="stat"><div class="stat-label">Local Highest</div><div class="stat-value high" id="statHigh">—</div></div>
+      <div class="stat"><div class="stat-label">50L Saving</div><div class="stat-value low" id="statSave">—</div></div>
+    </div>
+    <div class="colour-key">
+      <span class="key-item"><span class="key-dot key-green"></span> Below UK avg</span>
+      <span class="key-item"><span class="key-dot key-amber"></span> Up to 5p above</span>
+      <span class="key-item"><span class="key-dot key-red"></span> 5p+ above avg</span>
+    </div>
+    <div class="station-list" id="stationList"></div>
+    <div class="footer-note">
+      Data from GOV.UK Fuel Finder Scheme &middot; Updated within 30 min of price changes<br>
+      UK avg from DESNZ weekly road fuel prices (w/c 23 Feb 2026)<br>
+      Built for <a href="https://deeside.com" target="_blank">Deeside.com</a> &middot; Connected Deeside Newsroom
+    </div>
+  </div>
+</div>
+
+<script>
+// ── COLOUR GRADING SYSTEM ──
+// This is NOT part of the GOV.UK Fuel Finder API.
+// The API returns raw data only: prices, forecourt details, coordinates, timestamps.
+// The colour grading is our editorial layer applied on top.
+//
+// MODE: 'relative' (default) or 'fixed'
+//
+// RELATIVE: Splits the local price range into thirds:
+//   - Green  = bottom third (cheapest locally)
+//   - Amber  = middle third
+//   - Red    = top third (most expensive locally)
+//   Thresholds shift dynamically as data changes.
+//
+// FIXED: Uses hardcoded penny-per-litre breakpoints:
+//   - Green  = under fixedThresholds.low (e.g. 130p)
+//   - Amber  = between low and high
+//   - Red    = above fixedThresholds.high (e.g. 140p)
+//   Good for benchmarking against a number meaningful to readers.
+//
+// To switch, change colourMode and/or fixedThresholds below:
+
+const colourMode = 'fixed'; // 'relative' | 'fixed'
+const fixedThresholds = {
+  unleaded: { low: 131.7, high: 136.7 },  // national avg / avg+5p
+  diesel:   { low: 141.5, high: 146.5 }   // national avg / avg+5p
+};
+
+// National averages (w/c 23 Feb 2026, DESNZ weekly data)
+const nationalAvg = {
+  unleaded: 131.7,
+  diesel: 141.5
+};
+
+// ── STATION DATA ──
+// In production, this would be fetched from the Fuel Finder API
+// API endpoint: GET /forecourts?latitude=53.18&longitude=-3.04&radius=15
+const stations = [
+  {
+    id: 13,
+    name: "Costco Chester",
+    brand: "COSTCO",
+    address: "Dunkirk Way, Chester Gates, CH1 6LT",
+    lat: 53.2052,
+    lng: -2.9281,
+    unleaded: 122.9,
+    diesel: 132.9,
+    updated: "2026-02-25T10:12:00",
+    color: "#E91E63",
+    distance: 5.4,
+    note: "Membership required"
+  },
+  {
+    id: 1,
+    name: "ASDA Queensferry",
+    brand: "ASDA",
+    address: "Chester Road, Queensferry, CH5 2DQ",
+    lat: 53.2122,
+    lng: -3.0356,
+    unleaded: 131.7,
+    diesel: 139.7,
+    updated: "2026-02-25T09:15:00",
+    color: "#7CB342",
+    distance: 0.6
+  },
+  {
+    id: 2,
+    name: "Tesco Broughton Extra",
+    brand: "TESCO",
+    address: "Broughton Road, Broughton, CH4 0DR",
+    lat: 53.1803,
+    lng: -2.9742,
+    unleaded: 132.9,
+    diesel: 140.9,
+    updated: "2026-02-25T08:45:00",
+    color: "#1565C0",
+    distance: 3.2
+  },
+  {
+    id: 3,
+    name: "Texaco Dobshill Garage",
+    brand: "TEXACO",
+    address: "Chester Road, Dobshill, CH5 3LZ",
+    lat: 53.1932,
+    lng: -3.0482,
+    unleaded: 133.9,
+    diesel: 141.9,
+    updated: "2026-02-25T10:30:00",
+    color: "#E53935",
+    distance: 1.8
+  },
+  {
+    id: 4,
+    name: "Esso Connah's Quay",
+    brand: "ESSO",
+    address: "Chester Road East, Connah's Quay, CH5 1TD",
+    lat: 53.2182,
+    lng: -3.0572,
+    unleaded: 134.9,
+    diesel: 142.9,
+    updated: "2026-02-25T07:20:00",
+    color: "#0D47A1",
+    distance: 1.1
+  },
+  {
+    id: 5,
+    name: "Esso Shotton",
+    brand: "ESSO",
+    address: "Church Street, Shotton, CH5 4AS",
+    lat: 53.2128,
+    lng: -3.0367,
+    unleaded: 135.9,
+    diesel: 143.9,
+    updated: "2026-02-25T06:55:00",
+    color: "#0D47A1",
+    distance: 0.8
+  },
+  {
+    id: 6,
+    name: "Newbridge Service Station",
+    brand: "DRAGON",
+    address: "Holywell Road, Ewloe, CH5 3BS",
+    lat: 53.1987,
+    lng: -3.0628,
+    unleaded: 137.9,
+    diesel: 145.9,
+    updated: "2026-02-25T11:00:00",
+    color: "#D32F2F",
+    distance: 2.4
+  },
+  {
+    id: 7,
+    name: "Shell A55 Northop Hall (East)",
+    brand: "SHELL",
+    address: "A55 Expressway Eastbound, Northop Hall",
+    lat: 53.1921,
+    lng: -3.1089,
+    unleaded: 141.9,
+    diesel: 149.9,
+    updated: "2026-02-25T10:00:00",
+    color: "#FFB300",
+    distance: 5.1
+  },
+  {
+    id: 8,
+    name: "Shell A55 Northop Hall (West)",
+    brand: "SHELL",
+    address: "A55 Expressway Westbound, Northop Hall",
+    lat: 53.1918,
+    lng: -3.1095,
+    unleaded: 141.9,
+    diesel: 149.9,
+    updated: "2026-02-25T10:05:00",
+    color: "#FFB300",
+    distance: 5.2
+  },
+  {
+    id: 9,
+    name: "JET Buckley",
+    brand: "JET",
+    address: "Mold Road, Buckley, CH7 3EF",
+    lat: 53.1713,
+    lng: -3.0847,
+    unleaded: 134.9,
+    diesel: 142.9,
+    updated: "2026-02-25T09:40:00",
+    color: "#7B1FA2",
+    distance: 3.8
+  },
+  {
+    id: 10,
+    name: "Texaco Buckley",
+    brand: "TEXACO",
+    address: "Liverpool Road, Buckley, CH7 3PL",
+    lat: 53.1718,
+    lng: -3.0713,
+    unleaded: 136.9,
+    diesel: 144.9,
+    updated: "2026-02-25T08:10:00",
+    color: "#E53935",
+    distance: 4.1
+  },
+  {
+    id: 11,
+    name: "Tesco Mold",
+    brand: "TESCO",
+    address: "Chester Road, Mold, CH7 1UE",
+    lat: 53.1658,
+    lng: -3.1348,
+    unleaded: 132.9,
+    diesel: 140.9,
+    updated: "2026-02-25T09:50:00",
+    color: "#1565C0",
+    distance: 7.2
+  },
+  {
+    id: 12,
+    name: "Rhydymwyn Service Station",
+    brand: "INDEPENDENT",
+    address: "Denbigh Road, Rhydymwyn",
+    lat: 53.1548,
+    lng: -3.1872,
+    unleaded: 133.9,
+    diesel: 141.9,
+    updated: "2026-02-25T07:30:00",
+    color: "#546E7A",
+    distance: 9.6
+  },
+  {
+    id: 14,
+    name: "Morrisons Saltney",
+    brand: "MORRISONS",
+    address: "High Street, Saltney, CH4 8SR",
+    lat: 53.1886,
+    lng: -2.9582,
+    unleaded: 131.9,
+    diesel: 141.9,
+    updated: "2026-02-25T09:30:00",
+    color: "#43A047",
+    distance: 4.6
+  },
+  {
+    id: 15,
+    name: "Morrisons Chester",
+    brand: "MORRISONS",
+    address: "Liverpool Road, Chester, CH2 4BA",
+    lat: 53.2062,
+    lng: -2.8913,
+    unleaded: 129.7,
+    diesel: 138.7,
+    updated: "2026-02-25T08:20:00",
+    color: "#43A047",
+    distance: 7.8
+  },
+  {
+    id: 16,
+    name: "Sainsbury's Chester",
+    brand: "SAINSBURYS",
+    address: "Caldy Valley Road, Chester, CH3 5QJ",
+    lat: 53.1812,
+    lng: -2.8712,
+    unleaded: 132.9,
+    diesel: 142.9,
+    updated: "2026-02-25T10:45:00",
+    color: "#EF6C00",
+    distance: 9.2
+  },
+  {
+    id: 17,
+    name: "Shell Halkyn Road (Holywell)",
+    brand: "SHELL",
+    address: "Halkyn Road, Stamford Gate, CH8 7SG",
+    lat: 53.2732,
+    lng: -3.2214,
+    unleaded: 143.9,
+    diesel: 151.9,
+    updated: "2026-02-25T09:55:00",
+    color: "#FFB300",
+    distance: 11.2
+  },
+  {
+    id: 18,
+    name: "JET Connah's Quay",
+    brand: "JET",
+    address: "120 Chester Road, Connah's Quay, CH5 4BZ",
+    lat: 53.2191,
+    lng: -3.0622,
+    unleaded: 135.9,
+    diesel: 143.9,
+    updated: "2026-02-25T08:50:00",
+    color: "#7B1FA2",
+    distance: 1.3
+  },
+  {
+    id: 19,
+    name: "Texaco Holywell",
+    brand: "TEXACO",
+    address: "Holway Road, Holywell, CH8 7HZ",
+    lat: 53.2707,
+    lng: -3.2163,
+    unleaded: 139.9,
+    diesel: 147.9,
+    updated: "2026-02-25T07:15:00",
+    color: "#E53935",
+    distance: 10.8
+  }
+];
+
+// ── STATE ──
+let currentFuel = 'unleaded';
+let currentSort = 'price-asc';
+let activeStation = null;
+let markers = {};
+
+// ── MAP INIT ──
+const map = L.map('map', { zoomControl: true }).setView([53.21, -3.04], 11);
+
+L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+  attribution: '&copy; <a href="https://carto.com/">CARTO</a> &copy; <a href="https://www.openstreetmap.org/copyright">OSM</a>',
+  maxZoom: 19
+}).addTo(map);
+
+// ── MARKER ICONS ──
+function createMarkerIcon(price, color, isActive, isCheapest) {
+  const borderColor = isCheapest ? '#34d399' : (isActive ? '#38bdf8' : color);
+  const bgColor = isCheapest ? 'rgba(52,211,153,0.15)' : (isActive ? 'rgba(56,189,248,0.15)' : 'rgba(15,17,23,0.9)');
+  const size = isActive ? 52 : 44;
+  const fontSize = isActive ? 13 : 11;
+
+  return L.divIcon({
+    className: 'custom-marker',
+    html: `<div style="
+      width:${size}px; height:${size}px; border-radius:50%;
+      background:${bgColor}; border:2.5px solid ${borderColor};
+      display:flex; align-items:center; justify-content:center;
+      font-family:'JetBrains Mono',monospace; font-size:${fontSize}px; font-weight:700;
+      color:${isCheapest ? '#34d399' : '#e4e6ee'};
+      box-shadow:0 4px 16px rgba(0,0,0,0.4);
+      backdrop-filter:blur(4px);
+      transition:all 0.2s;
+    ">${price.toFixed(1)}</div>`,
+    iconSize: [size, size],
+    iconAnchor: [size/2, size/2],
+    popupAnchor: [0, -size/2 - 4]
+  });
+}
+
+// ── RENDER ──
+function getPrice(station) {
+  return currentFuel === 'unleaded' ? station.unleaded : station.diesel;
+}
+
+function getSortedStations() {
+  const sorted = [...stations];
+  switch (currentSort) {
+    case 'price-asc': sorted.sort((a, b) => getPrice(a) - getPrice(b)); break;
+    case 'price-desc': sorted.sort((a, b) => getPrice(b) - getPrice(a)); break;
+    case 'distance': sorted.sort((a, b) => a.distance - b.distance); break;
+    case 'name': sorted.sort((a, b) => a.name.localeCompare(b.name)); break;
+  }
+  return sorted;
+}
+
+function getStats() {
+  const prices = stations.map(s => getPrice(s));
+  return {
+    low: Math.min(...prices),
+    avg: prices.reduce((a, b) => a + b, 0) / prices.length,
+    high: Math.max(...prices)
+  };
+}
+
+function getPriceClass(price, stats) {
+  if (colourMode === 'fixed') {
+    const thresholds = fixedThresholds[currentFuel];
+    if (price <= thresholds.low) return 'price-low';
+    if (price <= thresholds.high) return 'price-mid';
+    return 'price-high';
+  }
+  // Relative mode: split range into thirds
+  const range = stats.high - stats.low;
+  const threshold = range / 3;
+  if (price <= stats.low + threshold) return 'price-low';
+  if (price <= stats.low + threshold * 2) return 'price-mid';
+  return 'price-high';
+}
+
+function timeAgo(dateStr) {
+  const diff = Date.now() - new Date(dateStr).getTime();
+  const mins = Math.floor(diff / 60000);
+  if (mins < 60) return `${mins}m ago`;
+  const hours = Math.floor(mins / 60);
+  return `${hours}h ago`;
+}
+
+function render() {
+  const sorted = getSortedStations();
+  const stats = getStats();
+  const cheapestPrice = stats.low;
+
+  // Stats
+  const natl = nationalAvg[currentFuel];
+  document.getElementById('statNatl').textContent = natl.toFixed(1) + 'p';
+  document.getElementById('statLow').textContent = stats.low.toFixed(1) + 'p';
+  document.getElementById('statHigh').textContent = stats.high.toFixed(1) + 'p';
+  const saving = ((stats.high - stats.low) / 100 * 50).toFixed(2);
+  document.getElementById('statSave').textContent = '£' + saving;
+
+  // Clear markers
+  Object.values(markers).forEach(m => map.removeLayer(m));
+  markers = {};
+
+  // Add markers
+  stations.forEach(station => {
+    const price = getPrice(station);
+    const isCheapest = price === cheapestPrice;
+    const isActive = activeStation === station.id;
+
+    const marker = L.marker([station.lat, station.lng], {
+      icon: createMarkerIcon(price, station.color, isActive, isCheapest)
+    }).addTo(map);
+
+    const natl = nationalAvg[currentFuel];
+    const diff = price - natl;
+    const diffStr = diff < -0.5 ? `<span style="color:#16a34a">${diff.toFixed(1)}p vs UK avg</span>` :
+                    diff > 0.5 ? `<span style="color:#dc2626">+${diff.toFixed(1)}p vs UK avg</span>` :
+                    `<span style="color:#888">≈ UK average</span>`;
+
+    marker.bindPopup(`
+      <div class="map-popup">
+        <div class="popup-brand">${station.brand} — ${station.name}</div>
+        <div class="popup-address">${station.address}</div>
+        ${station.note ? '<div style="font-size:11px;color:#d97706;font-weight:600;margin-bottom:4px">⚠ ' + station.note + '</div>' : ''}
+        <div class="popup-price" style="color:${isCheapest ? '#16a34a' : '#1e293b'}">${price.toFixed(1)}p</div>
+        <div class="popup-label">${currentFuel === 'unleaded' ? 'Unleaded' : 'Diesel'} per litre</div>
+        <div style="font-size:11px;margin-top:4px;font-family:'JetBrains Mono',monospace">${diffStr}</div>
+      </div>
+    `);
+
+    marker.on('click', () => {
+      activeStation = station.id;
+      render();
+    });
+
+    markers[station.id] = marker;
+  });
+
+  // Station list
+  const listEl = document.getElementById('stationList');
+  listEl.innerHTML = sorted.map(station => {
+    const price = getPrice(station);
+    const isCheapest = price === cheapestPrice;
+    const isExpensive = price === stats.high;
+    const isActive = activeStation === station.id;
+    const priceClass = getPriceClass(price, stats);
+    const cardNatl = nationalAvg[currentFuel];
+    let cardClass = 'station-card';
+    if (isCheapest) cardClass += ' cheapest';
+    else if (price < cardNatl - 0.5) cardClass += ' below-avg';
+    if (isExpensive) cardClass += ' expensive';
+    if (isActive) cardClass += ' active';
+
+    return `
+      <div class="${cardClass}" data-id="${station.id}">
+        <div class="station-info">
+          <div class="station-brand">
+            <span class="brand-dot" style="background:${station.color}"></span>
+            <span class="station-name">${station.name}</span>
+          </div>
+          <div class="station-address">${station.address}</div>
+          <div class="station-distance">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            ${station.distance} miles from Deeside
+          </div>
+          ${isCheapest ? '<span class="station-tag tag-cheapest">★ Cheapest</span>' : ''}
+          ${isExpensive ? '<span class="station-tag tag-expensive">Most Expensive</span>' : ''}
+          ${station.note ? '<span class="station-tag tag-note">' + station.note + '</span>' : ''}
+        </div>
+        <div class="station-price">
+          <div class="price-value ${priceClass}">${price.toFixed(1)}<small style="font-size:12px">p</small></div>
+          <div class="price-unit">per litre</div>
+          <div class="price-updated">${timeAgo(station.updated)}</div>
+          ${(() => {
+            const diff = price - nationalAvg[currentFuel];
+            if (diff < -0.5) return '<div class="price-diff below">' + diff.toFixed(1) + 'p vs UK avg</div>';
+            if (diff > 0.5) return '<div class="price-diff above">+' + diff.toFixed(1) + 'p vs UK avg</div>';
+            return '<div class="price-diff level">≈ UK average</div>';
+          })()}
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  // Click handlers
+  listEl.querySelectorAll('.station-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const id = parseInt(card.dataset.id);
+      activeStation = id;
+      const station = stations.find(s => s.id === id);
+      map.flyTo([station.lat, station.lng], 14, { duration: 0.5 });
+      markers[id].openPopup();
+      render();
+    });
+  });
+}
+
+// ── EVENTS ──
+document.getElementById('fuelToggle').addEventListener('click', (e) => {
+  if (e.target.tagName === 'BUTTON') {
+    currentFuel = e.target.dataset.fuel;
+    document.querySelectorAll('#fuelToggle button').forEach(b => b.classList.remove('active'));
+    e.target.classList.add('active');
+    render();
+  }
+});
+
+document.getElementById('sortSelect').addEventListener('change', (e) => {
+  currentSort = e.target.value;
+  render();
+});
+
+// ── INIT ──
+render();
+</script>
+</body>
+</html>
