@@ -279,6 +279,10 @@
     flex-shrink: 0;
   }
 
+  .dot-low { background: var(--green); }
+  .dot-mid { background: var(--amber); }
+  .dot-high { background: var(--red); }
+
   .station-name {
     font-weight: 600;
     font-size: 14px;
@@ -791,8 +795,10 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
 }).addTo(map);
 
 // ── MARKER ICONS ──
-function createMarkerIcon(price, color, isActive, isCheapest) {
-  const borderColor = isCheapest ? '#34d399' : (isActive ? '#38bdf8' : color);
+function createMarkerIcon(price, priceClass, isActive, isCheapest) {
+  const colorMap = { 'price-low': '#34d399', 'price-mid': '#fbbf24', 'price-high': '#f87171' };
+  const baseColor = colorMap[priceClass] || '#8b8fa3';
+  const borderColor = isCheapest ? '#34d399' : (isActive ? '#38bdf8' : baseColor);
   const bgColor = isCheapest ? 'rgba(52,211,153,0.15)' : (isActive ? 'rgba(56,189,248,0.15)' : 'rgba(15,17,23,0.9)');
   const size = isActive ? 52 : 44;
   const fontSize = isActive ? 13 : 11;
@@ -886,8 +892,9 @@ function render() {
     const isCheapest = price === cheapestPrice;
     const isActive = activeStation === station.id;
 
+    const markerPriceClass = getPriceClass(price, stats);
     const marker = L.marker([station.lat, station.lng], {
-      icon: createMarkerIcon(price, station.color, isActive, isCheapest)
+      icon: createMarkerIcon(price, markerPriceClass, isActive, isCheapest)
     }).addTo(map);
 
     const natl = nationalAvg[currentFuel];
@@ -934,7 +941,7 @@ function render() {
       <div class="${cardClass}" data-id="${station.id}">
         <div class="station-info">
           <div class="station-brand">
-            <span class="brand-dot" style="background:${station.color}"></span>
+            <span class="brand-dot ${priceClass.replace('price-', 'dot-')}"></span>
             <span class="station-name">${station.name}</span>
           </div>
           <div class="station-address">${station.address}</div>
