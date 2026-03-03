@@ -701,7 +701,7 @@
 
     <div class="footer-note">
       *Distances measured from Queensferry roundabout<br>
-      Data from GOV.UK Fuel Finder Scheme &middot; Updated within 30 min of price changes<br>
+      Data from GOV.UK Fuel Finder Scheme &middot; CSV updated twice daily<br>
       <span id="dataTimestamp">UK avg from DESNZ weekly road fuel prices</span><br>
       Built for <a href="https://deeside.com" target="_blank">Deeside.com</a> &middot; Connected Deeside Newsroom
     </div>
@@ -854,11 +854,15 @@ function getPriceClass(price, stats) {
 }
 
 function timeAgo(dateStr) {
-  const diff = Date.now() - new Date(dateStr).getTime();
+  if (!dateStr) return '';
+  const date = new Date(dateStr);
+  if (isNaN(date.getTime())) return '';
+  const diff = Date.now() - date.getTime();
   const mins = Math.floor(diff / 60000);
-  if (mins < 60) return `${mins}m ago`;
+  if (mins < 60) return mins + 'm ago';
   const hours = Math.floor(mins / 60);
-  return `${hours}h ago`;
+  if (hours < 24) return hours + 'h ago';
+  return date.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
 }
 
 function render() {
@@ -959,7 +963,13 @@ function render() {
         <div class="station-price">
           <div class="price-value ${priceClass}">${price.toFixed(1)}<small style="font-size:12px">p</small></div>
           <div class="price-unit">per litre</div>
-          <div class="price-updated">${timeAgo(station.updated)}</div>
+          <div class="price-updated">${(() => {
+            if (!station.updated) return '';
+            const d = new Date(station.updated);
+            if (isNaN(d.getTime())) return '';
+            const hrs = Math.floor((Date.now() - d.getTime()) / 3600000);
+            return hrs < 24 ? timeAgo(station.updated) : 'Price set ' + timeAgo(station.updated);
+          })()}</div>
           ${(() => {
             const diff = price - nationalAvg[currentFuel];
             if (diff < -0.5) return '<div class="price-diff below">' + diff.toFixed(1) + 'p vs UK avg</div>';
