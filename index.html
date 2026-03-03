@@ -478,60 +478,6 @@
     max-height: 3000px;
   }
 
-  .affiliate-strip {
-    border-top: 1px solid var(--border);
-    padding: 10px 12px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    justify-content: center;
-  }
-
-  .affiliate-strip-label {
-    width: 100%;
-    text-align: center;
-    font-size: 8px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--text-muted);
-    margin-bottom: 2px;
-  }
-  .affiliate-strip-label::after {
-    content: ' AD';
-    font-size: 7px;
-    padding: 1px 3px;
-    border-radius: 2px;
-    background: rgba(255,255,255,0.08);
-    margin-left: 4px;
-  }
-
-  .aff-chip {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    padding: 5px 10px;
-    border-radius: 20px;
-    background: rgba(255,255,255,0.04);
-    border: 1px solid var(--border);
-    text-decoration: none;
-    font-size: 11px;
-    font-weight: 500;
-    color: var(--text-muted);
-    transition: all 0.2s;
-    white-space: nowrap;
-  }
-  .aff-chip:hover {
-    background: rgba(255,255,255,0.08);
-    border-color: rgba(255,255,255,0.15);
-    color: var(--text);
-  }
-  .aff-chip-icon { font-size: 12px; }
-    color: var(--green);
-    white-space: nowrap;
-    flex-shrink: 0;
-  }
-
   .map-popup {
     font-family: 'DM Sans', sans-serif;
   }
@@ -628,17 +574,10 @@
     <div class="sidebar-scroll">
     <div class="station-list" id="stationList"></div>
 
-    <!-- ── AFFILIATE STRIP (compact) ── -->
-    <div class="affiliate-strip">
-      <div class="affiliate-strip-label">Save on motoring</div>
-      <a class="aff-chip" href="#" target="_blank" rel="noopener sponsored" id="aff-breakdown"><span class="aff-chip-icon">🛡️</span> AA Breakdown</a>
-      <a class="aff-chip" href="#" target="_blank" rel="noopener sponsored" id="aff-insurance"><span class="aff-chip-icon">🚗</span> Compare Insurance</a>
-      <a class="aff-chip" href="#" target="_blank" rel="noopener sponsored" id="aff-costco"><span class="aff-chip-icon">⛽</span> Costco Membership</a>
-      <a class="aff-chip" href="#" target="_blank" rel="noopener sponsored" id="aff-fuelcard"><span class="aff-chip-icon">💳</span> Fuel Cards</a>
-    </div>
     </div>
 
     <div class="footer-note">
+      *Distances measured from Queensferry roundabout<br>
       Data from GOV.UK Fuel Finder Scheme &middot; Updated within 30 min of price changes<br>
       <span id="dataTimestamp">UK avg from DESNZ weekly road fuel prices</span><br>
       Built for <a href="https://deeside.com" target="_blank">Deeside.com</a> &middot; Connected Deeside Newsroom
@@ -803,7 +742,7 @@ function render() {
   if (!stations.length) return;
 
   // Two-tier system: core stations in sidebar, extended on map only
-  const CORE_RADIUS = 8; // miles
+  const CORE_RADIUS = 10; // miles from Queensferry roundabout
   const coreStations = stations.filter(s => s.distance <= CORE_RADIUS);
   const extendedStations = stations.filter(s => s.distance > CORE_RADIUS);
 
@@ -850,7 +789,7 @@ function render() {
         <div class="popup-price" style="color:${isCheapest ? '#16a34a' : '#1e293b'}">${price.toFixed(1)}p</div>
         <div class="popup-label">${currentFuel === 'unleaded' ? 'Unleaded' : 'Diesel'} per litre</div>
         <div style="font-size:11px;margin-top:4px;font-family:'JetBrains Mono',monospace">${diffStr}</div>
-        ${isExtended ? '<div style="font-size:10px;color:#888;margin-top:4px">📍 ' + station.distance + ' miles from Deeside</div>' : ''}
+        ${isExtended ? '<div style="font-size:10px;color:#888;margin-top:4px">📍 ' + station.distance + ' miles*</div>' : ''}
       </div>
     `);
 
@@ -888,7 +827,7 @@ function render() {
           <div class="station-address">${station.address}</div>
           <div class="station-distance">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            ${station.distance} miles from Deeside
+            ${station.distance} miles*
           </div>
           ${isCheapest ? '<span class="station-tag tag-cheapest">★ Cheapest</span>' : ''}
           ${isExpensive ? '<span class="station-tag tag-expensive">Most Expensive</span>' : ''}
