@@ -912,28 +912,30 @@ function render() {
   }
 
   let html = '';
-  // Rotating inline ad — cycles through offers
+  // Rotating inline ads — 3 slots, each shows a different offer
   const inlineAds = [
     { icon: '🛡️', title: 'AA Breakdown Cover', desc: 'From £4.50/month. Cover starts immediately.', cta: 'Get quote →', href: '#', id: 'aff-breakdown' },
     { icon: '🚗', title: 'Compare car insurance', desc: 'Check GoCompare for cheaper cover in minutes.', cta: 'Compare →', href: '#', id: 'aff-insurance' },
     { icon: '⛽', title: 'Costco membership', desc: 'Members save 8p+/litre — cheapest fuel locally.', cta: 'Join →', href: '#', id: 'aff-costco' },
     { icon: '💳', title: 'Business fuel cards', desc: 'Fixed weekly prices, no transaction fees. Free card.', cta: 'Apply →', href: '#', id: 'aff-fuelcard' }
   ];
-  const adPick = inlineAds[Math.floor(Date.now() / 60000) % inlineAds.length]; // rotates every minute
+  const adSlots = [4, 9, 14]; // after stations 5, 10, 15
+  const adBaseIndex = Math.floor(Date.now() / 60000) % inlineAds.length; // rotates every minute
 
   sorted.forEach((station, index) => {
     html += buildCard(station);
-    // Insert inline ad after 5th station
-    if (index === 4 && sorted.length > 5) {
+    const slotIndex = adSlots.indexOf(index);
+    if (slotIndex !== -1 && sorted.length > index + 1) {
+      const ad = inlineAds[(adBaseIndex + slotIndex) % inlineAds.length];
       html += `<div class="inline-ad">
         <span class="inline-ad-label">Sponsored</span>
-        <a href="${adPick.href}" target="_blank" rel="noopener sponsored" id="${adPick.id}">
-          <div class="inline-ad-icon">${adPick.icon}</div>
+        <a href="${ad.href}" target="_blank" rel="noopener sponsored" id="${ad.id}">
+          <div class="inline-ad-icon">${ad.icon}</div>
           <div class="inline-ad-text">
-            <div class="inline-ad-title">${adPick.title}</div>
-            <div class="inline-ad-desc">${adPick.desc}</div>
+            <div class="inline-ad-title">${ad.title}</div>
+            <div class="inline-ad-desc">${ad.desc}</div>
           </div>
-          <div class="inline-ad-cta">${adPick.cta}</div>
+          <div class="inline-ad-cta">${ad.cta}</div>
         </a>
       </div>`;
     }
