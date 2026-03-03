@@ -805,7 +805,7 @@ function render() {
   if (!stations.length) return;
 
   // Two-tier system: core stations in sidebar, extended on map only
-  const CORE_RADIUS = 20; // miles from Queensferry roundabout
+  const CORE_RADIUS = 10; // miles from Queensferry roundabout
   const coreStations = stations.filter(s => s.distance <= CORE_RADIUS);
   const extendedStations = stations.filter(s => s.distance > CORE_RADIUS);
 
