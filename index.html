@@ -221,9 +221,17 @@
   .stat-value.avg { color: var(--amber); }
   .stat-value.high { color: var(--red); }
 
-  .station-list {
+  .sidebar-scroll {
     flex: 1;
     overflow-y: auto;
+    min-height: 0;
+  }
+
+  .sidebar-scroll::-webkit-scrollbar { width: 6px; }
+  .sidebar-scroll::-webkit-scrollbar-track { background: transparent; }
+  .sidebar-scroll::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+  .station-list {
     padding: 8px;
   }
 
@@ -413,91 +421,112 @@
     text-decoration: none;
   }
 
-  /* ── AFFILIATE SIDEBAR ── */
-  .affiliate-section {
-    border-top: 1px solid var(--border);
-    padding: 14px 16px 10px;
-    flex-shrink: 0;
-  }
-
-  .affiliate-heading {
+  /* ── AFFILIATE SIDEBAR (collapsible) ── */
+  .station-list-divider {
+    padding: 8px 16px;
     font-size: 9px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: var(--text-muted);
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
+    background: rgba(255,255,255,0.02);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
   }
 
-  .affiliate-heading::after {
-    content: 'AD';
-    font-size: 8px;
-    padding: 1px 4px;
-    border-radius: 2px;
-    background: rgba(255,255,255,0.08);
+  .map-only-note {
+    padding: 10px 16px;
+    font-size: 11px;
     color: var(--text-muted);
+    border-top: 1px solid var(--border);
+    text-align: center;
+    line-height: 1.4;
   }
 
-  .affiliate-card {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 10px 12px;
-    border-radius: var(--radius);
-    background: rgba(255,255,255,0.03);
-    border: 1px solid var(--border);
-    margin-bottom: 8px;
-    text-decoration: none;
-    transition: all 0.2s;
+  .map-only-count {
+    font-weight: 600;
+    color: var(--accent);
+  }
+
+  .wider-toggle {
+    width: 100%;
+    padding: 10px 16px;
+    background: rgba(255,255,255,0.02);
+    border: none;
+    border-top: 1px solid var(--border);
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 600;
     cursor: pointer;
-  }
-
-  .affiliate-card:hover {
-    background: rgba(255,255,255,0.06);
-    border-color: rgba(255,255,255,0.15);
-  }
-
-  .affiliate-icon {
-    width: 36px;
-    height: 36px;
-    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-shrink: 0;
-    font-size: 16px;
+    gap: 6px;
+    font-family: 'DM Sans', sans-serif;
+    transition: background 0.2s;
+  }
+  .wider-toggle:hover { background: rgba(255,255,255,0.04); }
+  .wider-toggle .arrow { transition: transform 0.2s; font-size: 10px; }
+  .wider-toggle.open .arrow { transform: rotate(180deg); }
+
+  .wider-stations {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+  .wider-stations.open {
+    max-height: 3000px;
   }
 
-  .affiliate-icon.breakdown { background: rgba(251,191,36,0.15); }
-  .affiliate-icon.insurance { background: rgba(52,211,153,0.15); }
-  .affiliate-icon.costco { background: rgba(56,189,248,0.15); }
-  .affiliate-icon.fuel-card { background: rgba(168,85,247,0.15); }
-
-  .affiliate-text {
-    flex: 1;
-    min-width: 0;
+  .affiliate-strip {
+    border-top: 1px solid var(--border);
+    padding: 10px 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: center;
   }
 
-  .affiliate-title {
-    font-size: 12px;
+  .affiliate-strip-label {
+    width: 100%;
+    text-align: center;
+    font-size: 8px;
     font-weight: 600;
-    color: var(--text);
-    line-height: 1.3;
-  }
-
-  .affiliate-desc {
-    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
     color: var(--text-muted);
-    line-height: 1.4;
-    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+  .affiliate-strip-label::after {
+    content: ' AD';
+    font-size: 7px;
+    padding: 1px 3px;
+    border-radius: 2px;
+    background: rgba(255,255,255,0.08);
+    margin-left: 4px;
   }
 
-  .affiliate-cta {
-    font-size: 10px;
-    font-weight: 600;
+  .aff-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border);
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--text-muted);
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+  .aff-chip:hover {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(255,255,255,0.15);
+    color: var(--text);
+  }
+  .aff-chip-icon { font-size: 12px; }
     color: var(--green);
     white-space: nowrap;
     flex-shrink: 0;
@@ -596,53 +625,17 @@
       <span class="key-item"><span class="key-dot key-amber"></span> Up to 5p above</span>
       <span class="key-item"><span class="key-dot key-red"></span> 5p+ above avg</span>
     </div>
+    <div class="sidebar-scroll">
     <div class="station-list" id="stationList"></div>
 
-    <!-- ── AFFILIATE SIDEBAR ── 
-         Replace href="#" with your actual affiliate tracking links.
-         To get links, sign up at:
-         - Awin (awin.com) for AA, RAC, Costco, GoCompare
-         - Commission Junction (cj.com) for Green Flag
-         - Direct programmes for fuel cards
-         Remove or add cards as needed. -->
-    <div class="affiliate-section">
-      <div class="affiliate-heading">Save on motoring</div>
-
-      <a class="affiliate-card" href="#" target="_blank" rel="noopener sponsored" id="aff-breakdown">
-        <div class="affiliate-icon breakdown">🛡️</div>
-        <div class="affiliate-text">
-          <div class="affiliate-title">AA Breakdown Cover</div>
-          <div class="affiliate-desc">From £4.50/month. Cover starts immediately.</div>
-        </div>
-        <div class="affiliate-cta">Get quote →</div>
-      </a>
-
-      <a class="affiliate-card" href="#" target="_blank" rel="noopener sponsored" id="aff-insurance">
-        <div class="affiliate-icon insurance">🚗</div>
-        <div class="affiliate-text">
-          <div class="affiliate-title">Compare car insurance</div>
-          <div class="affiliate-desc">Check GoCompare for cheaper cover in minutes.</div>
-        </div>
-        <div class="affiliate-cta">Compare →</div>
-      </a>
-
-      <a class="affiliate-card" href="#" target="_blank" rel="noopener sponsored" id="aff-costco">
-        <div class="affiliate-icon costco">⛽</div>
-        <div class="affiliate-text">
-          <div class="affiliate-title">Costco membership</div>
-          <div class="affiliate-desc">Members save 8p+/litre — cheapest fuel locally.</div>
-        </div>
-        <div class="affiliate-cta">Join →</div>
-      </a>
-
-      <a class="affiliate-card" href="#" target="_blank" rel="noopener sponsored" id="aff-fuelcard">
-        <div class="affiliate-icon fuel-card">💳</div>
-        <div class="affiliate-text">
-          <div class="affiliate-title">Business fuel cards</div>
-          <div class="affiliate-desc">Fixed weekly prices, no transaction fees. Free card.</div>
-        </div>
-        <div class="affiliate-cta">Apply →</div>
-      </a>
+    <!-- ── AFFILIATE STRIP (compact) ── -->
+    <div class="affiliate-strip">
+      <div class="affiliate-strip-label">Save on motoring</div>
+      <a class="aff-chip" href="#" target="_blank" rel="noopener sponsored" id="aff-breakdown"><span class="aff-chip-icon">🛡️</span> AA Breakdown</a>
+      <a class="aff-chip" href="#" target="_blank" rel="noopener sponsored" id="aff-insurance"><span class="aff-chip-icon">🚗</span> Compare Insurance</a>
+      <a class="aff-chip" href="#" target="_blank" rel="noopener sponsored" id="aff-costco"><span class="aff-chip-icon">⛽</span> Costco Membership</a>
+      <a class="aff-chip" href="#" target="_blank" rel="noopener sponsored" id="aff-fuelcard"><span class="aff-chip-icon">💳</span> Fuel Cards</a>
+    </div>
     </div>
 
     <div class="footer-note">
@@ -808,11 +801,17 @@ function timeAgo(dateStr) {
 
 function render() {
   if (!stations.length) return;
-  const sorted = getSortedStations();
+
+  // Two-tier system: core stations in sidebar, extended on map only
+  const CORE_RADIUS = 8; // miles
+  const coreStations = stations.filter(s => s.distance <= CORE_RADIUS);
+  const extendedStations = stations.filter(s => s.distance > CORE_RADIUS);
+
+  const sorted = getSortedStations().filter(s => s.distance <= CORE_RADIUS);
   const stats = getStats();
   const cheapestPrice = stats.low;
 
-  // Stats
+  // Stats (based on ALL stations including extended)
   const natl = nationalAvg[currentFuel];
   document.getElementById('statNatl').textContent = natl.toFixed(1) + 'p';
   document.getElementById('statLow').textContent = stats.low.toFixed(1) + 'p';
@@ -824,19 +823,21 @@ function render() {
   Object.values(markers).forEach(m => map.removeLayer(m));
   markers = {};
 
-  // Add markers
+  // Add markers for ALL stations (core + extended)
   stations.forEach(station => {
     const price = getPrice(station);
     const isCheapest = price === cheapestPrice;
     const isActive = activeStation === station.id;
+    const isExtended = station.distance > CORE_RADIUS;
 
     const markerPriceClass = getPriceClass(price, stats);
     const marker = L.marker([station.lat, station.lng], {
-      icon: createMarkerIcon(price, markerPriceClass, isActive, isCheapest)
+      icon: createMarkerIcon(price, markerPriceClass, isActive, isCheapest),
+      opacity: isExtended ? 0.7 : 1.0
     }).addTo(map);
 
-    const natl = nationalAvg[currentFuel];
-    const diff = price - natl;
+    const cardNatl = nationalAvg[currentFuel];
+    const diff = price - cardNatl;
     const diffStr = diff < -0.5 ? `<span style="color:#16a34a">${diff.toFixed(1)}p vs UK avg</span>` :
                     diff > 0.5 ? `<span style="color:#dc2626">+${diff.toFixed(1)}p vs UK avg</span>` :
                     `<span style="color:#888">≈ UK average</span>`;
@@ -849,6 +850,7 @@ function render() {
         <div class="popup-price" style="color:${isCheapest ? '#16a34a' : '#1e293b'}">${price.toFixed(1)}p</div>
         <div class="popup-label">${currentFuel === 'unleaded' ? 'Unleaded' : 'Diesel'} per litre</div>
         <div style="font-size:11px;margin-top:4px;font-family:'JetBrains Mono',monospace">${diffStr}</div>
+        ${isExtended ? '<div style="font-size:10px;color:#888;margin-top:4px">📍 ' + station.distance + ' miles from Deeside</div>' : ''}
       </div>
     `);
 
@@ -860,9 +862,10 @@ function render() {
     markers[station.id] = marker;
   });
 
-  // Station list
+  // Station list — core stations in sidebar, extended note at bottom
   const listEl = document.getElementById('stationList');
-  listEl.innerHTML = sorted.map(station => {
+
+  function buildCard(station) {
     const price = getPrice(station);
     const isCheapest = price === cheapestPrice;
     const isExpensive = price === stats.high;
@@ -904,7 +907,35 @@ function render() {
         </div>
       </div>
     `;
-  }).join('');
+  }
+
+  let html = sorted.map(buildCard).join('');
+
+  // Show expandable wider area stations
+  if (extendedStations.length > 0) {
+    const extSorted = extendedStations
+      .filter(s => getPrice(s) > 0)
+      .sort((a, b) => {
+        if (currentSort === 'price-asc') return getPrice(a) - getPrice(b);
+        if (currentSort === 'price-desc') return getPrice(b) - getPrice(a);
+        if (currentSort === 'distance') return a.distance - b.distance;
+        return getPrice(a) - getPrice(b);
+      });
+
+    if (extSorted.length > 0) {
+      html += `<button class="wider-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">
+        <span>Wider area (${extSorted.length} station${extSorted.length === 1 ? '' : 's'})</span>
+        <span class="arrow">▼</span>
+      </button>
+      <div class="wider-stations">
+        <div style="padding:0 8px 8px">
+          ${extSorted.map(buildCard).join('')}
+        </div>
+      </div>`;
+    }
+  }
+
+  listEl.innerHTML = html;
 
   // Click handlers
   listEl.querySelectorAll('.station-card').forEach(card => {
