@@ -592,6 +592,28 @@
     opacity: 0.6;
   }
 
+  .station-card.stale {
+    opacity: 0.5;
+    position: relative;
+  }
+  .station-card.stale:hover {
+    opacity: 0.7;
+  }
+  .stale-badge {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: rgba(251, 191, 36, 0.15);
+    border: 1px solid rgba(251, 191, 36, 0.3);
+    color: var(--amber);
+    font-size: 9px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
   .map-popup {
     font-family: 'DM Sans', sans-serif;
   }
@@ -869,7 +891,7 @@ function render() {
   if (!stations.length) return;
 
   // Two-tier system: core stations in sidebar, extended on map only
-  const CORE_RADIUS = 8; // miles from Queensferry roundabout
+  const CORE_RADIUS = 10; // miles from Queensferry roundabout
   const coreStations = stations.filter(s => s.distance <= CORE_RADIUS);
   const extendedStations = stations.filter(s => s.distance > CORE_RADIUS);
 
@@ -899,7 +921,7 @@ function render() {
     const markerPriceClass = getPriceClass(price, stats);
     const marker = L.marker([station.lat, station.lng], {
       icon: createMarkerIcon(price, markerPriceClass, isActive, isCheapest),
-      opacity: isExtended ? 0.7 : 1.0
+      opacity: isExtended ? 0.7 : ((() => { const d = new Date(station.updated); return !isNaN(d.getTime()) && (Date.now() - d.getTime()) > 86400000 ? 0.45 : 1.0; })())
     }).addTo(map);
 
     const cardNatl = nationalAvg[currentFuel];
@@ -938,14 +960,31 @@ function render() {
     const isActive = activeStation === station.id;
     const priceClass = getPriceClass(price, stats);
     const cardNatl = nationalAvg[currentFuel];
+
+    // Stale detection: >24 hours since price was last updated
+    let isStale = false;
+    let staleDate = '';
+    if (station.updated) {
+      const updDate = new Date(station.updated);
+      if (!isNaN(updDate.getTime())) {
+        const hoursOld = (Date.now() - updDate.getTime()) / 3600000;
+        if (hoursOld > 24) {
+          isStale = true;
+          staleDate = updDate.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+        }
+      }
+    }
+
     let cardClass = 'station-card';
-    if (isCheapest) cardClass += ' cheapest';
+    if (isStale) cardClass += ' stale';
+    else if (isCheapest) cardClass += ' cheapest';
     else if (price < cardNatl - 0.5) cardClass += ' below-avg';
-    if (isExpensive) cardClass += ' expensive';
+    if (isExpensive && !isStale) cardClass += ' expensive';
     if (isActive) cardClass += ' active';
 
     return `
       <div class="${cardClass}" data-id="${station.id}">
+        ${isStale ? '<div class="stale-badge">Last updated ' + staleDate + '</div>' : ''}
         <div class="station-info">
           <div class="station-brand">
             <span class="brand-dot ${priceClass.replace('price-', 'dot-')}"></span>
@@ -956,12 +995,12 @@ function render() {
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
             ${station.distance} miles*
           </div>
-          ${isCheapest ? '<span class="station-tag tag-cheapest">★ Cheapest</span>' : ''}
-          ${isExpensive ? '<span class="station-tag tag-expensive">Most Expensive</span>' : ''}
+          ${!isStale && isCheapest ? '<span class="station-tag tag-cheapest">★ Cheapest</span>' : ''}
+          ${!isStale && isExpensive ? '<span class="station-tag tag-expensive">Most Expensive</span>' : ''}
           ${station.note ? '<span class="station-tag tag-note">' + station.note + '</span>' : ''}
         </div>
         <div class="station-price">
-          <div class="price-value ${priceClass}">${price.toFixed(1)}<small style="font-size:12px">p</small></div>
+          <div class="price-value ${isStale ? 'price-mid' : priceClass}">${price.toFixed(1)}<small style="font-size:12px">p</small></div>
           <div class="price-unit">per litre</div>
           <div class="price-updated">${(() => {
             if (!station.updated) return '';
