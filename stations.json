@@ -3,7 +3,7 @@
     "unleaded": 131.7,
     "diesel": 141.5
   },
-  "lastUpdated": "2026-03-06T10:00:00Z",
+  "lastUpdated": "2026-03-05T12:00:00Z",
   "stationCount": 74,
   "stations": [
     {
@@ -343,20 +343,6 @@
       "is_motorway": false
     },
     {
-      "id": 7,
-      "name": "BP HARVEST ENERGY OVERPOOL",
-      "brand": "BP HARVEST ENERGY",
-      "address": "OVERPOOL ROAD, ELLESMERE PORT, CH66 2JF",
-      "lat": 53.2714848,
-      "lng": -2.9206747,
-      "unleaded": 133.9,
-      "diesel": 143.9,
-      "updated": "Tue Mar 03 2026 12:38:16 GMT+0000 (Coordinated Universal Time)",
-      "distance": 6.3,
-      "is_supermarket": false,
-      "is_motorway": false
-    },
-    {
       "id": 18,
       "name": "SHELL CARLETT",
       "brand": "SHELL",
@@ -395,20 +381,6 @@
       "diesel": 142.9,
       "updated": "Tue Mar 03 2026 21:58:05 GMT+0000 (Coordinated Universal Time)",
       "distance": 12.1,
-      "is_supermarket": false,
-      "is_motorway": false
-    },
-    {
-      "id": 24,
-      "name": "MFG STRAWBERRY",
-      "brand": "BP",
-      "address": "WHITBY ROUNDABOUT, ELLESMERE PORT, CH66 2PY",
-      "lat": 53.256833,
-      "lng": -2.909397,
-      "unleaded": 133.9,
-      "diesel": 144.9,
-      "updated": "Wed Mar 04 2026 14:56:45 GMT+0000 (Coordinated Universal Time)",
-      "distance": 6.1,
       "is_supermarket": false,
       "is_motorway": false
     },
@@ -483,6 +455,20 @@
       "is_motorway": false
     },
     {
+      "id": 7,
+      "name": "BP HARVEST ENERGY OVERPOOL",
+      "brand": "BP HARVEST ENERGY",
+      "address": "OVERPOOL ROAD, ELLESMERE PORT, CH66 2JF",
+      "lat": 53.2714848,
+      "lng": -2.9206747,
+      "unleaded": 134.9,
+      "diesel": 146.9,
+      "updated": "Thu Mar 05 2026 09:54:19 GMT+0000 (Coordinated Universal Time)",
+      "distance": 6.3,
+      "is_supermarket": false,
+      "is_motorway": false
+    },
+    {
       "id": 17,
       "name": "BR Gwersyllt",
       "brand": "SPAR",
@@ -493,6 +479,20 @@
       "diesel": 144.9,
       "updated": "Tue Mar 03 2026 15:00:49 GMT+0000 (Coordinated Universal Time)",
       "distance": 9.0,
+      "is_supermarket": false,
+      "is_motorway": false
+    },
+    {
+      "id": 24,
+      "name": "MFG STRAWBERRY",
+      "brand": "BP",
+      "address": "WHITBY ROUNDABOUT, ELLESMERE PORT, CH66 2PY",
+      "lat": 53.256833,
+      "lng": -2.909397,
+      "unleaded": 134.9,
+      "diesel": 146.9,
+      "updated": "Thu Mar 05 2026 08:52:37 GMT+0000 (Coordinated Universal Time)",
+      "distance": 6.1,
       "is_supermarket": false,
       "is_motorway": false
     },
