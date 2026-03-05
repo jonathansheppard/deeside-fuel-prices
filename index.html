@@ -641,6 +641,19 @@
     box-shadow: 0 8px 32px rgba(0,0,0,0.3) !important;
   }
 
+  .leaflet-popup-content {
+    margin: 10px 14px !important;
+  }
+
+  @media (max-width: 900px) {
+    .leaflet-popup-content-wrapper {
+      min-width: 200px !important;
+    }
+    .map-popup .popup-price {
+      font-size: 22px;
+    }
+  }
+
   .api-banner {
     padding: 14px 16px;
     background: linear-gradient(135deg, rgba(56, 189, 248, 0.08), rgba(56, 189, 248, 0.02));
@@ -931,19 +944,28 @@ function render() {
 
     marker.bindPopup(`
       <div class="map-popup">
-        <div class="popup-brand">${station.brand} — ${station.name}</div>
+        <div class="popup-brand">${station.name}</div>
         <div class="popup-address">${station.address}</div>
-        ${station.note ? '<div style="font-size:11px;color:#d97706;font-weight:600;margin-bottom:4px">⚠ ' + station.note + '</div>' : ''}
         <div class="popup-price" style="color:${isCheapest ? '#16a34a' : '#1e293b'}">${price.toFixed(1)}p</div>
         <div class="popup-label">${currentFuel === 'unleaded' ? 'Unleaded' : 'Diesel'} per litre</div>
         <div style="font-size:11px;margin-top:4px;font-family:'JetBrains Mono',monospace">${diffStr}</div>
-        ${isExtended ? '<div style="font-size:10px;color:#888;margin-top:4px">📍 ' + station.distance + ' miles*</div>' : ''}
+        <div style="font-size:10px;color:#888;margin-top:4px">📍 ${station.distance} miles from Queensferry</div>
+        ${(() => {
+          if (!station.updated) return '';
+          const ud = new Date(station.updated);
+          if (isNaN(ud.getTime())) return '';
+          const hrs = (Date.now() - ud.getTime()) / 3600000;
+          if (hrs > 24) {
+            const dateStr = ud.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+            return '<div style="font-size:10px;color:#fbbf24;font-weight:600;margin-top:4px;background:rgba(251,191,36,0.1);padding:3px 6px;border-radius:3px">⚠ Last updated ' + dateStr + '</div>';
+          }
+          return '<div style="font-size:10px;color:#34d399;margin-top:4px">✓ Updated ' + timeAgo(station.updated) + '</div>';
+        })()}
       </div>
-    `);
+    `, { maxWidth: 260, minWidth: 180, closeButton: true });
 
     marker.on('click', () => {
       activeStation = station.id;
-      render();
     });
 
     markers[station.id] = marker;
@@ -967,7 +989,7 @@ function render() {
       const updDate = new Date(station.updated);
       if (!isNaN(updDate.getTime())) {
         const hoursOld = (Date.now() - updDate.getTime()) / 3600000;
-        if (hoursOld > 48) {
+        if (hoursOld > 24) {
           isStale = true;
           staleDate = updDate.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
         }
