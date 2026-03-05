@@ -593,25 +593,24 @@
   }
 
   .station-card.stale {
-    opacity: 0.5;
-    position: relative;
+    opacity: 0.45;
   }
   .station-card.stale:hover {
-    opacity: 0.7;
+    opacity: 0.65;
   }
   .stale-badge {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    background: rgba(251, 191, 36, 0.15);
-    border: 1px solid rgba(251, 191, 36, 0.3);
+    grid-column: 1 / -1;
+    background: rgba(251, 191, 36, 0.1);
+    border: 1px solid rgba(251, 191, 36, 0.2);
     color: var(--amber);
     font-size: 9px;
     font-weight: 600;
-    padding: 3px 8px;
+    padding: 4px 10px;
     border-radius: 4px;
     text-transform: uppercase;
     letter-spacing: 0.04em;
+    text-align: center;
+    margin-bottom: 4px;
   }
 
   .map-popup {
