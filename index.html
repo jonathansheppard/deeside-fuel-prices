@@ -598,16 +598,6 @@
   .station-card.stale {
     border-left: 3px solid #4B5563;
   }
-  .stale-banner {
-    grid-column: 1 / -1;
-    background: #1F2937;
-    padding: 6px 12px;
-    margin: 4px -16px 6px;
-    font-size: 12px;
-    color: #F87171;
-    line-height: 1.4;
-  }
-  .stale-banner .stale-icon { color: #EF4444; }
   .timestamp-fresh { color: var(--green); font-size: 10px; }
   .timestamp-aging { color: #F59E0B; font-size: 10px; font-weight: 600; }
   .timestamp-stale { color: #EF4444; font-size: 10px; }
@@ -1042,7 +1032,6 @@ function render() {
     const isActive = activeStation === station.id;
     const priceClass = staleState === 'stale' ? '' : getPriceClass(price, stats);
     const cardNatl = nationalAvg[currentFuel];
-    const isNotable = NOTABLE_STATIONS.some(n => station.brand.includes(n) || station.name.toUpperCase().includes(n));
 
     let cardClass = 'station-card';
     if (staleState === 'stale') cardClass += ' stale';
@@ -1057,29 +1046,17 @@ function render() {
       const d = new Date(station.updated);
       if (!isNaN(d.getTime())) {
         const dateStr = d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
+        const staleDays = Math.floor((Date.now() - d.getTime()) / 86400000);
         if (staleState === 'fresh') {
           timestampHtml = '<div class="timestamp-fresh">Price set ' + dateStr + '</div>';
         } else if (staleState === 'aging') {
           timestampHtml = '<div class="timestamp-aging">\u26A0 Updated yesterday</div>';
-        }
-      }
-    }
-
-    // Stale warning banner
-    let staleBannerHtml = '';
-    if (staleState === 'stale' && station.updated) {
-      const d = new Date(station.updated);
-      if (!isNaN(d.getTime())) {
-        const staleDays = Math.floor((Date.now() - d.getTime()) / 86400000);
-        if (isNotable) {
-          staleBannerHtml = `<div class="stale-banner"><span class="stale-icon">\u26A0</span> Price unconfirmed \u2014 this is a popular station. Last reported ${staleDays} day${staleDays === 1 ? '' : 's'} ago. Verify before travelling.</div>`;
         } else {
-          staleBannerHtml = `<div class="stale-banner"><span class="stale-icon">\u26A0</span> Price unconfirmed \u2014 last reported ${staleDays} day${staleDays === 1 ? '' : 's'} ago. Verify before travelling.</div>`;
+          timestampHtml = '<div style="font-size:12px;color:#F87171">\u26A0 Unconfirmed \u00B7 ' + staleDays + ' day' + (staleDays === 1 ? '' : 's') + ' ago</div>';
         }
       }
     }
 
-    // Price colour
     const priceColourClass = staleState === 'stale' ? '' : priceClass;
     const priceStyle = staleState === 'stale' ? ' style="color:#9CA3AF"' : '';
     const dotClass = staleState === 'stale' ? '' : priceClass.replace('price-', 'dot-');
@@ -1092,11 +1069,6 @@ function render() {
             <span class="station-name">${station.name}</span>
           </div>
           <div class="station-address">${station.address}</div>
-          ${staleBannerHtml}
-          <div class="station-distance">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            ${station.distance} miles*
-          </div>
           ${isCheapest ? '<span class="station-tag tag-cheapest">\u2605 Cheapest</span>' : ''}
           ${isExpensive ? '<span class="station-tag tag-expensive">Most Expensive</span>' : ''}
           ${station.note ? '<span class="station-tag tag-note">' + station.note + '</span>' : ''}
