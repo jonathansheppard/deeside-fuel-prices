@@ -3,7 +3,7 @@
     "unleaded": 131.7,
     "diesel": 141.5
   },
-  "lastUpdated": "2026-03-06T11:34:19.306466+00:00",
+  "lastUpdated": "2026-03-06T20:48:34.725287+00:00",
   "stationCount": 74,
   "stations": [
     {
@@ -87,7 +87,7 @@
       "is_motorway": false,
       "unleaded": 131.9,
       "diesel": 142.9,
-      "updated": "2026-03-06T09:09:48.793Z",
+      "updated": "2026-03-06T17:10:13.183Z",
       "id": 12
     },
     {
@@ -101,7 +101,7 @@
       "is_motorway": false,
       "unleaded": 131.9,
       "diesel": 144.9,
-      "updated": "2026-03-06T07:55:17.909Z",
+      "updated": "2026-03-06T19:55:30.588Z",
       "id": 14
     },
     {
@@ -115,7 +115,7 @@
       "is_motorway": false,
       "unleaded": 131.9,
       "diesel": 142.9,
-      "updated": "2026-03-06T09:09:22.437Z",
+      "updated": "2026-03-06T17:09:34.193Z",
       "id": 20
     },
     {
@@ -157,7 +157,7 @@
       "is_motorway": false,
       "unleaded": 132.9,
       "diesel": 142.9,
-      "updated": "2026-03-06T08:54:36.948Z",
+      "updated": "2026-03-06T16:54:47.177Z",
       "id": 2
     },
     {
@@ -171,7 +171,7 @@
       "is_motorway": false,
       "unleaded": 132.9,
       "diesel": 142.9,
-      "updated": "2026-03-06T09:05:12.702Z",
+      "updated": "2026-03-06T17:05:22.958Z",
       "id": 8
     },
     {
@@ -212,8 +212,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 132.9,
-      "diesel": 142.9,
-      "updated": "2026-03-05T13:59:17.280Z",
+      "diesel": 147.9,
+      "updated": "2026-03-06T12:15:43.987Z",
       "id": 39
     },
     {
@@ -241,7 +241,7 @@
       "is_motorway": false,
       "unleaded": 132.9,
       "diesel": 144.9,
-      "updated": "2026-03-06T08:54:36.288Z",
+      "updated": "2026-03-06T16:54:46.366Z",
       "id": 66
     },
     {
@@ -273,20 +273,6 @@
       "id": 10
     },
     {
-      "name": "BP HARVEST ENERGY LAIRD STREET",
-      "brand": "BP HARVEST ENERGY",
-      "address": "LAIRD STREET, BIRKENHEAD, CH41 7AJ",
-      "lat": 53.4007873,
-      "lng": -3.0556847,
-      "distance": 13.3,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 133.9,
-      "diesel": 143.9,
-      "updated": "2026-03-05T13:16:50.577Z",
-      "id": 25
-    },
-    {
       "name": "SAINSBURYS BIRKENHEAD",
       "brand": "SAINSBURY'S",
       "address": "342A WOODCHURCH ROAD, BIRKENHEAD, CH42 8PQ",
@@ -310,8 +296,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 133.9,
-      "diesel": 142.9,
-      "updated": "2026-03-05T13:52:11.680Z",
+      "diesel": 143.9,
+      "updated": "2026-03-06T12:44:06.280Z",
       "id": 70
     },
     {
@@ -327,34 +313,6 @@
       "diesel": 144.9,
       "updated": "2026-03-03T15:16:12.434Z",
       "id": 3
-    },
-    {
-      "name": "BP HARVEST ENERGY OVERPOOL",
-      "brand": "BP HARVEST ENERGY",
-      "address": "OVERPOOL ROAD, ELLESMERE PORT, CH66 2JF",
-      "lat": 53.2714848,
-      "lng": -2.9206747,
-      "distance": 6.3,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 134.9,
-      "diesel": 146.9,
-      "updated": "2026-03-05T10:03:48.046Z",
-      "id": 7
-    },
-    {
-      "name": "BR Gwersyllt",
-      "brand": "SPAR",
-      "address": "PARKWALL SERVICE STATION, MOLD ROAD, GWERSYLLT, WREXHAM, LL11 4AH, WREXHAM, LL11 4AH",
-      "lat": 53.0792616,
-      "lng": -3.021987,
-      "distance": 9.0,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 134.9,
-      "diesel": 144.9,
-      "updated": "2026-03-03T15:00:49.341Z",
-      "id": 17
     },
     {
       "name": "SAINSBURYS UPTON",
@@ -380,8 +338,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 134.9,
-      "diesel": 146.9,
-      "updated": "2026-03-06T09:46:11.304Z",
+      "diesel": 147.9,
+      "updated": "2026-03-06T17:24:59.089Z",
       "id": 38
     },
     {
@@ -413,18 +371,18 @@
       "id": 72
     },
     {
-      "name": "SHELL CARLETT",
-      "brand": "SHELL",
-      "address": "1201 NEW CHESTER ROAD, WIRRAL, CH62 0BZ",
-      "lat": 53.314799,
-      "lng": -2.963826,
-      "distance": 7.9,
+      "name": "BP HARVEST ENERGY OVERPOOL",
+      "brand": "BP HARVEST ENERGY",
+      "address": "OVERPOOL ROAD, ELLESMERE PORT, CH66 2JF",
+      "lat": 53.2714848,
+      "lng": -2.9206747,
+      "distance": 6.3,
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 135.9,
-      "diesel": 148.9,
-      "updated": "2026-03-05T13:43:29.810Z",
-      "id": 18
+      "diesel": 151.9,
+      "updated": "2026-03-06T12:32:17.340Z",
+      "id": 7
     },
     {
       "name": "MFG STRAWBERRY",
@@ -437,8 +395,22 @@
       "is_motorway": false,
       "unleaded": 135.9,
       "diesel": 151.9,
-      "updated": "2026-03-06T09:01:48.556Z",
+      "updated": "2026-03-06T17:02:04.559Z",
       "id": 24
+    },
+    {
+      "name": "BP HARVEST ENERGY LAIRD STREET",
+      "brand": "BP HARVEST ENERGY",
+      "address": "LAIRD STREET, BIRKENHEAD, CH41 7AJ",
+      "lat": 53.4007873,
+      "lng": -3.0556847,
+      "distance": 13.3,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 135.9,
+      "diesel": 146.9,
+      "updated": "2026-03-06T12:49:26.470Z",
+      "id": 25
     },
     {
       "name": "Plas Acton Fuel Station",
@@ -455,20 +427,6 @@
       "id": 26
     },
     {
-      "name": "STANS OF LLANGOLLEN",
-      "brand": "TEXACO",
-      "address": "STANS OF LLANGOLLEN, BERWYN STREET, LLANGOLLEN, LL20 8NF, LLANGOLLEN, LL20 8NF",
-      "lat": 52.9688428,
-      "lng": -3.171139,
-      "distance": 17.6,
-      "is_supermarket": true,
-      "is_motorway": false,
-      "unleaded": 135.9,
-      "diesel": 145.9,
-      "updated": "2026-02-23T14:42:58.510Z",
-      "id": 28
-    },
-    {
       "name": "RONTEC HOYLAKE",
       "brand": "ESSO",
       "address": "HOYLAKE, HOYLAKE, CH47 0LA",
@@ -478,23 +436,9 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 135.9,
-      "diesel": 147.9,
-      "updated": "2026-03-05T15:03:22.098Z",
+      "diesel": 152.9,
+      "updated": "2026-03-06T12:51:09.868Z",
       "id": 34
-    },
-    {
-      "name": "SHELL WIRRAL WAY",
-      "brand": "SHELL",
-      "address": "413 BOROUGH ROAD, BIRKENHEAD, CH42 0HA",
-      "lat": 53.384042,
-      "lng": -3.032912,
-      "distance": 12.1,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 135.9,
-      "diesel": 147.9,
-      "updated": "2026-03-05T15:24:27.164Z",
-      "id": 67
     },
     {
       "name": "MFG MORRISONS DENBIGH",
@@ -507,7 +451,7 @@
       "is_motorway": false,
       "unleaded": 136.9,
       "diesel": 148.9,
-      "updated": "2026-03-06T08:59:42.799Z",
+      "updated": "2026-03-06T16:59:51.337Z",
       "id": 5
     },
     {
@@ -521,7 +465,7 @@
       "is_motorway": false,
       "unleaded": 136.9,
       "diesel": 145.9,
-      "updated": "2026-03-06T09:59:51.672Z",
+      "updated": "2026-03-06T18:00:07.146Z",
       "id": 9
     },
     {
@@ -535,7 +479,7 @@
       "is_motorway": false,
       "unleaded": 136.9,
       "diesel": 149.9,
-      "updated": "2026-03-06T09:52:32.143Z",
+      "updated": "2026-03-06T17:52:48.638Z",
       "id": 15
     },
     {
@@ -549,7 +493,7 @@
       "is_motorway": false,
       "unleaded": 136.9,
       "diesel": 155.9,
-      "updated": "2026-03-06T09:02:03.159Z",
+      "updated": "2026-03-06T17:02:26.105Z",
       "id": 19
     },
     {
@@ -577,7 +521,7 @@
       "is_motorway": false,
       "unleaded": 136.9,
       "diesel": 148.9,
-      "updated": "2026-03-06T07:55:40.542Z",
+      "updated": "2026-03-06T19:55:59.094Z",
       "id": 45
     },
     {
@@ -591,7 +535,7 @@
       "is_motorway": false,
       "unleaded": 136.9,
       "diesel": 149.9,
-      "updated": "2026-03-06T09:02:42.123Z",
+      "updated": "2026-03-06T17:03:05.854Z",
       "id": 52
     },
     {
@@ -605,7 +549,7 @@
       "is_motorway": false,
       "unleaded": 136.9,
       "diesel": 149.9,
-      "updated": "2026-03-05T05:57:50.949Z",
+      "updated": "2026-03-05T05:52:48.732Z",
       "id": 53
     },
     {
@@ -618,23 +562,23 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 136.9,
-      "diesel": 148.9,
-      "updated": "2026-03-05T13:05:57.708Z",
+      "diesel": 149.9,
+      "updated": "2026-03-06T12:23:21.781Z",
       "id": 61
     },
     {
-      "name": "SHELL CO-OP WREXHAM",
+      "name": "SHELL WIRRAL WAY",
       "brand": "SHELL",
-      "address": "MOLD ROAD, WREXHAM, LL11 2AF",
-      "lat": 53.051908,
-      "lng": -3.006356,
-      "distance": 10.9,
+      "address": "413 BOROUGH ROAD, BIRKENHEAD, CH42 0HA",
+      "lat": 53.384042,
+      "lng": -3.032912,
+      "distance": 12.1,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 137.9,
-      "diesel": 147.9,
-      "updated": "2026-03-05T13:53:28.524Z",
-      "id": 4
+      "unleaded": 136.9,
+      "diesel": 151.9,
+      "updated": "2026-03-06T16:05:33.936Z",
+      "id": 67
     },
     {
       "name": "PRESTATYN SUPERSTORE - PETROL FILLING STATION",
@@ -646,23 +590,23 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 137.9,
-      "diesel": 147.9,
-      "updated": "2026-03-05T13:21:13.105Z",
+      "diesel": 149.9,
+      "updated": "2026-03-06T13:31:34.569Z",
       "id": 21
     },
     {
-      "name": "ASDA RHYL SUPERSTORE",
-      "brand": "ASDA",
-      "address": "ST ASAPH AVENUE NORTH, KINMEL BAY, RHYL, LL18 5EQ",
-      "lat": 53.31088,
-      "lng": -3.5214,
-      "distance": 21.4,
-      "is_supermarket": false,
+      "name": "STANS OF LLANGOLLEN",
+      "brand": "TEXACO",
+      "address": "STANS OF LLANGOLLEN, BERWYN STREET, LLANGOLLEN, LL20 8NF, LLANGOLLEN, LL20 8NF",
+      "lat": 52.9688428,
+      "lng": -3.171139,
+      "distance": 17.6,
+      "is_supermarket": true,
       "is_motorway": false,
       "unleaded": 137.9,
-      "diesel": 149.9,
-      "updated": "2026-03-05T15:29:40.041Z",
-      "id": 27
+      "diesel": 147.9,
+      "updated": "2026-03-06T13:40:24.333Z",
+      "id": 28
     },
     {
       "name": "RONTEC RUABON",
@@ -674,8 +618,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 137.9,
-      "diesel": 147.9,
-      "updated": "2026-03-05T14:15:29.518Z",
+      "diesel": 152.9,
+      "updated": "2026-03-06T12:28:40.274Z",
       "id": 30
     },
     {
@@ -688,8 +632,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 137.9,
-      "diesel": 147.9,
-      "updated": "2026-03-05T14:17:00.522Z",
+      "diesel": 152.9,
+      "updated": "2026-03-06T12:44:45.993Z",
       "id": 31
     },
     {
@@ -707,20 +651,6 @@
       "id": 32
     },
     {
-      "name": "Dobshill Service Station",
-      "brand": "DOBSHILL SERVICE STATION",
-      "address": "DOBSHILL SERVICE STATION, CHESTER ROAD, DOBSHILL, DEESIDE, CH5 3LZ, DEESIDE, CH5 3LZ",
-      "lat": 53.1636207,
-      "lng": -3.039481,
-      "distance": 3.1,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 137.9,
-      "diesel": 147.9,
-      "updated": "2026-03-04T14:20:11.750Z",
-      "id": 35
-    },
-    {
       "name": "SHELL LITTLE WAITROSE HINDERTON",
       "brand": "SHELL",
       "address": "CHESTER HIGH ROAD, NESTON, CH64 7TA",
@@ -730,23 +660,9 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 137.9,
-      "diesel": 147.9,
-      "updated": "2026-03-03T23:22:29.664Z",
+      "diesel": 152.9,
+      "updated": "2026-03-06T16:05:12.974Z",
       "id": 46
-    },
-    {
-      "name": "BR Flint",
-      "brand": "SPAR",
-      "address": "211A, CHESTER ROAD, OAKENHOLT, Y FFLINT, CH6 5DZ, Y FFLINT, CH6 5DZ",
-      "lat": 53.2443473,
-      "lng": -3.1222575,
-      "distance": 4.4,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 137.9,
-      "diesel": 148.9,
-      "updated": "2026-03-03T10:38:19.671Z",
-      "id": 48
     },
     {
       "name": "Rhydymwyn Service Station",
@@ -763,18 +679,32 @@
       "id": 60
     },
     {
-      "name": "SHELL HOOLE ROAD",
+      "name": "SHELL CARLETT",
       "brand": "SHELL",
-      "address": "HOOLE ROAD, CHESTER, CH2 3NH",
-      "lat": 53.199234,
-      "lng": -2.878935,
-      "distance": 6.4,
+      "address": "1201 NEW CHESTER ROAD, WIRRAL, CH62 0BZ",
+      "lat": 53.314799,
+      "lng": -2.963826,
+      "distance": 7.9,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 137.9,
-      "diesel": 149.9,
-      "updated": "2026-03-04T17:51:03.176Z",
-      "id": 68
+      "unleaded": 138.9,
+      "diesel": 155.9,
+      "updated": "2026-03-06T16:05:33.247Z",
+      "id": 18
+    },
+    {
+      "name": "ASDA RHYL SUPERSTORE",
+      "brand": "ASDA",
+      "address": "ST ASAPH AVENUE NORTH, KINMEL BAY, RHYL, LL18 5EQ",
+      "lat": 53.31088,
+      "lng": -3.5214,
+      "distance": 21.4,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 138.9,
+      "diesel": 150.9,
+      "updated": "2026-03-06T20:28:42.605Z",
+      "id": 27
     },
     {
       "name": "SHELL MERSEY VIEW",
@@ -785,38 +715,24 @@
       "distance": 7.8,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 137.9,
-      "diesel": 149.9,
-      "updated": "2026-03-04T16:41:43.318Z",
+      "unleaded": 138.9,
+      "diesel": 154.9,
+      "updated": "2026-03-06T16:05:15.787Z",
       "id": 69
     },
     {
-      "name": "Ruabon Park Service Station",
-      "brand": "RUABON PARK SERVICE STATION",
-      "address": "RUABON PARK SERVICE STATION, JAMES PARK WAY, RUABON, WREXHAM, LL14 6EQ, WREXHAM, LL14 6EQ",
-      "lat": 52.9833637,
-      "lng": -3.0453473,
-      "distance": 15.6,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 138.9,
-      "diesel": 147.9,
-      "updated": "2026-02-06T14:15:53.735Z",
-      "id": 29
-    },
-    {
-      "name": "SHELL UPTON",
+      "name": "SHELL CO-OP WREXHAM",
       "brand": "SHELL",
-      "address": "ARROWE PARK ROAD, WIRRAL, CH49 0UE",
-      "lat": 53.381566,
-      "lng": -3.09902,
-      "distance": 12.2,
+      "address": "MOLD ROAD, WREXHAM, LL11 2AF",
+      "lat": 53.051908,
+      "lng": -3.006356,
+      "distance": 10.9,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 138.9,
-      "diesel": 146.9,
-      "updated": "2026-03-04T22:50:07.052Z",
-      "id": 64
+      "unleaded": 139.9,
+      "diesel": 149.9,
+      "updated": "2026-03-06T12:35:02.820Z",
+      "id": 4
     },
     {
       "name": "CASTLE VIEW",
@@ -833,18 +749,32 @@
       "id": 11
     },
     {
-      "name": "SHELL CHESTER",
-      "brand": "SHELL",
-      "address": "TARVIN ROAD, CHESTER, CH3 5NJ",
-      "lat": 53.193526,
-      "lng": -2.856604,
-      "distance": 7.4,
+      "name": "BR Gwersyllt",
+      "brand": "SPAR",
+      "address": "PARKWALL SERVICE STATION, MOLD ROAD, GWERSYLLT, WREXHAM, LL11 4AH, WREXHAM, LL11 4AH",
+      "lat": 53.0792616,
+      "lng": -3.021987,
+      "distance": 9.0,
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 139.9,
-      "diesel": 151.9,
-      "updated": "2026-03-05T13:48:28.546Z",
-      "id": 13
+      "diesel": 149.9,
+      "updated": "2026-03-06T14:31:14.853Z",
+      "id": 17
+    },
+    {
+      "name": "Dobshill Service Station",
+      "brand": "DOBSHILL SERVICE STATION",
+      "address": "DOBSHILL SERVICE STATION, CHESTER ROAD, DOBSHILL, DEESIDE, CH5 3LZ, DEESIDE, CH5 3LZ",
+      "lat": 53.1636207,
+      "lng": -3.039481,
+      "distance": 3.1,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 139.9,
+      "diesel": 154.9,
+      "updated": "2026-03-06T14:05:39.529Z",
+      "id": 35
     },
     {
       "name": "Ellesmere Port Service Station",
@@ -856,9 +786,23 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 139.9,
-      "diesel": 149.9,
-      "updated": "2026-03-04T14:16:29.501Z",
+      "diesel": 152.9,
+      "updated": "2026-03-06T14:04:35.223Z",
       "id": 40
+    },
+    {
+      "name": "BR Flint",
+      "brand": "SPAR",
+      "address": "211A, CHESTER ROAD, OAKENHOLT, Y FFLINT, CH6 5DZ, Y FFLINT, CH6 5DZ",
+      "lat": 53.2443473,
+      "lng": -3.1222575,
+      "distance": 4.4,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 139.9,
+      "diesel": 152.9,
+      "updated": "2026-03-06T14:32:09.790Z",
+      "id": 48
     },
     {
       "name": "MFG COLESHILL",
@@ -871,7 +815,7 @@
       "is_motorway": false,
       "unleaded": 139.9,
       "diesel": 152.9,
-      "updated": "2026-03-06T09:34:13.032Z",
+      "updated": "2026-03-06T17:34:30.923Z",
       "id": 54
     },
     {
@@ -884,8 +828,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 139.9,
-      "diesel": 146.9,
-      "updated": "2026-03-05T13:58:42.559Z",
+      "diesel": 148.9,
+      "updated": "2026-03-06T14:08:37.705Z",
       "id": 56
     },
     {
@@ -898,9 +842,23 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 139.9,
-      "diesel": 147.9,
-      "updated": "2026-03-03T23:48:44.214Z",
+      "diesel": 152.9,
+      "updated": "2026-03-06T16:05:33.568Z",
       "id": 58
+    },
+    {
+      "name": "SHELL UPTON",
+      "brand": "SHELL",
+      "address": "ARROWE PARK ROAD, WIRRAL, CH49 0UE",
+      "lat": 53.381566,
+      "lng": -3.09902,
+      "distance": 12.2,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 139.9,
+      "diesel": 148.9,
+      "updated": "2026-03-06T13:07:03.263Z",
+      "id": 64
     },
     {
       "name": "RUTHIN",
@@ -927,7 +885,7 @@
       "is_motorway": false,
       "unleaded": 139.9,
       "diesel": 153.9,
-      "updated": "2026-03-06T09:12:14.553Z",
+      "updated": "2026-03-06T17:12:35.836Z",
       "id": 74
     },
     {
@@ -945,6 +903,48 @@
       "id": 6
     },
     {
+      "name": "SHELL CHESTER",
+      "brand": "SHELL",
+      "address": "TARVIN ROAD, CHESTER, CH3 5NJ",
+      "lat": 53.193526,
+      "lng": -2.856604,
+      "distance": 7.4,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 141.9,
+      "diesel": 155.9,
+      "updated": "2026-03-06T16:05:36.043Z",
+      "id": 13
+    },
+    {
+      "name": "Ruabon Park Service Station",
+      "brand": "RUABON PARK SERVICE STATION",
+      "address": "RUABON PARK SERVICE STATION, JAMES PARK WAY, RUABON, WREXHAM, LL14 6EQ, WREXHAM, LL14 6EQ",
+      "lat": 52.9833637,
+      "lng": -3.0453473,
+      "distance": 15.6,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 141.9,
+      "diesel": 155.9,
+      "updated": "2026-02-06T14:15:53.735Z",
+      "id": 29
+    },
+    {
+      "name": "SHELL HOOLE ROAD",
+      "brand": "SHELL",
+      "address": "HOOLE ROAD, CHESTER, CH2 3NH",
+      "lat": 53.199234,
+      "lng": -2.878935,
+      "distance": 6.4,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 141.9,
+      "diesel": 154.9,
+      "updated": "2026-03-06T16:05:21.545Z",
+      "id": 68
+    },
+    {
       "name": "SHELL CO-OP MOLD",
       "brand": "SHELL",
       "address": "CHESTER ROAD, MOLD, CH7 6LQ",
@@ -953,9 +953,9 @@
       "distance": 3.8,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 141.9,
-      "diesel": 153.9,
-      "updated": "2026-03-05T14:07:44.751Z",
+      "unleaded": 143.9,
+      "diesel": 158.9,
+      "updated": "2026-03-06T16:29:02.607Z",
       "id": 47
     },
     {
@@ -973,20 +973,6 @@
       "id": 57
     },
     {
-      "name": "BR Buckley",
-      "brand": "SPAR",
-      "address": "72, MOLD ROAD, BUCKLEY, CH7 2NJ, BUCKLEY, CH7 2NJ",
-      "lat": 53.1685643,
-      "lng": -3.0885872,
-      "distance": 3.6,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 145.9,
-      "diesel": null,
-      "updated": "2026-03-03T14:54:10.446Z",
-      "id": 73
-    },
-    {
       "name": "SHELL NORTHOP",
       "brand": "SHELL",
       "address": "A55, MOLD, CH7 6HB",
@@ -995,10 +981,24 @@
       "distance": 2.3,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 146.9,
-      "diesel": 160.9,
-      "updated": "2026-03-05T15:38:21.864Z",
+      "unleaded": 147.9,
+      "diesel": 165.9,
+      "updated": "2026-03-06T16:05:29.455Z",
       "id": 23
+    },
+    {
+      "name": "BR Buckley",
+      "brand": "SPAR",
+      "address": "72, MOLD ROAD, BUCKLEY, CH7 2NJ, BUCKLEY, CH7 2NJ",
+      "lat": 53.1685643,
+      "lng": -3.0885872,
+      "distance": 3.6,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 149.9,
+      "diesel": null,
+      "updated": "2026-03-06T14:34:08.697Z",
+      "id": 73
     },
     {
       "name": "Lobitos",
@@ -1038,8 +1038,8 @@
       "is_supermarket": false,
       "is_motorway": true,
       "unleaded": 158.9,
-      "diesel": 171.9,
-      "updated": "2026-03-05T13:56:05.423Z",
+      "diesel": 174.9,
+      "updated": "2026-03-06T17:22:03.222Z",
       "id": 44
     }
   ]
