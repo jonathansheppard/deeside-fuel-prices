@@ -3,7 +3,7 @@
     "unleaded": 131.7,
     "diesel": 141.5
   },
-  "lastUpdated": "2026-03-06T21:30:49.072837+00:00",
+  "lastUpdated": "2026-03-06T22:01:27.008853+00:00",
   "stationCount": 74,
   "stations": [
     {
@@ -175,20 +175,6 @@
       "id": 8
     },
     {
-      "name": "SAINSBURYS ELLESMERE PORT",
-      "brand": "SAINSBURY'S",
-      "address": "KINSEY ROAD, ELLESMERE PORT, CH65 9HN",
-      "lat": 53.26233,
-      "lng": -2.88042,
-      "distance": 7.3,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 132.9,
-      "diesel": 145.9,
-      "updated": "2026-03-05T21:50:06.923Z",
-      "id": 16
-    },
-    {
       "name": "Gordale Service Station",
       "brand": "GORDALE SERVICE STATION",
       "address": "GORDALE SERVICE STATION, CHESTER HIGH ROAD, BURTON, NESTON, CH64 8TF, NESTON, CH64 8TF",
@@ -273,18 +259,18 @@
       "id": 10
     },
     {
-      "name": "SAINSBURYS BIRKENHEAD",
+      "name": "SAINSBURYS ELLESMERE PORT",
       "brand": "SAINSBURY'S",
-      "address": "342A WOODCHURCH ROAD, BIRKENHEAD, CH42 8PQ",
-      "lat": 53.37472,
-      "lng": -3.04765,
-      "distance": 11.5,
+      "address": "KINSEY ROAD, ELLESMERE PORT, CH65 9HN",
+      "lat": 53.26233,
+      "lng": -2.88042,
+      "distance": 7.3,
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 133.9,
-      "diesel": 143.9,
-      "updated": "2026-03-05T21:45:13.508Z",
-      "id": 62
+      "diesel": 146.9,
+      "updated": "2026-03-06T21:52:23.312Z",
+      "id": 16
     },
     {
       "name": "WREXHAM EXTRA - PETROL FILLING STATION",
@@ -315,20 +301,6 @@
       "id": 3
     },
     {
-      "name": "SAINSBURYS UPTON",
-      "brand": "SAINSBURY'S",
-      "address": "UPTON BY PASS, WIRRAL, CH49 6QG",
-      "lat": 53.37986,
-      "lng": -3.09998,
-      "distance": 12.1,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 134.9,
-      "diesel": 144.9,
-      "updated": "2026-03-05T21:58:13.585Z",
-      "id": 22
-    },
-    {
       "name": "SPITAL SF CONNECT",
       "brand": "BP",
       "address": "BRIMSTAGE ROAD, WIRRAL, CH63 3EL",
@@ -357,6 +329,20 @@
       "id": 43
     },
     {
+      "name": "SAINSBURYS BIRKENHEAD",
+      "brand": "SAINSBURY'S",
+      "address": "342A WOODCHURCH ROAD, BIRKENHEAD, CH42 8PQ",
+      "lat": 53.37472,
+      "lng": -3.04765,
+      "distance": 11.5,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 134.9,
+      "diesel": 144.9,
+      "updated": "2026-03-06T21:52:25.634Z",
+      "id": 62
+    },
+    {
       "name": "SAINSBURYS WREXHAM",
       "brand": "SAINSBURY'S",
       "address": "RETAIL PARK, PLAS COCH ROAD, WREXHAM, LL11 2BA",
@@ -383,6 +369,20 @@
       "diesel": 151.9,
       "updated": "2026-03-06T12:32:17.340Z",
       "id": 7
+    },
+    {
+      "name": "SAINSBURYS UPTON",
+      "brand": "SAINSBURY'S",
+      "address": "UPTON BY PASS, WIRRAL, CH49 6QG",
+      "lat": 53.37986,
+      "lng": -3.09998,
+      "distance": 12.1,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 135.9,
+      "diesel": 145.9,
+      "updated": "2026-03-06T21:54:07.120Z",
+      "id": 22
     },
     {
       "name": "MFG STRAWBERRY",
@@ -441,34 +441,6 @@
       "id": 34
     },
     {
-      "name": "MFG MORRISONS DENBIGH",
-      "brand": "MORRISONS",
-      "address": "SMITHFIELD ROAD, DENBIGH, LL16 3LW",
-      "lat": 53.18224,
-      "lng": -3.423087,
-      "distance": 16.3,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 136.9,
-      "diesel": 148.9,
-      "updated": "2026-03-06T20:59:55.785Z",
-      "id": 5
-    },
-    {
-      "name": "MFG GREASBY",
-      "brand": "ESSO",
-      "address": "GREASBY ROAD, GREASBY  WIRRAL, CH49 2PF",
-      "lat": 53.379848,
-      "lng": -3.116135,
-      "distance": 12.3,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 136.9,
-      "diesel": 145.9,
-      "updated": "2026-03-06T18:00:07.146Z",
-      "id": 9
-    },
-    {
       "name": "MFG ROWTON",
       "brand": "ESSO",
       "address": "WHITCHURCH ROAD, ROWTON, CH3 6AF",
@@ -479,7 +451,7 @@
       "is_motorway": false,
       "unleaded": 136.9,
       "diesel": 149.9,
-      "updated": "2026-03-06T17:52:48.638Z",
+      "updated": "2026-03-06T21:52:56.987Z",
       "id": 15
     },
     {
@@ -539,20 +511,6 @@
       "id": 52
     },
     {
-      "name": "SAINSBURYS RHYL",
-      "brand": "SAINSBURY'S",
-      "address": "RHYL ROAD, RHUDDLAN, RHYL, LL18 2TP",
-      "lat": 53.30371,
-      "lng": -3.46769,
-      "distance": 19.1,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 136.9,
-      "diesel": 149.9,
-      "updated": "2026-03-05T05:52:48.732Z",
-      "id": 53
-    },
-    {
       "name": "BP HARVEST ENERGY HOYLAKE",
       "brand": "BP HARVEST ENERGY",
       "address": "HOYLAKE ROAD, WIRRAL, CH46 5NA",
@@ -579,6 +537,20 @@
       "diesel": 151.9,
       "updated": "2026-03-06T16:05:33.936Z",
       "id": 67
+    },
+    {
+      "name": "MFG MORRISONS DENBIGH",
+      "brand": "MORRISONS",
+      "address": "SMITHFIELD ROAD, DENBIGH, LL16 3LW",
+      "lat": 53.18224,
+      "lng": -3.423087,
+      "distance": 16.3,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 137.9,
+      "diesel": 149.9,
+      "updated": "2026-03-06T21:45:56.514Z",
+      "id": 5
     },
     {
       "name": "PRESTATYN SUPERSTORE - PETROL FILLING STATION",
@@ -665,6 +637,20 @@
       "id": 46
     },
     {
+      "name": "SAINSBURYS RHYL",
+      "brand": "SAINSBURY'S",
+      "address": "RHYL ROAD, RHUDDLAN, RHYL, LL18 2TP",
+      "lat": 53.30371,
+      "lng": -3.46769,
+      "distance": 19.1,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 137.9,
+      "diesel": 151.9,
+      "updated": "2026-03-06T21:56:21.930Z",
+      "id": 53
+    },
+    {
       "name": "Rhydymwyn Service Station",
       "brand": "RHYDYMWYN SERVICE STATION",
       "address": "A A S RHYDYMWYN LTD, RHYDYMWYN SERVICE STATION, DENBIGH ROAD, RHYDYMWYN, MOLD, CH7 5HE, MOLD, CH7 5HE",
@@ -677,6 +663,20 @@
       "diesel": 147.8,
       "updated": "2026-03-06T09:34:07.713Z",
       "id": 60
+    },
+    {
+      "name": "MFG GREASBY",
+      "brand": "ESSO",
+      "address": "GREASBY ROAD, GREASBY  WIRRAL, CH49 2PF",
+      "lat": 53.379848,
+      "lng": -3.116135,
+      "distance": 12.3,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 138.9,
+      "diesel": 147.9,
+      "updated": "2026-03-06T21:47:14.473Z",
+      "id": 9
     },
     {
       "name": "SHELL CARLETT",
@@ -815,7 +815,7 @@
       "is_motorway": false,
       "unleaded": 139.9,
       "diesel": 152.9,
-      "updated": "2026-03-06T17:34:30.923Z",
+      "updated": "2026-03-06T21:34:39.517Z",
       "id": 54
     },
     {
