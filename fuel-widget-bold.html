@@ -411,14 +411,8 @@ body {
 
 <script>
 // ─── CONFIG ──────────────────────────────────────────────────────
-// ⚠ Set this to your actual CSV URL on Netlify
-const DATA_URL  = 'https://deeside-fuel-prices.netlify.app/fuel_prices.csv';
+const DATA_URL  = 'https://deeside-fuel-prices.netlify.app/stations.json';
 const TOOL_URL  = 'https://deeside-fuel-prices.netlify.app/';
-
-// UK national averages in pence — update weekly
-// Source: DESNZ weekly road fuel prices
-const UK_AVG_UNL = 136.5;
-const UK_AVG_DSL = 140.2;
 
 // ─── HELPERS ─────────────────────────────────────────────────────
 function badge(price, avg) {
@@ -429,34 +423,11 @@ function badge(price, avg) {
 }
 
 function clean(name) {
-  return name
-    .replace(/tesco|asda|morrisons|sainsbury'?s/gi, m => m.charAt(0).toUpperCase() + m.slice(1).toLowerCase())
-    .replace(/\bBP\b|\bSHELL\b|\bESSO\b|\bJET\b|\bTEXACO\b/gi, m => m.toUpperCase())
-    .trim().slice(0, 28);
-}
-
-function parseCSV(raw) {
-  const lines   = raw.trim().split('\n');
-  const headers = lines[0].split(',').map(h => h.trim().replace(/["']/g,'').toLowerCase());
-
-  const ni = headers.findIndex(h => /name|brand|station|site/.test(h));
-  const ui = headers.findIndex(h => /unleaded|e10|petrol|unl/.test(h));
-  const di = headers.findIndex(h => /diesel/.test(h) && !/super|premium|hvo/.test(h));
-
-  if (ni < 0 || ui < 0 || di < 0) throw new Error(`Headers: ${headers.join()}`);
-
-  return lines.slice(1).map(line => {
-    const c = line.split(',').map(s => s.trim().replace(/^["']|["']$/g,''));
-    return {
-      name:     c[ni] || '',
-      unleaded: parseFloat(c[ui]) || null,
-      diesel:   parseFloat(c[di]) || null,
-    };
-  }).filter(s => s.name && (s.unleaded || s.diesel));
+  return (name || '').trim().slice(0, 28);
 }
 
 // ─── RENDER ──────────────────────────────────────────────────────
-function render(unl, dsl, total) {
+function render(unl, dsl, total, UK_AVG_UNL, UK_AVG_DSL) {
   const ub = badge(unl.price, UK_AVG_UNL);
   const db = badge(dsl.price, UK_AVG_DSL);
 
@@ -555,8 +526,10 @@ async function init() {
     const res = await fetch(DATA_URL, { cache: 'no-cache' });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
 
-    const csv      = await res.text();
-    const stations = parseCSV(csv);
+    const data     = await res.json();
+    const stations = data.stations;
+    const UK_AVG_UNL = data.nationalAvg.unleaded;
+    const UK_AVG_DSL = data.nationalAvg.diesel;
 
     const byUnl = stations.filter(s => s.unleaded).sort((a,b) => a.unleaded - b.unleaded);
     const byDsl = stations.filter(s => s.diesel).sort((a,b)   => a.diesel   - b.diesel);
@@ -566,7 +539,9 @@ async function init() {
     render(
       { price: byUnl[0].unleaded, name: byUnl[0].name },
       { price: byDsl[0].diesel,   name: byDsl[0].name },
-      stations.length
+      stations.length,
+      UK_AVG_UNL,
+      UK_AVG_DSL
     );
   } catch(e) {
     console.error('Fuel widget:', e);
