@@ -3,7 +3,7 @@
     "unleaded": 131.7,
     "diesel": 141.5
   },
-  "lastUpdated": "2026-03-06T22:01:27.008853+00:00",
+  "lastUpdated": "2026-03-06T22:31:06.518953+00:00",
   "stationCount": 74,
   "stations": [
     {
@@ -254,8 +254,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 133.9,
-      "diesel": 145.9,
-      "updated": "2026-03-06T05:30:40.305Z",
+      "diesel": 146.9,
+      "updated": "2026-03-06T22:20:54.520Z",
       "id": 10
     },
     {
@@ -343,20 +343,6 @@
       "id": 62
     },
     {
-      "name": "SAINSBURYS WREXHAM",
-      "brand": "SAINSBURY'S",
-      "address": "RETAIL PARK, PLAS COCH ROAD, WREXHAM, LL11 2BA",
-      "lat": 53.05571,
-      "lng": -3.00904,
-      "distance": 10.6,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 134.9,
-      "diesel": 143.9,
-      "updated": "2026-03-05T22:02:45.977Z",
-      "id": 72
-    },
-    {
       "name": "BP HARVEST ENERGY OVERPOOL",
       "brand": "BP HARVEST ENERGY",
       "address": "OVERPOOL ROAD, ELLESMERE PORT, CH66 2JF",
@@ -439,6 +425,20 @@
       "diesel": 152.9,
       "updated": "2026-03-06T12:51:09.868Z",
       "id": 34
+    },
+    {
+      "name": "SAINSBURYS WREXHAM",
+      "brand": "SAINSBURY'S",
+      "address": "RETAIL PARK, PLAS COCH ROAD, WREXHAM, LL11 2BA",
+      "lat": 53.05571,
+      "lng": -3.00904,
+      "distance": 10.6,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 135.9,
+      "diesel": 144.9,
+      "updated": "2026-03-06T22:16:10.866Z",
+      "id": 72
     },
     {
       "name": "MFG ROWTON",
@@ -675,7 +675,7 @@
       "is_motorway": false,
       "unleaded": 138.9,
       "diesel": 147.9,
-      "updated": "2026-03-06T21:47:14.473Z",
+      "updated": "2026-03-06T22:00:15.011Z",
       "id": 9
     },
     {
