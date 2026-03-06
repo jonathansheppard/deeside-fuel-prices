@@ -268,9 +268,11 @@
     white-space: nowrap;
   }
 
-  .stat-value.low { color: var(--green); }
+  .stat-value.low { color: var(--green); cursor: pointer; }
+  .stat-value.low:hover { text-decoration: underline; }
   .stat-value.avg { color: var(--amber); }
-  .stat-value.high { color: var(--red); }
+  .stat-value.high { color: var(--red); cursor: pointer; }
+  .stat-value.high:hover { text-decoration: underline; }
 
   .sidebar-scroll {
     flex: 1;
@@ -710,7 +712,6 @@
     <span class="page-subtitle">Deeside, Flintshire &amp; Chester</span>
   </div>
   <div class="header-controls">
-    <div class="badge-live"><span class="dot"></span> Fuel Finder Data</div>
     <div class="fuel-toggle" id="fuelToggle">
       <button class="active" data-fuel="unleaded">Unleaded</button>
       <button data-fuel="diesel">Diesel</button>
@@ -729,15 +730,16 @@
   <div class="sidebar">
     <div class="api-banner">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-      <span>Powered by the <a href="https://www.gov.uk/guidance/access-the-latest-fuel-prices-and-forecourt-data-via-api-or-email" target="_blank">GOV.UK Fuel Finder API</a>. Register for live data via OAuth 2.0.</span>
+      <span>Data from the <a href="https://www.gov.uk/government/collections/fuel-finder" target="_blank">GOV.UK Fuel Finder Scheme</a>. Prices updated within 30 minutes of changes at the pump.</span>
     </div>
     <div class="stats-bar" id="statsBar">
       <div class="stat"><div class="stat-label">UK Average</div><div class="stat-value avg" id="statNatl">—</div></div>
       <div class="stat"><div class="stat-label">Local Cheapest</div><div class="stat-value low" id="statLow">—</div></div>
       <div class="stat"><div class="stat-label">Local Highest</div><div class="stat-value high" id="statHigh">—</div></div>
-      <div class="stat"><div class="stat-label">50L Saving</div><div class="stat-value low" id="statSave">—</div></div>
+      <div class="stat"><div class="stat-label">50L Saving</div><div class="stat-value low" id="statSave" title="Saving vs most expensive local station on a 50-litre fill">—</div></div>
     </div>
     <div class="colour-key">
+      <span class="badge-live"><span class="dot"></span> Fuel Finder Data</span>
       <span class="key-item"><span class="key-dot key-green"></span> Below UK avg</span>
       <span class="key-item"><span class="key-dot key-amber"></span> Up to 5p above</span>
       <span class="key-item"><span class="key-dot key-red"></span> 5p+ above avg</span>
@@ -749,9 +751,9 @@
 
     <div class="footer-note">
       *Distances measured from Queensferry roundabout<br>
-      Data from GOV.UK Fuel Finder Scheme &middot; CSV updated twice daily<br>
+      Data from GOV.UK Fuel Finder Scheme &middot; Updated every 30 minutes<br>
       UK avg (131.7p / 141.5p) from DESNZ &middot; Last updated <span id="avgDate">3 Mar 2026</span><br>
-      <span id="dataTimestamp">Data refreshed every 30 minutes via API</span><br>
+      <span id="dataTimestamp"></span><br>
       Built for <a href="https://deeside.com" target="_blank">Deeside.com</a> &middot; Connected Deeside Newsroom
     </div>
   </div>
@@ -837,13 +839,15 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
 }).addTo(map);
 
 // ── MARKER ICONS ──
-function createMarkerIcon(price, priceClass, isActive, isCheapest) {
+function createMarkerIcon(price, priceClass, isActive, isCheapest, isStale) {
   const colorMap = { 'price-low': '#34d399', 'price-mid': '#fbbf24', 'price-high': '#f87171' };
-  const baseColor = colorMap[priceClass] || '#8b8fa3';
+  const baseColor = isStale ? '#4B5563' : (colorMap[priceClass] || '#8b8fa3');
   const borderColor = isCheapest ? '#34d399' : (isActive ? '#38bdf8' : baseColor);
   const bgColor = isCheapest ? 'rgba(52,211,153,0.15)' : (isActive ? 'rgba(56,189,248,0.15)' : 'rgba(15,17,23,0.9)');
   const size = isActive ? 52 : 44;
   const fontSize = isActive ? 13 : 11;
+  const label = isStale ? '?' : price.toFixed(1);
+  const textColor = isStale ? '#9CA3AF' : (isCheapest ? '#34d399' : '#e4e6ee');
 
   return L.divIcon({
     className: 'custom-marker',
@@ -852,11 +856,11 @@ function createMarkerIcon(price, priceClass, isActive, isCheapest) {
       background:${bgColor}; border:2.5px solid ${borderColor};
       display:flex; align-items:center; justify-content:center;
       font-family:'JetBrains Mono',monospace; font-size:${fontSize}px; font-weight:700;
-      color:${isCheapest ? '#34d399' : '#e4e6ee'};
+      color:${textColor};
       box-shadow:0 4px 16px rgba(0,0,0,0.4);
       backdrop-filter:blur(4px);
       transition:all 0.2s;
-    ">${price.toFixed(1)}</div>`,
+    ">${label}</div>`,
     iconSize: [size, size],
     iconAnchor: [size/2, size/2],
     popupAnchor: [0, -size/2 - 4]
@@ -871,8 +875,8 @@ function getPrice(station) {
 function getSortedStations() {
   const sorted = [...stations];
   switch (currentSort) {
-    case 'price-asc': sorted.sort((a, b) => getPrice(a) - getPrice(b)); break;
-    case 'price-desc': sorted.sort((a, b) => getPrice(b) - getPrice(a)); break;
+    case 'price-asc': sorted.sort((a, b) => (getPrice(a)||999) - (getPrice(b)||999)); break;
+    case 'price-desc': sorted.sort((a, b) => (getPrice(b)||0) - (getPrice(a)||0)); break;
     case 'distance': sorted.sort((a, b) => a.distance - b.distance); break;
     case 'name': sorted.sort((a, b) => a.name.localeCompare(b.name)); break;
   }
@@ -881,7 +885,9 @@ function getSortedStations() {
 
 function getStats() {
   const nonStale = stations.filter(s => getStaleState(s) !== 'stale');
-  const prices = nonStale.length > 0 ? nonStale.map(s => getPrice(s)) : stations.map(s => getPrice(s));
+  const pool = nonStale.length > 0 ? nonStale : stations;
+  const prices = pool.map(s => getPrice(s)).filter(p => p && p > 0);
+  if (prices.length === 0) return { low: 0, avg: 0, high: 0, allStale: true };
   return {
     low: Math.min(...prices),
     avg: prices.reduce((a, b) => a + b, 0) / prices.length,
@@ -942,9 +948,9 @@ function render() {
   const coreStations = stations.filter(s => s.distance <= CORE_RADIUS);
   const extendedStations = stations.filter(s => s.distance > CORE_RADIUS);
 
-  const sorted = getSortedStations().filter(s => s.distance <= CORE_RADIUS);
+  const sorted = getSortedStations().filter(s => s.distance <= CORE_RADIUS && getPrice(s) > 0);
   const stats = getStats();
-  const nonStaleStations = stations.filter(s => getStaleState(s) !== 'stale');
+  const nonStaleStations = stations.filter(s => getStaleState(s) !== 'stale' && getPrice(s) > 0);
   const cheapestPrice = nonStaleStations.length > 0 ? Math.min(...nonStaleStations.map(s => getPrice(s))) : stats.low;
   const highestPrice = nonStaleStations.length > 0 ? Math.max(...nonStaleStations.map(s => getPrice(s))) : stats.high;
 
@@ -962,13 +968,25 @@ function render() {
     document.getElementById('statSave').textContent = '\u00A3' + saving;
   }
 
+  // Click handlers for stats
+  document.getElementById('statLow').onclick = () => {
+    const cheapest = nonStaleStations.filter(s => getPrice(s) > 0).sort((a,b) => getPrice(a) - getPrice(b))[0];
+    if (cheapest) { activeStation = cheapest.id; map.flyTo([cheapest.lat, cheapest.lng], 14, {duration:0.5}); markers[cheapest.id]?.openPopup(); render(); }
+  };
+  document.getElementById('statHigh').onclick = () => {
+    const highest = nonStaleStations.filter(s => getPrice(s) > 0).sort((a,b) => getPrice(b) - getPrice(a))[0];
+    if (highest) { activeStation = highest.id; map.flyTo([highest.lat, highest.lng], 14, {duration:0.5}); markers[highest.id]?.openPopup(); render(); }
+  };
+
   // Clear markers
   Object.values(markers).forEach(m => map.removeLayer(m));
   markers = {};
 
-  // Add markers for ALL stations (core + extended)
+  // Add markers for ALL stations (core + extended) — skip if no price for current fuel
   stations.forEach(station => {
     const price = getPrice(station);
+    if (!price || price <= 0) return; // Skip stations with no price for selected fuel
+
     const staleState = getStaleState(station);
     const isCheapest = staleState !== 'stale' && price === cheapestPrice;
     const isActive = activeStation === station.id;
@@ -979,7 +997,7 @@ function render() {
     const markerOpacity = staleState === 'stale' ? 0.45 : (isExtended ? 0.7 : 1.0);
 
     const marker = L.marker([station.lat, station.lng], {
-      icon: createMarkerIcon(staleState === 'stale' ? 0 : price, markerPriceClass, isActive, isCheapest),
+      icon: createMarkerIcon(price, markerPriceClass, isActive, isCheapest, staleState === 'stale'),
       opacity: markerOpacity
     }).addTo(map);
 
