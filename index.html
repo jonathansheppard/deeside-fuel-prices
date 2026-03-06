@@ -933,7 +933,7 @@ function render() {
     const markerPriceClass = getPriceClass(price, stats);
     const marker = L.marker([station.lat, station.lng], {
       icon: createMarkerIcon(price, markerPriceClass, isActive, isCheapest),
-      opacity: isExtended ? 0.7 : ((() => { const d = new Date(station.updated); return !isNaN(d.getTime()) && (Date.now() - d.getTime()) > 86400000 ? 0.45 : 1.0; })())
+      opacity: isExtended ? 0.7 : 1.0
     }).addTo(map);
 
     const cardNatl = nationalAvg[currentFuel];
@@ -982,30 +982,14 @@ function render() {
     const priceClass = getPriceClass(price, stats);
     const cardNatl = nationalAvg[currentFuel];
 
-    // Stale detection: >24 hours since price was last updated
-    let isStale = false;
-    let staleDate = '';
-    if (station.updated) {
-      const updDate = new Date(station.updated);
-      if (!isNaN(updDate.getTime())) {
-        const hoursOld = (Date.now() - updDate.getTime()) / 3600000;
-        if (hoursOld > 48) {
-          isStale = true;
-          staleDate = updDate.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
-        }
-      }
-    }
-
     let cardClass = 'station-card';
-    if (isStale) cardClass += ' stale';
-    else if (isCheapest) cardClass += ' cheapest';
+    if (isCheapest) cardClass += ' cheapest';
     else if (price < cardNatl - 0.5) cardClass += ' below-avg';
-    if (isExpensive && !isStale) cardClass += ' expensive';
+    if (isExpensive) cardClass += ' expensive';
     if (isActive) cardClass += ' active';
 
     return `
       <div class="${cardClass}" data-id="${station.id}">
-        ${isStale ? '<div class="stale-badge">Last updated ' + staleDate + '</div>' : ''}
         <div class="station-info">
           <div class="station-brand">
             <span class="brand-dot ${priceClass.replace('price-', 'dot-')}"></span>
@@ -1016,19 +1000,18 @@ function render() {
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
             ${station.distance} miles*
           </div>
-          ${!isStale && isCheapest ? '<span class="station-tag tag-cheapest">★ Cheapest</span>' : ''}
-          ${!isStale && isExpensive ? '<span class="station-tag tag-expensive">Most Expensive</span>' : ''}
+          ${isCheapest ? '<span class="station-tag tag-cheapest">★ Cheapest</span>' : ''}
+          ${isExpensive ? '<span class="station-tag tag-expensive">Most Expensive</span>' : ''}
           ${station.note ? '<span class="station-tag tag-note">' + station.note + '</span>' : ''}
         </div>
         <div class="station-price">
-          <div class="price-value ${isStale ? 'price-mid' : priceClass}">${price.toFixed(1)}<small style="font-size:12px">p</small></div>
+          <div class="price-value ${priceClass}">${price.toFixed(1)}<small style="font-size:12px">p</small></div>
           <div class="price-unit">per litre</div>
           <div class="price-updated">${(() => {
             if (!station.updated) return '';
             const d = new Date(station.updated);
             if (isNaN(d.getTime())) return '';
-            const hrs = Math.floor((Date.now() - d.getTime()) / 3600000);
-            return hrs < 24 ? timeAgo(station.updated) : 'Price set ' + timeAgo(station.updated);
+            return 'Price set ' + d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
           })()}</div>
           ${(() => {
             const diff = price - nationalAvg[currentFuel];
