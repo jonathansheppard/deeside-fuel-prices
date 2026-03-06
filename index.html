@@ -989,7 +989,7 @@ function render() {
       const updDate = new Date(station.updated);
       if (!isNaN(updDate.getTime())) {
         const hoursOld = (Date.now() - updDate.getTime()) / 3600000;
-        if (hoursOld > 24) {
+        if (hoursOld > 48) {
           isStale = true;
           staleDate = updDate.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
         }
