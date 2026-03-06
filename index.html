@@ -596,29 +596,18 @@
 
   /* ── STALE DATA TIERS ── */
   .station-card.stale {
-    opacity: 0.55;
-    border-left: 3px solid #374151;
+    border-left: 3px solid #4B5563;
   }
-  .station-card.stale:hover {
-    opacity: 0.7;
+  .stale-banner {
+    grid-column: 1 / -1;
+    background: #1F2937;
+    padding: 6px 12px;
+    margin: 4px -16px 6px;
+    font-size: 12px;
+    color: #F87171;
+    line-height: 1.4;
   }
-  .stale-divider {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 10px 16px;
-    font-size: 9px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: #6B7280;
-  }
-  .stale-divider::before, .stale-divider::after {
-    content: '';
-    flex: 1;
-    height: 1px;
-    background: #374151;
-  }
+  .stale-banner .stale-icon { color: #EF4444; }
   .timestamp-fresh { color: var(--green); font-size: 10px; }
   .timestamp-aging { color: #F59E0B; font-size: 10px; font-weight: 600; }
   .timestamp-stale { color: #EF4444; font-size: 10px; }
@@ -789,6 +778,7 @@ const fixedThresholds = {
 
 // National averages (w/c 23 Feb 2026, DESNZ weekly data)
 const NATIONAL_AVG_UPDATED = '3 Mar 2026';
+const NOTABLE_STATIONS = ['COSTCO', 'ASDA', 'TESCO', 'MORRISONS', 'SAINSBURYS'];
 // ── DATA LOADING ──
 // Fetches station data from stations.json (updated by n8n workflow)
 let nationalAvg = { unleaded: 131.7, diesel: 141.5 };
@@ -1052,6 +1042,7 @@ function render() {
     const isActive = activeStation === station.id;
     const priceClass = staleState === 'stale' ? '' : getPriceClass(price, stats);
     const cardNatl = nationalAvg[currentFuel];
+    const isNotable = NOTABLE_STATIONS.some(n => station.brand.includes(n) || station.name.toUpperCase().includes(n));
 
     let cardClass = 'station-card';
     if (staleState === 'stale') cardClass += ' stale';
@@ -1060,28 +1051,37 @@ function render() {
     if (isExpensive) cardClass += ' expensive';
     if (isActive) cardClass += ' active';
 
-    // Timestamp treatment per tier
+    // Timestamp per tier
     let timestampHtml = '';
     if (station.updated) {
       const d = new Date(station.updated);
       if (!isNaN(d.getTime())) {
         const dateStr = d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
-        const staleDays = Math.floor((Date.now() - d.getTime()) / 86400000);
         if (staleState === 'fresh') {
           timestampHtml = '<div class="timestamp-fresh">Price set ' + dateStr + '</div>';
         } else if (staleState === 'aging') {
           timestampHtml = '<div class="timestamp-aging">\u26A0 Updated yesterday</div>';
-        } else {
-          timestampHtml = '<div class="timestamp-stale">\u26A0 Price unconfirmed \u2014 ' + staleDays + 'd ago</div>';
         }
       }
     }
 
-    // Price colour: grey for stale
+    // Stale warning banner
+    let staleBannerHtml = '';
+    if (staleState === 'stale' && station.updated) {
+      const d = new Date(station.updated);
+      if (!isNaN(d.getTime())) {
+        const staleDays = Math.floor((Date.now() - d.getTime()) / 86400000);
+        if (isNotable) {
+          staleBannerHtml = `<div class="stale-banner"><span class="stale-icon">\u26A0</span> Price unconfirmed \u2014 this is a popular station. Last reported ${staleDays} day${staleDays === 1 ? '' : 's'} ago. Verify before travelling.</div>`;
+        } else {
+          staleBannerHtml = `<div class="stale-banner"><span class="stale-icon">\u26A0</span> Price unconfirmed \u2014 last reported ${staleDays} day${staleDays === 1 ? '' : 's'} ago. Verify before travelling.</div>`;
+        }
+      }
+    }
+
+    // Price colour
     const priceColourClass = staleState === 'stale' ? '' : priceClass;
     const priceStyle = staleState === 'stale' ? ' style="color:#9CA3AF"' : '';
-
-    // Dot colour
     const dotClass = staleState === 'stale' ? '' : priceClass.replace('price-', 'dot-');
 
     return `
@@ -1092,6 +1092,7 @@ function render() {
             <span class="station-name">${station.name}</span>
           </div>
           <div class="station-address">${station.address}</div>
+          ${staleBannerHtml}
           <div class="station-distance">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
             ${station.distance} miles*
@@ -1126,14 +1127,13 @@ function render() {
   const adSlots = [4, 9, 14]; // after stations 5, 10, 15
   const adBaseIndex = Math.floor(Date.now() / 60000) % inlineAds.length;
 
-  // Split core into fresh/aging vs stale
-  const coreFresh = sorted.filter(s => getStaleState(s) !== 'stale');
-  const coreStale = sorted.filter(s => getStaleState(s) === 'stale');
+  // Split core into fresh/aging vs stale — but render ALL in natural order
+  const allCore = sorted;
 
-  coreFresh.forEach((station, index) => {
+  allCore.forEach((station, index) => {
     html += buildCard(station);
     const slotIndex = adSlots.indexOf(index);
-    if (slotIndex !== -1 && coreFresh.length > index + 1) {
+    if (slotIndex !== -1 && allCore.length > index + 1) {
       const ad = inlineAds[(adBaseIndex + slotIndex) % inlineAds.length];
       html += `<div class="inline-ad">
         <span class="inline-ad-label">Sponsored</span>
@@ -1148,12 +1148,6 @@ function render() {
       </div>`;
     }
   });
-
-  // Stale divider + stale cards
-  if (coreStale.length > 0) {
-    html += '<div class="stale-divider">Prices not recently confirmed</div>';
-    coreStale.forEach(station => { html += buildCard(station); });
-  }
 
   // Show expandable wider area stations
   if (extendedStations.length > 0) {
