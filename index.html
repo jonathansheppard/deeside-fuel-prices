@@ -592,25 +592,39 @@
     opacity: 0.6;
   }
 
+  /* ── STALE DATA TIERS ── */
   .station-card.stale {
-    opacity: 0.45;
+    opacity: 0.55;
+    border-left: 3px solid #374151;
   }
   .station-card.stale:hover {
-    opacity: 0.65;
+    opacity: 0.7;
   }
-  .stale-badge {
-    grid-column: 1 / -1;
-    background: rgba(251, 191, 36, 0.1);
-    border: 1px solid rgba(251, 191, 36, 0.2);
-    color: var(--amber);
+  .stale-divider {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
     font-size: 9px;
     font-weight: 600;
-    padding: 4px 10px;
-    border-radius: 4px;
     text-transform: uppercase;
-    letter-spacing: 0.04em;
-    text-align: center;
-    margin-bottom: 4px;
+    letter-spacing: 0.08em;
+    color: #6B7280;
+  }
+  .stale-divider::before, .stale-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #374151;
+  }
+  .timestamp-fresh { color: var(--green); font-size: 10px; }
+  .timestamp-aging { color: #F59E0B; font-size: 10px; font-weight: 600; }
+  .timestamp-stale { color: #EF4444; font-size: 10px; }
+
+  @media (max-width: 480px) {
+    .stats-bar {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   .map-popup {
@@ -736,7 +750,8 @@
     <div class="footer-note">
       *Distances measured from Queensferry roundabout<br>
       Data from GOV.UK Fuel Finder Scheme &middot; CSV updated twice daily<br>
-      <span id="dataTimestamp">UK avg from DESNZ weekly road fuel prices</span><br>
+      UK avg (131.7p / 141.5p) from DESNZ &middot; Last updated <span id="avgDate">3 Mar 2026</span><br>
+      <span id="dataTimestamp">Data refreshed every 30 minutes via API</span><br>
       Built for <a href="https://deeside.com" target="_blank">Deeside.com</a> &middot; Connected Deeside Newsroom
     </div>
   </div>
@@ -771,6 +786,7 @@ const fixedThresholds = {
 };
 
 // National averages (w/c 23 Feb 2026, DESNZ weekly data)
+const NATIONAL_AVG_UPDATED = '3 Mar 2026';
 // ── DATA LOADING ──
 // Fetches station data from stations.json (updated by n8n workflow)
 let nationalAvg = { unleaded: 131.7, diesel: 141.5 };
@@ -864,11 +880,13 @@ function getSortedStations() {
 }
 
 function getStats() {
-  const prices = stations.map(s => getPrice(s));
+  const nonStale = stations.filter(s => getStaleState(s) !== 'stale');
+  const prices = nonStale.length > 0 ? nonStale.map(s => getPrice(s)) : stations.map(s => getPrice(s));
   return {
     low: Math.min(...prices),
     avg: prices.reduce((a, b) => a + b, 0) / prices.length,
-    high: Math.max(...prices)
+    high: Math.max(...prices),
+    allStale: nonStale.length === 0
   };
 }
 
@@ -899,6 +917,23 @@ function timeAgo(dateStr) {
   return date.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
 }
 
+function getStaleState(station) {
+  if (!station.updated) return 'stale';
+  const d = new Date(station.updated);
+  if (isNaN(d.getTime())) return 'stale';
+  const hours = (Date.now() - d.getTime()) / 3600000;
+  if (hours < 24) return 'fresh';
+  if (hours < 48) return 'aging';
+  return 'stale';
+}
+
+function getStaleHours(station) {
+  if (!station.updated) return 9999;
+  const d = new Date(station.updated);
+  if (isNaN(d.getTime())) return 9999;
+  return (Date.now() - d.getTime()) / 3600000;
+}
+
 function render() {
   if (!stations.length) return;
 
@@ -909,15 +944,23 @@ function render() {
 
   const sorted = getSortedStations().filter(s => s.distance <= CORE_RADIUS);
   const stats = getStats();
-  const cheapestPrice = stats.low;
+  const nonStaleStations = stations.filter(s => getStaleState(s) !== 'stale');
+  const cheapestPrice = nonStaleStations.length > 0 ? Math.min(...nonStaleStations.map(s => getPrice(s))) : stats.low;
+  const highestPrice = nonStaleStations.length > 0 ? Math.max(...nonStaleStations.map(s => getPrice(s))) : stats.high;
 
-  // Stats (based on ALL stations including extended)
+  // Stats (exclude stale stations)
   const natl = nationalAvg[currentFuel];
   document.getElementById('statNatl').textContent = natl.toFixed(1) + 'p';
-  document.getElementById('statLow').textContent = stats.low.toFixed(1) + 'p';
-  document.getElementById('statHigh').textContent = stats.high.toFixed(1) + 'p';
-  const saving = ((stats.high - stats.low) / 100 * 50).toFixed(2);
-  document.getElementById('statSave').textContent = '£' + saving;
+  if (stats.allStale) {
+    document.getElementById('statLow').textContent = '—';
+    document.getElementById('statHigh').textContent = '—';
+    document.getElementById('statSave').textContent = '—';
+  } else {
+    document.getElementById('statLow').textContent = stats.low.toFixed(1) + 'p';
+    document.getElementById('statHigh').textContent = stats.high.toFixed(1) + 'p';
+    const saving = ((stats.high - stats.low) / 100 * 50).toFixed(2);
+    document.getElementById('statSave').textContent = '\u00A3' + saving;
+  }
 
   // Clear markers
   Object.values(markers).forEach(m => map.removeLayer(m));
@@ -926,43 +969,52 @@ function render() {
   // Add markers for ALL stations (core + extended)
   stations.forEach(station => {
     const price = getPrice(station);
-    const isCheapest = price === cheapestPrice;
+    const staleState = getStaleState(station);
+    const isCheapest = staleState !== 'stale' && price === cheapestPrice;
     const isActive = activeStation === station.id;
     const isExtended = station.distance > CORE_RADIUS;
 
-    const markerPriceClass = getPriceClass(price, stats);
+    const markerPriceClass = staleState === 'stale' ? 'price-mid' : getPriceClass(price, stats);
+    const markerLabel = staleState === 'stale' ? '?p' : price.toFixed(1);
+    const markerOpacity = staleState === 'stale' ? 0.45 : (isExtended ? 0.7 : 1.0);
+
     const marker = L.marker([station.lat, station.lng], {
-      icon: createMarkerIcon(price, markerPriceClass, isActive, isCheapest),
-      opacity: isExtended ? 0.7 : 1.0
+      icon: createMarkerIcon(staleState === 'stale' ? 0 : price, markerPriceClass, isActive, isCheapest),
+      opacity: markerOpacity
     }).addTo(map);
 
     const cardNatl = nationalAvg[currentFuel];
     const diff = price - cardNatl;
     const diffStr = diff < -0.5 ? `<span style="color:#16a34a">${diff.toFixed(1)}p vs UK avg</span>` :
                     diff > 0.5 ? `<span style="color:#dc2626">+${diff.toFixed(1)}p vs UK avg</span>` :
-                    `<span style="color:#888">≈ UK average</span>`;
+                    `<span style="color:#888">\u2248 UK average</span>`;
 
-    marker.bindPopup(`
-      <div class="map-popup">
-        <div class="popup-brand">${station.name}</div>
-        <div class="popup-address">${station.address}</div>
-        <div class="popup-price" style="color:${isCheapest ? '#16a34a' : '#1e293b'}">${price.toFixed(1)}p</div>
-        <div class="popup-label">${currentFuel === 'unleaded' ? 'Unleaded' : 'Diesel'} per litre</div>
-        <div style="font-size:11px;margin-top:4px;font-family:'JetBrains Mono',monospace">${diffStr}</div>
-        <div style="font-size:10px;color:#888;margin-top:4px">📍 ${station.distance} miles from Queensferry</div>
-        ${(() => {
-          if (!station.updated) return '';
-          const ud = new Date(station.updated);
-          if (isNaN(ud.getTime())) return '';
-          const hrs = (Date.now() - ud.getTime()) / 3600000;
-          if (hrs > 24) {
-            const dateStr = ud.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
-            return '<div style="font-size:10px;color:#fbbf24;font-weight:600;margin-top:4px;background:rgba(251,191,36,0.1);padding:3px 6px;border-radius:3px">⚠ Last updated ' + dateStr + '</div>';
-          }
-          return '<div style="font-size:10px;color:#34d399;margin-top:4px">✓ Updated ' + timeAgo(station.updated) + '</div>';
-        })()}
-      </div>
-    `, { maxWidth: 260, minWidth: 180, closeButton: true });
+    const staleHrs = getStaleHours(station);
+    const staleDays = Math.floor(staleHrs / 24);
+    const updDate = station.updated ? new Date(station.updated) : null;
+    const updDateStr = updDate && !isNaN(updDate.getTime()) ? updDate.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }) : '';
+
+    let popupHtml = '<div class="map-popup">';
+    if (staleState === 'stale') {
+      popupHtml += `<div style="font-size:11px;color:#EF4444;font-weight:600;margin-bottom:6px;background:rgba(239,68,68,0.1);padding:4px 8px;border-radius:4px">\u26A0 Price not recently confirmed</div>`;
+      popupHtml += `<div style="font-size:10px;color:#9CA3AF;margin-bottom:6px">Last update: ${updDateStr} (${staleDays} day${staleDays === 1 ? '' : 's'} ago)</div>`;
+    }
+    popupHtml += `<div class="popup-brand">${station.name}</div>`;
+    popupHtml += `<div class="popup-address">${station.address}</div>`;
+    popupHtml += `<div class="popup-price" style="color:${staleState === 'stale' ? '#9CA3AF' : (isCheapest ? '#16a34a' : '#1e293b')}">${price.toFixed(1)}p</div>`;
+    popupHtml += `<div class="popup-label">${currentFuel === 'unleaded' ? 'Unleaded' : 'Diesel'} per litre</div>`;
+    if (staleState !== 'stale') {
+      popupHtml += `<div style="font-size:11px;margin-top:4px;font-family:'JetBrains Mono',monospace">${diffStr}</div>`;
+    }
+    popupHtml += `<div style="font-size:10px;color:#888;margin-top:4px">\uD83D\uDCCD ${station.distance} miles from Queensferry</div>`;
+    if (staleState === 'fresh') {
+      popupHtml += `<div style="font-size:10px;color:#34d399;margin-top:4px">\u2713 Updated ${timeAgo(station.updated)}</div>`;
+    } else if (staleState === 'aging') {
+      popupHtml += `<div style="font-size:10px;color:#F59E0B;margin-top:4px">\u26A0 Updated yesterday</div>`;
+    }
+    popupHtml += '</div>';
+
+    marker.bindPopup(popupHtml, { maxWidth: 260, minWidth: 180, closeButton: true });
 
     marker.on('click', () => {
       activeStation = station.id;
@@ -976,23 +1028,49 @@ function render() {
 
   function buildCard(station) {
     const price = getPrice(station);
-    const isCheapest = price === cheapestPrice;
-    const isExpensive = price === stats.high;
+    const staleState = getStaleState(station);
+    const isCheapest = staleState !== 'stale' && staleState !== 'aging' && price === cheapestPrice;
+    const isExpensive = staleState !== 'stale' && staleState !== 'aging' && price === highestPrice;
     const isActive = activeStation === station.id;
-    const priceClass = getPriceClass(price, stats);
+    const priceClass = staleState === 'stale' ? '' : getPriceClass(price, stats);
     const cardNatl = nationalAvg[currentFuel];
 
     let cardClass = 'station-card';
-    if (isCheapest) cardClass += ' cheapest';
+    if (staleState === 'stale') cardClass += ' stale';
+    else if (isCheapest) cardClass += ' cheapest';
     else if (price < cardNatl - 0.5) cardClass += ' below-avg';
     if (isExpensive) cardClass += ' expensive';
     if (isActive) cardClass += ' active';
+
+    // Timestamp treatment per tier
+    let timestampHtml = '';
+    if (station.updated) {
+      const d = new Date(station.updated);
+      if (!isNaN(d.getTime())) {
+        const dateStr = d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
+        const staleDays = Math.floor((Date.now() - d.getTime()) / 86400000);
+        if (staleState === 'fresh') {
+          timestampHtml = '<div class="timestamp-fresh">Price set ' + dateStr + '</div>';
+        } else if (staleState === 'aging') {
+          timestampHtml = '<div class="timestamp-aging">\u26A0 Updated yesterday</div>';
+        } else {
+          timestampHtml = '<div class="timestamp-stale">\u26A0 Price unconfirmed \u2014 ' + staleDays + 'd ago</div>';
+        }
+      }
+    }
+
+    // Price colour: grey for stale
+    const priceColourClass = staleState === 'stale' ? '' : priceClass;
+    const priceStyle = staleState === 'stale' ? ' style="color:#9CA3AF"' : '';
+
+    // Dot colour
+    const dotClass = staleState === 'stale' ? '' : priceClass.replace('price-', 'dot-');
 
     return `
       <div class="${cardClass}" data-id="${station.id}">
         <div class="station-info">
           <div class="station-brand">
-            <span class="brand-dot ${priceClass.replace('price-', 'dot-')}"></span>
+            ${dotClass ? '<span class="brand-dot ' + dotClass + '"></span>' : '<span class="brand-dot" style="background:#6B7280"></span>'}
             <span class="station-name">${station.name}</span>
           </div>
           <div class="station-address">${station.address}</div>
@@ -1000,25 +1078,20 @@ function render() {
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
             ${station.distance} miles*
           </div>
-          ${isCheapest ? '<span class="station-tag tag-cheapest">★ Cheapest</span>' : ''}
+          ${isCheapest ? '<span class="station-tag tag-cheapest">\u2605 Cheapest</span>' : ''}
           ${isExpensive ? '<span class="station-tag tag-expensive">Most Expensive</span>' : ''}
           ${station.note ? '<span class="station-tag tag-note">' + station.note + '</span>' : ''}
         </div>
         <div class="station-price">
-          <div class="price-value ${priceClass}">${price.toFixed(1)}<small style="font-size:12px">p</small></div>
+          <div class="price-value ${priceColourClass}"${priceStyle}>${price.toFixed(1)}<small style="font-size:12px">p</small></div>
           <div class="price-unit">per litre</div>
-          <div class="price-updated">${(() => {
-            if (!station.updated) return '';
-            const d = new Date(station.updated);
-            if (isNaN(d.getTime())) return '';
-            return 'Price set ' + d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
-          })()}</div>
-          ${(() => {
+          ${timestampHtml}
+          ${staleState !== 'stale' ? (() => {
             const diff = price - nationalAvg[currentFuel];
             if (diff < -0.5) return '<div class="price-diff below">' + diff.toFixed(1) + 'p vs UK avg</div>';
             if (diff > 0.5) return '<div class="price-diff above">+' + diff.toFixed(1) + 'p vs UK avg</div>';
-            return '<div class="price-diff level">≈ UK average</div>';
-          })()}
+            return '<div class="price-diff level">\u2248 UK average</div>';
+          })() : ''}
         </div>
       </div>
     `;
@@ -1027,18 +1100,22 @@ function render() {
   let html = '';
   // Rotating inline ads — 3 slots, each shows a different offer
   const inlineAds = [
-    { icon: '🛡️', title: 'AA Breakdown Cover', desc: 'From £4.50/month. Cover starts immediately.', cta: 'Get quote →', href: '#', id: 'aff-breakdown' },
-    { icon: '🚗', title: 'Compare car insurance', desc: 'Check GoCompare for cheaper cover in minutes.', cta: 'Compare →', href: '#', id: 'aff-insurance' },
-    { icon: '⛽', title: 'Costco membership', desc: 'Members save 8p+/litre — cheapest fuel locally.', cta: 'Join →', href: '#', id: 'aff-costco' },
-    { icon: '💳', title: 'Business fuel cards', desc: 'Fixed weekly prices, no transaction fees. Free card.', cta: 'Apply →', href: '#', id: 'aff-fuelcard' }
+    { icon: '\uD83D\uDEE1\uFE0F', title: 'AA Breakdown Cover', desc: 'From \u00A34.50/month. Cover starts immediately.', cta: 'Get quote \u2192', href: '#', id: 'aff-breakdown' },
+    { icon: '\uD83D\uDE97', title: 'Compare car insurance', desc: 'Check GoCompare for cheaper cover in minutes.', cta: 'Compare \u2192', href: '#', id: 'aff-insurance' },
+    { icon: '\u26FD', title: 'Costco membership', desc: 'Members save 8p+/litre \u2014 cheapest fuel locally.', cta: 'Join \u2192', href: '#', id: 'aff-costco' },
+    { icon: '\uD83D\uDCB3', title: 'Business fuel cards', desc: 'Fixed weekly prices, no transaction fees. Free card.', cta: 'Apply \u2192', href: '#', id: 'aff-fuelcard' }
   ];
   const adSlots = [4, 9, 14]; // after stations 5, 10, 15
-  const adBaseIndex = Math.floor(Date.now() / 60000) % inlineAds.length; // rotates every minute
+  const adBaseIndex = Math.floor(Date.now() / 60000) % inlineAds.length;
 
-  sorted.forEach((station, index) => {
+  // Split core into fresh/aging vs stale
+  const coreFresh = sorted.filter(s => getStaleState(s) !== 'stale');
+  const coreStale = sorted.filter(s => getStaleState(s) === 'stale');
+
+  coreFresh.forEach((station, index) => {
     html += buildCard(station);
     const slotIndex = adSlots.indexOf(index);
-    if (slotIndex !== -1 && sorted.length > index + 1) {
+    if (slotIndex !== -1 && coreFresh.length > index + 1) {
       const ad = inlineAds[(adBaseIndex + slotIndex) % inlineAds.length];
       html += `<div class="inline-ad">
         <span class="inline-ad-label">Sponsored</span>
@@ -1053,6 +1130,12 @@ function render() {
       </div>`;
     }
   });
+
+  // Stale divider + stale cards
+  if (coreStale.length > 0) {
+    html += '<div class="stale-divider">Prices not recently confirmed</div>';
+    coreStale.forEach(station => { html += buildCard(station); });
+  }
 
   // Show expandable wider area stations
   if (extendedStations.length > 0) {
