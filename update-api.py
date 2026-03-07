@@ -75,41 +75,59 @@ def api_request(url, method="GET", data=None, headers=None):
 
 def get_national_averages():
     """
-    Fetch current UK average fuel prices from StationWatch.co.uk
-    which calculates live averages from the same GOV.UK API data.
-    Falls back to hardcoded values if fetch fails.
+    Returns fallback values — national average is now computed directly
+    from GOV.UK station data after processing. See compute_national_averages().
+    """
+    return {'unleaded': NATIONAL_AVG_UNLEADED_FALLBACK, 'diesel': NATIONAL_AVG_DIESEL_FALLBACK}
+
+
+def compute_national_averages(stations_raw, prices_raw):
+    """
+    Compute UK national average prices from the full GOV.UK dataset
+    (all stations, not just local ones). Excludes motorway services.
     """
     try:
-        log("Fetching national average prices from StationWatch...")
-        req = urllib.request.Request(
-            'https://stationwatch.co.uk/fuel-prices/',
-            headers={'User-Agent': 'Mozilla/5.0 (compatible; DeesideFuelBot/1.0)'}
-        )
-        resp = urllib.request.urlopen(req, timeout=15)
-        html = resp.read().decode('utf-8', errors='replace')
+        # Build a quick price lookup
+        price_map = {p['node_id']: p for p in prices_raw}
 
-        unleaded = None
-        diesel = None
+        unleaded_prices = []
+        diesel_prices = []
 
-        # StationWatch publishes averages in FAQ section as plain text
-        # "The average price of unleaded petrol (E10) in the UK today is 136.5p"
-        ul_match = re.search(r'average price of unleaded petrol[^i]*is\s+([\d.]+)p', html, re.IGNORECASE)
-        di_match = re.search(r'average price of diesel[^i]*is\s+([\d.]+)p', html, re.IGNORECASE)
+        for s in stations_raw:
+            if s.get('permanent_closure') or s.get('temporary_closure'):
+                continue
+            if s.get('is_motorway_service_station'):
+                continue
 
-        if ul_match:
-            unleaded = float(ul_match.group(1))
-        if di_match:
-            diesel = float(di_match.group(1))
+            nid = s.get('node_id')
+            p = price_map.get(nid)
+            if not p:
+                continue
 
-        if unleaded and diesel and 100 < unleaded < 250 and 100 < diesel < 250:
-            log(f"National averages: unleaded {unleaded}p, diesel {diesel}p")
-            return {'unleaded': unleaded, 'diesel': diesel}
+            for fp in p.get('fuel_prices', []):
+                ft = fp.get('fuel_type')
+                price = fp.get('price')
+                if not price:
+                    continue
+                val = float(price)
+                if not (100 < val < 250):
+                    continue
+                if ft == 'E10':
+                    unleaded_prices.append(val)
+                elif ft == 'B7_STANDARD':
+                    diesel_prices.append(val)
+
+        if unleaded_prices and diesel_prices:
+            avg_u = round(sum(unleaded_prices) / len(unleaded_prices), 1)
+            avg_d = round(sum(diesel_prices) / len(diesel_prices), 1)
+            log(f"Computed national averages from {len(unleaded_prices)} unleaded / {len(diesel_prices)} diesel stations: {avg_u}p / {avg_d}p")
+            return {'unleaded': avg_u, 'diesel': avg_d}
         else:
-            log("Could not parse StationWatch — using fallback averages")
+            log("Could not compute national averages — using fallback")
             return {'unleaded': NATIONAL_AVG_UNLEADED_FALLBACK, 'diesel': NATIONAL_AVG_DIESEL_FALLBACK}
 
     except Exception as e:
-        log(f"National average fetch failed ({e}) — using fallback averages")
+        log(f"National average computation failed ({e}) — using fallback")
         return {'unleaded': NATIONAL_AVG_UNLEADED_FALLBACK, 'diesel': NATIONAL_AVG_DIESEL_FALLBACK}
 
 
@@ -294,23 +312,23 @@ def main():
     log("=" * 50)
     
     try:
-        # 1. Fetch national averages from RAC Fuel Watch
-        national_avg = get_national_averages()
-
-        # 2. Authenticate
+        # 1. Authenticate
         token = get_token()
         
-        # 3. Fetch stations
+        # 2. Fetch stations
         log("Fetching station info...")
         stations_raw = fetch_all_batches("pfs", token)
         log(f"Total stations fetched: {len(stations_raw)}")
         
-        # 4. Fetch prices
+        # 3. Fetch prices
         log("Fetching fuel prices...")
         prices_raw = fetch_all_batches("pfs/fuel-prices", token)
         log(f"Total price records fetched: {len(prices_raw)}")
+
+        # 4. Compute national averages from full dataset
+        national_avg = compute_national_averages(stations_raw, prices_raw)
         
-        # 5. Process
+        # 5. Process local stations
         log("Processing and filtering...")
         stations = process_data(stations_raw, prices_raw)
         
