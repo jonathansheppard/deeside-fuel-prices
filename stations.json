@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
-    "unleaded": 131.7,
-    "diesel": 141.5
+    "unleaded": 136.6,
+    "diesel": 149.6
   },
-  "lastUpdated": "2026-03-07T09:00:13.686976+00:00",
+  "lastUpdated": "2026-03-07T09:14:35.361659+00:00",
   "stationCount": 74,
   "stations": [
     {
@@ -87,7 +87,7 @@
       "is_motorway": false,
       "unleaded": 131.9,
       "diesel": 143.9,
-      "updated": "2026-03-07T05:09:51.640Z",
+      "updated": "2026-03-07T09:09:57.240Z",
       "id": 20
     },
     {
@@ -199,7 +199,7 @@
       "is_motorway": false,
       "unleaded": 133.9,
       "diesel": 143.9,
-      "updated": "2026-03-07T05:05:36.295Z",
+      "updated": "2026-03-07T09:05:40.783Z",
       "id": 8
     },
     {
@@ -227,7 +227,7 @@
       "is_motorway": false,
       "unleaded": 133.9,
       "diesel": 145.9,
-      "updated": "2026-03-07T05:10:48.964Z",
+      "updated": "2026-03-07T09:11:00.945Z",
       "id": 12
     },
     {
@@ -465,7 +465,7 @@
       "is_motorway": false,
       "unleaded": 136.9,
       "diesel": 159.9,
-      "updated": "2026-03-07T05:03:45.521Z",
+      "updated": "2026-03-07T09:03:54.118Z",
       "id": 52
     },
     {
@@ -507,7 +507,7 @@
       "is_motorway": false,
       "unleaded": 137.9,
       "diesel": 149.9,
-      "updated": "2026-03-07T05:00:04.496Z",
+      "updated": "2026-03-07T09:00:08.569Z",
       "id": 5
     },
     {
@@ -535,7 +535,7 @@
       "is_motorway": false,
       "unleaded": 137.9,
       "diesel": 159.9,
-      "updated": "2026-03-07T05:02:27.599Z",
+      "updated": "2026-03-07T09:02:35.354Z",
       "id": 24
     },
     {
@@ -759,7 +759,7 @@
       "is_motorway": false,
       "unleaded": 139.9,
       "diesel": 159.9,
-      "updated": "2026-03-07T05:02:59.037Z",
+      "updated": "2026-03-07T09:03:09.969Z",
       "id": 19
     },
     {
@@ -885,7 +885,7 @@
       "is_motorway": false,
       "unleaded": 139.9,
       "diesel": 153.9,
-      "updated": "2026-03-07T05:13:07.269Z",
+      "updated": "2026-03-07T09:13:17.690Z",
       "id": 74
     },
     {
