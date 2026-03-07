@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
-    "unleaded": 136.6,
-    "diesel": 149.6
+    "unleaded": 136.7,
+    "diesel": 149.9
   },
-  "lastUpdated": "2026-03-07T10:00:13.485308+00:00",
+  "lastUpdated": "2026-03-07T12:00:16.202056+00:00",
   "stationCount": 74,
   "stations": [
     {
@@ -35,34 +35,6 @@
       "id": 55
     },
     {
-      "name": "Esso - Saltney Service Station",
-      "brand": "SALTNEY SERVICE STATION",
-      "address": "High Street, Saltney, CH4 8SJ",
-      "lat": 53.178903,
-      "lng": -2.922518,
-      "distance": 5.0,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 128.9,
-      "diesel": 138.9,
-      "updated": "2026-03-02T12:40:56.881Z",
-      "id": 49
-    },
-    {
-      "name": "Esso - Queensferry Service Station",
-      "brand": "QUEENSFERRY SERVICE STATION",
-      "address": "QUEENSFERRY SERVICE STATION, 108, CHESTER ROAD EAST, SHOTTON, DEESIDE, CH5 1QD, DEESIDE, CH5 1QD",
-      "lat": 53.2088991,
-      "lng": -3.0326318,
-      "distance": 0.0,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 129.9,
-      "diesel": 139.9,
-      "updated": "2026-03-02T13:50:58.831Z",
-      "id": 51
-    },
-    {
       "name": "Barnhills of Broxton",
       "brand": "GULF",
       "address": "BROXTON GARAGE, WHITCHURCH ROAD, BROXTON, CHESTER, CH3 9JR, CHESTER, CH3 9JR",
@@ -75,6 +47,20 @@
       "diesel": 138.9,
       "updated": "2026-01-16T10:29:42.000Z",
       "id": 41
+    },
+    {
+      "name": "Esso - Saltney Service Station",
+      "brand": "SALTNEY SERVICE STATION",
+      "address": "High Street, Saltney, CH4 8SJ",
+      "lat": 53.178903,
+      "lng": -2.922518,
+      "distance": 5.0,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 130.9,
+      "diesel": 142.9,
+      "updated": "2026-03-02T12:40:56.881Z",
+      "id": 49
     },
     {
       "name": "MFG MORRISONS SALTNEY",
@@ -145,6 +131,20 @@
       "diesel": 141.9,
       "updated": "2026-02-25T09:43:41.585Z",
       "id": 50
+    },
+    {
+      "name": "Esso - Queensferry Service Station",
+      "brand": "QUEENSFERRY SERVICE STATION",
+      "address": "QUEENSFERRY SERVICE STATION, 108, CHESTER ROAD EAST, SHOTTON, DEESIDE, CH5 1QD, DEESIDE, CH5 1QD",
+      "lat": 53.2088991,
+      "lng": -3.0326318,
+      "distance": 0.0,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 132.9,
+      "diesel": 144.9,
+      "updated": "2026-03-07T10:51:09.622Z",
+      "id": 51
     },
     {
       "name": "SAINSBURYS KINGS ROAD BEBINGTON",
@@ -241,7 +241,7 @@
       "is_motorway": false,
       "unleaded": 133.9,
       "diesel": 145.9,
-      "updated": "2026-03-07T07:55:43.513Z",
+      "updated": "2026-03-07T11:55:47.920Z",
       "id": 14
     },
     {
@@ -301,20 +301,6 @@
       "id": 3
     },
     {
-      "name": "SPITAL SF CONNECT",
-      "brand": "BP",
-      "address": "BRIMSTAGE ROAD, WIRRAL, CH63 3EL",
-      "lat": 53.34132,
-      "lng": -3.00749,
-      "distance": 9.2,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 134.9,
-      "diesel": 147.9,
-      "updated": "2026-03-06T17:24:59.089Z",
-      "id": 38
-    },
-    {
       "name": "BIRKENHEAD BIDSTON MOSS EXTRA - PETROL FILLING STATION",
       "brand": "TESCO",
       "address": "BIDSTON LINK ROAD, BIRKENHEAD, CH43 7AA",
@@ -343,20 +329,6 @@
       "id": 62
     },
     {
-      "name": "BP HARVEST ENERGY OVERPOOL",
-      "brand": "BP HARVEST ENERGY",
-      "address": "OVERPOOL ROAD, ELLESMERE PORT, CH66 2JF",
-      "lat": 53.2714848,
-      "lng": -2.9206747,
-      "distance": 6.3,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 135.9,
-      "diesel": 151.9,
-      "updated": "2026-03-06T12:32:17.340Z",
-      "id": 7
-    },
-    {
       "name": "SAINSBURYS UPTON",
       "brand": "SAINSBURY'S",
       "address": "UPTON BY PASS, WIRRAL, CH49 6QG",
@@ -369,20 +341,6 @@
       "diesel": 145.9,
       "updated": "2026-03-06T21:54:07.120Z",
       "id": 22
-    },
-    {
-      "name": "BP HARVEST ENERGY LAIRD STREET",
-      "brand": "BP HARVEST ENERGY",
-      "address": "LAIRD STREET, BIRKENHEAD, CH41 7AJ",
-      "lat": 53.4007873,
-      "lng": -3.0556847,
-      "distance": 13.3,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 135.9,
-      "diesel": 146.9,
-      "updated": "2026-03-06T12:49:26.470Z",
-      "id": 25
     },
     {
       "name": "Plas Acton Fuel Station",
@@ -411,6 +369,20 @@
       "diesel": 152.9,
       "updated": "2026-03-06T12:51:09.868Z",
       "id": 34
+    },
+    {
+      "name": "SPITAL SF CONNECT",
+      "brand": "BP",
+      "address": "BRIMSTAGE ROAD, WIRRAL, CH63 3EL",
+      "lat": 53.34132,
+      "lng": -3.00749,
+      "distance": 9.2,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 135.9,
+      "diesel": 147.9,
+      "updated": "2026-03-06T17:24:59.089Z",
+      "id": 38
     },
     {
       "name": "SAINSBURYS WREXHAM",
@@ -451,7 +423,7 @@
       "is_motorway": false,
       "unleaded": 136.9,
       "diesel": 149.9,
-      "updated": "2026-03-07T07:56:17.516Z",
+      "updated": "2026-03-07T11:56:23.610Z",
       "id": 45
     },
     {
@@ -478,8 +450,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 136.9,
-      "diesel": 149.9,
-      "updated": "2026-03-06T12:23:21.781Z",
+      "diesel": 151.9,
+      "updated": "2026-03-07T11:29:41.534Z",
       "id": 61
     },
     {
@@ -509,6 +481,20 @@
       "diesel": 149.9,
       "updated": "2026-03-07T09:00:08.569Z",
       "id": 5
+    },
+    {
+      "name": "BP HARVEST ENERGY OVERPOOL",
+      "brand": "BP HARVEST ENERGY",
+      "address": "OVERPOOL ROAD, ELLESMERE PORT, CH66 2JF",
+      "lat": 53.2714848,
+      "lng": -2.9206747,
+      "distance": 6.3,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 137.9,
+      "diesel": 159.9,
+      "updated": "2026-03-07T11:31:17.297Z",
+      "id": 7
     },
     {
       "name": "PRESTATYN SUPERSTORE - PETROL FILLING STATION",
@@ -647,7 +633,7 @@
       "is_motorway": false,
       "unleaded": 138.9,
       "diesel": 147.9,
-      "updated": "2026-03-07T06:00:19.866Z",
+      "updated": "2026-03-07T10:00:25.488Z",
       "id": 9
     },
     {
@@ -677,6 +663,20 @@
       "diesel": 155.9,
       "updated": "2026-03-06T16:05:33.247Z",
       "id": 18
+    },
+    {
+      "name": "BP HARVEST ENERGY LAIRD STREET",
+      "brand": "BP HARVEST ENERGY",
+      "address": "LAIRD STREET, BIRKENHEAD, CH41 7AJ",
+      "lat": 53.4007873,
+      "lng": -3.0556847,
+      "distance": 13.3,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 138.9,
+      "diesel": 152.9,
+      "updated": "2026-03-07T11:28:24.986Z",
+      "id": 25
     },
     {
       "name": "ASDA RHYL SUPERSTORE",
@@ -731,7 +731,7 @@
       "is_motorway": false,
       "unleaded": 139.9,
       "diesel": 159.9,
-      "updated": "2026-03-06T10:55:24.121Z",
+      "updated": "2026-03-07T10:26:12.355Z",
       "id": 11
     },
     {
@@ -871,7 +871,7 @@
       "is_motorway": false,
       "unleaded": 139.9,
       "diesel": 159.9,
-      "updated": "2026-03-06T10:55:29.448Z",
+      "updated": "2026-03-07T10:26:17.640Z",
       "id": 65
     },
     {
