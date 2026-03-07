@@ -270,7 +270,7 @@
 
   .stat-value.low { color: var(--green); cursor: pointer; }
   .stat-value.low:hover { text-decoration: underline; }
-  .stat-value.avg { color: var(--amber); }
+  .stat-value.avg { color: rgba(255,255,255,0.75); }
   .stat-value.high { color: var(--red); cursor: pointer; }
   .stat-value.high:hover { text-decoration: underline; }
 
@@ -718,7 +718,7 @@
 
     <div class="colour-key">
       <span class="badge-live"><span class="dot"></span> Fuel Finder Data</span>
-      <span class="key-item"><span class="key-dot key-green"></span> At or near UK avg</span>
+      <span class="key-item"><span class="key-dot key-green"></span> Below UK avg</span>
       <span class="key-item"><span class="key-dot key-amber"></span> Up to 7p above</span>
       <span class="key-item"><span class="key-dot key-red"></span> 7p+ above avg</span>
       <span class="key-item unconfirmed" style="position:relative;">
@@ -746,9 +746,10 @@
 
 <script>
 const colourMode = 'fixed';
-const fixedThresholds = {
-  unleaded: { low: 133.7, high: 138.7 },
-  diesel:   { low: 143.5, high: 148.5 }
+// Thresholds are computed dynamically from nationalAvg after data loads
+let fixedThresholds = {
+  unleaded: { low: 131.7, high: 138.7 },
+  diesel:   { low: 141.5, high: 148.5 }
 };
 
 const NATIONAL_AVG_UPDATED = '3 Mar 2026';
@@ -761,6 +762,11 @@ async function loadStationData() {
     const resp = await fetch('stations.json?t=' + Date.now());
     const data = await resp.json();
     nationalAvg = data.nationalAvg;
+    // Keep thresholds anchored to national average: green = at/below avg, amber = up to 7p above, red = 7p+
+    fixedThresholds = {
+      unleaded: { low: nationalAvg.unleaded, high: nationalAvg.unleaded + 7 },
+      diesel:   { low: nationalAvg.diesel,   high: nationalAvg.diesel + 7 }
+    };
     stations = data.stations;
     dataLastUpdated = data.lastUpdated;
     if (dataLastUpdated) {
