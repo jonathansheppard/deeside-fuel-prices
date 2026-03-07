@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
     "unleaded": 136.7,
-    "diesel": 149.9
+    "diesel": 150.0
   },
-  "lastUpdated": "2026-03-07T12:00:16.202056+00:00",
+  "lastUpdated": "2026-03-07T14:00:15.958862+00:00",
   "stationCount": 74,
   "stations": [
     {
@@ -73,22 +73,8 @@
       "is_motorway": false,
       "unleaded": 131.9,
       "diesel": 143.9,
-      "updated": "2026-03-07T09:09:57.240Z",
+      "updated": "2026-03-07T13:10:03.040Z",
       "id": 20
-    },
-    {
-      "name": "BROUGHTON CHESTER EXTRA - PETROL FILLING STATION",
-      "brand": "TESCO",
-      "address": "1 BROUGHTON SHOPPING PARK, CHESTER ROAD, CHESTER, CH4 0DP",
-      "lat": 53.16935,
-      "lng": -2.9739,
-      "distance": 3.7,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 131.9,
-      "diesel": 144.9,
-      "updated": "2026-03-05T13:38:18.138Z",
-      "id": 59
     },
     {
       "name": "Gordale Service Station",
@@ -147,6 +133,20 @@
       "id": 51
     },
     {
+      "name": "BROUGHTON CHESTER EXTRA - PETROL FILLING STATION",
+      "brand": "TESCO",
+      "address": "1 BROUGHTON SHOPPING PARK, CHESTER ROAD, CHESTER, CH4 0DP",
+      "lat": 53.16935,
+      "lng": -2.9739,
+      "distance": 3.7,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 132.9,
+      "diesel": 144.9,
+      "updated": "2026-03-05T13:38:18.138Z",
+      "id": 59
+    },
+    {
       "name": "SAINSBURYS KINGS ROAD BEBINGTON",
       "brand": "SAINSBURY'S",
       "address": "152 KINGS ROAD, BIRKENHEAD, LIVERPOOL, CH63 8PZ",
@@ -185,7 +185,7 @@
       "is_motorway": false,
       "unleaded": 133.9,
       "diesel": 143.9,
-      "updated": "2026-03-07T08:55:06.046Z",
+      "updated": "2026-03-07T12:55:11.302Z",
       "id": 2
     },
     {
@@ -199,7 +199,7 @@
       "is_motorway": false,
       "unleaded": 133.9,
       "diesel": 143.9,
-      "updated": "2026-03-07T09:05:40.783Z",
+      "updated": "2026-03-07T13:05:45.975Z",
       "id": 8
     },
     {
@@ -227,7 +227,7 @@
       "is_motorway": false,
       "unleaded": 133.9,
       "diesel": 145.9,
-      "updated": "2026-03-07T09:11:00.945Z",
+      "updated": "2026-03-07T13:11:13.556Z",
       "id": 12
     },
     {
@@ -269,7 +269,7 @@
       "is_motorway": false,
       "unleaded": 133.9,
       "diesel": 145.9,
-      "updated": "2026-03-07T08:55:05.062Z",
+      "updated": "2026-03-07T12:55:10.119Z",
       "id": 66
     },
     {
@@ -285,20 +285,6 @@
       "diesel": 143.9,
       "updated": "2026-03-06T12:44:06.280Z",
       "id": 70
-    },
-    {
-      "name": "H W Oultram & Co",
-      "brand": "OIL 4 WALES",
-      "address": "H W OULTRAM & CO, NEWBRIDGE FARM & FILLING STATION, HOLYWELL ROAD, EWLOE, DEESIDE, CH5 3BS, DEESIDE, CH5 3BS",
-      "lat": 53.1959232,
-      "lng": -3.0636485,
-      "distance": 1.6,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 134.9,
-      "diesel": 144.9,
-      "updated": "2026-03-03T15:16:12.434Z",
-      "id": 3
     },
     {
       "name": "BIRKENHEAD BIDSTON MOSS EXTRA - PETROL FILLING STATION",
@@ -437,7 +423,7 @@
       "is_motorway": false,
       "unleaded": 136.9,
       "diesel": 159.9,
-      "updated": "2026-03-07T09:03:54.118Z",
+      "updated": "2026-03-07T13:04:06.496Z",
       "id": 52
     },
     {
@@ -479,7 +465,7 @@
       "is_motorway": false,
       "unleaded": 137.9,
       "diesel": 149.9,
-      "updated": "2026-03-07T09:00:08.569Z",
+      "updated": "2026-03-07T13:00:12.643Z",
       "id": 5
     },
     {
@@ -521,7 +507,7 @@
       "is_motorway": false,
       "unleaded": 137.9,
       "diesel": 159.9,
-      "updated": "2026-03-07T09:02:35.354Z",
+      "updated": "2026-03-07T13:02:42.957Z",
       "id": 24
     },
     {
@@ -647,7 +633,7 @@
       "is_motorway": false,
       "unleaded": 138.9,
       "diesel": 151.9,
-      "updated": "2026-03-07T09:53:21.907Z",
+      "updated": "2026-03-07T13:53:30.473Z",
       "id": 15
     },
     {
@@ -707,6 +693,20 @@
       "id": 69
     },
     {
+      "name": "H W Oultram & Co",
+      "brand": "OIL 4 WALES",
+      "address": "H W OULTRAM & CO, NEWBRIDGE FARM & FILLING STATION, HOLYWELL ROAD, EWLOE, DEESIDE, CH5 3BS, DEESIDE, CH5 3BS",
+      "lat": 53.1959232,
+      "lng": -3.0636485,
+      "distance": 1.6,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 139.9,
+      "diesel": 149.9,
+      "updated": "2026-03-07T12:08:00.087Z",
+      "id": 3
+    },
+    {
       "name": "SHELL CO-OP WREXHAM",
       "brand": "SHELL",
       "address": "MOLD ROAD, WREXHAM, LL11 2AF",
@@ -759,7 +759,7 @@
       "is_motorway": false,
       "unleaded": 139.9,
       "diesel": 159.9,
-      "updated": "2026-03-07T09:03:09.969Z",
+      "updated": "2026-03-07T13:03:21.584Z",
       "id": 19
     },
     {
@@ -815,7 +815,7 @@
       "is_motorway": false,
       "unleaded": 139.9,
       "diesel": 159.9,
-      "updated": "2026-03-07T09:35:06.396Z",
+      "updated": "2026-03-07T13:35:15.496Z",
       "id": 54
     },
     {
@@ -885,7 +885,7 @@
       "is_motorway": false,
       "unleaded": 139.9,
       "diesel": 153.9,
-      "updated": "2026-03-07T09:13:17.690Z",
+      "updated": "2026-03-07T13:13:28.588Z",
       "id": 74
     },
     {
