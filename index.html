@@ -55,7 +55,7 @@
   .site-logo:hover { opacity: 0.8; }
 
   .logo-img {
-    height: 24px;
+    height: 36px;
     width: auto;
   }
 
@@ -1056,13 +1056,11 @@ function render() {
 
   let html = '';
   const inlineAds = [
-    { icon: '🛡️', title: 'AA Breakdown Cover', desc: 'From £4.50/month. Cover starts immediately.', cta: 'Get quote →', href: '#', id: 'aff-breakdown' },
-    { icon: '🚗', title: 'Compare car insurance', desc: 'Check GoCompare for cheaper cover in minutes.', cta: 'Compare →', href: '#', id: 'aff-insurance' },
-    { icon: '⛽', title: 'Costco membership', desc: 'Members save 8p+/litre — cheapest fuel locally.', cta: 'Join →', href: '#', id: 'aff-costco' },
-    { icon: '💳', title: 'Business fuel cards', desc: 'Fixed weekly prices, no transaction fees. Free card.', cta: 'Apply →', href: '#', id: 'aff-fuelcard' }
+    { icon: '🛡️', title: 'AA Breakdown Cover', desc: 'From £4.50/month. Roadside assistance across the UK.', cta: 'Get quote →', href: 'https://www.theaa.com/breakdown-cover', id: 'aff-breakdown' },
+    { icon: '🔧', title: 'Halfords Autocentre', desc: 'Tyres, MOT and servicing at your local Halfords.', cta: 'Book now →', href: 'https://www.halfords.com/autocentre', id: 'aff-halfords' }
   ];
-  const adSlots = [4, 9, 14];
-  const adBaseIndex = Math.floor(Date.now() / 60000) % inlineAds.length;
+  const adSlots = [4, 10];
+  const adBaseIndex = 0;
 
   sorted.forEach((station, index) => {
     html += buildCard(station);
