@@ -3,7 +3,7 @@
     "unleaded": 131.7,
     "diesel": 141.5
   },
-  "lastUpdated": "2026-03-07T07:00:36.751414+00:00",
+  "lastUpdated": "2026-03-07T07:30:12.573036+00:00",
   "stationCount": 74,
   "stations": [
     {
@@ -103,20 +103,6 @@
       "diesel": 144.9,
       "updated": "2026-03-05T13:38:18.138Z",
       "id": 59
-    },
-    {
-      "name": "MFG MORRISONS ELLESMERE PORT",
-      "brand": "MORRISONS",
-      "address": "CHESTER ROAD, WHITBY, CH65 6RU",
-      "lat": 53.273606,
-      "lng": -2.910218,
-      "distance": 6.8,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 131.9,
-      "diesel": 145.9,
-      "updated": "2026-03-07T04:55:00.406Z",
-      "id": 66
     },
     {
       "name": "Gordale Service Station",
@@ -271,6 +257,20 @@
       "diesel": 146.9,
       "updated": "2026-03-06T21:52:23.312Z",
       "id": 16
+    },
+    {
+      "name": "MFG MORRISONS ELLESMERE PORT",
+      "brand": "MORRISONS",
+      "address": "CHESTER ROAD, WHITBY, CH65 6RU",
+      "lat": 53.273606,
+      "lng": -2.910218,
+      "distance": 6.8,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 133.9,
+      "diesel": 145.9,
+      "updated": "2026-03-07T07:28:03.298Z",
+      "id": 66
     },
     {
       "name": "WREXHAM EXTRA - PETROL FILLING STATION",
@@ -1023,9 +1023,9 @@
       "distance": 13.7,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 154.9,
-      "diesel": 144.9,
-      "updated": "2026-02-02T07:17:11.496Z",
+      "unleaded": 156.9,
+      "diesel": 148.9,
+      "updated": "2026-03-07T07:22:53.876Z",
       "id": 33
     },
     {
