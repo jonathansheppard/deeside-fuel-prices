@@ -429,7 +429,7 @@ function clean(name) {
 }
 
 // ─── RENDER ──────────────────────────────────────────────────────
-function render(unl, dsl, total, UK_AVG_UNL, UK_AVG_DSL) {
+function render(unl, dsl, total, UK_AVG_UNL, UK_AVG_DSL, lastUpdated) {
   const ub = badge(unl.price, UK_AVG_UNL);
   const db = badge(dsl.price, UK_AVG_DSL);
 
@@ -438,8 +438,9 @@ function render(unl, dsl, total, UK_AVG_UNL, UK_AVG_DSL) {
     ? `<div class="fw-saving">Fill 50L here and save £${saving.toFixed(2)} vs UK average</div>`
     : '';
 
-  const now    = new Date();
-  const hhmm   = now.toLocaleTimeString('en-GB', { hour:'2-digit', minute:'2-digit' });
+  const hhmm = lastUpdated
+    ? new Date(lastUpdated).toLocaleTimeString('en-GB', { hour:'2-digit', minute:'2-digit' })
+    : new Date().toLocaleTimeString('en-GB', { hour:'2-digit', minute:'2-digit' });
 
   document.getElementById('fw').innerHTML = `
     <div class="fw-header">
@@ -543,7 +544,8 @@ async function init() {
       { price: byDsl[0].diesel,   name: byDsl[0].name },
       stations.length,
       UK_AVG_UNL,
-      UK_AVG_DSL
+      UK_AVG_DSL,
+      data.lastUpdated
     );
   } catch(e) {
     console.error('Fuel widget:', e);
