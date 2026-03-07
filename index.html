@@ -55,7 +55,7 @@
   .site-logo:hover { opacity: 0.8; }
 
   .logo-img {
-    height: 24px;
+    height: 36px;
     width: auto;
   }
 
@@ -713,7 +713,7 @@
       <span class="key-item"><span class="key-dot key-red"></span> 5p+ above avg</span>
       <span class="key-item unconfirmed" style="position:relative;">
         <span class="key-warn">⚠</span>
-        <span style="color:#F59E0B;">Unconfirmed price</span>
+        <span style="color:#F59E0B;">Not recently updated</span>
         <div class="key-tooltip">
           This station hasn't updated their price recently via the GOV.UK Fuel Finder scheme. The price shown is the last reported figure and may not reflect what's currently at the pump.
         </div>
@@ -972,10 +972,10 @@ function render() {
 
     let popupHtml = '<div class="map-popup">';
     if (staleState === 'stale') {
-      popupHtml += `<div style="font-size:11px;color:#F59E0B;font-weight:600;margin-bottom:6px;background:rgba(245,158,11,0.1);padding:4px 8px;border-radius:4px">⚠ Price unconfirmed — may not reflect pump price</div>`;
+      popupHtml += `<div style="font-size:11px;color:#F59E0B;font-weight:600;margin-bottom:6px;background:rgba(245,158,11,0.1);padding:4px 8px;border-radius:4px">⚠ Last updated ${staleDays} day${staleDays === 1 ? '' : 's'} ago — price may have changed</div>`;
       popupHtml += `<div style="font-size:10px;color:#9CA3AF;margin-bottom:6px">Last reported: ${updDateStr} (${staleDays} day${staleDays === 1 ? '' : 's'} ago)</div>`;
     } else if (staleState === 'aging') {
-      popupHtml += `<div style="font-size:11px;color:#F59E0B;font-weight:600;margin-bottom:6px;background:rgba(245,158,11,0.08);padding:4px 8px;border-radius:4px">⚠ Updated yesterday — check before travelling</div>`;
+      popupHtml += `<div style="font-size:11px;color:#F59E0B;font-weight:600;margin-bottom:6px;background:rgba(245,158,11,0.08);padding:4px 8px;border-radius:4px">⚠ Last updated yesterday — worth checking before travelling</div>`;
     }
     popupHtml += `<div class="popup-brand">${station.name}</div>`;
     popupHtml += `<div class="popup-address">${station.address}</div>`;
@@ -1018,9 +1018,9 @@ function render() {
         if (staleState === 'fresh') {
           timestampHtml = `<div class="timestamp-fresh">✓ Updated ${timeAgo(station.updated)}</div>`;
         } else if (staleState === 'aging') {
-          timestampHtml = `<div class="timestamp-aging">⚠ Updated yesterday</div>`;
+          timestampHtml = `<div class="timestamp-aging">Last updated yesterday</div>`;
         } else {
-          timestampHtml = `<div class="timestamp-stale">⚠ Unconfirmed · ${staleDays} day${staleDays === 1 ? '' : 's'} ago</div>`;
+          timestampHtml = `<div class="timestamp-stale">Last updated ${staleDays} day${staleDays === 1 ? '' : 's'} ago</div>`;
         }
       }
     }
@@ -1038,7 +1038,7 @@ function render() {
           <div class="station-address">${station.address}</div>
           ${isCheapest ? '<span class="station-tag tag-cheapest">★ Cheapest</span>' : ''}
           ${isExpensive ? '<span class="station-tag tag-expensive">Most Expensive</span>' : ''}
-          ${(staleState === 'stale' || staleState === 'aging') ? '<span class="station-tag tag-unconfirmed">⚠ Unconfirmed price</span>' : ''}
+          ${(staleState === 'stale' || staleState === 'aging') ? '<span class="station-tag tag-unconfirmed">⚠ Price may have changed</span>' : ''}
         </div>
         <div class="station-price">
           <div class="price-value ${priceClass}">${price.toFixed(1)}<small style="font-size:12px">p</small></div>
