@@ -3,7 +3,7 @@
     "unleaded": 136.8,
     "diesel": 150.2
   },
-  "lastUpdated": "2026-03-07T20:01:30.278014+00:00",
+  "lastUpdated": "2026-03-07T22:00:13.326545+00:00",
   "stationCount": 74,
   "stations": [
     {
@@ -73,7 +73,7 @@
       "is_motorway": false,
       "unleaded": 131.9,
       "diesel": 143.9,
-      "updated": "2026-03-07T17:10:09.063Z",
+      "updated": "2026-03-07T21:10:14.563Z",
       "id": 20
     },
     {
@@ -185,7 +185,7 @@
       "is_motorway": false,
       "unleaded": 133.9,
       "diesel": 143.9,
-      "updated": "2026-03-07T16:55:16.356Z",
+      "updated": "2026-03-07T20:55:20.992Z",
       "id": 2
     },
     {
@@ -199,7 +199,7 @@
       "is_motorway": false,
       "unleaded": 133.9,
       "diesel": 143.9,
-      "updated": "2026-03-07T17:05:51.236Z",
+      "updated": "2026-03-07T21:05:55.415Z",
       "id": 8
     },
     {
@@ -227,7 +227,7 @@
       "is_motorway": false,
       "unleaded": 133.9,
       "diesel": 145.9,
-      "updated": "2026-03-07T17:11:25.509Z",
+      "updated": "2026-03-07T21:11:37.571Z",
       "id": 12
     },
     {
@@ -245,20 +245,6 @@
       "id": 14
     },
     {
-      "name": "SAINSBURYS ELLESMERE PORT",
-      "brand": "SAINSBURY'S",
-      "address": "KINSEY ROAD, ELLESMERE PORT, CH65 9HN",
-      "lat": 53.26233,
-      "lng": -2.88042,
-      "distance": 7.3,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 133.9,
-      "diesel": 146.9,
-      "updated": "2026-03-06T21:52:23.312Z",
-      "id": 16
-    },
-    {
       "name": "MFG MORRISONS ELLESMERE PORT",
       "brand": "MORRISONS",
       "address": "CHESTER ROAD, WHITBY, CH65 6RU",
@@ -269,22 +255,22 @@
       "is_motorway": false,
       "unleaded": 133.9,
       "diesel": 145.9,
-      "updated": "2026-03-07T16:55:15.301Z",
+      "updated": "2026-03-07T20:55:19.936Z",
       "id": 66
     },
     {
-      "name": "SAINSBURYS BIRKENHEAD",
+      "name": "SAINSBURYS ELLESMERE PORT",
       "brand": "SAINSBURY'S",
-      "address": "342A WOODCHURCH ROAD, BIRKENHEAD, CH42 8PQ",
-      "lat": 53.37472,
-      "lng": -3.04765,
-      "distance": 11.5,
+      "address": "KINSEY ROAD, ELLESMERE PORT, CH65 9HN",
+      "lat": 53.26233,
+      "lng": -2.88042,
+      "distance": 7.3,
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 134.9,
-      "diesel": 144.9,
-      "updated": "2026-03-06T21:52:25.634Z",
-      "id": 62
+      "diesel": 147.9,
+      "updated": "2026-03-07T21:45:59.594Z",
+      "id": 16
     },
     {
       "name": "WREXHAM EXTRA - PETROL FILLING STATION",
@@ -299,20 +285,6 @@
       "diesel": 145.9,
       "updated": "2026-03-07T14:41:13.502Z",
       "id": 70
-    },
-    {
-      "name": "SAINSBURYS UPTON",
-      "brand": "SAINSBURY'S",
-      "address": "UPTON BY PASS, WIRRAL, CH49 6QG",
-      "lat": 53.37986,
-      "lng": -3.09998,
-      "distance": 12.1,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 135.9,
-      "diesel": 145.9,
-      "updated": "2026-03-06T21:54:07.120Z",
-      "id": 22
     },
     {
       "name": "Plas Acton Fuel Station",
@@ -371,6 +343,20 @@
       "id": 43
     },
     {
+      "name": "SAINSBURYS BIRKENHEAD",
+      "brand": "SAINSBURY'S",
+      "address": "342A WOODCHURCH ROAD, BIRKENHEAD, CH42 8PQ",
+      "lat": 53.37472,
+      "lng": -3.04765,
+      "distance": 11.5,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 135.9,
+      "diesel": 145.9,
+      "updated": "2026-03-07T21:44:47.803Z",
+      "id": 62
+    },
+    {
       "name": "SAINSBURYS WREXHAM",
       "brand": "SAINSBURY'S",
       "address": "RETAIL PARK, PLAS COCH ROAD, WREXHAM, LL11 2BA",
@@ -383,6 +369,20 @@
       "diesel": 144.9,
       "updated": "2026-03-06T22:16:10.866Z",
       "id": 72
+    },
+    {
+      "name": "SAINSBURYS UPTON",
+      "brand": "SAINSBURY'S",
+      "address": "UPTON BY PASS, WIRRAL, CH49 6QG",
+      "lat": 53.37986,
+      "lng": -3.09998,
+      "distance": 12.1,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 136.9,
+      "diesel": 146.9,
+      "updated": "2026-03-07T21:55:03.871Z",
+      "id": 22
     },
     {
       "name": "HILLCREST MOTOR CO LTD",
@@ -423,7 +423,7 @@
       "is_motorway": false,
       "unleaded": 136.9,
       "diesel": 159.9,
-      "updated": "2026-03-07T17:04:18.412Z",
+      "updated": "2026-03-07T21:04:30.251Z",
       "id": 52
     },
     {
@@ -465,7 +465,7 @@
       "is_motorway": false,
       "unleaded": 137.9,
       "diesel": 149.9,
-      "updated": "2026-03-07T17:00:16.981Z",
+      "updated": "2026-03-07T21:00:20.879Z",
       "id": 5
     },
     {
@@ -493,7 +493,7 @@
       "is_motorway": false,
       "unleaded": 137.9,
       "diesel": 159.9,
-      "updated": "2026-03-07T17:02:51.089Z",
+      "updated": "2026-03-07T21:02:58.668Z",
       "id": 24
     },
     {
@@ -605,7 +605,7 @@
       "is_motorway": false,
       "unleaded": 138.9,
       "diesel": 151.9,
-      "updated": "2026-03-07T17:53:38.743Z",
+      "updated": "2026-03-07T21:53:46.939Z",
       "id": 15
     },
     {
@@ -745,7 +745,7 @@
       "is_motorway": false,
       "unleaded": 139.9,
       "diesel": 159.9,
-      "updated": "2026-03-07T17:03:33.763Z",
+      "updated": "2026-03-07T21:03:44.772Z",
       "id": 19
     },
     {
@@ -801,7 +801,7 @@
       "is_motorway": false,
       "unleaded": 139.9,
       "diesel": 159.9,
-      "updated": "2026-03-07T17:35:24.065Z",
+      "updated": "2026-03-07T21:35:32.869Z",
       "id": 54
     },
     {
@@ -857,7 +857,7 @@
       "is_motorway": false,
       "unleaded": 139.9,
       "diesel": 153.9,
-      "updated": "2026-03-07T17:13:39.238Z",
+      "updated": "2026-03-07T21:13:50.029Z",
       "id": 74
     },
     {
