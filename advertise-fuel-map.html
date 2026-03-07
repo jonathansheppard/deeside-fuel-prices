@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advertise on the Deeside Fuel Price Map</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --ink:    #111827;
+  --mid:    #6b7280;
+  --rule:   #e5e7eb;
+  --green:  #16a34a;
+  --bg:     #f9fafb;
+  --white:  #ffffff;
+  --accent: #1d4ed8;
+}
+
+body {
+  font-family: 'Barlow', sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+/* ── HEADER ── */
+.page-header {
+  background: #0c0c0e;
+  padding: 48px 24px 40px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(34,197,94,.12), transparent 70%);
+  pointer-events: none;
+}
+
+.header-eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #22c55e;
+  margin-bottom: 14px;
+  position: relative;
+}
+
+.header-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(36px, 6vw, 58px);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1;
+  letter-spacing: -1px;
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.header-title span { color: #22c55e; }
+
+.header-sub {
+  font-size: 16px;
+  color: #9ca3af;
+  max-width: 520px;
+  margin: 0 auto;
+  position: relative;
+  line-height: 1.6;
+}
+
+/* ── CONTAINER ── */
+.container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ── STATS STRIP ── */
+.stats-strip {
+  background: var(--white);
+  border-bottom: 1px solid var(--rule);
+  padding: 28px 24px;
+}
+
+.stats-grid {
+  max-width: 780px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.stat-cell {
+  background: var(--white);
+  padding: 20px 16px;
+  text-align: center;
+}
+
+.stat-number {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--ink);
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.stat-number.green { color: var(--green); }
+
+.stat-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--mid);
+  text-transform: uppercase;
+  letter-spacing: .6px;
+  margin-top: 4px;
+}
+
+/* ── SECTIONS ── */
+.section {
+  padding: 48px 24px;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.section + .section {
+  padding-top: 0;
+}
+
+.section-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--green);
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.1;
+  margin-bottom: 16px;
+  letter-spacing: -.3px;
+}
+
+.section-body {
+  font-size: 15px;
+  color: #374151;
+  line-height: 1.7;
+}
+
+.section-body p + p { margin-top: 12px; }
+
+/* ── AUDIENCE BULLETS ── */
+.audience-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+@media (max-width: 520px) {
+  .audience-grid { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: 1fr; }
+  .packages-grid { grid-template-columns: 1fr !important; }
+}
+
+.audience-item {
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.audience-icon {
+  font-size: 18px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.audience-text {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.4;
+}
+
+.audience-text span {
+  display: block;
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--mid);
+  margin-top: 2px;
+}
+
+/* ── DIVIDER ── */
+.divider {
+  height: 1px;
+  background: var(--rule);
+  margin: 0 24px;
+}
+
+/* ── PACKAGES ── */
+.packages-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.package-card {
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  padding: 24px;
+  position: relative;
+}
+
+.package-card.featured {
+  border-color: var(--accent);
+  border-width: 2px;
+}
+
+.package-badge {
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.package-type {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--mid);
+  margin-bottom: 6px;
+}
+
+.package-price {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 44px;
+  font-weight: 800;
+  color: var(--ink);
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.package-price sup {
+  font-size: 20px;
+  font-weight: 700;
+  vertical-align: super;
+  letter-spacing: 0;
+}
+
+.package-period {
+  font-size: 12px;
+  color: var(--mid);
+  margin-top: 2px;
+  margin-bottom: 14px;
+}
+
+.package-desc {
+  font-size: 13px;
+  color: #374151;
+  line-height: 1.5;
+  border-top: 1px solid var(--rule);
+  padding-top: 14px;
+}
+
+.package-note {
+  font-size: 11px;
+  color: var(--mid);
+  margin-top: 8px;
+  font-style: italic;
+}
+
+/* ── WHAT YOU GET ── */
+.perks-list {
+  list-style: none;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.perks-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  color: #374151;
+}
+
+.perk-check {
+  width: 18px;
+  height: 18px;
+  background: #dcfce7;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+  font-size: 10px;
+  color: var(--green);
+  font-weight: 700;
+}
+
+/* ── CTA ── */
+.cta-block {
+  background: #0c0c0e;
+  border-radius: 12px;
+  padding: 36px 32px;
+  text-align: center;
+  margin-top: 48px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-block::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(34,197,94,.1), transparent 70%);
+  pointer-events: none;
+}
+
+.cta-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.cta-sub {
+  font-size: 14px;
+  color: #9ca3af;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.cta-email {
+  display: inline-block;
+  background: #22c55e;
+  color: #000;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 13px 28px;
+  border-radius: 7px;
+  text-decoration: none;
+  letter-spacing: .2px;
+  position: relative;
+  transition: opacity .15s;
+}
+
+.cta-email:hover { opacity: .88; }
+
+.cta-note {
+  font-size: 11px;
+  color: #6b7280;
+  margin-top: 12px;
+  position: relative;
+}
+
+/* ── FOOTER ── */
+.page-footer {
+  padding: 24px;
+  text-align: center;
+  font-size: 11px;
+  color: var(--mid);
+  border-top: 1px solid var(--rule);
+  margin-top: 48px;
+}
+
+.page-footer a { color: var(--accent); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="page-header">
+  <div class="header-eyebrow">Advertising Opportunity</div>
+  <h1 class="header-title">Reach drivers<br>at the <span>right moment</span></h1>
+  <p class="header-sub">A single banner placement on the Deeside Live Fuel Price Map — the only real-time fuel finder serving Deeside, Flintshire and Chester.</p>
+</div>
+
+<!-- STATS -->
+<div class="stats-strip">
+  <div class="stats-grid">
+    <div class="stat-cell">
+      <div class="stat-number green">70+</div>
+      <div class="stat-label">Stations tracked</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-number">30 min</div>
+      <div class="stat-label">Price refresh rate</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-number green">Live</div>
+      <div class="stat-label">GOV.UK Fuel Finder data</div>
+    </div>
+  </div>
+</div>
+
+<!-- WHO'S USING IT -->
+<div class="section">
+  <div class="section-label">The Audience</div>
+  <h2 class="section-title">Local drivers, actively looking to save money</h2>
+  <div class="section-body">
+    <p>Every visitor to this tool is a car owner in or around Deeside who is actively checking fuel prices before they fill up. This is not passive news browsing — it is high-intent behaviour at the point of a purchase decision.</p>
+    <p>That makes this one of the most targeted advertising placements available to motor and automotive brands in North East Wales and the wider Chester area.</p>
+  </div>
+
+  <div class="audience-grid">
+    <div class="audience-item">
+      <div class="audience-icon">📍</div>
+      <div class="audience-text">
+        Deeside, Flintshire & Chester
+        <span>Connah's Quay, Shotton, Flint, Hawarden, Queensferry and surrounding areas</span>
+      </div>
+    </div>
+    <div class="audience-item">
+      <div class="audience-icon">📱</div>
+      <div class="audience-text">
+        Mobile-first audience
+        <span>Majority accessing on smartphone, often en route to a petrol station</span>
+      </div>
+    </div>
+    <div class="audience-item">
+      <div class="audience-icon">🚗</div>
+      <div class="audience-text">
+        Car owners aged 25–55
+        <span>Homeowners and commuters — the core demographic for motor trade advertising</span>
+      </div>
+    </div>
+    <div class="audience-item">
+      <div class="audience-icon">⛽</div>
+      <div class="audience-text">
+        High purchase intent
+        <span>Actively comparing prices before spending £60–80 on fuel</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- PACKAGES -->
+<div class="section">
+  <div class="section-label">Rates</div>
+  <h2 class="section-title">One placement. Two rates.</h2>
+  <div class="section-body">
+    <p>There is a single banner position — the header of the fuel price map. Exclusive to one advertiser at a time, on a monthly rolling basis.</p>
+  </div>
+
+  <div class="packages-grid">
+    <div class="package-card">
+      <div class="package-type">Local Businesses</div>
+      <div class="package-price"><sup>£</sup>200</div>
+      <div class="package-period">per month</div>
+      <div class="package-desc">
+        For local garages, tyre fitters, car dealerships and independent motor trade businesses serving the Deeside and Flintshire area.
+        <div class="package-note">Launch rate — subject to review as traffic grows.</div>
+      </div>
+    </div>
+    <div class="package-card featured">
+      <div class="package-badge">Recommended</div>
+      <div class="package-type">National Brands</div>
+      <div class="package-price"><sup>£</sup>400</div>
+      <div class="package-period">per month</div>
+      <div class="package-desc">
+        For national advertisers in breakdown cover, motor insurance, fuel cards, car servicing and automotive retail.
+        <div class="package-note">Launch rate — contextual placement alongside live fuel data.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- WHAT YOU GET -->
+<div class="section">
+  <div class="section-label">What's included</div>
+  <h2 class="section-title">Simple, transparent placement</h2>
+
+  <ul class="perks-list">
+    <li>
+      <div class="perk-check">✓</div>
+      Header banner position on the Deeside Live Fuel Price Map — the first thing every visitor sees
+    </li>
+    <li>
+      <div class="perk-check">✓</div>
+      Exclusive placement — one advertiser at a time, no competing ads on the same page
+    </li>
+    <li>
+      <div class="perk-check">✓</div>
+      Your logo, strapline and link — supplied by you, live within 24 hours of agreement
+    </li>
+    <li>
+      <div class="perk-check">✓</div>
+      Monthly rolling contract — no long-term commitment required
+    </li>
+    <li>
+      <div class="perk-check">✓</div>
+      Monthly performance summary — impressions and click data on request
+    </li>
+    <li>
+      <div class="perk-check">✓</div>
+      Published on Deeside.com — North East Wales's leading local news site
+    </li>
+  </ul>
+</div>
+
+<div class="divider"></div>
+
+<!-- GOOD FIT -->
+<div class="section">
+  <div class="section-label">Who should advertise here</div>
+  <h2 class="section-title">Is this right for your business?</h2>
+  <div class="section-body">
+    <p>This placement works best for businesses where the audience — local car owners checking fuel prices — is already your customer. That includes breakdown and recovery, motor insurance comparison, car servicing and MOT, tyre retailers, car dealerships, fuel cards for businesses, and automotive accessories.</p>
+    <p>It is not suited to businesses with no connection to motoring, driving or local services. We only take advertisers that are genuinely relevant to our readers.</p>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="container">
+  <div class="cta-block">
+    <div class="cta-title">Interested? Get in touch.</div>
+    <div class="cta-sub">Email us directly — we'll confirm availability and get your ad live within 24 hours.</div>
+    <a class="cta-email" href="mailto:ads@deeside.com?subject=Fuel Map Advertising Enquiry">ads@deeside.com</a>
+    <div class="cta-note">No agency fees. No minimum term. Cancel anytime with 30 days notice.</div>
+  </div>
+</div>
+
+<div class="page-footer">
+  <a href="https://deeside.com">Deeside.com</a> &middot; Connected Deeside Newsroom &middot; North East Wales's local news and data service
+</div>
+
+</body>
+</html>
