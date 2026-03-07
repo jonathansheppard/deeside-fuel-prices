@@ -3,7 +3,7 @@
     "unleaded": 131.7,
     "diesel": 141.5
   },
-  "lastUpdated": "2026-03-07T00:01:36.061482+00:00",
+  "lastUpdated": "2026-03-07T00:31:00.075839+00:00",
   "stationCount": 74,
   "stations": [
     {
@@ -427,34 +427,6 @@
       "id": 72
     },
     {
-      "name": "MFG ROWTON",
-      "brand": "ESSO",
-      "address": "WHITCHURCH ROAD, ROWTON, CH3 6AF",
-      "lat": 53.176188,
-      "lng": -2.825907,
-      "distance": 8.9,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 136.9,
-      "diesel": 149.9,
-      "updated": "2026-03-06T21:52:56.987Z",
-      "id": 15
-    },
-    {
-      "name": "MFG LISCARD",
-      "brand": "SHELL",
-      "address": "LLOYDS CORNER / LISCARD ROAD, WALLASEY, CH44 9AD",
-      "lat": 53.414368,
-      "lng": -3.02869,
-      "distance": 14.2,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 136.9,
-      "diesel": 155.9,
-      "updated": "2026-03-06T21:02:37.201Z",
-      "id": 19
-    },
-    {
       "name": "HILLCREST MOTOR CO LTD",
       "brand": "GULF",
       "address": "Hillcres Motor Co Ltd, HOLYWELL, CH8 7SJ",
@@ -679,6 +651,20 @@
       "id": 9
     },
     {
+      "name": "MFG ROWTON",
+      "brand": "ESSO",
+      "address": "WHITCHURCH ROAD, ROWTON, CH3 6AF",
+      "lat": 53.176188,
+      "lng": -2.825907,
+      "distance": 8.9,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 138.9,
+      "diesel": 151.9,
+      "updated": "2026-03-07T00:03:01.781Z",
+      "id": 15
+    },
+    {
       "name": "SHELL CARLETT",
       "brand": "SHELL",
       "address": "1201 NEW CHESTER ROAD, WIRRAL, CH62 0BZ",
@@ -761,6 +747,20 @@
       "diesel": 149.9,
       "updated": "2026-03-06T14:31:14.853Z",
       "id": 17
+    },
+    {
+      "name": "MFG LISCARD",
+      "brand": "SHELL",
+      "address": "LLOYDS CORNER / LISCARD ROAD, WALLASEY, CH44 9AD",
+      "lat": 53.414368,
+      "lng": -3.02869,
+      "distance": 14.2,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 139.9,
+      "diesel": 159.9,
+      "updated": "2026-03-07T00:06:45.849Z",
+      "id": 19
     },
     {
       "name": "Dobshill Service Station",
