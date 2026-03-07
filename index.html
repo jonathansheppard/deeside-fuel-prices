@@ -481,8 +481,18 @@
   }
 
   .key-item.unconfirmed .key-warn {
-    font-size: 11px;
+    width: 14px;
+    height: 14px;
+    background: #F59E0B;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 9px;
+    font-weight: 900;
+    color: #000;
     line-height: 1;
+    flex-shrink: 0;
   }
 
   .key-tooltip {
@@ -712,7 +722,7 @@
       <span class="key-item"><span class="key-dot key-amber"></span> Up to 5p above</span>
       <span class="key-item"><span class="key-dot key-red"></span> 5p+ above avg</span>
       <span class="key-item unconfirmed" style="position:relative;">
-        <span class="key-warn">⚠</span>
+        <span class="key-warn">!</span>
         <span style="color:#F59E0B;">Not recently updated</span>
         <div class="key-tooltip">
           This station hasn't updated their price recently via the GOV.UK Fuel Finder scheme. The price shown is the last reported figure and may not reflect what's currently at the pump.
@@ -972,10 +982,10 @@ function render() {
 
     let popupHtml = '<div class="map-popup">';
     if (staleState === 'stale') {
-      popupHtml += `<div style="font-size:11px;color:#F59E0B;font-weight:600;margin-bottom:6px;background:rgba(245,158,11,0.1);padding:4px 8px;border-radius:4px">⚠ Last updated ${staleDays} day${staleDays === 1 ? '' : 's'} ago — price may have changed</div>`;
+      popupHtml += `<div style="font-size:11px;color:#F59E0B;font-weight:600;margin-bottom:6px;background:rgba(245,158,11,0.1);padding:4px 8px;border-radius:4px;display:flex;align-items:center;gap:6px;"><span style="display:inline-flex;align-items:center;justify-content:center;width:14px;height:14px;background:#F59E0B;border-radius:50%;font-size:9px;font-weight:900;color:#000;flex-shrink:0;">!</span> Last updated ${staleDays} day${staleDays === 1 ? '' : 's'} ago — price may have changed</div>`;
       popupHtml += `<div style="font-size:10px;color:#9CA3AF;margin-bottom:6px">Last reported: ${updDateStr} (${staleDays} day${staleDays === 1 ? '' : 's'} ago)</div>`;
     } else if (staleState === 'aging') {
-      popupHtml += `<div style="font-size:11px;color:#F59E0B;font-weight:600;margin-bottom:6px;background:rgba(245,158,11,0.08);padding:4px 8px;border-radius:4px">⚠ Last updated yesterday — worth checking before travelling</div>`;
+      popupHtml += `<div style="font-size:11px;color:#F59E0B;font-weight:600;margin-bottom:6px;background:rgba(245,158,11,0.08);padding:4px 8px;border-radius:4px;display:flex;align-items:center;gap:6px;"><span style="display:inline-flex;align-items:center;justify-content:center;width:14px;height:14px;background:#F59E0B;border-radius:50%;font-size:9px;font-weight:900;color:#000;flex-shrink:0;">!</span> Last updated yesterday — worth checking before travelling</div>`;
     }
     popupHtml += `<div class="popup-brand">${station.name}</div>`;
     popupHtml += `<div class="popup-address">${station.address}</div>`;
@@ -1018,7 +1028,7 @@ function render() {
         if (staleState === 'fresh') {
           timestampHtml = `<div class="timestamp-fresh">✓ Updated ${timeAgo(station.updated)}</div>`;
         } else if (staleState === 'aging') {
-          timestampHtml = `<div class="timestamp-aging">Last updated yesterday</div>`;
+          timestampHtml = `<div class="timestamp-aging"><span style="display:inline-flex;align-items:center;justify-content:center;width:12px;height:12px;background:#F59E0B;border-radius:50%;font-size:8px;font-weight:900;color:#000;margin-right:3px;">!</span> Last updated yesterday</div>`;
         } else {
           timestampHtml = `<div class="timestamp-stale">Last updated ${staleDays} day${staleDays === 1 ? '' : 's'} ago</div>`;
         }
@@ -1038,7 +1048,7 @@ function render() {
           <div class="station-address">${station.address}</div>
           ${isCheapest ? '<span class="station-tag tag-cheapest">★ Cheapest</span>' : ''}
           ${isExpensive ? '<span class="station-tag tag-expensive">Most Expensive</span>' : ''}
-          ${(staleState === 'stale' || staleState === 'aging') ? '<span class="station-tag tag-unconfirmed">⚠ Price may have changed</span>' : ''}
+          ${(staleState === 'stale' || staleState === 'aging') ? '<span class="station-tag tag-unconfirmed"><span style="display:inline-flex;align-items:center;justify-content:center;width:12px;height:12px;background:#F59E0B;border-radius:50%;font-size:8px;font-weight:900;color:#000;margin-right:4px;flex-shrink:0;">!</span>Price may have changed</span>' : ''}
         </div>
         <div class="station-price">
           <div class="price-value ${priceClass}">${price.toFixed(1)}<small style="font-size:12px">p</small></div>
