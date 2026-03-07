@@ -753,7 +753,7 @@ let fixedThresholds = {
 };
 
 const NATIONAL_AVG_UPDATED = '3 Mar 2026';
-let nationalAvg = { unleaded: 131.7, diesel: 141.5 };
+let nationalAvg = { unleaded: 136.5, diesel: 149.5 };
 let stations = [];
 let dataLastUpdated = null;
 
@@ -785,6 +785,7 @@ async function loadStationData() {
 let currentFuel = 'unleaded';
 let currentSort = 'price-asc';
 let activeStation = null;
+let widerOpen = false;
 let markers = {};
 
 const regionBounds = L.latLngBounds([52.95, -3.45], [53.40, -2.70]);
@@ -1122,11 +1123,16 @@ function render() {
 
   listEl.innerHTML = html;
 
-  // Wire up wider area toggle
+  // Wire up wider area toggle — restore open state across re-renders
   const widerBtn = listEl.querySelector('#wider-toggle-btn');
   const widerPanel = listEl.querySelector('#wider-stations-panel');
   if (widerBtn && widerPanel) {
+    if (widerOpen) {
+      widerBtn.classList.add('open');
+      widerPanel.classList.add('open');
+    }
     widerBtn.addEventListener('click', () => {
+      widerOpen = !widerOpen;
       widerBtn.classList.toggle('open');
       widerPanel.classList.toggle('open');
     });
