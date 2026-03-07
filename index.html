@@ -592,11 +592,9 @@
   .wider-toggle.open .arrow { transform: rotate(180deg); }
 
   .wider-stations {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
+    display: none;
   }
-  .wider-stations.open { max-height: 3000px; }
+  .wider-stations.open { display: block; }
 
   .inline-ad {
     margin: 4px 0;
