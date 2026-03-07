@@ -553,9 +553,22 @@ body {
 <div class="container">
   <div class="cta-block">
     <div class="cta-title">Interested? Get in touch.</div>
-    <div class="cta-sub">Email us directly — we'll confirm availability and get your ad live within 24 hours.</div>
-    <div style="margin-top:16px;font-size:16px;color:rgba(255,255,255,0.6);">ads (@) deeside.com</div>
-    <div class="cta-note">No agency fees. No minimum term. Cancel anytime with 30 days notice.</div>
+    <div class="cta-sub">Fill in your details and we'll get back to you within 24 hours.</div>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" style="margin-top:24px;display:flex;flex-direction:column;gap:12px;max-width:480px;margin-left:auto;margin-right:auto;">
+      <input type="text" name="name" placeholder="Your name" required
+        style="padding:12px 16px;border-radius:6px;border:1px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.08);color:#fff;font-size:15px;font-family:'Barlow',sans-serif;outline:none;">
+      <input type="email" name="email" placeholder="Your email address" required
+        style="padding:12px 16px;border-radius:6px;border:1px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.08);color:#fff;font-size:15px;font-family:'Barlow',sans-serif;outline:none;">
+      <input type="text" name="business" placeholder="Business name"
+        style="padding:12px 16px;border-radius:6px;border:1px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.08);color:#fff;font-size:15px;font-family:'Barlow',sans-serif;outline:none;">
+      <textarea name="message" placeholder="Tell us about your business and what you're looking for (optional)" rows="3"
+        style="padding:12px 16px;border-radius:6px;border:1px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.08);color:#fff;font-size:15px;font-family:'Barlow',sans-serif;outline:none;resize:vertical;"></textarea>
+      <button type="submit"
+        style="padding:13px 24px;background:#16a34a;color:#fff;font-family:'Barlow',sans-serif;font-size:16px;font-weight:700;border:none;border-radius:6px;cursor:pointer;letter-spacing:0.3px;">
+        Send enquiry →
+      </button>
+    </form>
+    <div class="cta-note" style="margin-top:16px;">No agency fees. No minimum term. Cancel anytime with 30 days notice.</div>
   </div>
 </div>
 
