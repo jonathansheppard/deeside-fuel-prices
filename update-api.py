@@ -15,7 +15,6 @@ Requires: GITHUB_TOKEN environment variable (or hardcode below)
 
 import json, math, urllib.request, urllib.error, base64, os, sys, re
 from datetime import datetime, timezone
-from html.parser import HTMLParser
 
 # ── CONFIG ──
 API_BASE = "https://www.fuel-finder.service.gov.uk/api/v1"
@@ -73,89 +72,40 @@ def api_request(url, method="GET", data=None, headers=None):
 
 # ── NATIONAL AVERAGE FETCHER ──────────────────────────────────────────────────
 
-class RACTableParser(HTMLParser):
-    """Minimal HTML parser to extract fuel price table data from RAC Fuel Watch."""
-    def __init__(self):
-        super().__init__()
-        self.in_table = False
-        self.in_cell = False
-        self.current_row = []
-        self.all_rows = []
-        self.depth = 0
-
-    def handle_starttag(self, tag, attrs):
-        if tag == 'table':
-            self.in_table = True
-            self.depth += 1
-        if self.in_table and tag in ('td', 'th'):
-            self.in_cell = True
-            self.current_cell = ''
-
-    def handle_endtag(self, tag):
-        if tag == 'table':
-            self.depth -= 1
-            if self.depth == 0:
-                self.in_table = False
-        if self.in_table and tag in ('td', 'th'):
-            self.in_cell = False
-            self.current_row.append(self.current_cell.strip())
-        if self.in_table and tag == 'tr':
-            if self.current_row:
-                self.all_rows.append(self.current_row)
-            self.current_row = []
-
-    def handle_data(self, data):
-        if self.in_cell:
-            self.current_cell += data
-
 
 def get_national_averages():
     """
-    Fetch current UK average fuel prices from RAC Fuel Watch.
+    Fetch current UK average fuel prices from StationWatch.co.uk
+    which calculates live averages from the same GOV.UK API data.
     Falls back to hardcoded values if fetch fails.
     """
     try:
-        log("Fetching national average prices from RAC Fuel Watch...")
+        log("Fetching national average prices from StationWatch...")
         req = urllib.request.Request(
-            'https://www.rac.co.uk/drive/advice/fuel-watch/',
+            'https://stationwatch.co.uk/fuel-prices/',
             headers={'User-Agent': 'Mozilla/5.0 (compatible; DeesideFuelBot/1.0)'}
         )
         resp = urllib.request.urlopen(req, timeout=15)
         html = resp.read().decode('utf-8', errors='replace')
 
-        parser = RACTableParser()
-        parser.feed(html)
-
         unleaded = None
         diesel = None
 
-        for row in parser.all_rows:
-            if len(row) < 2:
-                continue
-            label = row[0].lower().strip()
-            # Extract numeric value — strip 'p', commas, spaces
-            raw = re.sub(r'[^\d.]', '', row[1])
-            if not raw:
-                continue
-            try:
-                val = float(raw)
-            except ValueError:
-                continue
+        # StationWatch publishes averages in FAQ section as plain text
+        # "The average price of unleaded petrol (E10) in the UK today is 136.5p"
+        ul_match = re.search(r'average price of unleaded petrol[^i]*is\s+([\d.]+)p', html, re.IGNORECASE)
+        di_match = re.search(r'average price of diesel[^i]*is\s+([\d.]+)p', html, re.IGNORECASE)
 
-            # Only accept plausible pence-per-litre values
-            if not (100 < val < 250):
-                continue
+        if ul_match:
+            unleaded = float(ul_match.group(1))
+        if di_match:
+            diesel = float(di_match.group(1))
 
-            if label == 'unleaded' and unleaded is None:
-                unleaded = val
-            elif label == 'diesel' and diesel is None:
-                diesel = val
-
-        if unleaded and diesel:
+        if unleaded and diesel and 100 < unleaded < 250 and 100 < diesel < 250:
             log(f"National averages: unleaded {unleaded}p, diesel {diesel}p")
             return {'unleaded': unleaded, 'diesel': diesel}
         else:
-            log("Could not parse RAC table — using fallback averages")
+            log("Could not parse StationWatch — using fallback averages")
             return {'unleaded': NATIONAL_AVG_UNLEADED_FALLBACK, 'diesel': NATIONAL_AVG_DIESEL_FALLBACK}
 
     except Exception as e:
