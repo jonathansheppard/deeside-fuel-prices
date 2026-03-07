@@ -3,7 +3,7 @@
     "unleaded": 131.7,
     "diesel": 141.5
   },
-  "lastUpdated": "2026-03-06T23:31:11.363682+00:00",
+  "lastUpdated": "2026-03-07T00:01:36.061482+00:00",
   "stationCount": 74,
   "stations": [
     {
@@ -255,7 +255,7 @@
       "is_motorway": false,
       "unleaded": 133.9,
       "diesel": 145.9,
-      "updated": "2026-03-06T22:57:33.802Z",
+      "updated": "2026-03-06T23:55:34.832Z",
       "id": 14
     },
     {
@@ -371,20 +371,6 @@
       "id": 22
     },
     {
-      "name": "MFG STRAWBERRY",
-      "brand": "BP",
-      "address": "WHITBY ROUNDABOUT, ELLESMERE PORT, CH66 2PY",
-      "lat": 53.256833,
-      "lng": -2.909397,
-      "distance": 6.1,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 135.9,
-      "diesel": 151.9,
-      "updated": "2026-03-06T21:02:12.258Z",
-      "id": 24
-    },
-    {
       "name": "BP HARVEST ENERGY LAIRD STREET",
       "brand": "BP HARVEST ENERGY",
       "address": "LAIRD STREET, BIRKENHEAD, CH41 7AJ",
@@ -493,7 +479,7 @@
       "is_motorway": false,
       "unleaded": 136.9,
       "diesel": 149.9,
-      "updated": "2026-03-06T21:24:01.426Z",
+      "updated": "2026-03-06T23:56:05.094Z",
       "id": 45
     },
     {
@@ -506,8 +492,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 136.9,
-      "diesel": 149.9,
-      "updated": "2026-03-06T21:03:17.783Z",
+      "diesel": 159.9,
+      "updated": "2026-03-06T23:53:26.111Z",
       "id": 52
     },
     {
@@ -565,6 +551,20 @@
       "diesel": 149.9,
       "updated": "2026-03-06T13:31:34.569Z",
       "id": 21
+    },
+    {
+      "name": "MFG STRAWBERRY",
+      "brand": "BP",
+      "address": "WHITBY ROUNDABOUT, ELLESMERE PORT, CH66 2PY",
+      "lat": 53.256833,
+      "lng": -2.909397,
+      "distance": 6.1,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 137.9,
+      "diesel": 159.9,
+      "updated": "2026-03-06T23:58:17.836Z",
+      "id": 24
     },
     {
       "name": "STANS OF LLANGOLLEN",
@@ -814,8 +814,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 139.9,
-      "diesel": 152.9,
-      "updated": "2026-03-06T21:34:39.517Z",
+      "diesel": 159.9,
+      "updated": "2026-03-06T23:46:44.309Z",
       "id": 54
     },
     {
@@ -885,7 +885,7 @@
       "is_motorway": false,
       "unleaded": 139.9,
       "diesel": 153.9,
-      "updated": "2026-03-06T21:12:46.467Z",
+      "updated": "2026-03-06T23:38:52.666Z",
       "id": 74
     },
     {
