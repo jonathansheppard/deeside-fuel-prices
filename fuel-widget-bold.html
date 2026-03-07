@@ -380,6 +380,13 @@ body {
   color: var(--text-muted);
 }
 </style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MRM6751LW8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-MRM6751LW8');
+</script>
 </head>
 <body>
 
@@ -414,7 +421,7 @@ body {
 <script>
 // ─── CONFIG ──────────────────────────────────────────────────────
 const DATA_URL  = 'https://deeside-fuel-prices.netlify.app/stations.json';
-const TOOL_URL  = 'https://deeside-fuel-prices.netlify.app/';
+const TOOL_URL  = 'https://deeside-fuel-prices.netlify.app/?utm_source=deeside&utm_medium=sidebar-widget&utm_campaign=fuel-map';
 
 // ─── HELPERS ─────────────────────────────────────────────────────
 function badge(price, avg) {
