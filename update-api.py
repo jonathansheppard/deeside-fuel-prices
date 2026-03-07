@@ -13,8 +13,9 @@ Run every 30 minutes via crontab:
 Requires: GITHUB_TOKEN environment variable (or hardcode below)
 """
 
-import json, math, urllib.request, urllib.error, base64, os, sys
+import json, math, urllib.request, urllib.error, base64, os, sys, re
 from datetime import datetime, timezone
+from html.parser import HTMLParser
 
 # ── CONFIG ──
 API_BASE = "https://www.fuel-finder.service.gov.uk/api/v1"
@@ -29,8 +30,9 @@ DEESIDE_LAT = 53.2089
 DEESIDE_LNG = -3.0330
 MAX_DISTANCE = 25  # miles
 
-NATIONAL_AVG_UNLEADED = 131.7
-NATIONAL_AVG_DIESEL = 141.5
+# Fallback national averages — updated if live fetch succeeds
+NATIONAL_AVG_UNLEADED_FALLBACK = 136.5
+NATIONAL_AVG_DIESEL_FALLBACK = 149.5
 
 TARGET_POSTCODES = [
     'CH1','CH2','CH3','CH4','CH5','CH6','CH7','CH8',
@@ -68,6 +70,100 @@ def api_request(url, method="GET", data=None, headers=None):
         log(f"HTTP {e.code}: {error_body[:500]}")
         raise
 
+
+# ── NATIONAL AVERAGE FETCHER ──────────────────────────────────────────────────
+
+class RACTableParser(HTMLParser):
+    """Minimal HTML parser to extract fuel price table data from RAC Fuel Watch."""
+    def __init__(self):
+        super().__init__()
+        self.in_table = False
+        self.in_cell = False
+        self.current_row = []
+        self.all_rows = []
+        self.depth = 0
+
+    def handle_starttag(self, tag, attrs):
+        if tag == 'table':
+            self.in_table = True
+            self.depth += 1
+        if self.in_table and tag in ('td', 'th'):
+            self.in_cell = True
+            self.current_cell = ''
+
+    def handle_endtag(self, tag):
+        if tag == 'table':
+            self.depth -= 1
+            if self.depth == 0:
+                self.in_table = False
+        if self.in_table and tag in ('td', 'th'):
+            self.in_cell = False
+            self.current_row.append(self.current_cell.strip())
+        if self.in_table and tag == 'tr':
+            if self.current_row:
+                self.all_rows.append(self.current_row)
+            self.current_row = []
+
+    def handle_data(self, data):
+        if self.in_cell:
+            self.current_cell += data
+
+
+def get_national_averages():
+    """
+    Fetch current UK average fuel prices from RAC Fuel Watch.
+    Falls back to hardcoded values if fetch fails.
+    """
+    try:
+        log("Fetching national average prices from RAC Fuel Watch...")
+        req = urllib.request.Request(
+            'https://www.rac.co.uk/drive/advice/fuel-watch/',
+            headers={'User-Agent': 'Mozilla/5.0 (compatible; DeesideFuelBot/1.0)'}
+        )
+        resp = urllib.request.urlopen(req, timeout=15)
+        html = resp.read().decode('utf-8', errors='replace')
+
+        parser = RACTableParser()
+        parser.feed(html)
+
+        unleaded = None
+        diesel = None
+
+        for row in parser.all_rows:
+            if len(row) < 2:
+                continue
+            label = row[0].lower().strip()
+            # Extract numeric value — strip 'p', commas, spaces
+            raw = re.sub(r'[^\d.]', '', row[1])
+            if not raw:
+                continue
+            try:
+                val = float(raw)
+            except ValueError:
+                continue
+
+            # Only accept plausible pence-per-litre values
+            if not (100 < val < 250):
+                continue
+
+            if label == 'unleaded' and unleaded is None:
+                unleaded = val
+            elif label == 'diesel' and diesel is None:
+                diesel = val
+
+        if unleaded and diesel:
+            log(f"National averages: unleaded {unleaded}p, diesel {diesel}p")
+            return {'unleaded': unleaded, 'diesel': diesel}
+        else:
+            log("Could not parse RAC table — using fallback averages")
+            return {'unleaded': NATIONAL_AVG_UNLEADED_FALLBACK, 'diesel': NATIONAL_AVG_DIESEL_FALLBACK}
+
+    except Exception as e:
+        log(f"National average fetch failed ({e}) — using fallback averages")
+        return {'unleaded': NATIONAL_AVG_UNLEADED_FALLBACK, 'diesel': NATIONAL_AVG_DIESEL_FALLBACK}
+
+
+# ── MAIN PIPELINE ─────────────────────────────────────────────────────────────
 
 def get_token():
     log("Authenticating...")
@@ -248,20 +344,23 @@ def main():
     log("=" * 50)
     
     try:
-        # 1. Authenticate
+        # 1. Fetch national averages from RAC Fuel Watch
+        national_avg = get_national_averages()
+
+        # 2. Authenticate
         token = get_token()
         
-        # 2. Fetch stations
+        # 3. Fetch stations
         log("Fetching station info...")
         stations_raw = fetch_all_batches("pfs", token)
         log(f"Total stations fetched: {len(stations_raw)}")
         
-        # 3. Fetch prices
+        # 4. Fetch prices
         log("Fetching fuel prices...")
         prices_raw = fetch_all_batches("pfs/fuel-prices", token)
         log(f"Total price records fetched: {len(prices_raw)}")
         
-        # 4. Process
+        # 5. Process
         log("Processing and filtering...")
         stations = process_data(stations_raw, prices_raw)
         
@@ -279,12 +378,9 @@ def main():
         if diesel:
             log(f"Diesel: {min(diesel):.1f}p - {max(diesel):.1f}p")
         
-        # 5. Build output
+        # 6. Build output
         output = {
-            "nationalAvg": {
-                "unleaded": NATIONAL_AVG_UNLEADED,
-                "diesel": NATIONAL_AVG_DIESEL
-            },
+            "nationalAvg": national_avg,
             "lastUpdated": datetime.now(timezone.utc).isoformat(),
             "stationCount": len(stations),
             "stations": stations
@@ -292,14 +388,14 @@ def main():
         
         json_content = json.dumps(output, indent=2)
         
-        # 6. Save locally
+        # 7. Save locally
         script_dir = os.path.dirname(os.path.abspath(__file__))
         local_path = os.path.join(script_dir, "stations.json")
         with open(local_path, "w") as f:
             f.write(json_content)
         log(f"Saved to {local_path}")
         
-        # 7. Commit to GitHub
+        # 8. Commit to GitHub
         commit_to_github(json_content)
         
         log("Update complete!")
