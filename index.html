@@ -605,6 +605,9 @@
   .station-card.stale {
     border-left: 3px solid #4B5563;
   }
+  .station-card.no-data {
+    border-left: 3px solid #E8A838;
+  }
   .timestamp-fresh { color: var(--green); font-size: 10px; }
   .timestamp-aging { color: #F59E0B; font-size: 10px; font-weight: 600; }
   .timestamp-stale { color: #EF4444; font-size: 10px; }
@@ -729,6 +732,7 @@
       <span class="key-item"><span class="key-dot key-green"></span> Below UK avg</span>
       <span class="key-item"><span class="key-dot key-amber"></span> Up to 5p above</span>
       <span class="key-item"><span class="key-dot key-red"></span> 5p+ above avg</span>
+      <span class="key-item"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#f5f5f5;border:2px solid #E8A838;margin-right:6px;vertical-align:middle"></span> Not reporting</span>
     </div>
     <div class="sidebar-scroll">
     <div class="station-list" id="stationList"></div>
@@ -737,10 +741,9 @@
 
     <div class="footer-note">
       *Distances measured from Queensferry roundabout<br>
-      Data from GOV.UK Fuel Finder Scheme &middot; Updated every 30 minutes<br>
-      UK avg (131.7p / 141.5p) from DESNZ &middot; Last updated <span id="avgDate">3 Mar 2026</span><br>
+      Data from GOV.UK Fuel Finder Scheme &middot; Prices via DESNZ<br>
       <span id="dataTimestamp"></span><br>
-      Built for <a href="https://deeside.com" target="_blank">Deeside.com</a> &middot; Connected Deeside Newsroom
+      Built in 🏴󠁧󠁢󠁷󠁬󠁳󠁿 by <a href="https://deeside.com" target="_blank">Deeside.com</a>
     </div>
   </div>
 </div>
@@ -768,7 +771,7 @@
 // To switch, change colourMode and/or fixedThresholds below:
 
 const colourMode = 'fixed'; // 'relative' | 'fixed'
-const fixedThresholds = {
+let fixedThresholds = {
   unleaded: { low: 131.7, high: 136.7 },  // national avg / avg+5p
   diesel:   { low: 141.5, high: 146.5 }   // national avg / avg+5p
 };
@@ -787,12 +790,15 @@ async function loadStationData() {
     const resp = await fetch('stations.json?t=' + Date.now());
     const data = await resp.json();
     nationalAvg = data.nationalAvg;
+    // Update colour thresholds based on live national averages
+    fixedThresholds.unleaded = { low: nationalAvg.unleaded, high: nationalAvg.unleaded + 5 };
+    fixedThresholds.diesel = { low: nationalAvg.diesel, high: nationalAvg.diesel + 5 };
     stations = data.stations;
     dataLastUpdated = data.lastUpdated;
     if (dataLastUpdated) {
       const d = new Date(dataLastUpdated);
       document.getElementById('dataTimestamp').textContent =
-        'Data last refreshed: ' + d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+        'Last updated: ' + d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' });
     }
     render();
   } catch (err) {
@@ -826,6 +832,25 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
 }).addTo(map);
 
 // ── MARKER ICONS ──
+function createNoDataMarkerIcon(isActive) {
+  const size = isActive ? 48 : 42;
+  const borderColor = isActive ? '#38bdf8' : '#E8A838';
+  const lockSvg = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E8A838" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>`;
+  return L.divIcon({
+    className: 'custom-marker',
+    html: `<div style="
+      width:${size}px; height:${size}px; border-radius:50%;
+      background:rgba(245,245,245,0.95); border:2.5px solid ${borderColor};
+      display:flex; align-items:center; justify-content:center;
+      box-shadow:0 4px 16px rgba(0,0,0,0.3);
+      transition:all 0.2s;
+    ">${lockSvg}</div>`,
+    iconSize: [size, size],
+    iconAnchor: [size/2, size/2],
+    popupAnchor: [0, -size/2 - 4]
+  });
+}
+
 function createMarkerIcon(price, priceClass, isActive, isCheapest, isStale) {
   const colorMap = { 'price-low': '#34d399', 'price-mid': '#fbbf24', 'price-high': '#f87171' };
   const baseColor = isStale ? '#4B5563' : (colorMap[priceClass] || '#8b8fa3');
@@ -981,11 +1006,10 @@ function render() {
     const isExtended = station.distance > CORE_RADIUS;
 
     const markerPriceClass = (isNoData || staleState === 'stale') ? 'price-mid' : getPriceClass(price, stats);
-    const markerLabel = isNoData ? '?p' : (staleState === 'stale' ? '?p' : price.toFixed(1));
-    const markerOpacity = isNoData ? 0.35 : (staleState === 'stale' ? 0.45 : (isExtended ? 0.7 : 1.0));
+    const markerOpacity = isNoData ? 1.0 : (staleState === 'stale' ? 0.45 : (isExtended ? 0.7 : 1.0));
 
     const marker = L.marker([station.lat, station.lng], {
-      icon: createMarkerIcon(price || 0, markerPriceClass, isActive, isCheapest, isNoData || staleState === 'stale'),
+      icon: isNoData ? createNoDataMarkerIcon(isActive) : createMarkerIcon(price || 0, markerPriceClass, isActive, isCheapest, staleState === 'stale'),
       opacity: markerOpacity
     }).addTo(map);
 
@@ -993,21 +1017,22 @@ function render() {
 
     let popupHtml = '<div class="map-popup">';
     if (isNoData) {
-      popupHtml += `<div style="font-size:11px;color:#F59E0B;font-weight:600;margin-bottom:6px;background:rgba(245,158,11,0.1);padding:4px 8px;border-radius:4px">\u26A0 Not reporting prices</div>`;
-      popupHtml += `<div style="font-size:10px;color:#9CA3AF;margin-bottom:6px">This station has not submitted prices to the GOV.UK Fuel Finder scheme</div>`;
-    } else if (staleState === 'stale') {
-      const staleHrs = getStaleHours(station);
-      const staleDays = Math.floor(staleHrs / 24);
-      const updDate = station.updated ? new Date(station.updated) : null;
-      const updDateStr = updDate && !isNaN(updDate.getTime()) ? updDate.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }) : '';
-      popupHtml += `<div style="font-size:11px;color:#EF4444;font-weight:600;margin-bottom:6px;background:rgba(239,68,68,0.1);padding:4px 8px;border-radius:4px">\u26A0 Price not recently confirmed</div>`;
-      popupHtml += `<div style="font-size:10px;color:#9CA3AF;margin-bottom:6px">Last update: ${updDateStr} (${staleDays} day${staleDays === 1 ? '' : 's'} ago)</div>`;
-    }
-    popupHtml += `<div class="popup-brand">${station.name}</div>`;
-    popupHtml += `<div class="popup-address">${station.address}</div>`;
-    if (isNoData) {
-      popupHtml += `<div class="popup-price" style="color:#F59E0B;font-size:16px">No price data</div>`;
+      popupHtml += `<div style="font-size:11px;color:#E8A838;font-weight:600;margin-bottom:6px;background:rgba(232,168,56,0.1);padding:6px 8px;border-radius:4px;border-left:3px solid #E8A838">\uD83D\uDD12 Not reporting prices</div>`;
+      popupHtml += `<div class="popup-brand">${station.name}</div>`;
+      popupHtml += `<div class="popup-address">${station.address}</div>`;
+      popupHtml += `<div style="font-size:11px;color:#9CA3AF;margin:8px 0;line-height:1.5">This station is required to submit fuel prices under the GOV.UK mandatory reporting scheme but has not done so.</div>`;
+      popupHtml += `<div style="font-size:10px;color:#888;margin-top:4px">\uD83D\uDCCD ${station.distance} miles from Queensferry</div>`;
     } else {
+      if (staleState === 'stale') {
+        const staleHrs = getStaleHours(station);
+        const staleDays = Math.floor(staleHrs / 24);
+        const updDate = station.updated ? new Date(station.updated) : null;
+        const updDateStr = updDate && !isNaN(updDate.getTime()) ? updDate.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }) : '';
+        popupHtml += `<div style="font-size:11px;color:#EF4444;font-weight:600;margin-bottom:6px;background:rgba(239,68,68,0.1);padding:4px 8px;border-radius:4px">\u26A0 Price not recently confirmed</div>`;
+        popupHtml += `<div style="font-size:10px;color:#9CA3AF;margin-bottom:6px">Last update: ${updDateStr} (${staleDays} day${staleDays === 1 ? '' : 's'} ago)</div>`;
+      }
+      popupHtml += `<div class="popup-brand">${station.name}</div>`;
+      popupHtml += `<div class="popup-address">${station.address}</div>`;
       popupHtml += `<div class="popup-price" style="color:${staleState === 'stale' ? '#9CA3AF' : (isCheapest ? '#16a34a' : '#1e293b')}">${price.toFixed(1)}p</div>`;
       popupHtml += `<div class="popup-label">${currentFuel === 'unleaded' ? 'Unleaded' : 'Diesel'} per litre</div>`;
       if (staleState !== 'stale') {
@@ -1017,12 +1042,12 @@ function render() {
                         `<span style="color:#888">\u2248 UK average</span>`;
         popupHtml += `<div style="font-size:11px;margin-top:4px;font-family:'JetBrains Mono',monospace">${diffStr}</div>`;
       }
-    }
-    popupHtml += `<div style="font-size:10px;color:#888;margin-top:4px">\uD83D\uDCCD ${station.distance} miles from Queensferry</div>`;
-    if (!isNoData && staleState === 'fresh') {
-      popupHtml += `<div style="font-size:10px;color:#34d399;margin-top:4px">\u2713 Updated ${timeAgo(station.updated)}</div>`;
-    } else if (!isNoData && staleState === 'aging') {
-      popupHtml += `<div style="font-size:10px;color:#F59E0B;margin-top:4px">\u26A0 Updated yesterday</div>`;
+      popupHtml += `<div style="font-size:10px;color:#888;margin-top:4px">\uD83D\uDCCD ${station.distance} miles from Queensferry</div>`;
+      if (staleState === 'fresh') {
+        popupHtml += `<div style="font-size:10px;color:#34d399;margin-top:4px">\u2713 Updated ${timeAgo(station.updated)}</div>`;
+      } else if (staleState === 'aging') {
+        popupHtml += `<div style="font-size:10px;color:#F59E0B;margin-top:4px">\u26A0 Updated yesterday</div>`;
+      }
     }
     popupHtml += '</div>';
 
@@ -1049,7 +1074,8 @@ function render() {
     const cardNatl = nationalAvg[currentFuel];
 
     let cardClass = 'station-card';
-    if (isNoData || staleState === 'stale') cardClass += ' stale';
+    if (isNoData) cardClass += ' stale no-data';
+    else if (staleState === 'stale') cardClass += ' stale';
     else if (isCheapest) cardClass += ' cheapest';
     else if (price < cardNatl - 0.5) cardClass += ' below-avg';
     if (isExpensive) cardClass += ' expensive';
@@ -1082,16 +1108,16 @@ function render() {
       <div class="${cardClass}" data-id="${station.id}">
         <div class="station-info">
           <div class="station-brand">
-            ${dotClass ? '<span class="brand-dot ' + dotClass + '"></span>' : '<span class="brand-dot" style="background:#6B7280"></span>'}
+            ${dotClass ? '<span class="brand-dot ' + dotClass + '"></span>' : (isNoData ? '<span class="brand-dot" style="background:#f5f5f5;border:2px solid #E8A838"></span>' : '<span class="brand-dot" style="background:#6B7280"></span>')}
             <span class="station-name">${station.name}</span>
           </div>
           <div class="station-address">${station.address}</div>
           ${isCheapest ? '<span class="station-tag tag-cheapest">\u2605 Cheapest</span>' : ''}
           ${isExpensive ? '<span class="station-tag tag-expensive">Most Expensive</span>' : ''}
-          ${station.note ? '<span class="station-tag" style="background:rgba(245,158,11,0.15);color:#F59E0B;border-color:#F59E0B">' + station.note + '</span>' : ''}
+          ${station.note ? '<span class="station-tag" style="background:rgba(232,168,56,0.12);color:#E8A838;border:1px solid rgba(232,168,56,0.3);font-size:10px">\uD83D\uDD12 ' + station.note + '</span>' : ''}
         </div>
         <div class="station-price">
-          ${isNoData ? '<div class="price-value" style="color:#F59E0B;font-size:18px">No data</div>' :
+          ${isNoData ? '<div style="color:#E8A838;font-size:13px;font-weight:700;letter-spacing:0.5px">NOT REPORTING</div><div style="font-size:10px;color:#9CA3AF;margin-top:2px">Last checked: today</div>' :
             '<div class="price-value ' + priceColourClass + '"' + priceStyle + '>' + price.toFixed(1) + '<small style="font-size:12px">p</small></div>'}
           ${isNoData ? '' : '<div class="price-unit">per litre</div>'}
           ${timestampHtml}
