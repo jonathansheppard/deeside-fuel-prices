@@ -3,8 +3,8 @@
     "unleaded": 137.8,
     "diesel": 152.1
   },
-  "lastUpdated": "2026-03-08T22:00:24.031348+00:00",
-  "stationCount": 74,
+  "lastUpdated": "2026-03-08T22:14:50.049195+00:00",
+  "stationCount": 77,
   "stations": [
     {
       "name": "SMITHY VIEW SERVICE STATION ACTON",
@@ -549,7 +549,7 @@
       "is_motorway": false,
       "unleaded": 138.9,
       "diesel": 147.9,
-      "updated": "2026-03-08T18:01:15.159Z",
+      "updated": "2026-03-08T22:01:32.832Z",
       "id": 9
     },
     {
@@ -1041,6 +1041,51 @@
       "diesel": 178.9,
       "updated": "2026-03-08T19:54:05.582Z",
       "id": 44
+    },
+    {
+      "name": "Asda Quay Express (Esso)",
+      "brand": "ESSO",
+      "address": "Church Street, Connah's Quay, CH5 4AS",
+      "lat": 53.22449,
+      "lng": -3.071442,
+      "unleaded": null,
+      "diesel": null,
+      "updated": "",
+      "distance": 1.2,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "note": "Not reporting prices",
+      "id": 75
+    },
+    {
+      "name": "Asda Deeside Express Petrol",
+      "brand": "ASDA",
+      "address": "Parkway, Deeside, CH5 2NS",
+      "lat": 53.228,
+      "lng": -3.012,
+      "unleaded": null,
+      "diesel": null,
+      "updated": "",
+      "distance": 1.8,
+      "is_supermarket": true,
+      "is_motorway": false,
+      "note": "Not reporting prices",
+      "id": 76
+    },
+    {
+      "name": "Asda Queensferry Petrol",
+      "brand": "ASDA",
+      "address": "Aston Road, Queensferry, CH5 1TQ",
+      "lat": 53.205,
+      "lng": -3.0265,
+      "unleaded": null,
+      "diesel": null,
+      "updated": "",
+      "distance": 0.8,
+      "is_supermarket": true,
+      "is_motorway": false,
+      "note": "Not reporting prices",
+      "id": 77
     }
   ]
 }
