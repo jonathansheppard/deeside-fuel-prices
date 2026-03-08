@@ -1062,6 +1062,7 @@ function render() {
     } else {
       popupHtml += `<div class="popup-brand">${station.name}</div>`;
       popupHtml += `<div class="popup-address">${station.address}</div>`;
+      if (station.brand === 'COSTCO') popupHtml += `<div style="font-size:10px;color:#60a5fa;margin:4px 0">\uD83D\uDD12 Costco membership required</div>`;
       popupHtml += `<div class="popup-price" style="color:${isCheapest ? '#16a34a' : '#1e293b'}">${price.toFixed(1)}p</div>`;
       popupHtml += `<div class="popup-label">${currentFuel === 'unleaded' ? 'Unleaded' : 'Diesel'} per litre</div>`;
       const diff = price - cardNatl;
@@ -1142,6 +1143,7 @@ function render() {
           <div class="station-address">${station.address}</div>
           ${isCheapest ? '<span class="station-tag tag-cheapest">\u2605 Cheapest</span>' : ''}
           ${isExpensive ? '<span class="station-tag tag-expensive">Most Expensive</span>' : ''}
+          ${station.brand === 'COSTCO' ? '<span class="station-tag" style="background:rgba(96,165,250,0.12);color:#60a5fa;border:1px solid rgba(96,165,250,0.3);font-size:10px">\uD83D\uDD12 Members only</span>' : ''}
         </div>
         <div class="station-price">
           ${isNoData ? '<div style="color:#E8A838;font-size:13px;font-weight:600">Not reporting</div><div style="font-size:10px;color:#9CA3AF;margin-top:2px">Last checked: today</div>' :
