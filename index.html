@@ -62,7 +62,7 @@
   .site-logo:hover { opacity: 0.8; }
 
   .logo-img {
-    height: 24px;
+    height: 36px;
     width: auto;
   }
 
@@ -719,7 +719,7 @@
   <div class="sidebar">
     <div class="api-banner">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-      <span>Data from the <a href="https://www.gov.uk/government/collections/fuel-finder" target="_blank">GOV.UK Fuel Finder Scheme</a>. Prices updated within 2 hours of changes at the pump.</span>
+      <span>Data from the <a href="https://www.gov.uk/government/collections/fuel-finder" target="_blank">GOV.UK Fuel Finder Scheme</a>. Prices updated within 30 minutes of changes at the pump.</span>
     </div>
     <div class="stats-bar" id="statsBar">
       <div class="stat"><div class="stat-label">UK Average</div><div class="stat-value avg" id="statNatl">—</div></div>
@@ -897,9 +897,18 @@ function getPrice(station) {
 
 function getSortedStations() {
   const sorted = [...stations];
+  const isUnavailable = (s) => !getPrice(s) || getPrice(s) <= 0 || getStaleState(s) === 'stale';
   switch (currentSort) {
-    case 'price-asc': sorted.sort((a, b) => (getPrice(a)||999) - (getPrice(b)||999)); break;
-    case 'price-desc': sorted.sort((a, b) => (getPrice(b)||0) - (getPrice(a)||0)); break;
+    case 'price-asc': sorted.sort((a, b) => {
+      if (isUnavailable(a) && !isUnavailable(b)) return 1;
+      if (!isUnavailable(a) && isUnavailable(b)) return -1;
+      return (getPrice(a)||999) - (getPrice(b)||999);
+    }); break;
+    case 'price-desc': sorted.sort((a, b) => {
+      if (isUnavailable(a) && !isUnavailable(b)) return 1;
+      if (!isUnavailable(a) && isUnavailable(b)) return -1;
+      return (getPrice(b)||0) - (getPrice(a)||0);
+    }); break;
     case 'distance': sorted.sort((a, b) => a.distance - b.distance); break;
     case 'name': sorted.sort((a, b) => a.name.localeCompare(b.name)); break;
   }
