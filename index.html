@@ -603,7 +603,7 @@
 
   /* ── STALE DATA TIERS ── */
   .station-card.stale {
-    border-left: 3px solid #4B5563;
+    border-left: 3px solid #E8A838;
   }
   .station-card.no-data {
     border-left: 3px solid #E8A838;
@@ -732,7 +732,7 @@
       <span class="key-item"><span class="key-dot key-green"></span> Below UK avg</span>
       <span class="key-item"><span class="key-dot key-amber"></span> Up to 5p above</span>
       <span class="key-item"><span class="key-dot key-red"></span> 5p+ above avg</span>
-      <span class="key-item"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#3a3a3a;border:2px solid #E8A838;margin-right:6px;vertical-align:middle"></span> Not reporting</span>
+      <span class="key-item"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#3a3a3a;border:2px solid #E8A838;margin-right:6px;vertical-align:middle"></span> Price unavailable</span>
     </div>
     <div class="sidebar-scroll">
     <div class="station-list" id="stationList"></div>
@@ -853,8 +853,8 @@ function createStaleMarkerIcon(isActive) {
     className: 'custom-marker',
     html: `<div style="
       width:${size}px; height:${size}px; border-radius:50%;
-      background:#3a3a3a; border:1.5px solid #555;
-      opacity:0.6;
+      background:#3a3a3a; border:2px solid #E8A838;
+      opacity:0.7;
     "></div>`,
     iconSize: [size, size],
     iconAnchor: [size/2, size/2],
@@ -952,8 +952,8 @@ function getStaleState(station) {
   if (isNaN(d.getTime())) return 'stale';
   const hours = (Date.now() - d.getTime()) / 3600000;
   if (hours < 24) return 'fresh';
-  if (hours < 48) return 'aging';
-  return 'stale';
+  if (hours < 120) return 'aging'; // 24h–5 days: warning tier
+  return 'stale'; // 5 days+: unavailable
 }
 
 function getStaleHours(station) {
@@ -1064,7 +1064,8 @@ function render() {
       if (staleState === 'fresh') {
         popupHtml += `<div style="font-size:10px;color:#34d399;margin-top:4px">\u2713 Updated ${timeAgo(station.updated)}</div>`;
       } else if (staleState === 'aging') {
-        popupHtml += `<div style="font-size:10px;color:#F59E0B;margin-top:4px">\u26A0 Updated yesterday</div>`;
+        const ageDays = Math.floor((Date.now() - new Date(station.updated).getTime()) / 86400000);
+        popupHtml += `<div style="font-size:10px;color:#F59E0B;margin-top:4px">\u26A0 Updated ${ageDays <= 1 ? 'yesterday' : ageDays + ' days ago'}</div>`;
       }
     }
     popupHtml += '</div>';
@@ -1111,7 +1112,7 @@ function render() {
         if (staleState === 'fresh') {
           timestampHtml = '<div class="timestamp-fresh">Price set ' + dateStr + '</div>';
         } else if (staleState === 'aging') {
-          timestampHtml = '<div class="timestamp-aging">\u26A0 Updated yesterday</div>';
+          timestampHtml = '<div class="timestamp-aging">\u26A0 Updated ' + (staleDays <= 1 ? 'yesterday' : staleDays + ' days ago') + '</div>';
         } else {
           timestampHtml = '<div style="font-size:10px;color:#9CA3AF">Last updated: ' + dateStr + '</div>';
         }
@@ -1126,7 +1127,7 @@ function render() {
       <div class="${cardClass}" data-id="${station.id}">
         <div class="station-info">
           <div class="station-brand">
-            ${dotClass ? '<span class="brand-dot ' + dotClass + '"></span>' : (isNoData ? '<span class="brand-dot" style="background:#3a3a3a;border:2px solid #E8A838"></span>' : '<span class="brand-dot" style="background:#3a3a3a;border:1.5px solid #555"></span>')}
+            ${dotClass ? '<span class="brand-dot ' + dotClass + '"></span>' : '<span class="brand-dot" style="background:#3a3a3a;border:2px solid #E8A838"></span>'}
             <span class="station-name">${station.name}</span>
           </div>
           <div class="station-address">${station.address}</div>
@@ -1135,7 +1136,7 @@ function render() {
         </div>
         <div class="station-price">
           ${isNoData ? '<div style="color:#E8A838;font-size:13px;font-weight:600">Not reporting</div><div style="font-size:10px;color:#9CA3AF;margin-top:2px">Last checked: today</div>' :
-            staleState === 'stale' ? '<div style="color:#9CA3AF;font-size:13px;font-weight:600">Price unavailable</div>' :
+            staleState === 'stale' ? '<div style="color:#E8A838;font-size:13px;font-weight:600">Price unavailable</div>' :
             '<div class="price-value ' + priceColourClass + '"' + priceStyle + '>' + price.toFixed(1) + '<small style="font-size:12px">p</small></div>'}
           ${(isNoData || staleState === 'stale') ? '' : '<div class="price-unit">per litre</div>'}
           ${timestampHtml}
