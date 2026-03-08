@@ -1,25 +1,11 @@
 {
   "nationalAvg": {
-    "unleaded": 136.6,
-    "diesel": 149.6
+    "unleaded": 131.7,
+    "diesel": 141.5
   },
-  "lastUpdated": "2026-03-07T10:00:13.485308+00:00",
+  "lastUpdated": "2026-03-08T16:30:13.893233+00:00",
   "stationCount": 74,
   "stations": [
-    {
-      "name": "COSTCO WHOLESALE CHESTER",
-      "brand": "COSTCO WHOLESALE",
-      "address": "DUNKIRK TRADING ESTATE, CHESTER GATES, CHESTER, CHESTER, CH1 6LT",
-      "lat": 53.24496,
-      "lng": -2.93034,
-      "distance": 4.9,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 125.9,
-      "diesel": 135.9,
-      "updated": "2026-03-02T14:19:07.043Z",
-      "id": 36
-    },
     {
       "name": "SMITHY VIEW SERVICE STATION ACTON",
       "brand": "SMITHY VIEW SERVICE STATION ACTON",
@@ -35,32 +21,18 @@
       "id": 55
     },
     {
-      "name": "Esso - Saltney Service Station",
-      "brand": "SALTNEY SERVICE STATION",
-      "address": "High Street, Saltney, CH4 8SJ",
-      "lat": 53.178903,
-      "lng": -2.922518,
-      "distance": 5.0,
+      "name": "COSTCO WHOLESALE CHESTER",
+      "brand": "COSTCO WHOLESALE",
+      "address": "DUNKIRK TRADING ESTATE, CHESTER GATES, CHESTER, CHESTER, CH1 6LT",
+      "lat": 53.24496,
+      "lng": -2.93034,
+      "distance": 4.9,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 128.9,
-      "diesel": 138.9,
-      "updated": "2026-03-02T12:40:56.881Z",
-      "id": 49
-    },
-    {
-      "name": "Esso - Queensferry Service Station",
-      "brand": "QUEENSFERRY SERVICE STATION",
-      "address": "QUEENSFERRY SERVICE STATION, 108, CHESTER ROAD EAST, SHOTTON, DEESIDE, CH5 1QD, DEESIDE, CH5 1QD",
-      "lat": 53.2088991,
-      "lng": -3.0326318,
-      "distance": 0.0,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 129.9,
+      "unleaded": 127.9,
       "diesel": 139.9,
-      "updated": "2026-03-02T13:50:58.831Z",
-      "id": 51
+      "updated": "2026-03-07T19:08:19.485Z",
+      "id": 36
     },
     {
       "name": "Barnhills of Broxton",
@@ -77,6 +49,20 @@
       "id": 41
     },
     {
+      "name": "Esso - Saltney Service Station",
+      "brand": "SALTNEY SERVICE STATION",
+      "address": "High Street, Saltney, CH4 8SJ",
+      "lat": 53.178903,
+      "lng": -2.922518,
+      "distance": 5.0,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 130.9,
+      "diesel": 142.9,
+      "updated": "2026-03-02T12:40:56.881Z",
+      "id": 49
+    },
+    {
       "name": "MFG MORRISONS SALTNEY",
       "brand": "MORRISONS",
       "address": "HIGH STREET, SALTNEY, CH4 8RU",
@@ -87,22 +73,8 @@
       "is_motorway": false,
       "unleaded": 131.9,
       "diesel": 143.9,
-      "updated": "2026-03-07T09:09:57.240Z",
+      "updated": "2026-03-08T13:10:37.337Z",
       "id": 20
-    },
-    {
-      "name": "BROUGHTON CHESTER EXTRA - PETROL FILLING STATION",
-      "brand": "TESCO",
-      "address": "1 BROUGHTON SHOPPING PARK, CHESTER ROAD, CHESTER, CH4 0DP",
-      "lat": 53.16935,
-      "lng": -2.9739,
-      "distance": 3.7,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 131.9,
-      "diesel": 144.9,
-      "updated": "2026-03-05T13:38:18.138Z",
-      "id": 59
     },
     {
       "name": "Gordale Service Station",
@@ -147,32 +119,32 @@
       "id": 50
     },
     {
-      "name": "SAINSBURYS KINGS ROAD BEBINGTON",
-      "brand": "SAINSBURY'S",
-      "address": "152 KINGS ROAD, BIRKENHEAD, LIVERPOOL, CH63 8PZ",
-      "lat": 53.35656,
-      "lng": -3.02542,
-      "distance": 10.2,
+      "name": "Esso - Queensferry Service Station",
+      "brand": "QUEENSFERRY SERVICE STATION",
+      "address": "QUEENSFERRY SERVICE STATION, 108, CHESTER ROAD EAST, SHOTTON, DEESIDE, CH5 1QD, DEESIDE, CH5 1QD",
+      "lat": 53.2088991,
+      "lng": -3.0326318,
+      "distance": 0.0,
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 132.9,
       "diesel": 144.9,
-      "updated": "2026-03-07T06:02:55.366Z",
-      "id": 63
+      "updated": "2026-03-07T10:51:09.622Z",
+      "id": 51
     },
     {
-      "name": "SAINSBURYS PENSBY ROAD THINGWALL",
-      "brand": "SAINSBURY'S",
-      "address": "PENSBY ROAD, WIRRAL, CH61 7UB",
-      "lat": 53.35295,
-      "lng": -3.09298,
-      "distance": 10.3,
+      "name": "BROUGHTON CHESTER EXTRA - PETROL FILLING STATION",
+      "brand": "TESCO",
+      "address": "1 BROUGHTON SHOPPING PARK, CHESTER ROAD, CHESTER, CH4 0DP",
+      "lat": 53.16935,
+      "lng": -2.9739,
+      "distance": 3.7,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 133.9,
-      "diesel": 143.9,
-      "updated": "2026-03-06T22:58:03.782Z",
-      "id": 1
+      "unleaded": 132.9,
+      "diesel": 146.9,
+      "updated": "2026-03-07T13:59:51.603Z",
+      "id": 59
     },
     {
       "name": "MFG MORRISONS WEST KIRBY",
@@ -185,7 +157,7 @@
       "is_motorway": false,
       "unleaded": 133.9,
       "diesel": 143.9,
-      "updated": "2026-03-07T08:55:06.046Z",
+      "updated": "2026-03-08T12:55:40.187Z",
       "id": 2
     },
     {
@@ -199,22 +171,8 @@
       "is_motorway": false,
       "unleaded": 133.9,
       "diesel": 143.9,
-      "updated": "2026-03-07T09:05:40.783Z",
+      "updated": "2026-03-08T13:06:13.588Z",
       "id": 8
-    },
-    {
-      "name": "SAINSBURYS CHESTER",
-      "brand": "SAINSBURY'S",
-      "address": "CALDY VALLEY ROAD, GREAT BOUGHTON, CHESTER, CH3 5QJ",
-      "lat": 53.18467,
-      "lng": -2.85543,
-      "distance": 7.5,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 133.9,
-      "diesel": 146.9,
-      "updated": "2026-03-06T22:20:54.520Z",
-      "id": 10
     },
     {
       "name": "MFG BEBINGTON",
@@ -227,7 +185,7 @@
       "is_motorway": false,
       "unleaded": 133.9,
       "diesel": 145.9,
-      "updated": "2026-03-07T09:11:00.945Z",
+      "updated": "2026-03-08T13:12:25.929Z",
       "id": 12
     },
     {
@@ -241,22 +199,22 @@
       "is_motorway": false,
       "unleaded": 133.9,
       "diesel": 145.9,
-      "updated": "2026-03-07T07:55:43.513Z",
+      "updated": "2026-03-08T15:56:18.106Z",
       "id": 14
     },
     {
-      "name": "SAINSBURYS ELLESMERE PORT",
+      "name": "SAINSBURYS KINGS ROAD BEBINGTON",
       "brand": "SAINSBURY'S",
-      "address": "KINSEY ROAD, ELLESMERE PORT, CH65 9HN",
-      "lat": 53.26233,
-      "lng": -2.88042,
-      "distance": 7.3,
+      "address": "152 KINGS ROAD, BIRKENHEAD, LIVERPOOL, CH63 8PZ",
+      "lat": 53.35656,
+      "lng": -3.02542,
+      "distance": 10.2,
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 133.9,
-      "diesel": 146.9,
-      "updated": "2026-03-06T21:52:23.312Z",
-      "id": 16
+      "diesel": 145.9,
+      "updated": "2026-03-07T23:00:08.545Z",
+      "id": 63
     },
     {
       "name": "MFG MORRISONS ELLESMERE PORT",
@@ -269,8 +227,50 @@
       "is_motorway": false,
       "unleaded": 133.9,
       "diesel": 145.9,
-      "updated": "2026-03-07T08:55:05.062Z",
+      "updated": "2026-03-08T12:55:39.370Z",
       "id": 66
+    },
+    {
+      "name": "SAINSBURYS PENSBY ROAD THINGWALL",
+      "brand": "SAINSBURY'S",
+      "address": "PENSBY ROAD, WIRRAL, CH61 7UB",
+      "lat": 53.35295,
+      "lng": -3.09298,
+      "distance": 10.3,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 134.9,
+      "diesel": 144.9,
+      "updated": "2026-03-07T22:58:15.412Z",
+      "id": 1
+    },
+    {
+      "name": "SAINSBURYS CHESTER",
+      "brand": "SAINSBURY'S",
+      "address": "CALDY VALLEY ROAD, GREAT BOUGHTON, CHESTER, CH3 5QJ",
+      "lat": 53.18467,
+      "lng": -2.85543,
+      "distance": 7.5,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 134.9,
+      "diesel": 147.9,
+      "updated": "2026-03-07T22:24:31.255Z",
+      "id": 10
+    },
+    {
+      "name": "SAINSBURYS ELLESMERE PORT",
+      "brand": "SAINSBURY'S",
+      "address": "KINSEY ROAD, ELLESMERE PORT, CH65 9HN",
+      "lat": 53.26233,
+      "lng": -2.88042,
+      "distance": 7.3,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 134.9,
+      "diesel": 147.9,
+      "updated": "2026-03-07T21:45:59.594Z",
+      "id": 16
     },
     {
       "name": "WREXHAM EXTRA - PETROL FILLING STATION",
@@ -281,108 +281,10 @@
       "distance": 11.4,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 133.9,
-      "diesel": 143.9,
-      "updated": "2026-03-06T12:44:06.280Z",
-      "id": 70
-    },
-    {
-      "name": "H W Oultram & Co",
-      "brand": "OIL 4 WALES",
-      "address": "H W OULTRAM & CO, NEWBRIDGE FARM & FILLING STATION, HOLYWELL ROAD, EWLOE, DEESIDE, CH5 3BS, DEESIDE, CH5 3BS",
-      "lat": 53.1959232,
-      "lng": -3.0636485,
-      "distance": 1.6,
-      "is_supermarket": false,
-      "is_motorway": false,
       "unleaded": 134.9,
-      "diesel": 144.9,
-      "updated": "2026-03-03T15:16:12.434Z",
-      "id": 3
-    },
-    {
-      "name": "SPITAL SF CONNECT",
-      "brand": "BP",
-      "address": "BRIMSTAGE ROAD, WIRRAL, CH63 3EL",
-      "lat": 53.34132,
-      "lng": -3.00749,
-      "distance": 9.2,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 134.9,
-      "diesel": 147.9,
-      "updated": "2026-03-06T17:24:59.089Z",
-      "id": 38
-    },
-    {
-      "name": "BIRKENHEAD BIDSTON MOSS EXTRA - PETROL FILLING STATION",
-      "brand": "TESCO",
-      "address": "BIDSTON LINK ROAD, BIRKENHEAD, CH43 7AA",
-      "lat": 53.40799,
-      "lng": -3.07026,
-      "distance": 13.8,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 134.9,
-      "diesel": 143.9,
-      "updated": "2026-03-05T13:33:41.857Z",
-      "id": 43
-    },
-    {
-      "name": "SAINSBURYS BIRKENHEAD",
-      "brand": "SAINSBURY'S",
-      "address": "342A WOODCHURCH ROAD, BIRKENHEAD, CH42 8PQ",
-      "lat": 53.37472,
-      "lng": -3.04765,
-      "distance": 11.5,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 134.9,
-      "diesel": 144.9,
-      "updated": "2026-03-06T21:52:25.634Z",
-      "id": 62
-    },
-    {
-      "name": "BP HARVEST ENERGY OVERPOOL",
-      "brand": "BP HARVEST ENERGY",
-      "address": "OVERPOOL ROAD, ELLESMERE PORT, CH66 2JF",
-      "lat": 53.2714848,
-      "lng": -2.9206747,
-      "distance": 6.3,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 135.9,
-      "diesel": 151.9,
-      "updated": "2026-03-06T12:32:17.340Z",
-      "id": 7
-    },
-    {
-      "name": "SAINSBURYS UPTON",
-      "brand": "SAINSBURY'S",
-      "address": "UPTON BY PASS, WIRRAL, CH49 6QG",
-      "lat": 53.37986,
-      "lng": -3.09998,
-      "distance": 12.1,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 135.9,
       "diesel": 145.9,
-      "updated": "2026-03-06T21:54:07.120Z",
-      "id": 22
-    },
-    {
-      "name": "BP HARVEST ENERGY LAIRD STREET",
-      "brand": "BP HARVEST ENERGY",
-      "address": "LAIRD STREET, BIRKENHEAD, CH41 7AJ",
-      "lat": 53.4007873,
-      "lng": -3.0556847,
-      "distance": 13.3,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 135.9,
-      "diesel": 146.9,
-      "updated": "2026-03-06T12:49:26.470Z",
-      "id": 25
+      "updated": "2026-03-07T14:41:13.502Z",
+      "id": 70
     },
     {
       "name": "Plas Acton Fuel Station",
@@ -413,18 +315,60 @@
       "id": 34
     },
     {
-      "name": "SAINSBURYS WREXHAM",
-      "brand": "SAINSBURY'S",
-      "address": "RETAIL PARK, PLAS COCH ROAD, WREXHAM, LL11 2BA",
-      "lat": 53.05571,
-      "lng": -3.00904,
-      "distance": 10.6,
+      "name": "BIRKENHEAD BIDSTON MOSS EXTRA - PETROL FILLING STATION",
+      "brand": "TESCO",
+      "address": "BIDSTON LINK ROAD, BIRKENHEAD, CH43 7AA",
+      "lat": 53.40799,
+      "lng": -3.07026,
+      "distance": 13.8,
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 135.9,
-      "diesel": 144.9,
-      "updated": "2026-03-06T22:16:10.866Z",
-      "id": 72
+      "diesel": 145.9,
+      "updated": "2026-03-07T14:25:54.908Z",
+      "id": 43
+    },
+    {
+      "name": "SAINSBURYS BIRKENHEAD",
+      "brand": "SAINSBURY'S",
+      "address": "342A WOODCHURCH ROAD, BIRKENHEAD, CH42 8PQ",
+      "lat": 53.37472,
+      "lng": -3.04765,
+      "distance": 11.5,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 135.9,
+      "diesel": 145.9,
+      "updated": "2026-03-07T21:44:47.803Z",
+      "id": 62
+    },
+    {
+      "name": "SAINSBURYS UPTON",
+      "brand": "SAINSBURY'S",
+      "address": "UPTON BY PASS, WIRRAL, CH49 6QG",
+      "lat": 53.37986,
+      "lng": -3.09998,
+      "distance": 12.1,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 136.9,
+      "diesel": 146.9,
+      "updated": "2026-03-07T21:55:03.871Z",
+      "id": 22
+    },
+    {
+      "name": "SPITAL SF CONNECT",
+      "brand": "BP",
+      "address": "BRIMSTAGE ROAD, WIRRAL, CH63 3EL",
+      "lat": 53.34132,
+      "lng": -3.00749,
+      "distance": 9.2,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 136.9,
+      "diesel": 148.9,
+      "updated": "2026-03-08T15:07:36.083Z",
+      "id": 38
     },
     {
       "name": "HILLCREST MOTOR CO LTD",
@@ -451,7 +395,7 @@
       "is_motorway": false,
       "unleaded": 136.9,
       "diesel": 149.9,
-      "updated": "2026-03-07T07:56:17.516Z",
+      "updated": "2026-03-08T15:57:16.130Z",
       "id": 45
     },
     {
@@ -465,7 +409,7 @@
       "is_motorway": false,
       "unleaded": 136.9,
       "diesel": 159.9,
-      "updated": "2026-03-07T09:03:54.118Z",
+      "updated": "2026-03-08T13:05:17.816Z",
       "id": 52
     },
     {
@@ -478,23 +422,23 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 136.9,
-      "diesel": 149.9,
-      "updated": "2026-03-06T12:23:21.781Z",
+      "diesel": 151.9,
+      "updated": "2026-03-07T11:29:41.534Z",
       "id": 61
     },
     {
-      "name": "SHELL WIRRAL WAY",
-      "brand": "SHELL",
-      "address": "413 BOROUGH ROAD, BIRKENHEAD, CH42 0HA",
-      "lat": 53.384042,
-      "lng": -3.032912,
-      "distance": 12.1,
+      "name": "SAINSBURYS WREXHAM",
+      "brand": "SAINSBURY'S",
+      "address": "RETAIL PARK, PLAS COCH ROAD, WREXHAM, LL11 2BA",
+      "lat": 53.05571,
+      "lng": -3.00904,
+      "distance": 10.6,
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 136.9,
-      "diesel": 151.9,
-      "updated": "2026-03-06T16:05:33.936Z",
-      "id": 67
+      "diesel": 146.9,
+      "updated": "2026-03-07T22:04:33.763Z",
+      "id": 72
     },
     {
       "name": "MFG MORRISONS DENBIGH",
@@ -507,22 +451,22 @@
       "is_motorway": false,
       "unleaded": 137.9,
       "diesel": 149.9,
-      "updated": "2026-03-07T09:00:08.569Z",
+      "updated": "2026-03-08T13:00:37.776Z",
       "id": 5
     },
     {
-      "name": "PRESTATYN SUPERSTORE - PETROL FILLING STATION",
-      "brand": "TESCO",
-      "address": "TESCO STORES, PRESTATYN SHOPPING PARK, PRESTATYN, LL19 9BJ",
-      "lat": 53.3366,
-      "lng": -3.40236,
-      "distance": 17.6,
+      "name": "BP HARVEST ENERGY OVERPOOL",
+      "brand": "BP HARVEST ENERGY",
+      "address": "OVERPOOL ROAD, ELLESMERE PORT, CH66 2JF",
+      "lat": 53.2714848,
+      "lng": -2.9206747,
+      "distance": 6.3,
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 137.9,
-      "diesel": 149.9,
-      "updated": "2026-03-06T13:31:34.569Z",
-      "id": 21
+      "diesel": 159.9,
+      "updated": "2026-03-07T11:31:17.297Z",
+      "id": 7
     },
     {
       "name": "MFG STRAWBERRY",
@@ -535,22 +479,8 @@
       "is_motorway": false,
       "unleaded": 137.9,
       "diesel": 159.9,
-      "updated": "2026-03-07T09:02:35.354Z",
+      "updated": "2026-03-08T13:03:29.498Z",
       "id": 24
-    },
-    {
-      "name": "STANS OF LLANGOLLEN",
-      "brand": "TEXACO",
-      "address": "STANS OF LLANGOLLEN, BERWYN STREET, LLANGOLLEN, LL20 8NF, LLANGOLLEN, LL20 8NF",
-      "lat": 52.9688428,
-      "lng": -3.171139,
-      "distance": 17.6,
-      "is_supermarket": true,
-      "is_motorway": false,
-      "unleaded": 137.9,
-      "diesel": 147.9,
-      "updated": "2026-03-06T13:40:24.333Z",
-      "id": 28
     },
     {
       "name": "RONTEC RUABON",
@@ -609,20 +539,6 @@
       "id": 46
     },
     {
-      "name": "SAINSBURYS RHYL",
-      "brand": "SAINSBURY'S",
-      "address": "RHYL ROAD, RHUDDLAN, RHYL, LL18 2TP",
-      "lat": 53.30371,
-      "lng": -3.46769,
-      "distance": 19.1,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 137.9,
-      "diesel": 151.9,
-      "updated": "2026-03-06T21:56:21.930Z",
-      "id": 53
-    },
-    {
       "name": "Rhydymwyn Service Station",
       "brand": "RHYDYMWYN SERVICE STATION",
       "address": "A A S RHYDYMWYN LTD, RHYDYMWYN SERVICE STATION, DENBIGH ROAD, RHYDYMWYN, MOLD, CH7 5HE, MOLD, CH7 5HE",
@@ -637,6 +553,20 @@
       "id": 60
     },
     {
+      "name": "SHELL WIRRAL WAY",
+      "brand": "SHELL",
+      "address": "413 BOROUGH ROAD, BIRKENHEAD, CH42 0HA",
+      "lat": 53.384042,
+      "lng": -3.032912,
+      "distance": 12.1,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 137.9,
+      "diesel": 151.9,
+      "updated": "2026-03-08T12:04:03.483Z",
+      "id": 67
+    },
+    {
       "name": "MFG GREASBY",
       "brand": "ESSO",
       "address": "GREASBY ROAD, GREASBY  WIRRAL, CH49 2PF",
@@ -647,7 +577,7 @@
       "is_motorway": false,
       "unleaded": 138.9,
       "diesel": 147.9,
-      "updated": "2026-03-07T06:00:19.866Z",
+      "updated": "2026-03-08T14:01:07.385Z",
       "id": 9
     },
     {
@@ -661,7 +591,7 @@
       "is_motorway": false,
       "unleaded": 138.9,
       "diesel": 151.9,
-      "updated": "2026-03-07T09:53:21.907Z",
+      "updated": "2026-03-08T13:54:19.858Z",
       "id": 15
     },
     {
@@ -674,9 +604,37 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 138.9,
-      "diesel": 155.9,
-      "updated": "2026-03-06T16:05:33.247Z",
+      "diesel": 162.9,
+      "updated": "2026-03-08T12:03:02.674Z",
       "id": 18
+    },
+    {
+      "name": "PRESTATYN SUPERSTORE - PETROL FILLING STATION",
+      "brand": "TESCO",
+      "address": "TESCO STORES, PRESTATYN SHOPPING PARK, PRESTATYN, LL19 9BJ",
+      "lat": 53.3366,
+      "lng": -3.40236,
+      "distance": 17.6,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 138.9,
+      "diesel": 151.9,
+      "updated": "2026-03-07T14:59:51.540Z",
+      "id": 21
+    },
+    {
+      "name": "BP HARVEST ENERGY LAIRD STREET",
+      "brand": "BP HARVEST ENERGY",
+      "address": "LAIRD STREET, BIRKENHEAD, CH41 7AJ",
+      "lat": 53.4007873,
+      "lng": -3.0556847,
+      "distance": 13.3,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 138.9,
+      "diesel": 152.9,
+      "updated": "2026-03-07T11:28:24.986Z",
+      "id": 25
     },
     {
       "name": "ASDA RHYL SUPERSTORE",
@@ -689,8 +647,22 @@
       "is_motorway": false,
       "unleaded": 138.9,
       "diesel": 150.9,
-      "updated": "2026-03-06T20:28:42.605Z",
+      "updated": "2026-03-08T15:30:59.878Z",
       "id": 27
+    },
+    {
+      "name": "SAINSBURYS RHYL",
+      "brand": "SAINSBURY'S",
+      "address": "RHYL ROAD, RHUDDLAN, RHYL, LL18 2TP",
+      "lat": 53.30371,
+      "lng": -3.46769,
+      "distance": 19.1,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 138.9,
+      "diesel": 152.9,
+      "updated": "2026-03-07T22:01:17.523Z",
+      "id": 53
     },
     {
       "name": "SHELL MERSEY VIEW",
@@ -705,6 +677,20 @@
       "diesel": 154.9,
       "updated": "2026-03-06T16:05:15.787Z",
       "id": 69
+    },
+    {
+      "name": "H W Oultram & Co",
+      "brand": "OIL 4 WALES",
+      "address": "H W OULTRAM & CO, NEWBRIDGE FARM & FILLING STATION, HOLYWELL ROAD, EWLOE, DEESIDE, CH5 3BS, DEESIDE, CH5 3BS",
+      "lat": 53.1959232,
+      "lng": -3.0636485,
+      "distance": 1.6,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 139.9,
+      "diesel": 149.9,
+      "updated": "2026-03-07T12:08:00.087Z",
+      "id": 3
     },
     {
       "name": "SHELL CO-OP WREXHAM",
@@ -731,7 +717,7 @@
       "is_motorway": false,
       "unleaded": 139.9,
       "diesel": 159.9,
-      "updated": "2026-03-06T10:55:24.121Z",
+      "updated": "2026-03-07T10:26:12.355Z",
       "id": 11
     },
     {
@@ -759,7 +745,7 @@
       "is_motorway": false,
       "unleaded": 139.9,
       "diesel": 159.9,
-      "updated": "2026-03-07T09:03:09.969Z",
+      "updated": "2026-03-08T13:04:28.726Z",
       "id": 19
     },
     {
@@ -815,22 +801,8 @@
       "is_motorway": false,
       "unleaded": 139.9,
       "diesel": 159.9,
-      "updated": "2026-03-07T09:35:06.396Z",
+      "updated": "2026-03-08T13:36:09.374Z",
       "id": 54
-    },
-    {
-      "name": "MOLD SUPERSTORE - PETROL FILLING STATION",
-      "brand": "TESCO",
-      "address": "PONTERWYL, YR WYDDGRUG, CH7 1UB",
-      "lat": 53.16708,
-      "lng": -3.13754,
-      "distance": 5.2,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 139.9,
-      "diesel": 148.9,
-      "updated": "2026-03-06T14:08:37.705Z",
-      "id": 56
     },
     {
       "name": "SHELL GAYTON",
@@ -871,22 +843,8 @@
       "is_motorway": false,
       "unleaded": 139.9,
       "diesel": 159.9,
-      "updated": "2026-03-06T10:55:29.448Z",
+      "updated": "2026-03-07T10:26:17.640Z",
       "id": 65
-    },
-    {
-      "name": "MFG PRESTATYN",
-      "brand": "BP",
-      "address": "MARINE ROAD, PRESTATYN, LL19 7HA",
-      "lat": 53.3376,
-      "lng": -3.40742,
-      "distance": 17.8,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 139.9,
-      "diesel": 153.9,
-      "updated": "2026-03-07T09:13:17.690Z",
-      "id": 74
     },
     {
       "name": "ASCONA HOLYWELL SERVICE STATION",
@@ -903,6 +861,20 @@
       "id": 6
     },
     {
+      "name": "MOLD SUPERSTORE - PETROL FILLING STATION",
+      "brand": "TESCO",
+      "address": "PONTERWYL, YR WYDDGRUG, CH7 1UB",
+      "lat": 53.16708,
+      "lng": -3.13754,
+      "distance": 5.2,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 140.9,
+      "diesel": 150.9,
+      "updated": "2026-03-07T14:40:52.081Z",
+      "id": 56
+    },
+    {
       "name": "SHELL CHESTER",
       "brand": "SHELL",
       "address": "TARVIN ROAD, CHESTER, CH3 5NJ",
@@ -915,6 +887,20 @@
       "diesel": 155.9,
       "updated": "2026-03-06T16:05:36.043Z",
       "id": 13
+    },
+    {
+      "name": "STANS OF LLANGOLLEN",
+      "brand": "TEXACO",
+      "address": "STANS OF LLANGOLLEN, BERWYN STREET, LLANGOLLEN, LL20 8NF, LLANGOLLEN, LL20 8NF",
+      "lat": 52.9688428,
+      "lng": -3.171139,
+      "distance": 17.6,
+      "is_supermarket": true,
+      "is_motorway": false,
+      "unleaded": 141.9,
+      "diesel": 154.9,
+      "updated": "2026-03-07T14:33:10.784Z",
+      "id": 28
     },
     {
       "name": "Ruabon Park Service Station",
@@ -943,6 +929,20 @@
       "diesel": 154.9,
       "updated": "2026-03-06T16:05:21.545Z",
       "id": 68
+    },
+    {
+      "name": "MFG PRESTATYN",
+      "brand": "BP",
+      "address": "MARINE ROAD, PRESTATYN, LL19 7HA",
+      "lat": 53.3376,
+      "lng": -3.40742,
+      "distance": 17.8,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 141.9,
+      "diesel": 159.9,
+      "updated": "2026-03-08T13:14:32.078Z",
+      "id": 74
     },
     {
       "name": "SHELL CO-OP MOLD",
@@ -981,9 +981,9 @@
       "distance": 2.3,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 147.9,
+      "unleaded": 148.9,
       "diesel": 165.9,
-      "updated": "2026-03-06T16:05:29.455Z",
+      "updated": "2026-03-08T12:04:03.167Z",
       "id": 23
     },
     {
