@@ -963,7 +963,7 @@ function render() {
 
   stations.forEach(station => {
     const price = getPrice(station);
-    if (!price || price <= 0) return;
+    if ((!price || price <= 0) && !station.note) return;
 
     const staleState = getStaleState(station);
     const isCheapest = staleState !== 'stale' && price === cheapestPrice;
