@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
-    "unleaded": 136.8,
-    "diesel": 150.2
+    "unleaded": 136.9,
+    "diesel": 150.3
   },
-  "lastUpdated": "2026-03-07T22:00:13.326545+00:00",
+  "lastUpdated": "2026-03-08T00:01:19.937813+00:00",
   "stationCount": 74,
   "stations": [
     {
@@ -147,34 +147,6 @@
       "id": 59
     },
     {
-      "name": "SAINSBURYS KINGS ROAD BEBINGTON",
-      "brand": "SAINSBURY'S",
-      "address": "152 KINGS ROAD, BIRKENHEAD, LIVERPOOL, CH63 8PZ",
-      "lat": 53.35656,
-      "lng": -3.02542,
-      "distance": 10.2,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 132.9,
-      "diesel": 144.9,
-      "updated": "2026-03-07T06:02:55.366Z",
-      "id": 63
-    },
-    {
-      "name": "SAINSBURYS PENSBY ROAD THINGWALL",
-      "brand": "SAINSBURY'S",
-      "address": "PENSBY ROAD, WIRRAL, CH61 7UB",
-      "lat": 53.35295,
-      "lng": -3.09298,
-      "distance": 10.3,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 133.9,
-      "diesel": 143.9,
-      "updated": "2026-03-06T22:58:03.782Z",
-      "id": 1
-    },
-    {
       "name": "MFG MORRISONS WEST KIRBY",
       "brand": "MORRISONS",
       "address": "ORRYSDALE ROAD, WEST KIRBY, CH48 4HX",
@@ -203,20 +175,6 @@
       "id": 8
     },
     {
-      "name": "SAINSBURYS CHESTER",
-      "brand": "SAINSBURY'S",
-      "address": "CALDY VALLEY ROAD, GREAT BOUGHTON, CHESTER, CH3 5QJ",
-      "lat": 53.18467,
-      "lng": -2.85543,
-      "distance": 7.5,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 133.9,
-      "diesel": 146.9,
-      "updated": "2026-03-06T22:20:54.520Z",
-      "id": 10
-    },
-    {
       "name": "MFG BEBINGTON",
       "brand": "TEXACO",
       "address": "26 OLD CHESTER ROAD, BEBINGTON, CH63 7LQ",
@@ -241,8 +199,22 @@
       "is_motorway": false,
       "unleaded": 133.9,
       "diesel": 145.9,
-      "updated": "2026-03-07T19:55:56.431Z",
+      "updated": "2026-03-07T23:56:00.682Z",
       "id": 14
+    },
+    {
+      "name": "SAINSBURYS KINGS ROAD BEBINGTON",
+      "brand": "SAINSBURY'S",
+      "address": "152 KINGS ROAD, BIRKENHEAD, LIVERPOOL, CH63 8PZ",
+      "lat": 53.35656,
+      "lng": -3.02542,
+      "distance": 10.2,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 133.9,
+      "diesel": 145.9,
+      "updated": "2026-03-07T23:00:08.545Z",
+      "id": 63
     },
     {
       "name": "MFG MORRISONS ELLESMERE PORT",
@@ -257,6 +229,34 @@
       "diesel": 145.9,
       "updated": "2026-03-07T20:55:19.936Z",
       "id": 66
+    },
+    {
+      "name": "SAINSBURYS PENSBY ROAD THINGWALL",
+      "brand": "SAINSBURY'S",
+      "address": "PENSBY ROAD, WIRRAL, CH61 7UB",
+      "lat": 53.35295,
+      "lng": -3.09298,
+      "distance": 10.3,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 134.9,
+      "diesel": 144.9,
+      "updated": "2026-03-07T22:58:15.412Z",
+      "id": 1
+    },
+    {
+      "name": "SAINSBURYS CHESTER",
+      "brand": "SAINSBURY'S",
+      "address": "CALDY VALLEY ROAD, GREAT BOUGHTON, CHESTER, CH3 5QJ",
+      "lat": 53.18467,
+      "lng": -2.85543,
+      "distance": 7.5,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 134.9,
+      "diesel": 147.9,
+      "updated": "2026-03-07T22:24:31.255Z",
+      "id": 10
     },
     {
       "name": "SAINSBURYS ELLESMERE PORT",
@@ -357,20 +357,6 @@
       "id": 62
     },
     {
-      "name": "SAINSBURYS WREXHAM",
-      "brand": "SAINSBURY'S",
-      "address": "RETAIL PARK, PLAS COCH ROAD, WREXHAM, LL11 2BA",
-      "lat": 53.05571,
-      "lng": -3.00904,
-      "distance": 10.6,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 135.9,
-      "diesel": 144.9,
-      "updated": "2026-03-06T22:16:10.866Z",
-      "id": 72
-    },
-    {
       "name": "SAINSBURYS UPTON",
       "brand": "SAINSBURY'S",
       "address": "UPTON BY PASS, WIRRAL, CH49 6QG",
@@ -409,7 +395,7 @@
       "is_motorway": false,
       "unleaded": 136.9,
       "diesel": 149.9,
-      "updated": "2026-03-07T19:56:46.448Z",
+      "updated": "2026-03-07T23:56:52.032Z",
       "id": 45
     },
     {
@@ -453,6 +439,20 @@
       "diesel": 151.9,
       "updated": "2026-03-06T16:05:33.936Z",
       "id": 67
+    },
+    {
+      "name": "SAINSBURYS WREXHAM",
+      "brand": "SAINSBURY'S",
+      "address": "RETAIL PARK, PLAS COCH ROAD, WREXHAM, LL11 2BA",
+      "lat": 53.05571,
+      "lng": -3.00904,
+      "distance": 10.6,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 136.9,
+      "diesel": 146.9,
+      "updated": "2026-03-07T22:04:33.763Z",
+      "id": 72
     },
     {
       "name": "MFG MORRISONS DENBIGH",
@@ -553,20 +553,6 @@
       "id": 46
     },
     {
-      "name": "SAINSBURYS RHYL",
-      "brand": "SAINSBURY'S",
-      "address": "RHYL ROAD, RHUDDLAN, RHYL, LL18 2TP",
-      "lat": 53.30371,
-      "lng": -3.46769,
-      "distance": 19.1,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 137.9,
-      "diesel": 151.9,
-      "updated": "2026-03-06T21:56:21.930Z",
-      "id": 53
-    },
-    {
       "name": "Rhydymwyn Service Station",
       "brand": "RHYDYMWYN SERVICE STATION",
       "address": "A A S RHYDYMWYN LTD, RHYDYMWYN SERVICE STATION, DENBIGH ROAD, RHYDYMWYN, MOLD, CH7 5HE, MOLD, CH7 5HE",
@@ -591,7 +577,7 @@
       "is_motorway": false,
       "unleaded": 138.9,
       "diesel": 147.9,
-      "updated": "2026-03-07T18:00:40.923Z",
+      "updated": "2026-03-07T22:00:48.658Z",
       "id": 9
     },
     {
@@ -663,6 +649,20 @@
       "diesel": 150.9,
       "updated": "2026-03-07T15:30:49.175Z",
       "id": 27
+    },
+    {
+      "name": "SAINSBURYS RHYL",
+      "brand": "SAINSBURY'S",
+      "address": "RHYL ROAD, RHUDDLAN, RHYL, LL18 2TP",
+      "lat": 53.30371,
+      "lng": -3.46769,
+      "distance": 19.1,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 138.9,
+      "diesel": 152.9,
+      "updated": "2026-03-07T22:01:17.523Z",
+      "id": 53
     },
     {
       "name": "SHELL MERSEY VIEW",
@@ -847,20 +847,6 @@
       "id": 65
     },
     {
-      "name": "MFG PRESTATYN",
-      "brand": "BP",
-      "address": "MARINE ROAD, PRESTATYN, LL19 7HA",
-      "lat": 53.3376,
-      "lng": -3.40742,
-      "distance": 17.8,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 139.9,
-      "diesel": 153.9,
-      "updated": "2026-03-07T21:13:50.029Z",
-      "id": 74
-    },
-    {
       "name": "ASCONA HOLYWELL SERVICE STATION",
       "brand": "VALERO",
       "address": "HOLWAY ROAD, HOLYWELL, CH8 7LQ",
@@ -943,6 +929,20 @@
       "diesel": 154.9,
       "updated": "2026-03-06T16:05:21.545Z",
       "id": 68
+    },
+    {
+      "name": "MFG PRESTATYN",
+      "brand": "BP",
+      "address": "MARINE ROAD, PRESTATYN, LL19 7HA",
+      "lat": 53.3376,
+      "lng": -3.40742,
+      "distance": 17.8,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 141.9,
+      "diesel": 159.9,
+      "updated": "2026-03-07T23:33:56.010Z",
+      "id": 74
     },
     {
       "name": "SHELL CO-OP MOLD",
