@@ -3,8 +3,8 @@
     "unleaded": 137.6,
     "diesel": 152.0
   },
-  "lastUpdated": "2026-03-08T18:25:31.487479+00:00",
-  "stationCount": 74,
+  "lastUpdated": "2026-03-08T18:29:37.168757+00:00",
+  "stationCount": 75,
   "stations": [
     {
       "name": "SMITHY VIEW SERVICE STATION ACTON",
@@ -1041,6 +1041,21 @@
       "diesel": 174.9,
       "updated": "2026-03-06T17:22:03.222Z",
       "id": 44
+    },
+    {
+      "name": "Asda Quay Express (Esso)",
+      "brand": "ESSO",
+      "address": "Church Street, Connah's Quay, CH5 4AS",
+      "lat": 53.22449,
+      "lng": -3.071442,
+      "unleaded": null,
+      "diesel": null,
+      "updated": "",
+      "distance": 1.2,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "note": "Not reporting prices",
+      "id": 75
     }
   ]
 }
