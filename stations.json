@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
-    "unleaded": 137.8,
+    "unleaded": 137.7,
     "diesel": 152.2
   },
-  "lastUpdated": "2026-03-08T22:30:13.747224+00:00",
+  "lastUpdated": "2026-03-08T23:00:13.836312+00:00",
   "stationCount": 77,
   "stations": [
     {
@@ -147,34 +147,6 @@
       "id": 59
     },
     {
-      "name": "MFG MORRISONS WEST KIRBY",
-      "brand": "MORRISONS",
-      "address": "ORRYSDALE ROAD, WEST KIRBY, CH48 4HX",
-      "lat": 53.374111,
-      "lng": -3.181775,
-      "distance": 13.0,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 133.9,
-      "diesel": 143.9,
-      "updated": "2026-03-08T20:55:49.789Z",
-      "id": 2
-    },
-    {
-      "name": "MFG MORRISONS WREXHAM",
-      "brand": "MORRISONS",
-      "address": "RUTHIN ROAD/CENTENARY ROAD, WREXHAM, LL13 7TU",
-      "lat": 53.043351,
-      "lng": -3.004505,
-      "distance": 11.5,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 133.9,
-      "diesel": 143.9,
-      "updated": "2026-03-08T21:06:23.078Z",
-      "id": 8
-    },
-    {
       "name": "MFG BEBINGTON",
       "brand": "TEXACO",
       "address": "26 OLD CHESTER ROAD, BEBINGTON, CH63 7LQ",
@@ -271,6 +243,34 @@
       "diesel": 145.9,
       "updated": "2026-03-07T14:41:13.502Z",
       "id": 70
+    },
+    {
+      "name": "MFG MORRISONS WEST KIRBY",
+      "brand": "MORRISONS",
+      "address": "ORRYSDALE ROAD, WEST KIRBY, CH48 4HX",
+      "lat": 53.374111,
+      "lng": -3.181775,
+      "distance": 13.0,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 135.9,
+      "diesel": 148.9,
+      "updated": "2026-03-08T22:37:51.841Z",
+      "id": 2
+    },
+    {
+      "name": "MFG MORRISONS WREXHAM",
+      "brand": "MORRISONS",
+      "address": "RUTHIN ROAD/CENTENARY ROAD, WREXHAM, LL13 7TU",
+      "lat": 53.043351,
+      "lng": -3.004505,
+      "distance": 11.5,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 135.9,
+      "diesel": 148.9,
+      "updated": "2026-03-08T22:46:24.899Z",
+      "id": 8
     },
     {
       "name": "Plas Acton Fuel Station",
