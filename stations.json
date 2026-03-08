@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
     "unleaded": 137.7,
-    "diesel": 152.2
+    "diesel": 152.3
   },
-  "lastUpdated": "2026-03-08T23:00:13.836312+00:00",
+  "lastUpdated": "2026-03-08T23:30:12.476657+00:00",
   "stationCount": 77,
   "stations": [
     {
@@ -61,20 +61,6 @@
       "diesel": 142.9,
       "updated": "2026-03-02T12:40:56.881Z",
       "id": 49
-    },
-    {
-      "name": "MFG MORRISONS SALTNEY",
-      "brand": "MORRISONS",
-      "address": "HIGH STREET, SALTNEY, CH4 8RU",
-      "lat": 53.178287,
-      "lng": -2.935342,
-      "distance": 4.6,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 131.9,
-      "diesel": 143.9,
-      "updated": "2026-03-08T21:10:49.044Z",
-      "id": 20
     },
     {
       "name": "Gordale Service Station",
@@ -173,6 +159,20 @@
       "diesel": 145.9,
       "updated": "2026-03-08T19:56:22.389Z",
       "id": 14
+    },
+    {
+      "name": "MFG MORRISONS SALTNEY",
+      "brand": "MORRISONS",
+      "address": "HIGH STREET, SALTNEY, CH4 8RU",
+      "lat": 53.178287,
+      "lng": -2.935342,
+      "distance": 4.6,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 133.9,
+      "diesel": 148.9,
+      "updated": "2026-03-08T23:00:51.623Z",
+      "id": 20
     },
     {
       "name": "SAINSBURYS KINGS ROAD BEBINGTON",
