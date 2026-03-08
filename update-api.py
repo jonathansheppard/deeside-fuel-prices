@@ -13,7 +13,7 @@ Run every 30 minutes via crontab:
 Requires: GITHUB_TOKEN environment variable (or hardcode below)
 """
 
-import json, math, urllib.request, urllib.error, base64, os, sys, re
+import json, math, urllib.request, urllib.error, base64, os, sys
 from datetime import datetime, timezone
 
 # ── CONFIG ──
@@ -29,9 +29,8 @@ DEESIDE_LAT = 53.2089
 DEESIDE_LNG = -3.0330
 MAX_DISTANCE = 25  # miles
 
-# Fallback national averages — updated if live fetch succeeds
-NATIONAL_AVG_UNLEADED_FALLBACK = 136.5
-NATIONAL_AVG_DIESEL_FALLBACK = 149.5
+NATIONAL_AVG_UNLEADED = 131.7
+NATIONAL_AVG_DIESEL = 141.5
 
 TARGET_POSTCODES = [
     'CH1','CH2','CH3','CH4','CH5','CH6','CH7','CH8',
@@ -69,69 +68,6 @@ def api_request(url, method="GET", data=None, headers=None):
         log(f"HTTP {e.code}: {error_body[:500]}")
         raise
 
-
-# ── NATIONAL AVERAGE FETCHER ──────────────────────────────────────────────────
-
-
-def get_national_averages():
-    """
-    Returns fallback values — national average is now computed directly
-    from GOV.UK station data after processing. See compute_national_averages().
-    """
-    return {'unleaded': NATIONAL_AVG_UNLEADED_FALLBACK, 'diesel': NATIONAL_AVG_DIESEL_FALLBACK}
-
-
-def compute_national_averages(stations_raw, prices_raw):
-    """
-    Compute UK national average prices from the full GOV.UK dataset
-    (all stations, not just local ones). Excludes motorway services.
-    """
-    try:
-        # Build a quick price lookup
-        price_map = {p['node_id']: p for p in prices_raw}
-
-        unleaded_prices = []
-        diesel_prices = []
-
-        for s in stations_raw:
-            if s.get('permanent_closure') or s.get('temporary_closure'):
-                continue
-            if s.get('is_motorway_service_station'):
-                continue
-
-            nid = s.get('node_id')
-            p = price_map.get(nid)
-            if not p:
-                continue
-
-            for fp in p.get('fuel_prices', []):
-                ft = fp.get('fuel_type')
-                price = fp.get('price')
-                if not price:
-                    continue
-                val = float(price)
-                if not (100 < val < 250):
-                    continue
-                if ft == 'E10':
-                    unleaded_prices.append(val)
-                elif ft == 'B7_STANDARD':
-                    diesel_prices.append(val)
-
-        if unleaded_prices and diesel_prices:
-            avg_u = round(sum(unleaded_prices) / len(unleaded_prices), 1)
-            avg_d = round(sum(diesel_prices) / len(diesel_prices), 1)
-            log(f"Computed national averages from {len(unleaded_prices)} unleaded / {len(diesel_prices)} diesel stations: {avg_u}p / {avg_d}p")
-            return {'unleaded': avg_u, 'diesel': avg_d}
-        else:
-            log("Could not compute national averages — using fallback")
-            return {'unleaded': NATIONAL_AVG_UNLEADED_FALLBACK, 'diesel': NATIONAL_AVG_DIESEL_FALLBACK}
-
-    except Exception as e:
-        log(f"National average computation failed ({e}) — using fallback")
-        return {'unleaded': NATIONAL_AVG_UNLEADED_FALLBACK, 'diesel': NATIONAL_AVG_DIESEL_FALLBACK}
-
-
-# ── MAIN PIPELINE ─────────────────────────────────────────────────────────────
 
 def get_token():
     log("Authenticating...")
@@ -324,17 +260,31 @@ def main():
         log("Fetching fuel prices...")
         prices_raw = fetch_all_batches("pfs/fuel-prices", token)
         log(f"Total price records fetched: {len(prices_raw)}")
-
-        # 4. Compute national averages from full dataset
-        national_avg = compute_national_averages(stations_raw, prices_raw)
         
-        # 5. Process local stations
+        # 4. Process
         log("Processing and filtering...")
         stations = process_data(stations_raw, prices_raw)
         
         if not stations:
             log("ERROR: No stations found after filtering!")
             sys.exit(1)
+        
+        # 4b. Calculate national averages from ALL UK stations
+        all_unleaded = []
+        all_diesel = []
+        for p in prices_raw:
+            for fp in p.get("fuel_prices", []):
+                price = fp.get("price")
+                if not price or price <= 0:
+                    continue
+                if fp.get("fuel_type") == "E10":
+                    all_unleaded.append(float(price))
+                elif fp.get("fuel_type") == "B7_STANDARD":
+                    all_diesel.append(float(price))
+        
+        natl_unleaded = round(sum(all_unleaded) / len(all_unleaded), 1) if all_unleaded else 131.7
+        natl_diesel = round(sum(all_diesel) / len(all_diesel), 1) if all_diesel else 141.5
+        log(f"National avg: {natl_unleaded}p unleaded ({len(all_unleaded)} stations), {natl_diesel}p diesel ({len(all_diesel)} stations)")
         
         unleaded = [s["unleaded"] for s in stations if s.get("unleaded")]
         diesel = [s["diesel"] for s in stations if s.get("diesel")]
@@ -346,9 +296,12 @@ def main():
         if diesel:
             log(f"Diesel: {min(diesel):.1f}p - {max(diesel):.1f}p")
         
-        # 6. Build output
+        # 5. Build output
         output = {
-            "nationalAvg": national_avg,
+            "nationalAvg": {
+                "unleaded": natl_unleaded,
+                "diesel": natl_diesel
+            },
             "lastUpdated": datetime.now(timezone.utc).isoformat(),
             "stationCount": len(stations),
             "stations": stations
@@ -356,14 +309,14 @@ def main():
         
         json_content = json.dumps(output, indent=2)
         
-        # 7. Save locally
+        # 6. Save locally
         script_dir = os.path.dirname(os.path.abspath(__file__))
         local_path = os.path.join(script_dir, "stations.json")
         with open(local_path, "w") as f:
             f.write(json_content)
         log(f"Saved to {local_path}")
         
-        # 8. Commit to GitHub
+        # 7. Commit to GitHub
         commit_to_github(json_content)
         
         log("Update complete!")
