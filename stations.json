@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
-    "unleaded": 137.7,
+    "unleaded": 137.8,
     "diesel": 152.1
   },
-  "lastUpdated": "2026-03-08T21:30:11.278806+00:00",
+  "lastUpdated": "2026-03-08T22:00:24.031348+00:00",
   "stationCount": 74,
   "stations": [
     {
@@ -385,20 +385,6 @@
       "id": 42
     },
     {
-      "name": "MFG MORRISONS RHYL",
-      "brand": "MORRISONS",
-      "address": "MARSH ROAD, RHYL, LL18 2DF",
-      "lat": 53.317314,
-      "lng": -3.489098,
-      "distance": 20.3,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 136.9,
-      "diesel": 149.9,
-      "updated": "2026-03-08T19:57:22.211Z",
-      "id": 45
-    },
-    {
       "name": "MFG WALLASEY VILLAGE",
       "brand": "BP",
       "address": "15-35 LEASOWE ROAD, WALLASEY VILLAGE, CH44 2BY",
@@ -439,20 +425,6 @@
       "diesel": 146.9,
       "updated": "2026-03-07T22:04:33.763Z",
       "id": 72
-    },
-    {
-      "name": "MFG MORRISONS DENBIGH",
-      "brand": "MORRISONS",
-      "address": "SMITHFIELD ROAD, DENBIGH, LL16 3LW",
-      "lat": 53.18224,
-      "lng": -3.423087,
-      "distance": 16.3,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 137.9,
-      "diesel": 149.9,
-      "updated": "2026-03-08T21:00:46.779Z",
-      "id": 5
     },
     {
       "name": "BP HARVEST ENERGY OVERPOOL",
@@ -591,7 +563,7 @@
       "is_motorway": false,
       "unleaded": 138.9,
       "diesel": 151.9,
-      "updated": "2026-03-08T17:54:28.124Z",
+      "updated": "2026-03-08T21:54:36.491Z",
       "id": 15
     },
     {
@@ -651,6 +623,20 @@
       "id": 27
     },
     {
+      "name": "MFG MORRISONS RHYL",
+      "brand": "MORRISONS",
+      "address": "MARSH ROAD, RHYL, LL18 2DF",
+      "lat": 53.317314,
+      "lng": -3.489098,
+      "distance": 20.3,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 138.9,
+      "diesel": 154.9,
+      "updated": "2026-03-08T21:37:24.728Z",
+      "id": 45
+    },
+    {
       "name": "SAINSBURYS RHYL",
       "brand": "SAINSBURY'S",
       "address": "RHYL ROAD, RHUDDLAN, RHYL, LL18 2TP",
@@ -705,6 +691,20 @@
       "diesel": 149.9,
       "updated": "2026-03-06T12:35:02.820Z",
       "id": 4
+    },
+    {
+      "name": "MFG MORRISONS DENBIGH",
+      "brand": "MORRISONS",
+      "address": "SMITHFIELD ROAD, DENBIGH, LL16 3LW",
+      "lat": 53.18224,
+      "lng": -3.423087,
+      "distance": 16.3,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 139.9,
+      "diesel": 154.9,
+      "updated": "2026-03-08T21:32:47.321Z",
+      "id": 5
     },
     {
       "name": "CASTLE VIEW",
@@ -801,7 +801,7 @@
       "is_motorway": false,
       "unleaded": 139.9,
       "diesel": 159.9,
-      "updated": "2026-03-08T17:36:18.179Z",
+      "updated": "2026-03-08T21:36:27.065Z",
       "id": 54
     },
     {
