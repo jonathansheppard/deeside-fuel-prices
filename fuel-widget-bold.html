@@ -415,8 +415,15 @@ body {
 // ─── CONFIG ──────────────────────────────────────────────────────
 const DATA_URL  = 'https://deeside-fuel-prices.netlify.app/stations.json';
 const TOOL_URL  = 'https://deeside-fuel-prices.netlify.app/';
+const STALE_HOURS = 120; // 5 days
 
 // ─── HELPERS ─────────────────────────────────────────────────────
+function isFresh(station) {
+  if (!station.updated) return false;
+  const hrs = (Date.now() - new Date(station.updated).getTime()) / 3600000;
+  return hrs < STALE_HOURS;
+}
+
 function badge(price, avg) {
   const d = +(price - avg).toFixed(1);
   if (d < 0)  return { cls: 'green', txt: `${Math.abs(d)}p below UK avg` };
@@ -534,10 +541,11 @@ async function init() {
     const UK_AVG_UNL = data.nationalAvg.unleaded;
     const UK_AVG_DSL = data.nationalAvg.diesel;
 
-    const byUnl = stations.filter(s => s.unleaded).sort((a,b) => a.unleaded - b.unleaded);
-    const byDsl = stations.filter(s => s.diesel).sort((a,b)   => a.diesel   - b.diesel);
+    // Filter to fresh stations only (updated within 5 days)
+    const byUnl = stations.filter(s => s.unleaded && s.unleaded > 0 && isFresh(s)).sort((a,b) => a.unleaded - b.unleaded);
+    const byDsl = stations.filter(s => s.diesel && s.diesel > 0 && isFresh(s)).sort((a,b) => a.diesel - b.diesel);
 
-    if (!byUnl.length || !byDsl.length) throw new Error('No prices found');
+    if (!byUnl.length || !byDsl.length) throw new Error('No fresh prices found');
 
     render(
       { price: byUnl[0].unleaded, name: byUnl[0].name },
