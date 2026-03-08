@@ -208,6 +208,34 @@ def process_data(stations_raw, prices_raw):
             "is_supermarket": False,
             "is_motorway": False,
             "note": "Not reporting prices"
+        },
+        {
+            "name": "Asda Deeside Express Petrol",
+            "brand": "ASDA",
+            "address": "Parkway, Deeside, CH5 2NS",
+            "lat": 53.2280,
+            "lng": -3.0120,
+            "unleaded": None,
+            "diesel": None,
+            "updated": "",
+            "distance": 1.8,
+            "is_supermarket": True,
+            "is_motorway": False,
+            "note": "Not reporting prices"
+        },
+        {
+            "name": "Asda Queensferry Petrol",
+            "brand": "ASDA",
+            "address": "Aston Road, Queensferry, CH5 1TQ",
+            "lat": 53.2050,
+            "lng": -3.0265,
+            "unleaded": None,
+            "diesel": None,
+            "updated": "",
+            "distance": 0.8,
+            "is_supermarket": True,
+            "is_motorway": False,
+            "note": "Not reporting prices"
         }
     ]
     for ms in manual_stations:
