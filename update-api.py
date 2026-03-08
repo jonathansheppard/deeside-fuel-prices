@@ -192,6 +192,29 @@ def process_data(stations_raw, prices_raw):
         sid += 1
     
     stations.sort(key=lambda x: x.get("unleaded") or 999)
+
+    # Manual additions — local stations not reporting prices to the scheme
+    manual_stations = [
+        {
+            "name": "Asda Quay Express (Esso)",
+            "brand": "ESSO",
+            "address": "Church Street, Connah's Quay, CH5 4AS",
+            "lat": 53.22449,
+            "lng": -3.071442,
+            "unleaded": None,
+            "diesel": None,
+            "updated": "",
+            "distance": 1.2,
+            "is_supermarket": False,
+            "is_motorway": False,
+            "note": "Not reporting prices"
+        }
+    ]
+    for ms in manual_stations:
+        ms["id"] = sid
+        stations.append(ms)
+        sid += 1
+
     return stations
 
 
