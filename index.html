@@ -858,7 +858,7 @@ function createMarkerIcon(price, priceClass, isActive, isCheapest, isStale) {
   const bgColor = isCheapest ? 'rgba(52,211,153,0.15)' : (isActive ? 'rgba(56,189,248,0.15)' : 'rgba(15,17,23,0.9)');
   const size = isActive ? 52 : 44;
   const fontSize = isActive ? 13 : 11;
-  const label = isStale ? '?' : price.toFixed(1);
+  const label = isStale ? (price > 0 ? price.toFixed(1) : '?') : price.toFixed(1);
   const textColor = isStale ? '#9CA3AF' : (isCheapest ? '#34d399' : '#e4e6ee');
 
   return L.divIcon({
