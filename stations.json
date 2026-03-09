@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
-    "unleaded": 138.2,
-    "diesel": 154.0
+    "unleaded": 138.3,
+    "diesel": 154.1
   },
-  "lastUpdated": "2026-03-09T13:00:13.346917+00:00",
+  "lastUpdated": "2026-03-09T13:31:53.198861+00:00",
   "stationCount": 77,
   "stations": [
     {
@@ -115,7 +115,7 @@
       "is_motorway": false,
       "unleaded": 133.9,
       "diesel": 145.9,
-      "updated": "2026-03-09T09:12:26.102Z",
+      "updated": "2026-03-09T13:12:38.534Z",
       "id": 12
     },
     {
@@ -129,7 +129,7 @@
       "is_motorway": false,
       "unleaded": 133.9,
       "diesel": 148.9,
-      "updated": "2026-03-09T09:11:06.115Z",
+      "updated": "2026-03-09T13:11:12.007Z",
       "id": 20
     },
     {
@@ -241,7 +241,7 @@
       "is_motorway": false,
       "unleaded": 135.9,
       "diesel": 148.9,
-      "updated": "2026-03-09T09:06:38.080Z",
+      "updated": "2026-03-09T13:06:42.900Z",
       "id": 8
     },
     {
@@ -338,8 +338,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 136.9,
-      "diesel": 148.9,
-      "updated": "2026-03-08T15:07:36.083Z",
+      "diesel": 149.9,
+      "updated": "2026-03-09T13:23:53.261Z",
       "id": 38
     },
     {
@@ -423,7 +423,7 @@
       "is_motorway": false,
       "unleaded": 137.9,
       "diesel": 159.9,
-      "updated": "2026-03-09T09:04:07.884Z",
+      "updated": "2026-03-09T13:04:15.998Z",
       "id": 24
     },
     {
@@ -647,7 +647,7 @@
       "is_motorway": false,
       "unleaded": 139.9,
       "diesel": 154.9,
-      "updated": "2026-03-09T09:01:02.109Z",
+      "updated": "2026-03-09T13:01:06.650Z",
       "id": 5
     },
     {
@@ -703,7 +703,7 @@
       "is_motorway": false,
       "unleaded": 139.9,
       "diesel": 159.9,
-      "updated": "2026-03-09T09:05:25.354Z",
+      "updated": "2026-03-09T13:05:36.807Z",
       "id": 19
     },
     {
@@ -861,20 +861,6 @@
       "id": 28
     },
     {
-      "name": "Ruabon Park Service Station",
-      "brand": "RUABON PARK SERVICE STATION",
-      "address": "RUABON PARK SERVICE STATION, JAMES PARK WAY, RUABON, WREXHAM, LL14 6EQ, WREXHAM, LL14 6EQ",
-      "lat": 52.9833637,
-      "lng": -3.0453473,
-      "distance": 15.6,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 141.9,
-      "diesel": 155.9,
-      "updated": "2026-02-06T14:15:53.735Z",
-      "id": 29
-    },
-    {
       "name": "MFG PRESTATYN",
       "brand": "BP",
       "address": "MARINE ROAD, PRESTATYN, LL19 7HA",
@@ -885,7 +871,7 @@
       "is_motorway": false,
       "unleaded": 141.9,
       "diesel": 159.9,
-      "updated": "2026-03-09T09:15:24.493Z",
+      "updated": "2026-03-09T13:15:35.274Z",
       "id": 74
     },
     {
@@ -943,6 +929,20 @@
       "diesel": 155.0,
       "updated": "2026-03-09T11:18:18.906Z",
       "id": 6
+    },
+    {
+      "name": "Ruabon Park Service Station",
+      "brand": "RUABON PARK SERVICE STATION",
+      "address": "RUABON PARK SERVICE STATION, JAMES PARK WAY, RUABON, WREXHAM, LL14 6EQ, WREXHAM, LL14 6EQ",
+      "lat": 52.9833637,
+      "lng": -3.0453473,
+      "distance": 15.6,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 144.9,
+      "diesel": 155.9,
+      "updated": "2026-02-06T14:15:53.735Z",
+      "id": 29
     },
     {
       "name": "SHELL CO-OP MOLD",
