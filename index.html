@@ -325,10 +325,6 @@
     padding: 8px;
   }
 
-  .station-list::-webkit-scrollbar { width: 6px; }
-  .station-list::-webkit-scrollbar-track { background: transparent; }
-  .station-list::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
-
   .station-card {
     padding: 14px 16px;
     border-radius: var(--radius);
@@ -748,12 +744,13 @@ let fixedThresholds = {
   diesel:   { low: 141.5, high: 146.5 }
 };
 
-const NATIONAL_AVG_UPDATED = '3 Mar 2026';
 const NOTABLE_STATIONS = ['COSTCO', 'ASDA', 'TESCO', 'MORRISONS', 'SAINSBURYS'];
 
 let nationalAvg = { unleaded: 131.7, diesel: 141.5 };
 let stations = [];
 let dataLastUpdated = null;
+
+function isCostco(s) { return s.brand && s.brand.includes('COSTCO'); }
 
 async function loadStationData() {
   try {
@@ -850,8 +847,9 @@ function getSortedStations() {
 }
 
 function getStats() {
-  // Scoped to 10 miles — keeps stats bar consistent with list view
-  const core     = stations.filter(s => s.distance <= 10 && !s.is_motorway);
+  // Open-access only (no Costco) — matches list view and chart
+  const CORE_RADIUS = 10;
+  const core     = stations.filter(s => s.distance <= CORE_RADIUS && !s.is_motorway && !isCostco(s));
   const nonStale = core.filter(s => getStaleState(s) !== 'stale');
   const pool     = nonStale.length > 0 ? nonStale : core;
   const prices   = pool.map(s => getPrice(s)).filter(p => p && p > 0);
@@ -902,9 +900,11 @@ function render() {
   const extendedStations = stations.filter(s => s.distance > CORE_RADIUS);
   const sorted = getSortedStations().filter(s => s.distance <= CORE_RADIUS && (getPrice(s) > 0 || s.note));
   const stats = getStats();
-  const nonStaleStations = stations.filter(s => getStaleState(s) !== 'stale' && getPrice(s) > 0);
-  const cheapestPrice = nonStaleStations.length > 0 ? Math.min(...nonStaleStations.map(s => getPrice(s))) : stats.low;
-  const highestPrice  = nonStaleStations.length > 0 ? Math.max(...nonStaleStations.map(s => getPrice(s))) : stats.high;
+
+  // cheapest/highest from open-access only — consistent with stats bar
+  const openLive = stations.filter(s => s.distance <= CORE_RADIUS && !s.is_motorway && !isCostco(s) && getStaleState(s) !== 'stale' && getPrice(s) > 0);
+  const cheapestPrice = openLive.length > 0 ? Math.min(...openLive.map(s => getPrice(s))) : stats.low;
+  const highestPrice  = openLive.length > 0 ? Math.max(...openLive.map(s => getPrice(s))) : stats.high;
 
   const natl = nationalAvg[currentFuel];
   document.getElementById('statNatl').textContent = natl.toFixed(1) + 'p';
@@ -917,11 +917,11 @@ function render() {
   }
 
   document.getElementById('statLow').onclick = () => {
-    const cheapest = nonStaleStations.filter(s => getPrice(s) > 0).sort((a,b) => getPrice(a)-getPrice(b))[0];
+    const cheapest = openLive.sort((a,b) => getPrice(a)-getPrice(b))[0];
     if (cheapest) { activeStation = cheapest.id; map.flyTo([cheapest.lat, cheapest.lng], 14, {duration:0.5}); markers[cheapest.id]?.openPopup(); render(); }
   };
   document.getElementById('statHigh').onclick = () => {
-    const highest = nonStaleStations.filter(s => getPrice(s) > 0).sort((a,b) => getPrice(b)-getPrice(a))[0];
+    const highest = openLive.sort((a,b) => getPrice(b)-getPrice(a))[0];
     if (highest) { activeStation = highest.id; map.flyTo([highest.lat, highest.lng], 14, {duration:0.5}); markers[highest.id]?.openPopup(); render(); }
   };
 
@@ -934,14 +934,15 @@ function render() {
 
     const isNoData    = !price || price <= 0;
     const staleState  = isNoData ? 'stale' : getStaleState(station);
-    const isCheapest  = !isNoData && staleState !== 'stale' && price === cheapestPrice;
+    // Costco never gets the "cheapest" marker treatment on the map
+    const isCheapestMarker = !isNoData && staleState !== 'stale' && !isCostco(station) && price === cheapestPrice;
     const isActive    = activeStation === station.id;
     const isExtended  = station.distance > CORE_RADIUS;
     const markerPriceClass = (isNoData || staleState === 'stale') ? 'price-mid' : getPriceClass(price, stats);
 
     const markerIcon = isNoData ? createNoDataMarkerIcon(isActive) :
                        staleState === 'stale' ? createStaleMarkerIcon(isActive) :
-                       createMarkerIcon(price, markerPriceClass, isActive, isCheapest);
+                       createMarkerIcon(price, markerPriceClass, isActive, isCheapestMarker);
 
     const marker = L.marker([station.lat, station.lng], {
       icon: markerIcon,
@@ -961,8 +962,8 @@ function render() {
                       diff >  0.5 ? `<span style="color:#dc2626">+${diff.toFixed(1)}p vs UK avg</span>` :
                       `<span style="color:#888">≈ UK average</span>`;
       popupHtml += `<div class="popup-brand">${station.name}</div><div class="popup-address">${station.address}</div>`;
-      if (station.brand.includes('COSTCO')) popupHtml += `<div style="font-size:10px;color:#60a5fa;margin:4px 0">🔒 Costco membership required</div>`;
-      popupHtml += `<div class="popup-price" style="color:${isCheapest ? '#16a34a' : '#1e293b'}">${price.toFixed(1)}p</div><div class="popup-label">${currentFuel === 'unleaded' ? 'Unleaded' : 'Diesel'} per litre</div><div style="font-size:11px;margin-top:4px;font-family:'JetBrains Mono',monospace">${diffStr}</div><div style="font-size:10px;color:#888;margin-top:4px">${station.distance} miles from Queensferry</div>`;
+      if (isCostco(station)) popupHtml += `<div style="font-size:10px;color:#60a5fa;margin:4px 0">🔒 Costco membership required</div>`;
+      popupHtml += `<div class="popup-price" style="color:${isCheapestMarker ? '#16a34a' : '#1e293b'}">${price.toFixed(1)}p</div><div class="popup-label">${currentFuel === 'unleaded' ? 'Unleaded' : 'Diesel'} per litre</div><div style="font-size:11px;margin-top:4px;font-family:'JetBrains Mono',monospace">${diffStr}</div><div style="font-size:10px;color:#888;margin-top:4px">${station.distance} miles from Queensferry</div>`;
       if (staleState === 'fresh') popupHtml += `<div style="font-size:10px;color:#34d399;margin-top:4px">✓ Updated ${timeAgo(station.updated)}</div>`;
       else if (staleState === 'aging') {
         const ageDays = Math.floor((Date.now() - new Date(station.updated).getTime()) / 86400000);
@@ -981,8 +982,8 @@ function render() {
     const price = getPrice(station);
     const isNoData   = !price || price <= 0;
     const staleState = isNoData ? 'stale' : getStaleState(station);
-    const isCheapest = !isNoData && staleState !== 'stale' && staleState !== 'aging' && price === cheapestPrice;
-    const isExpensive = !isNoData && staleState !== 'stale' && staleState !== 'aging' && price === highestPrice;
+    const isCheapest = !isNoData && staleState !== 'stale' && !isCostco(station) && price === cheapestPrice;
+    const isExpensive = !isNoData && staleState !== 'stale' && !isCostco(station) && price === highestPrice;
     const isActive   = activeStation === station.id;
     const priceClass = (isNoData || staleState === 'stale') ? '' : getPriceClass(price, stats);
     const cardNatl   = nationalAvg[currentFuel];
@@ -1029,7 +1030,7 @@ function render() {
         <div class="station-address">${station.address}</div>
         ${isCheapest  ? '<span class="station-tag tag-cheapest">★ Cheapest</span>' : ''}
         ${isExpensive ? '<span class="station-tag tag-expensive">Most Expensive</span>' : ''}
-        ${station.brand.includes('COSTCO') ? '<span class="station-tag" style="background:rgba(96,165,250,0.12);color:#60a5fa;border:1px solid rgba(96,165,250,0.3);font-size:10px">🔒 Members only</span>' : ''}
+        ${isCostco(station) ? '<span class="station-tag" style="background:rgba(96,165,250,0.12);color:#60a5fa;border:1px solid rgba(96,165,250,0.3);font-size:10px">🔒 Members only</span>' : ''}
       </div>
       <div class="station-price">
         ${isNoData ? '<div style="color:#E8A838;font-size:13px;font-weight:600">Not reporting</div><div style="font-size:10px;color:#9CA3AF;margin-top:2px">Last checked: today</div>' :
