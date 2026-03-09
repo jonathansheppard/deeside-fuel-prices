@@ -34,7 +34,6 @@ body {
   width: 100%;
 }
 
-/* ── SHELL ────────────────────────────────────────── */
 .fw {
   background: var(--bg);
   border-radius: 8px;
@@ -47,7 +46,6 @@ body {
     0 8px 32px rgba(0,0,0,.6);
 }
 
-/* noise grain overlay */
 .fw::before {
   content: '';
   position: absolute;
@@ -58,7 +56,6 @@ body {
   opacity: .5;
 }
 
-/* ── HEADER STRIP ─────────────────────────────────── */
 .fw-header {
   display: flex;
   align-items: center;
@@ -125,14 +122,12 @@ body {
   50%      { opacity: .35; box-shadow: none; }
 }
 
-/* ── PRICES BODY ──────────────────────────────────── */
 .fw-prices {
   display: grid;
   grid-template-columns: 1fr 1fr;
   position: relative;
 }
 
-/* diagonal divider */
 .fw-prices::after {
   content: '';
   position: absolute;
@@ -151,7 +146,6 @@ body {
   transition: background .25s;
 }
 
-/* coloured glow behind each panel */
 .fw-cell.petrol::before {
   content: '';
   position: absolute;
@@ -186,7 +180,6 @@ body {
   position: relative;
 }
 
-/* ── BIG PRICE ────────────────────────────────────── */
 .fw-price-wrap {
   display: flex;
   align-items: flex-start;
@@ -224,7 +217,6 @@ body {
 .fw-cell.petrol .fw-price-unit { color: var(--green-bright); }
 .fw-cell.diesel .fw-price-unit { color: var(--amber-bright); }
 
-/* ── STATUS BADGE ─────────────────────────────────── */
 .fw-badge {
   display: inline-flex;
   align-items: center;
@@ -254,7 +246,6 @@ body {
   border: 1px solid rgba(239,68,68,.2);
 }
 
-/* ── STATION NAME ─────────────────────────────────── */
 .fw-station {
   margin-top: 6px;
   font-size: 10px;
@@ -271,7 +262,6 @@ body {
   font-weight: 500;
 }
 
-/* ── FOOTER ───────────────────────────────────────── */
 .fw-footer {
   display: flex;
   align-items: center;
@@ -309,7 +299,6 @@ body {
   letter-spacing: .2px;
 }
 
-/* ── SAVINGS BANNER ───────────────────────────────── */
 .fw-saving {
   padding: 7px 14px;
   background: rgba(34,197,94,.08);
@@ -334,7 +323,6 @@ body {
   font-size: 10px;
 }
 
-/* ── LOADING ──────────────────────────────────────── */
 .fw-loading {
   padding: 32px 20px;
   display: flex;
@@ -372,7 +360,6 @@ body {
   100% { background-position: -200% 0; }
 }
 
-/* ── ERROR ────────────────────────────────────────── */
 .fw-error {
   padding: 20px 14px;
   text-align: center;
@@ -384,7 +371,6 @@ body {
 <body>
 
 <div class="fw" id="fw">
-  <!-- Loading skeleton -->
   <div class="fw-header">
     <div class="fw-brand">
       <svg class="fw-brand-icon" viewBox="0 0 22 22" fill="none">
@@ -415,7 +401,18 @@ body {
 // ─── CONFIG ──────────────────────────────────────────────────────
 const DATA_URL  = 'https://deeside-fuel-prices.netlify.app/stations.json';
 const TOOL_URL  = 'https://deeside-fuel-prices.netlify.app/';
-const STALE_HOURS = 120; // 5 days
+const STALE_HOURS = 120;
+
+// ─── GA4 CLICK TRACKING ──────────────────────────────────────────
+function trackCtaClick(stationCount) {
+  if (typeof gtag !== 'undefined') {
+    gtag('event', 'widget_cta_click', {
+      event_category: 'fuel_widget',
+      event_label: 'compare_all_stations',
+      value: stationCount
+    });
+  }
+}
 
 // ─── HELPERS ─────────────────────────────────────────────────────
 function isFresh(station) {
@@ -492,7 +489,8 @@ function render(unl, dsl, total, UK_AVG_UNL, UK_AVG_DSL, lastUpdated) {
     ${savingHtml}
 
     <div class="fw-footer">
-      <a class="fw-cta" href="${TOOL_URL}" target="_blank" rel="noopener">
+      <a class="fw-cta" href="${TOOL_URL}" target="_blank" rel="noopener"
+         onclick="trackCtaClick(${total})">
         Compare all ${total} local stations
         <svg viewBox="0 0 12 12" fill="none">
           <path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.4"
@@ -503,7 +501,6 @@ function render(unl, dsl, total, UK_AVG_UNL, UK_AVG_DSL, lastUpdated) {
     </div>
   `;
 
-  // Animate numbers in with short delay
   requestAnimationFrame(() => {
     setTimeout(() => {
       document.getElementById('pnum')?.classList.add('loaded');
@@ -541,7 +538,6 @@ async function init() {
     const UK_AVG_UNL = data.nationalAvg.unleaded;
     const UK_AVG_DSL = data.nationalAvg.diesel;
 
-    // Filter to fresh stations only (updated within 5 days)
     const byUnl = stations.filter(s => s.unleaded && s.unleaded >= 115 && isFresh(s)).sort((a,b) => a.unleaded - b.unleaded);
     const byDsl = stations.filter(s => s.diesel && s.diesel >= 115 && isFresh(s)).sort((a,b) => a.diesel - b.diesel);
 
