@@ -539,7 +539,7 @@ async function init() {
     const UK_AVG_DSL = data.nationalAvg.diesel;
 
     // Exclude Costco from cheapest price display (members only — not open access)
-    const openStations = stations.filter(s => !s.name?.toUpperCase().includes('COSTCO') && s.distance <= 8);
+    const openStations = stations.filter(s => !s.name?.toUpperCase().includes('COSTCO') && s.distance <= 9);
     const byUnl = openStations.filter(s => s.unleaded && s.unleaded >= 115 && isFresh(s)).sort((a,b) => a.unleaded - b.unleaded);
     const byDsl = openStations.filter(s => s.diesel && s.diesel >= 115 && isFresh(s)).sort((a,b) => a.diesel - b.diesel);
 
