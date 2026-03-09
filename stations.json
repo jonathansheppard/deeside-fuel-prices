@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
     "unleaded": 138.2,
-    "diesel": 153.8
+    "diesel": 154.0
   },
-  "lastUpdated": "2026-03-09T12:30:23.824632+00:00",
+  "lastUpdated": "2026-03-09T13:00:13.346917+00:00",
   "stationCount": 77,
   "stations": [
     {
@@ -227,7 +227,7 @@
       "is_motorway": false,
       "unleaded": 135.9,
       "diesel": 148.9,
-      "updated": "2026-03-09T08:56:05.647Z",
+      "updated": "2026-03-09T12:56:10.726Z",
       "id": 2
     },
     {
@@ -311,7 +311,7 @@
       "is_motorway": false,
       "unleaded": 135.9,
       "diesel": 150.9,
-      "updated": "2026-03-09T08:56:03.892Z",
+      "updated": "2026-03-09T12:56:08.974Z",
       "id": 66
     },
     {
@@ -478,8 +478,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 137.9,
-      "diesel": 147.8,
-      "updated": "2026-03-06T09:34:07.713Z",
+      "diesel": 155.9,
+      "updated": "2026-03-09T12:36:55.666Z",
       "id": 60
     },
     {
@@ -661,7 +661,7 @@
       "is_motorway": false,
       "unleaded": 139.9,
       "diesel": 159.9,
-      "updated": "2026-03-07T10:26:12.355Z",
+      "updated": "2026-03-09T12:43:17.838Z",
       "id": 11
     },
     {
@@ -721,20 +721,6 @@
       "id": 31
     },
     {
-      "name": "Dobshill Service Station",
-      "brand": "DOBSHILL SERVICE STATION",
-      "address": "DOBSHILL SERVICE STATION, CHESTER ROAD, DOBSHILL, DEESIDE, CH5 3LZ, DEESIDE, CH5 3LZ",
-      "lat": 53.1636207,
-      "lng": -3.039481,
-      "distance": 3.1,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 139.9,
-      "diesel": 154.9,
-      "updated": "2026-03-06T14:05:39.529Z",
-      "id": 35
-    },
-    {
       "name": "Ellesmere Port Service Station",
       "brand": "ELLESMERE PORT SERVICE STATION",
       "address": "ELLESMERE PORT SERVICE STATION, JACKS WOOD AVENUE, ELLESMERE PORT, CH65 3AA, ELLESMERE PORT, CH65 3AA",
@@ -744,8 +730,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 139.9,
-      "diesel": 152.9,
-      "updated": "2026-03-06T14:04:35.223Z",
+      "diesel": 155.9,
+      "updated": "2026-03-09T12:44:44.325Z",
       "id": 40
     },
     {
@@ -786,8 +772,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 139.9,
-      "diesel": 159.9,
-      "updated": "2026-03-07T10:26:17.640Z",
+      "diesel": 164.9,
+      "updated": "2026-03-09T12:43:28.570Z",
       "id": 65
     },
     {
@@ -917,6 +903,20 @@
       "id": 13
     },
     {
+      "name": "Dobshill Service Station",
+      "brand": "DOBSHILL SERVICE STATION",
+      "address": "DOBSHILL SERVICE STATION, CHESTER ROAD, DOBSHILL, DEESIDE, CH5 3LZ, DEESIDE, CH5 3LZ",
+      "lat": 53.1636207,
+      "lng": -3.039481,
+      "distance": 3.1,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 142.9,
+      "diesel": 154.9,
+      "updated": "2026-03-06T14:05:39.529Z",
+      "id": 35
+    },
+    {
       "name": "SHELL HOOLE ROAD",
       "brand": "SHELL",
       "address": "HOOLE ROAD, CHESTER, CH2 3NH",
@@ -953,9 +953,9 @@
       "distance": 3.8,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 143.9,
-      "diesel": 158.9,
-      "updated": "2026-03-06T16:29:02.607Z",
+      "unleaded": 144.9,
+      "diesel": 163.9,
+      "updated": "2026-03-09T12:33:02.871Z",
       "id": 47
     },
     {
