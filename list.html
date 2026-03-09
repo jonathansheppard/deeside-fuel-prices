@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fuel Prices – Deeside, Flintshire &amp; Chester</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg:        #0a0f1a;
+    --surface:   #111827;
+    --border:    #1f2937;
+    --muted:     #4b5563;
+    --subtle:    #6b7280;
+    --text:      #f3f4f6;
+    --text-sec:  #9ca3af;
+    --green:     #10b981;
+    --green-bg:  #0f2318;
+    --green-b:   #065f46;
+    --amber:     #f59e0b;
+    --amber-bg:  #1c1507;
+    --red:       #ef4444;
+    --red-bg:    #1f0f0f;
+    --blue:      #3b82f6;
+    --blue-dim:  #93c5fd;
+    --blue-bg:   #0f172a;
+    --blue-b:    #1d4ed8;
+  }
+
+  html { background: var(--bg); }
+
+  body {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    max-width: 520px;
+    margin: 0 auto;
+    min-height: 100vh;
+    padding-bottom: 40px;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    background: #060c18;
+    border-bottom: 1px solid var(--border);
+    padding: 12px 16px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .header-title { font-size: 13px; font-weight: 700; }
+  .header-sub   { font-size: 11px; color: var(--subtle); margin-top: 1px; }
+
+  .view-toggle {
+    display: flex;
+    background: var(--border);
+    border-radius: 8px;
+    padding: 2px;
+    gap: 2px;
+    text-decoration: none;
+  }
+  .view-btn {
+    padding: 5px 11px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--subtle);
+    transition: background 0.15s, color 0.15s;
+    white-space: nowrap;
+  }
+  .view-btn.active {
+    background: var(--blue);
+    color: #fff;
+  }
+
+  .controls {
+    display: flex;
+    gap: 8px;
+  }
+  .fuel-toggle {
+    display: flex;
+    background: var(--border);
+    border-radius: 8px;
+    padding: 2px;
+    flex: 1;
+    gap: 2px;
+  }
+  .fuel-btn {
+    flex: 1;
+    padding: 6px 0;
+    border-radius: 6px;
+    border: none;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    background: transparent;
+    color: var(--subtle);
+    transition: background 0.15s, color 0.15s;
+    font-family: inherit;
+  }
+  .fuel-btn.active-u { background: var(--green);  color: #fff; }
+  .fuel-btn.active-d { background: var(--amber);  color: #fff; }
+
+  .sort-select {
+    background: var(--border);
+    border: none;
+    color: var(--text-sec);
+    border-radius: 8px;
+    padding: 6px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    font-family: inherit;
+    appearance: none;
+    padding-right: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' fill='none'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%236b7280' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+  }
+
+  /* ── CONTENT ── */
+  .content { padding: 14px 16px; }
+
+  /* Stats bar */
+  .stats-bar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 14px;
+  }
+  .stat-cell {
+    background: var(--surface);
+    padding: 10px 6px;
+    text-align: center;
+  }
+  .stat-label { font-size: 9px; color: var(--subtle); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 4px; }
+  .stat-value { font-size: 13px; font-weight: 700; }
+
+  /* Tank cards */
+  .tank-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+  .tank-card {
+    border-radius: 10px;
+    padding: 14px 14px;
+    border: 1px solid var(--border);
+  }
+  .tank-card.cheap  { background: var(--green-bg); border-color: var(--green); }
+  .tank-card.pricey { background: var(--red-bg);   border-color: var(--border); }
+  .tank-card.saving { grid-column: 1 / -1; background: var(--surface); display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; }
+  .tank-card.member { grid-column: 1 / -1; background: var(--blue-bg); border-color: var(--blue-b); display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; gap: 10px; }
+
+  .card-label { font-size: 9px; color: var(--subtle); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 5px; }
+  .card-price { font-size: 26px; font-weight: 800; line-height: 1; }
+  .card-ppl   { font-size: 11px; color: var(--text-sec); margin-top: 3px; }
+  .card-name  { font-size: 10px; color: var(--subtle); margin-top: 6px; line-height: 1.3; }
+
+  .saving-label { font-size: 13px; color: var(--text-sec); }
+  .saving-value { font-size: 20px; font-weight: 800; color: var(--green); flex-shrink: 0; }
+
+  .member-info { flex: 1; min-width: 0; }
+  .member-title { font-size: 12px; color: var(--blue-dim); font-weight: 600; }
+  .member-sub   { font-size: 11px; color: var(--muted); margin-top: 2px; }
+  .member-price { font-size: 20px; font-weight: 800; color: #60a5fa; flex-shrink: 0; }
+
+  /* Legend */
+  .legend {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 12px;
+    font-size: 11px;
+    color: var(--subtle);
+  }
+  .legend-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    display: inline-block; margin-right: 4px; flex-shrink: 0;
+  }
+  .legend-item { display: flex; align-items: center; }
+
+  /* Station rows */
+  .station-list { }
+  .station-row {
+    display: grid;
+    grid-template-columns: 26px 1fr auto;
+    gap: 0 11px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+    align-items: start;
+  }
+  .station-row:last-child { border-bottom: none; }
+
+  .rank-bubble {
+    width: 24px; height: 24px;
+    border-radius: 50%;
+    border: 2px solid;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 10px; font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .station-name {
+    font-size: 13px; font-weight: 600;
+    color: var(--text); line-height: 1.2;
+    display: flex; align-items: center; gap: 6px; flex-wrap: wrap;
+  }
+  .member-badge {
+    font-size: 9px;
+    background: var(--blue-b);
+    color: var(--blue-dim);
+    padding: 1px 5px;
+    border-radius: 4px;
+    font-weight: 600;
+    flex-shrink: 0;
+  }
+  .motorway-badge {
+    font-size: 9px;
+    background: #292524;
+    color: #a8a29e;
+    padding: 1px 5px;
+    border-radius: 4px;
+    font-weight: 600;
+    flex-shrink: 0;
+  }
+  .station-address { font-size: 11px; color: var(--muted); margin-top: 3px; line-height: 1.3; }
+  .station-meta    { font-size: 11px; color: var(--border); margin-top: 4px; display: flex; gap: 10px; }
+  .meta-dist { color: var(--muted); }
+  .meta-updated { }
+  .meta-updated.stale { color: var(--amber); }
+
+  .price-col { text-align: right; flex-shrink: 0; }
+  .price-main { font-size: 22px; font-weight: 800; line-height: 1; }
+  .price-unit { font-size: 10px; color: var(--subtle); margin-top: 1px; }
+  .price-diff { font-size: 11px; margin-top: 3px; }
+  .price-na   { font-size: 12px; color: var(--muted); padding-top: 4px; }
+
+  /* No data */
+  .no-data { text-align: center; padding: 40px 20px; color: var(--subtle); font-size: 14px; }
+
+  /* Footer */
+  .footer {
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    font-size: 11px;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+  .footer a { color: var(--subtle); }
+
+  /* Loading */
+  .loading { text-align: center; padding: 60px 20px; color: var(--subtle); font-size: 13px; }
+
+  /* Stale warning */
+  .stale-warning {
+    background: #1c1507;
+    border: 1px solid #78350f;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 12px;
+    color: var(--amber);
+    margin-bottom: 14px;
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-top">
+    <div>
+      <div class="header-title">Fuel Prices</div>
+      <div class="header-sub">Within 10 miles of Queensferry</div>
+    </div>
+    <div class="view-toggle" style="display:flex;">
+      <a href="index.html" class="view-btn">🗺 Map</a>
+      <span class="view-btn active">≡ List</span>
+    </div>
+  </div>
+  <div class="controls">
+    <div class="fuel-toggle">
+      <button class="fuel-btn active-u" id="btn-unleaded" onclick="setFuel('unleaded')">⛽ Unleaded</button>
+      <button class="fuel-btn" id="btn-diesel" onclick="setFuel('diesel')">🛢 Diesel</button>
+    </div>
+    <select class="sort-select" id="sort-select" onchange="setSort(this.value)">
+      <option value="price">Price ↑</option>
+      <option value="distance">Distance ↑</option>
+    </select>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="content" id="content">
+  <div class="loading">Loading prices…</div>
+</div>
+
+<script>
+const RADIUS = 10;
+const TANK   = 55;
+
+let allStations = [];
+let nationalAvg = { unleaded: 138.4, diesel: 154.7 };
+let lastUpdated = null;
+let currentFuel = 'unleaded';
+let currentSort = 'price';
+
+// ── Fetch data ──────────────────────────────────────────────
+fetch('stations.json')
+  .then(r => r.json())
+  .then(data => {
+    nationalAvg = data.nationalAvg;
+    lastUpdated = data.lastUpdated;
+    allStations = data.stations;
+    render();
+  })
+  .catch(() => {
+    document.getElementById('content').innerHTML =
+      '<div class="no-data">Could not load price data. Please try again.</div>';
+  });
+
+// ── State setters ────────────────────────────────────────────
+function setFuel(f) {
+  currentFuel = f;
+  document.getElementById('btn-unleaded').className =
+    'fuel-btn' + (f === 'unleaded' ? ' active-u' : '');
+  document.getElementById('btn-diesel').className =
+    'fuel-btn' + (f === 'diesel' ? ' active-d' : '');
+  render();
+}
+
+function setSort(s) {
+  currentSort = s;
+  render();
+}
+
+// ── Helpers ───────────────────────────────────────────────────
+function getPrice(s) {
+  return currentFuel === 'unleaded' ? s.unleaded : s.diesel;
+}
+
+function priceColor(price) {
+  const avg = currentFuel === 'unleaded' ? nationalAvg.unleaded : nationalAvg.diesel;
+  const diff = price - avg;
+  if (diff < -2)  return '#10b981';
+  if (diff <= 2)  return '#f59e0b';
+  return '#ef4444';
+}
+
+function fmtUpdated(iso) {
+  if (!iso) return { text: 'Not reporting', stale: true };
+  const d    = new Date(iso);
+  const now  = new Date();
+  const diff = now - d;
+  const days = Math.floor(diff / 86400000);
+  if (days === 0) return { text: 'Today', stale: false };
+  if (days === 1) return { text: 'Yesterday', stale: true };
+  if (days < 7)   return { text: `${days} days ago`, stale: true };
+  const dd = d.getDate();
+  const mo = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][d.getMonth()];
+  return { text: `${dd} ${mo}`, stale: true };
+}
+
+function isCostco(s) {
+  return s.brand === 'COSTCO WHOLESALE';
+}
+
+function toGBP(pence) {
+  return '£' + ((pence / 100) * TANK).toFixed(2);
+}
+
+// ── Filter & sort ─────────────────────────────────────────────
+function getStations() {
+  return allStations
+    .filter(s => s.distance <= RADIUS)
+    .sort((a, b) => {
+      if (currentSort === 'distance') return a.distance - b.distance;
+      const pa = getPrice(a) ?? 9999;
+      const pb = getPrice(b) ?? 9999;
+      return pa - pb;
+    });
+}
+
+// ── Render ────────────────────────────────────────────────────
+function render() {
+  const stations = getStations();
+  const avg      = currentFuel === 'unleaded' ? nationalAvg.unleaded : nationalAvg.diesel;
+
+  // Split for calculator
+  const withPrice    = stations.filter(s => getPrice(s) > 0);
+  const openAccess   = withPrice.filter(s => !isCostco(s) && !s.is_motorway);
+  const costco       = withPrice.filter(s => isCostco(s));
+  const cheapestOpen = openAccess[0];
+  const priciest     = [...openAccess].sort((a,b) => (getPrice(b) ?? 0) - (getPrice(a) ?? 0))[0];
+  const costcoStn    = costco[0];
+
+  const html = [];
+
+  // ── Stale warning (if last update > 3h ago)
+  if (lastUpdated) {
+    const age = (new Date() - new Date(lastUpdated)) / 3600000;
+    if (age > 3) {
+      html.push(`<div class="stale-warning" style="display:block">
+        ⚠ Prices last updated ${Math.floor(age)} hours ago — may not reflect latest pump changes
+      </div>`);
+    }
+  }
+
+  // ── Stats bar
+  const cheapestP = cheapestOpen ? getPrice(cheapestOpen) : null;
+  const highestP  = priciest     ? getPrice(priciest)     : null;
+  html.push(`<div class="stats-bar">
+    <div class="stat-cell">
+      <div class="stat-label">UK Average</div>
+      <div class="stat-value" style="color:var(--text-sec)">${avg}p</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-label">Local Cheapest</div>
+      <div class="stat-value" style="color:var(--green)">${cheapestP ? cheapestP + 'p' : '—'}</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-label">Local Highest</div>
+      <div class="stat-value" style="color:var(--red)">${highestP ? highestP + 'p' : '—'}</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-label">In Range</div>
+      <div class="stat-value" style="color:#60a5fa">${withPrice.length} stations</div>
+    </div>
+  </div>`);
+
+  // ── Tank calculator
+  if (cheapestOpen && priciest) {
+    const cheapCost = toGBP(getPrice(cheapestOpen));
+    const expCost   = toGBP(getPrice(priciest));
+    const saving    = (((getPrice(priciest) - getPrice(cheapestOpen)) / 100) * TANK).toFixed(2);
+    html.push(`<div class="tank-grid">`);
+
+    html.push(`<div class="tank-card cheap">
+      <div class="card-label">Cheapest 55L tank</div>
+      <div class="card-price" style="color:var(--green)">${cheapCost}</div>
+      <div class="card-ppl">${getPrice(cheapestOpen)}p/litre</div>
+      <div class="card-name">${titleCase(cheapestOpen.name)}</div>
+    </div>`);
+
+    html.push(`<div class="tank-card pricey">
+      <div class="card-label">Most expensive</div>
+      <div class="card-price" style="color:var(--red)">${expCost}</div>
+      <div class="card-ppl">${getPrice(priciest)}p/litre</div>
+      <div class="card-name">${titleCase(priciest.name)}</div>
+    </div>`);
+
+    html.push(`<div class="tank-card saving">
+      <span class="saving-label">Choosing the cheapest saves you</span>
+      <span class="saving-value">£${saving}</span>
+    </div>`);
+
+    // Costco bonus row
+    if (costcoStn && getPrice(costcoStn) && getPrice(costcoStn) < getPrice(cheapestOpen)) {
+      const memberCost   = toGBP(getPrice(costcoStn));
+      const memberSaving = (((getPrice(cheapestOpen) - getPrice(costcoStn)) / 100) * TANK).toFixed(2);
+      html.push(`<div class="tank-card member">
+        <div class="member-info">
+          <div class="member-title">🔒 Costco members</div>
+          <div class="member-sub">${getPrice(costcoStn)}p/litre · saves a further £${memberSaving} vs open access</div>
+        </div>
+        <div class="member-price">${memberCost}</div>
+      </div>`);
+    }
+
+    html.push(`</div>`); // end tank-grid
+  }
+
+  // ── Legend
+  html.push(`<div class="legend">
+    <div class="legend-item"><span class="legend-dot" style="background:var(--green)"></span>Below UK avg</div>
+    <div class="legend-item"><span class="legend-dot" style="background:var(--amber)"></span>Near avg</div>
+    <div class="legend-item"><span class="legend-dot" style="background:var(--red)"></span>Above avg</div>
+  </div>`);
+
+  // ── Station list
+  html.push(`<div class="station-list">`);
+
+  let rank = 0;
+  stations.forEach(s => {
+    const price = getPrice(s);
+    const hasPrice = price !== null && price !== undefined && price > 0;
+    const color = hasPrice ? priceColor(price) : 'var(--muted)';
+    const diff  = hasPrice ? (price - avg).toFixed(1) : null;
+    const upd   = fmtUpdated(s.updated);
+    const isMember = isCostco(s);
+    const isMway   = s.is_motorway;
+
+    if (hasPrice && !isMway) rank++;
+
+    html.push(`<div class="station-row">
+      <div class="rank-bubble" style="color:${color};border-color:${color};background:${color}18">
+        ${hasPrice && !isMway ? rank : '–'}
+      </div>
+      <div>
+        <div class="station-name">
+          ${titleCase(s.name)}
+          ${isMember ? '<span class="member-badge">Members</span>' : ''}
+          ${isMway   ? '<span class="motorway-badge">Motorway</span>' : ''}
+        </div>
+        <div class="station-address">${titleCase(s.address)}</div>
+        <div class="station-meta">
+          <span class="meta-dist">📍 ${s.distance} mi</span>
+          <span class="meta-updated ${upd.stale ? 'stale' : ''}">${upd.stale && upd.text !== 'Not reporting' ? '⚠ ' : ''}${upd.text}</span>
+        </div>
+      </div>
+      <div class="price-col">
+        ${hasPrice
+          ? `<div class="price-main" style="color:${color}">${price}</div>
+             <div class="price-unit">p/litre</div>
+             ${diff !== null ? `<div class="price-diff" style="color:${parseFloat(diff) < 0 ? 'var(--green)' : 'var(--red)'}">${parseFloat(diff) > 0 ? '+' : ''}${diff}p</div>` : ''}`
+          : `<div class="price-na">No data</div>`
+        }
+      </div>
+    </div>`);
+  });
+
+  html.push(`</div>`); // end station-list
+
+  // ── Footer
+  const luDate = lastUpdated ? new Date(lastUpdated) : null;
+  const luStr  = luDate
+    ? luDate.toLocaleString('en-GB', { day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' })
+    : 'Unknown';
+
+  html.push(`<div class="footer">
+    <div>Data from the <a href="https://www.gov.uk/guidance/access-fuel-price-data" target="_blank">GOV.UK Fuel Finder Scheme</a> · Prices via DESNZ</div>
+    <div>Every station required to report within 30 minutes of pump changes</div>
+    <div>Distances from Queensferry roundabout · Last updated: ${luStr}</div>
+    <div style="margin-top:4px">Built in 🏴󠁧󠁢󠁷󠁬󠁳󠁿 by <a href="https://deeside.com" target="_blank">Deeside.com</a></div>
+  </div>`);
+
+  document.getElementById('content').innerHTML = html.join('');
+}
+
+// ── Utility ───────────────────────────────────────────────────
+function titleCase(str) {
+  if (!str) return '';
+  // All-caps strings get title-cased; mixed case left alone
+  if (str === str.toUpperCase()) {
+    return str.toLowerCase().replace(/\b\w/g, c => c.toUpperCase());
+  }
+  return str;
+}
+</script>
+</body>
+</html>
