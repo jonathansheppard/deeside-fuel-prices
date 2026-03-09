@@ -163,6 +163,36 @@
     font-weight: 700;
   }
 
+  .view-toggle {
+    display: flex;
+    background: var(--bg);
+    border-radius: 8px;
+    padding: 3px;
+    border: 1px solid var(--border);
+    text-decoration: none;
+  }
+
+  .view-toggle-btn {
+    font-family: 'DM Sans', sans-serif;
+    padding: 7px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--text-muted);
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+
+  .view-toggle-btn.active {
+    background: var(--surface-2);
+    color: var(--text);
+  }
+
+  .view-toggle-btn:hover:not(.active) {
+    color: var(--accent);
+  }
+
   .sort-select {
     font-family: 'DM Sans', sans-serif;
     padding: 8px 14px;
@@ -481,7 +511,6 @@
     text-decoration: none;
   }
 
-  /* ── AFFILIATE SIDEBAR (collapsible) ── */
   .station-list-divider {
     padding: 8px 16px;
     font-size: 9px;
@@ -601,62 +630,33 @@
     opacity: 0.6;
   }
 
-  /* ── STALE DATA TIERS ── */
-  .station-card.stale {
-    border-left: 3px solid #E8A838;
-  }
-  .station-card.no-data {
-    border-left: 3px solid #E8A838;
-  }
+  .station-card.stale { border-left: 3px solid #E8A838; }
+  .station-card.no-data { border-left: 3px solid #E8A838; }
   .timestamp-fresh { color: var(--green); font-size: 10px; }
   .timestamp-aging { color: #F59E0B; font-size: 10px; font-weight: 600; }
   .timestamp-stale { color: #EF4444; font-size: 10px; }
 
   @media (max-width: 480px) {
-    .stats-bar {
-      grid-template-columns: repeat(2, 1fr);
-    }
+    .stats-bar { grid-template-columns: repeat(2, 1fr); }
+    .header-controls { gap: 6px; }
+    .view-toggle-btn { padding: 7px 10px; font-size: 12px; }
   }
 
-  .map-popup {
-    font-family: 'DM Sans', sans-serif;
-  }
-  .map-popup .popup-brand {
-    font-weight: 700;
-    font-size: 14px;
-    margin-bottom: 2px;
-  }
-  .map-popup .popup-address {
-    font-size: 12px;
-    color: #666;
-    margin-bottom: 6px;
-  }
-  .map-popup .popup-price {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 18px;
-    font-weight: 700;
-  }
-  .map-popup .popup-label {
-    font-size: 11px;
-    color: #888;
-  }
+  .map-popup { font-family: 'DM Sans', sans-serif; }
+  .map-popup .popup-brand { font-weight: 700; font-size: 14px; margin-bottom: 2px; }
+  .map-popup .popup-address { font-size: 12px; color: #666; margin-bottom: 6px; }
+  .map-popup .popup-price { font-family: 'JetBrains Mono', monospace; font-size: 18px; font-weight: 700; }
+  .map-popup .popup-label { font-size: 11px; color: #888; }
 
   .leaflet-popup-content-wrapper {
     border-radius: 10px !important;
     box-shadow: 0 8px 32px rgba(0,0,0,0.3) !important;
   }
-
-  .leaflet-popup-content {
-    margin: 10px 14px !important;
-  }
+  .leaflet-popup-content { margin: 10px 14px !important; }
 
   @media (max-width: 900px) {
-    .leaflet-popup-content-wrapper {
-      min-width: 200px !important;
-    }
-    .map-popup .popup-price {
-      font-size: 22px;
-    }
+    .leaflet-popup-content-wrapper { min-width: 200px !important; }
+    .map-popup .popup-price { font-size: 22px; }
   }
 
   .api-banner {
@@ -669,19 +669,8 @@
     align-items: center;
     gap: 10px;
   }
-
-  .api-banner svg {
-    width: 16px;
-    height: 16px;
-    color: var(--accent);
-    flex-shrink: 0;
-  }
-
-  .api-banner a {
-    color: var(--accent);
-    text-decoration: none;
-    font-weight: 600;
-  }
+  .api-banner svg { width: 16px; height: 16px; color: var(--accent); flex-shrink: 0; }
+  .api-banner a { color: var(--accent); text-decoration: none; font-weight: 600; }
 </style>
 </head>
 <body>
@@ -695,6 +684,7 @@
     <a href="https://www.deeside.com/advertise-on-the-fuel-price-map" class="ad-btn" target="_blank">find out more ›</a>
   </div>
 </header>
+
 <div class="sub-header">
   <div class="sub-header-left">
     <h2 class="page-title">Fuel Prices</h2>
@@ -704,6 +694,10 @@
     <div class="fuel-toggle" id="fuelToggle">
       <button class="active" data-fuel="unleaded">Unleaded</button>
       <button data-fuel="diesel">Diesel</button>
+    </div>
+    <div class="view-toggle">
+      <span class="view-toggle-btn active">🗺 Map</span>
+      <a href="list.html" class="view-toggle-btn">≡ List</a>
     </div>
     <select class="sort-select" id="sortSelect">
       <option value="price-asc">Price: Low → High</option>
@@ -735,10 +729,8 @@
       <span class="key-item"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#3a3a3a;border:2px solid #E8A838;margin-right:6px;vertical-align:middle"></span> Price unavailable</span>
     </div>
     <div class="sidebar-scroll">
-    <div class="station-list" id="stationList"></div>
-
+      <div class="station-list" id="stationList"></div>
     </div>
-
     <div class="footer-note">
       *Distances measured from Queensferry roundabout<br>
       Data from GOV.UK Fuel Finder Scheme &middot; Prices via DESNZ<br>
@@ -749,39 +741,16 @@
 </div>
 
 <script>
-// ── COLOUR GRADING SYSTEM ──
-// This is NOT part of the GOV.UK Fuel Finder API.
-// The API returns raw data only: prices, forecourt details, coordinates, timestamps.
-// The colour grading is our editorial layer applied on top.
-//
-// MODE: 'relative' (default) or 'fixed'
-//
-// RELATIVE: Splits the local price range into thirds:
-//   - Green  = bottom third (cheapest locally)
-//   - Amber  = middle third
-//   - Red    = top third (most expensive locally)
-//   Thresholds shift dynamically as data changes.
-//
-// FIXED: Uses hardcoded penny-per-litre breakpoints:
-//   - Green  = under fixedThresholds.low (e.g. 130p)
-//   - Amber  = between low and high
-//   - Red    = above fixedThresholds.high (e.g. 140p)
-//   Good for benchmarking against a number meaningful to readers.
-//
-// To switch, change colourMode and/or fixedThresholds below:
-
-const colourMode = 'fixed'; // 'relative' | 'fixed'
-const PRICE_FLOOR = 115; // Below this is almost certainly a data entry error
+const colourMode = 'fixed';
+const PRICE_FLOOR = 115;
 let fixedThresholds = {
-  unleaded: { low: 131.7, high: 136.7 },  // national avg / avg+5p
-  diesel:   { low: 141.5, high: 146.5 }   // national avg / avg+5p
+  unleaded: { low: 131.7, high: 136.7 },
+  diesel:   { low: 141.5, high: 146.5 }
 };
 
-// National averages (w/c 23 Feb 2026, DESNZ weekly data)
 const NATIONAL_AVG_UPDATED = '3 Mar 2026';
 const NOTABLE_STATIONS = ['COSTCO', 'ASDA', 'TESCO', 'MORRISONS', 'SAINSBURYS'];
-// ── DATA LOADING ──
-// Fetches station data from stations.json (updated by n8n workflow)
+
 let nationalAvg = { unleaded: 131.7, diesel: 141.5 };
 let stations = [];
 let dataLastUpdated = null;
@@ -791,15 +760,17 @@ async function loadStationData() {
     const resp = await fetch('stations.json?t=' + Date.now());
     const data = await resp.json();
     nationalAvg = data.nationalAvg;
-    // Update colour thresholds based on live national averages
     fixedThresholds.unleaded = { low: nationalAvg.unleaded, high: nationalAvg.unleaded + 5 };
-    fixedThresholds.diesel = { low: nationalAvg.diesel, high: nationalAvg.diesel + 5 };
+    fixedThresholds.diesel   = { low: nationalAvg.diesel,   high: nationalAvg.diesel   + 5 };
     stations = data.stations;
     dataLastUpdated = data.lastUpdated;
     if (dataLastUpdated) {
       const d = new Date(dataLastUpdated);
       document.getElementById('dataTimestamp').textContent =
-        'Last updated: ' + d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+        'Last updated: ' + d.toLocaleDateString('en-GB', {
+          day: 'numeric', month: 'short', year: 'numeric',
+          hour: '2-digit', minute: '2-digit'
+        });
     }
     render();
   } catch (err) {
@@ -809,17 +780,12 @@ async function loadStationData() {
   }
 }
 
-// ── STATE ──
 let currentFuel = 'unleaded';
 let currentSort = 'price-asc';
 let activeStation = null;
 let markers = {};
 
-// ── MAP INIT ──
-const regionBounds = L.latLngBounds(
-  [52.95, -3.45],  // SW corner
-  [53.40, -2.70]   // NE corner
-);
+const regionBounds = L.latLngBounds([52.95, -3.45], [53.40, -2.70]);
 const map = L.map('map', {
   zoomControl: true,
   maxBounds: regionBounds.pad(0.1),
@@ -832,19 +798,12 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
   maxZoom: 19
 }).addTo(map);
 
-// ── MARKER ICONS ──
 function createNoDataMarkerIcon(isActive) {
   const size = isActive ? 18 : 14;
   return L.divIcon({
     className: 'custom-marker',
-    html: `<div style="
-      width:${size}px; height:${size}px; border-radius:50%;
-      background:#3a3a3a; border:2px solid #E8A838;
-      opacity:0.7;
-    "></div>`,
-    iconSize: [size, size],
-    iconAnchor: [size/2, size/2],
-    popupAnchor: [0, -size/2 - 4]
+    html: `<div style="width:${size}px;height:${size}px;border-radius:50%;background:#3a3a3a;border:2px solid #E8A838;opacity:0.7"></div>`,
+    iconSize: [size, size], iconAnchor: [size/2, size/2], popupAnchor: [0, -size/2 - 4]
   });
 }
 
@@ -852,49 +811,29 @@ function createStaleMarkerIcon(isActive) {
   const size = isActive ? 18 : 14;
   return L.divIcon({
     className: 'custom-marker',
-    html: `<div style="
-      width:${size}px; height:${size}px; border-radius:50%;
-      background:#3a3a3a; border:2px solid #E8A838;
-      opacity:0.7;
-    "></div>`,
-    iconSize: [size, size],
-    iconAnchor: [size/2, size/2],
-    popupAnchor: [0, -size/2 - 4]
+    html: `<div style="width:${size}px;height:${size}px;border-radius:50%;background:#3a3a3a;border:2px solid #E8A838;opacity:0.7"></div>`,
+    iconSize: [size, size], iconAnchor: [size/2, size/2], popupAnchor: [0, -size/2 - 4]
   });
 }
 
 function createMarkerIcon(price, priceClass, isActive, isCheapest) {
   const colorMap = { 'price-low': '#34d399', 'price-mid': '#fbbf24', 'price-high': '#f87171' };
-  const baseColor = colorMap[priceClass] || '#8b8fa3';
+  const baseColor   = colorMap[priceClass] || '#8b8fa3';
   const borderColor = isCheapest ? '#34d399' : (isActive ? '#38bdf8' : baseColor);
-  const bgColor = isCheapest ? 'rgba(52,211,153,0.15)' : (isActive ? 'rgba(56,189,248,0.15)' : 'rgba(15,17,23,0.9)');
-  const size = isActive ? 52 : 44;
-  const fontSize = isActive ? 13 : 11;
-  const label = price.toFixed(1);
-  const textColor = isCheapest ? '#34d399' : '#e4e6ee';
-
+  const bgColor     = isCheapest ? 'rgba(52,211,153,0.15)' : (isActive ? 'rgba(56,189,248,0.15)' : 'rgba(15,17,23,0.9)');
+  const size        = isActive ? 52 : 44;
+  const fontSize    = isActive ? 13 : 11;
+  const textColor   = isCheapest ? '#34d399' : '#e4e6ee';
   return L.divIcon({
     className: 'custom-marker',
-    html: `<div style="
-      width:${size}px; height:${size}px; border-radius:50%;
-      background:${bgColor}; border:2.5px solid ${borderColor};
-      display:flex; align-items:center; justify-content:center;
-      font-family:'JetBrains Mono',monospace; font-size:${fontSize}px; font-weight:700;
-      color:${textColor};
-      box-shadow:0 4px 16px rgba(0,0,0,0.4);
-      backdrop-filter:blur(4px);
-      transition:all 0.2s;
-    ">${label}</div>`,
-    iconSize: [size, size],
-    iconAnchor: [size/2, size/2],
-    popupAnchor: [0, -size/2 - 4]
+    html: `<div style="width:${size}px;height:${size}px;border-radius:50%;background:${bgColor};border:2.5px solid ${borderColor};display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:${fontSize}px;font-weight:700;color:${textColor};box-shadow:0 4px 16px rgba(0,0,0,0.4);backdrop-filter:blur(4px);transition:all 0.2s">${price.toFixed(1)}</div>`,
+    iconSize: [size, size], iconAnchor: [size/2, size/2], popupAnchor: [0, -size/2 - 4]
   });
 }
 
-// ── RENDER ──
 function getPrice(station) {
   const p = currentFuel === 'unleaded' ? station.unleaded : station.diesel;
-  if (p && p < PRICE_FLOOR) return null; // filter data entry errors
+  if (p && p < PRICE_FLOOR) return null;
   return p;
 }
 
@@ -902,18 +841,10 @@ function getSortedStations() {
   const sorted = [...stations];
   const isUnavailable = (s) => !getPrice(s) || getPrice(s) <= 0 || getStaleState(s) === 'stale';
   switch (currentSort) {
-    case 'price-asc': sorted.sort((a, b) => {
-      if (isUnavailable(a) && !isUnavailable(b)) return 1;
-      if (!isUnavailable(a) && isUnavailable(b)) return -1;
-      return (getPrice(a)||999) - (getPrice(b)||999);
-    }); break;
-    case 'price-desc': sorted.sort((a, b) => {
-      if (isUnavailable(a) && !isUnavailable(b)) return 1;
-      if (!isUnavailable(a) && isUnavailable(b)) return -1;
-      return (getPrice(b)||0) - (getPrice(a)||0);
-    }); break;
-    case 'distance': sorted.sort((a, b) => a.distance - b.distance); break;
-    case 'name': sorted.sort((a, b) => a.name.localeCompare(b.name)); break;
+    case 'price-asc':  sorted.sort((a,b) => { if (isUnavailable(a) && !isUnavailable(b)) return 1; if (!isUnavailable(a) && isUnavailable(b)) return -1; return (getPrice(a)||999)-(getPrice(b)||999); }); break;
+    case 'price-desc': sorted.sort((a,b) => { if (isUnavailable(a) && !isUnavailable(b)) return 1; if (!isUnavailable(a) && isUnavailable(b)) return -1; return (getPrice(b)||0)-(getPrice(a)||0); }); break;
+    case 'distance':   sorted.sort((a,b) => a.distance - b.distance); break;
+    case 'name':       sorted.sort((a,b) => a.name.localeCompare(b.name)); break;
   }
   return sorted;
 }
@@ -923,22 +854,16 @@ function getStats() {
   const pool = nonStale.length > 0 ? nonStale : stations;
   const prices = pool.map(s => getPrice(s)).filter(p => p && p > 0);
   if (prices.length === 0) return { low: 0, avg: 0, high: 0, allStale: true };
-  return {
-    low: Math.min(...prices),
-    avg: prices.reduce((a, b) => a + b, 0) / prices.length,
-    high: Math.max(...prices),
-    allStale: nonStale.length === 0
-  };
+  return { low: Math.min(...prices), avg: prices.reduce((a,b) => a+b,0)/prices.length, high: Math.max(...prices), allStale: nonStale.length === 0 };
 }
 
 function getPriceClass(price, stats) {
   if (colourMode === 'fixed') {
-    const thresholds = fixedThresholds[currentFuel];
-    if (price <= thresholds.low) return 'price-low';
-    if (price <= thresholds.high) return 'price-mid';
+    const t = fixedThresholds[currentFuel];
+    if (price <= t.low) return 'price-low';
+    if (price <= t.high) return 'price-mid';
     return 'price-high';
   }
-  // Relative mode: split range into thirds
   const range = stats.high - stats.low;
   const threshold = range / 3;
   if (price <= stats.low + threshold) return 'price-low';
@@ -964,146 +889,101 @@ function getStaleState(station) {
   if (isNaN(d.getTime())) return 'stale';
   const hours = (Date.now() - d.getTime()) / 3600000;
   if (hours < 24) return 'fresh';
-  if (hours < 120) return 'aging'; // 24h–5 days: warning tier
-  return 'stale'; // 5 days+: unavailable
-}
-
-function getStaleHours(station) {
-  if (!station.updated) return 9999;
-  const d = new Date(station.updated);
-  if (isNaN(d.getTime())) return 9999;
-  return (Date.now() - d.getTime()) / 3600000;
+  if (hours < 120) return 'aging';
+  return 'stale';
 }
 
 function render() {
   if (!stations.length) return;
 
-  // Two-tier system: core stations in sidebar, extended on map only
-  const CORE_RADIUS = 10; // miles from Queensferry roundabout
-  const coreStations = stations.filter(s => s.distance <= CORE_RADIUS);
+  const CORE_RADIUS = 10;
   const extendedStations = stations.filter(s => s.distance > CORE_RADIUS);
-
   const sorted = getSortedStations().filter(s => s.distance <= CORE_RADIUS && (getPrice(s) > 0 || s.note));
   const stats = getStats();
   const nonStaleStations = stations.filter(s => getStaleState(s) !== 'stale' && getPrice(s) > 0);
   const cheapestPrice = nonStaleStations.length > 0 ? Math.min(...nonStaleStations.map(s => getPrice(s))) : stats.low;
-  const highestPrice = nonStaleStations.length > 0 ? Math.max(...nonStaleStations.map(s => getPrice(s))) : stats.high;
+  const highestPrice  = nonStaleStations.length > 0 ? Math.max(...nonStaleStations.map(s => getPrice(s))) : stats.high;
 
-  // Stats (exclude stale stations)
   const natl = nationalAvg[currentFuel];
   document.getElementById('statNatl').textContent = natl.toFixed(1) + 'p';
   if (stats.allStale) {
-    document.getElementById('statLow').textContent = '—';
-    document.getElementById('statHigh').textContent = '—';
-    document.getElementById('statSave').textContent = '—';
+    ['statLow','statHigh','statSave'].forEach(id => document.getElementById(id).textContent = '—');
   } else {
     document.getElementById('statLow').textContent = stats.low.toFixed(1) + 'p';
     document.getElementById('statHigh').textContent = stats.high.toFixed(1) + 'p';
-    const saving = ((stats.high - stats.low) / 100 * 50).toFixed(2);
-    document.getElementById('statSave').textContent = '\u00A3' + saving;
+    document.getElementById('statSave').textContent = '£' + ((stats.high - stats.low) / 100 * 50).toFixed(2);
   }
 
-  // Click handlers for stats
   document.getElementById('statLow').onclick = () => {
-    const cheapest = nonStaleStations.filter(s => getPrice(s) > 0).sort((a,b) => getPrice(a) - getPrice(b))[0];
+    const cheapest = nonStaleStations.filter(s => getPrice(s) > 0).sort((a,b) => getPrice(a)-getPrice(b))[0];
     if (cheapest) { activeStation = cheapest.id; map.flyTo([cheapest.lat, cheapest.lng], 14, {duration:0.5}); markers[cheapest.id]?.openPopup(); render(); }
   };
   document.getElementById('statHigh').onclick = () => {
-    const highest = nonStaleStations.filter(s => getPrice(s) > 0).sort((a,b) => getPrice(b) - getPrice(a))[0];
+    const highest = nonStaleStations.filter(s => getPrice(s) > 0).sort((a,b) => getPrice(b)-getPrice(a))[0];
     if (highest) { activeStation = highest.id; map.flyTo([highest.lat, highest.lng], 14, {duration:0.5}); markers[highest.id]?.openPopup(); render(); }
   };
 
-  // Clear markers
   Object.values(markers).forEach(m => map.removeLayer(m));
   markers = {};
 
-  // Add markers for ALL stations (core + extended) — skip if no price for current fuel
   stations.forEach(station => {
     const price = getPrice(station);
-    if ((!price || price <= 0) && !station.note) return; // Skip stations with no price (unless manually noted)
+    if ((!price || price <= 0) && !station.note) return;
 
-    const isNoData = !price || price <= 0;
-    const staleState = isNoData ? 'stale' : getStaleState(station);
-    const isCheapest = !isNoData && staleState !== 'stale' && price === cheapestPrice;
-    const isActive = activeStation === station.id;
-    const isExtended = station.distance > CORE_RADIUS;
-
+    const isNoData    = !price || price <= 0;
+    const staleState  = isNoData ? 'stale' : getStaleState(station);
+    const isCheapest  = !isNoData && staleState !== 'stale' && price === cheapestPrice;
+    const isActive    = activeStation === station.id;
+    const isExtended  = station.distance > CORE_RADIUS;
     const markerPriceClass = (isNoData || staleState === 'stale') ? 'price-mid' : getPriceClass(price, stats);
 
-    let markerIcon;
-    if (isNoData) {
-      markerIcon = createNoDataMarkerIcon(isActive);
-    } else if (staleState === 'stale') {
-      markerIcon = createStaleMarkerIcon(isActive);
-    } else {
-      markerIcon = createMarkerIcon(price, markerPriceClass, isActive, isCheapest);
-    }
-    const markerOpacity = (isNoData || staleState === 'stale') ? 1.0 : (isExtended ? 0.7 : 1.0);
+    const markerIcon = isNoData ? createNoDataMarkerIcon(isActive) :
+                       staleState === 'stale' ? createStaleMarkerIcon(isActive) :
+                       createMarkerIcon(price, markerPriceClass, isActive, isCheapest);
 
     const marker = L.marker([station.lat, station.lng], {
       icon: markerIcon,
-      opacity: markerOpacity
+      opacity: (isNoData || staleState === 'stale') ? 1.0 : (isExtended ? 0.7 : 1.0)
     }).addTo(map);
-
-    const cardNatl = nationalAvg[currentFuel];
 
     let popupHtml = '<div class="map-popup">';
     if (isNoData) {
-      popupHtml += `<div class="popup-brand">${station.name}</div>`;
-      popupHtml += `<div class="popup-address">${station.address}</div>`;
-      popupHtml += `<div style="font-size:12px;color:#E8A838;font-weight:600;margin:8px 0">Price unavailable</div>`;
-      popupHtml += `<div style="font-size:11px;color:#9CA3AF;line-height:1.5">This station has not submitted prices to the GOV.UK Fuel Finder scheme.</div>`;
-      popupHtml += `<div style="font-size:10px;color:#888;margin-top:6px">${station.distance} miles from Queensferry</div>`;
+      popupHtml += `<div class="popup-brand">${station.name}</div><div class="popup-address">${station.address}</div><div style="font-size:12px;color:#E8A838;font-weight:600;margin:8px 0">Price unavailable</div><div style="font-size:11px;color:#9CA3AF;line-height:1.5">This station has not submitted prices to the GOV.UK Fuel Finder scheme.</div><div style="font-size:10px;color:#888;margin-top:6px">${station.distance} miles from Queensferry</div>`;
     } else if (staleState === 'stale') {
       const updDate = station.updated ? new Date(station.updated) : null;
-      const updDateStr = updDate && !isNaN(updDate.getTime()) ? updDate.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }) : 'Unknown';
-      popupHtml += `<div class="popup-brand">${station.name}</div>`;
-      popupHtml += `<div class="popup-address">${station.address}</div>`;
-      popupHtml += `<div style="font-size:12px;color:#9CA3AF;font-weight:600;margin:8px 0">Price unavailable</div>`;
-      popupHtml += `<div style="font-size:11px;color:#9CA3AF;line-height:1.5">Last updated: ${updDateStr}. Check station directly.</div>`;
-      popupHtml += `<div style="font-size:10px;color:#888;margin-top:6px">${station.distance} miles from Queensferry</div>`;
+      const updDateStr = updDate && !isNaN(updDate.getTime()) ? updDate.toLocaleDateString('en-GB', {day:'numeric',month:'short',year:'numeric'}) : 'Unknown';
+      popupHtml += `<div class="popup-brand">${station.name}</div><div class="popup-address">${station.address}</div><div style="font-size:12px;color:#9CA3AF;font-weight:600;margin:8px 0">Price unavailable</div><div style="font-size:11px;color:#9CA3AF;line-height:1.5">Last updated: ${updDateStr}. Check station directly.</div><div style="font-size:10px;color:#888;margin-top:6px">${station.distance} miles from Queensferry</div>`;
     } else {
-      popupHtml += `<div class="popup-brand">${station.name}</div>`;
-      popupHtml += `<div class="popup-address">${station.address}</div>`;
-      if (station.brand.includes('COSTCO')) popupHtml += `<div style="font-size:10px;color:#60a5fa;margin:4px 0">\uD83D\uDD12 Costco membership required</div>`;
-      popupHtml += `<div class="popup-price" style="color:${isCheapest ? '#16a34a' : '#1e293b'}">${price.toFixed(1)}p</div>`;
-      popupHtml += `<div class="popup-label">${currentFuel === 'unleaded' ? 'Unleaded' : 'Diesel'} per litre</div>`;
-      const diff = price - cardNatl;
+      const diff = price - natl;
       const diffStr = diff < -0.5 ? `<span style="color:#16a34a">${diff.toFixed(1)}p vs UK avg</span>` :
-                      diff > 0.5 ? `<span style="color:#dc2626">+${diff.toFixed(1)}p vs UK avg</span>` :
-                      `<span style="color:#888">\u2248 UK average</span>`;
-      popupHtml += `<div style="font-size:11px;margin-top:4px;font-family:'JetBrains Mono',monospace">${diffStr}</div>`;
-      popupHtml += `<div style="font-size:10px;color:#888;margin-top:4px">${station.distance} miles from Queensferry</div>`;
-      if (staleState === 'fresh') {
-        popupHtml += `<div style="font-size:10px;color:#34d399;margin-top:4px">\u2713 Updated ${timeAgo(station.updated)}</div>`;
-      } else if (staleState === 'aging') {
+                      diff >  0.5 ? `<span style="color:#dc2626">+${diff.toFixed(1)}p vs UK avg</span>` :
+                      `<span style="color:#888">≈ UK average</span>`;
+      popupHtml += `<div class="popup-brand">${station.name}</div><div class="popup-address">${station.address}</div>`;
+      if (station.brand.includes('COSTCO')) popupHtml += `<div style="font-size:10px;color:#60a5fa;margin:4px 0">🔒 Costco membership required</div>`;
+      popupHtml += `<div class="popup-price" style="color:${isCheapest ? '#16a34a' : '#1e293b'}">${price.toFixed(1)}p</div><div class="popup-label">${currentFuel === 'unleaded' ? 'Unleaded' : 'Diesel'} per litre</div><div style="font-size:11px;margin-top:4px;font-family:'JetBrains Mono',monospace">${diffStr}</div><div style="font-size:10px;color:#888;margin-top:4px">${station.distance} miles from Queensferry</div>`;
+      if (staleState === 'fresh') popupHtml += `<div style="font-size:10px;color:#34d399;margin-top:4px">✓ Updated ${timeAgo(station.updated)}</div>`;
+      else if (staleState === 'aging') {
         const ageDays = Math.floor((Date.now() - new Date(station.updated).getTime()) / 86400000);
-        popupHtml += `<div style="font-size:10px;color:#F59E0B;margin-top:4px">\u26A0 Updated ${ageDays <= 1 ? 'yesterday' : ageDays + ' days ago'}</div>`;
+        popupHtml += `<div style="font-size:10px;color:#F59E0B;margin-top:4px">⚠ Updated ${ageDays <= 1 ? 'yesterday' : ageDays + ' days ago'}</div>`;
       }
     }
     popupHtml += '</div>';
-
     marker.bindPopup(popupHtml, { maxWidth: 260, minWidth: 180, closeButton: true });
-
-    marker.on('click', () => {
-      activeStation = station.id;
-    });
-
+    marker.on('click', () => { activeStation = station.id; });
     markers[station.id] = marker;
   });
 
-  // Station list — core stations in sidebar, extended note at bottom
   const listEl = document.getElementById('stationList');
 
   function buildCard(station) {
     const price = getPrice(station);
-    const isNoData = !price || price <= 0;
+    const isNoData   = !price || price <= 0;
     const staleState = isNoData ? 'stale' : getStaleState(station);
     const isCheapest = !isNoData && staleState !== 'stale' && staleState !== 'aging' && price === cheapestPrice;
     const isExpensive = !isNoData && staleState !== 'stale' && staleState !== 'aging' && price === highestPrice;
-    const isActive = activeStation === station.id;
+    const isActive   = activeStation === station.id;
     const priceClass = (isNoData || staleState === 'stale') ? '' : getPriceClass(price, stats);
-    const cardNatl = nationalAvg[currentFuel];
+    const cardNatl   = nationalAvg[currentFuel];
 
     let cardClass = 'station-card';
     if (isNoData) cardClass += ' stale no-data';
@@ -1113,76 +993,67 @@ function render() {
     if (isExpensive) cardClass += ' expensive';
     if (isActive) cardClass += ' active';
 
-    // Timestamp per tier
     let timestampHtml = '';
     if (isNoData) {
-      timestampHtml = '<div style="font-size:12px;color:#F59E0B">\u26A0 Not reporting prices</div>';
+      timestampHtml = '<div style="font-size:12px;color:#F59E0B">⚠ Not reporting prices</div>';
     } else if (station.updated) {
       const d = new Date(station.updated);
       if (!isNaN(d.getTime())) {
         const dateStr = d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
         const staleDays = Math.floor((Date.now() - d.getTime()) / 86400000);
-        if (staleState === 'fresh') {
-          timestampHtml = '<div class="timestamp-fresh">Price set ' + dateStr + '</div>';
-        } else if (staleState === 'aging') {
-          timestampHtml = '<div class="timestamp-aging">\u26A0 Updated ' + (staleDays <= 1 ? 'yesterday' : staleDays + ' days ago') + '</div>';
-        } else {
-          timestampHtml = '<div style="font-size:10px;color:#9CA3AF">Last updated: ' + dateStr + '</div>';
-        }
+        if (staleState === 'fresh') timestampHtml = '<div class="timestamp-fresh">Price set ' + dateStr + '</div>';
+        else if (staleState === 'aging') timestampHtml = '<div class="timestamp-aging">⚠ Updated ' + (staleDays <= 1 ? 'yesterday' : staleDays + ' days ago') + '</div>';
+        else timestampHtml = '<div style="font-size:10px;color:#9CA3AF">Last updated: ' + dateStr + '</div>';
       }
     }
 
     const priceColourClass = (isNoData || staleState === 'stale') ? '' : priceClass;
-    const priceStyle = (isNoData || staleState === 'stale') ? ' style="color:#9CA3AF"' : '';
-    const dotClass = (isNoData || staleState === 'stale') ? '' : priceClass.replace('price-', 'dot-');
+    const priceStyle       = (isNoData || staleState === 'stale') ? ' style="color:#9CA3AF"' : '';
+    const dotClass         = (isNoData || staleState === 'stale') ? '' : priceClass.replace('price-', 'dot-');
 
-    return `
-      <div class="${cardClass}" data-id="${station.id}">
-        <div class="station-info">
-          <div class="station-brand">
-            ${dotClass ? '<span class="brand-dot ' + dotClass + '"></span>' : '<span class="brand-dot" style="background:#3a3a3a;border:2px solid #E8A838"></span>'}
-            <span class="station-name">${station.name}</span>
-          </div>
-          <div class="station-address">${station.address}</div>
-          ${isCheapest ? '<span class="station-tag tag-cheapest">\u2605 Cheapest</span>' : ''}
-          ${isExpensive ? '<span class="station-tag tag-expensive">Most Expensive</span>' : ''}
-          ${station.brand.includes('COSTCO') ? '<span class="station-tag" style="background:rgba(96,165,250,0.12);color:#60a5fa;border:1px solid rgba(96,165,250,0.3);font-size:10px">\uD83D\uDD12 Members only</span>' : ''}
+    const diffHtml = (!isNoData && staleState !== 'stale') ? (() => {
+      const diff = price - nationalAvg[currentFuel];
+      if (diff < -0.5) return '<div class="price-diff below">' + diff.toFixed(1) + 'p vs UK avg</div>';
+      if (diff >  0.5) return '<div class="price-diff above">+' + diff.toFixed(1) + 'p vs UK avg</div>';
+      return '<div class="price-diff level">≈ UK average</div>';
+    })() : '';
+
+    return `<div class="${cardClass}" data-id="${station.id}">
+      <div class="station-info">
+        <div class="station-brand">
+          ${dotClass ? '<span class="brand-dot ' + dotClass + '"></span>' : '<span class="brand-dot" style="background:#3a3a3a;border:2px solid #E8A838"></span>'}
+          <span class="station-name">${station.name}</span>
         </div>
-        <div class="station-price">
-          ${isNoData ? '<div style="color:#E8A838;font-size:13px;font-weight:600">Not reporting</div><div style="font-size:10px;color:#9CA3AF;margin-top:2px">Last checked: today</div>' :
-            staleState === 'stale' ? '<div style="color:#E8A838;font-size:13px;font-weight:600">Price unavailable</div>' :
-            '<div class="price-value ' + priceColourClass + '"' + priceStyle + '>' + price.toFixed(1) + '<small style="font-size:12px">p</small></div>'}
-          ${(isNoData || staleState === 'stale') ? '' : '<div class="price-unit">per litre</div>'}
-          ${timestampHtml}
-          ${(!isNoData && staleState !== 'stale') ? (() => {
-            const diff = price - nationalAvg[currentFuel];
-            if (diff < -0.5) return '<div class="price-diff below">' + diff.toFixed(1) + 'p vs UK avg</div>';
-            if (diff > 0.5) return '<div class="price-diff above">+' + diff.toFixed(1) + 'p vs UK avg</div>';
-            return '<div class="price-diff level">\u2248 UK average</div>';
-          })() : ''}
-        </div>
+        <div class="station-address">${station.address}</div>
+        ${isCheapest  ? '<span class="station-tag tag-cheapest">★ Cheapest</span>' : ''}
+        ${isExpensive ? '<span class="station-tag tag-expensive">Most Expensive</span>' : ''}
+        ${station.brand.includes('COSTCO') ? '<span class="station-tag" style="background:rgba(96,165,250,0.12);color:#60a5fa;border:1px solid rgba(96,165,250,0.3);font-size:10px">🔒 Members only</span>' : ''}
       </div>
-    `;
+      <div class="station-price">
+        ${isNoData ? '<div style="color:#E8A838;font-size:13px;font-weight:600">Not reporting</div><div style="font-size:10px;color:#9CA3AF;margin-top:2px">Last checked: today</div>' :
+          staleState === 'stale' ? '<div style="color:#E8A838;font-size:13px;font-weight:600">Price unavailable</div>' :
+          '<div class="price-value ' + priceColourClass + '"' + priceStyle + '>' + price.toFixed(1) + '<small style="font-size:12px">p</small></div>'}
+        ${(isNoData || staleState === 'stale') ? '' : '<div class="price-unit">per litre</div>'}
+        ${timestampHtml}
+        ${diffHtml}
+      </div>
+    </div>`;
   }
 
-  let html = '';
-  // Rotating inline ads — 3 slots, each shows a different offer
   const inlineAds = [
-    { icon: '\uD83D\uDEE1\uFE0F', title: 'AA Breakdown Cover', desc: 'From \u00A34.50/month. Cover starts immediately.', cta: 'Get quote \u2192', href: '#', id: 'aff-breakdown' },
-    { icon: '\uD83D\uDE97', title: 'Compare car insurance', desc: 'Check GoCompare for cheaper cover in minutes.', cta: 'Compare \u2192', href: '#', id: 'aff-insurance' },
-    { icon: '\u26FD', title: 'Costco membership', desc: 'Members save 8p+/litre \u2014 cheapest fuel locally.', cta: 'Join \u2192', href: '#', id: 'aff-costco' },
-    { icon: '\uD83D\uDCB3', title: 'Business fuel cards', desc: 'Fixed weekly prices, no transaction fees. Free card.', cta: 'Apply \u2192', href: '#', id: 'aff-fuelcard' }
+    { icon: '🛡️', title: 'AA Breakdown Cover',    desc: 'From £4.50/month. Cover starts immediately.',    cta: 'Get quote →', href: '#', id: 'aff-breakdown' },
+    { icon: '🚗', title: 'Compare car insurance', desc: 'Check GoCompare for cheaper cover in minutes.',  cta: 'Compare →',   href: '#', id: 'aff-insurance' },
+    { icon: '⛽', title: 'Costco membership',      desc: 'Members save 8p+/litre — cheapest fuel locally.', cta: 'Join →',    href: '#', id: 'aff-costco'    },
+    { icon: '💳', title: 'Business fuel cards',    desc: 'Fixed weekly prices, no transaction fees.',       cta: 'Apply →',   href: '#', id: 'aff-fuelcard'  }
   ];
-  const adSlots = [4, 9, 14]; // after stations 5, 10, 15
+  const adSlots    = [4, 9, 14];
   const adBaseIndex = Math.floor(Date.now() / 60000) % inlineAds.length;
 
-  // Split core into fresh/aging vs stale — but render ALL in natural order
-  const allCore = sorted;
-
-  allCore.forEach((station, index) => {
+  let html = '';
+  sorted.forEach((station, index) => {
     html += buildCard(station);
     const slotIndex = adSlots.indexOf(index);
-    if (slotIndex !== -1 && allCore.length > index + 1) {
+    if (slotIndex !== -1 && sorted.length > index + 1) {
       const ad = inlineAds[(adBaseIndex + slotIndex) % inlineAds.length];
       html += `<div class="inline-ad">
         <span class="inline-ad-label">Sponsored</span>
@@ -1198,33 +1069,28 @@ function render() {
     }
   });
 
-  // Show expandable wider area stations
   if (extendedStations.length > 0) {
     const extSorted = extendedStations
       .filter(s => getPrice(s) > 0)
-      .sort((a, b) => {
-        if (currentSort === 'price-asc') return getPrice(a) - getPrice(b);
+      .sort((a,b) => {
+        if (currentSort === 'price-asc')  return getPrice(a) - getPrice(b);
         if (currentSort === 'price-desc') return getPrice(b) - getPrice(a);
-        if (currentSort === 'distance') return a.distance - b.distance;
+        if (currentSort === 'distance')   return a.distance - b.distance;
         return getPrice(a) - getPrice(b);
       });
-
     if (extSorted.length > 0) {
       html += `<button class="wider-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">
         <span>Wider area (${extSorted.length} station${extSorted.length === 1 ? '' : 's'})</span>
         <span class="arrow">▼</span>
       </button>
       <div class="wider-stations">
-        <div style="padding:0 8px 8px">
-          ${extSorted.map(buildCard).join('')}
-        </div>
+        <div style="padding:0 8px 8px">${extSorted.map(buildCard).join('')}</div>
       </div>`;
     }
   }
 
   listEl.innerHTML = html;
 
-  // Click handlers
   listEl.querySelectorAll('.station-card').forEach(card => {
     card.addEventListener('click', () => {
       const id = parseInt(card.dataset.id);
@@ -1237,7 +1103,6 @@ function render() {
   });
 }
 
-// ── EVENTS ──
 document.getElementById('fuelToggle').addEventListener('click', (e) => {
   if (e.target.tagName === 'BUTTON') {
     currentFuel = e.target.dataset.fuel;
@@ -1252,10 +1117,7 @@ document.getElementById('sortSelect').addEventListener('change', (e) => {
   render();
 });
 
-// ── INIT ──
 loadStationData();
-
-// Refresh data every 15 minutes
 setInterval(loadStationData, 15 * 60 * 1000);
 </script>
 </body>
