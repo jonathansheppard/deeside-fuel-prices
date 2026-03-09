@@ -563,26 +563,62 @@ function renderSummary() {
   }
 }
 
+function buildRow(s, avg, cheapestId, mostExpId) {
+  const p = getPrice(s);
+  const fresh = isFresh(s);
+  const isNoData = s.note || !p;
+  const unavail = isNoData || !fresh;
+  const upd = formatUpdated(s);
+  const costco = isCostco(s);
+  const isCheapest = !costco && s.id === cheapestId;
+  const isMostExp = !costco && s.id === mostExpId;
+  const mapUrl = `https://www.google.com/maps/search/${encodeURIComponent(s.name + ', ' + s.address)}`;
+  const priceClass = unavail ? 'none' : (costco ? 'costco' : getPriceClass(p, avg));
+  const delta = p ? (p - avg) : 0;
+  const deltaStr = !unavail && p ? (delta < 0 ? delta.toFixed(1) + 'p' : '+' + delta.toFixed(1) + 'p') : '';
+  const deltaClass = unavail ? 'none' : (costco ? 'costco' : getPriceClass(p, avg));
+  const rowClass = unavail ? 'unavailable' : (costco ? 'costco-row' : '');
+  return `<tr class="${rowClass}">
+    <td class="station-cell">
+      <a class="sname" href="${mapUrl}" target="_blank">${s.name}</a>
+      <div class="saddr">${s.address}</div>
+    </td>
+    <td class="brand-cell">${s.brand || '—'}${costco ? ' <span class="tag tag-members">Members</span>' : ''}${isCheapest ? ' <span class="tag tag-cheapest">\u2605 Cheapest</span>' : ''}${isMostExp ? ' <span class="tag" style="background:rgba(248,113,113,.12);color:var(--red);border:1px solid rgba(248,113,113,.2)">Most expensive</span>' : ''}</td>
+    <td class="price-cell ${priceClass} right">
+      ${unavail ? (s.note ? 'Not reporting' : 'Unavailable') : p.toFixed(1)}
+    </td>
+    <td class="price-cell ${deltaClass} right" style="font-size:12px">
+      ${unavail ? '' : deltaStr}
+    </td>
+    <td class="updated-cell ${upd.cls} right">${s.note ? '\u2014' : upd.text}</td>
+  </tr>`;
+}
+
 function renderTable() {
   const avg = nationalAvg[currentFuel];
-  const sorted = [...stations].sort((a, b) => {
-    const pa = getPrice(a), pb = getPrice(b);
-    const aUnavail = !pa || !isFresh(a);
-    const bUnavail = !pb || !isFresh(b);
-    if (aUnavail && !bUnavail) return 1;
-    if (!aUnavail && bUnavail) return -1;
-    return (pa || 999) - (pb || 999);
-  });
+  const CORE = 10;
 
-  const freshPrices = sorted.filter(s => getPrice(s) && isFresh(s) && !isCostco(s));
-  const cheapest = freshPrices.length ? freshPrices[0] : null;
-  const totalFresh = sorted.filter(s => getPrice(s) && isFresh(s)).length;
-  const totalUnavail = sorted.length - totalFresh;
+  const local = stations.filter(s => s.distance <= CORE);
+  const localFresh = local.filter(s => getPrice(s) && isFresh(s) && !isCostco(s))
+                          .sort((a, b) => getPrice(a) - getPrice(b));
 
-  document.getElementById('stationCount').textContent = 
-    `${sorted.length} stations (${totalFresh} reporting, ${totalUnavail} unavailable)`;
+  const cheapest10 = localFresh.slice(0, 10);
+  const expensive10 = [...localFresh].reverse().slice(0, 10).reverse();
 
-  let html = `<table class="price-table">
+  const cheapestIds = new Set(cheapest10.map(s => s.id));
+  const expensiveOnly = expensive10.filter(s => !cheapestIds.has(s.id));
+
+  const cheapestId = cheapest10.length ? cheapest10[0].id : null;
+  const mostExpId  = expensive10.length ? expensive10[expensive10.length - 1].id : null;
+
+  const costcoStation = local.find(s => isCostco(s) && getPrice(s) && isFresh(s));
+
+  const totalFresh = local.filter(s => getPrice(s) && isFresh(s)).length;
+  const totalUnavail = local.length - totalFresh;
+  document.getElementById('stationCount').textContent =
+    `${local.length} local stations (${totalFresh} reporting, ${totalUnavail} unavailable)`;
+
+  const thead = `<table class="price-table">
     <thead><tr>
       <th>Station</th>
       <th>Brand</th>
@@ -591,37 +627,22 @@ function renderTable() {
       <th class="right">Updated</th>
     </tr></thead><tbody>`;
 
-  sorted.forEach(s => {
-    const p = getPrice(s);
-    const fresh = isFresh(s);
-    const isNoData = s.note || !p;
-    const unavail = isNoData || !fresh;
-    const upd = formatUpdated(s);
-    const costco = isCostco(s);
-    const isCheapest = !costco && cheapest && s.id === cheapest.id;
-    const mapUrl = `https://www.google.com/maps/search/${encodeURIComponent(s.name + ', ' + s.address)}`;
+  const sectionHeader = (label, colour) =>
+    `<tr><td colspan="5" style="padding:10px 12px 6px;font-size:9px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:${colour};border-bottom:1px solid var(--border);background:rgba(255,255,255,.015)">${label}</td></tr>`;
 
-    const priceClass = unavail ? 'none' : (costco ? 'costco' : getPriceClass(p, avg));
-    const delta = p ? (p - avg) : 0;
-    const deltaStr = !unavail && p ? (delta < 0 ? delta.toFixed(1) + 'p' : '+' + delta.toFixed(1) + 'p') : '';
-    const deltaClass = unavail ? 'none' : (costco ? 'costco' : getPriceClass(p, avg));
-    const rowClass = unavail ? 'unavailable' : (costco ? 'costco-row' : '');
+  let html = thead;
+  html += sectionHeader('10 Cheapest nearby', '#34d399');
+  html += cheapest10.map(s => buildRow(s, avg, cheapestId, mostExpId)).join('');
 
-    html += `<tr class="${rowClass}">
-      <td class="station-cell">
-        <a class="sname" href="${mapUrl}" target="_blank">${s.name}</a>
-        <div class="saddr">${s.address}</div>
-      </td>
-      <td class="brand-cell">${s.brand || '—'}${costco ? ' <span class="tag tag-members">Members</span>' : ''}${isCheapest ? ' <span class="tag tag-cheapest">★ Cheapest</span>' : ''}</td>
-      <td class="price-cell ${priceClass} right">
-        ${unavail ? (s.note ? 'Not reporting' : 'Unavailable') : p.toFixed(1)}
-      </td>
-      <td class="price-cell ${deltaClass} right" style="font-size:12px">
-        ${unavail ? '' : deltaStr}
-      </td>
-      <td class="updated-cell ${upd.cls} right">${s.note ? '—' : upd.text}</td>
-    </tr>`;
-  });
+  if (expensiveOnly.length) {
+    html += sectionHeader('10 Most expensive nearby', '#f87171');
+    html += expensiveOnly.map(s => buildRow(s, avg, cheapestId, mostExpId)).join('');
+  }
+
+  if (costcoStation) {
+    html += sectionHeader('Members only', '#60a5fa');
+    html += buildRow(costcoStation, avg, cheapestId, mostExpId);
+  }
 
   html += '</tbody></table>';
 
