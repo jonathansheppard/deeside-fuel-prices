@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
-    "unleaded": 138.4,
-    "diesel": 154.4
+    "unleaded": 138.5,
+    "diesel": 154.5
   },
-  "lastUpdated": "2026-03-09T15:00:15.628428+00:00",
+  "lastUpdated": "2026-03-09T15:30:13.225768+00:00",
   "stationCount": 77,
   "stations": [
     {
@@ -72,8 +72,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 132.9,
-      "diesel": 146.9,
-      "updated": "2026-03-07T13:59:51.603Z",
+      "diesel": 148.9,
+      "updated": "2026-03-09T15:13:45.870Z",
       "id": 59
     },
     {
@@ -229,20 +229,6 @@
       "diesel": 150.9,
       "updated": "2026-03-09T11:56:39.943Z",
       "id": 14
-    },
-    {
-      "name": "BIRKENHEAD BIDSTON MOSS EXTRA - PETROL FILLING STATION",
-      "brand": "TESCO",
-      "address": "BIDSTON LINK ROAD, BIRKENHEAD, CH43 7AA",
-      "lat": 53.40799,
-      "lng": -3.07026,
-      "distance": 13.8,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 135.9,
-      "diesel": 145.9,
-      "updated": "2026-03-07T14:25:54.908Z",
-      "id": 43
     },
     {
       "name": "SAINSBURYS BIRKENHEAD",
@@ -425,6 +411,20 @@
       "diesel": 157.9,
       "updated": "2026-03-09T12:00:49.342Z",
       "id": 34
+    },
+    {
+      "name": "BIRKENHEAD BIDSTON MOSS EXTRA - PETROL FILLING STATION",
+      "brand": "TESCO",
+      "address": "BIDSTON LINK ROAD, BIRKENHEAD, CH43 7AA",
+      "lat": 53.40799,
+      "lng": -3.07026,
+      "distance": 13.8,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 137.9,
+      "diesel": 146.9,
+      "updated": "2026-03-09T15:07:40.401Z",
+      "id": 43
     },
     {
       "name": "Rhydymwyn Service Station",
