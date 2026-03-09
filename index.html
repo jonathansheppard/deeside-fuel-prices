@@ -850,8 +850,8 @@ function getSortedStations() {
 }
 
 function getStats() {
-  // Scoped to CORE_RADIUS — keeps stats bar consistent with list view
-  const core     = stations.filter(s => s.distance <= CORE_RADIUS && !s.is_motorway);
+  // Scoped to 10 miles — keeps stats bar consistent with list view
+  const core     = stations.filter(s => s.distance <= 10 && !s.is_motorway);
   const nonStale = core.filter(s => getStaleState(s) !== 'stale');
   const pool     = nonStale.length > 0 ? nonStale : core;
   const prices   = pool.map(s => getPrice(s)).filter(p => p && p > 0);
