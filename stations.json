@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
-    "unleaded": 138.7,
+    "unleaded": 138.8,
     "diesel": 155.3
   },
-  "lastUpdated": "2026-03-09T22:30:14.170443+00:00",
+  "lastUpdated": "2026-03-09T23:00:13.443194+00:00",
   "stationCount": 77,
   "stations": [
     {
@@ -91,34 +91,6 @@
       "id": 20
     },
     {
-      "name": "SAINSBURYS KINGS ROAD BEBINGTON",
-      "brand": "SAINSBURY'S",
-      "address": "152 KINGS ROAD, BIRKENHEAD, LIVERPOOL, CH63 8PZ",
-      "lat": 53.35656,
-      "lng": -3.02542,
-      "distance": 10.2,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 133.9,
-      "diesel": 145.9,
-      "updated": "2026-03-07T23:00:08.545Z",
-      "id": 63
-    },
-    {
-      "name": "SAINSBURYS PENSBY ROAD THINGWALL",
-      "brand": "SAINSBURY'S",
-      "address": "PENSBY ROAD, WIRRAL, CH61 7UB",
-      "lat": 53.35295,
-      "lng": -3.09298,
-      "distance": 10.3,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 134.9,
-      "diesel": 144.9,
-      "updated": "2026-03-07T22:58:15.412Z",
-      "id": 1
-    },
-    {
       "name": "RONTEC BEBINGTON",
       "brand": "BP",
       "address": "BROMBOROUGH ROAD, BEBINGTON, CH63 7RD",
@@ -131,6 +103,34 @@
       "diesel": 152.9,
       "updated": "2026-03-09T11:44:32.382Z",
       "id": 39
+    },
+    {
+      "name": "SAINSBURYS KINGS ROAD BEBINGTON",
+      "brand": "SAINSBURY'S",
+      "address": "152 KINGS ROAD, BIRKENHEAD, LIVERPOOL, CH63 8PZ",
+      "lat": 53.35656,
+      "lng": -3.02542,
+      "distance": 10.2,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 134.9,
+      "diesel": 149.9,
+      "updated": "2026-03-09T22:53:50.412Z",
+      "id": 63
+    },
+    {
+      "name": "SAINSBURYS PENSBY ROAD THINGWALL",
+      "brand": "SAINSBURY'S",
+      "address": "PENSBY ROAD, WIRRAL, CH61 7UB",
+      "lat": 53.35295,
+      "lng": -3.09298,
+      "distance": 10.3,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 135.9,
+      "diesel": 149.9,
+      "updated": "2026-03-09T22:50:22.060Z",
+      "id": 1
     },
     {
       "name": "MFG MORRISONS WEST KIRBY",
@@ -157,7 +157,7 @@
       "is_motorway": false,
       "unleaded": 135.9,
       "diesel": 148.9,
-      "updated": "2026-03-09T21:06:52.747Z",
+      "updated": "2026-03-09T22:49:54.764Z",
       "id": 8
     },
     {
