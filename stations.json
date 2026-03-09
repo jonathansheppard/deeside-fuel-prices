@@ -3,9 +3,23 @@
     "unleaded": 137.8,
     "diesel": 152.4
   },
-  "lastUpdated": "2026-03-09T08:30:21.409112+00:00",
+  "lastUpdated": "2026-03-09T09:00:17.280582+00:00",
   "stationCount": 77,
   "stations": [
+    {
+      "name": "Gordale Service Station",
+      "brand": "GORDALE SERVICE STATION",
+      "address": "GORDALE SERVICE STATION, CHESTER HIGH ROAD, BURTON, NESTON, CH64 8TF, NESTON, CH64 8TF",
+      "lat": 53.2741984,
+      "lng": -3.0014083,
+      "distance": 4.7,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 104.9,
+      "diesel": 169.9,
+      "updated": "2026-03-09T08:51:40.191Z",
+      "id": 37
+    },
     {
       "name": "SMITHY VIEW SERVICE STATION ACTON",
       "brand": "SMITHY VIEW SERVICE STATION ACTON",
@@ -61,20 +75,6 @@
       "diesel": 142.9,
       "updated": "2026-03-02T12:40:56.881Z",
       "id": 49
-    },
-    {
-      "name": "Gordale Service Station",
-      "brand": "GORDALE SERVICE STATION",
-      "address": "GORDALE SERVICE STATION, CHESTER HIGH ROAD, BURTON, NESTON, CH64 8TF, NESTON, CH64 8TF",
-      "lat": 53.2741984,
-      "lng": -3.0014083,
-      "distance": 4.7,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 132.9,
-      "diesel": 145.9,
-      "updated": "2026-03-03T09:25:21.780Z",
-      "id": 37
     },
     {
       "name": "RONTEC BEBINGTON",
@@ -241,7 +241,7 @@
       "is_motorway": false,
       "unleaded": 135.9,
       "diesel": 148.9,
-      "updated": "2026-03-09T04:56:13.966Z",
+      "updated": "2026-03-09T08:56:05.647Z",
       "id": 2
     },
     {
@@ -339,7 +339,7 @@
       "is_motorway": false,
       "unleaded": 135.9,
       "diesel": 150.9,
-      "updated": "2026-03-09T04:55:59.175Z",
+      "updated": "2026-03-09T08:56:03.892Z",
       "id": 66
     },
     {
