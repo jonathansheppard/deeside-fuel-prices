@@ -182,6 +182,15 @@
 
   .dist { color: var(--subtle); font-size: 11px; }
 
+  .costco-row {
+    padding: 10px 0 10px 12px;
+    border-bottom: 1px solid var(--border);
+    border-left: 3px solid var(--blue-b);
+    margin-left: 35px;
+  }
+  .costco-name { font-size: 12px; font-weight: 600; color: var(--blue-dim); display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+  .costco-sub  { font-size: 11px; color: var(--muted); margin-top: 3px; }
+
   .price-col { text-align: right; flex-shrink: 0; min-width: 70px; }
   .price-main { font-size: 22px; font-weight: 800; line-height: 1; }
   .price-unit { font-size: 10px; color: var(--subtle); margin-top: 1px; }
@@ -312,19 +321,22 @@ function fmtTs(s) {
   const d = new Date(s.updated);
   if (isNaN(d.getTime())) return { cls: 'ts-dead', text: '⚠ Unknown date' };
   const hours = (Date.now() - d.getTime()) / 3600000;
-  const days  = Math.floor(hours / 24);
+  const hh = d.getHours().toString().padStart(2,'0');
+  const mm = d.getMinutes().toString().padStart(2,'0');
+  const days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][d.getDay()];
+  const dd   = d.getDate();
+  const mo   = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][d.getMonth()];
   if (hours >= STALE_H) {
-    const dd = d.getDate();
-    const mo = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][d.getMonth()];
     return { cls: 'ts-dead', text: `⚠ Last reported ${dd} ${mo}` };
   }
-  if (days === 0) {
-    const hh = d.getHours().toString().padStart(2,'0');
-    const mm = d.getMinutes().toString().padStart(2,'0');
-    return { cls: 'ts-fresh', text: `Updated today ${hh}:${mm}` };
-  }
-  if (days === 1) return { cls: 'ts-aging', text: '⚠ Updated yesterday' };
-  return { cls: 'ts-aging', text: `⚠ Updated ${days} days ago` };
+  // today — same calendar date
+  const now = new Date();
+  const isToday = d.getDate() === now.getDate() && d.getMonth() === now.getMonth() && d.getFullYear() === now.getFullYear();
+  if (isToday) return { cls: 'ts-fresh', text: `Updated today ${hh}:${mm}` };
+  // yesterday — < 48h and not today
+  if (hours < 48) return { cls: 'ts-aging', text: `Updated ${days} ${dd} ${mo}, ${hh}:${mm}` };
+  // 48h+ but within stale threshold — red
+  return { cls: 'ts-dead', text: `⚠ Updated ${days} ${dd} ${mo}, ${hh}:${mm}` };
 }
 function tc(str) {
   if (!str) return '';
@@ -365,7 +377,10 @@ function renderChart() {
     return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
   });
   const cheapest = valid.map(r => r[cheapestKey]);
-  const avgLine  = valid.map(() => avg); // flat live reference
+
+  // Avg line: only last 20% of points — signals "current benchmark, not trend"
+  const cutoff = Math.max(Math.floor(valid.length * 0.8), valid.length - 1);
+  const avgLine = valid.map((_, i) => i >= cutoff ? avg : null);
 
   // Delta badge
   const latest = cheapest[cheapest.length - 1];
@@ -389,8 +404,27 @@ function renderChart() {
   const yMin = Math.floor(Math.min(...allVals) / 5) * 5 - 2;
   const yMax = Math.ceil(Math.max(...allVals) / 5) * 5 + 2;
 
+  // Inline label plugin — draws "UK avg today 138.6p" at right end of avg line
+  const inlineLabelPlugin = {
+    id: 'inlineAvgLabel',
+    afterDatasetsDraw(chart) {
+      const meta = chart.getDatasetMeta(1);
+      const lastPoint = meta.data[meta.data.length - 1];
+      if (!lastPoint) return;
+      const c = chart.ctx;
+      c.save();
+      c.fillStyle = '#f59e0b';
+      c.font = '600 10px DM Sans, system-ui, sans-serif';
+      c.textAlign = 'right';
+      c.textBaseline = 'bottom';
+      c.fillText(`UK avg today ${avg}p`, chart.chartArea.right, lastPoint.y - 4);
+      c.restore();
+    }
+  };
+
   trendChart = new Chart(ctx, {
     type: 'line',
+    plugins: [inlineLabelPlugin],
     data: {
       labels,
       datasets: [
@@ -431,6 +465,7 @@ function renderChart() {
             padding: 12,
             usePointStyle: true,
             pointStyleWidth: 20,
+            filter: item => item.datasetIndex !== 1, // hide avg from legend
           },
         },
         tooltip: {
@@ -517,7 +552,7 @@ function render() {
         <div class="card-name">${tc(priciest.name)}</div>
       </div>
       <div class="tank-card saving">
-        <span class="saving-label">Choosing the cheapest saves you</span>
+        <span class="saving-label">Choosing the cheapest saves you <span style="color:var(--muted);font-size:11px;font-weight:400">on a full 55L tank</span></span>
         <span class="saving-value">£${saving}</span>
       </div>
       ${costcoStn && getPrice(costcoStn) < cp ? `
@@ -528,7 +563,6 @@ function render() {
         </div>
         <div class="member-price">${toGBP(getPrice(costcoStn))}</div>
       </div>` : ''}
-      <div class="tank-note">Based on a 55-litre tank — the UK average car capacity</div>
     </div>`);
   }
 
@@ -541,7 +575,7 @@ function render() {
     <div class="trend-chart-wrap" id="trend-wrap">
       <div class="trend-empty" style="color:var(--muted);font-size:12px;height:100%;display:flex;align-items:center;justify-content:center">Loading history…</div>
     </div>
-    <div class="trend-foot">UK average is today's live figure from GOV.UK</div>
+    <div class="trend-foot">Data from GOV.UK Fuel Finder · updated daily</div>
   </div>`);
 
   // Legend
@@ -551,9 +585,27 @@ function render() {
     <div class="legend-item"><span class="legend-dot" style="background:var(--red)"></span>Above avg</div>
   </div>`);
 
-  // Station rows
+  // Station rows — open access only (Costco rendered separately below rank #1)
   let rank = 0;
-  const rows = stations.map(s => {
+  const openRows = [];
+  const costcoRowHtml = costcoStn ? (() => {
+    const cp2      = getPrice(costcoStn);
+    const openTop  = openAccess[0] ? getPrice(openAccess[0]) : null;
+    const saving2  = (openTop && cp2) ? `saves a further ${(openTop - cp2).toFixed(1)}p vs open access` : '';
+    const ts2      = fmtTs(costcoStn);
+    return `<div class="costco-row">
+      <div>
+        <div class="costco-name">🔒 Costco Wholesale Chester <span class="badge-members">Members only</span></div>
+        <div class="costco-sub">${cp2 ? cp2 + 'p/litre' : '—'}${saving2 ? ' · ' + saving2 : ''}</div>
+        <div class="stn-meta" style="margin-top:4px">
+          <span class="dist">📍 ${costcoStn.distance} mi</span>
+          <span class="ts ${ts2.cls}">${ts2.text}</span>
+        </div>
+      </div>
+    </div>`;
+  })() : null;
+
+  stations.filter(s => !isCostco(s)).forEach(s => {
     const price = getPrice(s);
     const dead  = isStale(s);
     const live_ = price !== null && !dead && !s.is_motorway;
@@ -563,12 +615,11 @@ function render() {
     const ts    = fmtTs(s);
     const rankN = live_ ? rank : '–';
 
-    return `<div class="station-row${dead ? ' dead' : ''}">
+    openRows.push(`<div class="station-row${dead ? ' dead' : ''}">
       <div class="rank-bubble" style="color:${color};border-color:${color};background:${color}18">${rankN}</div>
       <div>
         <div class="stn-name">
           ${tc(s.name)}
-          ${isCostco(s) ? '<span class="badge-members">Members</span>' : ''}
           ${s.is_motorway ? '<span class="badge-motorway">Motorway</span>' : ''}
         </div>
         <div class="stn-address">${tc(s.address)}</div>
@@ -582,15 +633,19 @@ function render() {
           ? '<div class="price-dead">Price<br>unavailable</div>'
           : price !== null
             ? `<div class="price-main" style="color:${color}">${price}</div>
-               <div class="price-unit">p/litre</div>
-               ${diff !== null ? `<div class="price-diff" style="color:${parseFloat(diff)<0?'var(--green)':'var(--red)'}">${parseFloat(diff)>0?'+':''}${diff}p</div>` : ''}`
+               ${diff !== null ? `<div class="price-diff" style="color:${parseFloat(diff)<0?'var(--green)':'var(--red)'}">${parseFloat(diff)>0?'+':''}${diff}p vs avg</div>` : ''}`
             : '<div class="price-na">No data</div>'
         }
       </div>
-    </div>`;
+    </div>`);
+
+    // Inject Costco row after rank #1
+    if (rank === 1 && costcoRowHtml) {
+      openRows.push(costcoRowHtml);
+    }
   });
 
-  html.push(rows.join(''));
+  html.push(openRows.join(''));
 
   // Footer
   const luStr = lastUpdated
