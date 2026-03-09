@@ -62,7 +62,7 @@
   .site-logo:hover { opacity: 0.8; }
 
   .logo-img {
-    height: 24px;
+    height: 36px;
     width: auto;
   }
 
@@ -771,6 +771,7 @@
 // To switch, change colourMode and/or fixedThresholds below:
 
 const colourMode = 'fixed'; // 'relative' | 'fixed'
+const PRICE_FLOOR = 115; // Below this is almost certainly a data entry error
 let fixedThresholds = {
   unleaded: { low: 131.7, high: 136.7 },  // national avg / avg+5p
   diesel:   { low: 141.5, high: 146.5 }   // national avg / avg+5p
@@ -892,7 +893,9 @@ function createMarkerIcon(price, priceClass, isActive, isCheapest) {
 
 // ── RENDER ──
 function getPrice(station) {
-  return currentFuel === 'unleaded' ? station.unleaded : station.diesel;
+  const p = currentFuel === 'unleaded' ? station.unleaded : station.diesel;
+  if (p && p < PRICE_FLOOR) return null; // filter data entry errors
+  return p;
 }
 
 function getSortedStations() {
