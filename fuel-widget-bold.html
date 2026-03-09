@@ -534,7 +534,7 @@ async function init() {
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
 
     const data     = await res.json();
-    const stations = data.stations;
+    const stations = data.stations.filter(s => !s.name?.toUpperCase().includes('COSTCO'));
     const UK_AVG_UNL = data.nationalAvg.unleaded;
     const UK_AVG_DSL = data.nationalAvg.diesel;
 
