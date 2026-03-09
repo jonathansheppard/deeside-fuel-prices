@@ -898,7 +898,7 @@ function render() {
 
   const CORE_RADIUS = 10;
   const extendedStations = stations.filter(s => s.distance > CORE_RADIUS);
-  const sorted = getSortedStations().filter(s => s.distance <= CORE_RADIUS && (getPrice(s) > 0 || s.note));
+  const sorted = getSortedStations().filter(s => s.distance <= CORE_RADIUS && !isCostco(s) && (getPrice(s) > 0 || s.note));
   const stats = getStats();
 
   // cheapest/highest from open-access only — consistent with stats bar
