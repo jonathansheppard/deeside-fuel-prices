@@ -661,7 +661,7 @@ function buildCard(s, rank, avg) {
 
 function renderTable() {
   const avg = nationalAvg[currentFuel];
-  const CORE = 9;
+  const CORE = 8;
   const local = stations.filter(s => s.distance <= CORE);
 
   const costco = local.find(s => isCostco(s));
