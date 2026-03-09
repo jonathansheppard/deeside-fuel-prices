@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
     "unleaded": 137.7,
-    "diesel": 152.5
+    "diesel": 152.6
   },
-  "lastUpdated": "2026-03-09T09:30:12.550300+00:00",
+  "lastUpdated": "2026-03-09T10:00:15.879898+00:00",
   "stationCount": 77,
   "stations": [
     {
@@ -395,22 +395,8 @@
       "is_motorway": false,
       "unleaded": 136.9,
       "diesel": 159.9,
-      "updated": "2026-03-09T07:55:54.945Z",
+      "updated": "2026-03-09T09:52:05.774Z",
       "id": 52
-    },
-    {
-      "name": "BP HARVEST ENERGY HOYLAKE",
-      "brand": "BP HARVEST ENERGY",
-      "address": "HOYLAKE ROAD, WIRRAL, CH46 5NA",
-      "lat": 53.3961782,
-      "lng": -3.1318942,
-      "distance": 13.6,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 136.9,
-      "diesel": 151.9,
-      "updated": "2026-03-07T11:29:41.534Z",
-      "id": 61
     },
     {
       "name": "SAINSBURYS WREXHAM",
@@ -563,7 +549,7 @@
       "is_motorway": false,
       "unleaded": 138.9,
       "diesel": 151.9,
-      "updated": "2026-03-09T05:54:53.366Z",
+      "updated": "2026-03-09T09:55:01.820Z",
       "id": 15
     },
     {
@@ -604,8 +590,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 138.9,
-      "diesel": 152.9,
-      "updated": "2026-03-07T11:28:24.986Z",
+      "diesel": 159.9,
+      "updated": "2026-03-09T09:50:45.994Z",
       "id": 25
     },
     {
@@ -649,6 +635,20 @@
       "diesel": 152.9,
       "updated": "2026-03-07T22:01:17.523Z",
       "id": 53
+    },
+    {
+      "name": "BP HARVEST ENERGY HOYLAKE",
+      "brand": "BP HARVEST ENERGY",
+      "address": "HOYLAKE ROAD, WIRRAL, CH46 5NA",
+      "lat": 53.3961782,
+      "lng": -3.1318942,
+      "distance": 13.6,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 138.9,
+      "diesel": 152.9,
+      "updated": "2026-03-09T09:42:24.836Z",
+      "id": 61
     },
     {
       "name": "SHELL MERSEY VIEW",
@@ -801,7 +801,7 @@
       "is_motorway": false,
       "unleaded": 139.9,
       "diesel": 159.9,
-      "updated": "2026-03-09T05:36:44.989Z",
+      "updated": "2026-03-09T09:36:53.921Z",
       "id": 54
     },
     {
