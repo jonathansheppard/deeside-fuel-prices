@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
-    "unleaded": 137.9,
-    "diesel": 152.9
+    "unleaded": 138.1,
+    "diesel": 153.3
   },
-  "lastUpdated": "2026-03-09T11:30:15.795202+00:00",
+  "lastUpdated": "2026-03-09T12:00:43.523147+00:00",
   "stationCount": 77,
   "stations": [
     {
@@ -61,34 +61,6 @@
       "diesel": 138.9,
       "updated": "2026-01-16T10:29:42.000Z",
       "id": 41
-    },
-    {
-      "name": "Esso - Saltney Service Station",
-      "brand": "SALTNEY SERVICE STATION",
-      "address": "High Street, Saltney, CH4 8SJ",
-      "lat": 53.178903,
-      "lng": -2.922518,
-      "distance": 5.0,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 130.9,
-      "diesel": 142.9,
-      "updated": "2026-03-02T12:40:56.881Z",
-      "id": 49
-    },
-    {
-      "name": "RONTEC BEBINGTON",
-      "brand": "BP",
-      "address": "BROMBOROUGH ROAD, BEBINGTON, CH63 7RD",
-      "lat": 53.34781,
-      "lng": -2.99834,
-      "distance": 9.7,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 132.9,
-      "diesel": 147.9,
-      "updated": "2026-03-06T12:15:43.987Z",
-      "id": 39
     },
     {
       "name": "MFG BEECHLEY",
@@ -217,6 +189,20 @@
       "id": 16
     },
     {
+      "name": "RONTEC BEBINGTON",
+      "brand": "BP",
+      "address": "BROMBOROUGH ROAD, BEBINGTON, CH63 7RD",
+      "lat": 53.34781,
+      "lng": -2.99834,
+      "distance": 9.7,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 134.9,
+      "diesel": 152.9,
+      "updated": "2026-03-09T11:44:32.382Z",
+      "id": 39
+    },
+    {
       "name": "WREXHAM EXTRA - PETROL FILLING STATION",
       "brand": "TESCO",
       "address": "CRESCENT ROAD, WREXHAM, LL13 8HF",
@@ -269,7 +255,7 @@
       "is_motorway": false,
       "unleaded": 135.9,
       "diesel": 150.9,
-      "updated": "2026-03-09T07:56:35.610Z",
+      "updated": "2026-03-09T11:56:39.943Z",
       "id": 14
     },
     {
@@ -385,6 +371,20 @@
       "id": 42
     },
     {
+      "name": "Esso - Saltney Service Station",
+      "brand": "SALTNEY SERVICE STATION",
+      "address": "High Street, Saltney, CH4 8SJ",
+      "lat": 53.178903,
+      "lng": -2.922518,
+      "distance": 5.0,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 136.9,
+      "diesel": 159.9,
+      "updated": "2026-03-09T11:40:18.467Z",
+      "id": 49
+    },
+    {
       "name": "MFG WALLASEY VILLAGE",
       "brand": "BP",
       "address": "15-35 LEASOWE ROAD, WALLASEY VILLAGE, CH44 2BY",
@@ -453,20 +453,6 @@
       "diesel": 152.9,
       "updated": "2026-03-06T12:28:40.274Z",
       "id": 30
-    },
-    {
-      "name": "RONTEC WREXHAM",
-      "brand": "BP",
-      "address": "WREXHAM ROAD, JOHNSTOWN, WREXHAM, LL14 1PA",
-      "lat": 53.01205,
-      "lng": -3.04318,
-      "distance": 13.6,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 137.9,
-      "diesel": 152.9,
-      "updated": "2026-03-06T12:44:45.993Z",
-      "id": 31
     },
     {
       "name": "FERDI'S LOCAL",
@@ -619,7 +605,7 @@
       "is_motorway": false,
       "unleaded": 138.9,
       "diesel": 154.9,
-      "updated": "2026-03-09T07:57:40.411Z",
+      "updated": "2026-03-09T11:57:46.565Z",
       "id": 45
     },
     {
@@ -747,6 +733,20 @@
       "diesel": 159.9,
       "updated": "2026-03-09T09:05:25.354Z",
       "id": 19
+    },
+    {
+      "name": "RONTEC WREXHAM",
+      "brand": "BP",
+      "address": "WREXHAM ROAD, JOHNSTOWN, WREXHAM, LL14 1PA",
+      "lat": 53.01205,
+      "lng": -3.04318,
+      "distance": 13.6,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 139.9,
+      "diesel": 157.9,
+      "updated": "2026-03-09T11:53:03.927Z",
+      "id": 31
     },
     {
       "name": "Dobshill Service Station",
