@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fuel Prices – Deeside, Flintshire &amp; Chester</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;0,9..40,800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -117,6 +118,38 @@
   .member-sub   { font-size: 11px; color: var(--muted); margin-top: 2px; }
   .member-price { font-size: 20px; font-weight: 800; color: #60a5fa; flex-shrink: 0; }
 
+  /* ── TREND CHART ─────────────────────────────────────────── */
+  .trend-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px 14px 10px;
+    margin-bottom: 14px;
+  }
+  .trend-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  .trend-title { font-size: 13px; font-weight: 700; color: var(--text); }
+  .trend-delta {
+    font-size: 11px; font-weight: 700;
+    padding: 2px 9px; border-radius: 20px;
+  }
+  .trend-delta.below { background: #14532d; color: #4ade80; }
+  .trend-delta.above { background: #7f1d1d; color: #f87171; }
+  .trend-chart-wrap { position: relative; height: 160px; }
+  .trend-foot {
+    font-size: 10px; color: var(--muted);
+    text-align: right; margin-top: 6px;
+  }
+  .trend-empty {
+    height: 100px; display: flex; align-items: center;
+    justify-content: center; color: var(--subtle); font-size: 12px;
+  }
+  /* ── END TREND CHART ─────────────────────────────────────── */
+
   .legend { display: flex; gap: 14px; margin-bottom: 12px; font-size: 11px; color: var(--subtle); }
   .legend-item { display: flex; align-items: center; }
   .legend-dot  { width: 8px; height: 8px; border-radius: 50%; display: inline-block; margin-right: 4px; }
@@ -142,7 +175,6 @@
   .badge-members  { font-size: 9px; background: var(--blue-b); color: var(--blue-dim); padding: 1px 5px; border-radius: 4px; font-weight: 600; }
   .badge-motorway { font-size: 9px; background: #292524; color: #a8a29e; padding: 1px 5px; border-radius: 4px; font-weight: 600; }
 
-  /* Timestamp tiers — all clearly readable */
   .ts { font-size: 11px; }
   .ts-fresh { color: var(--text-sec); }
   .ts-aging { color: #f59e0b; font-weight: 600; }
@@ -204,56 +236,77 @@
 </div>
 
 <script>
-const RADIUS  = 10;   // miles from Queensferry roundabout
-const TANK    = 55;   // litres — UK average car tank
-const STALE_H = 120;  // 5 days in hours — matches map.html stale threshold
+const RADIUS   = 10;
+const TANK     = 55;
+const STALE_H  = 120;
+const HISTORY_URL = 'https://script.google.com/macros/s/AKfycbzd1VgBkTfZwtUvwLL4flmo6pWPw16ER4tW7fERE-UjIO4IPJhmFpSRwTFgpNWvyONIMA/exec';
 
-let allStations = [];
-let nationalAvg = { unleaded: 138.4, diesel: 154.7 };
-let lastUpdated = null;
-let currentFuel = 'unleaded';
-let currentSort = 'price';
+let allStations  = [];
+let nationalAvg  = { unleaded: 138.4, diesel: 154.7 };
+let lastUpdated  = null;
+let currentFuel  = 'unleaded';
+let currentSort  = 'price';
+let priceHistory = [];   // loaded once from Apps Script
+let trendChart   = null; // Chart.js instance
 
+// ── LOAD STATION DATA ─────────────────────────────────────────
 fetch('stations.json?t=' + Date.now())
   .then(r => r.json())
   .then(data => {
     nationalAvg = data.nationalAvg;
-    lastUpdated  = data.lastUpdated;
-    allStations  = data.stations;
+    lastUpdated = data.lastUpdated;
+    allStations = data.stations;
     render();
+    loadHistory(); // fire-and-forget — chart updates when ready
   })
   .catch(() => {
     document.getElementById('content').innerHTML =
       '<div style="text-align:center;padding:40px 20px;color:#6b7280">Could not load price data. Please try again.</div>';
   });
 
+// ── LOAD PRICE HISTORY ────────────────────────────────────────
+function loadHistory() {
+  fetch(HISTORY_URL)
+    .then(r => r.json())
+    .then(rows => {
+      priceHistory = rows
+        .filter(r => r.date)
+        .sort((a, b) => new Date(a.date) - new Date(b.date))
+        .slice(-30);
+      renderChart();
+    })
+    .catch(() => {
+      // History unavailable — chart section stays hidden
+    });
+}
+
+// ── FUEL / SORT ───────────────────────────────────────────────
 function setFuel(f) {
   currentFuel = f;
   document.getElementById('btn-unleaded').className = 'fuel-btn' + (f === 'unleaded' ? ' active-u' : '');
   document.getElementById('btn-diesel').className   = 'fuel-btn' + (f === 'diesel'   ? ' active-d' : '');
   render();
+  renderChart();
 }
 function setSort(s) { currentSort = s; render(); }
 
+// ── HELPERS ───────────────────────────────────────────────────
 function getPrice(s) {
   const p = currentFuel === 'unleaded' ? s.unleaded : s.diesel;
   return (p != null && p > 50) ? p : null;
 }
-
 function isStale(s) {
   if (!s.updated) return true;
   const d = new Date(s.updated);
   if (isNaN(d.getTime())) return true;
   return (Date.now() - d.getTime()) / 3600000 >= STALE_H;
 }
-
 function priceColor(price) {
   const avg = nationalAvg[currentFuel];
-  if (price < avg - 2) return '#10b981';
+  if (price < avg - 2)  return '#10b981';
   if (price <= avg + 2) return '#f59e0b';
   return '#ef4444';
 }
-
 function fmtTs(s) {
   if (!s.updated || s.updated === '') return { cls: 'ts-dead', text: '⚠ Not reporting' };
   const d = new Date(s.updated);
@@ -273,16 +326,13 @@ function fmtTs(s) {
   if (days === 1) return { cls: 'ts-aging', text: '⚠ Updated yesterday' };
   return { cls: 'ts-aging', text: `⚠ Updated ${days} days ago` };
 }
-
 function tc(str) {
   if (!str) return '';
   if (str !== str.toUpperCase()) return str;
   return str.toLowerCase().replace(/\b\w/g, c => c.toUpperCase());
 }
-
 function toGBP(p) { return '£' + ((p / 100) * TANK).toFixed(2); }
 function isCostco(s) { return s.brand === 'COSTCO WHOLESALE'; }
-
 function getStations() {
   return allStations
     .filter(s => s.distance <= RADIUS)
@@ -294,11 +344,135 @@ function getStations() {
     });
 }
 
+// ── RENDER CHART ──────────────────────────────────────────────
+function renderChart() {
+  const wrap = document.getElementById('trend-wrap');
+  if (!wrap) return; // render() hasn't run yet
+
+  const cheapestKey = currentFuel === 'unleaded' ? 'unleaded_cheapest' : 'diesel_cheapest';
+  const avg         = nationalAvg[currentFuel];
+  const lineColor   = currentFuel === 'unleaded' ? '#10b981' : '#f59e0b';
+
+  // Need at least 2 data points to draw a line
+  const valid = priceHistory.filter(r => r[cheapestKey] != null);
+  if (valid.length < 2) {
+    wrap.innerHTML = '<div class="trend-empty">Not enough history yet — check back tomorrow</div>';
+    return;
+  }
+
+  const labels   = valid.map(r => {
+    const d = new Date(r.date);
+    return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
+  });
+  const cheapest = valid.map(r => r[cheapestKey]);
+  const avgLine  = valid.map(() => avg); // flat live reference
+
+  // Delta badge
+  const latest = cheapest[cheapest.length - 1];
+  const delta  = latest != null ? (latest - avg).toFixed(1) : null;
+  const deltaBadge = document.getElementById('trend-delta');
+  if (deltaBadge && delta !== null) {
+    const d = parseFloat(delta);
+    deltaBadge.textContent  = (d <= 0 ? '▼ ' : '▲ ') + Math.abs(delta) + 'p vs UK avg';
+    deltaBadge.className    = 'trend-delta ' + (d <= 0 ? 'below' : 'above');
+    deltaBadge.style.display = '';
+  }
+
+  // Destroy previous instance if fuel type switched
+  if (trendChart) { trendChart.destroy(); trendChart = null; }
+
+  wrap.innerHTML = '<canvas id="trend-canvas"></canvas>';
+  const ctx = document.getElementById('trend-canvas').getContext('2d');
+
+  // Y axis range
+  const allVals = [...cheapest, avg].filter(Boolean);
+  const yMin = Math.floor(Math.min(...allVals) / 5) * 5 - 2;
+  const yMax = Math.ceil(Math.max(...allVals) / 5) * 5 + 2;
+
+  trendChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels,
+      datasets: [
+        {
+          label: 'Local cheapest',
+          data: cheapest,
+          borderColor: lineColor,
+          borderWidth: 2.5,
+          pointRadius: 0,
+          pointHoverRadius: 4,
+          tension: 0.3,
+          fill: false,
+        },
+        {
+          label: 'UK average (live)',
+          data: avgLine,
+          borderColor: '#f59e0b',
+          borderWidth: 1.5,
+          borderDash: [5, 4],
+          pointRadius: 0,
+          pointHoverRadius: 0,
+          tension: 0,
+          fill: false,
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: {
+          position: 'bottom',
+          labels: {
+            color: '#9ca3af',
+            font: { size: 11, family: 'DM Sans' },
+            boxWidth: 24,
+            padding: 12,
+            usePointStyle: true,
+            pointStyleWidth: 20,
+          },
+        },
+        tooltip: {
+          backgroundColor: '#0f1623',
+          borderColor: '#2d3748',
+          borderWidth: 1,
+          titleColor: '#9ca3af',
+          bodyColor: '#f3f4f6',
+          padding: 10,
+          callbacks: {
+            label: ctx => ` ${ctx.dataset.label}: ${ctx.parsed.y}p`,
+          },
+        },
+      },
+      scales: {
+        x: {
+          grid:   { display: false },
+          border: { display: false },
+          ticks:  {
+            color: '#6b7280', font: { size: 10, family: 'DM Sans' },
+            maxTicksLimit: 6, maxRotation: 0,
+          },
+        },
+        y: {
+          min: yMin, max: yMax,
+          grid:   { color: '#1f2937', drawBorder: false },
+          border: { display: false },
+          ticks:  {
+            color: '#6b7280', font: { size: 10, family: 'DM Sans' },
+            callback: v => v + 'p',
+          },
+        },
+      },
+    },
+  });
+}
+
+// ── MAIN RENDER ───────────────────────────────────────────────
 function render() {
   const stations = getStations();
   const avg      = nationalAvg[currentFuel];
 
-  // Live pool for calculator and stats — excludes stale, motorway, null prices
   const live       = stations.filter(s => getPrice(s) > 0 && !isStale(s) && !s.is_motorway);
   const openAccess = live.filter(s => !isCostco(s));
   const costcoPool = live.filter(s => isCostco(s));
@@ -308,14 +482,12 @@ function render() {
 
   const html = [];
 
-  // Feed freshness warning
   if (lastUpdated) {
     const age = (Date.now() - new Date(lastUpdated).getTime()) / 3600000;
     if (age > 3) html.push(`<div class="stale-warning">⚠ Prices last updated ${Math.floor(age)} hours ago</div>`);
   }
 
   // Stats bar
-  // Stats bar uses ALL live stations for cheapest/highest (matches map behaviour)
   const allLivePrices = live.map(s => getPrice(s)).sort((a,b) => a-b);
   const statCheapest  = allLivePrices[0] || null;
   const statHighest   = allLivePrices[allLivePrices.length - 1] || null;
@@ -360,6 +532,18 @@ function render() {
     </div>`);
   }
 
+  // ── TREND CHART PLACEHOLDER ───────────────────────────────
+  html.push(`<div class="trend-card">
+    <div class="trend-header">
+      <span class="trend-title">📈 Local cheapest — last 30 days</span>
+      <span class="trend-delta" id="trend-delta" style="display:none"></span>
+    </div>
+    <div class="trend-chart-wrap" id="trend-wrap">
+      <div class="trend-empty" style="color:var(--muted);font-size:12px;height:100%;display:flex;align-items:center;justify-content:center">Loading history…</div>
+    </div>
+    <div class="trend-foot">UK average is today's live figure from GOV.UK</div>
+  </div>`);
+
   // Legend
   html.push(`<div class="legend">
     <div class="legend-item"><span class="legend-dot" style="background:var(--green)"></span>Below UK avg</div>
@@ -370,14 +554,14 @@ function render() {
   // Station rows
   let rank = 0;
   const rows = stations.map(s => {
-    const price  = getPrice(s);
-    const dead   = isStale(s);
-    const live_  = price !== null && !dead && !s.is_motorway;
+    const price = getPrice(s);
+    const dead  = isStale(s);
+    const live_ = price !== null && !dead && !s.is_motorway;
     if (live_) rank++;
-    const color  = live_ ? priceColor(price) : '#4b5563';
-    const diff   = live_ ? (price - avg).toFixed(1) : null;
-    const ts     = fmtTs(s);
-    const rankN  = live_ ? rank : '–';
+    const color = live_ ? priceColor(price) : '#4b5563';
+    const diff  = live_ ? (price - avg).toFixed(1) : null;
+    const ts    = fmtTs(s);
+    const rankN = live_ ? rank : '–';
 
     return `<div class="station-row${dead ? ' dead' : ''}">
       <div class="rank-bubble" style="color:${color};border-color:${color};background:${color}18">${rankN}</div>
@@ -420,6 +604,9 @@ function render() {
   </div>`);
 
   document.getElementById('content').innerHTML = html.join('');
+
+  // Draw chart into the freshly rendered placeholder
+  renderChart();
 }
 </script>
 </body>
