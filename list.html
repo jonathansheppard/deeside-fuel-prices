@@ -182,14 +182,22 @@
 
   .dist { color: var(--subtle); font-size: 11px; }
 
-  .costco-row {
-    padding: 10px 0 10px 12px;
-    border-bottom: 1px solid var(--border);
-    border-left: 3px solid var(--blue-b);
-    margin-left: 35px;
+  .costco-banner {
+    background: var(--blue-bg);
+    border: 1px solid var(--blue-b);
+    border-radius: 10px;
+    padding: 12px 14px;
+    margin-bottom: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
   }
-  .costco-name { font-size: 12px; font-weight: 600; color: var(--blue-dim); display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
-  .costco-sub  { font-size: 11px; color: var(--muted); margin-top: 3px; }
+  .costco-banner-left   { flex: 1; min-width: 0; }
+  .costco-banner-title  { font-size: 13px; font-weight: 700; color: var(--blue-dim); display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+  .costco-banner-sub    { font-size: 11px; color: var(--muted); margin-top: 3px; }
+  .costco-banner-ts     { font-size: 11px; margin-top: 3px; }
+  .costco-banner-price  { font-size: 20px; font-weight: 800; color: #60a5fa; flex-shrink: 0; }
 
   .price-col { text-align: right; flex-shrink: 0; min-width: 70px; }
   .price-main { font-size: 22px; font-weight: 800; line-height: 1; }
@@ -542,7 +550,7 @@ function render() {
       <div class="tank-card cheap">
         <div class="card-label">Cheapest fill-up</div>
         <div class="card-price" style="color:var(--green)">${toGBP(cp)}</div>
-        <div class="card-ppl">${cp}p/litre</div>
+        <div class="card-ppl">based on a 55L tank · ${cp}p/litre</div>
         <div class="card-name">${tc(cheapestOpen.name)}</div>
       </div>
       <div class="tank-card pricey">
@@ -555,14 +563,26 @@ function render() {
         <span class="saving-label">Choosing the cheapest saves you <span style="color:var(--muted);font-size:11px;font-weight:400">on a full 55L tank</span></span>
         <span class="saving-value">£${saving}</span>
       </div>
-      ${costcoStn && getPrice(costcoStn) < cp ? `
-      <div class="tank-card member">
-        <div class="member-info">
-          <div class="member-title">🔒 Costco members</div>
-          <div class="member-sub">${getPrice(costcoStn)}p/litre · saves a further £${(((cp - getPrice(costcoStn)) / 100) * TANK).toFixed(2)} vs open access</div>
+      ${costcoStn && getPrice(costcoStn) < cp ? `` : ''}
+    </div>`);
+  }
+
+  // ── COSTCO BANNER ─────────────────────────────────────────
+  if (costcoStn && getPrice(costcoStn)) {
+    const cp2     = getPrice(costcoStn);
+    const saving2 = cheapestOpen ? (((getPrice(cheapestOpen) - cp2) / 100) * TANK).toFixed(2) : null;
+    const ts2     = fmtTs(costcoStn);
+    html.push(`<div class="costco-banner">
+      <div class="costco-banner-left">
+        <div class="costco-banner-title">🔒 Costco Chester <span class="badge-members">Members only</span></div>
+        <div class="costco-banner-sub">
+          ${cp2}p/litre
+          ${saving2 ? `· saves £${saving2} vs cheapest open station` : ''}
+          · ${costcoStn.distance} mi
         </div>
-        <div class="member-price">${toGBP(getPrice(costcoStn))}</div>
-      </div>` : ''}
+        <div class="costco-banner-ts ts ${ts2.cls}">${ts2.text}</div>
+      </div>
+      <div class="costco-banner-price">${toGBP(cp2)}</div>
     </div>`);
   }
 
@@ -639,10 +659,7 @@ function render() {
       </div>
     </div>`);
 
-    // Inject Costco row after rank #1
-    if (rank === 1 && costcoRowHtml) {
-      openRows.push(costcoRowHtml);
-    }
+    // rank #1 has no special injection — Costco is in its own banner above
   });
 
   html.push(openRows.join(''));
