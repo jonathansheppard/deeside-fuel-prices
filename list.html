@@ -689,14 +689,21 @@ function renderChart() {
   const mainColor = isUnleaded ? '#34d399' : '#fbbf24';
   const natl = nationalAvg[fuel] || null;
 
-  const labels = historyData.map(d => {
+  // History sheet returns unleaded_cheapest / diesel_cheapest
+  const cheapestKey = isUnleaded ? 'unleaded_cheapest' : 'diesel_cheapest';
+
+  // Only keep rows that have a valid numeric price for this fuel type
+  const validRows = historyData.filter(d => {
+    const v = d[cheapestKey];
+    return v !== null && v !== undefined && v !== '' && !isNaN(Number(v)) && Number(v) > 50;
+  });
+
+  const labels = validRows.map(d => {
     const dt = new Date(d.date);
     return dt.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
   });
 
-  // History sheet returns unleaded_cheapest / diesel_cheapest
-  const cheapestKey = isUnleaded ? 'unleaded_cheapest' : 'diesel_cheapest';
-  const priceData = historyData.map(d => d[cheapestKey] || null);
+  const priceData = validRows.map(d => Number(d[cheapestKey]));
 
   // UK avg: show as short dashed line only in the rightmost ~20% of the x-axis
   const n = labels.length;
