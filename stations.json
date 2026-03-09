@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
     "unleaded": 138.7,
-    "diesel": 155.2
+    "diesel": 155.3
   },
-  "lastUpdated": "2026-03-09T22:00:17.452157+00:00",
+  "lastUpdated": "2026-03-09T22:30:14.170443+00:00",
   "stationCount": 77,
   "stations": [
     {
@@ -119,20 +119,6 @@
       "id": 1
     },
     {
-      "name": "SAINSBURYS CHESTER",
-      "brand": "SAINSBURY'S",
-      "address": "CALDY VALLEY ROAD, GREAT BOUGHTON, CHESTER, CH3 5QJ",
-      "lat": 53.18467,
-      "lng": -2.85543,
-      "distance": 7.5,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 134.9,
-      "diesel": 147.9,
-      "updated": "2026-03-07T22:24:31.255Z",
-      "id": 10
-    },
-    {
       "name": "RONTEC BEBINGTON",
       "brand": "BP",
       "address": "BROMBOROUGH ROAD, BEBINGTON, CH63 7RD",
@@ -173,6 +159,20 @@
       "diesel": 148.9,
       "updated": "2026-03-09T21:06:52.747Z",
       "id": 8
+    },
+    {
+      "name": "SAINSBURYS CHESTER",
+      "brand": "SAINSBURY'S",
+      "address": "CALDY VALLEY ROAD, GREAT BOUGHTON, CHESTER, CH3 5QJ",
+      "lat": 53.18467,
+      "lng": -2.85543,
+      "distance": 7.5,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 135.9,
+      "diesel": 151.9,
+      "updated": "2026-03-09T22:27:12.064Z",
+      "id": 10
     },
     {
       "name": "MFG MORRISONS CHESTER LIVERPOOL ROAD",
@@ -329,20 +329,6 @@
       "id": 62
     },
     {
-      "name": "SAINSBURYS WREXHAM",
-      "brand": "SAINSBURY'S",
-      "address": "RETAIL PARK, PLAS COCH ROAD, WREXHAM, LL11 2BA",
-      "lat": 53.05571,
-      "lng": -3.00904,
-      "distance": 10.6,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 136.9,
-      "diesel": 146.9,
-      "updated": "2026-03-07T22:04:33.763Z",
-      "id": 72
-    },
-    {
       "name": "SAINSBURYS UPTON",
       "brand": "SAINSBURY'S",
       "address": "UPTON BY PASS, WIRRAL, CH49 6QG",
@@ -353,7 +339,7 @@
       "is_motorway": false,
       "unleaded": 137.9,
       "diesel": 150.9,
-      "updated": "2026-03-09T21:58:32.191Z",
+      "updated": "2026-03-09T21:59:10.553Z",
       "id": 22
     },
     {
@@ -439,6 +425,20 @@
       "diesel": 155.9,
       "updated": "2026-03-09T12:36:55.666Z",
       "id": 60
+    },
+    {
+      "name": "SAINSBURYS WREXHAM",
+      "brand": "SAINSBURY'S",
+      "address": "RETAIL PARK, PLAS COCH ROAD, WREXHAM, LL11 2BA",
+      "lat": 53.05571,
+      "lng": -3.00904,
+      "distance": 10.6,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 137.9,
+      "diesel": 150.9,
+      "updated": "2026-03-09T22:02:51.691Z",
+      "id": 72
     },
     {
       "name": "BP HARVEST ENERGY OVERPOOL",
