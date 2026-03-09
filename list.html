@@ -662,7 +662,7 @@ async function init() {
 }
 
 // ── CHART ──
-const HISTORY_URL = 'https://deeside-fuel-prices.netlify.app/price-history.json';
+const HISTORY_URL = 'https://script.google.com/macros/s/AKfycbzd1VgBkTfZwtUvwLL4flmo6pWPw16ER4tW7fERE-UjIO4IPJhmFpSRwTFgpNWvyONIMA/exec';
 let historyData = [];
 let chartInstance = null;
 let chartFuel = 'unleaded';
@@ -684,20 +684,56 @@ function renderChart() {
   const ctx = document.getElementById('priceChart').getContext('2d');
   if (chartInstance) chartInstance.destroy();
 
+  const fuel = chartFuel;
+  const isUnleaded = fuel === 'unleaded';
+  const mainColor = isUnleaded ? '#34d399' : '#fbbf24';
+  const natl = nationalAvg[fuel] || null;
+
   const labels = historyData.map(d => {
     const dt = new Date(d.date);
     return dt.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
   });
 
-  const fuel = chartFuel;
-  const lowData = historyData.map(d => d[fuel]?.low || null);
-  const avgData = historyData.map(d => d[fuel]?.avg || null);
-  const highData = historyData.map(d => d[fuel]?.high || null);
+  // History sheet returns unleaded_cheapest / diesel_cheapest
+  const cheapestKey = isUnleaded ? 'unleaded_cheapest' : 'diesel_cheapest';
+  const priceData = historyData.map(d => d[cheapestKey] || null);
 
-  const isUnleaded = fuel === 'unleaded';
-  const mainColor = isUnleaded ? '#34d399' : '#fbbf24';
-  const highColor = '#f87171';
-  const lowColor = mainColor;
+  // UK avg: show as short dashed line only in the rightmost ~20% of the x-axis
+  const n = labels.length;
+  const segStart = Math.max(0, Math.floor(n * 0.8));
+  const avgData = labels.map((_, i) => (i >= segStart && natl ? natl : null));
+
+  // Delta badge
+  const lastPrice = [...priceData].reverse().find(p => p !== null);
+  let deltaBadge = '';
+  if (lastPrice && natl) {
+    const diff = (lastPrice - natl).toFixed(1);
+    const sign = diff > 0 ? '▲' : '▼';
+    const col = diff > 0 ? '#f87171' : '#34d399';
+    deltaBadge = `<span id="chartDelta" style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:${col};margin-left:8px">${sign} ${Math.abs(diff)}p vs UK avg</span>`;
+  }
+  document.querySelector('.chart-title').innerHTML = 'Price Trend — Last 30 Days ' + deltaBadge;
+
+  // Inline "UK avg today Xp" label drawn at right end of avg line
+  const avgLabelPlugin = {
+    id: 'avgLabel',
+    afterDraw(chart) {
+      if (!natl) return;
+      const ds = chart.data.datasets[1];
+      const lastIdx = ds.data.map((v,i) => v !== null ? i : -1).filter(i => i >= 0).pop();
+      if (lastIdx === undefined) return;
+      const meta = chart.getDatasetMeta(1);
+      const pt = meta.data[lastIdx];
+      if (!pt) return;
+      const { ctx } = chart;
+      ctx.save();
+      ctx.font = "600 10px 'DM Sans'";
+      ctx.fillStyle = '#fbbf24';
+      ctx.textAlign = 'left';
+      ctx.fillText('UK avg today ' + natl.toFixed(1) + 'p', pt.x + 6, pt.y + 4);
+      ctx.restore();
+    }
+  };
 
   chartInstance = new Chart(ctx, {
     type: 'line',
@@ -705,37 +741,25 @@ function renderChart() {
       labels,
       datasets: [
         {
-          label: 'Cheapest',
-          data: lowData,
-          borderColor: lowColor,
-          backgroundColor: lowColor + '20',
-          borderWidth: 2,
+          label: 'Local cheapest',
+          data: priceData,
+          borderColor: mainColor,
+          backgroundColor: mainColor + '18',
+          borderWidth: 2.5,
           pointRadius: 3,
-          pointBackgroundColor: lowColor,
+          pointBackgroundColor: mainColor,
           fill: false,
           tension: 0.3
         },
         {
-          label: 'Average',
+          label: 'UK avg',
           data: avgData,
-          borderColor: '#6b7280',
+          borderColor: '#fbbf24',
           borderWidth: 1.5,
-          borderDash: [4, 4],
-          pointRadius: 2,
-          pointBackgroundColor: '#6b7280',
+          borderDash: [5, 4],
+          pointRadius: 0,
           fill: false,
-          tension: 0.3
-        },
-        {
-          label: 'Highest',
-          data: highData,
-          borderColor: highColor,
-          backgroundColor: highColor + '20',
-          borderWidth: 2,
-          pointRadius: 3,
-          pointBackgroundColor: highColor,
-          fill: false,
-          tension: 0.3
+          tension: 0
         }
       ]
     },
@@ -751,7 +775,8 @@ function renderChart() {
             color: '#6b7280',
             font: { family: "'DM Sans'", size: 11 },
             boxWidth: 12,
-            padding: 16
+            padding: 16,
+            filter: item => item.datasetIndex !== 1  // hide UK avg from legend
           }
         },
         tooltip: {
@@ -762,17 +787,16 @@ function renderChart() {
           borderWidth: 1,
           padding: 10,
           bodyFont: { family: "'JetBrains Mono'", size: 12 },
+          filter: item => item.datasetIndex === 0,
           callbacks: {
-            label: function(ctx) {
-              return ctx.dataset.label + ': ' + ctx.parsed.y.toFixed(1) + 'p';
-            }
+            label: ctx => 'Cheapest: ' + ctx.parsed.y.toFixed(1) + 'p'
           }
         }
       },
       scales: {
         x: {
           grid: { color: 'rgba(255,255,255,.04)' },
-          ticks: { color: '#6b7280', font: { family: "'DM Sans'", size: 10 } }
+          ticks: { color: '#6b7280', font: { family: "'DM Sans'", size: 10 }, maxTicksLimit: 8 }
         },
         y: {
           grid: { color: 'rgba(255,255,255,.04)' },
@@ -783,7 +807,8 @@ function renderChart() {
           }
         }
       }
-    }
+    },
+    plugins: [avgLabelPlugin]
   });
 }
 
