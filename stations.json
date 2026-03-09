@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
-    "unleaded": 138.4,
-    "diesel": 154.7
+    "unleaded": 138.5,
+    "diesel": 154.8
   },
-  "lastUpdated": "2026-03-09T16:00:14.035280+00:00",
+  "lastUpdated": "2026-03-09T16:30:16.308263+00:00",
   "stationCount": 77,
   "stations": [
     {
@@ -465,7 +465,7 @@
       "is_motorway": false,
       "unleaded": 138.9,
       "diesel": 147.9,
-      "updated": "2026-03-09T12:18:50.671Z",
+      "updated": "2026-03-09T16:18:58.480Z",
       "id": 9
     },
     {
@@ -495,20 +495,6 @@
       "diesel": 159.9,
       "updated": "2026-03-09T09:50:45.994Z",
       "id": 25
-    },
-    {
-      "name": "ASDA RHYL SUPERSTORE",
-      "brand": "ASDA",
-      "address": "ST ASAPH AVENUE NORTH, KINMEL BAY, RHYL, LL18 5EQ",
-      "lat": 53.31088,
-      "lng": -3.5214,
-      "distance": 21.4,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 138.9,
-      "diesel": 150.9,
-      "updated": "2026-03-09T15:31:14.358Z",
-      "id": 27
     },
     {
       "name": "MFG MORRISONS RHYL",
@@ -590,8 +576,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 139.9,
-      "diesel": 149.9,
-      "updated": "2026-03-07T12:08:00.087Z",
+      "diesel": 158.9,
+      "updated": "2026-03-09T16:10:51.177Z",
       "id": 3
     },
     {
@@ -677,6 +663,20 @@
       "diesel": 159.9,
       "updated": "2026-03-09T13:58:25.292Z",
       "id": 26
+    },
+    {
+      "name": "ASDA RHYL SUPERSTORE",
+      "brand": "ASDA",
+      "address": "ST ASAPH AVENUE NORTH, KINMEL BAY, RHYL, LL18 5EQ",
+      "lat": 53.31088,
+      "lng": -3.5214,
+      "distance": 21.4,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 139.9,
+      "diesel": 157.9,
+      "updated": "2026-03-09T16:28:16.231Z",
+      "id": 27
     },
     {
       "name": "RONTEC WREXHAM",
