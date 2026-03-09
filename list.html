@@ -315,10 +315,14 @@ function render() {
   }
 
   // Stats bar
+  // Stats bar uses ALL live stations for cheapest/highest (matches map behaviour)
+  const allLivePrices = live.map(s => getPrice(s)).sort((a,b) => a-b);
+  const statCheapest  = allLivePrices[0] || null;
+  const statHighest   = allLivePrices[allLivePrices.length - 1] || null;
   html.push(`<div class="stats-bar">
     <div class="stat-cell"><div class="stat-label">UK Average</div><div class="stat-value" style="color:var(--text-sec)">${avg}p</div></div>
-    <div class="stat-cell"><div class="stat-label">Local Cheapest</div><div class="stat-value" style="color:var(--green)">${cheapestOpen ? getPrice(cheapestOpen) + 'p' : '—'}</div></div>
-    <div class="stat-cell"><div class="stat-label">Local Highest</div><div class="stat-value" style="color:var(--red)">${priciest ? getPrice(priciest) + 'p' : '—'}</div></div>
+    <div class="stat-cell"><div class="stat-label">Local Cheapest</div><div class="stat-value" style="color:var(--green)">${statCheapest ? statCheapest + 'p' : '—'}</div></div>
+    <div class="stat-cell"><div class="stat-label">Local Highest</div><div class="stat-value" style="color:var(--red)">${statHighest ? statHighest + 'p' : '—'}</div></div>
     <div class="stat-cell"><div class="stat-label">Reporting</div><div class="stat-value" style="color:#60a5fa">${live.length} stations</div></div>
   </div>`);
 
