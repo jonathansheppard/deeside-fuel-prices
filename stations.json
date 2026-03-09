@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
     "unleaded": 138.7,
-    "diesel": 155.1
+    "diesel": 155.2
   },
-  "lastUpdated": "2026-03-09T21:30:12.596323+00:00",
+  "lastUpdated": "2026-03-09T22:00:17.452157+00:00",
   "stationCount": 77,
   "stations": [
     {
@@ -133,20 +133,6 @@
       "id": 10
     },
     {
-      "name": "SAINSBURYS ELLESMERE PORT",
-      "brand": "SAINSBURY'S",
-      "address": "KINSEY ROAD, ELLESMERE PORT, CH65 9HN",
-      "lat": 53.26233,
-      "lng": -2.88042,
-      "distance": 7.3,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 134.9,
-      "diesel": 147.9,
-      "updated": "2026-03-07T21:45:59.594Z",
-      "id": 16
-    },
-    {
       "name": "RONTEC BEBINGTON",
       "brand": "BP",
       "address": "BROMBOROUGH ROAD, BEBINGTON, CH63 7RD",
@@ -203,6 +189,20 @@
       "id": 14
     },
     {
+      "name": "SAINSBURYS ELLESMERE PORT",
+      "brand": "SAINSBURY'S",
+      "address": "KINSEY ROAD, ELLESMERE PORT, CH65 9HN",
+      "lat": 53.26233,
+      "lng": -2.88042,
+      "distance": 7.3,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 135.9,
+      "diesel": 151.9,
+      "updated": "2026-03-09T21:53:36.316Z",
+      "id": 16
+    },
+    {
       "name": "BROUGHTON CHESTER EXTRA - PETROL FILLING STATION",
       "brand": "TESCO",
       "address": "1 BROUGHTON SHOPPING PARK, CHESTER ROAD, CHESTER, CH4 0DP",
@@ -215,20 +215,6 @@
       "diesel": 148.9,
       "updated": "2026-03-09T15:13:45.870Z",
       "id": 59
-    },
-    {
-      "name": "SAINSBURYS BIRKENHEAD",
-      "brand": "SAINSBURY'S",
-      "address": "342A WOODCHURCH ROAD, BIRKENHEAD, CH42 8PQ",
-      "lat": 53.37472,
-      "lng": -3.04765,
-      "distance": 11.5,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 135.9,
-      "diesel": 145.9,
-      "updated": "2026-03-07T21:44:47.803Z",
-      "id": 62
     },
     {
       "name": "MFG MORRISONS ELLESMERE PORT",
@@ -257,20 +243,6 @@
       "diesel": 146.9,
       "updated": "2026-03-09T15:32:35.116Z",
       "id": 70
-    },
-    {
-      "name": "SAINSBURYS UPTON",
-      "brand": "SAINSBURY'S",
-      "address": "UPTON BY PASS, WIRRAL, CH49 6QG",
-      "lat": 53.37986,
-      "lng": -3.09998,
-      "distance": 12.1,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 136.9,
-      "diesel": 146.9,
-      "updated": "2026-03-07T21:55:03.871Z",
-      "id": 22
     },
     {
       "name": "SPITAL SF CONNECT",
@@ -339,8 +311,22 @@
       "is_motorway": false,
       "unleaded": 136.9,
       "diesel": 159.9,
-      "updated": "2026-03-09T17:52:28.960Z",
+      "updated": "2026-03-09T21:52:40.630Z",
       "id": 52
+    },
+    {
+      "name": "SAINSBURYS BIRKENHEAD",
+      "brand": "SAINSBURY'S",
+      "address": "342A WOODCHURCH ROAD, BIRKENHEAD, CH42 8PQ",
+      "lat": 53.37472,
+      "lng": -3.04765,
+      "distance": 11.5,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 136.9,
+      "diesel": 149.9,
+      "updated": "2026-03-09T21:51:21.722Z",
+      "id": 62
     },
     {
       "name": "SAINSBURYS WREXHAM",
@@ -355,6 +341,20 @@
       "diesel": 146.9,
       "updated": "2026-03-07T22:04:33.763Z",
       "id": 72
+    },
+    {
+      "name": "SAINSBURYS UPTON",
+      "brand": "SAINSBURY'S",
+      "address": "UPTON BY PASS, WIRRAL, CH49 6QG",
+      "lat": 53.37986,
+      "lng": -3.09998,
+      "distance": 12.1,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 137.9,
+      "diesel": 150.9,
+      "updated": "2026-03-09T21:58:32.191Z",
+      "id": 22
     },
     {
       "name": "MFG STRAWBERRY",
@@ -455,20 +455,6 @@
       "id": 7
     },
     {
-      "name": "MFG GREASBY",
-      "brand": "ESSO",
-      "address": "GREASBY ROAD, GREASBY  WIRRAL, CH49 2PF",
-      "lat": 53.379848,
-      "lng": -3.116135,
-      "distance": 12.3,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 138.9,
-      "diesel": 147.9,
-      "updated": "2026-03-09T20:19:06.295Z",
-      "id": 9
-    },
-    {
       "name": "MFG ROWTON",
       "brand": "ESSO",
       "address": "WHITCHURCH ROAD, ROWTON, CH3 6AF",
@@ -479,7 +465,7 @@
       "is_motorway": false,
       "unleaded": 138.9,
       "diesel": 151.9,
-      "updated": "2026-03-09T17:55:18.659Z",
+      "updated": "2026-03-09T21:55:27.003Z",
       "id": 15
     },
     {
@@ -509,20 +495,6 @@
       "diesel": 157.9,
       "updated": "2026-03-09T12:05:35.758Z",
       "id": 46
-    },
-    {
-      "name": "SAINSBURYS RHYL",
-      "brand": "SAINSBURY'S",
-      "address": "RHYL ROAD, RHUDDLAN, RHYL, LL18 2TP",
-      "lat": 53.30371,
-      "lng": -3.46769,
-      "distance": 19.1,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 138.9,
-      "diesel": 152.9,
-      "updated": "2026-03-07T22:01:17.523Z",
-      "id": 53
     },
     {
       "name": "BP HARVEST ENERGY HOYLAKE",
@@ -576,9 +548,23 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 139.9,
-      "diesel": 154.9,
-      "updated": "2026-03-09T21:01:15.268Z",
+      "diesel": 155.9,
+      "updated": "2026-03-09T21:39:16.587Z",
       "id": 5
+    },
+    {
+      "name": "MFG GREASBY",
+      "brand": "ESSO",
+      "address": "GREASBY ROAD, GREASBY  WIRRAL, CH49 2PF",
+      "lat": 53.379848,
+      "lng": -3.116135,
+      "distance": 12.3,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 139.9,
+      "diesel": 152.9,
+      "updated": "2026-03-09T21:56:09.487Z",
+      "id": 9
     },
     {
       "name": "CASTLE VIEW",
@@ -721,6 +707,20 @@
       "id": 48
     },
     {
+      "name": "SAINSBURYS RHYL",
+      "brand": "SAINSBURY'S",
+      "address": "RHYL ROAD, RHUDDLAN, RHYL, LL18 2TP",
+      "lat": 53.30371,
+      "lng": -3.46769,
+      "distance": 19.1,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 139.9,
+      "diesel": 156.9,
+      "updated": "2026-03-09T21:53:29.078Z",
+      "id": 53
+    },
+    {
       "name": "MFG COLESHILL",
       "brand": "SHELL",
       "address": "HOLYWELL ROAD, FLINT, CH6 5RR",
@@ -731,7 +731,7 @@
       "is_motorway": false,
       "unleaded": 139.9,
       "diesel": 159.9,
-      "updated": "2026-03-09T17:37:12.329Z",
+      "updated": "2026-03-09T21:37:21.909Z",
       "id": 54
     },
     {
