@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
-    "unleaded": 138.1,
-    "diesel": 153.3
+    "unleaded": 138.2,
+    "diesel": 153.8
   },
-  "lastUpdated": "2026-03-09T12:00:43.523147+00:00",
+  "lastUpdated": "2026-03-09T12:30:23.824632+00:00",
   "stationCount": 77,
   "stations": [
     {
@@ -273,20 +273,6 @@
       "id": 26
     },
     {
-      "name": "RONTEC HOYLAKE",
-      "brand": "ESSO",
-      "address": "HOYLAKE, HOYLAKE, CH47 0LA",
-      "lat": 53.39785,
-      "lng": -3.16973,
-      "distance": 14.2,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 135.9,
-      "diesel": 152.9,
-      "updated": "2026-03-06T12:51:09.868Z",
-      "id": 34
-    },
-    {
       "name": "BIRKENHEAD BIDSTON MOSS EXTRA - PETROL FILLING STATION",
       "brand": "TESCO",
       "address": "BIDSTON LINK ROAD, BIRKENHEAD, CH43 7AA",
@@ -469,18 +455,18 @@
       "id": 32
     },
     {
-      "name": "SHELL LITTLE WAITROSE HINDERTON",
-      "brand": "SHELL",
-      "address": "CHESTER HIGH ROAD, NESTON, CH64 7TA",
-      "lat": 53.294253,
-      "lng": -3.042575,
-      "distance": 5.9,
+      "name": "RONTEC HOYLAKE",
+      "brand": "ESSO",
+      "address": "HOYLAKE, HOYLAKE, CH47 0LA",
+      "lat": 53.39785,
+      "lng": -3.16973,
+      "distance": 14.2,
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 137.9,
-      "diesel": 152.9,
-      "updated": "2026-03-06T16:05:12.974Z",
-      "id": 46
+      "diesel": 157.9,
+      "updated": "2026-03-09T12:00:49.342Z",
+      "id": 34
     },
     {
       "name": "Rhydymwyn Service Station",
@@ -497,20 +483,6 @@
       "id": 60
     },
     {
-      "name": "SHELL WIRRAL WAY",
-      "brand": "SHELL",
-      "address": "413 BOROUGH ROAD, BIRKENHEAD, CH42 0HA",
-      "lat": 53.384042,
-      "lng": -3.032912,
-      "distance": 12.1,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 137.9,
-      "diesel": 151.9,
-      "updated": "2026-03-08T12:04:03.483Z",
-      "id": 67
-    },
-    {
       "name": "MFG GREASBY",
       "brand": "ESSO",
       "address": "GREASBY ROAD, GREASBY  WIRRAL, CH49 2PF",
@@ -521,7 +493,7 @@
       "is_motorway": false,
       "unleaded": 138.9,
       "diesel": 147.9,
-      "updated": "2026-03-09T10:01:43.617Z",
+      "updated": "2026-03-09T12:18:50.671Z",
       "id": 9
     },
     {
@@ -537,20 +509,6 @@
       "diesel": 151.9,
       "updated": "2026-03-09T09:55:01.820Z",
       "id": 15
-    },
-    {
-      "name": "SHELL CARLETT",
-      "brand": "SHELL",
-      "address": "1201 NEW CHESTER ROAD, WIRRAL, CH62 0BZ",
-      "lat": 53.314799,
-      "lng": -2.963826,
-      "distance": 7.9,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 138.9,
-      "diesel": 162.9,
-      "updated": "2026-03-08T12:03:02.674Z",
-      "id": 18
     },
     {
       "name": "PRESTATYN SUPERSTORE - PETROL FILLING STATION",
@@ -609,6 +567,20 @@
       "id": 45
     },
     {
+      "name": "SHELL LITTLE WAITROSE HINDERTON",
+      "brand": "SHELL",
+      "address": "CHESTER HIGH ROAD, NESTON, CH64 7TA",
+      "lat": 53.294253,
+      "lng": -3.042575,
+      "distance": 5.9,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 138.9,
+      "diesel": 157.9,
+      "updated": "2026-03-09T12:05:35.758Z",
+      "id": 46
+    },
+    {
       "name": "SAINSBURYS RHYL",
       "brand": "SAINSBURY'S",
       "address": "RHYL ROAD, RHUDDLAN, RHYL, LL18 2TP",
@@ -637,18 +609,18 @@
       "id": 61
     },
     {
-      "name": "SHELL MERSEY VIEW",
+      "name": "SHELL WIRRAL WAY",
       "brand": "SHELL",
-      "address": "STATION ROAD, ELLESMERE PORT, CH65 4AX",
-      "lat": 53.284662,
-      "lng": -2.89441,
-      "distance": 7.8,
+      "address": "413 BOROUGH ROAD, BIRKENHEAD, CH42 0HA",
+      "lat": 53.384042,
+      "lng": -3.032912,
+      "distance": 12.1,
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 138.9,
-      "diesel": 154.9,
-      "updated": "2026-03-06T16:05:15.787Z",
-      "id": 69
+      "diesel": 156.9,
+      "updated": "2026-03-09T12:04:13.471Z",
+      "id": 67
     },
     {
       "name": "H W Oultram & Co",
@@ -663,20 +635,6 @@
       "diesel": 149.9,
       "updated": "2026-03-07T12:08:00.087Z",
       "id": 3
-    },
-    {
-      "name": "SHELL CO-OP WREXHAM",
-      "brand": "SHELL",
-      "address": "MOLD ROAD, WREXHAM, LL11 2AF",
-      "lat": 53.051908,
-      "lng": -3.006356,
-      "distance": 10.9,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 139.9,
-      "diesel": 149.9,
-      "updated": "2026-03-06T12:35:02.820Z",
-      "id": 4
     },
     {
       "name": "MFG MORRISONS DENBIGH",
@@ -719,6 +677,20 @@
       "diesel": 149.9,
       "updated": "2026-03-06T14:31:14.853Z",
       "id": 17
+    },
+    {
+      "name": "SHELL CARLETT",
+      "brand": "SHELL",
+      "address": "1201 NEW CHESTER ROAD, WIRRAL, CH62 0BZ",
+      "lat": 53.314799,
+      "lng": -2.963826,
+      "distance": 7.9,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 139.9,
+      "diesel": 167.9,
+      "updated": "2026-03-09T12:09:14.877Z",
+      "id": 18
     },
     {
       "name": "MFG LISCARD",
@@ -805,34 +777,6 @@
       "id": 54
     },
     {
-      "name": "SHELL GAYTON",
-      "brand": "SHELL",
-      "address": "CHESTER ROAD, WIRRAL, MERSEYSIDE, CH60 3RY",
-      "lat": 53.322022,
-      "lng": -3.084409,
-      "distance": 8.1,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 139.9,
-      "diesel": 152.9,
-      "updated": "2026-03-06T16:05:33.568Z",
-      "id": 58
-    },
-    {
-      "name": "SHELL UPTON",
-      "brand": "SHELL",
-      "address": "ARROWE PARK ROAD, WIRRAL, CH49 0UE",
-      "lat": 53.381566,
-      "lng": -3.09902,
-      "distance": 12.2,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 139.9,
-      "diesel": 151.9,
-      "updated": "2026-03-08T18:46:02.489Z",
-      "id": 64
-    },
-    {
       "name": "RUTHIN",
       "brand": "TEXACO",
       "address": "PARK ROAD, RUTHIN, LL151NB",
@@ -845,6 +789,34 @@
       "diesel": 159.9,
       "updated": "2026-03-07T10:26:17.640Z",
       "id": 65
+    },
+    {
+      "name": "SHELL MERSEY VIEW",
+      "brand": "SHELL",
+      "address": "STATION ROAD, ELLESMERE PORT, CH65 4AX",
+      "lat": 53.284662,
+      "lng": -2.89441,
+      "distance": 7.8,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 139.9,
+      "diesel": 159.9,
+      "updated": "2026-03-09T12:09:20.439Z",
+      "id": 69
+    },
+    {
+      "name": "SHELL CO-OP WREXHAM",
+      "brand": "SHELL",
+      "address": "MOLD ROAD, WREXHAM, LL11 2AF",
+      "lat": 53.051908,
+      "lng": -3.006356,
+      "distance": 10.9,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 140.9,
+      "diesel": 154.9,
+      "updated": "2026-03-09T12:05:35.155Z",
+      "id": 4
     },
     {
       "name": "MOLD SUPERSTORE - PETROL FILLING STATION",
@@ -861,18 +833,32 @@
       "id": 56
     },
     {
-      "name": "SHELL CHESTER",
+      "name": "SHELL GAYTON",
       "brand": "SHELL",
-      "address": "TARVIN ROAD, CHESTER, CH3 5NJ",
-      "lat": 53.193526,
-      "lng": -2.856604,
-      "distance": 7.4,
+      "address": "CHESTER ROAD, WIRRAL, MERSEYSIDE, CH60 3RY",
+      "lat": 53.322022,
+      "lng": -3.084409,
+      "distance": 8.1,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 141.9,
-      "diesel": 155.9,
-      "updated": "2026-03-06T16:05:36.043Z",
-      "id": 13
+      "unleaded": 140.9,
+      "diesel": 157.9,
+      "updated": "2026-03-09T12:05:19.670Z",
+      "id": 58
+    },
+    {
+      "name": "SHELL UPTON",
+      "brand": "SHELL",
+      "address": "ARROWE PARK ROAD, WIRRAL, CH49 0UE",
+      "lat": 53.381566,
+      "lng": -3.09902,
+      "distance": 12.2,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 140.9,
+      "diesel": 156.9,
+      "updated": "2026-03-09T12:04:13.245Z",
+      "id": 64
     },
     {
       "name": "STANS OF LLANGOLLEN",
@@ -903,20 +889,6 @@
       "id": 29
     },
     {
-      "name": "SHELL HOOLE ROAD",
-      "brand": "SHELL",
-      "address": "HOOLE ROAD, CHESTER, CH2 3NH",
-      "lat": 53.199234,
-      "lng": -2.878935,
-      "distance": 6.4,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 141.9,
-      "diesel": 154.9,
-      "updated": "2026-03-06T16:05:21.545Z",
-      "id": 68
-    },
-    {
       "name": "MFG PRESTATYN",
       "brand": "BP",
       "address": "MARINE ROAD, PRESTATYN, LL19 7HA",
@@ -929,6 +901,34 @@
       "diesel": 159.9,
       "updated": "2026-03-09T09:15:24.493Z",
       "id": 74
+    },
+    {
+      "name": "SHELL CHESTER",
+      "brand": "SHELL",
+      "address": "TARVIN ROAD, CHESTER, CH3 5NJ",
+      "lat": 53.193526,
+      "lng": -2.856604,
+      "distance": 7.4,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 142.9,
+      "diesel": 160.9,
+      "updated": "2026-03-09T12:22:03.997Z",
+      "id": 13
+    },
+    {
+      "name": "SHELL HOOLE ROAD",
+      "brand": "SHELL",
+      "address": "HOOLE ROAD, CHESTER, CH2 3NH",
+      "lat": 53.199234,
+      "lng": -2.878935,
+      "distance": 6.4,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 142.9,
+      "diesel": 159.9,
+      "updated": "2026-03-09T12:12:05.978Z",
+      "id": 68
     },
     {
       "name": "ASCONA HOLYWELL SERVICE STATION",
@@ -981,9 +981,9 @@
       "distance": 2.3,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 148.9,
-      "diesel": 165.9,
-      "updated": "2026-03-08T12:04:03.167Z",
+      "unleaded": 149.9,
+      "diesel": 170.9,
+      "updated": "2026-03-09T12:09:13.283Z",
       "id": 23
     },
     {
@@ -1037,9 +1037,9 @@
       "distance": 10.4,
       "is_supermarket": false,
       "is_motorway": true,
-      "unleaded": 158.9,
-      "diesel": 178.9,
-      "updated": "2026-03-08T19:54:05.582Z",
+      "unleaded": 159.9,
+      "diesel": 183.9,
+      "updated": "2026-03-09T12:04:16.771Z",
       "id": 44
     },
     {
