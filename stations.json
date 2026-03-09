@@ -3,7 +3,7 @@
     "unleaded": 138.5,
     "diesel": 154.8
   },
-  "lastUpdated": "2026-03-09T16:30:16.308263+00:00",
+  "lastUpdated": "2026-03-09T17:00:14.690208+00:00",
   "stationCount": 77,
   "stations": [
     {
@@ -171,7 +171,7 @@
       "is_motorway": false,
       "unleaded": 135.9,
       "diesel": 148.9,
-      "updated": "2026-03-09T12:56:10.726Z",
+      "updated": "2026-03-09T16:56:15.716Z",
       "id": 2
     },
     {
@@ -241,7 +241,7 @@
       "is_motorway": false,
       "unleaded": 135.9,
       "diesel": 150.9,
-      "updated": "2026-03-09T12:56:08.974Z",
+      "updated": "2026-03-09T16:56:13.894Z",
       "id": 66
     },
     {
@@ -549,7 +549,7 @@
       "is_motorway": false,
       "unleaded": 138.9,
       "diesel": 152.9,
-      "updated": "2026-03-09T09:42:24.836Z",
+      "updated": "2026-03-09T16:52:19.376Z",
       "id": 61
     },
     {
@@ -716,8 +716,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 139.9,
-      "diesel": 152.9,
-      "updated": "2026-03-06T14:32:09.790Z",
+      "diesel": 159.9,
+      "updated": "2026-03-09T16:52:03.335Z",
       "id": 48
     },
     {
@@ -831,6 +831,20 @@
       "diesel": 156.9,
       "updated": "2026-03-09T12:04:13.245Z",
       "id": 64
+    },
+    {
+      "name": "BR Buckley",
+      "brand": "SPAR",
+      "address": "72, MOLD ROAD, BUCKLEY, CH7 2NJ, BUCKLEY, CH7 2NJ",
+      "lat": 53.1685643,
+      "lng": -3.0885872,
+      "distance": 3.6,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 140.9,
+      "diesel": null,
+      "updated": "2026-03-09T16:54:04.562Z",
+      "id": 73
     },
     {
       "name": "STANS OF LLANGOLLEN",
@@ -985,20 +999,6 @@
       "diesel": 170.9,
       "updated": "2026-03-09T12:09:13.283Z",
       "id": 23
-    },
-    {
-      "name": "BR Buckley",
-      "brand": "SPAR",
-      "address": "72, MOLD ROAD, BUCKLEY, CH7 2NJ, BUCKLEY, CH7 2NJ",
-      "lat": 53.1685643,
-      "lng": -3.0885872,
-      "distance": 3.6,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 149.9,
-      "diesel": null,
-      "updated": "2026-03-06T14:34:08.697Z",
-      "id": 73
     },
     {
       "name": "Lobitos",
