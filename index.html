@@ -364,6 +364,51 @@
     background: var(--accent-glow);
   }
 
+  /* ── COSTCO CARD ─────────────────────────────────────────────── */
+  .station-card.costco-card {
+    background: rgba(96, 165, 250, 0.06);
+    border-color: rgba(96, 165, 250, 0.2);
+  }
+  .station-card.costco-card:hover {
+    background: rgba(96, 165, 250, 0.1);
+    border-color: rgba(96, 165, 250, 0.35);
+  }
+  .costco-name {
+    font-weight: 700;
+    font-size: 14px;
+    color: #60a5fa;
+    line-height: 1.3;
+  }
+  .costco-members-tag {
+    display: inline-block;
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 2px 7px;
+    border-radius: 4px;
+    background: rgba(96, 165, 250, 0.12);
+    color: #60a5fa;
+    border: 1px solid rgba(96, 165, 250, 0.3);
+    vertical-align: middle;
+    margin-left: 6px;
+  }
+  .costco-sub {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 4px;
+    line-height: 1.4;
+  }
+  .costco-price {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 20px;
+    font-weight: 600;
+    color: #60a5fa;
+    line-height: 1;
+    white-space: nowrap;
+  }
+  /* ── END COSTCO ──────────────────────────────────────────────── */
+
   .station-info {}
 
   .station-brand {
@@ -980,6 +1025,42 @@ function render() {
 
   function buildCard(station) {
     const price = getPrice(station);
+
+    // ── COSTCO SPECIAL CARD ───────────────────────────────────────
+    if (isCostco(station) && price) {
+      const openLivePrices = stations
+        .filter(s => s.distance <= 10 && !isCostco(s) && !s.is_motorway && getStaleState(s) !== 'stale' && getPrice(s) > 0)
+        .map(s => getPrice(s));
+      const cheapestOpen = openLivePrices.length ? Math.min(...openLivePrices) : null;
+      const savingPer50  = (cheapestOpen && price < cheapestOpen)
+        ? ((cheapestOpen - price) / 100 * 50).toFixed(2) : null;
+      const savingTxt    = savingPer50 ? ` · saves £${savingPer50} vs cheapest open station` : '';
+      const isActive     = activeStation === station.id;
+
+      let updatedTxt = '';
+      if (station.updated) {
+        const d = new Date(station.updated);
+        if (!isNaN(d.getTime())) {
+          updatedTxt = 'Updated today ' + d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
+        }
+      }
+
+      return `<div class="station-card costco-card${isActive ? ' active' : ''}" data-id="${station.id}">
+        <div class="station-info">
+          <div class="station-brand" style="align-items:baseline;gap:0">
+            <span class="costco-name">🔒 ${station.name}</span>
+            <span class="costco-members-tag">Members Only</span>
+          </div>
+          <div class="costco-sub">${price.toFixed(1)}p/litre${savingTxt} · ${station.distance} mi</div>
+          ${updatedTxt ? '<div class="timestamp-fresh" style="margin-top:3px">' + updatedTxt + '</div>' : ''}
+        </div>
+        <div class="station-price">
+          <div class="costco-price">${price.toFixed(1)}<small style="font-size:12px">p</small></div>
+        </div>
+      </div>`;
+    }
+    // ── END COSTCO ────────────────────────────────────────────────
+
     const isNoData   = !price || price <= 0;
     const staleState = isNoData ? 'stale' : getStaleState(station);
     const isCheapest = !isNoData && staleState !== 'stale' && !isCostco(station) && price === cheapestPrice;
@@ -1030,7 +1111,6 @@ function render() {
         <div class="station-address">${station.address}</div>
         ${isCheapest  ? '<span class="station-tag tag-cheapest">★ Cheapest</span>' : ''}
         ${isExpensive ? '<span class="station-tag tag-expensive">Most Expensive</span>' : ''}
-        ${isCostco(station) ? '<span class="station-tag" style="background:rgba(96,165,250,0.12);color:#60a5fa;border:1px solid rgba(96,165,250,0.3);font-size:10px">🔒 Members only</span>' : ''}
       </div>
       <div class="station-price">
         ${isNoData ? '<div style="color:#E8A838;font-size:13px;font-weight:600">Not reporting</div><div style="font-size:10px;color:#9CA3AF;margin-top:2px">Last checked: today</div>' :
