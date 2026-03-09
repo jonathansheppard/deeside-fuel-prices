@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
-    "unleaded": 137.7,
-    "diesel": 152.8
+    "unleaded": 137.9,
+    "diesel": 152.9
   },
-  "lastUpdated": "2026-03-09T11:00:13.548211+00:00",
+  "lastUpdated": "2026-03-09T11:30:15.795202+00:00",
   "stationCount": 77,
   "stations": [
     {
@@ -847,20 +847,6 @@
       "id": 65
     },
     {
-      "name": "ASCONA HOLYWELL SERVICE STATION",
-      "brand": "VALERO",
-      "address": "HOLWAY ROAD, HOLYWELL, CH8 7LQ",
-      "lat": 53.279441,
-      "lng": -3.2410974,
-      "distance": 9.9,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 140.0,
-      "diesel": 150.0,
-      "updated": "2026-03-04T12:55:09.332Z",
-      "id": 6
-    },
-    {
       "name": "MOLD SUPERSTORE - PETROL FILLING STATION",
       "brand": "TESCO",
       "address": "PONTERWYL, YR WYDDGRUG, CH7 1UB",
@@ -943,6 +929,20 @@
       "diesel": 159.9,
       "updated": "2026-03-09T09:15:24.493Z",
       "id": 74
+    },
+    {
+      "name": "ASCONA HOLYWELL SERVICE STATION",
+      "brand": "VALERO",
+      "address": "HOLWAY ROAD, HOLYWELL, CH8 7LQ",
+      "lat": 53.279441,
+      "lng": -3.2410974,
+      "distance": 9.9,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 143.0,
+      "diesel": 155.0,
+      "updated": "2026-03-09T11:18:18.906Z",
+      "id": 6
     },
     {
       "name": "SHELL CO-OP MOLD",
