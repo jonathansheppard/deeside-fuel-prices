@@ -671,12 +671,14 @@ async function loadChart() {
   try {
     const res = await fetch(HISTORY_URL, { cache: 'no-cache' });
     historyData = await res.json();
+    console.log('RAW historyData:', JSON.stringify(historyData.slice(0,3)));
+    console.log('Total rows:', historyData.length);
     if (historyData.length >= 2) {
       document.getElementById('chartPanel').style.display = 'block';
       renderChart();
     }
   } catch(e) {
-    // No history yet — chart stays hidden
+    console.error('Chart load error:', e);
   }
 }
 
@@ -697,6 +699,7 @@ function renderChart() {
     const v = d[cheapestKey];
     return v !== null && v !== undefined && v !== '' && !isNaN(Number(v)) && Number(v) > 50;
   });
+  console.log('validRows sample:', JSON.stringify(validRows.slice(0,3)), 'total:', validRows.length);
 
   const labels = validRows.map(d => {
     const dt = new Date(d.date);
@@ -807,6 +810,8 @@ function renderChart() {
           ticks: { color: '#6b7280', font: { family: "'DM Sans'", size: 10 }, maxTicksLimit: 8 }
         },
         y: {
+          min: 110,
+          max: 180,
           grid: { color: 'rgba(255,255,255,.04)' },
           ticks: {
             color: '#6b7280',
