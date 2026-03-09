@@ -193,111 +193,147 @@ h1 {
   background: rgba(52,211,153,.15);
 }
 
-/* ── TABLE ── */
-.price-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 13px;
-}
+/* ── STATION CARDS ── */
+.station-list { list-style: none; }
 
-.price-table thead th {
-  text-align: left;
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: .8px;
-  text-transform: uppercase;
-  color: var(--muted);
-  padding: 10px 12px;
+.station-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 14px 0;
   border-bottom: 1px solid var(--border);
-  white-space: nowrap;
 }
 
-.price-table thead th.right { text-align: right; }
+.station-card.unavailable { opacity: .4; }
 
-.price-table tbody tr {
-  border-bottom: 1px solid var(--border);
-  transition: background .1s;
+.rank-badge {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 2px;
 }
 
-.price-table tbody tr:hover {
-  background: rgba(255,255,255,.02);
-}
+.rank-badge.low  { background: rgba(52,211,153,.15);  color: var(--green); border: 1.5px solid rgba(52,211,153,.3); }
+.rank-badge.mid  { background: rgba(251,191,36,.15);  color: var(--amber); border: 1.5px solid rgba(251,191,36,.3); }
+.rank-badge.high { background: rgba(248,113,113,.15); color: var(--red);   border: 1.5px solid rgba(248,113,113,.3); }
+.rank-badge.none { background: rgba(255,255,255,.04); color: var(--muted); border: 1.5px solid rgba(255,255,255,.08); }
 
-.price-table tbody tr.unavailable {
-  opacity: .45;
-}
+.card-info { flex: 1; min-width: 0; }
 
-.price-table td {
-  padding: 10px 12px;
-  vertical-align: middle;
-}
-
-.price-table td.right { text-align: right; }
-
-.station-cell {
-  min-width: 180px;
-}
-
-.station-cell .sname {
+.card-name {
+  font-size: 15px;
   font-weight: 600;
   color: var(--text);
   text-decoration: none;
   display: block;
   line-height: 1.3;
-  word-wrap: break-word;
+}
+.card-name:hover { color: var(--green); }
+
+.card-addr {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 2px;
 }
 
-.station-cell .sname:hover { color: var(--green); }
-
-.station-cell .saddr {
+.card-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 5px;
   font-size: 11px;
   color: var(--muted);
-  margin-top: 1px;
+  flex-wrap: wrap;
 }
 
-.brand-cell {
-  font-size: 11px;
-  color: var(--muted);
-  white-space: nowrap;
-}
+.card-meta .dist::before { content: "📍 "; }
 
-.price-cell {
+.ts-fresh { color: var(--green); }
+.ts-aging { color: var(--amber); font-weight: 600; }
+.ts-stale { color: var(--muted); }
+
+.card-price { text-align: right; flex-shrink: 0; }
+
+.card-price-val {
   font-family: 'JetBrains Mono', monospace;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1;
+}
+.card-price-val small { font-size: 14px; }
+
+.card-price-val.low  { color: var(--green); }
+.card-price-val.mid  { color: var(--amber); }
+.card-price-val.high { color: var(--red); }
+.card-price-val.none { color: var(--muted); font-size: 13px; }
+
+.card-delta {
+  font-size: 11px;
+  font-family: 'JetBrains Mono', monospace;
+  margin-top: 3px;
+  text-align: right;
+}
+.card-delta.low  { color: var(--green); }
+.card-delta.mid  { color: var(--amber); }
+.card-delta.high { color: var(--red); }
+
+/* ── COSTCO BANNER ── */
+.costco-banner {
+  background: rgba(96,165,250,.07);
+  border: 1px solid rgba(96,165,250,.2);
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.costco-banner-left {}
+.costco-banner-title {
   font-size: 15px;
   font-weight: 700;
-  text-align: right;
-  white-space: nowrap;
-}
-
-.price-cell.low { color: var(--green); }
-.price-cell.mid { color: var(--amber); }
-.price-cell.high { color: var(--red); }
-.price-cell.none { color: var(--muted); font-size: 12px; font-weight: 500; }
-.price-cell.costco { color: var(--blue); }
-
-/* ── COSTCO ROW ── */
-.price-table tbody tr.costco-row {
-  background: rgba(96,165,250,.06);
-  border-left: 3px solid var(--blue);
-}
-
-.price-table tbody tr.costco-row:hover {
-  background: rgba(96,165,250,.1);
-}
-
-.price-table tbody tr.costco-row .sname {
   color: var(--blue);
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
-
-.updated-cell {
+.costco-tag {
+  font-size: 9px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 4px;
+  background: rgba(96,165,250,.15);
+  color: var(--blue);
+  border: 1px solid rgba(96,165,250,.25);
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+.costco-banner-sub {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 3px;
+}
+.costco-banner-ts {
   font-size: 11px;
-  text-align: right;
+  margin-top: 4px;
+}
+.costco-banner-price {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--blue);
   white-space: nowrap;
 }
-
-.updated-cell.fresh { color: var(--green); }
-.updated-cell.aging { color: var(--amber); }
-.updated-cell.stale { color: var(--muted); }
+.costco-banner-price small { font-size: 14px; }
 
 .tag {
   display: inline-block;
@@ -307,18 +343,6 @@ h1 {
   border-radius: 3px;
   margin-left: 6px;
   vertical-align: middle;
-}
-
-.tag-members {
-  background: rgba(96,165,250,.12);
-  color: var(--blue);
-  border: 1px solid rgba(96,165,250,.2);
-}
-
-.tag-cheapest {
-  background: rgba(52,211,153,.12);
-  color: var(--green);
-  border: 1px solid rgba(52,211,153,.2);
 }
 
 /* ── FOOTER ── */
@@ -405,10 +429,8 @@ h1 {
 
 @media (max-width: 600px) {
   h1 { font-size: 22px; }
-  .price-table { font-size: 12px; }
-  .price-cell { font-size: 13px; }
-  .station-cell { min-width: 120px; }
-  .brand-cell { display: none; }
+  .card-price-val { font-size: 20px; }
+  .costco-banner-price { font-size: 22px; }
 }
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
@@ -449,6 +471,7 @@ h1 {
     <a class="map-link" href="https://deeside-fuel-prices.netlify.app/" target="_blank">View map →</a>
   </div>
 
+  <div id="costcoBanner"></div>
   <div id="tableWrap">
     <div class="loading">Loading fuel prices…</div>
   </div>
@@ -563,98 +586,112 @@ function renderSummary() {
   }
 }
 
-function buildRow(s, avg, cheapestId, mostExpId) {
+function getPriceColour(p, avg) {
+  if (!p) return 'none';
+  const d = p - avg;
+  if (d < -1.0) return 'low';
+  if (d <= 0.5)  return 'mid';
+  return 'high';
+}
+
+function fmtTs(s) {
+  if (!s.updated) return { text: 'Not reporting', cls: 'ts-stale' };
+  const d = new Date(s.updated);
+  if (isNaN(d)) return { text: 'Not reporting', cls: 'ts-stale' };
+  const hrs = (Date.now() - d) / 3600000;
+  const dayName = d.toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short' });
+  const time = d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
+  if (hrs < 24)  return { text: 'Updated today ' + time, cls: 'ts-fresh' };
+  if (hrs < 48)  return { text: 'Updated ' + dayName + ', ' + time, cls: 'ts-aging' };
+  if (hrs < 120) return { text: '⚠ Updated ' + dayName + ', ' + time, cls: 'ts-aging' };
+  return { text: '⚠ Last reported ' + dayName, cls: 'ts-stale' };
+}
+
+function renderCostcoBanner(costco, avg) {
+  const el = document.getElementById('costcoBanner');
+  if (!costco) { el.innerHTML = ''; return; }
+  const p = getPrice(costco);
+  const cheapOpenPrice = [...stations]
+    .filter(s => getPrice(s) && isFresh(s) && !isCostco(s) && s.distance <= 10)
+    .sort((a,b) => getPrice(a)-getPrice(b))[0];
+  const saving = cheapOpenPrice ? ((getPrice(cheapOpenPrice) - p) / 100 * TANK_SIZE).toFixed(2) : null;
+  const ts = fmtTs(costco);
+  el.innerHTML = `
+    <div class="costco-banner">
+      <div class="costco-banner-left">
+        <div class="costco-banner-title">🔒 ${costco.name} <span class="costco-tag">Members only</span></div>
+        <div class="costco-banner-sub">${p ? p.toFixed(1) + 'p/litre' : ''}${saving && p ? ' · saves £' + saving + ' vs cheapest open station' : ''} · ${costco.distance} mi</div>
+        <div class="costco-banner-ts ${ts.cls}">${ts.text}</div>
+      </div>
+      ${p ? `<div class="costco-banner-price">${p.toFixed(1)}<small>p</small></div>` : '<div class="costco-banner-price" style="font-size:13px;color:var(--muted)">No price</div>'}
+    </div>`;
+}
+
+function buildCard(s, rank, avg) {
   const p = getPrice(s);
   const fresh = isFresh(s);
-  const isNoData = s.note || !p;
-  const unavail = isNoData || !fresh;
-  const upd = formatUpdated(s);
-  const costco = isCostco(s);
-  const isCheapest = !costco && s.id === cheapestId;
-  const isMostExp = !costco && s.id === mostExpId;
+  const unavail = !p || !fresh;
+  const colour = unavail ? 'none' : getPriceColour(p, avg);
+  const ts = fmtTs(s);
   const mapUrl = `https://www.google.com/maps/search/${encodeURIComponent(s.name + ', ' + s.address)}`;
-  const priceClass = unavail ? 'none' : (costco ? 'costco' : getPriceClass(p, avg));
-  const delta = p ? (p - avg) : 0;
-  const deltaStr = !unavail && p ? (delta < 0 ? delta.toFixed(1) + 'p' : '+' + delta.toFixed(1) + 'p') : '';
-  const deltaClass = unavail ? 'none' : (costco ? 'costco' : getPriceClass(p, avg));
-  const rowClass = unavail ? 'unavailable' : (costco ? 'costco-row' : '');
-  return `<tr class="${rowClass}">
-    <td class="station-cell">
-      <a class="sname" href="${mapUrl}" target="_blank">${s.name}</a>
-      <div class="saddr">${s.address}</div>
-    </td>
-    <td class="brand-cell">${s.brand || '—'}${costco ? ' <span class="tag tag-members">Members</span>' : ''}${isCheapest ? ' <span class="tag tag-cheapest">\u2605 Cheapest</span>' : ''}${isMostExp ? ' <span class="tag" style="background:rgba(248,113,113,.12);color:var(--red);border:1px solid rgba(248,113,113,.2)">Most expensive</span>' : ''}</td>
-    <td class="price-cell ${priceClass} right">
-      ${unavail ? (s.note ? 'Not reporting' : 'Unavailable') : p.toFixed(1)}
-    </td>
-    <td class="price-cell ${deltaClass} right" style="font-size:12px">
-      ${unavail ? '' : deltaStr}
-    </td>
-    <td class="updated-cell ${upd.cls} right">${s.note ? '\u2014' : upd.text}</td>
-  </tr>`;
+  const delta = p ? (p - avg) : null;
+  const deltaStr = delta !== null ? (delta < 0 ? delta.toFixed(1) + 'p vs avg' : '+' + delta.toFixed(1) + 'p vs avg') : '';
+  const rankHtml = rank
+    ? `<div class="rank-badge ${colour}">${rank}</div>`
+    : `<div class="rank-badge none">—</div>`;
+  return `<div class="station-card${unavail ? ' unavailable' : ''}">
+    ${rankHtml}
+    <div class="card-info">
+      <a class="card-name" href="${mapUrl}" target="_blank">${s.name}</a>
+      <div class="card-addr">${s.address}</div>
+      <div class="card-meta">
+        <span class="dist">${s.distance} mi</span>
+        <span class="${ts.cls}">${ts.text}</span>
+      </div>
+    </div>
+    <div class="card-price">
+      ${unavail
+        ? `<div class="card-price-val none">${s.note ? 'Not reporting' : 'Price unavailable'}</div>`
+        : `<div class="card-price-val ${colour}">${p.toFixed(1)}<small>p</small></div>
+           <div class="card-delta ${colour}">${deltaStr}</div>`
+      }
+    </div>
+  </div>`;
 }
 
 function renderTable() {
   const avg = nationalAvg[currentFuel];
   const CORE = 10;
-
   const local = stations.filter(s => s.distance <= CORE);
-  const localFresh = local.filter(s => getPrice(s) && isFresh(s) && !isCostco(s))
-                          .sort((a, b) => getPrice(a) - getPrice(b));
 
-  const cheapest10 = localFresh.slice(0, 10);
-  const expensive10 = [...localFresh].reverse().slice(0, 10).reverse();
+  const costco = local.find(s => isCostco(s));
+  renderCostcoBanner(costco && isFresh(costco) && getPrice(costco) ? costco : null, avg);
 
-  const cheapestIds = new Set(cheapest10.map(s => s.id));
-  const expensiveOnly = expensive10.filter(s => !cheapestIds.has(s.id));
+  // Ranked: open-access, fresh, sorted cheapest first
+  const ranked = local
+    .filter(s => !isCostco(s) && getPrice(s) && isFresh(s))
+    .sort((a, b) => getPrice(a) - getPrice(b));
 
-  const cheapestId = cheapest10.length ? cheapest10[0].id : null;
-  const mostExpId  = expensive10.length ? expensive10[expensive10.length - 1].id : null;
+  // Unavailable: no fresh price (and not Costco)
+  const unavail = local.filter(s => !isCostco(s) && (!getPrice(s) || !isFresh(s)));
 
-  const costcoStation = local.find(s => isCostco(s) && getPrice(s) && isFresh(s));
-
-  const totalFresh = local.filter(s => getPrice(s) && isFresh(s)).length;
-  const totalUnavail = local.length - totalFresh;
+  const totalFresh = ranked.length + (costco && isFresh(costco) ? 1 : 0);
   document.getElementById('stationCount').textContent =
-    `${local.length} local stations (${totalFresh} reporting, ${totalUnavail} unavailable)`;
+    `${local.length} local stations · ${totalFresh} reporting`;
 
-  const thead = `<table class="price-table">
-    <thead><tr>
-      <th>Station</th>
-      <th>Brand</th>
-      <th class="right">Price (p)</th>
-      <th class="right">vs UK avg</th>
-      <th class="right">Updated</th>
-    </tr></thead><tbody>`;
-
-  const sectionHeader = (label, colour) =>
-    `<tr><td colspan="5" style="padding:10px 12px 6px;font-size:9px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:${colour};border-bottom:1px solid var(--border);background:rgba(255,255,255,.015)">${label}</td></tr>`;
-
-  let html = thead;
-  html += sectionHeader('10 Cheapest nearby', '#34d399');
-  html += cheapest10.map(s => buildRow(s, avg, cheapestId, mostExpId)).join('');
-
-  if (expensiveOnly.length) {
-    html += sectionHeader('10 Most expensive nearby', '#f87171');
-    html += expensiveOnly.map(s => buildRow(s, avg, cheapestId, mostExpId)).join('');
+  let html = '';
+  ranked.forEach((s, i) => { html += buildCard(s, i + 1, avg); });
+  if (unavail.length) {
+    html += `<div style="padding:10px 0 4px;font-size:9px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);border-top:1px solid var(--border);margin-top:8px">Not reporting / price unavailable</div>`;
+    unavail.forEach(s => { html += buildCard(s, null, avg); });
   }
-
-  if (costcoStation) {
-    html += sectionHeader('Members only', '#60a5fa');
-    html += buildRow(costcoStation, avg, cheapestId, mostExpId);
-  }
-
-  html += '</tbody></table>';
 
   const ts = lastUpdated ? new Date(lastUpdated).toLocaleString('en-GB', { day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' }) : '';
-
-  document.getElementById('tableWrap').innerHTML = html;
+  document.getElementById('tableWrap').innerHTML = `<div class="station-list">${html}</div>`;
   document.getElementById('pageFooter').innerHTML = `
-    Data from the <a href="https://www.fuel-finder.service.gov.uk/" target="_blank">GOV.UK Fuel Finder Scheme</a> · 
+    Data from the <a href="https://www.fuel-finder.service.gov.uk/" target="_blank">GOV.UK Fuel Finder Scheme</a> ·
     Prices via DESNZ · Last updated: ${ts}<br>
-    Stations marked "Not reporting" have not submitted prices to the mandatory scheme.<br>
-    Stations marked "Unavailable" have not updated in over 5 days — prices may have changed.<br>
-    Prices below 115p/litre are excluded as likely data entry errors.<br><br>
+    Distances from Queensferry roundabout · Last updated: ${ts}<br>
     Built in 🏴󠁧󠁢󠁷󠁬󠁳󠁿 by <a href="https://deeside.com" target="_blank">Deeside.com</a>
   `;
 }
