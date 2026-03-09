@@ -530,8 +530,8 @@ function render() {
     if (age > 3) html.push(`<div class="stale-warning">⚠ Prices last updated ${Math.floor(age)} hours ago</div>`);
   }
 
-  // Stats bar
-  const allLivePrices = live.map(s => getPrice(s)).sort((a,b) => a-b);
+  // Stats bar — open access only (Costco excluded, matches graph and ranked list)
+  const allLivePrices = openAccess.map(s => getPrice(s)).sort((a,b) => a-b);
   const statCheapest  = allLivePrices[0] || null;
   const statHighest   = allLivePrices[allLivePrices.length - 1] || null;
   html.push(`<div class="stats-bar">
@@ -567,25 +567,6 @@ function render() {
     </div>`);
   }
 
-  // ── COSTCO BANNER ─────────────────────────────────────────
-  if (costcoStn && getPrice(costcoStn)) {
-    const cp2     = getPrice(costcoStn);
-    const saving2 = cheapestOpen ? (((getPrice(cheapestOpen) - cp2) / 100) * TANK).toFixed(2) : null;
-    const ts2     = fmtTs(costcoStn);
-    html.push(`<div class="costco-banner">
-      <div class="costco-banner-left">
-        <div class="costco-banner-title">🔒 Costco Chester <span class="badge-members">Members only</span></div>
-        <div class="costco-banner-sub">
-          ${cp2}p/litre
-          ${saving2 ? `· saves £${saving2} vs cheapest open station` : ''}
-          · ${costcoStn.distance} mi
-        </div>
-        <div class="costco-banner-ts ts ${ts2.cls}">${ts2.text}</div>
-      </div>
-      <div class="costco-banner-price">${toGBP(cp2)}</div>
-    </div>`);
-  }
-
   // ── TREND CHART PLACEHOLDER ───────────────────────────────
   html.push(`<div class="trend-card">
     <div class="trend-header">
@@ -605,7 +586,26 @@ function render() {
     <div class="legend-item"><span class="legend-dot" style="background:var(--red)"></span>Above avg</div>
   </div>`);
 
-  // Station rows — open access only (Costco rendered separately below rank #1)
+  // ── COSTCO BANNER — above ranked list ────────────────────
+  if (costcoStn && getPrice(costcoStn)) {
+    const cp2     = getPrice(costcoStn);
+    const saving2 = cheapestOpen ? (((getPrice(cheapestOpen) - cp2) / 100) * TANK).toFixed(2) : null;
+    const ts2     = fmtTs(costcoStn);
+    html.push(`<div class="costco-banner">
+      <div class="costco-banner-left">
+        <div class="costco-banner-title">🔒 Costco Chester <span class="badge-members">Members only</span></div>
+        <div class="costco-banner-sub">
+          ${cp2}p/litre
+          ${saving2 ? `· saves £${saving2} vs cheapest open station` : ''}
+          · ${costcoStn.distance} mi
+        </div>
+        <div class="costco-banner-ts ts ${ts2.cls}">${ts2.text}</div>
+      </div>
+      <div class="costco-banner-price">${cp2}<span style="font-size:11px;font-weight:400;color:var(--muted)">p</span></div>
+    </div>`);
+  }
+
+  // Station rows — open access only
   let rank = 0;
   const openRows = [];
   const costcoRowHtml = costcoStn ? (() => {
