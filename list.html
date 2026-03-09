@@ -3,6 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MRM6751LW8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-MRM6751LW8');
+</script>
 <title>Live Petrol & Diesel Prices — Deeside, Flintshire & Chester</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,500;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
@@ -16,6 +23,57 @@
   --amber: #fbbf24;
   --red: #f87171;
   --blue: #60a5fa;
+}
+
+.app-header {
+  padding: 14px 28px;
+  border-bottom: 1px solid rgba(255,255,255,.07);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: linear-gradient(180deg, #1a1d28 0%, #13151d 100%);
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.site-logo:hover { opacity: 0.8; }
+.logo-img { height: 24px; width: auto; }
+
+.header-ad {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex: 1;
+  justify-content: center;
+}
+
+.ad-text {
+  font-size: 22px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.ad-btn {
+  display: inline-block;
+  padding: 8px 18px;
+  background: linear-gradient(135deg, #d4a44c, #c4903a);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.ad-btn:hover { opacity: 0.85; }
+
+@media (max-width: 600px) {
+  .app-header { padding: 12px 16px; }
+  .header-ad { display: none; }
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -437,6 +495,14 @@ h1 {
 </head>
 <body>
 
+<header class="app-header">
+  <a href="https://deeside.com" class="site-logo"><img src="logo.png" alt="Deeside.com" class="logo-img"></a>
+  <div class="header-ad">
+    <span class="ad-text">Advertise here</span>
+    <a href="https://www.deeside.com/advertise-on-the-fuel-price-map" class="ad-btn" target="_blank">find out more ›</a>
+  </div>
+</header>
+
 <div class="container">
   <h1>Live Petrol & Diesel Prices in Deeside, Flintshire & Chester</h1>
   <p class="subtitle">
@@ -538,8 +604,8 @@ function renderSummary() {
   const avg_u = nationalAvg.unleaded;
   const avg_d = nationalAvg.diesel;
 
-  const freshU = stations.filter(s => s.unleaded && s.unleaded >= PRICE_FLOOR && isFresh(s) && !isCostco(s)).sort((a,b) => a.unleaded - b.unleaded);
-  const freshD = stations.filter(s => s.diesel && s.diesel >= PRICE_FLOOR && isFresh(s) && !isCostco(s)).sort((a,b) => a.diesel - b.diesel);
+  const freshU = stations.filter(s => s.distance <= 10 && s.unleaded && s.unleaded >= PRICE_FLOOR && isFresh(s) && !isCostco(s)).sort((a,b) => a.unleaded - b.unleaded);
+  const freshD = stations.filter(s => s.distance <= 10 && s.diesel && s.diesel >= PRICE_FLOOR && isFresh(s) && !isCostco(s)).sort((a,b) => a.diesel - b.diesel);
 
   if (freshU.length) {
     const cheapU = freshU[0];
@@ -661,7 +727,7 @@ function buildCard(s, rank, avg) {
 
 function renderTable() {
   const avg = nationalAvg[currentFuel];
-  const CORE = 8;
+  const CORE = 10;
   const local = stations.filter(s => s.distance <= CORE);
 
   const costco = local.find(s => isCostco(s));
