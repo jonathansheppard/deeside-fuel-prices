@@ -850,9 +850,11 @@ function getSortedStations() {
 }
 
 function getStats() {
-  const nonStale = stations.filter(s => getStaleState(s) !== 'stale');
-  const pool = nonStale.length > 0 ? nonStale : stations;
-  const prices = pool.map(s => getPrice(s)).filter(p => p && p > 0);
+  // Scoped to CORE_RADIUS — keeps stats bar consistent with list view
+  const core     = stations.filter(s => s.distance <= CORE_RADIUS && !s.is_motorway);
+  const nonStale = core.filter(s => getStaleState(s) !== 'stale');
+  const pool     = nonStale.length > 0 ? nonStale : core;
+  const prices   = pool.map(s => getPrice(s)).filter(p => p && p > 0);
   if (prices.length === 0) return { low: 0, avg: 0, high: 0, allStale: true };
   return { low: Math.min(...prices), avg: prices.reduce((a,b) => a+b,0)/prices.length, high: Math.max(...prices), allStale: nonStale.length === 0 };
 }
