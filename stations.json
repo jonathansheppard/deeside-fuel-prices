@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
     "unleaded": 138.3,
-    "diesel": 154.1
+    "diesel": 154.2
   },
-  "lastUpdated": "2026-03-09T13:31:53.198861+00:00",
+  "lastUpdated": "2026-03-09T14:00:12.315455+00:00",
   "stationCount": 77,
   "stations": [
     {
@@ -75,20 +75,6 @@
       "diesel": 141.9,
       "updated": "2026-02-25T09:43:41.585Z",
       "id": 50
-    },
-    {
-      "name": "Esso - Queensferry Service Station",
-      "brand": "QUEENSFERRY SERVICE STATION",
-      "address": "QUEENSFERRY SERVICE STATION, 108, CHESTER ROAD EAST, SHOTTON, DEESIDE, CH5 1QD, DEESIDE, CH5 1QD",
-      "lat": 53.2088991,
-      "lng": -3.0326318,
-      "distance": 0.0,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 132.9,
-      "diesel": 144.9,
-      "updated": "2026-03-07T10:51:09.622Z",
-      "id": 51
     },
     {
       "name": "BROUGHTON CHESTER EXTRA - PETROL FILLING STATION",
@@ -259,20 +245,6 @@
       "id": 14
     },
     {
-      "name": "Plas Acton Fuel Station",
-      "brand": "GULF",
-      "address": "PLAS ACTON SERVICE STATION, PLAS ACTON GARAGE, 282, CHESTER ROAD, WRECSAM, LL12 8DU, WRECSAM, LL12 8DU",
-      "lat": 53.0701313,
-      "lng": -2.9897412,
-      "distance": 9.8,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 135.9,
-      "diesel": 145.9,
-      "updated": "2026-03-05T12:58:20.434Z",
-      "id": 26
-    },
-    {
       "name": "BIRKENHEAD BIDSTON MOSS EXTRA - PETROL FILLING STATION",
       "brand": "TESCO",
       "address": "BIDSTON LINK ROAD, BIRKENHEAD, CH43 7AA",
@@ -371,6 +343,20 @@
       "id": 49
     },
     {
+      "name": "Esso - Queensferry Service Station",
+      "brand": "QUEENSFERRY SERVICE STATION",
+      "address": "QUEENSFERRY SERVICE STATION, 108, CHESTER ROAD EAST, SHOTTON, DEESIDE, CH5 1QD, DEESIDE, CH5 1QD",
+      "lat": 53.2088991,
+      "lng": -3.0326318,
+      "distance": 0.0,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 136.9,
+      "diesel": 159.9,
+      "updated": "2026-03-09T13:45:35.066Z",
+      "id": 51
+    },
+    {
       "name": "MFG WALLASEY VILLAGE",
       "brand": "BP",
       "address": "15-35 LEASOWE ROAD, WALLASEY VILLAGE, CH44 2BY",
@@ -381,7 +367,7 @@
       "is_motorway": false,
       "unleaded": 136.9,
       "diesel": 159.9,
-      "updated": "2026-03-09T09:52:05.774Z",
+      "updated": "2026-03-09T13:52:17.394Z",
       "id": 52
     },
     {
@@ -507,7 +493,7 @@
       "is_motorway": false,
       "unleaded": 138.9,
       "diesel": 151.9,
-      "updated": "2026-03-09T09:55:01.820Z",
+      "updated": "2026-03-09T13:55:10.339Z",
       "id": 15
     },
     {
@@ -707,6 +693,20 @@
       "id": 19
     },
     {
+      "name": "Plas Acton Fuel Station",
+      "brand": "GULF",
+      "address": "PLAS ACTON SERVICE STATION, PLAS ACTON GARAGE, 282, CHESTER ROAD, WRECSAM, LL12 8DU, WRECSAM, LL12 8DU",
+      "lat": 53.0701313,
+      "lng": -2.9897412,
+      "distance": 9.8,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 139.9,
+      "diesel": 159.9,
+      "updated": "2026-03-09T13:58:25.292Z",
+      "id": 26
+    },
+    {
       "name": "RONTEC WREXHAM",
       "brand": "BP",
       "address": "WREXHAM ROAD, JOHNSTOWN, WREXHAM, LL14 1PA",
@@ -759,7 +759,7 @@
       "is_motorway": false,
       "unleaded": 139.9,
       "diesel": 159.9,
-      "updated": "2026-03-09T09:36:53.921Z",
+      "updated": "2026-03-09T13:37:03.244Z",
       "id": 54
     },
     {
@@ -968,8 +968,8 @@
       "is_supermarket": true,
       "is_motorway": false,
       "unleaded": 144.9,
-      "diesel": 160.9,
-      "updated": "2026-03-06T09:43:14.120Z",
+      "diesel": 162.9,
+      "updated": "2026-03-09T13:33:05.525Z",
       "id": 57
     },
     {
