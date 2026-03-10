@@ -3,7 +3,7 @@
     "unleaded": 139.4,
     "diesel": 157.2
   },
-  "lastUpdated": "2026-03-10T21:30:32.559020+00:00",
+  "lastUpdated": "2026-03-10T22:00:24.019460+00:00",
   "stationCount": 85,
   "stations": [
     {
@@ -161,20 +161,6 @@
       "id": 14
     },
     {
-      "name": "SAINSBURYS ELLESMERE PORT",
-      "brand": "SAINSBURY'S",
-      "address": "KINSEY ROAD, ELLESMERE PORT, CH65 9HN",
-      "lat": 53.26233,
-      "lng": -2.88042,
-      "distance": 7.3,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 135.9,
-      "diesel": 151.9,
-      "updated": "2026-03-09T21:53:36.316Z",
-      "id": 16
-    },
-    {
       "name": "ASDA QUEENSFERRY",
       "brand": "ASDA",
       "address": "ASTON ROAD, QUEENSFERRY, CH5 1TP",
@@ -245,6 +231,20 @@
       "id": 78
     },
     {
+      "name": "SAINSBURYS ELLESMERE PORT",
+      "brand": "SAINSBURY'S",
+      "address": "KINSEY ROAD, ELLESMERE PORT, CH65 9HN",
+      "lat": 53.26233,
+      "lng": -2.88042,
+      "distance": 7.3,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 136.9,
+      "diesel": 152.9,
+      "updated": "2026-03-10T21:52:03.554Z",
+      "id": 16
+    },
+    {
       "name": "RONTEC BEBINGTON",
       "brand": "BP",
       "address": "BROMBOROUGH ROAD, BEBINGTON, CH63 7RD",
@@ -299,34 +299,6 @@
       "diesel": 159.9,
       "updated": "2026-03-09T13:45:35.066Z",
       "id": 59
-    },
-    {
-      "name": "SAINSBURYS BIRKENHEAD",
-      "brand": "SAINSBURY'S",
-      "address": "342A WOODCHURCH ROAD, BIRKENHEAD, CH42 8PQ",
-      "lat": 53.37472,
-      "lng": -3.04765,
-      "distance": 11.5,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 136.9,
-      "diesel": 149.9,
-      "updated": "2026-03-09T21:51:21.722Z",
-      "id": 70
-    },
-    {
-      "name": "SAINSBURYS UPTON",
-      "brand": "SAINSBURY'S",
-      "address": "UPTON BY PASS, WIRRAL, CH49 6QG",
-      "lat": 53.37986,
-      "lng": -3.09998,
-      "distance": 12.1,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 137.9,
-      "diesel": 150.9,
-      "updated": "2026-03-09T21:59:10.553Z",
-      "id": 22
     },
     {
       "name": "FERDI'S LOCAL",
@@ -399,6 +371,20 @@
       "id": 68
     },
     {
+      "name": "SAINSBURYS BIRKENHEAD",
+      "brand": "SAINSBURY'S",
+      "address": "342A WOODCHURCH ROAD, BIRKENHEAD, CH42 8PQ",
+      "lat": 53.37472,
+      "lng": -3.04765,
+      "distance": 11.5,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 137.9,
+      "diesel": 152.9,
+      "updated": "2026-03-10T21:50:19.902Z",
+      "id": 70
+    },
+    {
       "name": "SAINSBURYS WREXHAM",
       "brand": "SAINSBURY'S",
       "address": "RETAIL PARK, PLAS COCH ROAD, WREXHAM, LL11 2BA",
@@ -411,6 +397,20 @@
       "diesel": 150.9,
       "updated": "2026-03-09T22:02:51.691Z",
       "id": 80
+    },
+    {
+      "name": "SAINSBURYS UPTON",
+      "brand": "SAINSBURY'S",
+      "address": "UPTON BY PASS, WIRRAL, CH49 6QG",
+      "lat": 53.37986,
+      "lng": -3.09998,
+      "distance": 12.1,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 138.9,
+      "diesel": 151.9,
+      "updated": "2026-03-10T21:49:31.502Z",
+      "id": 22
     },
     {
       "name": "BP HARVEST ENERGY LAIRD STREET",
@@ -483,20 +483,6 @@
       "id": 3
     },
     {
-      "name": "MFG MORRISONS DENBIGH",
-      "brand": "MORRISONS",
-      "address": "SMITHFIELD ROAD, DENBIGH, LL16 3LW",
-      "lat": 53.18224,
-      "lng": -3.423087,
-      "distance": 16.3,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 139.9,
-      "diesel": 155.9,
-      "updated": "2026-03-10T21:01:41.865Z",
-      "id": 5
-    },
-    {
       "name": "BP HARVEST ENERGY OVERPOOL",
       "brand": "BP HARVEST ENERGY",
       "address": "OVERPOOL ROAD, ELLESMERE PORT, CH66 2JF",
@@ -535,7 +521,7 @@
       "is_motorway": false,
       "unleaded": 139.9,
       "diesel": 156.9,
-      "updated": "2026-03-10T17:56:08.525Z",
+      "updated": "2026-03-10T21:56:17.189Z",
       "id": 15
     },
     {
@@ -609,20 +595,6 @@
       "id": 48
     },
     {
-      "name": "MFG MORRISONS RHYL",
-      "brand": "MORRISONS",
-      "address": "MARSH ROAD, RHYL, LL18 2DF",
-      "lat": 53.317314,
-      "lng": -3.489098,
-      "distance": 20.3,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 139.9,
-      "diesel": 154.9,
-      "updated": "2026-03-10T19:58:35.658Z",
-      "id": 53
-    },
-    {
       "name": "BR Flint",
       "brand": "SPAR",
       "address": "211A, CHESTER ROAD, OAKENHOLT, Y FFLINT, CH6 5DZ, Y FFLINT, CH6 5DZ",
@@ -647,22 +619,8 @@
       "is_motorway": false,
       "unleaded": 139.9,
       "diesel": 165.9,
-      "updated": "2026-03-10T17:53:39.884Z",
+      "updated": "2026-03-10T21:53:51.801Z",
       "id": 60
-    },
-    {
-      "name": "SAINSBURYS RHYL",
-      "brand": "SAINSBURY'S",
-      "address": "RHYL ROAD, RHUDDLAN, RHYL, LL18 2TP",
-      "lat": 53.30371,
-      "lng": -3.46769,
-      "distance": 19.1,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 139.9,
-      "diesel": 156.9,
-      "updated": "2026-03-09T21:53:29.078Z",
-      "id": 61
     },
     {
       "name": "MFG COLESHILL",
@@ -675,7 +633,7 @@
       "is_motorway": false,
       "unleaded": 139.9,
       "diesel": 165.9,
-      "updated": "2026-03-10T17:38:07.022Z",
+      "updated": "2026-03-10T21:38:16.433Z",
       "id": 62
     },
     {
@@ -693,6 +651,20 @@
       "id": 73
     },
     {
+      "name": "MFG MORRISONS DENBIGH",
+      "brand": "MORRISONS",
+      "address": "SMITHFIELD ROAD, DENBIGH, LL16 3LW",
+      "lat": 53.18224,
+      "lng": -3.423087,
+      "distance": 16.3,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 140.9,
+      "diesel": 159.9,
+      "updated": "2026-03-10T21:51:42.756Z",
+      "id": 5
+    },
+    {
       "name": "BR Gwersyllt",
       "brand": "SPAR",
       "address": "PARKWALL SERVICE STATION, MOLD ROAD, GWERSYLLT, WREXHAM, LL11 4AH, WREXHAM, LL11 4AH",
@@ -705,6 +677,34 @@
       "diesel": 154.9,
       "updated": "2026-03-10T11:33:32.501Z",
       "id": 17
+    },
+    {
+      "name": "MFG MORRISONS RHYL",
+      "brand": "MORRISONS",
+      "address": "MARSH ROAD, RHYL, LL18 2DF",
+      "lat": 53.317314,
+      "lng": -3.489098,
+      "distance": 20.3,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 140.9,
+      "diesel": 159.9,
+      "updated": "2026-03-10T21:40:38.226Z",
+      "id": 53
+    },
+    {
+      "name": "SAINSBURYS RHYL",
+      "brand": "SAINSBURY'S",
+      "address": "RHYL ROAD, RHUDDLAN, RHYL, LL18 2TP",
+      "lat": 53.30371,
+      "lng": -3.46769,
+      "distance": 19.1,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 140.9,
+      "diesel": 157.9,
+      "updated": "2026-03-10T21:54:30.538Z",
+      "id": 61
     },
     {
       "name": "SHELL GAYTON",
