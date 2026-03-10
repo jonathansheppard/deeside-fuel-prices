@@ -3,7 +3,7 @@
     "unleaded": 138.9,
     "diesel": 155.8
   },
-  "lastUpdated": "2026-03-10T00:30:15.777707+00:00",
+  "lastUpdated": "2026-03-10T01:00:18.914199+00:00",
   "stationCount": 77,
   "stations": [
     {
@@ -129,7 +129,7 @@
       "is_motorway": false,
       "unleaded": 135.9,
       "diesel": 148.9,
-      "updated": "2026-03-09T20:56:20.416Z",
+      "updated": "2026-03-10T00:56:25.205Z",
       "id": 2
     },
     {
@@ -227,7 +227,7 @@
       "is_motorway": false,
       "unleaded": 135.9,
       "diesel": 150.9,
-      "updated": "2026-03-09T20:56:18.641Z",
+      "updated": "2026-03-10T00:56:23.421Z",
       "id": 66
     },
     {
@@ -427,20 +427,6 @@
       "id": 7
     },
     {
-      "name": "MFG ROWTON",
-      "brand": "ESSO",
-      "address": "WHITCHURCH ROAD, ROWTON, CH3 6AF",
-      "lat": 53.176188,
-      "lng": -2.825907,
-      "distance": 8.9,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 138.9,
-      "diesel": 151.9,
-      "updated": "2026-03-09T21:55:27.003Z",
-      "id": 15
-    },
-    {
       "name": "BP HARVEST ENERGY LAIRD STREET",
       "brand": "BP HARVEST ENERGY",
       "address": "LAIRD STREET, BIRKENHEAD, CH41 7AJ",
@@ -551,6 +537,20 @@
       "diesel": 159.9,
       "updated": "2026-03-09T12:43:17.838Z",
       "id": 11
+    },
+    {
+      "name": "MFG ROWTON",
+      "brand": "ESSO",
+      "address": "WHITCHURCH ROAD, ROWTON, CH3 6AF",
+      "lat": 53.176188,
+      "lng": -2.825907,
+      "distance": 8.9,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 139.9,
+      "diesel": 156.9,
+      "updated": "2026-03-10T00:55:33.187Z",
+      "id": 15
     },
     {
       "name": "BR Gwersyllt",
