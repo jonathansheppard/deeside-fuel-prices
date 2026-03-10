@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
-    "unleaded": 139.4,
-    "diesel": 157.2
+    "unleaded": 139.5,
+    "diesel": 157.4
   },
-  "lastUpdated": "2026-03-10T22:00:24.019460+00:00",
+  "lastUpdated": "2026-03-10T22:30:27.485474+00:00",
   "stationCount": 85,
   "stations": [
     {
@@ -385,20 +385,6 @@
       "id": 70
     },
     {
-      "name": "SAINSBURYS WREXHAM",
-      "brand": "SAINSBURY'S",
-      "address": "RETAIL PARK, PLAS COCH ROAD, WREXHAM, LL11 2BA",
-      "lat": 53.05571,
-      "lng": -3.00904,
-      "distance": 10.6,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 137.9,
-      "diesel": 150.9,
-      "updated": "2026-03-09T22:02:51.691Z",
-      "id": 80
-    },
-    {
       "name": "SAINSBURYS UPTON",
       "brand": "SAINSBURY'S",
       "address": "UPTON BY PASS, WIRRAL, CH49 6QG",
@@ -469,6 +455,20 @@
       "id": 69
     },
     {
+      "name": "SAINSBURYS WREXHAM",
+      "brand": "SAINSBURY'S",
+      "address": "RETAIL PARK, PLAS COCH ROAD, WREXHAM, LL11 2BA",
+      "lat": 53.05571,
+      "lng": -3.00904,
+      "distance": 10.6,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 138.9,
+      "diesel": 151.9,
+      "updated": "2026-03-10T22:02:54.678Z",
+      "id": 80
+    },
+    {
       "name": "H W Oultram & Co",
       "brand": "OIL 4 WALES",
       "address": "H W OULTRAM & CO, NEWBRIDGE FARM & FILLING STATION, HOLYWELL ROAD, EWLOE, DEESIDE, CH5 3BS, DEESIDE, CH5 3BS",
@@ -506,8 +506,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 139.9,
-      "diesel": 152.9,
-      "updated": "2026-03-10T20:19:50.743Z",
+      "diesel": 155.9,
+      "updated": "2026-03-10T22:01:59.229Z",
       "id": 9
     },
     {
