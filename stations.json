@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
-    "unleaded": 139.3,
+    "unleaded": 139.4,
     "diesel": 157.0
   },
-  "lastUpdated": "2026-03-10T14:00:16.693157+00:00",
+  "lastUpdated": "2026-03-10T14:30:15.471186+00:00",
   "stationCount": 85,
   "stations": [
     {
@@ -791,20 +791,6 @@
       "id": 21
     },
     {
-      "name": "Gordale Service Station",
-      "brand": "GORDALE SERVICE STATION",
-      "address": "GORDALE SERVICE STATION, CHESTER HIGH ROAD, BURTON, NESTON, CH64 8TF, NESTON, CH64 8TF",
-      "lat": 53.2741984,
-      "lng": -3.0014083,
-      "distance": 4.7,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 140.9,
-      "diesel": 169.9,
-      "updated": "2026-03-09T08:51:40.191Z",
-      "id": 42
-    },
-    {
       "name": "SHELL GAYTON",
       "brand": "SHELL",
       "address": "CHESTER ROAD, WIRRAL, MERSEYSIDE, CH60 3RY",
@@ -873,6 +859,20 @@
       "diesel": 158.9,
       "updated": "2026-03-10T11:03:33.764Z",
       "id": 41
+    },
+    {
+      "name": "Gordale Service Station",
+      "brand": "GORDALE SERVICE STATION",
+      "address": "GORDALE SERVICE STATION, CHESTER HIGH ROAD, BURTON, NESTON, CH64 8TF, NESTON, CH64 8TF",
+      "lat": 53.2741984,
+      "lng": -3.0014083,
+      "distance": 4.7,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 141.9,
+      "diesel": 172.9,
+      "updated": "2026-03-10T14:05:41.820Z",
+      "id": 42
     },
     {
       "name": "ASDA ELLESMERE PORT EXPRESS PETROL",
