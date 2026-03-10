@@ -55,6 +55,29 @@ h1 {
 
 .subtitle a:hover { text-decoration: underline; }
 
+/* ── HEADER BAR ── */
+.app-header {
+  padding: 14px 28px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: linear-gradient(180deg, #1a1d28 0%, #13151d 100%);
+}
+.site-logo { display: flex; align-items: center; text-decoration: none; transition: opacity 0.2s; }
+.site-logo:hover { opacity: 0.8; }
+.logo-img { height: 36px; width: auto; }
+.header-ad { display: flex; align-items: center; gap: 16px; flex: 1; justify-content: center; }
+.ad-text { font-size: 22px; color: #ffffff; font-weight: 700; }
+.ad-btn {
+  display: inline-block; padding: 8px 18px;
+  background: linear-gradient(135deg, #d4a44c, #c4903a);
+  color: #fff; font-size: 13px; font-weight: 600; border-radius: 6px;
+  text-decoration: none; transition: opacity 0.2s;
+}
+.ad-btn:hover { opacity: 0.85; }
+
 /* ── SUMMARY CARDS ── */
 .summary-grid {
   display: grid;
@@ -379,6 +402,9 @@ h1 {
   .price-cell { font-size: 13px; }
   .station-cell { min-width: 120px; }
   .brand-cell { display: none; }
+  .app-header { padding: 10px 16px; }
+  .ad-text { font-size: 16px; }
+  .header-ad { gap: 10px; }
 }
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
@@ -386,6 +412,16 @@ h1 {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.2.0/chartjs-plugin-datalabels.min.js"></script>
 </head>
 <body>
+
+<header class="app-header">
+  <div>
+    <a href="https://deeside.com" class="site-logo"><img src="logo.png" alt="Deeside.com" class="logo-img"></a>
+  </div>
+  <div class="header-ad">
+    <span class="ad-text">Advertise here</span>
+    <a href="https://deeside.com/advertise" class="ad-btn" target="_blank">find out more ›</a>
+  </div>
+</header>
 
 <div class="container">
   <h1>Live Petrol & Diesel Prices in Deeside, Flintshire & Chester</h1>
