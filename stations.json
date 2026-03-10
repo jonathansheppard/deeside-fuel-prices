@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
     "unleaded": 139.4,
-    "diesel": 157.0
+    "diesel": 157.1
   },
-  "lastUpdated": "2026-03-10T14:30:15.471186+00:00",
+  "lastUpdated": "2026-03-10T15:00:15.635052+00:00",
   "stationCount": 85,
   "stations": [
     {
@@ -282,8 +282,8 @@
       "is_supermarket": true,
       "is_motorway": false,
       "unleaded": 136.9,
-      "diesel": 146.9,
-      "updated": "2026-03-04T14:46:36.681Z",
+      "diesel": 154.9,
+      "updated": "2026-03-10T14:56:35.259Z",
       "id": 50
     },
     {
@@ -567,20 +567,6 @@
       "id": 15
     },
     {
-      "name": "SHELL CARLETT",
-      "brand": "SHELL",
-      "address": "1201 NEW CHESTER ROAD, WIRRAL, CH62 0BZ",
-      "lat": 53.314799,
-      "lng": -2.963826,
-      "distance": 7.9,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 139.9,
-      "diesel": 167.9,
-      "updated": "2026-03-09T12:09:14.877Z",
-      "id": 18
-    },
-    {
       "name": "MFG LISCARD",
       "brand": "SHELL",
       "address": "LLOYDS CORNER / LISCARD ROAD, WALLASEY, CH44 9AD",
@@ -749,20 +735,6 @@
       "id": 77
     },
     {
-      "name": "SHELL CO-OP WREXHAM",
-      "brand": "SHELL",
-      "address": "MOLD ROAD, WREXHAM, LL11 2AF",
-      "lat": 53.051908,
-      "lng": -3.006356,
-      "distance": 10.9,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 140.9,
-      "diesel": 154.9,
-      "updated": "2026-03-09T12:05:35.155Z",
-      "id": 4
-    },
-    {
       "name": "BR Gwersyllt",
       "brand": "SPAR",
       "address": "PARKWALL SERVICE STATION, MOLD ROAD, GWERSYLLT, WREXHAM, LL11 4AH, WREXHAM, LL11 4AH",
@@ -817,6 +789,34 @@
       "diesel": 156.9,
       "updated": "2026-03-09T12:04:13.245Z",
       "id": 72
+    },
+    {
+      "name": "SHELL CO-OP WREXHAM",
+      "brand": "SHELL",
+      "address": "MOLD ROAD, WREXHAM, LL11 2AF",
+      "lat": 53.051908,
+      "lng": -3.006356,
+      "distance": 10.9,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 141.9,
+      "diesel": 155.9,
+      "updated": "2026-03-10T14:36:04.615Z",
+      "id": 4
+    },
+    {
+      "name": "SHELL CARLETT",
+      "brand": "SHELL",
+      "address": "1201 NEW CHESTER ROAD, WIRRAL, CH62 0BZ",
+      "lat": 53.314799,
+      "lng": -2.963826,
+      "distance": 7.9,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 141.9,
+      "diesel": 168.9,
+      "updated": "2026-03-10T14:29:03.001Z",
+      "id": 18
     },
     {
       "name": "RONTEC RUABON",
@@ -917,20 +917,6 @@
       "id": 82
     },
     {
-      "name": "SHELL CHESTER",
-      "brand": "SHELL",
-      "address": "TARVIN ROAD, CHESTER, CH3 5NJ",
-      "lat": 53.193526,
-      "lng": -2.856604,
-      "distance": 7.4,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 142.9,
-      "diesel": 160.9,
-      "updated": "2026-03-09T12:22:03.997Z",
-      "id": 13
-    },
-    {
       "name": "Dobshill Service Station",
       "brand": "DOBSHILL SERVICE STATION",
       "address": "DOBSHILL SERVICE STATION, CHESTER ROAD, DOBSHILL, DEESIDE, CH5 3LZ, DEESIDE, CH5 3LZ",
@@ -997,7 +983,7 @@
       "is_motorway": false,
       "unleaded": 143.9,
       "diesel": 161.9,
-      "updated": "2026-03-10T12:05:46.083Z",
+      "updated": "2026-03-10T14:34:28.210Z",
       "id": 36
     },
     {
@@ -1013,6 +999,20 @@
       "diesel": 156.0,
       "updated": "2026-03-10T11:54:13.213Z",
       "id": 6
+    },
+    {
+      "name": "SHELL CHESTER",
+      "brand": "SHELL",
+      "address": "TARVIN ROAD, CHESTER, CH3 5NJ",
+      "lat": 53.193526,
+      "lng": -2.856604,
+      "distance": 7.4,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 144.9,
+      "diesel": 161.9,
+      "updated": "2026-03-10T14:34:03.016Z",
+      "id": 13
     },
     {
       "name": "STANS OF LLANGOLLEN",
@@ -1043,34 +1043,6 @@
       "id": 29
     },
     {
-      "name": "ASDA RHUDDLAN EXPRESS PETROL",
-      "brand": "TEXACO",
-      "address": "RHYL ROAD, RHUDDLAN, LL18 2TS",
-      "lat": 53.2927362,
-      "lng": -3.4638487,
-      "distance": 18.7,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 144.9,
-      "diesel": 158.9,
-      "updated": "2026-03-10T11:10:47.247Z",
-      "id": 35
-    },
-    {
-      "name": "SHELL CO-OP MOLD",
-      "brand": "SHELL",
-      "address": "CHESTER ROAD, MOLD, CH7 6LQ",
-      "lat": 53.181156,
-      "lng": -3.111588,
-      "distance": 3.8,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 144.9,
-      "diesel": 163.9,
-      "updated": "2026-03-09T12:33:02.871Z",
-      "id": 55
-    },
-    {
       "name": "Greenacre Garage",
       "brand": "GREENACRE GARAGE",
       "address": "GREENACRE GARAGE, CHURCH STREET, TARVIN, CHESTER, CH3 8NA, CHESTER, CH3 8NA",
@@ -1097,6 +1069,34 @@
       "diesel": 161.9,
       "updated": "2026-03-10T12:58:49.505Z",
       "id": 81
+    },
+    {
+      "name": "ASDA RHUDDLAN EXPRESS PETROL",
+      "brand": "TEXACO",
+      "address": "RHYL ROAD, RHUDDLAN, LL18 2TS",
+      "lat": 53.2927362,
+      "lng": -3.4638487,
+      "distance": 18.7,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 145.9,
+      "diesel": 161.9,
+      "updated": "2026-03-10T14:50:56.120Z",
+      "id": 35
+    },
+    {
+      "name": "SHELL CO-OP MOLD",
+      "brand": "SHELL",
+      "address": "CHESTER ROAD, MOLD, CH7 6LQ",
+      "lat": 53.181156,
+      "lng": -3.111588,
+      "distance": 3.8,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 145.9,
+      "diesel": 163.9,
+      "updated": "2026-03-10T14:36:04.200Z",
+      "id": 55
     },
     {
       "name": "SHELL NORTHOP",
