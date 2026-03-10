@@ -401,15 +401,6 @@ h1 {
     <div class="summary-card diesel" id="summaryDiesel"></div>
   </div>
 
-  <!-- Price Spread Chart -->
-  <div class="chart-panel" id="chartPanel">
-    <div class="chart-header">
-      <span class="chart-title">Cheapest & Most Expensive Stations</span>
-    </div>
-    <div style="position:relative;height:auto"><canvas id="priceChart"></canvas></div>
-    <div class="chart-note">10 cheapest + 10 most expensive · Dashed line = UK average · Costco in blue (members only)</div>
-  </div>
-
   <div class="toggle-row">
     <button class="toggle-btn active" id="btnUnleaded" onclick="setFuel('unleaded')">Unleaded</button>
     <button class="toggle-btn" id="btnDiesel" onclick="setFuel('diesel')">Diesel</button>
@@ -419,6 +410,15 @@ h1 {
 
   <div id="tableWrap">
     <div class="loading">Loading fuel prices…</div>
+  </div>
+
+  <!-- Price Comparison Chart -->
+  <div class="chart-panel" id="chartPanel">
+    <div class="chart-header">
+      <span class="chart-title">5 Cheapest vs 5 Most Expensive</span>
+    </div>
+    <div style="position:relative;height:320px"><canvas id="priceChart"></canvas></div>
+    <div class="chart-note">Dashed line = UK average · Costco shown in blue (members only — excluded from cheapest ranking)</div>
   </div>
 
   <div class="page-footer" id="pageFooter"></div>
@@ -486,12 +486,19 @@ function renderSummary() {
   const freshU = stations.filter(s => s.unleaded && s.unleaded >= PRICE_FLOOR && isFresh(s) && !isCostco(s)).sort((a,b) => a.unleaded - b.unleaded);
   const freshD = stations.filter(s => s.diesel && s.diesel >= PRICE_FLOOR && isFresh(s) && !isCostco(s)).sort((a,b) => a.diesel - b.diesel);
 
+  // Check Costco prices for caveats
+  const costcoU = stations.filter(s => s.unleaded && s.unleaded >= PRICE_FLOOR && isFresh(s) && isCostco(s)).sort((a,b) => a.unleaded - b.unleaded);
+  const costcoD = stations.filter(s => s.diesel && s.diesel >= PRICE_FLOOR && isFresh(s) && isCostco(s)).sort((a,b) => a.diesel - b.diesel);
+
   if (freshU.length) {
     const cheapU = freshU[0];
     const expU = freshU[freshU.length - 1];
     const costCheap = (cheapU.unleaded / 100 * TANK_SIZE).toFixed(2);
     const costExp = (expU.unleaded / 100 * TANK_SIZE).toFixed(2);
     const saving = (costExp - costCheap).toFixed(2);
+    const costcoNote = costcoU.length && costcoU[0].unleaded < cheapU.unleaded
+      ? `<div style="font-size:10px;color:var(--blue);margin-top:8px">🔒 Costco members: ${costcoU[0].unleaded.toFixed(1)}p (£${(costcoU[0].unleaded / 100 * TANK_SIZE).toFixed(2)})</div>`
+      : '';
     document.getElementById('summaryUnleaded').innerHTML = `
       <div class="fuel-label">Unleaded (E10)</div>
       <div class="tank-calc">
@@ -505,6 +512,7 @@ function renderSummary() {
         <span class="station-ref">at ${expU.name}</span>
       </div>
       <div class="tank-saving">Save £${saving} by choosing the cheapest</div>
+      ${costcoNote}
     `;
   }
 
@@ -514,6 +522,9 @@ function renderSummary() {
     const costCheap = (cheapD.diesel / 100 * TANK_SIZE).toFixed(2);
     const costExp = (expD.diesel / 100 * TANK_SIZE).toFixed(2);
     const saving = (costExp - costCheap).toFixed(2);
+    const costcoNote = costcoD.length && costcoD[0].diesel < cheapD.diesel
+      ? `<div style="font-size:10px;color:var(--blue);margin-top:8px">🔒 Costco members: ${costcoD[0].diesel.toFixed(1)}p (£${(costcoD[0].diesel / 100 * TANK_SIZE).toFixed(2)})</div>`
+      : '';
     document.getElementById('summaryDiesel').innerHTML = `
       <div class="fuel-label">Diesel (B7)</div>
       <div class="tank-calc">
@@ -527,6 +538,7 @@ function renderSummary() {
         <span class="station-ref">at ${expD.name}</span>
       </div>
       <div class="tank-saving">Save £${saving} by choosing the cheapest</div>
+      ${costcoNote}
     `;
   }
 }
@@ -547,8 +559,11 @@ function renderTable() {
   const totalFresh = sorted.filter(s => getPrice(s) && isFresh(s)).length;
   const totalUnavail = sorted.length - totalFresh;
 
-  document.getElementById('stationCount').textContent = 
-    `${sorted.length} stations (${totalFresh} reporting, ${totalUnavail} unavailable)`;
+  const unavailNote = totalUnavail > 0 
+    ? `<span title="Stations that haven't reported prices in 5+ days, or haven't submitted to the scheme" style="cursor:help;border-bottom:1px dashed var(--muted)">${totalUnavail} unavailable</span>`
+    : '0 unavailable';
+  document.getElementById('stationCount').innerHTML = 
+    `${sorted.length} stations · ${totalFresh} reporting · ${unavailNote}`;
 
   let html = `<table class="price-table">
     <thead><tr>
@@ -662,14 +677,13 @@ function renderChart() {
   }
   document.getElementById('chartPanel').style.display = 'block';
 
-  // Top 10 cheapest + separator + top 10 most expensive
-  const top10 = allSorted.slice(0, 10);
-  const bottom10 = allSorted.slice(-10);
-  // Remove duplicates if fewer than 20 stations
-  const bottomFiltered = bottom10.filter(b => !top10.find(t => t.name === b.name));
-  const chartStations = [...top10, { name: '· · ·', price: null, sep: true }, ...bottomFiltered];
+  // Top 5 cheapest + separator + top 5 most expensive
+  const top5 = allSorted.slice(0, 5);
+  const bottom5 = allSorted.slice(-5);
+  const bottomFiltered = bottom5.filter(b => !top5.find(t => t.name === b.name));
+  const chartStations = [...top5, { name: '', price: null, sep: true }, ...bottomFiltered];
 
-  const labels = chartStations.map(s => s.name);
+  const labels = chartStations.map(s => s.sep ? '' : (s.costco ? s.name + ' ★' : s.name));
   const prices = chartStations.map(s => s.price);
 
   const barColors = chartStations.map(s => {
@@ -689,11 +703,6 @@ function renderChart() {
     if (delta <= 0.5) return '#fbbf24';
     return '#f87171';
   });
-
-  // Fixed height for ~20 bars + separator
-  const chartHeight = Math.max(300, chartStations.length * 24 + 60);
-  canvas.style.height = chartHeight + 'px';
-  canvas.parentElement.style.height = chartHeight + 'px';
 
   const validPrices = prices.filter(p => p !== null);
 
@@ -735,7 +744,7 @@ function renderChart() {
             if (delta <= 0.5) return '#fbbf24';
             return '#f87171';
           },
-          font: { family: "'JetBrains Mono'", size: 10, weight: 600 },
+          font: { family: "'JetBrains Mono'", size: 11, weight: 600 },
           formatter: function(value) {
             return value !== null ? value.toFixed(1) + 'p' : '';
           }
@@ -783,7 +792,7 @@ function renderChart() {
           grid: { color: 'rgba(255,255,255,.04)' },
           ticks: {
             color: '#6b7280',
-            font: { family: "'JetBrains Mono'", size: 10 },
+            font: { family: "'JetBrains Mono'", size: 12 },
             callback: v => v + 'p'
           },
           min: Math.floor(Math.min(...validPrices) - 3),
@@ -793,7 +802,7 @@ function renderChart() {
           grid: { display: false },
           ticks: {
             color: '#9CA3AF',
-            font: { family: "'DM Sans'", size: 10 },
+            font: { family: "'DM Sans'", size: 12, weight: 500 },
             mirror: false
           }
         }
