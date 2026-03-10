@@ -667,9 +667,10 @@ function fmtTs(s) {
   const hrs = (Date.now() - d) / 3600000;
   const dayName = d.toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short' });
   const time = d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
-  if (hrs < 24)  return { text: 'Updated today ' + time, cls: 'ts-fresh' };
-  if (hrs < 48)  return { text: 'Updated ' + dayName + ', ' + time, cls: 'ts-aging' };
-  if (hrs < 120) return { text: '⚠ Updated ' + dayName + ', ' + time, cls: 'ts-aging' };
+  const isToday = d.toDateString() === new Date().toDateString();
+  if (isToday)    return { text: 'Updated today ' + time, cls: 'ts-fresh' };
+  if (hrs < 48)   return { text: 'Updated ' + dayName + ', ' + time, cls: 'ts-aging' };
+  if (hrs < 120)  return { text: '⚠ Updated ' + dayName + ', ' + time, cls: 'ts-aging' };
   return { text: '⚠ Last reported ' + dayName, cls: 'ts-stale' };
 }
 
