@@ -3,7 +3,7 @@
     "unleaded": 139.5,
     "diesel": 157.3
   },
-  "lastUpdated": "2026-03-10T18:00:31.808652+00:00",
+  "lastUpdated": "2026-03-10T18:33:19.553815+00:00",
   "stationCount": 85,
   "stations": [
     {
@@ -707,20 +707,6 @@
       "id": 17
     },
     {
-      "name": "PRESTATYN SUPERSTORE - PETROL FILLING STATION",
-      "brand": "TESCO",
-      "address": "TESCO STORES, PRESTATYN SHOPPING PARK, PRESTATYN, LL19 9BJ",
-      "lat": 53.3366,
-      "lng": -3.40236,
-      "distance": 17.6,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 140.9,
-      "diesel": 153.9,
-      "updated": "2026-03-09T15:42:48.781Z",
-      "id": 21
-    },
-    {
       "name": "SHELL GAYTON",
       "brand": "SHELL",
       "address": "CHESTER ROAD, WIRRAL, MERSEYSIDE, CH60 3RY",
@@ -775,6 +761,20 @@
       "diesel": 168.9,
       "updated": "2026-03-10T14:29:03.001Z",
       "id": 18
+    },
+    {
+      "name": "PRESTATYN SUPERSTORE - PETROL FILLING STATION",
+      "brand": "TESCO",
+      "address": "TESCO STORES, PRESTATYN SHOPPING PARK, PRESTATYN, LL19 9BJ",
+      "lat": 53.3366,
+      "lng": -3.40236,
+      "distance": 17.6,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 141.9,
+      "diesel": 153.9,
+      "updated": "2026-03-09T15:42:48.781Z",
+      "id": 21
     },
     {
       "name": "RONTEC RUABON",
