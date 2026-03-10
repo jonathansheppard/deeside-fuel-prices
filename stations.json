@@ -1,10 +1,10 @@
 {
   "nationalAvg": {
     "unleaded": 138.8,
-    "diesel": 156.1
+    "diesel": 156.3
   },
-  "lastUpdated": "2026-03-10T10:00:44.063363+00:00",
-  "stationCount": 79,
+  "lastUpdated": "2026-03-10T10:30:15.825234+00:00",
+  "stationCount": 80,
   "stations": [
     {
       "name": "SMITHY VIEW SERVICE STATION ACTON",
@@ -18,7 +18,7 @@
       "unleaded": 125.9,
       "diesel": 134.9,
       "updated": "2026-02-21T10:07:39.893Z",
-      "id": 57
+      "id": 58
     },
     {
       "name": "COSTCO WHOLESALE CHESTER",
@@ -46,21 +46,7 @@
       "unleaded": 130.9,
       "diesel": 138.9,
       "updated": "2026-01-16T10:29:42.000Z",
-      "id": 43
-    },
-    {
-      "name": "MFG BEECHLEY",
-      "brand": "TEXACO",
-      "address": "KINGSMILL ROAD, HIGHTOWN, LL13 8NH",
-      "lat": 53.0409,
-      "lng": -2.98956,
-      "distance": 11.7,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 132.9,
-      "diesel": 141.9,
-      "updated": "2026-02-25T09:43:41.585Z",
-      "id": 52
+      "id": 44
     },
     {
       "name": "MFG MORRISONS SALTNEY",
@@ -102,7 +88,7 @@
       "unleaded": 134.9,
       "diesel": 149.9,
       "updated": "2026-03-09T22:53:50.412Z",
-      "id": 65
+      "id": 66
     },
     {
       "name": "SAINSBURYS PENSBY ROAD THINGWALL",
@@ -242,7 +228,7 @@
       "unleaded": 135.9,
       "diesel": 148.9,
       "updated": "2026-03-09T15:13:45.870Z",
-      "id": 61
+      "id": 62
     },
     {
       "name": "MFG MORRISONS ELLESMERE PORT",
@@ -256,7 +242,7 @@
       "unleaded": 135.9,
       "diesel": 150.9,
       "updated": "2026-03-10T08:56:32.880Z",
-      "id": 68
+      "id": 69
     },
     {
       "name": "WREXHAM EXTRA - PETROL FILLING STATION",
@@ -270,7 +256,7 @@
       "unleaded": 135.9,
       "diesel": 146.9,
       "updated": "2026-03-09T15:32:35.116Z",
-      "id": 72
+      "id": 73
     },
     {
       "name": "SPITAL SF CONNECT",
@@ -287,6 +273,20 @@
       "id": 39
     },
     {
+      "name": "ASDA LISCARD SUPERSTORE",
+      "brand": "ASDA",
+      "address": "SEA VIEW ROAD, WALLASEY, CH45 4NZ",
+      "lat": 53.4242714,
+      "lng": -3.049059,
+      "distance": 14.9,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 136.9,
+      "diesel": 155.9,
+      "updated": "2026-03-10T10:06:04.613Z",
+      "id": 42
+    },
+    {
       "name": "HILLCREST MOTOR CO LTD",
       "brand": "GULF",
       "address": "Hillcres Motor Co Ltd, HOLYWELL, CH8 7SJ",
@@ -298,7 +298,7 @@
       "unleaded": 136.9,
       "diesel": 146.9,
       "updated": "2026-03-04T14:46:36.681Z",
-      "id": 44
+      "id": 45
     },
     {
       "name": "Esso - Saltney Service Station",
@@ -312,7 +312,7 @@
       "unleaded": 136.9,
       "diesel": 159.9,
       "updated": "2026-03-09T11:40:18.467Z",
-      "id": 51
+      "id": 52
     },
     {
       "name": "Esso - Queensferry Service Station",
@@ -326,7 +326,7 @@
       "unleaded": 136.9,
       "diesel": 159.9,
       "updated": "2026-03-09T13:45:35.066Z",
-      "id": 53
+      "id": 54
     },
     {
       "name": "SAINSBURYS BIRKENHEAD",
@@ -340,7 +340,7 @@
       "unleaded": 136.9,
       "diesel": 149.9,
       "updated": "2026-03-09T21:51:21.722Z",
-      "id": 64
+      "id": 65
     },
     {
       "name": "SAINSBURYS UPTON",
@@ -410,7 +410,21 @@
       "unleaded": 137.9,
       "diesel": 146.9,
       "updated": "2026-03-09T15:07:40.401Z",
-      "id": 45
+      "id": 46
+    },
+    {
+      "name": "MFG BEECHLEY",
+      "brand": "TEXACO",
+      "address": "KINGSMILL ROAD, HIGHTOWN, LL13 8NH",
+      "lat": 53.0409,
+      "lng": -2.98956,
+      "distance": 11.7,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 137.9,
+      "diesel": 151.9,
+      "updated": "2026-03-10T10:19:18.386Z",
+      "id": 53
     },
     {
       "name": "Rhydymwyn Service Station",
@@ -424,7 +438,7 @@
       "unleaded": 137.9,
       "diesel": 155.9,
       "updated": "2026-03-09T12:36:55.666Z",
-      "id": 62
+      "id": 63
     },
     {
       "name": "SAINSBURYS WREXHAM",
@@ -438,7 +452,7 @@
       "unleaded": 137.9,
       "diesel": 150.9,
       "updated": "2026-03-09T22:02:51.691Z",
-      "id": 74
+      "id": 75
     },
     {
       "name": "BP HARVEST ENERGY OVERPOOL",
@@ -480,7 +494,7 @@
       "unleaded": 138.9,
       "diesel": 157.9,
       "updated": "2026-03-09T12:05:35.758Z",
-      "id": 48
+      "id": 49
     },
     {
       "name": "BP HARVEST ENERGY HOYLAKE",
@@ -494,7 +508,7 @@
       "unleaded": 138.9,
       "diesel": 152.9,
       "updated": "2026-03-09T16:52:19.376Z",
-      "id": 63
+      "id": 64
     },
     {
       "name": "SHELL WIRRAL WAY",
@@ -508,7 +522,7 @@
       "unleaded": 138.9,
       "diesel": 156.9,
       "updated": "2026-03-09T12:04:13.471Z",
-      "id": 69
+      "id": 70
     },
     {
       "name": "H W Oultram & Co",
@@ -690,7 +704,7 @@
       "unleaded": 139.9,
       "diesel": 155.9,
       "updated": "2026-03-09T12:44:44.325Z",
-      "id": 42
+      "id": 43
     },
     {
       "name": "MFG MORRISONS RHYL",
@@ -704,7 +718,7 @@
       "unleaded": 139.9,
       "diesel": 154.9,
       "updated": "2026-03-10T07:58:17.390Z",
-      "id": 47
+      "id": 48
     },
     {
       "name": "BR Flint",
@@ -718,7 +732,7 @@
       "unleaded": 139.9,
       "diesel": 159.9,
       "updated": "2026-03-09T16:52:03.335Z",
-      "id": 50
+      "id": 51
     },
     {
       "name": "MFG WALLASEY VILLAGE",
@@ -732,7 +746,7 @@
       "unleaded": 139.9,
       "diesel": 165.9,
       "updated": "2026-03-10T09:53:16.196Z",
-      "id": 54
+      "id": 55
     },
     {
       "name": "SAINSBURYS RHYL",
@@ -746,7 +760,7 @@
       "unleaded": 139.9,
       "diesel": 156.9,
       "updated": "2026-03-09T21:53:29.078Z",
-      "id": 55
+      "id": 56
     },
     {
       "name": "MFG COLESHILL",
@@ -760,7 +774,7 @@
       "unleaded": 139.9,
       "diesel": 165.9,
       "updated": "2026-03-10T09:37:49.036Z",
-      "id": 56
+      "id": 57
     },
     {
       "name": "RUTHIN",
@@ -774,7 +788,7 @@
       "unleaded": 139.9,
       "diesel": 164.9,
       "updated": "2026-03-09T12:43:28.570Z",
-      "id": 67
+      "id": 68
     },
     {
       "name": "SHELL MERSEY VIEW",
@@ -788,7 +802,7 @@
       "unleaded": 139.9,
       "diesel": 159.9,
       "updated": "2026-03-09T12:09:20.439Z",
-      "id": 71
+      "id": 72
     },
     {
       "name": "SHELL CO-OP WREXHAM",
@@ -844,7 +858,7 @@
       "unleaded": 140.9,
       "diesel": 157.9,
       "updated": "2026-03-09T12:05:19.670Z",
-      "id": 60
+      "id": 61
     },
     {
       "name": "SHELL UPTON",
@@ -858,7 +872,7 @@
       "unleaded": 140.9,
       "diesel": 156.9,
       "updated": "2026-03-09T12:04:13.245Z",
-      "id": 66
+      "id": 67
     },
     {
       "name": "BR Buckley",
@@ -872,7 +886,7 @@
       "unleaded": 140.9,
       "diesel": null,
       "updated": "2026-03-09T16:54:04.562Z",
-      "id": 75
+      "id": 76
     },
     {
       "name": "STANS OF LLANGOLLEN",
@@ -900,7 +914,7 @@
       "unleaded": 141.9,
       "diesel": 153.9,
       "updated": "2026-03-09T14:52:34.312Z",
-      "id": 58
+      "id": 59
     },
     {
       "name": "MFG PRESTATYN",
@@ -914,7 +928,7 @@
       "unleaded": 141.9,
       "diesel": 165.9,
       "updated": "2026-03-10T09:16:28.609Z",
-      "id": 76
+      "id": 77
     },
     {
       "name": "SHELL CHESTER",
@@ -956,7 +970,7 @@
       "unleaded": 142.9,
       "diesel": 159.9,
       "updated": "2026-03-09T12:12:05.978Z",
-      "id": 70
+      "id": 71
     },
     {
       "name": "ASCONA HOLYWELL SERVICE STATION",
@@ -998,7 +1012,7 @@
       "unleaded": 144.9,
       "diesel": 163.9,
       "updated": "2026-03-09T12:33:02.871Z",
-      "id": 49
+      "id": 50
     },
     {
       "name": "Greenacre Garage",
@@ -1012,7 +1026,7 @@
       "unleaded": 144.9,
       "diesel": 162.9,
       "updated": "2026-03-09T13:33:05.525Z",
-      "id": 59
+      "id": 60
     },
     {
       "name": "SHELL NORTHOP",
@@ -1040,7 +1054,7 @@
       "unleaded": 153.9,
       "diesel": 153.9,
       "updated": "2026-03-06T08:58:50.061Z",
-      "id": 73
+      "id": 74
     },
     {
       "name": "Dyffryn Service Station",
@@ -1068,7 +1082,7 @@
       "unleaded": 159.9,
       "diesel": 183.9,
       "updated": "2026-03-09T12:04:16.771Z",
-      "id": 46
+      "id": 47
     },
     {
       "name": "Asda Quay Express (Esso)",
@@ -1083,7 +1097,7 @@
       "is_supermarket": false,
       "is_motorway": false,
       "note": "Not reporting prices",
-      "id": 77
+      "id": 78
     },
     {
       "name": "Asda Deeside Express Petrol",
@@ -1098,7 +1112,7 @@
       "is_supermarket": true,
       "is_motorway": false,
       "note": "Not reporting prices",
-      "id": 78
+      "id": 79
     },
     {
       "name": "Asda Queensferry Petrol",
@@ -1113,7 +1127,7 @@
       "is_supermarket": true,
       "is_motorway": false,
       "note": "Not reporting prices",
-      "id": 79
+      "id": 80
     }
   ]
 }
