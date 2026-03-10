@@ -3,7 +3,7 @@
     "unleaded": 139.0,
     "diesel": 156.5
   },
-  "lastUpdated": "2026-03-10T11:30:19.166043+00:00",
+  "lastUpdated": "2026-03-10T12:02:06.938061+00:00",
   "stationCount": 83,
   "stations": [
     {
@@ -61,20 +61,6 @@
       "diesel": 148.9,
       "updated": "2026-03-10T09:11:42.825Z",
       "id": 20
-    },
-    {
-      "name": "RONTEC BEBINGTON",
-      "brand": "BP",
-      "address": "BROMBOROUGH ROAD, BEBINGTON, CH63 7RD",
-      "lat": 53.34781,
-      "lng": -2.99834,
-      "distance": 9.7,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 134.9,
-      "diesel": 152.9,
-      "updated": "2026-03-09T11:44:32.382Z",
-      "id": 43
     },
     {
       "name": "SAINSBURYS KINGS ROAD BEBINGTON",
@@ -171,7 +157,7 @@
       "is_motorway": false,
       "unleaded": 135.9,
       "diesel": 150.9,
-      "updated": "2026-03-10T07:57:01.335Z",
+      "updated": "2026-03-10T11:57:05.525Z",
       "id": 14
     },
     {
@@ -259,18 +245,18 @@
       "id": 76
     },
     {
-      "name": "SPITAL SF CONNECT",
+      "name": "RONTEC BEBINGTON",
       "brand": "BP",
-      "address": "BRIMSTAGE ROAD, WIRRAL, CH63 3EL",
-      "lat": 53.34132,
-      "lng": -3.00749,
-      "distance": 9.2,
+      "address": "BROMBOROUGH ROAD, BEBINGTON, CH63 7RD",
+      "lat": 53.34781,
+      "lng": -2.99834,
+      "distance": 9.7,
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 136.9,
-      "diesel": 152.9,
-      "updated": "2026-03-10T09:46:25.536Z",
-      "id": 42
+      "diesel": 156.9,
+      "updated": "2026-03-10T11:57:19.121Z",
+      "id": 43
     },
     {
       "name": "ASDA LISCARD SUPERSTORE",
@@ -397,6 +383,20 @@
       "diesel": 157.9,
       "updated": "2026-03-09T12:00:49.342Z",
       "id": 36
+    },
+    {
+      "name": "SPITAL SF CONNECT",
+      "brand": "BP",
+      "address": "BRIMSTAGE ROAD, WIRRAL, CH63 3EL",
+      "lat": 53.34132,
+      "lng": -3.00749,
+      "distance": 9.2,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 137.9,
+      "diesel": 152.9,
+      "updated": "2026-03-10T09:46:25.536Z",
+      "id": 42
     },
     {
       "name": "BIRKENHEAD BIDSTON MOSS EXTRA - PETROL FILLING STATION",
@@ -581,20 +581,6 @@
       "id": 15
     },
     {
-      "name": "BR Gwersyllt",
-      "brand": "SPAR",
-      "address": "PARKWALL SERVICE STATION, MOLD ROAD, GWERSYLLT, WREXHAM, LL11 4AH, WREXHAM, LL11 4AH",
-      "lat": 53.0792616,
-      "lng": -3.021987,
-      "distance": 9.0,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 139.9,
-      "diesel": 149.9,
-      "updated": "2026-03-06T14:31:14.853Z",
-      "id": 17
-    },
-    {
       "name": "SHELL CARLETT",
       "brand": "SHELL",
       "address": "1201 NEW CHESTER ROAD, WIRRAL, CH62 0BZ",
@@ -703,7 +689,7 @@
       "is_motorway": false,
       "unleaded": 139.9,
       "diesel": 154.9,
-      "updated": "2026-03-10T07:58:17.390Z",
+      "updated": "2026-03-10T11:58:23.413Z",
       "id": 51
     },
     {
@@ -803,6 +789,20 @@
       "diesel": 154.9,
       "updated": "2026-03-09T12:05:35.155Z",
       "id": 4
+    },
+    {
+      "name": "BR Gwersyllt",
+      "brand": "SPAR",
+      "address": "PARKWALL SERVICE STATION, MOLD ROAD, GWERSYLLT, WREXHAM, LL11 4AH, WREXHAM, LL11 4AH",
+      "lat": 53.0792616,
+      "lng": -3.021987,
+      "distance": 9.0,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 140.9,
+      "diesel": 154.9,
+      "updated": "2026-03-10T11:33:32.501Z",
+      "id": 17
     },
     {
       "name": "PRESTATYN SUPERSTORE - PETROL FILLING STATION",
@@ -959,20 +959,6 @@
       "id": 74
     },
     {
-      "name": "ASCONA HOLYWELL SERVICE STATION",
-      "brand": "VALERO",
-      "address": "HOLWAY ROAD, HOLYWELL, CH8 7LQ",
-      "lat": 53.279441,
-      "lng": -3.2410974,
-      "distance": 9.9,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 143.0,
-      "diesel": 155.0,
-      "updated": "2026-03-10T08:49:33.787Z",
-      "id": 6
-    },
-    {
       "name": "CASTLE VIEW",
       "brand": "TEXACO",
       "address": "RHYL ROAD, DENBIGH, LL16 5SU",
@@ -999,6 +985,20 @@
       "diesel": 159.9,
       "updated": "2026-03-10T11:07:42.435Z",
       "id": 32
+    },
+    {
+      "name": "ASCONA HOLYWELL SERVICE STATION",
+      "brand": "VALERO",
+      "address": "HOLWAY ROAD, HOLYWELL, CH8 7LQ",
+      "lat": 53.279441,
+      "lng": -3.2410974,
+      "distance": 9.9,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 144.0,
+      "diesel": 156.0,
+      "updated": "2026-03-10T11:54:13.213Z",
+      "id": 6
     },
     {
       "name": "Ruabon Park Service Station",
