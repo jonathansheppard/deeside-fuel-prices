@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
-    "unleaded": 138.8,
-    "diesel": 155.4
+    "unleaded": 138.9,
+    "diesel": 155.7
   },
-  "lastUpdated": "2026-03-09T23:30:16.570677+00:00",
+  "lastUpdated": "2026-03-10T00:00:38.998832+00:00",
   "stationCount": 77,
   "stations": [
     {
@@ -185,7 +185,7 @@
       "is_motorway": false,
       "unleaded": 135.9,
       "diesel": 150.9,
-      "updated": "2026-03-09T19:56:48.938Z",
+      "updated": "2026-03-09T23:56:53.175Z",
       "id": 14
     },
     {
@@ -299,20 +299,6 @@
       "diesel": 159.9,
       "updated": "2026-03-09T13:45:35.066Z",
       "id": 51
-    },
-    {
-      "name": "MFG WALLASEY VILLAGE",
-      "brand": "BP",
-      "address": "15-35 LEASOWE ROAD, WALLASEY VILLAGE, CH44 2BY",
-      "lat": 53.422893,
-      "lng": -3.065875,
-      "distance": 14.8,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 136.9,
-      "diesel": 159.9,
-      "updated": "2026-03-09T21:52:40.630Z",
-      "id": 52
     },
     {
       "name": "SAINSBURYS BIRKENHEAD",
@@ -689,7 +675,7 @@
       "is_motorway": false,
       "unleaded": 139.9,
       "diesel": 154.9,
-      "updated": "2026-03-09T21:09:00.564Z",
+      "updated": "2026-03-09T23:58:04.771Z",
       "id": 45
     },
     {
@@ -705,6 +691,20 @@
       "diesel": 159.9,
       "updated": "2026-03-09T16:52:03.335Z",
       "id": 48
+    },
+    {
+      "name": "MFG WALLASEY VILLAGE",
+      "brand": "BP",
+      "address": "15-35 LEASOWE ROAD, WALLASEY VILLAGE, CH44 2BY",
+      "lat": 53.422893,
+      "lng": -3.065875,
+      "distance": 14.8,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 139.9,
+      "diesel": 165.9,
+      "updated": "2026-03-09T23:48:46.182Z",
+      "id": 52
     },
     {
       "name": "SAINSBURYS RHYL",
@@ -730,8 +730,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 139.9,
-      "diesel": 159.9,
-      "updated": "2026-03-09T21:37:21.909Z",
+      "diesel": 165.9,
+      "updated": "2026-03-09T23:54:26.956Z",
       "id": 54
     },
     {
@@ -884,8 +884,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 141.9,
-      "diesel": 159.9,
-      "updated": "2026-03-09T21:15:56.922Z",
+      "diesel": 165.9,
+      "updated": "2026-03-09T23:41:06.398Z",
       "id": 74
     },
     {
