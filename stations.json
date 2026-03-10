@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
     "unleaded": 138.9,
-    "diesel": 155.7
+    "diesel": 155.8
   },
-  "lastUpdated": "2026-03-10T00:00:38.998832+00:00",
+  "lastUpdated": "2026-03-10T00:30:15.777707+00:00",
   "stationCount": 77,
   "stations": [
     {
@@ -329,20 +329,6 @@
       "id": 22
     },
     {
-      "name": "MFG STRAWBERRY",
-      "brand": "BP",
-      "address": "WHITBY ROUNDABOUT, ELLESMERE PORT, CH66 2PY",
-      "lat": 53.256833,
-      "lng": -2.909397,
-      "distance": 6.1,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 137.9,
-      "diesel": 159.9,
-      "updated": "2026-03-09T21:04:31.185Z",
-      "id": 24
-    },
-    {
       "name": "RONTEC RUABON",
       "brand": "ESSO",
       "address": "RUABON BY PASS, WREXHAM, LL14 6YY",
@@ -549,7 +535,7 @@
       "is_motorway": false,
       "unleaded": 139.9,
       "diesel": 152.9,
-      "updated": "2026-03-09T21:56:09.487Z",
+      "updated": "2026-03-10T00:19:21.050Z",
       "id": 9
     },
     {
@@ -604,9 +590,23 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 139.9,
-      "diesel": 159.9,
-      "updated": "2026-03-09T21:05:59.772Z",
+      "diesel": 165.9,
+      "updated": "2026-03-10T00:01:08.014Z",
       "id": 19
+    },
+    {
+      "name": "MFG STRAWBERRY",
+      "brand": "BP",
+      "address": "WHITBY ROUNDABOUT, ELLESMERE PORT, CH66 2PY",
+      "lat": 53.256833,
+      "lng": -2.909397,
+      "distance": 6.1,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 139.9,
+      "diesel": 165.9,
+      "updated": "2026-03-10T00:18:37.589Z",
+      "id": 24
     },
     {
       "name": "Plas Acton Fuel Station",
