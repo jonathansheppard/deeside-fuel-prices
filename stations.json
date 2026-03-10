@@ -3,7 +3,7 @@
     "unleaded": 139.6,
     "diesel": 157.1
   },
-  "lastUpdated": "2026-03-10T15:30:17.172214+00:00",
+  "lastUpdated": "2026-03-10T16:00:19.359292+00:00",
   "stationCount": 85,
   "stations": [
     {
@@ -157,7 +157,7 @@
       "is_motorway": false,
       "unleaded": 135.9,
       "diesel": 150.9,
-      "updated": "2026-03-10T11:57:05.525Z",
+      "updated": "2026-03-10T15:57:09.760Z",
       "id": 14
     },
     {
@@ -469,20 +469,6 @@
       "id": 69
     },
     {
-      "name": "SHELL WIRRAL WAY",
-      "brand": "SHELL",
-      "address": "413 BOROUGH ROAD, BIRKENHEAD, CH42 0HA",
-      "lat": 53.384042,
-      "lng": -3.032912,
-      "distance": 12.1,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 138.9,
-      "diesel": 156.9,
-      "updated": "2026-03-09T12:04:13.471Z",
-      "id": 75
-    },
-    {
       "name": "H W Oultram & Co",
       "brand": "OIL 4 WALES",
       "address": "H W OULTRAM & CO, NEWBRIDGE FARM & FILLING STATION, HOLYWELL ROAD, EWLOE, DEESIDE, CH5 3BS, DEESIDE, CH5 3BS",
@@ -605,7 +591,7 @@
       "is_motorway": false,
       "unleaded": 139.9,
       "diesel": 157.9,
-      "updated": "2026-03-09T16:28:16.231Z",
+      "updated": "2026-03-10T15:32:11.637Z",
       "id": 27
     },
     {
@@ -633,7 +619,7 @@
       "is_motorway": false,
       "unleaded": 139.9,
       "diesel": 154.9,
-      "updated": "2026-03-10T11:58:23.413Z",
+      "updated": "2026-03-10T15:58:29.347Z",
       "id": 53
     },
     {
@@ -889,6 +875,20 @@
       "id": 64
     },
     {
+      "name": "SHELL WIRRAL WAY",
+      "brand": "SHELL",
+      "address": "413 BOROUGH ROAD, BIRKENHEAD, CH42 0HA",
+      "lat": 53.384042,
+      "lng": -3.032912,
+      "distance": 12.1,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 141.9,
+      "diesel": 158.9,
+      "updated": "2026-03-10T15:52:03.146Z",
+      "id": 75
+    },
+    {
       "name": "SHELL MERSEY VIEW",
       "brand": "SHELL",
       "address": "STATION ROAD, ELLESMERE PORT, CH65 4AX",
@@ -1108,8 +1108,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 149.9,
-      "diesel": 170.9,
-      "updated": "2026-03-09T12:09:13.283Z",
+      "diesel": 171.9,
+      "updated": "2026-03-10T15:32:03.420Z",
       "id": 23
     },
     {
