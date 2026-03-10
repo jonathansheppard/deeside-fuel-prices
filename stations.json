@@ -3,7 +3,7 @@
     "unleaded": 139.3,
     "diesel": 157.0
   },
-  "lastUpdated": "2026-03-10T13:30:16.052382+00:00",
+  "lastUpdated": "2026-03-10T14:00:16.693157+00:00",
   "stationCount": 85,
   "stations": [
     {
@@ -357,20 +357,6 @@
       "id": 33
     },
     {
-      "name": "RONTEC HOYLAKE",
-      "brand": "ESSO",
-      "address": "HOYLAKE, HOYLAKE, CH47 0LA",
-      "lat": 53.39785,
-      "lng": -3.16973,
-      "distance": 14.2,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 137.9,
-      "diesel": 157.9,
-      "updated": "2026-03-09T12:00:49.342Z",
-      "id": 37
-    },
-    {
       "name": "SPITAL SF CONNECT",
       "brand": "BP",
       "address": "BRIMSTAGE ROAD, WIRRAL, CH63 3EL",
@@ -453,6 +439,20 @@
       "diesel": 159.9,
       "updated": "2026-03-09T09:50:45.994Z",
       "id": 25
+    },
+    {
+      "name": "RONTEC HOYLAKE",
+      "brand": "ESSO",
+      "address": "HOYLAKE, HOYLAKE, CH47 0LA",
+      "lat": 53.39785,
+      "lng": -3.16973,
+      "distance": 14.2,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 138.9,
+      "diesel": 158.9,
+      "updated": "2026-03-10T13:58:38.174Z",
+      "id": 37
     },
     {
       "name": "SHELL LITTLE WAITROSE HINDERTON",
@@ -563,7 +563,7 @@
       "is_motorway": false,
       "unleaded": 139.9,
       "diesel": 156.9,
-      "updated": "2026-03-10T09:55:51.966Z",
+      "updated": "2026-03-10T13:56:00.257Z",
       "id": 15
     },
     {
@@ -689,7 +689,7 @@
       "is_motorway": false,
       "unleaded": 139.9,
       "diesel": 165.9,
-      "updated": "2026-03-10T09:53:16.196Z",
+      "updated": "2026-03-10T13:53:27.990Z",
       "id": 60
     },
     {
@@ -717,7 +717,7 @@
       "is_motorway": false,
       "unleaded": 139.9,
       "diesel": 165.9,
-      "updated": "2026-03-10T09:37:49.036Z",
+      "updated": "2026-03-10T13:37:58.137Z",
       "id": 62
     },
     {
@@ -831,20 +831,6 @@
       "diesel": 156.9,
       "updated": "2026-03-09T12:04:13.245Z",
       "id": 72
-    },
-    {
-      "name": "STANS OF LLANGOLLEN",
-      "brand": "TEXACO",
-      "address": "STANS OF LLANGOLLEN, BERWYN STREET, LLANGOLLEN, LL20 8NF, LLANGOLLEN, LL20 8NF",
-      "lat": 52.9688428,
-      "lng": -3.171139,
-      "distance": 17.6,
-      "is_supermarket": true,
-      "is_motorway": false,
-      "unleaded": 141.9,
-      "diesel": 154.9,
-      "updated": "2026-03-07T14:33:10.784Z",
-      "id": 28
     },
     {
       "name": "RONTEC RUABON",
@@ -1027,6 +1013,20 @@
       "diesel": 156.0,
       "updated": "2026-03-10T11:54:13.213Z",
       "id": 6
+    },
+    {
+      "name": "STANS OF LLANGOLLEN",
+      "brand": "TEXACO",
+      "address": "STANS OF LLANGOLLEN, BERWYN STREET, LLANGOLLEN, LL20 8NF, LLANGOLLEN, LL20 8NF",
+      "lat": 52.9688428,
+      "lng": -3.171139,
+      "distance": 17.6,
+      "is_supermarket": true,
+      "is_motorway": false,
+      "unleaded": 144.9,
+      "diesel": 157.9,
+      "updated": "2026-03-10T13:49:08.960Z",
+      "id": 28
     },
     {
       "name": "Ruabon Park Service Station",
