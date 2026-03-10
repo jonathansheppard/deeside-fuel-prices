@@ -404,10 +404,10 @@ h1 {
   <!-- Price Spread Chart -->
   <div class="chart-panel" id="chartPanel">
     <div class="chart-header">
-      <span class="chart-title">Price Spread — All Reporting Stations</span>
+      <span class="chart-title">Cheapest & Most Expensive Stations</span>
     </div>
     <div style="position:relative;height:auto"><canvas id="priceChart"></canvas></div>
-    <div class="chart-note">Each bar is a station · Dashed line = UK average · Costco shown in blue (members only)</div>
+    <div class="chart-note">10 cheapest + 10 most expensive · Dashed line = UK average · Costco in blue (members only)</div>
   </div>
 
   <div class="toggle-row">
@@ -642,7 +642,7 @@ function renderChart() {
   const avg = nationalAvg[fuel];
 
   // Get fresh stations with valid prices, sorted by price
-  const chartStations = stations
+  const allSorted = stations
     .filter(s => {
       const p = fuel === 'unleaded' ? s.unleaded : s.diesel;
       if (!p || p < PRICE_FLOOR) return false;
@@ -650,22 +650,30 @@ function renderChart() {
       return (Date.now() - new Date(s.updated).getTime()) / 3600000 < STALE_HOURS;
     })
     .map(s => ({
-      name: (s.name || '').slice(0, 22),
+      name: (s.name || '').slice(0, 24),
       price: fuel === 'unleaded' ? s.unleaded : s.diesel,
       costco: (s.brand || '').includes('COSTCO')
     }))
     .sort((a, b) => a.price - b.price);
 
-  if (!chartStations.length) {
+  if (allSorted.length < 4) {
     document.getElementById('chartPanel').style.display = 'none';
     return;
   }
   document.getElementById('chartPanel').style.display = 'block';
 
+  // Top 10 cheapest + separator + top 10 most expensive
+  const top10 = allSorted.slice(0, 10);
+  const bottom10 = allSorted.slice(-10);
+  // Remove duplicates if fewer than 20 stations
+  const bottomFiltered = bottom10.filter(b => !top10.find(t => t.name === b.name));
+  const chartStations = [...top10, { name: '· · ·', price: null, sep: true }, ...bottomFiltered];
+
   const labels = chartStations.map(s => s.name);
   const prices = chartStations.map(s => s.price);
 
   const barColors = chartStations.map(s => {
+    if (s.sep) return 'transparent';
     if (s.costco) return 'rgba(96,165,250,0.7)';
     const delta = s.price - avg;
     if (delta < -1.0) return 'rgba(52,211,153,0.7)';
@@ -674,6 +682,7 @@ function renderChart() {
   });
 
   const borderColors = chartStations.map(s => {
+    if (s.sep) return 'transparent';
     if (s.costco) return '#60a5fa';
     const delta = s.price - avg;
     if (delta < -1.0) return '#34d399';
@@ -681,11 +690,12 @@ function renderChart() {
     return '#f87171';
   });
 
-  // Dynamic height based on station count
-  const barHeight = 22;
-  const chartHeight = Math.max(300, chartStations.length * barHeight + 60);
+  // Fixed height for ~20 bars + separator
+  const chartHeight = Math.max(300, chartStations.length * 24 + 60);
   canvas.style.height = chartHeight + 'px';
   canvas.parentElement.style.height = chartHeight + 'px';
+
+  const validPrices = prices.filter(p => p !== null);
 
   chartInstance = new Chart(ctx, {
     type: 'bar',
@@ -713,8 +723,12 @@ function renderChart() {
           anchor: 'end',
           align: 'end',
           offset: 4,
+          display: function(ctx) {
+            return chartStations[ctx.dataIndex] && !chartStations[ctx.dataIndex].sep;
+          },
           color: function(ctx) {
             const s = chartStations[ctx.dataIndex];
+            if (!s || s.sep) return 'transparent';
             if (s.costco) return '#60a5fa';
             const delta = s.price - avg;
             if (delta < -1.0) return '#34d399';
@@ -723,7 +737,7 @@ function renderChart() {
           },
           font: { family: "'JetBrains Mono'", size: 10, weight: 600 },
           formatter: function(value) {
-            return value.toFixed(1) + 'p';
+            return value !== null ? value.toFixed(1) + 'p' : '';
           }
         },
         tooltip: {
@@ -736,6 +750,7 @@ function renderChart() {
           bodyFont: { family: "'JetBrains Mono'", size: 12 },
           callbacks: {
             label: function(ctx) {
+              if (ctx.parsed.x === null) return '';
               const delta = (ctx.parsed.x - avg).toFixed(1);
               const sign = delta > 0 ? '+' : '';
               return ctx.parsed.x.toFixed(1) + 'p (' + sign + delta + 'p vs avg)';
@@ -771,8 +786,8 @@ function renderChart() {
             font: { family: "'JetBrains Mono'", size: 10 },
             callback: v => v + 'p'
           },
-          min: Math.floor(Math.min(...prices) - 3),
-          max: Math.ceil(Math.max(...prices) + 8)
+          min: Math.floor(Math.min(...validPrices) - 3),
+          max: Math.ceil(Math.max(...validPrices) + 8)
         },
         y: {
           grid: { display: false },
