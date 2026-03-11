@@ -3,7 +3,7 @@
     "unleaded": 139.7,
     "diesel": 157.9
   },
-  "lastUpdated": "2026-03-11T08:30:29.345457+00:00",
+  "lastUpdated": "2026-03-11T09:00:37.265714+00:00",
   "stationCount": 85,
   "stations": [
     {
@@ -21,20 +21,6 @@
       "id": 63
     },
     {
-      "name": "COSTCO WHOLESALE CHESTER",
-      "brand": "COSTCO WHOLESALE",
-      "address": "DUNKIRK TRADING ESTATE, CHESTER GATES, CHESTER, CHESTER, CH1 6LT",
-      "lat": 53.24496,
-      "lng": -2.93034,
-      "distance": 4.9,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 130.9,
-      "diesel": 146.9,
-      "updated": "2026-03-10T17:24:56.370Z",
-      "id": 40
-    },
-    {
       "name": "Barnhills of Broxton",
       "brand": "GULF",
       "address": "BROXTON GARAGE, WHITCHURCH ROAD, BROXTON, CHESTER, CH3 9JR, CHESTER, CH3 9JR",
@@ -47,6 +33,20 @@
       "diesel": 138.9,
       "updated": "2026-01-16T10:29:42.000Z",
       "id": 49
+    },
+    {
+      "name": "COSTCO WHOLESALE CHESTER",
+      "brand": "COSTCO WHOLESALE",
+      "address": "DUNKIRK TRADING ESTATE, CHESTER GATES, CHESTER, CHESTER, CH1 6LT",
+      "lat": 53.24496,
+      "lng": -2.93034,
+      "distance": 4.9,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 131.9,
+      "diesel": 146.9,
+      "updated": "2026-03-10T17:24:56.370Z",
+      "id": 40
     },
     {
       "name": "MFG MORRISONS SALTNEY",
@@ -157,7 +157,7 @@
       "is_motorway": false,
       "unleaded": 136.9,
       "diesel": 153.9,
-      "updated": "2026-03-11T04:56:58.691Z",
+      "updated": "2026-03-11T08:57:03.310Z",
       "id": 2
     },
     {
@@ -297,7 +297,7 @@
       "is_motorway": false,
       "unleaded": 136.9,
       "diesel": 155.9,
-      "updated": "2026-03-11T04:56:57.381Z",
+      "updated": "2026-03-11T08:57:02.169Z",
       "id": 74
     },
     {
