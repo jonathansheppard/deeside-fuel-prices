@@ -3,7 +3,7 @@
     "unleaded": 140.0,
     "diesel": 158.5
   },
-  "lastUpdated": "2026-03-11T14:30:11.115595+00:00",
+  "lastUpdated": "2026-03-11T15:01:35.381548+00:00",
   "stationCount": 100,
   "stations": [
     {
@@ -773,7 +773,7 @@
       "is_motorway": false,
       "unleaded": 141.9,
       "diesel": 157.9,
-      "updated": "2026-03-10T12:08:50.464Z",
+      "updated": "2026-03-11T14:47:21.615Z",
       "id": 33
     },
     {
@@ -1001,20 +1001,6 @@
       "id": 39
     },
     {
-      "name": "Dobshill Service Station",
-      "brand": "DOBSHILL SERVICE STATION",
-      "address": "DOBSHILL SERVICE STATION, CHESTER ROAD, DOBSHILL, DEESIDE, CH5 3LZ, DEESIDE, CH5 3LZ",
-      "lat": 53.1636207,
-      "lng": -3.039481,
-      "distance": 3.1,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 142.9,
-      "diesel": 154.9,
-      "updated": "2026-03-06T14:05:39.529Z",
-      "id": 43
-    },
-    {
       "name": "ASDA DEESIDE EXPRESS PETROL",
       "brand": "BP",
       "address": "PARKWAY, DEESIDE, CH5 2NS",
@@ -1223,6 +1209,20 @@
       "diesel": 161.9,
       "updated": "2026-03-10T14:50:56.120Z",
       "id": 38
+    },
+    {
+      "name": "Dobshill Service Station",
+      "brand": "DOBSHILL SERVICE STATION",
+      "address": "DOBSHILL SERVICE STATION, CHESTER ROAD, DOBSHILL, DEESIDE, CH5 3LZ, DEESIDE, CH5 3LZ",
+      "lat": 53.1636207,
+      "lng": -3.039481,
+      "distance": 3.1,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 145.9,
+      "diesel": 161.9,
+      "updated": "2026-03-11T14:48:42.239Z",
+      "id": 43
     },
     {
       "name": "SHELL CO-OP MOLD",
