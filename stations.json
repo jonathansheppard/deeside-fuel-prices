@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
-    "unleaded": 140.0,
-    "diesel": 158.5
+    "unleaded": 140.1,
+    "diesel": 158.6
   },
-  "lastUpdated": "2026-03-11T15:01:35.381548+00:00",
+  "lastUpdated": "2026-03-11T15:30:35.380081+00:00",
   "stationCount": 100,
   "stations": [
     {
@@ -651,20 +651,6 @@
       "id": 76
     },
     {
-      "name": "SHELL GAYTON",
-      "brand": "SHELL",
-      "address": "CHESTER ROAD, WIRRAL, MERSEYSIDE, CH60 3RY",
-      "lat": 53.322022,
-      "lng": -3.084409,
-      "distance": 8.1,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 140.9,
-      "diesel": 157.9,
-      "updated": "2026-03-09T12:05:19.670Z",
-      "id": 81
-    },
-    {
       "name": "SHELL UPTON",
       "brand": "SHELL",
       "address": "ARROWE PARK ROAD, WIRRAL, CH49 0UE",
@@ -719,20 +705,6 @@
       "diesel": 155.9,
       "updated": "2026-03-11T11:57:10.016Z",
       "id": 17
-    },
-    {
-      "name": "SHELL CARLETT",
-      "brand": "SHELL",
-      "address": "1201 NEW CHESTER ROAD, WIRRAL, CH62 0BZ",
-      "lat": 53.314799,
-      "lng": -2.963826,
-      "distance": 7.9,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 141.9,
-      "diesel": 168.9,
-      "updated": "2026-03-10T14:29:03.001Z",
-      "id": 18
     },
     {
       "name": "PRESTATYN SUPERSTORE - PETROL FILLING STATION",
@@ -931,6 +903,20 @@
       "id": 79
     },
     {
+      "name": "SHELL GAYTON",
+      "brand": "SHELL",
+      "address": "CHESTER ROAD, WIRRAL, MERSEYSIDE, CH60 3RY",
+      "lat": 53.322022,
+      "lng": -3.084409,
+      "distance": 8.1,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 141.9,
+      "diesel": 158.9,
+      "updated": "2026-03-11T15:29:02.562Z",
+      "id": 81
+    },
+    {
       "name": "BP HARVEST ENERGY HOYLAKE",
       "brand": "BP HARVEST ENERGY",
       "address": "HOYLAKE ROAD, WIRRAL, CH46 5NA",
@@ -1041,6 +1027,20 @@
       "diesel": 163.9,
       "updated": "2026-03-11T13:24:22.436Z",
       "id": 11
+    },
+    {
+      "name": "SHELL CARLETT",
+      "brand": "SHELL",
+      "address": "1201 NEW CHESTER ROAD, WIRRAL, CH62 0BZ",
+      "lat": 53.314799,
+      "lng": -2.963826,
+      "distance": 7.9,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 143.9,
+      "diesel": 171.9,
+      "updated": "2026-03-11T15:06:02.910Z",
+      "id": 18
     },
     {
       "name": "ASDA COEDPOETH EXPRESS PETROL",
