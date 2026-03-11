@@ -406,6 +406,35 @@ h1 {
   margin-top: 10px;
 }
 
+/* ── SCROLL PILL ── */
+.scroll-pill {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(80px);
+  background: var(--green);
+  color: #0f1117;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 999px;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  transition: transform .3s cubic-bezier(.34,1.56,.64,1), opacity .3s;
+  opacity: 0;
+  z-index: 999;
+  white-space: nowrap;
+}
+.scroll-pill.visible {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+.scroll-pill:hover {
+  background: #6ee7b7;
+}
+
 /* ── LOADING ── */
 .loading {
   padding: 40px;
@@ -430,6 +459,8 @@ h1 {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.2.0/chartjs-plugin-datalabels.min.js"></script>
 </head>
 <body>
+
+<button class="scroll-pill" id="scrollPill" onclick="document.getElementById('tableWrap').scrollIntoView({behavior:'smooth'})">↓ See all prices</button>
 
 <header class="app-header">
   <div>
@@ -894,6 +925,35 @@ function renderChart() {
 }
 
 init();
+
+// ── SCROLL PILL ──
+(function() {
+  const pill = document.getElementById('scrollPill');
+  const sentinel = document.getElementById('summaryGrid');
+  const target = document.getElementById('tableWrap');
+
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (!entry.isIntersecting) {
+        // Summary cards scrolled out of view — show pill
+        if (target.getBoundingClientRect().top > window.innerHeight) {
+          pill.classList.add('visible');
+        }
+      } else {
+        pill.classList.remove('visible');
+      }
+    });
+  }, { threshold: 0 });
+
+  const tableObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) pill.classList.remove('visible');
+    });
+  }, { threshold: 0.1 });
+
+  observer.observe(sentinel);
+  tableObserver.observe(target);
+})();
 </script>
 </body>
 </html>
