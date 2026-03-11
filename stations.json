@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
     "unleaded": 139.5,
-    "diesel": 157.6
+    "diesel": 157.8
   },
-  "lastUpdated": "2026-03-10T23:30:25.776890+00:00",
+  "lastUpdated": "2026-03-11T00:01:47.506656+00:00",
   "stationCount": 85,
   "stations": [
     {
@@ -213,7 +213,7 @@
       "is_motorway": false,
       "unleaded": 136.9,
       "diesel": 155.9,
-      "updated": "2026-03-10T22:58:19.206Z",
+      "updated": "2026-03-10T23:57:18.326Z",
       "id": 14
     },
     {
@@ -511,20 +511,6 @@
       "id": 9
     },
     {
-      "name": "MFG ROWTON",
-      "brand": "ESSO",
-      "address": "WHITCHURCH ROAD, ROWTON, CH3 6AF",
-      "lat": 53.176188,
-      "lng": -2.825907,
-      "distance": 8.9,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 139.9,
-      "diesel": 156.9,
-      "updated": "2026-03-10T21:56:17.189Z",
-      "id": 15
-    },
-    {
       "name": "MFG LISCARD",
       "brand": "SHELL",
       "address": "LLOYDS CORNER / LISCARD ROAD, WALLASEY, CH44 9AD",
@@ -623,20 +609,6 @@
       "id": 60
     },
     {
-      "name": "MFG COLESHILL",
-      "brand": "SHELL",
-      "address": "HOLYWELL ROAD, FLINT, CH6 5RR",
-      "lat": 53.253768,
-      "lng": -3.14176,
-      "distance": 5.5,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 139.9,
-      "diesel": 165.9,
-      "updated": "2026-03-10T21:38:16.433Z",
-      "id": 62
-    },
-    {
       "name": "RUTHIN",
       "brand": "TEXACO",
       "address": "PARK ROAD, RUTHIN, LL151NB",
@@ -689,7 +661,7 @@
       "is_motorway": false,
       "unleaded": 140.9,
       "diesel": 159.9,
-      "updated": "2026-03-10T21:40:38.226Z",
+      "updated": "2026-03-10T23:58:42.094Z",
       "id": 53
     },
     {
@@ -747,6 +719,20 @@
       "diesel": 155.9,
       "updated": "2026-03-10T14:36:04.615Z",
       "id": 4
+    },
+    {
+      "name": "MFG ROWTON",
+      "brand": "ESSO",
+      "address": "WHITCHURCH ROAD, ROWTON, CH3 6AF",
+      "lat": 53.176188,
+      "lng": -2.825907,
+      "distance": 8.9,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 141.9,
+      "diesel": 157.9,
+      "updated": "2026-03-10T23:48:20.596Z",
+      "id": 15
     },
     {
       "name": "SHELL CARLETT",
@@ -859,6 +845,20 @@
       "diesel": 154.9,
       "updated": "2026-03-10T14:56:35.259Z",
       "id": 50
+    },
+    {
+      "name": "MFG COLESHILL",
+      "brand": "SHELL",
+      "address": "HOLYWELL ROAD, FLINT, CH6 5RR",
+      "lat": 53.253768,
+      "lng": -3.14176,
+      "distance": 5.5,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 141.9,
+      "diesel": 165.9,
+      "updated": "2026-03-10T23:51:21.516Z",
+      "id": 62
     },
     {
       "name": "MOLD SUPERSTORE - PETROL FILLING STATION",
