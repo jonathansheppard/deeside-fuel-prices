@@ -537,6 +537,27 @@
   .key-amber { background: var(--amber); }
   .key-red { background: var(--red); }
 
+  /* ── FULL PRICE LIST CTA ── */
+  .sidebar-list-cta {
+    display: block;
+    margin: 8px;
+    padding: 12px 16px;
+    background: rgba(52, 211, 153, 0.08);
+    border: 1px solid rgba(52, 211, 153, 0.2);
+    border-radius: var(--radius);
+    color: var(--green);
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.2s;
+    letter-spacing: 0.01em;
+  }
+  .sidebar-list-cta:hover {
+    background: rgba(52, 211, 153, 0.15);
+    border-color: rgba(52, 211, 153, 0.4);
+  }
+
   .footer-note {
     padding: 12px 16px;
     border-top: 1px solid var(--border);
@@ -738,7 +759,7 @@
     </div>
     <div class="view-toggle">
       <span class="view-toggle-btn active">🗺 Map</span>
-      <a href="list.html" class="view-toggle-btn">≡ List</a>
+      <a href="list.html" class="view-toggle-btn">≡ Price list</a>
     </div>
     <select class="sort-select" id="sortSelect">
       <option value="price-asc">Price: Low → High</option>
@@ -771,12 +792,16 @@
     </div>
     <div class="sidebar-scroll">
       <div class="station-list" id="stationList"></div>
+      <!-- Full price list CTA — appended after station list renders -->
+      <a href="list.html" class="sidebar-list-cta" id="listCta" style="display:none">
+        ≡ See full price list with all stations →
+      </a>
     </div>
     <div class="footer-note">
       *Distances measured from Queensferry roundabout<br>
       Data from GOV.UK Fuel Finder Scheme &middot; Prices via DESNZ<br>
       <span id="dataTimestamp"></span><br>
-      Built in 🏴󠁧󠁢󠁷󠁬󠁳󠁿 by <a href="https://deeside.com" target="_blank">Deeside.com</a>
+      Built in 🏴󠁧󠁢󠁷󠁬󠁳󠁥󠁳󠁿 by <a href="https://deeside.com" target="_blank">Deeside.com</a>
     </div>
   </div>
 </div>
@@ -892,7 +917,6 @@ function getSortedStations() {
 }
 
 function getStats() {
-  // Open-access only (no Costco) — matches list view and chart
   const CORE_RADIUS = 10;
   const core     = stations.filter(s => s.distance <= CORE_RADIUS && !s.is_motorway && !isCostco(s));
   const nonStale = core.filter(s => getStaleState(s) !== 'stale');
@@ -946,7 +970,6 @@ function render() {
   const sorted = getSortedStations().filter(s => s.distance <= CORE_RADIUS && (getPrice(s) > 0 || s.note));
   const stats = getStats();
 
-  // cheapest/highest from open-access only — consistent with stats bar
   const openLive = stations.filter(s => s.distance <= CORE_RADIUS && !s.is_motorway && !isCostco(s) && getStaleState(s) !== 'stale' && getPrice(s) > 0);
   const cheapestPrice = openLive.length > 0 ? Math.min(...openLive.map(s => getPrice(s))) : stats.low;
   const highestPrice  = openLive.length > 0 ? Math.max(...openLive.map(s => getPrice(s))) : stats.high;
@@ -979,7 +1002,6 @@ function render() {
 
     const isNoData    = !price || price <= 0;
     const staleState  = isNoData ? 'stale' : getStaleState(station);
-    // Costco never gets the "cheapest" marker treatment on the map
     const isCheapestMarker = !isNoData && staleState !== 'stale' && !isCostco(station) && price === cheapestPrice;
     const isActive    = activeStation === station.id;
     const isExtended  = station.distance > CORE_RADIUS;
@@ -1026,7 +1048,6 @@ function render() {
   function buildCard(station) {
     const price = getPrice(station);
 
-    // ── COSTCO SPECIAL CARD ───────────────────────────────────────
     if (isCostco(station) && price) {
       const openLivePrices = stations
         .filter(s => s.distance <= 10 && !isCostco(s) && !s.is_motorway && getStaleState(s) !== 'stale' && getPrice(s) > 0)
@@ -1059,7 +1080,6 @@ function render() {
         </div>
       </div>`;
     }
-    // ── END COSTCO ────────────────────────────────────────────────
 
     const isNoData   = !price || price <= 0;
     const staleState = isNoData ? 'stale' : getStaleState(station);
@@ -1172,6 +1192,9 @@ function render() {
   }
 
   listEl.innerHTML = html;
+
+  // Show full price list CTA once stations are rendered
+  document.getElementById('listCta').style.display = 'block';
 
   listEl.querySelectorAll('.station-card').forEach(card => {
     card.addEventListener('click', () => {
