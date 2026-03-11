@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
     "unleaded": 140.1,
-    "diesel": 158.6
+    "diesel": 158.8
   },
-  "lastUpdated": "2026-03-11T17:30:14.175365+00:00",
+  "lastUpdated": "2026-03-11T18:02:55.237925+00:00",
   "stationCount": 99,
   "stations": [
     {
@@ -43,9 +43,9 @@
       "distance": 4.9,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 131.9,
-      "diesel": 146.9,
-      "updated": "2026-03-10T17:24:56.370Z",
+      "unleaded": 132.9,
+      "diesel": 150.9,
+      "updated": "2026-03-11T18:00:39.665Z",
       "id": 52
     },
     {
@@ -119,20 +119,6 @@
       "id": 64
     },
     {
-      "name": "BROUGHTON CHESTER EXTRA - PETROL FILLING STATION",
-      "brand": "TESCO",
-      "address": "1 BROUGHTON SHOPPING PARK, CHESTER ROAD, CHESTER, CH4 0DP",
-      "lat": 53.16935,
-      "lng": -2.9739,
-      "distance": 3.7,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 135.9,
-      "diesel": 151.9,
-      "updated": "2026-03-10T17:54:31.499Z",
-      "id": 84
-    },
-    {
       "name": "SAINSBURYS KINGS ROAD BEBINGTON",
       "brand": "SAINSBURY'S",
       "address": "152 KINGS ROAD, BIRKENHEAD, LIVERPOOL, CH63 8PZ",
@@ -145,20 +131,6 @@
       "diesel": 153.9,
       "updated": "2026-03-10T22:55:01.166Z",
       "id": 88
-    },
-    {
-      "name": "WREXHAM EXTRA - PETROL FILLING STATION",
-      "brand": "TESCO",
-      "address": "CRESCENT ROAD, WREXHAM, LL13 8HF",
-      "lat": 53.04619,
-      "lng": -2.98742,
-      "distance": 11.4,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 135.9,
-      "diesel": 146.9,
-      "updated": "2026-03-09T15:32:35.116Z",
-      "id": 95
     },
     {
       "name": "SAINSBURYS PENSBY ROAD THINGWALL",
@@ -441,6 +413,34 @@
       "id": 55
     },
     {
+      "name": "BROUGHTON CHESTER EXTRA - PETROL FILLING STATION",
+      "brand": "TESCO",
+      "address": "1 BROUGHTON SHOPPING PARK, CHESTER ROAD, CHESTER, CH4 0DP",
+      "lat": 53.16935,
+      "lng": -2.9739,
+      "distance": 3.7,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 138.9,
+      "diesel": 151.9,
+      "updated": "2026-03-10T17:54:31.499Z",
+      "id": 84
+    },
+    {
+      "name": "WREXHAM EXTRA - PETROL FILLING STATION",
+      "brand": "TESCO",
+      "address": "CRESCENT ROAD, WREXHAM, LL13 8HF",
+      "lat": 53.04619,
+      "lng": -2.98742,
+      "distance": 11.4,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 138.9,
+      "diesel": 152.9,
+      "updated": "2026-03-11T17:58:00.817Z",
+      "id": 95
+    },
+    {
       "name": "SAINSBURYS WREXHAM",
       "brand": "SAINSBURY'S",
       "address": "RETAIL PARK, PLAS COCH ROAD, WREXHAM, LL11 2BA",
@@ -605,7 +605,7 @@
       "is_motorway": false,
       "unleaded": 139.9,
       "diesel": 165.9,
-      "updated": "2026-03-11T13:54:40.602Z",
+      "updated": "2026-03-11T17:54:52.557Z",
       "id": 77
     },
     {
@@ -679,20 +679,6 @@
       "id": 44
     },
     {
-      "name": "SHELL CO-OP WREXHAM",
-      "brand": "SHELL",
-      "address": "MOLD ROAD, WREXHAM, LL11 2AF",
-      "lat": 53.051908,
-      "lng": -3.006356,
-      "distance": 10.9,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 141.9,
-      "diesel": 155.9,
-      "updated": "2026-03-10T14:36:04.615Z",
-      "id": 4
-    },
-    {
       "name": "MFG ROWTON",
       "brand": "ESSO",
       "address": "WHITCHURCH ROAD, ROWTON, CH3 6AF",
@@ -703,7 +689,7 @@
       "is_motorway": false,
       "unleaded": 141.9,
       "diesel": 157.9,
-      "updated": "2026-03-11T13:56:50.718Z",
+      "updated": "2026-03-11T17:56:58.957Z",
       "id": 15
     },
     {
@@ -730,8 +716,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 141.9,
-      "diesel": 157.9,
-      "updated": "2026-03-10T18:32:50.267Z",
+      "diesel": 158.9,
+      "updated": "2026-03-11T17:45:39.576Z",
       "id": 21
     },
     {
@@ -801,7 +787,7 @@
       "is_motorway": false,
       "unleaded": 141.9,
       "diesel": 158.9,
-      "updated": "2026-03-10T11:03:33.764Z",
+      "updated": "2026-03-11T17:48:57.054Z",
       "id": 53
     },
     {
@@ -857,7 +843,7 @@
       "is_motorway": false,
       "unleaded": 141.9,
       "diesel": 158.9,
-      "updated": "2026-03-10T12:02:21.223Z",
+      "updated": "2026-03-11T17:54:39.061Z",
       "id": 62
     },
     {
@@ -899,7 +885,7 @@
       "is_motorway": false,
       "unleaded": 141.9,
       "diesel": 165.9,
-      "updated": "2026-03-11T13:38:54.161Z",
+      "updated": "2026-03-11T17:39:03.041Z",
       "id": 79
     },
     {
@@ -971,6 +957,20 @@
       "diesel": 165.9,
       "updated": "2026-03-11T17:17:53.968Z",
       "id": 99
+    },
+    {
+      "name": "SHELL CO-OP WREXHAM",
+      "brand": "SHELL",
+      "address": "MOLD ROAD, WREXHAM, LL11 2AF",
+      "lat": 53.051908,
+      "lng": -3.006356,
+      "distance": 10.9,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 142.9,
+      "diesel": 156.9,
+      "updated": "2026-03-11T17:56:03.024Z",
+      "id": 4
     },
     {
       "name": "ASDA VALE EXPRESS PETROL",
@@ -1081,7 +1081,7 @@
       "is_motorway": false,
       "unleaded": 143.9,
       "diesel": 159.9,
-      "updated": "2026-03-10T11:07:42.435Z",
+      "updated": "2026-03-11T17:51:05.291Z",
       "id": 35
     },
     {
@@ -1095,7 +1095,7 @@
       "is_motorway": false,
       "unleaded": 143.9,
       "diesel": 161.9,
-      "updated": "2026-03-10T14:34:28.210Z",
+      "updated": "2026-03-11T17:54:58.377Z",
       "id": 42
     },
     {
@@ -1235,7 +1235,7 @@
       "is_motorway": false,
       "unleaded": 145.9,
       "diesel": 161.9,
-      "updated": "2026-03-10T14:50:56.120Z",
+      "updated": "2026-03-11T17:52:54.877Z",
       "id": 39
     },
     {
