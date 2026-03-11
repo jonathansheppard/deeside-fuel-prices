@@ -487,6 +487,11 @@ h1 {
     <div class="summary-card diesel" id="summaryDiesel"></div>
   </div>
 
+  <!-- Jump to prices signpost -->
+  <div style="text-align:right;margin-bottom:12px;margin-top:-12px">
+    <a href="#tableWrap" onclick="document.getElementById('tableWrap').scrollIntoView({behavior:'smooth'});return false;" style="font-size:12px;font-weight:600;color:var(--muted);text-decoration:none;letter-spacing:0.02em">↓ Jump to full price list</a>
+  </div>
+
   <!-- RAC Fuel Watch UK trend chart -->
   <div class="trend-panel">
     <div class="trend-label">UK National Average — Price Trend</div>
@@ -929,30 +934,15 @@ init();
 // ── SCROLL PILL ──
 (function() {
   const pill = document.getElementById('scrollPill');
-  const sentinel = document.getElementById('summaryGrid');
   const target = document.getElementById('tableWrap');
 
-  const observer = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry) {
-      if (!entry.isIntersecting) {
-        // Summary cards scrolled out of view — show pill
-        if (target.getBoundingClientRect().top > window.innerHeight) {
-          pill.classList.add('visible');
-        }
-      } else {
-        pill.classList.remove('visible');
-      }
-    });
-  }, { threshold: 0 });
-
-  const tableObserver = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry) {
-      if (entry.isIntersecting) pill.classList.remove('visible');
-    });
-  }, { threshold: 0.1 });
-
-  observer.observe(sentinel);
-  tableObserver.observe(target);
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 80 && target.getBoundingClientRect().top > window.innerHeight) {
+      pill.classList.add('visible');
+    } else {
+      pill.classList.remove('visible');
+    }
+  });
 })();
 </script>
 </body>
