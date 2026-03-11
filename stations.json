@@ -3,7 +3,7 @@
     "unleaded": 140.1,
     "diesel": 158.6
   },
-  "lastUpdated": "2026-03-11T17:00:17.061477+00:00",
+  "lastUpdated": "2026-03-11T17:30:14.175365+00:00",
   "stationCount": 99,
   "stations": [
     {
@@ -59,7 +59,7 @@
       "is_motorway": false,
       "unleaded": 134.9,
       "diesel": 153.9,
-      "updated": "2026-03-11T13:12:23.247Z",
+      "updated": "2026-03-11T17:12:29.173Z",
       "id": 20
     },
     {
@@ -199,7 +199,7 @@
       "is_motorway": false,
       "unleaded": 136.9,
       "diesel": 153.9,
-      "updated": "2026-03-11T13:07:38.696Z",
+      "updated": "2026-03-11T17:07:43.512Z",
       "id": 8
     },
     {
@@ -227,7 +227,7 @@
       "is_motorway": false,
       "unleaded": 136.9,
       "diesel": 152.9,
-      "updated": "2026-03-11T13:15:04.421Z",
+      "updated": "2026-03-11T17:15:16.310Z",
       "id": 12
     },
     {
@@ -283,7 +283,7 @@
       "is_motorway": false,
       "unleaded": 136.9,
       "diesel": 155.9,
-      "updated": "2026-03-10T10:06:04.613Z",
+      "updated": "2026-03-11T17:04:34.392Z",
       "id": 61
     },
     {
@@ -423,7 +423,7 @@
       "is_motorway": false,
       "unleaded": 138.9,
       "diesel": 158.9,
-      "updated": "2026-03-10T13:58:38.174Z",
+      "updated": "2026-03-11T17:12:11.408Z",
       "id": 43
     },
     {
@@ -507,7 +507,7 @@
       "is_motorway": false,
       "unleaded": 139.9,
       "diesel": 165.9,
-      "updated": "2026-03-11T13:08:53.068Z",
+      "updated": "2026-03-11T17:09:04.307Z",
       "id": 19
     },
     {
@@ -521,7 +521,7 @@
       "is_motorway": false,
       "unleaded": 139.9,
       "diesel": 165.9,
-      "updated": "2026-03-11T13:05:48.577Z",
+      "updated": "2026-03-11T17:05:56.510Z",
       "id": 24
     },
     {
@@ -633,7 +633,7 @@
       "is_motorway": false,
       "unleaded": 140.9,
       "diesel": 159.9,
-      "updated": "2026-03-11T13:01:59.001Z",
+      "updated": "2026-03-11T17:02:03.269Z",
       "id": 5
     },
     {
@@ -969,7 +969,7 @@
       "is_motorway": false,
       "unleaded": 141.9,
       "diesel": 165.9,
-      "updated": "2026-03-11T13:17:43.337Z",
+      "updated": "2026-03-11T17:17:53.968Z",
       "id": 99
     },
     {
