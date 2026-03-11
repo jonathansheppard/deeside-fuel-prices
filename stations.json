@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
-    "unleaded": 140.2,
+    "unleaded": 140.3,
     "diesel": 159.1
   },
-  "lastUpdated": "2026-03-11T23:00:24.755527+00:00",
+  "lastUpdated": "2026-03-11T23:30:22.543309+00:00",
   "stationCount": 99,
   "stations": [
     {
@@ -49,20 +49,6 @@
       "id": 52
     },
     {
-      "name": "MFG MORRISONS SALTNEY",
-      "brand": "MORRISONS",
-      "address": "HIGH STREET, SALTNEY, CH4 8RU",
-      "lat": 53.178287,
-      "lng": -2.935342,
-      "distance": 4.6,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 134.9,
-      "diesel": 153.9,
-      "updated": "2026-03-11T21:12:34.974Z",
-      "id": 20
-    },
-    {
       "name": "ASDA WREXHAM SUPERSTORE",
       "brand": "ASDA",
       "address": "HOLT ROAD, WREXHAM, LL13 8HL",
@@ -75,6 +61,20 @@
       "diesel": 155.7,
       "updated": "2026-03-11T16:54:47.724Z",
       "id": 37
+    },
+    {
+      "name": "MFG MORRISONS SALTNEY",
+      "brand": "MORRISONS",
+      "address": "HIGH STREET, SALTNEY, CH4 8RU",
+      "lat": 53.178287,
+      "lng": -2.935342,
+      "distance": 4.6,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 135.9,
+      "diesel": 155.9,
+      "updated": "2026-03-11T23:04:37.685Z",
+      "id": 20
     },
     {
       "name": "ASDA QUEENSFERRY",
@@ -170,8 +170,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 136.9,
-      "diesel": 152.9,
-      "updated": "2026-03-11T21:15:28.504Z",
+      "diesel": 155.9,
+      "updated": "2026-03-11T23:02:33.905Z",
       "id": 12
     },
     {
