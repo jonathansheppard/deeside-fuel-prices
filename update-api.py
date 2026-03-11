@@ -130,54 +130,6 @@ def process_data(stations_raw, prices_raw):
         lng = loc.get("longitude")
         if not lat or not lng:
             continue
-        
-        dist = round(haversine(DEESIDE_LAT, DEESIDE_LNG, float(lat), float(lng)), 1)
-        if dist > MAX_DISTANCE:
-            continue
-        
-        addr_parts = [loc.get("address_line_1", ""), loc.get("city", ""), pc]
-        address = ", ".join([p for p in addr_parts if p and p.strip()])
-        
-        station_map[s["node_id"]] = {
-            "name": s.get("trading_name", "Unknown"),
-            "brand": (s.get("brand_name") or s.get("trading_name") or "INDEPENDENT").upper(),
-            "address": address,
-            "lat": float(lat),
-            "lng": float(lng),
-            "distance": dist,
-            "is_supermarket": s.get("is_supermarket_service_station", False),
-            "is_motorway": s.get("is_motorway_service_station", False),
-        }
-    
-    # Merge prices
-    for p in prices_raw:
-        nid = p.get("node_id")
-        if nid not in station_map:
-            continue
-        
-        unleaded = None
-        diesel = None
-        latest_update = None
-        
-        for fp in p.get("fuel_prices", []):
-            ft = fp.get("fuel_type")
-            price = fp.get("price")
-            updated = fp.get("price_last_updated")
-            
-            if ft == "E10":
-                unleaded = float(price) if price else None
-            elif ft == "E5" and unleaded is None:
-                unleaded = float(price) if price else None
-            
-            if ft == "B7_STANDARD":
-                diesel = float(price) if price else None
-            elif ft == "B7_PREMIUM" and diesel is None:
-                diesel = float(price) if price else None
-            
-            if updated:
-                latest_update = updated
-        
-        station_map[nid]["unleaded"] = unleaded
         station_map[nid]["diesel"] = diesel
         station_map[nid]["updated"] = latest_update or ""
     
