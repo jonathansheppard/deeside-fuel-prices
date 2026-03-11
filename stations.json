@@ -1,10 +1,10 @@
 {
   "nationalAvg": {
-    "unleaded": 140.1,
-    "diesel": 158.6
+    "unleaded": 140.0,
+    "diesel": 158.5
   },
-  "lastUpdated": "2026-03-11T15:30:35.380081+00:00",
-  "stationCount": 100,
+  "lastUpdated": "2026-03-11T15:01:35.381548+00:00",
+  "stationCount": 97,
   "stations": [
     {
       "name": "SMITHY VIEW SERVICE STATION ACTON",
@@ -157,7 +157,7 @@
       "is_motorway": false,
       "unleaded": 136.9,
       "diesel": 153.9,
-      "updated": "2026-03-10T22:57:24.011Z",
+      "updated": "2026-03-10T22:57:24.001Z",
       "id": 1
     },
     {
@@ -185,7 +185,7 @@
       "is_motorway": false,
       "unleaded": 136.9,
       "diesel": 153.9,
-      "updated": "2026-03-11T13:07:38.696Z",
+      "updated": "2026-03-11T13:07:38.094Z",
       "id": 8
     },
     {
@@ -367,7 +367,7 @@
       "is_motorway": false,
       "unleaded": 137.9,
       "diesel": 152.9,
-      "updated": "2026-03-10T21:50:19.902Z",
+      "updated": "2026-03-10T21:50:19.802Z",
       "id": 85
     },
     {
@@ -549,7 +549,7 @@
       "is_motorway": false,
       "unleaded": 139.9,
       "diesel": 157.9,
-      "updated": "2026-03-10T18:42:42.736Z",
+      "updated": "2026-03-10T18:42:42.738Z",
       "id": 29
     },
     {
@@ -577,7 +577,7 @@
       "is_motorway": false,
       "unleaded": 139.9,
       "diesel": 155.9,
-      "updated": "2026-03-09T12:44:44.325Z",
+      "updated": "2026-03-09T12:44:44.323Z",
       "id": 61
     },
     {
@@ -651,6 +651,20 @@
       "id": 76
     },
     {
+      "name": "SHELL GAYTON",
+      "brand": "SHELL",
+      "address": "CHESTER ROAD, WIRRAL, MERSEYSIDE, CH60 3RY",
+      "lat": 53.322022,
+      "lng": -3.084409,
+      "distance": 8.1,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 140.9,
+      "diesel": 157.9,
+      "updated": "2026-03-09T12:05:19.670Z",
+      "id": 81
+    },
+    {
       "name": "SHELL UPTON",
       "brand": "SHELL",
       "address": "ARROWE PARK ROAD, WIRRAL, CH49 0UE",
@@ -661,7 +675,7 @@
       "is_motorway": false,
       "unleaded": 140.9,
       "diesel": 156.9,
-      "updated": "2026-03-09T12:04:13.245Z",
+      "updated": "2026-03-09T12:04:13.204Z",
       "id": 87
     },
     {
@@ -689,7 +703,7 @@
       "is_motorway": false,
       "unleaded": 141.9,
       "diesel": 157.9,
-      "updated": "2026-03-11T13:56:50.718Z",
+      "updated": "2026-03-11T13:56:50.637Z",
       "id": 15
     },
     {
@@ -705,6 +719,20 @@
       "diesel": 155.9,
       "updated": "2026-03-11T11:57:10.016Z",
       "id": 17
+    },
+    {
+      "name": "SHELL CARLETT",
+      "brand": "SHELL",
+      "address": "1201 NEW CHESTER ROAD, WIRRAL, CH62 0BZ",
+      "lat": 53.314799,
+      "lng": -2.963826,
+      "distance": 7.9,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 141.9,
+      "diesel": 168.9,
+      "updated": "2026-03-10T14:29:03.001Z",
+      "id": 18
     },
     {
       "name": "PRESTATYN SUPERSTORE - PETROL FILLING STATION",
@@ -745,7 +773,7 @@
       "is_motorway": false,
       "unleaded": 141.9,
       "diesel": 157.9,
-      "updated": "2026-03-11T14:47:21.615Z",
+      "updated": "2026-03-11T14:47:21.637Z",
       "id": 33
     },
     {
@@ -773,7 +801,7 @@
       "is_motorway": false,
       "unleaded": 141.9,
       "diesel": 158.9,
-      "updated": "2026-03-11T14:03:11.835Z",
+      "updated": "2026-03-11T14:03:11.637Z",
       "id": 48
     },
     {
@@ -801,7 +829,7 @@
       "is_motorway": false,
       "unleaded": 141.9,
       "diesel": 158.9,
-      "updated": "2026-03-11T14:28:31.644Z",
+      "updated": "2026-03-11T14:28:31.637Z",
       "id": 56
     },
     {
@@ -815,7 +843,7 @@
       "is_motorway": false,
       "unleaded": 141.9,
       "diesel": 158.9,
-      "updated": "2026-03-11T14:04:27.679Z",
+      "updated": "2026-03-11T14:04:27.637Z",
       "id": 57
     },
     {
@@ -829,7 +857,7 @@
       "is_motorway": false,
       "unleaded": 141.9,
       "diesel": 158.9,
-      "updated": "2026-03-11T14:05:53.781Z",
+      "updated": "2026-03-11T14:05:53.637Z",
       "id": 58
     },
     {
@@ -903,20 +931,6 @@
       "id": 79
     },
     {
-      "name": "SHELL GAYTON",
-      "brand": "SHELL",
-      "address": "CHESTER ROAD, WIRRAL, MERSEYSIDE, CH60 3RY",
-      "lat": 53.322022,
-      "lng": -3.084409,
-      "distance": 8.1,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 141.9,
-      "diesel": 158.9,
-      "updated": "2026-03-11T15:29:02.562Z",
-      "id": 81
-    },
-    {
       "name": "BP HARVEST ENERGY HOYLAKE",
       "brand": "BP HARVEST ENERGY",
       "address": "HOYLAKE ROAD, WIRRAL, CH46 5NA",
@@ -941,7 +955,7 @@
       "is_motorway": false,
       "unleaded": 141.9,
       "diesel": 158.9,
-      "updated": "2026-03-10T15:52:03.146Z",
+      "updated": "2026-03-10T15:52:03.154Z",
       "id": 90
     },
     {
@@ -955,7 +969,7 @@
       "is_motorway": false,
       "unleaded": 141.9,
       "diesel": 159.9,
-      "updated": "2026-03-10T15:29:02.822Z",
+      "updated": "2026-03-10T15:29:02.502Z",
       "id": 92
     },
     {
@@ -997,7 +1011,7 @@
       "is_motorway": false,
       "unleaded": 142.9,
       "diesel": 171.9,
-      "updated": "2026-03-11T14:08:19.835Z",
+      "updated": "2026-03-11T14:08:19.637Z",
       "id": 46
     },
     {
@@ -1025,22 +1039,8 @@
       "is_motorway": false,
       "unleaded": 143.9,
       "diesel": 163.9,
-      "updated": "2026-03-11T13:24:22.436Z",
+      "updated": "2026-03-11T13:24:22.345Z",
       "id": 11
-    },
-    {
-      "name": "SHELL CARLETT",
-      "brand": "SHELL",
-      "address": "1201 NEW CHESTER ROAD, WIRRAL, CH62 0BZ",
-      "lat": 53.314799,
-      "lng": -2.963826,
-      "distance": 7.9,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 143.9,
-      "diesel": 171.9,
-      "updated": "2026-03-11T15:06:02.910Z",
-      "id": 18
     },
     {
       "name": "ASDA COEDPOETH EXPRESS PETROL",
@@ -1081,7 +1081,7 @@
       "is_motorway": false,
       "unleaded": 143.9,
       "diesel": 171.9,
-      "updated": "2026-03-11T14:09:25.859Z",
+      "updated": "2026-03-11T14:09:25.637Z",
       "id": 47
     },
     {
@@ -1109,7 +1109,7 @@
       "is_motorway": false,
       "unleaded": 144.9,
       "diesel": 161.9,
-      "updated": "2026-03-10T14:34:03.016Z",
+      "updated": "2026-03-10T14:34:03.204Z",
       "id": 13
     },
     {
@@ -1165,7 +1165,7 @@
       "is_motorway": false,
       "unleaded": 144.9,
       "diesel": 161.9,
-      "updated": "2026-03-11T14:02:19.266Z",
+      "updated": "2026-03-11T14:02:19.637Z",
       "id": 64
     },
     {
@@ -1179,7 +1179,7 @@
       "is_motorway": false,
       "unleaded": 144.9,
       "diesel": 162.9,
-      "updated": "2026-03-09T13:33:05.525Z",
+      "updated": "2026-03-09T13:33:05.523Z",
       "id": 80
     },
     {
@@ -1207,7 +1207,7 @@
       "is_motorway": false,
       "unleaded": 145.9,
       "diesel": 161.9,
-      "updated": "2026-03-10T14:50:56.120Z",
+      "updated": "2026-03-10T14:50:56.140Z",
       "id": 38
     },
     {
@@ -1221,7 +1221,7 @@
       "is_motorway": false,
       "unleaded": 145.9,
       "diesel": 161.9,
-      "updated": "2026-03-11T14:48:42.239Z",
+      "updated": "2026-03-11T14:48:42.237Z",
       "id": 43
     },
     {
@@ -1263,7 +1263,7 @@
       "is_motorway": false,
       "unleaded": 149.9,
       "diesel": 172.9,
-      "updated": "2026-03-11T10:13:03.818Z",
+      "updated": "2026-03-11T10:13:03.038Z",
       "id": 36
     },
     {
@@ -1277,7 +1277,7 @@
       "is_motorway": true,
       "unleaded": 149.9,
       "diesel": 171.9,
-      "updated": "2026-03-11T14:08:51.969Z",
+      "updated": "2026-03-11T14:08:51.637Z",
       "id": 49
     },
     {
@@ -1291,7 +1291,7 @@
       "is_motorway": true,
       "unleaded": 151.9,
       "diesel": 166.9,
-      "updated": "2026-03-11T14:14:50.714Z",
+      "updated": "2026-03-11T14:14:50.637Z",
       "id": 27
     },
     {
@@ -1305,7 +1305,7 @@
       "is_motorway": true,
       "unleaded": 151.9,
       "diesel": 166.9,
-      "updated": "2026-03-11T14:13:54.325Z",
+      "updated": "2026-03-11T14:13:54.637Z",
       "id": 28
     },
     {
@@ -1347,7 +1347,7 @@
       "is_motorway": false,
       "unleaded": 156.9,
       "diesel": 159.9,
-      "updated": "2026-03-10T07:31:29.762Z",
+      "updated": "2026-03-10T07:31:29.702Z",
       "id": 37
     },
     {
@@ -1361,53 +1361,8 @@
       "is_motorway": true,
       "unleaded": 159.9,
       "diesel": 179.9,
-      "updated": "2026-03-11T11:48:03.832Z",
+      "updated": "2026-03-11T11:48:03.820Z",
       "id": 67
-    },
-    {
-      "name": "Asda Quay Express (Esso)",
-      "brand": "ESSO",
-      "address": "Church Street, Connah's Quay, CH5 4AS",
-      "lat": 53.22449,
-      "lng": -3.071442,
-      "unleaded": null,
-      "diesel": null,
-      "updated": "",
-      "distance": 1.2,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "note": "Not reporting prices",
-      "id": 98
-    },
-    {
-      "name": "Asda Deeside Express Petrol",
-      "brand": "ASDA",
-      "address": "Parkway, Deeside, CH5 2NS",
-      "lat": 53.228,
-      "lng": -3.012,
-      "unleaded": null,
-      "diesel": null,
-      "updated": "",
-      "distance": 1.8,
-      "is_supermarket": true,
-      "is_motorway": false,
-      "note": "Not reporting prices",
-      "id": 99
-    },
-    {
-      "name": "Asda Queensferry Petrol",
-      "brand": "ASDA",
-      "address": "Aston Road, Queensferry, CH5 1TQ",
-      "lat": 53.205,
-      "lng": -3.0265,
-      "unleaded": null,
-      "diesel": null,
-      "updated": "",
-      "distance": 0.8,
-      "is_supermarket": true,
-      "is_motorway": false,
-      "note": "Not reporting prices",
-      "id": 100
     }
   ]
 }
