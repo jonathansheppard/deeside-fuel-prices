@@ -1,10 +1,10 @@
 {
   "nationalAvg": {
-    "unleaded": 139.8,
-    "diesel": 158.0
+    "unleaded": 139.7,
+    "diesel": 157.9
   },
-  "lastUpdated": "2026-03-11T09:30:33.868045+00:00",
-  "stationCount": 85,
+  "lastUpdated": "2026-03-11T09:00:37.265714+00:00",
+  "stationCount": 84,
   "stations": [
     {
       "name": "SMITHY VIEW SERVICE STATION ACTON",
@@ -59,7 +59,7 @@
       "is_motorway": false,
       "unleaded": 134.9,
       "diesel": 153.9,
-      "updated": "2026-03-11T09:12:17.705Z",
+      "updated": "2026-03-11T05:12:12.058Z",
       "id": 20
     },
     {
@@ -171,7 +171,7 @@
       "is_motorway": false,
       "unleaded": 136.9,
       "diesel": 153.9,
-      "updated": "2026-03-11T09:07:34.356Z",
+      "updated": "2026-03-11T05:07:29.722Z",
       "id": 8
     },
     {
@@ -199,7 +199,7 @@
       "is_motorway": false,
       "unleaded": 136.9,
       "diesel": 152.9,
-      "updated": "2026-03-11T09:14:52.226Z",
+      "updated": "2026-03-11T05:14:39.789Z",
       "id": 12
     },
     {
@@ -521,7 +521,7 @@
       "is_motorway": false,
       "unleaded": 139.9,
       "diesel": 165.9,
-      "updated": "2026-03-11T09:08:41.795Z",
+      "updated": "2026-03-11T05:08:30.593Z",
       "id": 19
     },
     {
@@ -535,7 +535,7 @@
       "is_motorway": false,
       "unleaded": 139.9,
       "diesel": 165.9,
-      "updated": "2026-03-11T09:05:40.678Z",
+      "updated": "2026-03-11T05:05:32.971Z",
       "id": 24
     },
     {
@@ -633,7 +633,7 @@
       "is_motorway": false,
       "unleaded": 140.9,
       "diesel": 159.9,
-      "updated": "2026-03-11T09:01:54.962Z",
+      "updated": "2026-03-11T05:01:50.371Z",
       "id": 5
     },
     {
@@ -913,7 +913,7 @@
       "is_motorway": false,
       "unleaded": 141.9,
       "diesel": 165.9,
-      "updated": "2026-03-11T09:17:32.605Z",
+      "updated": "2026-03-11T05:17:21.850Z",
       "id": 82
     },
     {
@@ -969,7 +969,7 @@
       "is_motorway": false,
       "unleaded": 143.9,
       "diesel": 159.9,
-      "updated": "2026-03-10T11:07:42.435Z",
+      "updated": "2026-03-10T11:07:42.437Z",
       "id": 32
     },
     {
@@ -1183,21 +1183,6 @@
       "is_motorway": false,
       "note": "Not reporting prices",
       "id": 84
-    },
-    {
-      "name": "Asda Queensferry Petrol",
-      "brand": "ASDA",
-      "address": "Aston Road, Queensferry, CH5 1TQ",
-      "lat": 53.205,
-      "lng": -3.0265,
-      "unleaded": null,
-      "diesel": null,
-      "updated": "",
-      "distance": 0.8,
-      "is_supermarket": true,
-      "is_motorway": false,
-      "note": "Not reporting prices",
-      "id": 85
     }
   ]
 }
