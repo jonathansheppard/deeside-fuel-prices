@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
-    "unleaded": 139.8,
+    "unleaded": 139.9,
     "diesel": 158.2
   },
-  "lastUpdated": "2026-03-11T11:31:17.452426+00:00",
+  "lastUpdated": "2026-03-11T12:00:31.883141+00:00",
   "stationCount": 85,
   "stations": [
     {
@@ -213,7 +213,7 @@
       "is_motorway": false,
       "unleaded": 136.9,
       "diesel": 155.9,
-      "updated": "2026-03-11T07:57:26.967Z",
+      "updated": "2026-03-11T11:57:31.315Z",
       "id": 14
     },
     {
@@ -299,20 +299,6 @@
       "diesel": 155.9,
       "updated": "2026-03-11T08:57:02.169Z",
       "id": 74
-    },
-    {
-      "name": "SPITAL SF CONNECT",
-      "brand": "BP",
-      "address": "BRIMSTAGE ROAD, WIRRAL, CH63 3EL",
-      "lat": 53.34132,
-      "lng": -3.00749,
-      "distance": 9.2,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 137.9,
-      "diesel": 156.9,
-      "updated": "2026-03-11T11:09:24.492Z",
-      "id": 43
     },
     {
       "name": "BIRKENHEAD BIDSTON MOSS EXTRA - PETROL FILLING STATION",
@@ -411,6 +397,20 @@
       "diesel": 158.9,
       "updated": "2026-03-10T13:58:38.174Z",
       "id": 37
+    },
+    {
+      "name": "SPITAL SF CONNECT",
+      "brand": "BP",
+      "address": "BRIMSTAGE ROAD, WIRRAL, CH63 3EL",
+      "lat": 53.34132,
+      "lng": -3.00749,
+      "distance": 9.2,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 138.9,
+      "diesel": 156.9,
+      "updated": "2026-03-11T11:09:24.492Z",
+      "id": 43
     },
     {
       "name": "SHELL LITTLE WAITROSE HINDERTON",
@@ -567,20 +567,6 @@
       "id": 48
     },
     {
-      "name": "BR Flint",
-      "brand": "SPAR",
-      "address": "211A, CHESTER ROAD, OAKENHOLT, Y FFLINT, CH6 5DZ, Y FFLINT, CH6 5DZ",
-      "lat": 53.2443473,
-      "lng": -3.1222575,
-      "distance": 4.4,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 139.9,
-      "diesel": 165.9,
-      "updated": "2026-03-10T11:27:09.898Z",
-      "id": 56
-    },
-    {
       "name": "MFG WALLASEY VILLAGE",
       "brand": "BP",
       "address": "15-35 LEASOWE ROAD, WALLASEY VILLAGE, CH44 2BY",
@@ -621,20 +607,6 @@
       "diesel": 159.9,
       "updated": "2026-03-11T09:01:54.962Z",
       "id": 5
-    },
-    {
-      "name": "BR Gwersyllt",
-      "brand": "SPAR",
-      "address": "PARKWALL SERVICE STATION, MOLD ROAD, GWERSYLLT, WREXHAM, LL11 4AH, WREXHAM, LL11 4AH",
-      "lat": 53.0792616,
-      "lng": -3.021987,
-      "distance": 9.0,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 140.9,
-      "diesel": 154.9,
-      "updated": "2026-03-10T11:33:32.501Z",
-      "id": 17
     },
     {
       "name": "MFG MORRISONS RHYL",
@@ -719,6 +691,20 @@
       "diesel": 157.9,
       "updated": "2026-03-11T09:56:42.200Z",
       "id": 15
+    },
+    {
+      "name": "BR Gwersyllt",
+      "brand": "SPAR",
+      "address": "PARKWALL SERVICE STATION, MOLD ROAD, GWERSYLLT, WREXHAM, LL11 4AH, WREXHAM, LL11 4AH",
+      "lat": 53.0792616,
+      "lng": -3.021987,
+      "distance": 9.0,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 141.9,
+      "diesel": 155.9,
+      "updated": "2026-03-11T11:57:10.016Z",
+      "id": 17
     },
     {
       "name": "SHELL CARLETT",
@@ -817,6 +803,20 @@
       "diesel": 159.9,
       "updated": "2026-03-11T09:53:21.523Z",
       "id": 50
+    },
+    {
+      "name": "BR Flint",
+      "brand": "SPAR",
+      "address": "211A, CHESTER ROAD, OAKENHOLT, Y FFLINT, CH6 5DZ, Y FFLINT, CH6 5DZ",
+      "lat": 53.2443473,
+      "lng": -3.1222575,
+      "distance": 4.4,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 141.9,
+      "diesel": 165.9,
+      "updated": "2026-03-10T11:27:09.898Z",
+      "id": 56
     },
     {
       "name": "MFG COLESHILL",
@@ -1150,8 +1150,8 @@
       "is_supermarket": false,
       "is_motorway": true,
       "unleaded": 159.9,
-      "diesel": 183.9,
-      "updated": "2026-03-09T12:04:16.771Z",
+      "diesel": 179.9,
+      "updated": "2026-03-11T11:48:03.832Z",
       "id": 52
     },
     {
