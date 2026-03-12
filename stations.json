@@ -3,8 +3,8 @@
     "unleaded": 142.5,
     "diesel": 167.0
   },
-  "lastUpdated": "2026-03-12T11:09:32.963922+00:00",
-  "stationCount": 96,
+  "lastUpdated": "2026-03-12T11:19:29.597866+00:00",
+  "stationCount": 126,
   "stations": [
     {
       "name": "SAINSBURYS PENSBY ROAD THINGWALL",
@@ -85,10 +85,10 @@
       "postcode": "CH8 7LQ",
       "lat": 53.279441,
       "lng": -3.2410974,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 140.0,
+      "diesel": 150.0,
+      "updated": "3/9/2026",
+      "cached": true
     },
     {
       "name": "BP HARVEST ENERGY GRASSENDALE",
@@ -109,10 +109,10 @@
       "postcode": "CH66 2JF",
       "lat": 53.2714848,
       "lng": -2.9206747,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 137.9,
+      "diesel": 159.9,
+      "updated": "3/9/2026",
+      "cached": true
     },
     {
       "name": "MFG GREASBY",
@@ -121,10 +121,10 @@
       "postcode": "CH49 2PF",
       "lat": 53.379848,
       "lng": -3.116135,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 138.9,
+      "diesel": 147.9,
+      "updated": "3/9/2026",
+      "cached": true
     },
     {
       "name": "SAINSBURYS CHESTER",
@@ -133,10 +133,10 @@
       "postcode": "CH3 5QJ",
       "lat": 53.18467,
       "lng": -2.85543,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 134.9,
+      "diesel": 147.9,
+      "updated": "3/9/2026",
+      "cached": true
     },
     {
       "name": "JACOBS WELL SERVICE STATION",
@@ -157,10 +157,10 @@
       "postcode": "CH63 7LQ",
       "lat": 53.359963,
       "lng": -3.006007,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 133.9,
+      "diesel": 145.9,
+      "updated": "3/9/2026",
+      "cached": true
     },
     {
       "name": "SHELL CHESTER",
@@ -169,10 +169,10 @@
       "postcode": "CH3 5NJ",
       "lat": 53.193526,
       "lng": -2.856604,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 141.9,
+      "diesel": 155.9,
+      "updated": "3/9/2026",
+      "cached": true
     },
     {
       "name": "MFG MORRISONS CHESTER LIVERPOOL ROAD",
@@ -181,10 +181,10 @@
       "postcode": "CH2 1AU",
       "lat": 53.209038,
       "lng": -2.894566,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 133.9,
+      "diesel": 145.9,
+      "updated": "3/9/2026",
+      "cached": true
     },
     {
       "name": "MFG ROWTON",
@@ -193,10 +193,10 @@
       "postcode": "CH3 6AF",
       "lat": 53.176188,
       "lng": -2.825907,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 138.9,
+      "diesel": 151.9,
+      "updated": "3/9/2026",
+      "cached": true
     },
     {
       "name": "SAINSBURYS ELLESMERE PORT",
@@ -205,10 +205,10 @@
       "postcode": "CH65 9HN",
       "lat": 53.26233,
       "lng": -2.88042,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 134.9,
+      "diesel": 147.9,
+      "updated": "3/9/2026",
+      "cached": true
     },
     {
       "name": "BR Gwersyllt",
@@ -217,10 +217,10 @@
       "postcode": "LL11 4AH",
       "lat": 53.0792616,
       "lng": -3.021987,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 139.9,
+      "diesel": 149.9,
+      "updated": "3/9/2026",
+      "cached": true
     },
     {
       "name": "SHELL CARLETT",
@@ -229,10 +229,10 @@
       "postcode": "CH62 0BZ",
       "lat": 53.314799,
       "lng": -2.963826,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 138.9,
+      "diesel": 162.9,
+      "updated": "3/9/2026",
+      "cached": true
     },
     {
       "name": "INCH FILLING STATION",
@@ -253,10 +253,10 @@
       "postcode": "CH4 8RU",
       "lat": 53.178287,
       "lng": -2.935342,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 133.9,
+      "diesel": 148.9,
+      "updated": "3/9/2026",
+      "cached": true
     },
     {
       "name": "ESSAR GATEACRE SERVICE STATION",
@@ -277,10 +277,10 @@
       "postcode": "CH49 6QG",
       "lat": 53.37986,
       "lng": -3.09998,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 136.9,
+      "diesel": 146.9,
+      "updated": "3/9/2026",
+      "cached": true
     },
     {
       "name": "SHELL NORTHOP",
@@ -289,10 +289,10 @@
       "postcode": "CH7 6HB",
       "lat": 53.192913,
       "lng": -3.081794,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 148.9,
+      "diesel": 165.9,
+      "updated": "3/9/2026",
+      "cached": true
     },
     {
       "name": "SHELL NORTHOP HALL",
@@ -313,10 +313,10 @@
       "postcode": "CH66 2PY",
       "lat": 53.256833,
       "lng": -2.909397,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 137.9,
+      "diesel": 159.9,
+      "updated": "3/9/2026",
+      "cached": true
     },
     {
       "name": "SHELL SMITHDOWN ROAD",
@@ -349,10 +349,10 @@
       "postcode": "LL12 8DU",
       "lat": 53.0701313,
       "lng": -2.9897412,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 135.9,
+      "diesel": 145.9,
+      "updated": "3/9/2026",
+      "cached": true
     },
     {
       "name": "ASDA COEDPOETH EXPRESS PETROL",
@@ -361,10 +361,10 @@
       "postcode": "LL11 3UF",
       "lat": 53.0553979,
       "lng": -3.0743781,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 143.9,
+      "diesel": 159.9,
+      "updated": "3/12/2026",
+      "cached": true
     },
     {
       "name": "ASDA HOLT ROAD EXPRESS PETROL",
@@ -385,10 +385,10 @@
       "postcode": "LL15 1PE",
       "lat": 53.1167433,
       "lng": -3.3249443,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 156.9,
+      "diesel": 148.9,
+      "updated": "3/9/2026",
+      "cached": true
     },
     {
       "name": "ASDA SINGING KETTLE S/STN EXPRESS PETROL",
@@ -397,10 +397,10 @@
       "postcode": "CH8 8RD",
       "lat": 53.274981,
       "lng": -3.292738,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 152.9,
+      "diesel": 171.9,
+      "updated": "3/12/2026",
+      "cached": true
     },
     {
       "name": "ASDA TREFFYNNON EXPRESS PETROL",
@@ -409,10 +409,10 @@
       "postcode": "CH8 7SG",
       "lat": 53.267,
       "lng": -3.216,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 143.9,
+      "diesel": 161.9,
+      "updated": "3/12/2026",
+      "cached": true
     },
     {
       "name": "RONTEC HOYLAKE",
@@ -421,10 +421,10 @@
       "postcode": "CH47 0LA",
       "lat": 53.39785,
       "lng": -3.16973,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 135.9,
+      "diesel": 152.9,
+      "updated": "3/9/2026",
+      "cached": true
     },
     {
       "name": "ASDA WYLFA EXPRESS PETROL",
@@ -457,10 +457,10 @@
       "postcode": "CH7 4HL",
       "lat": 53.137161,
       "lng": -3.083567,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 141.7,
+      "diesel": 161.7,
+      "updated": "3/12/2026",
+      "cached": true
     },
     {
       "name": "Dobshill Service Station",
@@ -469,10 +469,10 @@
       "postcode": "CH5 3LZ",
       "lat": 53.1636207,
       "lng": -3.039481,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 139.9,
+      "diesel": 154.9,
+      "updated": "3/9/2026",
+      "cached": true
     },
     {
       "name": "ASDA QUEENSFERRY",
@@ -481,10 +481,10 @@
       "postcode": "CH5 1TP",
       "lat": 53.2049518,
       "lng": -3.0265271,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 135.9,
+      "diesel": 155.9,
+      "updated": "3/12/2026",
+      "cached": true
     },
     {
       "name": "ASDA QUAY EXPRESS PETROL",
@@ -493,10 +493,10 @@
       "postcode": "CH5 4AS",
       "lat": 53.22449,
       "lng": -3.071442,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 141.9,
+      "diesel": 158.9,
+      "updated": "3/12/2026",
+      "cached": true
     },
     {
       "name": "ASDA DEESIDE EXPRESS PETROL",
@@ -505,10 +505,10 @@
       "postcode": "CH5 2NS",
       "lat": 53.232092,
       "lng": -3.006867,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 142.9,
+      "diesel": 171.9,
+      "updated": "3/12/2026",
+      "cached": true
     },
     {
       "name": "ASDA WREXHAM ROAD EXPRESS PETROL",
@@ -517,10 +517,10 @@
       "postcode": "CH4 9DE",
       "lat": 53.162955,
       "lng": -2.908206,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 143.9,
+      "diesel": 171.9,
+      "updated": "3/12/2026",
+      "cached": true
     },
     {
       "name": "ASDA PARKGATE EXPRESS PETROL",
@@ -529,10 +529,10 @@
       "postcode": "CH1 4BE",
       "lat": 53.2043,
       "lng": -2.9023,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 141.9,
+      "diesel": 158.9,
+      "updated": "3/12/2026",
+      "cached": true
     },
     {
       "name": "ASDA RED ENSIGN EXPRESS PETROL",
@@ -541,10 +541,10 @@
       "postcode": "CH1 6JS",
       "lat": 53.232995,
       "lng": -2.942376,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 149.9,
+      "diesel": 171.9,
+      "updated": "3/12/2026",
+      "cached": true
     },
     {
       "name": "COSTCO WHOLESALE CHESTER",
@@ -553,10 +553,10 @@
       "postcode": "CH1 6LT",
       "lat": 53.24496,
       "lng": -2.93034,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 127.9,
+      "diesel": 139.9,
+      "updated": "3/9/2026",
+      "cached": true
     },
     {
       "name": "ASDA HANDBRIDGE EXPRESS PETROL",
@@ -565,10 +565,10 @@
       "postcode": "CH4 7JF",
       "lat": 53.183942,
       "lng": -2.887504,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 141.9,
+      "diesel": 158.9,
+      "updated": "3/12/2026",
+      "cached": true
     },
     {
       "name": "EG MOSTON PFS",
@@ -589,10 +589,10 @@
       "postcode": "CH64 8TF",
       "lat": 53.2741984,
       "lng": -3.0014083,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 132.9,
+      "diesel": 145.9,
+      "updated": "3/9/2026",
+      "cached": true
     },
     {
       "name": "SPITAL SF CONNECT",
@@ -601,10 +601,10 @@
       "postcode": "CH63 3EL",
       "lat": 53.34132,
       "lng": -3.00749,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 136.9,
+      "diesel": 148.9,
+      "updated": "3/9/2026",
+      "cached": true
     },
     {
       "name": "RONTEC BEBINGTON",
@@ -613,10 +613,10 @@
       "postcode": "CH63 7RD",
       "lat": 53.34781,
       "lng": -2.99834,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 132.9,
+      "diesel": 147.9,
+      "updated": "3/9/2026",
+      "cached": true
     },
     {
       "name": "ASDA ARROWE PARK SUPERSTORE",
@@ -625,10 +625,10 @@
       "postcode": "CH49 5PD",
       "lat": 53.3700696,
       "lng": -3.0784032,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 135.9,
+      "diesel": 155.9,
+      "updated": "3/12/2026",
+      "cached": true
     },
     {
       "name": "ASDA LAIRDS EXPRESS PETROL",
@@ -637,10 +637,10 @@
       "postcode": "CH41 9BW",
       "lat": 53.379868,
       "lng": -3.01265,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 141.9,
+      "diesel": 158.9,
+      "updated": "3/12/2026",
+      "cached": true
     },
     {
       "name": "ASDA GREENLANE EXPRESS PETROL",
@@ -649,10 +649,10 @@
       "postcode": "CH41 9AZ",
       "lat": 53.384,
       "lng": -3.015,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 141.9,
+      "diesel": 158.9,
+      "updated": "3/12/2026",
+      "cached": true
     },
     {
       "name": "ASDA ELLESMERE PORT EXPRESS PETROL",
@@ -661,10 +661,10 @@
       "postcode": "CH65 6TF",
       "lat": 53.278,
       "lng": -2.904,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 141.9,
+      "diesel": 158.9,
+      "updated": "3/12/2026",
+      "cached": true
     },
     {
       "name": "Ellesmere Port Service Station",
@@ -673,10 +673,10 @@
       "postcode": "CH65 3AA",
       "lat": 53.2898073,
       "lng": -2.9077945,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 139.9,
+      "diesel": 152.9,
+      "updated": "3/9/2026",
+      "cached": true
     },
     {
       "name": "ASDA BROMBOROUGH SUPERSTORE",
@@ -685,10 +685,10 @@
       "postcode": "CH62 3QP",
       "lat": 53.3406587,
       "lng": -2.9764509,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 135.9,
+      "diesel": 155.7,
+      "updated": "3/12/2026",
+      "cached": true
     },
     {
       "name": "EG SPEKE PFS",
@@ -745,10 +745,10 @@
       "postcode": "CH3 7HN",
       "lat": 53.2,
       "lng": -2.802,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 144.9,
+      "diesel": 161.9,
+      "updated": "3/12/2026",
+      "cached": true
     },
     {
       "name": "EG BEACON 62 PFS",
@@ -769,10 +769,10 @@
       "postcode": "CH8 7SJ",
       "lat": 53.26136,
       "lng": -3.20879,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 136.9,
+      "diesel": 146.9,
+      "updated": "3/9/2026",
+      "cached": true
     },
     {
       "name": "SHELL HAPSFORD MWSA",
@@ -781,10 +781,10 @@
       "postcode": "CH2 4QZ",
       "lat": 53.268277,
       "lng": -2.801322,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 158.9,
+      "diesel": 178.9,
+      "updated": "3/9/2026",
+      "cached": true
     },
     {
       "name": "SHELL LITTLE WAITROSE HINDERTON",
@@ -793,10 +793,10 @@
       "postcode": "CH64 7TA",
       "lat": 53.294253,
       "lng": -3.042575,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 137.9,
+      "diesel": 152.9,
+      "updated": "3/9/2026",
+      "cached": true
     },
     {
       "name": "SHELL CO-OP MOLD",
@@ -805,10 +805,10 @@
       "postcode": "CH7 6LQ",
       "lat": 53.181156,
       "lng": -3.111588,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 143.9,
+      "diesel": 158.9,
+      "updated": "3/9/2026",
+      "cached": true
     },
     {
       "name": "BR Flint",
@@ -817,10 +817,10 @@
       "postcode": "CH6 5DZ",
       "lat": 53.2443473,
       "lng": -3.1222575,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 139.9,
+      "diesel": 152.9,
+      "updated": "3/9/2026",
+      "cached": true
     },
     {
       "name": "Esso - Saltney Service Station",
@@ -829,10 +829,10 @@
       "postcode": "CH4 8SJ",
       "lat": 53.178903,
       "lng": -2.922518,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 130.9,
+      "diesel": 142.9,
+      "updated": "3/9/2026",
+      "cached": true
     },
     {
       "name": "LIVERPOOL ALLERTON RD SUPERSTORE - PETROL FILLING STATION",
@@ -853,10 +853,10 @@
       "postcode": "CH5 1QD",
       "lat": 53.2088991,
       "lng": -3.0326318,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 132.9,
+      "diesel": 144.9,
+      "updated": "3/9/2026",
+      "cached": true
     },
     {
       "name": "SHELL HUNTS CROSS",
@@ -877,10 +877,10 @@
       "postcode": "CH6 5RR",
       "lat": 53.253768,
       "lng": -3.14176,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 139.9,
+      "diesel": 159.9,
+      "updated": "3/9/2026",
+      "cached": true
     },
     {
       "name": "SMITHY VIEW SERVICE STATION ACTON",
@@ -889,10 +889,10 @@
       "postcode": "LL12 8DY",
       "lat": 53.0687749,
       "lng": -2.9908063,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 125.9,
+      "diesel": 134.9,
+      "updated": "3/9/2026",
+      "cached": true
     },
     {
       "name": "MOLD SUPERSTORE - PETROL FILLING STATION",
@@ -901,10 +901,10 @@
       "postcode": "CH7 1UB",
       "lat": 53.16708,
       "lng": -3.13754,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 140.9,
+      "diesel": 150.9,
+      "updated": "3/9/2026",
+      "cached": true
     },
     {
       "name": "MFG HALEWOOD",
@@ -925,10 +925,10 @@
       "postcode": "CH60 3RY",
       "lat": 53.322022,
       "lng": -3.084409,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 139.9,
+      "diesel": 152.9,
+      "updated": "3/9/2026",
+      "cached": true
     },
     {
       "name": "BROUGHTON CHESTER EXTRA - PETROL FILLING STATION",
@@ -937,10 +937,10 @@
       "postcode": "CH4 0DP",
       "lat": 53.16935,
       "lng": -2.9739,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 132.9,
+      "diesel": 146.9,
+      "updated": "3/9/2026",
+      "cached": true
     },
     {
       "name": "Rhydymwyn Service Station",
@@ -949,10 +949,10 @@
       "postcode": "CH7 5HE",
       "lat": 53.1928694,
       "lng": -3.1889389,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 137.9,
+      "diesel": 147.8,
+      "updated": "3/9/2026",
+      "cached": true
     },
     {
       "name": "BP HARVEST ENERGY HOYLAKE",
@@ -961,10 +961,10 @@
       "postcode": "CH46 5NA",
       "lat": 53.3961782,
       "lng": -3.1318942,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 136.9,
+      "diesel": 151.9,
+      "updated": "3/9/2026",
+      "cached": true
     },
     {
       "name": "SAINSBURYS BIRKENHEAD",
@@ -973,10 +973,10 @@
       "postcode": "CH42 8PQ",
       "lat": 53.37472,
       "lng": -3.04765,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 135.9,
+      "diesel": 145.9,
+      "updated": "3/9/2026",
+      "cached": true
     },
     {
       "name": "SAINSBURYS KINGS ROAD BEBINGTON",
@@ -985,10 +985,10 @@
       "postcode": "CH63 8PZ",
       "lat": 53.35656,
       "lng": -3.02542,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 133.9,
+      "diesel": 145.9,
+      "updated": "3/9/2026",
+      "cached": true
     },
     {
       "name": "SHELL UPTON",
@@ -997,10 +997,10 @@
       "postcode": "CH49 0UE",
       "lat": 53.381566,
       "lng": -3.09902,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 139.9,
+      "diesel": 151.9,
+      "updated": "3/9/2026",
+      "cached": true
     },
     {
       "name": "FOUR ACES FILLING STATION",
@@ -1033,10 +1033,10 @@
       "postcode": "LL151NB",
       "lat": 53.1134,
       "lng": -3.31576,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 139.9,
+      "diesel": 159.9,
+      "updated": "3/9/2026",
+      "cached": true
     },
     {
       "name": "MFG MORRISONS ELLESMERE PORT",
@@ -1045,10 +1045,10 @@
       "postcode": "CH65 6RU",
       "lat": 53.273606,
       "lng": -2.910218,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 135.9,
+      "diesel": 150.9,
+      "updated": "3/9/2026",
+      "cached": true
     },
     {
       "name": "SHELL WIRRAL WAY",
@@ -1057,10 +1057,10 @@
       "postcode": "CH42 0HA",
       "lat": 53.384042,
       "lng": -3.032912,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 137.9,
+      "diesel": 151.9,
+      "updated": "3/9/2026",
+      "cached": true
     },
     {
       "name": "SHELL HOOLE ROAD",
@@ -1069,10 +1069,10 @@
       "postcode": "CH2 3NH",
       "lat": 53.199234,
       "lng": -2.878935,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 141.9,
+      "diesel": 154.9,
+      "updated": "3/9/2026",
+      "cached": true
     },
     {
       "name": "HELMINGTON ROW FILLING STATION",
@@ -1105,10 +1105,10 @@
       "postcode": "CH65 4AX",
       "lat": 53.284662,
       "lng": -2.89441,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 138.9,
+      "diesel": 154.9,
+      "updated": "3/9/2026",
+      "cached": true
     },
     {
       "name": "IVANHOE SERVICE STATION",
@@ -1129,10 +1129,10 @@
       "postcode": "CH8 9JS",
       "lat": 53.342343,
       "lng": -3.3371063,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 153.9,
+      "diesel": 153.9,
+      "updated": "3/9/2026",
+      "cached": true
     },
     {
       "name": "SAINSBURYS WREXHAM",
@@ -1141,10 +1141,10 @@
       "postcode": "LL11 2BA",
       "lat": 53.05571,
       "lng": -3.00904,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false
+      "unleaded": 136.9,
+      "diesel": 146.9,
+      "updated": "3/9/2026",
+      "cached": true
     },
     {
       "name": "BR Buckley",
@@ -1153,10 +1153,370 @@
       "postcode": "CH7 2NJ",
       "lat": 53.1685643,
       "lng": -3.0885872,
-      "unleaded": null,
+      "unleaded": 149.9,
       "diesel": null,
-      "updated": null,
-      "cached": false
+      "updated": "3/9/2026",
+      "cached": true
+    },
+    {
+      "name": "Barnhills of Broxton",
+      "brand": "GULF",
+      "address": "BROXTON GARAGE, WHITCHURCH ROAD, BROXTON, CHESTER, CH3 9JR, CHESTER, CH3 9JR",
+      "postcode": "",
+      "lat": 0.0,
+      "lng": 0.0,
+      "unleaded": 130.9,
+      "diesel": 138.9,
+      "updated": "3/9/2026",
+      "cached": true
+    },
+    {
+      "name": "MFG BEECHLEY",
+      "brand": "TEXACO",
+      "address": "KINGSMILL ROAD, HIGHTOWN, LL13 8NH",
+      "postcode": "",
+      "lat": 0.0,
+      "lng": 0.0,
+      "unleaded": 132.9,
+      "diesel": 141.9,
+      "updated": "3/9/2026",
+      "cached": true
+    },
+    {
+      "name": "MFG MORRISONS WREXHAM",
+      "brand": "MORRISONS",
+      "address": "RUTHIN ROAD/CENTENARY ROAD, WREXHAM, LL13 7TU",
+      "postcode": "",
+      "lat": 0.0,
+      "lng": 0.0,
+      "unleaded": 135.9,
+      "diesel": 148.9,
+      "updated": "3/9/2026",
+      "cached": true
+    },
+    {
+      "name": "WREXHAM EXTRA - PETROL FILLING STATION",
+      "brand": "TESCO",
+      "address": "CRESCENT ROAD, WREXHAM, LL13 8HF",
+      "postcode": "",
+      "lat": 0.0,
+      "lng": 0.0,
+      "unleaded": 134.9,
+      "diesel": 145.9,
+      "updated": "3/9/2026",
+      "cached": true
+    },
+    {
+      "name": "BIRKENHEAD BIDSTON MOSS EXTRA - PETROL FILLING STATION",
+      "brand": "TESCO",
+      "address": "BIDSTON LINK ROAD, BIRKENHEAD, CH43 7AA",
+      "postcode": "",
+      "lat": 0.0,
+      "lng": 0.0,
+      "unleaded": 135.9,
+      "diesel": 145.9,
+      "updated": "3/9/2026",
+      "cached": true
+    },
+    {
+      "name": "MFG MORRISONS RHYL",
+      "brand": "MORRISONS",
+      "address": "MARSH ROAD, RHYL, LL18 2DF",
+      "postcode": "",
+      "lat": 0.0,
+      "lng": 0.0,
+      "unleaded": 138.9,
+      "diesel": 154.9,
+      "updated": "3/9/2026",
+      "cached": true
+    },
+    {
+      "name": "MFG WALLASEY VILLAGE",
+      "brand": "BP",
+      "address": "15-35 LEASOWE ROAD, WALLASEY VILLAGE, CH44 2BY",
+      "postcode": "",
+      "lat": 0.0,
+      "lng": 0.0,
+      "unleaded": 136.9,
+      "diesel": 159.9,
+      "updated": "3/9/2026",
+      "cached": true
+    },
+    {
+      "name": "MFG MORRISONS DENBIGH",
+      "brand": "MORRISONS",
+      "address": "SMITHFIELD ROAD, DENBIGH, LL16 3LW",
+      "postcode": "",
+      "lat": 0.0,
+      "lng": 0.0,
+      "unleaded": 139.9,
+      "diesel": 154.9,
+      "updated": "3/9/2026",
+      "cached": true
+    },
+    {
+      "name": "RONTEC RUABON",
+      "brand": "ESSO",
+      "address": "RUABON BY PASS, WREXHAM, LL14 6YY",
+      "postcode": "",
+      "lat": 0.0,
+      "lng": 0.0,
+      "unleaded": 137.9,
+      "diesel": 152.9,
+      "updated": "3/9/2026",
+      "cached": true
+    },
+    {
+      "name": "RONTEC WREXHAM",
+      "brand": "BP",
+      "address": "WREXHAM ROAD, JOHNSTOWN, WREXHAM, LL14 1PA",
+      "postcode": "",
+      "lat": 0.0,
+      "lng": 0.0,
+      "unleaded": 137.9,
+      "diesel": 152.9,
+      "updated": "3/9/2026",
+      "cached": true
+    },
+    {
+      "name": "FERDI'S LOCAL",
+      "brand": "FERDI'S LOCAL",
+      "address": "FERDI'S LOCAL, 43-44, SALOP ROAD, OVERTON, WREXHAM, LL13 0EH, WREXHAM, LL13 0EH",
+      "postcode": "",
+      "lat": 0.0,
+      "lng": 0.0,
+      "unleaded": 137.9,
+      "diesel": 146.9,
+      "updated": "3/9/2026",
+      "cached": true
+    },
+    {
+      "name": "PRESTATYN SUPERSTORE - PETROL FILLING STATION",
+      "brand": "TESCO",
+      "address": "TESCO STORES, PRESTATYN SHOPPING PARK, PRESTATYN, LL19 9BJ",
+      "postcode": "",
+      "lat": 0.0,
+      "lng": 0.0,
+      "unleaded": 138.9,
+      "diesel": 151.9,
+      "updated": "3/9/2026",
+      "cached": true
+    },
+    {
+      "name": "BP HARVEST ENERGY LAIRD STREET",
+      "brand": "BP HARVEST ENERGY",
+      "address": "LAIRD STREET, BIRKENHEAD, CH41 7AJ",
+      "postcode": "",
+      "lat": 0.0,
+      "lng": 0.0,
+      "unleaded": 138.9,
+      "diesel": 152.9,
+      "updated": "3/9/2026",
+      "cached": true
+    },
+    {
+      "name": "ASDA RHYL SUPERSTORE",
+      "brand": "ASDA",
+      "address": "ST ASAPH AVENUE NORTH, KINMEL BAY, RHYL, LL18 5EQ",
+      "postcode": "",
+      "lat": 0.0,
+      "lng": 0.0,
+      "unleaded": 138.9,
+      "diesel": 150.9,
+      "updated": "3/9/2026",
+      "cached": true
+    },
+    {
+      "name": "SAINSBURYS RHYL",
+      "brand": "SAINSBURY'S",
+      "address": "RHYL ROAD, RHUDDLAN, RHYL, LL18 2TP",
+      "postcode": "",
+      "lat": 0.0,
+      "lng": 0.0,
+      "unleaded": 138.9,
+      "diesel": 152.9,
+      "updated": "3/9/2026",
+      "cached": true
+    },
+    {
+      "name": "CASTLE VIEW",
+      "brand": "TEXACO",
+      "address": "RHYL ROAD, DENBIGH, LL16 5SU",
+      "postcode": "",
+      "lat": 0.0,
+      "lng": 0.0,
+      "unleaded": 139.9,
+      "diesel": 159.9,
+      "updated": "3/9/2026",
+      "cached": true
+    },
+    {
+      "name": "MFG LISCARD",
+      "brand": "SHELL",
+      "address": "LLOYDS CORNER / LISCARD ROAD, WALLASEY, CH44 9AD",
+      "postcode": "",
+      "lat": 0.0,
+      "lng": 0.0,
+      "unleaded": 139.9,
+      "diesel": 159.9,
+      "updated": "3/9/2026",
+      "cached": true
+    },
+    {
+      "name": "STANS OF LLANGOLLEN",
+      "brand": "TEXACO",
+      "address": "STANS OF LLANGOLLEN, BERWYN STREET, LLANGOLLEN, LL20 8NF, LLANGOLLEN, LL20 8NF",
+      "postcode": "",
+      "lat": 0.0,
+      "lng": 0.0,
+      "unleaded": 141.9,
+      "diesel": 154.9,
+      "updated": "3/9/2026",
+      "cached": true
+    },
+    {
+      "name": "Ruabon Park Service Station",
+      "brand": "RUABON PARK SERVICE STATION",
+      "address": "RUABON PARK SERVICE STATION, JAMES PARK WAY, RUABON, WREXHAM, LL14 6EQ, WREXHAM, LL14 6EQ",
+      "postcode": "",
+      "lat": 0.0,
+      "lng": 0.0,
+      "unleaded": 141.9,
+      "diesel": 155.9,
+      "updated": "3/9/2026",
+      "cached": true
+    },
+    {
+      "name": "MFG PRESTATYN",
+      "brand": "BP",
+      "address": "MARINE ROAD, PRESTATYN, LL19 7HA",
+      "postcode": "",
+      "lat": 0.0,
+      "lng": 0.0,
+      "unleaded": 141.9,
+      "diesel": 159.9,
+      "updated": "3/9/2026",
+      "cached": true
+    },
+    {
+      "name": "Greenacre Garage",
+      "brand": "GREENACRE GARAGE",
+      "address": "GREENACRE GARAGE, CHURCH STREET, TARVIN, CHESTER, CH3 8NA, CHESTER, CH3 8NA",
+      "postcode": "",
+      "lat": 0.0,
+      "lng": 0.0,
+      "unleaded": 144.9,
+      "diesel": 160.9,
+      "updated": "3/9/2026",
+      "cached": true
+    },
+    {
+      "name": "ASDA LISCARD SUPERSTORE",
+      "brand": "ASDA",
+      "address": "SEA VIEW ROAD, WALLASEY, CH45 4NZ",
+      "postcode": "",
+      "lat": 0.0,
+      "lng": 0.0,
+      "unleaded": 136.9,
+      "diesel": 155.9,
+      "updated": "3/12/2026",
+      "cached": true
+    },
+    {
+      "name": "ASDA RHUDDLAN EXPRESS PETROL",
+      "brand": "TEXACO",
+      "address": "RHYL ROAD, RHUDDLAN, LL18 2TS",
+      "postcode": "",
+      "lat": 0.0,
+      "lng": 0.0,
+      "unleaded": 145.9,
+      "diesel": 161.9,
+      "updated": "3/12/2026",
+      "cached": true
+    },
+    {
+      "name": "ASDA MORETON EXPRESS PETROL",
+      "brand": "ESSO",
+      "address": "157 HOYLAKE ROAD, WIRRAL, CH46 9PZ",
+      "postcode": "",
+      "lat": 0.0,
+      "lng": 0.0,
+      "unleaded": 141.9,
+      "diesel": 158.9,
+      "updated": "3/12/2026",
+      "cached": true
+    },
+    {
+      "name": "ASDA VALE EXPRESS PETROL",
+      "brand": "ESSO",
+      "address": "193 VALE ROAD, CONWY, LL18 2PH",
+      "postcode": "",
+      "lat": 0.0,
+      "lng": 0.0,
+      "unleaded": 142.9,
+      "diesel": 159.9,
+      "updated": "3/12/2026",
+      "cached": true
+    },
+    {
+      "name": "ASDA RHOSTYLLEN EXPRESS PETROL",
+      "brand": "ESSO",
+      "address": "WREXHAM ROAD, WREXHAM, LL14 4EJ",
+      "postcode": "",
+      "lat": 0.0,
+      "lng": 0.0,
+      "unleaded": 144.9,
+      "diesel": 159.9,
+      "updated": "3/12/2026",
+      "cached": true
+    },
+    {
+      "name": "ASDA KINMEL PARK WEST EXPRESS PETROL",
+      "brand": "ESSO",
+      "address": "A55 WESTBOUND, BODELWYDDAN, LL18 5XW",
+      "postcode": "",
+      "lat": 0.0,
+      "lng": 0.0,
+      "unleaded": 151.9,
+      "diesel": 166.9,
+      "updated": "3/12/2026",
+      "cached": true
+    },
+    {
+      "name": "ASDA KINMEL PARK EAST EXPRESS PETROL",
+      "brand": "ESSO",
+      "address": "55 EXPRESSWAY, BODELWYDDAN, LL18 5XE",
+      "postcode": "",
+      "lat": 0.0,
+      "lng": 0.0,
+      "unleaded": 151.9,
+      "diesel": 166.9,
+      "updated": "3/12/2026",
+      "cached": true
+    },
+    {
+      "name": "ASDA WREXHAM SUPERSTORE",
+      "brand": "ASDA",
+      "address": "HOLT ROAD, WREXHAM, LL13 8HL",
+      "postcode": "",
+      "lat": 0.0,
+      "lng": 0.0,
+      "unleaded": 135.7,
+      "diesel": 155.7,
+      "updated": "3/12/2026",
+      "cached": true
+    },
+    {
+      "name": "PGG EGREMONT",
+      "brand": "VALERO EGREMONT",
+      "address": "109 KING STREET, WALLASEY, CH44 0BZ",
+      "postcode": "",
+      "lat": 0.0,
+      "lng": 0.0,
+      "unleaded": 143.9,
+      "diesel": 173.9,
+      "updated": "3/12/2026",
+      "cached": true
     }
   ]
 }
