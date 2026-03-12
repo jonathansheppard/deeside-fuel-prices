@@ -1,332 +1,274 @@
-#!/usr/bin/env python3
-"""
-Deeside Fuel Prices — API Auto-Updater
-========================================
-Fetches live fuel prices from the GOV.UK Fuel Finder API,
-filters to the Deeside/Flintshire/Chester area, and commits
-stations.json to GitHub.
-
-Run every 30 minutes via crontab:
-  crontab -e
-  */30 * * * * /usr/bin/python3 /Users/jonsheppard/deeside-fuel-prices/update-api.py >> /Users/jonsheppard/deeside-fuel-prices/update.log 2>&1
-
-Requires: GITHUB_TOKEN environment variable (or hardcode below)
-"""
-
-import json, math, urllib.request, urllib.error, base64, os, sys
+import requests
+import json
+import os
+import csv
+import io
 from datetime import datetime, timezone
 
-# ── CONFIG ──
-API_BASE = "https://www.fuel-finder.service.gov.uk/api/v1"
-CLIENT_ID = "OXaCtJ25MBEQs0OHobvSf8l3A5ztgsM2"
+# ── Credentials ───────────────────────────────────────────────────────────────
+CLIENT_ID     = "OXaCtJ25MBEQs0OHobvSf8l3A5ztgsM2"
 CLIENT_SECRET = "XMYqgyjvqSjy4MS5BDS6zrKty8nluY29JEOLaXRyXBRHMz6tWmyWTD8Nl7qIeRAE"
 
-GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "YOUR_TOKEN_HERE")  # Set via: export GITHUB_TOKEN=ghp_xxx
-GITHUB_REPO = "jonathansheppard/deeside-fuel-prices"
-GITHUB_FILE = "stations.json"
+BASE_URL      = "https://www.fuel-finder.service.gov.uk"
+TOKEN_URL     = f"{BASE_URL}/api/v1/oauth/generate_access_token"
+PRICES_URL    = f"{BASE_URL}/api/v1/pfs/fuel-prices"
+INFO_URL      = f"{BASE_URL}/api/v1/pfs"
 
-DEESIDE_LAT = 53.2089
-DEESIDE_LNG = -3.0330
-MAX_DISTANCE = 25  # miles
+# ── Google Sheets fallback ────────────────────────────────────────────────────
+SHEET_ID      = "1HE-K4RVMbwWOuF6hy-CJg1G5kFWtChpK4w1WKnWqjTQ"
+SHEET_GID     = "1435371472"
+SHEET_CSV_URL = f"https://docs.google.com/spreadsheets/d/{SHEET_ID}/export?format=csv&gid={SHEET_GID}"
 
-NATIONAL_AVG_UNLEADED = 131.7
-NATIONAL_AVG_DIESEL = 141.5
+# ── Output ────────────────────────────────────────────────────────────────────
+OUTPUT_FILE   = os.path.expanduser("~/stations.json")
 
-TARGET_POSTCODES = [
-    'CH1','CH2','CH3','CH4','CH5','CH6','CH7','CH8',
-    'CH41','CH42','CH43','CH44','CH45','CH46','CH47','CH48','CH49',
-    'CH60','CH61','CH62','CH63','CH64','CH65','CH66',
-    'LL11','LL12','LL13','LL14','LL15','LL16','LL17','LL18','LL19','LL20'
-]
+# ── Geographic filter ─────────────────────────────────────────────────────────
+LAT_MIN, LAT_MAX = 53.05, 53.40
+LNG_MIN, LNG_MAX = -3.35, -2.80
+
+# ── Price floor ───────────────────────────────────────────────────────────────
+PRICE_FLOOR = 115.0
 
 
 def log(msg):
     print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] {msg}")
 
 
-def haversine(lat1, lon1, lat2, lon2):
-    R = 3959
-    dlat = math.radians(lat2 - lat1)
-    dlon = math.radians(lon2 - lon1)
-    a = math.sin(dlat/2)**2 + math.cos(math.radians(lat1)) * math.cos(math.radians(lat2)) * math.sin(dlon/2)**2
-    return R * 2 * math.atan2(math.sqrt(a), math.sqrt(1-a))
-
-
-def api_request(url, method="GET", data=None, headers=None):
-    if headers is None:
-        headers = {}
-    headers["Content-Type"] = "application/json"
-    
-    body = json.dumps(data).encode() if data else None
-    req = urllib.request.Request(url, data=body, method=method, headers=headers)
-    
-    try:
-        resp = urllib.request.urlopen(req)
-        return json.loads(resp.read().decode())
-    except urllib.error.HTTPError as e:
-        error_body = e.read().decode() if e.fp else ""
-        log(f"HTTP {e.code}: {error_body[:500]}")
-        raise
-
-
 def get_token():
     log("Authenticating...")
-    result = api_request(
-        f"{API_BASE}/oauth/generate_access_token",
-        method="POST",
-        data={"client_id": CLIENT_ID, "client_secret": CLIENT_SECRET}
-    )
-    if result.get("success"):
-        token = result["data"]["access_token"]
-        log("Token obtained successfully")
-        return token
-    else:
-        raise Exception(f"Auth failed: {result.get('message')}")
+    r = requests.post(TOKEN_URL, json={
+        "client_id": CLIENT_ID,
+        "client_secret": CLIENT_SECRET
+    })
+    r.raise_for_status()
+    data = r.json()
+    token = data.get("data", {}).get("access_token") or data.get("access_token")
+    if not token:
+        raise ValueError(f"No token in response: {data}")
+    log("Token obtained successfully")
+    return token
 
 
-def fetch_all_batches(endpoint, token):
-    """Fetch all batches from a paginated API endpoint."""
-    all_items = []
-    batch = 1
+def fetch_all_batches(url, token, extra_params=None):
     headers = {"Authorization": f"Bearer {token}"}
-    
+    all_records = []
+    batch = 1
     while True:
-        url = f"{API_BASE}/{endpoint}?batch-number={batch}"
-        try:
-            items = api_request(url, headers=headers)
-            if not isinstance(items, list) or len(items) == 0:
-                break
-            all_items.extend(items)
-            log(f"  Batch {batch}: {len(items)} items (total: {len(all_items)})")
-            if len(items) < 500:
-                break
-            batch += 1
-        except Exception as e:
-            log(f"  Batch {batch} failed: {e}")
+        params = {"batch-number": batch}
+        if extra_params:
+            params.update(extra_params)
+        r = requests.get(url, headers=headers, params=params)
+        if r.status_code in (400, 403, 404):
             break
-    
-    return all_items
+        r.raise_for_status()
+        data = r.json()
+        if not data:
+            break
+        all_records.extend(data)
+        log(f"  Batch {batch}: {len(data)} items (total: {len(all_records)})")
+        if len(data) < 500:
+            break
+        batch += 1
+    log(f"Total records fetched: {len(all_records)}")
+    return all_records
 
 
-def matches_postcode(postcode):
-    pc = postcode.upper().strip()
-    return any(pc.startswith(p) for p in TARGET_POSTCODES)
-
-
-def process_data(stations_raw, prices_raw):
-    """Merge station info with prices, filter to local area."""
-    
-    # Build station lookup
-    station_map = {}
-    for s in stations_raw:
-        loc = s.get("location", {})
-        pc = loc.get("postcode", "")
-        if not matches_postcode(pc):
-            continue
-        if s.get("permanent_closure") or s.get("temporary_closure"):
-            continue
-        
-        lat = loc.get("latitude")
-        lng = loc.get("longitude")
-        if not lat or not lng:
-            continue
-        station_map[nid]["diesel"] = diesel
-        station_map[nid]["updated"] = latest_update or ""
-    
-    # Build final list
-    stations = []
-    sid = 1
-    for nid, s in station_map.items():
-        if s.get("unleaded") is None and s.get("diesel") is None:
-            continue
-        s["id"] = sid
-        stations.append(s)
-        sid += 1
-    
-    stations.sort(key=lambda x: x.get("unleaded") or 999)
-
-    # Manual additions — local stations not reporting prices to the scheme
-    manual_stations = [
-        {
-            "name": "Asda Quay Express (Esso)",
-            "brand": "ESSO",
-            "address": "Church Street, Connah's Quay, CH5 4AS",
-            "lat": 53.22449,
-            "lng": -3.071442,
-            "unleaded": None,
-            "diesel": None,
-            "updated": "",
-            "distance": 1.2,
-            "is_supermarket": False,
-            "is_motorway": False,
-            "note": "Not reporting prices"
-        },
-        {
-            "name": "Asda Deeside Express Petrol",
-            "brand": "ASDA",
-            "address": "Parkway, Deeside, CH5 2NS",
-            "lat": 53.2280,
-            "lng": -3.0120,
-            "unleaded": None,
-            "diesel": None,
-            "updated": "",
-            "distance": 1.8,
-            "is_supermarket": True,
-            "is_motorway": False,
-            "note": "Not reporting prices"
-        },
-        {
-            "name": "Asda Queensferry Petrol",
-            "brand": "ASDA",
-            "address": "Aston Road, Queensferry, CH5 1TQ",
-            "lat": 53.2050,
-            "lng": -3.0265,
-            "unleaded": None,
-            "diesel": None,
-            "updated": "",
-            "distance": 0.8,
-            "is_supermarket": True,
-            "is_motorway": False,
-            "note": "Not reporting prices"
-        }
-    ]
-    for ms in manual_stations:
-        ms["id"] = sid
-        stations.append(ms)
-        sid += 1
-
-    return stations
-
-
-def commit_to_github(json_content):
-    """Commit stations.json to GitHub."""
-    if GITHUB_TOKEN == "YOUR_TOKEN_HERE":
-        log("No GITHUB_TOKEN set. Saving locally only.")
-        return False
-    
-    api_url = f"https://api.github.com/repos/{GITHUB_REPO}/contents/{GITHUB_FILE}"
-    headers = {
-        "Authorization": f"token {GITHUB_TOKEN}",
-        "Content-Type": "application/json",
-        "User-Agent": "Deeside-Fuel-Updater"
-    }
-    
-    # Get current SHA
+def in_area(lat, lng):
     try:
-        req = urllib.request.Request(api_url, headers=headers)
-        resp = urllib.request.urlopen(req)
-        current = json.loads(resp.read().decode())
-        sha = current["sha"]
-        
-        # Check if content changed
-        existing = base64.b64decode(current["content"]).decode()
-        if existing.strip() == json_content.strip():
-            log("No price changes detected. Skipping commit.")
-            return True
-    except urllib.error.HTTPError:
-        sha = None  # File doesn't exist yet
-    
-    # Commit
-    encoded = base64.b64encode(json_content.encode()).decode()
-    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M")
-    body = {"message": f"Update fuel prices {timestamp}", "content": encoded}
-    if sha:
-        body["sha"] = sha
-    
-    req = urllib.request.Request(
-        api_url,
-        data=json.dumps(body).encode(),
-        method="PUT",
-        headers=headers
-    )
-    resp = urllib.request.urlopen(req)
-    result = json.loads(resp.read().decode())
-    log(f"Committed to GitHub: {result['commit']['sha'][:8]}")
-    return True
+        return LAT_MIN <= float(lat) <= LAT_MAX and LNG_MIN <= float(lng) <= LNG_MAX
+    except (TypeError, ValueError):
+        return False
+
+
+def valid_price(p):
+    try:
+        return float(p) >= PRICE_FLOOR
+    except (TypeError, ValueError):
+        return False
+
+
+def load_sheets_fallback():
+    """Read most recent price per station from Google Sheets."""
+    log("Loading Google Sheets fallback data...")
+    try:
+        r = requests.get(SHEET_CSV_URL)
+        r.raise_for_status()
+        reader = csv.DictReader(io.StringIO(r.text))
+        stations = {}
+        for row in reader:
+            name = row.get("station_name", "").strip()
+            if not name:
+                continue
+            date_str = row.get("date", "")
+            # Keep the most recent row per station
+            if name not in stations or date_str > stations[name]["date"]:
+                stations[name] = row
+        log(f"Sheets fallback: {len(stations)} stations loaded")
+        return stations
+    except Exception as e:
+        log(f"Warning: Could not load Sheets fallback — {e}")
+        return {}
 
 
 def main():
     log("=" * 50)
     log("Deeside Fuel Prices — API Update")
     log("=" * 50)
-    
-    try:
-        # 1. Authenticate
-        token = get_token()
-        
-        # 2. Fetch stations
-        log("Fetching station info...")
-        stations_raw = fetch_all_batches("pfs", token)
-        log(f"Total stations fetched: {len(stations_raw)}")
-        
-        # 3. Fetch prices
-        log("Fetching fuel prices...")
-        prices_raw = fetch_all_batches("pfs/fuel-prices", token)
-        log(f"Total price records fetched: {len(prices_raw)}")
-        
-        # 4. Process
-        log("Processing and filtering...")
-        stations = process_data(stations_raw, prices_raw)
-        
-        if not stations:
-            log("ERROR: No stations found after filtering!")
-            sys.exit(1)
-        
-        # 4b. Calculate national averages from ALL UK stations
-        all_unleaded = []
-        all_diesel = []
-        for p in prices_raw:
-            for fp in p.get("fuel_prices", []):
-                price = fp.get("price")
-                if not price or price <= 0:
-                    continue
-                if fp.get("fuel_type") == "E10":
-                    all_unleaded.append(float(price))
-                elif fp.get("fuel_type") == "B7_STANDARD":
-                    all_diesel.append(float(price))
-        
-        natl_unleaded = round(sum(all_unleaded) / len(all_unleaded), 1) if all_unleaded else 131.7
-        natl_diesel = round(sum(all_diesel) / len(all_diesel), 1) if all_diesel else 141.5
-        log(f"National avg: {natl_unleaded}p unleaded ({len(all_unleaded)} stations), {natl_diesel}p diesel ({len(all_diesel)} stations)")
-        
-        unleaded = [s["unleaded"] for s in stations if s.get("unleaded")]
-        diesel = [s["diesel"] for s in stations if s.get("diesel")]
-        within_10 = len([s for s in stations if s["distance"] <= 10])
-        
-        log(f"Stations: {len(stations)} ({within_10} core / {len(stations) - within_10} wider)")
-        if unleaded:
-            log(f"Unleaded: {min(unleaded):.1f}p - {max(unleaded):.1f}p")
-        if diesel:
-            log(f"Diesel: {min(diesel):.1f}p - {max(diesel):.1f}p")
-        
-        # 5. Build output
-        output = {
-            "nationalAvg": {
-                "unleaded": natl_unleaded,
-                "diesel": natl_diesel
-            },
-            "lastUpdated": datetime.now(timezone.utc).isoformat(),
-            "stationCount": len(stations),
-            "stations": stations
+
+    # Step 1 — OAuth token
+    token = get_token()
+
+    # Step 2 — Load Sheets fallback
+    sheets_data = load_sheets_fallback()
+
+    # Step 3 — Fetch all station info from new API
+    log("Fetching station info...")
+    all_info = fetch_all_batches(INFO_URL, token)
+
+    # Step 4 — Filter to local area
+    local_stations = {}
+    for s in all_info:
+        loc = s.get("location", {})
+        lat = loc.get("latitude")
+        lng = loc.get("longitude")
+        if not in_area(lat, lng):
+            continue
+        local_stations[s["node_id"]] = {
+            "node_id":  s["node_id"],
+            "name":     s.get("trading_name", ""),
+            "brand":    s.get("brand_name", s.get("trading_name", "")),
+            "address":  loc.get("address", ""),
+            "postcode": loc.get("postcode", ""),
+            "lat":      float(lat),
+            "lng":      float(lng),
+            "unleaded": None,
+            "diesel":   None,
+            "updated":  None,
+            "cached":   False
         }
-        
-        json_content = json.dumps(output, indent=2)
-        
-        # 6. Save locally
-        script_dir = os.path.dirname(os.path.abspath(__file__))
-        local_path = os.path.join(script_dir, "stations.json")
-        with open(local_path, "w") as f:
-            f.write(json_content)
-        log(f"Saved to {local_path}")
-        
-        # 7. Commit to GitHub
-        commit_to_github(json_content)
-        
-        log("Update complete!")
-        
-    except Exception as e:
-        log(f"ERROR: {e}")
-        sys.exit(1)
+
+    log(f"Found {len(local_stations)} stations in area from new API")
+
+    # Step 5 — Fetch prices from new API
+    log("Fetching fuel prices...")
+    all_prices = fetch_all_batches(PRICES_URL, token)
+
+    # Step 6 — Merge prices into local stations
+    for p in all_prices:
+        node_id = p.get("node_id")
+        if node_id not in local_stations:
+            continue
+        for fp in p.get("fuel_prices", []):
+            fuel_type = fp.get("fuel_type", "").upper()
+            price     = fp.get("price")
+            updated   = fp.get("effective_from") or fp.get("last_updated")
+            if not valid_price(price):
+                continue
+            if fuel_type == "E10":
+                local_stations[node_id]["unleaded"] = float(price)
+            elif fuel_type in ("B7", "DIESEL"):
+                local_stations[node_id]["diesel"] = float(price)
+            if updated:
+                local_stations[node_id]["updated"] = updated
+
+    # Step 7 — Fill gaps with Sheets fallback for existing local stations
+    fallback_count = 0
+    for node_id, station in local_stations.items():
+        name = station["name"]
+        if name not in sheets_data:
+            continue
+        row = sheets_data[name]
+        changed = False
+        if station["unleaded"] is None and valid_price(row.get("unleaded")):
+            station["unleaded"] = float(row["unleaded"])
+            changed = True
+        if station["diesel"] is None and valid_price(row.get("diesel")):
+            station["diesel"] = float(row["diesel"])
+            changed = True
+        if changed:
+            station["cached"] = True
+            station["updated"] = row.get("date", "")
+            fallback_count += 1
+            log(f"  Sheets fallback used for: {name}")
+
+    # Step 8 — Add Sheets-only stations not found in new API at all
+    api_names = {s["name"] for s in local_stations.values()}
+    extra_count = 0
+    for name, row in sheets_data.items():
+        if name in api_names:
+            continue
+        unleaded = float(row["unleaded"]) if valid_price(row.get("unleaded")) else None
+        diesel   = float(row["diesel"])   if valid_price(row.get("diesel"))   else None
+        if not unleaded and not diesel:
+            continue
+        # Try to get coords from sheet if present
+        try:
+            lat = float(row.get("lat", 0) or 0)
+            lng = float(row.get("lng", 0) or 0)
+        except ValueError:
+            lat, lng = 0.0, 0.0
+        local_stations["sheets_" + name] = {
+            "name":     name,
+            "brand":    row.get("brand", name),
+            "address":  row.get("address", ""),
+            "postcode": "",
+            "lat":      lat,
+            "lng":      lng,
+            "unleaded": unleaded,
+            "diesel":   diesel,
+            "updated":  row.get("date", ""),
+            "cached":   True
+        }
+        extra_count += 1
+
+    log(f"Fallback: {fallback_count} gaps filled, {extra_count} Sheets-only stations added")
+
+    # Step 9 — National averages from new API data
+    log("Processing and filtering...")
+    all_unleaded, all_diesel = [], []
+    for p in all_prices:
+        for fp in p.get("fuel_prices", []):
+            fuel_type = fp.get("fuel_type", "").upper()
+            price     = fp.get("price")
+            if not valid_price(price):
+                continue
+            if fuel_type == "E10":
+                all_unleaded.append(float(price))
+            elif fuel_type in ("B7", "DIESEL"):
+                all_diesel.append(float(price))
+
+    national_avg = {
+        "unleaded": round(sum(all_unleaded) / len(all_unleaded), 1) if all_unleaded else None,
+        "diesel":   round(sum(all_diesel)   / len(all_diesel),   1) if all_diesel   else None
+    }
+
+    # Step 10 — Build output
+    stations_list = list(local_stations.values())
+    for s in stations_list:
+        s.pop("node_id", None)  # Remove internal field
+
+    output = {
+        "nationalAvg":  national_avg,
+        "lastUpdated":  datetime.now(timezone.utc).isoformat(),
+        "stationCount": len(stations_list),
+        "stations":     stations_list
+    }
+
+    # Summary
+    ul_prices = [s["unleaded"] for s in stations_list if s["unleaded"]]
+    di_prices = [s["diesel"]   for s in stations_list if s["diesel"]]
+    if ul_prices:
+        log(f"Unleaded: {min(ul_prices)}p - {max(ul_prices)}p")
+    if di_prices:
+        log(f"Diesel: {min(di_prices)}p - {max(di_prices)}p")
+
+    cached = sum(1 for s in stations_list if s.get("cached"))
+    live   = len(stations_list) - cached
+    log(f"Stations: {len(stations_list)} total ({live} live from new API, {cached} from Sheets fallback)")
+
+    with open(OUTPUT_FILE, "w") as f:
+        json.dump(output, f, indent=2)
+    log(f"Saved to {OUTPUT_FILE}")
 
 
 if __name__ == "__main__":
