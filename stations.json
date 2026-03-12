@@ -3,7 +3,7 @@
     "unleaded": 141.1,
     "diesel": 160.4
   },
-  "lastUpdated": "2026-03-12T16:30:23.366067+00:00",
+  "lastUpdated": "2026-03-12T16:38:28.404678+00:00",
   "stationCount": 53,
   "stations": [
     {
@@ -28,7 +28,7 @@
       "lng": -3.006356,
       "unleaded": 144.9,
       "diesel": 159.9,
-      "updated": "2026-03-12T16:12:51.090Z",
+      "updated": "2026-03-12T16:37:32.603Z",
       "cached": false,
       "distance": 10.6
     },
@@ -145,7 +145,7 @@
       "lng": -3.081794,
       "unleaded": 151.9,
       "diesel": 174.9,
-      "updated": "2026-03-12T12:37:48.708Z",
+      "updated": "2026-03-12T12:44:27.247Z",
       "cached": false,
       "distance": 2.4
     },
@@ -158,7 +158,7 @@
       "lng": -3.088915,
       "unleaded": 151.9,
       "diesel": 174.9,
-      "updated": "2026-03-12T14:02:30.218Z",
+      "updated": "2026-03-12T14:08:14.513Z",
       "cached": false,
       "distance": 2.6
     },
@@ -286,7 +286,7 @@
       "postcode": "CH7 4HL",
       "lat": 53.137161,
       "lng": -3.083567,
-      "unleaded": 141.7,
+      "unleaded": 142.7,
       "diesel": 161.7,
       "updated": "2026-03-11T16:28:24.724Z",
       "cached": false,
@@ -371,7 +371,7 @@
       "distance": 5.1
     },
     {
-      "name": "ASDA RED ENSIGN EXPRESS PETROL",
+      "name": "Asda Parkgate Road, Chester",
       "brand": "BP",
       "address": "",
       "postcode": "CH1 6JS",
@@ -483,7 +483,7 @@
       "lng": -3.042575,
       "unleaded": 141.9,
       "diesel": 161.9,
-      "updated": "2026-03-12T16:25:20.716Z",
+      "updated": "2026-03-12T16:06:30.518Z",
       "cached": false,
       "distance": 6.2
     },
@@ -652,7 +652,7 @@
       "lng": -2.89441,
       "unleaded": 143.9,
       "diesel": 162.9,
-      "updated": "2026-03-12T13:19:21.900Z",
+      "updated": "2026-03-12T13:25:08.590Z",
       "cached": false,
       "distance": 7.8
     },
