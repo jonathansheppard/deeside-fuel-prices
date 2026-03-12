@@ -15,6 +15,19 @@ TOKEN_URL     = f"{BASE_URL}/api/v1/oauth/generate_access_token"
 PRICES_URL    = f"{BASE_URL}/api/v1/pfs/fuel-prices"
 INFO_URL      = f"{BASE_URL}/api/v1/pfs"
 
+# ── Voluntary retailer feeds ──────────────────────────────────────────────────
+RETAILER_FEEDS = [
+    {"name": "Tesco",       "url": "https://www.tesco.com/fuel_prices/fuel_prices_data.json"},
+    {"name": "Morrisons",   "url": "https://www.morrisons.com/fuel-prices/fuel.json"},
+    {"name": "Sainsbury's", "url": "https://api.sainsburys.co.uk/v1/exports/latest/fuel_prices_data.json"},
+    {"name": "Asda",        "url": "https://storelocator.asda.com/fuel_prices_data.json"},
+    {"name": "MFG",         "url": "https://fuel.motorfuelgroup.com/fuel_prices_data.json"},
+    {"name": "Rontec",      "url": "https://www.rontec-servicestations.co.uk/fuel-prices/data/fuel_prices_data.json"},
+    {"name": "Jet",         "url": "https://jetlocal.co.uk/fuel_prices_data.json"},
+    {"name": "Esso/Tesco",  "url": "https://fuelprices.esso.co.uk/latestdata.json"},
+    {"name": "SGN",         "url": "https://www.sgnretail.uk/files/data/SGN_daily_fuel_prices.json"},
+]
+
 # ── Google Sheets fallback ────────────────────────────────────────────────────
 SHEET_ID      = "1HE-K4RVMbwWOuF6hy-CJg1G5kFWtChpK4w1WKnWqjTQ"
 SHEET_GID     = "1435371472"
@@ -27,10 +40,17 @@ OUTPUT_FILE   = os.path.expanduser("~/deeside-fuel-prices/stations.json")
 LAT_MIN, LAT_MAX = 53.05, 53.40
 LNG_MIN, LNG_MAX = -3.35, -2.80
 
-# ── Price floor ───────────────────────────────────────────────────────────────
-PRICE_FLOOR = 115.0
+# ── Centre point for distance calculation (Queensferry roundabout) ────────────
 CENTRE_LAT = 53.1900
 CENTRE_LNG = -3.0333
+
+# ── Price floor ───────────────────────────────────────────────────────────────
+PRICE_FLOOR = 115.0
+
+
+def log(msg):
+    print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] {msg}")
+
 
 def haversine(lat1, lng1, lat2, lng2):
     R = 3958.8
@@ -41,16 +61,12 @@ def haversine(lat1, lng1, lat2, lng2):
     return round(R * 2 * atan2(sqrt(a), sqrt(1-a)), 1)
 
 
-def log(msg):
-    print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] {msg}")
-
-
 def get_token():
-    log("Authenticating...")
+    log("Authenticating with new Fuel Finder API...")
     r = requests.post(TOKEN_URL, json={
         "client_id": CLIENT_ID,
         "client_secret": CLIENT_SECRET
-    })
+    }, timeout=15)
     r.raise_for_status()
     data = r.json()
     token = data.get("data", {}).get("access_token") or data.get("access_token")
@@ -68,7 +84,7 @@ def fetch_all_batches(url, token, extra_params=None):
         params = {"batch-number": batch}
         if extra_params:
             params.update(extra_params)
-        r = requests.get(url, headers=headers, params=params)
+        r = requests.get(url, headers=headers, params=params, timeout=15)
         if r.status_code in (400, 403, 404):
             break
         r.raise_for_status()
@@ -98,11 +114,81 @@ def valid_price(p):
         return False
 
 
+def load_retailer_feeds():
+    """Fetch voluntary retailer JSON feeds and return local stations keyed by postcode."""
+    log("Fetching voluntary retailer feeds...")
+    retailer_stations = {}  # keyed by postcode
+
+    for feed in RETAILER_FEEDS:
+        try:
+            r = requests.get(feed["url"], timeout=15, headers={
+                "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+            })
+            r.raise_for_status()
+            data = r.json()
+
+            # All retailer feeds use the same CMA format
+            stations = data.get("stations", [])
+            count = 0
+            for s in stations:
+                try:
+                    lat = float(s.get("location", {}).get("latitude") or s.get("lat") or 0)
+                    lng = float(s.get("location", {}).get("longitude") or s.get("lng") or 0)
+                except (TypeError, ValueError):
+                    continue
+
+                if not in_area(lat, lng):
+                    continue
+
+                postcode = (s.get("postcode") or "").strip().upper()
+                if not postcode:
+                    continue
+
+                prices = s.get("prices", {})
+                unleaded = float(prices.get("E10") or prices.get("U") or 0) or None
+                diesel   = float(prices.get("B7") or prices.get("D") or 0) or None
+
+                if unleaded and unleaded < PRICE_FLOOR:
+                    unleaded = None
+                if diesel and diesel < PRICE_FLOOR:
+                    diesel = None
+
+                if not unleaded and not diesel:
+                    continue
+
+                last_updated = s.get("last_updated") or datetime.now(timezone.utc).isoformat()
+
+                retailer_stations[postcode] = {
+                    "name":           s.get("brand", feed["name"]) + " " + s.get("name", "").strip(),
+                    "brand":          s.get("brand", feed["name"]),
+                    "address":        s.get("address", ""),
+                    "postcode":       postcode,
+                    "lat":            lat,
+                    "lng":            lng,
+                    "distance":       haversine(CENTRE_LAT, CENTRE_LNG, lat, lng),
+                    "is_supermarket": feed["name"] in ("Tesco", "Morrisons", "Sainsbury's", "Asda"),
+                    "is_motorway":    False,
+                    "unleaded":       unleaded,
+                    "diesel":         diesel,
+                    "updated":        last_updated,
+                    "cached":         False
+                }
+                count += 1
+
+            log(f"  {feed['name']}: {count} local stations")
+
+        except Exception as e:
+            log(f"  {feed['name']}: failed — {e}")
+
+    log(f"Retailer feeds total: {len(retailer_stations)} local stations")
+    return retailer_stations
+
+
 def load_sheets_fallback():
     """Read most recent price per station from Google Sheets."""
     log("Loading Google Sheets fallback data...")
     try:
-        r = requests.get(SHEET_CSV_URL)
+        r = requests.get(SHEET_CSV_URL, timeout=15)
         r.raise_for_status()
         reader = csv.DictReader(io.StringIO(r.text))
         stations = {}
@@ -111,20 +197,17 @@ def load_sheets_fallback():
             if not name:
                 continue
             date_str = row.get("date", "")
-            # Keep the most recent row per station
             if name not in stations:
                 stations[name] = row
             else:
                 try:
-                    from datetime import datetime as dt
-                    d1 = dt.strptime(date_str, "%m/%d/%Y")
-                    d2 = dt.strptime(stations[name]["date"], "%m/%d/%Y")
+                    d1 = datetime.strptime(date_str, "%m/%d/%Y")
+                    d2 = datetime.strptime(stations[name]["date"], "%m/%d/%Y")
                     if d1 > d2:
                         stations[name] = row
-                except:
+                except Exception:
                     if date_str > stations[name]["date"]:
                         stations[name] = row
-                stations[name] = row
         log(f"Sheets fallback: {len(stations)} stations loaded")
         return stations
     except Exception as e:
@@ -132,51 +215,61 @@ def load_sheets_fallback():
         return {}
 
 
+def parse_sheets_date(date_str):
+    try:
+        return datetime.strptime(date_str, "%m/%d/%Y").strftime("%Y-%m-%dT00:00:00.000Z")
+    except Exception:
+        return date_str
+
+
 def main():
     log("=" * 50)
     log("Deeside Fuel Prices — API Update")
     log("=" * 50)
 
-    # Step 1 — OAuth token
+    # ── Source 1: New mandatory Fuel Finder API ───────────────────────────────
     token = get_token()
 
-    # Step 2 — Load Sheets fallback
-    sheets_data = load_sheets_fallback()
-
-    # Step 3 — Fetch all station info from new API
-    log("Fetching station info...")
+    log("Fetching station info from new API...")
     all_info = fetch_all_batches(INFO_URL, token)
 
-    # Step 4 — Filter to local area
-    local_stations = {}
+    local_stations = {}  # keyed by node_id
+    postcode_index = {}  # postcode -> node_id for merging
+
     for s in all_info:
         loc = s.get("location", {})
         lat = loc.get("latitude")
         lng = loc.get("longitude")
         if not in_area(lat, lng):
             continue
-        local_stations[s["node_id"]] = {
-            "node_id":  s["node_id"],
-            "name":     s.get("trading_name", ""),
-            "brand":    s.get("brand_name", s.get("trading_name", "")),
-            "address":  loc.get("address", ""),
-            "postcode": loc.get("postcode", ""),
-            "lat":      float(lat),
-            "lng":      float(lng),
-            "distance": haversine(CENTRE_LAT, CENTRE_LNG, float(lat), float(lng)),
-            "unleaded": None,
-            "diesel":   None,
-            "updated":  None,
-            "cached":   False
+        lat_f = float(lat)
+        lng_f = float(lng)
+        postcode = (loc.get("postcode") or "").strip().upper()
+        node_id = s["node_id"]
+        local_stations[node_id] = {
+            "node_id":        node_id,
+            "name":           s.get("trading_name", ""),
+            "brand":          s.get("brand_name", s.get("trading_name", "")),
+            "address":        loc.get("address", ""),
+            "postcode":       postcode,
+            "lat":            lat_f,
+            "lng":            lng_f,
+            "distance":       haversine(CENTRE_LAT, CENTRE_LNG, lat_f, lng_f),
+            "is_supermarket": s.get("is_supermarket_service_station", False),
+            "is_motorway":    s.get("is_motorway_service_station", False),
+            "unleaded":       None,
+            "diesel":         None,
+            "updated":        None,
+            "cached":         False
         }
+        if postcode:
+            postcode_index[postcode] = node_id
 
     log(f"Found {len(local_stations)} stations in area from new API")
 
-    # Step 5 — Fetch prices from new API
-    log("Fetching fuel prices...")
+    log("Fetching fuel prices from new API...")
     all_prices = fetch_all_batches(PRICES_URL, token)
 
-    # Step 6 — Merge prices into local stations
     for p in all_prices:
         node_id = p.get("node_id")
         if node_id not in local_stations:
@@ -184,7 +277,7 @@ def main():
         for fp in p.get("fuel_prices", []):
             fuel_type = fp.get("fuel_type", "").upper()
             price     = fp.get("price")
-            updated = fp.get("price_change_effective_timestamp") or fp.get("price_last_updated") or fp.get("effective_from")
+            updated   = fp.get("price_change_effective_timestamp") or fp.get("price_last_updated")
             if not valid_price(price):
                 continue
             if "E10" in fuel_type:
@@ -194,7 +287,36 @@ def main():
             if updated:
                 local_stations[node_id]["updated"] = updated
 
-    # Step 7 — Fill gaps with Sheets fallback for existing local stations
+    # ── Source 2: Voluntary retailer feeds ───────────────────────────────────
+    retailer_data = load_retailer_feeds()
+
+    retailer_added = 0
+    retailer_filled = 0
+    for postcode, rs in retailer_data.items():
+        if postcode in postcode_index:
+            # Station exists in new API — fill any missing prices
+            node_id = postcode_index[postcode]
+            changed = False
+            if local_stations[node_id]["unleaded"] is None and rs["unleaded"]:
+                local_stations[node_id]["unleaded"] = rs["unleaded"]
+                changed = True
+            if local_stations[node_id]["diesel"] is None and rs["diesel"]:
+                local_stations[node_id]["diesel"] = rs["diesel"]
+                changed = True
+            if changed:
+                local_stations[node_id]["updated"] = rs["updated"]
+                retailer_filled += 1
+        else:
+            # Station not in new API — add it from retailer feed
+            local_stations["retailer_" + postcode] = rs
+            retailer_added += 1
+
+    log(f"Retailer feeds: {retailer_filled} gaps filled, {retailer_added} new stations added")
+
+    # ── Source 3: Google Sheets fallback ─────────────────────────────────────
+    sheets_data = load_sheets_fallback()
+    api_names = {s["name"] for s in local_stations.values()}
+
     fallback_count = 0
     for node_id, station in local_stations.items():
         name = station["name"]
@@ -210,18 +332,10 @@ def main():
             changed = True
         if changed:
             station["cached"] = True
-            raw_date = row.get("date", "")
-            try:
-                from datetime import datetime as dt
-                parsed = dt.strptime(raw_date, "%m/%d/%Y")
-                station["updated"] = parsed.strftime("%Y-%m-%dT00:00:00.000Z")
-            except:
-                station["updated"] = raw_date
+            station["updated"] = parse_sheets_date(row.get("date", ""))
             fallback_count += 1
-            log(f"  Sheets fallback used for: {name}")
 
-    # Step 8 — Add Sheets-only stations not found in new API at all
-    api_names = {s["name"] for s in local_stations.values()}
+    # Add Sheets-only stations not found anywhere else
     extra_count = 0
     for name, row in sheets_data.items():
         if name in api_names:
@@ -230,29 +344,31 @@ def main():
         diesel   = float(row["diesel"])   if valid_price(row.get("diesel"))   else None
         if not unleaded and not diesel:
             continue
-        # Try to get coords from sheet if present
         try:
-            lat = float(row.get("lat", 0) or 0)
-            lng = float(row.get("lng", 0) or 0)
+            lat_f = float(row.get("lat", 0) or 0)
+            lng_f = float(row.get("lng", 0) or 0)
         except ValueError:
-            lat, lng = 0.0, 0.0
+            lat_f, lng_f = 0.0, 0.0
         local_stations["sheets_" + name] = {
-            "name":     name,
-            "brand":    row.get("brand", name),
-            "address":  row.get("address", ""),
-            "postcode": "",
-            "lat":      lat,
-            "lng":      lng,
-            "unleaded": unleaded,
-            "diesel":   diesel,
-            "updated":  row.get("date", ""),
-            "cached":   True
+            "name":           name,
+            "brand":          row.get("brand", name),
+            "address":        row.get("address", ""),
+            "postcode":       "",
+            "lat":            lat_f,
+            "lng":            lng_f,
+            "distance":       haversine(CENTRE_LAT, CENTRE_LNG, lat_f, lng_f) if lat_f and lng_f else 0,
+            "is_supermarket": False,
+            "is_motorway":    False,
+            "unleaded":       unleaded,
+            "diesel":         diesel,
+            "updated":        parse_sheets_date(row.get("date", "")),
+            "cached":         True
         }
         extra_count += 1
 
-    log(f"Fallback: {fallback_count} gaps filled, {extra_count} Sheets-only stations added")
+    log(f"Sheets fallback: {fallback_count} gaps filled, {extra_count} stations added")
 
-    # Step 9 — National averages from new API data
+    # ── National averages from new API ────────────────────────────────────────
     log("Processing and filtering...")
     all_unleaded, all_diesel = [], []
     for p in all_prices:
@@ -271,10 +387,10 @@ def main():
         "diesel":   round(sum(all_diesel)   / len(all_diesel),   1) if all_diesel   else None
     }
 
-    # Step 10 — Build output
+    # ── Build output ──────────────────────────────────────────────────────────
     stations_list = list(local_stations.values())
     for s in stations_list:
-        s.pop("node_id", None)  # Remove internal field
+        s.pop("node_id", None)
 
     output = {
         "nationalAvg":  national_avg,
@@ -283,7 +399,6 @@ def main():
         "stations":     stations_list
     }
 
-    # Summary
     ul_prices = [s["unleaded"] for s in stations_list if s["unleaded"]]
     di_prices = [s["diesel"]   for s in stations_list if s["diesel"]]
     if ul_prices:
@@ -293,7 +408,13 @@ def main():
 
     cached = sum(1 for s in stations_list if s.get("cached"))
     live   = len(stations_list) - cached
-    log(f"Stations: {len(stations_list)} total ({live} live from new API, {cached} from Sheets fallback)")
+    log(f"Stations: {len(stations_list)} total ({live} live, {cached} cached)")
+
+    # Safety check — don't overwrite good data with sparse results
+    MIN_STATIONS = 50
+    if len(stations_list) < MIN_STATIONS:
+        log(f"ABORT: Only {len(stations_list)} stations — below minimum of {MIN_STATIONS}. Existing data preserved.")
+        exit(1)
 
     with open(OUTPUT_FILE, "w") as f:
         json.dump(output, f, indent=2)
@@ -302,4 +423,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-# patched
