@@ -3,35 +3,9 @@
     "unleaded": 141.0,
     "diesel": 160.3
   },
-  "lastUpdated": "2026-03-12T16:15:23.552534+00:00",
-  "stationCount": 96,
+  "lastUpdated": "2026-03-12T16:22:27.310117+00:00",
+  "stationCount": 53,
   "stations": [
-    {
-      "name": "SAINSBURYS PENSBY ROAD THINGWALL",
-      "brand": "SAINSBURY'S",
-      "address": "",
-      "postcode": "CH61 7UB",
-      "lat": 53.35295,
-      "lng": -3.09298,
-      "unleaded": 136.9,
-      "diesel": 155.9,
-      "updated": "2026-03-11T22:55:23.752Z",
-      "cached": false,
-      "distance": 10.6
-    },
-    {
-      "name": "MFG MORRISONS WEST KIRBY",
-      "brand": "MORRISONS",
-      "address": "",
-      "postcode": "CH48 4HX",
-      "lat": 53.374111,
-      "lng": -3.181775,
-      "unleaded": 136.9,
-      "diesel": 153.9,
-      "updated": "2026-03-12T12:58:15.094Z",
-      "cached": false,
-      "distance": 13.3
-    },
     {
       "name": "H W Oultram & Co",
       "brand": "Oil 4 Wales",
@@ -59,32 +33,6 @@
       "distance": 10.6
     },
     {
-      "name": "MFG MORRISONS LIVERPOOL BELLE VALE",
-      "brand": "MORRISONS",
-      "address": "",
-      "postcode": "L25 2RD",
-      "lat": 53.388579,
-      "lng": -2.857531,
-      "unleaded": 135.9,
-      "diesel": 155.9,
-      "updated": "2026-03-12T15:56:50.637Z",
-      "cached": false,
-      "distance": 14.5
-    },
-    {
-      "name": "PGG LEVERHULME",
-      "brand": "VALERO LEVERHULME",
-      "address": "",
-      "postcode": "CH62 6AT",
-      "lat": 53.32585,
-      "lng": -2.97254,
-      "unleaded": 143.9,
-      "diesel": 173.9,
-      "updated": "2026-03-12T13:04:21.892Z",
-      "cached": false,
-      "distance": 8.6
-    },
-    {
       "name": "ASCONA HOLYWELL SERVICE STATION",
       "brand": "VALERO",
       "address": "",
@@ -96,19 +44,6 @@
       "updated": "2026-03-12T11:42:33.760Z",
       "cached": false,
       "distance": 10.3
-    },
-    {
-      "name": "BP HARVEST ENERGY GRASSENDALE",
-      "brand": "BP HARVEST ENERGY",
-      "address": "",
-      "postcode": "L19 0NY",
-      "lat": 53.3611763,
-      "lng": -2.9129944,
-      "unleaded": 138.9,
-      "diesel": 158.9,
-      "updated": "2026-03-11T09:36:50.408Z",
-      "cached": false,
-      "distance": 11.8
     },
     {
       "name": "BP HARVEST ENERGY OVERPOOL",
@@ -124,32 +59,6 @@
       "distance": 6.3
     },
     {
-      "name": "MFG GREASBY",
-      "brand": "ESSO",
-      "address": "",
-      "postcode": "CH49 2PF",
-      "lat": 53.379848,
-      "lng": -3.116135,
-      "unleaded": 139.9,
-      "diesel": 157.9,
-      "updated": "2026-03-12T12:20:44.765Z",
-      "cached": false,
-      "distance": 12.6
-    },
-    {
-      "name": "SAINSBURYS CHESTER",
-      "brand": "SAINSBURY'S",
-      "address": "",
-      "postcode": "CH3 5QJ",
-      "lat": 53.18467,
-      "lng": -2.85543,
-      "unleaded": 136.9,
-      "diesel": 155.9,
-      "updated": "2026-03-11T22:26:30.693Z",
-      "cached": false,
-      "distance": 7.2
-    },
-    {
       "name": "JACOBS WELL SERVICE STATION",
       "brand": "JET",
       "address": "",
@@ -163,32 +72,6 @@
       "distance": 6.8
     },
     {
-      "name": "MFG BEBINGTON",
-      "brand": "TEXACO",
-      "address": "",
-      "postcode": "CH63 7LQ",
-      "lat": 53.359963,
-      "lng": -3.006007,
-      "unleaded": 136.9,
-      "diesel": 155.9,
-      "updated": "2026-03-12T09:16:04.754Z",
-      "cached": false,
-      "distance": 10.7
-    },
-    {
-      "name": "SHELL CHESTER",
-      "brand": "SHELL",
-      "address": "",
-      "postcode": "CH3 5NJ",
-      "lat": 53.193526,
-      "lng": -2.856604,
-      "unleaded": 146.9,
-      "diesel": 164.9,
-      "updated": "2026-03-12T12:46:40.719Z",
-      "cached": false,
-      "distance": 7.1
-    },
-    {
       "name": "MFG MORRISONS CHESTER LIVERPOOL ROAD",
       "brand": "MORRISONS",
       "address": "",
@@ -200,19 +83,6 @@
       "updated": "2026-03-12T15:58:02.119Z",
       "cached": false,
       "distance": 5.5
-    },
-    {
-      "name": "MFG ROWTON",
-      "brand": "ESSO",
-      "address": "",
-      "postcode": "CH3 6AF",
-      "lat": 53.176188,
-      "lng": -2.825907,
-      "unleaded": 141.9,
-      "diesel": 159.9,
-      "updated": "2026-03-12T09:57:32.027Z",
-      "cached": false,
-      "distance": 8.5
     },
     {
       "name": "SAINSBURYS ELLESMERE PORT",
@@ -241,19 +111,6 @@
       "distance": 8.7
     },
     {
-      "name": "SHELL CARLETT",
-      "brand": "SHELL",
-      "address": "",
-      "postcode": "CH62 0BZ",
-      "lat": 53.314799,
-      "lng": -2.963826,
-      "unleaded": 145.9,
-      "diesel": 174.9,
-      "updated": "2026-03-12T12:45:25.356Z",
-      "cached": false,
-      "distance": 8.0
-    },
-    {
       "name": "INCH FILLING STATION",
       "brand": "ESSO",
       "address": "",
@@ -280,32 +137,6 @@
       "distance": 4.2
     },
     {
-      "name": "ESSAR GATEACRE SERVICE STATION",
-      "brand": "ESSAR",
-      "address": "",
-      "postcode": "L25 1PG",
-      "lat": 53.3921211,
-      "lng": -2.8725312,
-      "unleaded": 137.9,
-      "diesel": 156.9,
-      "updated": "2026-03-12T09:17:10.557Z",
-      "cached": false,
-      "distance": 14.4
-    },
-    {
-      "name": "SAINSBURYS UPTON",
-      "brand": "SAINSBURY'S",
-      "address": "",
-      "postcode": "CH49 6QG",
-      "lat": 53.37986,
-      "lng": -3.09998,
-      "unleaded": 138.9,
-      "diesel": 153.9,
-      "updated": "2026-03-11T21:52:54.005Z",
-      "cached": false,
-      "distance": 12.5
-    },
-    {
       "name": "SHELL NORTHOP",
       "brand": "SHELL",
       "address": "",
@@ -314,7 +145,7 @@
       "lng": -3.081794,
       "unleaded": 151.9,
       "diesel": 174.9,
-      "updated": "2026-03-12T12:40:09.200Z",
+      "updated": "2026-03-12T13:12:30.893Z",
       "cached": false,
       "distance": 2.4
     },
@@ -327,7 +158,7 @@
       "lng": -3.088915,
       "unleaded": 151.9,
       "diesel": 174.9,
-      "updated": "2026-03-12T14:02:30.218Z",
+      "updated": "2026-03-12T14:06:13.809Z",
       "cached": false,
       "distance": 2.6
     },
@@ -343,32 +174,6 @@
       "updated": "2026-03-12T13:08:58.795Z",
       "cached": false,
       "distance": 6.0
-    },
-    {
-      "name": "SHELL SMITHDOWN ROAD",
-      "brand": "SHELL",
-      "address": "",
-      "postcode": "L15 5AH",
-      "lat": 53.38964,
-      "lng": -2.928035,
-      "unleaded": 139.9,
-      "diesel": 156.9,
-      "updated": "2026-03-12T12:35:13.448Z",
-      "cached": false,
-      "distance": 13.4
-    },
-    {
-      "name": "MFG MORRISONS LIVERPOOL SPEKE",
-      "brand": "MORRISONS",
-      "address": "",
-      "postcode": "L24 2WZ",
-      "lat": 53.346109,
-      "lng": -2.838505,
-      "unleaded": 135.9,
-      "diesel": 155.9,
-      "updated": "2026-03-12T15:59:38.114Z",
-      "cached": false,
-      "distance": 12.5
     },
     {
       "name": "Plas Acton Fuel Station",
@@ -447,19 +252,6 @@
       "updated": "2026-03-11T17:54:58.377Z",
       "cached": false,
       "distance": 8.9
-    },
-    {
-      "name": "RONTEC HOYLAKE",
-      "brand": "ESSO",
-      "address": "",
-      "postcode": "CH47 0LA",
-      "lat": 53.39785,
-      "lng": -3.16973,
-      "unleaded": 141.9,
-      "diesel": 159.9,
-      "updated": "2026-03-12T12:23:06.900Z",
-      "cached": false,
-      "distance": 14.6
     },
     {
       "name": "ASDA WYLFA EXPRESS PETROL",
@@ -644,71 +436,6 @@
       "distance": 4.9
     },
     {
-      "name": "SPITAL SF CONNECT",
-      "brand": "BP",
-      "address": "",
-      "postcode": "CH63 3EL",
-      "lat": 53.34132,
-      "lng": -3.00749,
-      "unleaded": 138.9,
-      "diesel": 158.9,
-      "updated": "2026-03-12T12:37:06.346Z",
-      "cached": false,
-      "distance": 9.5
-    },
-    {
-      "name": "RONTEC BEBINGTON",
-      "brand": "BP",
-      "address": "",
-      "postcode": "CH63 7RD",
-      "lat": 53.34781,
-      "lng": -2.99834,
-      "unleaded": 137.9,
-      "diesel": 159.9,
-      "updated": "2026-03-12T11:02:14.847Z",
-      "cached": false,
-      "distance": 9.9
-    },
-    {
-      "name": "ASDA ARROWE PARK SUPERSTORE",
-      "brand": "ASDA",
-      "address": "",
-      "postcode": "CH49 5PD",
-      "lat": 53.3700696,
-      "lng": -3.0784032,
-      "unleaded": 135.9,
-      "diesel": 155.9,
-      "updated": "2026-03-11T16:56:31.019Z",
-      "cached": false,
-      "distance": 11.6
-    },
-    {
-      "name": "ASDA LAIRDS EXPRESS PETROL",
-      "brand": "ESSO",
-      "address": "",
-      "postcode": "CH41 9BW",
-      "lat": 53.379868,
-      "lng": -3.01265,
-      "unleaded": 141.9,
-      "diesel": 158.9,
-      "updated": "2026-03-12T14:07:45.102Z",
-      "cached": false,
-      "distance": 12.1
-    },
-    {
-      "name": "ASDA GREENLANE EXPRESS PETROL",
-      "brand": "ESSO",
-      "address": "",
-      "postcode": "CH41 9AZ",
-      "lat": 53.384,
-      "lng": -3.015,
-      "unleaded": 141.9,
-      "diesel": 158.9,
-      "updated": "2026-03-11T14:05:53.781Z",
-      "cached": false,
-      "distance": 12.4
-    },
-    {
       "name": "ASDA ELLESMERE PORT EXPRESS PETROL",
       "brand": "ESSO",
       "address": "",
@@ -735,97 +462,6 @@
       "distance": 7.6
     },
     {
-      "name": "ASDA BROMBOROUGH SUPERSTORE",
-      "brand": "ASDA",
-      "address": "",
-      "postcode": "CH62 3QP",
-      "lat": 53.3406587,
-      "lng": -2.9764509,
-      "unleaded": 135.9,
-      "diesel": 155.7,
-      "updated": "2026-03-12T13:53:17.592Z",
-      "cached": false,
-      "distance": 9.6
-    },
-    {
-      "name": "EG SPEKE PFS",
-      "brand": "EG ON THE MOVE",
-      "address": "",
-      "postcode": "L24 9HZ",
-      "lat": 53.349059,
-      "lng": -2.861843,
-      "unleaded": 138.7,
-      "diesel": 157.7,
-      "updated": "2026-03-11T16:37:33.782Z",
-      "cached": false,
-      "distance": 12.1
-    },
-    {
-      "name": "ASDA AIGBURTH ROAD EXPRESS PETROL",
-      "brand": "ESSO",
-      "address": "",
-      "postcode": "L17 4JP",
-      "lat": 53.380525,
-      "lng": -2.952403,
-      "unleaded": 141.9,
-      "diesel": 158.9,
-      "updated": "2026-03-12T14:25:18.771Z",
-      "cached": false,
-      "distance": 12.5
-    },
-    {
-      "name": "ASDA SEFTON PARK SUPERSTORE",
-      "brand": "ASDA",
-      "address": "",
-      "postcode": "L15 3JR",
-      "lat": 53.3941578,
-      "lng": -2.9370567,
-      "unleaded": 136.9,
-      "diesel": 155.9,
-      "updated": "2026-03-12T13:47:57.001Z",
-      "cached": false,
-      "distance": 13.6
-    },
-    {
-      "name": "ASDA HUNTS CROSS SUPERSTORE",
-      "brand": "ASDA",
-      "address": "",
-      "postcode": "L24 9WA",
-      "lat": 53.3582927,
-      "lng": -2.865599,
-      "unleaded": 137.9,
-      "diesel": 155.9,
-      "updated": "2026-03-11T17:01:00.539Z",
-      "cached": false,
-      "distance": 12.5
-    },
-    {
-      "name": "ASDA GOWY EXPRESS PETROL",
-      "brand": "ESSO",
-      "address": "",
-      "postcode": "CH3 7HN",
-      "lat": 53.2,
-      "lng": -2.802,
-      "unleaded": 144.9,
-      "diesel": 161.9,
-      "updated": "2026-03-12T14:06:37.689Z",
-      "cached": false,
-      "distance": 9.3
-    },
-    {
-      "name": "EG BEACON 62 PFS",
-      "brand": "SHELL",
-      "address": "",
-      "postcode": "L35 1QT",
-      "lat": 53.39862,
-      "lng": -2.81146,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
-      "cached": false,
-      "distance": 16.1
-    },
-    {
       "name": "HILLCREST MOTOR CO LTD",
       "brand": "GULF",
       "address": "",
@@ -839,19 +475,6 @@
       "distance": 8.5
     },
     {
-      "name": "SHELL HAPSFORD MWSA",
-      "brand": "SHELL",
-      "address": "",
-      "postcode": "CH2 4QZ",
-      "lat": 53.268277,
-      "lng": -2.801322,
-      "unleaded": 161.9,
-      "diesel": 179.9,
-      "updated": "2026-03-12T14:37:50.244Z",
-      "cached": false,
-      "distance": 10.3
-    },
-    {
       "name": "SHELL LITTLE WAITROSE HINDERTON",
       "brand": "SHELL",
       "address": "",
@@ -860,7 +483,7 @@
       "lng": -3.042575,
       "unleaded": 141.9,
       "diesel": 161.9,
-      "updated": "2026-03-12T15:50:41.103Z",
+      "updated": "2026-03-12T15:48:13.411Z",
       "cached": false,
       "distance": 6.2
     },
@@ -904,19 +527,6 @@
       "distance": 4.7
     },
     {
-      "name": "LIVERPOOL ALLERTON RD SUPERSTORE - PETROL FILLING STATION",
-      "brand": "TESCO",
-      "address": "",
-      "postcode": "L18 6HF",
-      "lat": 53.38121,
-      "lng": -2.90916,
-      "unleaded": 136.9,
-      "diesel": 154.9,
-      "updated": "2026-03-12T14:35:11.445Z",
-      "cached": false,
-      "distance": 13.1
-    },
-    {
       "name": "Esso - Queensferry Service Station",
       "brand": "Queensferry Service Station",
       "address": "",
@@ -928,19 +538,6 @@
       "updated": "2026-03-09T13:45:35.066Z",
       "cached": false,
       "distance": 0.4
-    },
-    {
-      "name": "SHELL HUNTS CROSS",
-      "brand": "SHELL",
-      "address": "",
-      "postcode": "L25 0NS",
-      "lat": 53.359789,
-      "lng": -2.854618,
-      "unleaded": 140.9,
-      "diesel": 159.9,
-      "updated": "2026-03-12T15:10:03.154Z",
-      "cached": false,
-      "distance": 12.8
     },
     {
       "name": "MFG COLESHILL",
@@ -982,32 +579,6 @@
       "distance": 5.3
     },
     {
-      "name": "MFG HALEWOOD",
-      "brand": "ESSO",
-      "address": "",
-      "postcode": "L26 1UN",
-      "lat": 53.357973,
-      "lng": -2.834598,
-      "unleaded": 137.9,
-      "diesel": 155.9,
-      "updated": "2026-03-12T14:38:02.942Z",
-      "cached": false,
-      "distance": 13.2
-    },
-    {
-      "name": "SHELL GAYTON",
-      "brand": "SHELL",
-      "address": "",
-      "postcode": "CH60 3RY",
-      "lat": 53.322022,
-      "lng": -3.084409,
-      "unleaded": 143.9,
-      "diesel": 161.9,
-      "updated": "2026-03-12T13:01:12.408Z",
-      "cached": false,
-      "distance": 8.4
-    },
-    {
       "name": "BROUGHTON CHESTER EXTRA - PETROL FILLING STATION",
       "brand": "TESCO",
       "address": "",
@@ -1034,58 +605,6 @@
       "distance": 6.8
     },
     {
-      "name": "BP HARVEST ENERGY HOYLAKE",
-      "brand": "BP HARVEST ENERGY",
-      "address": "",
-      "postcode": "CH46 5NA",
-      "lat": 53.3961782,
-      "lng": -3.1318942,
-      "unleaded": 141.9,
-      "diesel": 158.9,
-      "updated": "2026-03-11T13:22:23.640Z",
-      "cached": false,
-      "distance": 13.9
-    },
-    {
-      "name": "SAINSBURYS BIRKENHEAD",
-      "brand": "SAINSBURY'S",
-      "address": "",
-      "postcode": "CH42 8PQ",
-      "lat": 53.37472,
-      "lng": -3.04765,
-      "unleaded": 137.9,
-      "diesel": 155.9,
-      "updated": "2026-03-11T21:44:47.569Z",
-      "cached": false,
-      "distance": 11.8
-    },
-    {
-      "name": "SAINSBURYS KINGS ROAD BEBINGTON",
-      "brand": "SAINSBURY'S",
-      "address": "",
-      "postcode": "CH63 8PZ",
-      "lat": 53.35656,
-      "lng": -3.02542,
-      "unleaded": 136.9,
-      "diesel": 155.9,
-      "updated": "2026-03-11T22:56:10.318Z",
-      "cached": false,
-      "distance": 10.5
-    },
-    {
-      "name": "SHELL UPTON",
-      "brand": "SHELL",
-      "address": "",
-      "postcode": "CH49 0UE",
-      "lat": 53.381566,
-      "lng": -3.09902,
-      "unleaded": 144.9,
-      "diesel": 160.9,
-      "updated": "2026-03-12T12:33:12.558Z",
-      "cached": false,
-      "distance": 12.6
-    },
-    {
       "name": "FOUR ACES FILLING STATION",
       "brand": "JET",
       "address": "",
@@ -1097,19 +616,6 @@
       "updated": "2026-03-10T02:50:52.198Z",
       "cached": false,
       "distance": 8.2
-    },
-    {
-      "name": "TARBOCK WOODLANDS ESSO EXPRESS",
-      "brand": "ESSO",
-      "address": "",
-      "postcode": "L35 1QY",
-      "lat": 53.39817,
-      "lng": -2.81805,
-      "unleaded": 141.9,
-      "diesel": 159.9,
-      "updated": "2026-03-12T15:15:43.645Z",
-      "cached": false,
-      "distance": 15.9
     },
     {
       "name": "RUTHIN",
@@ -1138,58 +644,6 @@
       "distance": 6.8
     },
     {
-      "name": "SHELL WIRRAL WAY",
-      "brand": "SHELL",
-      "address": "",
-      "postcode": "CH42 0HA",
-      "lat": 53.384042,
-      "lng": -3.032912,
-      "unleaded": 144.9,
-      "diesel": 161.9,
-      "updated": "2026-03-12T12:33:12.761Z",
-      "cached": false,
-      "distance": 12.4
-    },
-    {
-      "name": "SHELL HOOLE ROAD",
-      "brand": "SHELL",
-      "address": "",
-      "postcode": "CH2 3NH",
-      "lat": 53.199234,
-      "lng": -2.878935,
-      "unleaded": 144.9,
-      "diesel": 162.9,
-      "updated": "2026-03-12T12:44:50.838Z",
-      "cached": false,
-      "distance": 6.1
-    },
-    {
-      "name": "HELMINGTON ROW FILLING STATION",
-      "brand": "ESSO",
-      "address": "",
-      "postcode": "DL15 0RW",
-      "lat": 53.3463137,
-      "lng": -3.0946933,
-      "unleaded": 137.9,
-      "diesel": 157.9,
-      "updated": "2026-03-12T14:38:21.171Z",
-      "cached": false,
-      "distance": 10.2
-    },
-    {
-      "name": "BP HARVEST ENERGY SPEKE",
-      "brand": "BP HARVEST ENERGY",
-      "address": "",
-      "postcode": "L24 9HD",
-      "lat": 53.3548148,
-      "lng": -2.8647401,
-      "unleaded": 135.9,
-      "diesel": 161.9,
-      "updated": "2026-03-09T14:34:22.640Z",
-      "cached": false,
-      "distance": 12.3
-    },
-    {
       "name": "SHELL MERSEY VIEW",
       "brand": "SHELL",
       "address": "",
@@ -1198,7 +652,7 @@
       "lng": -2.89441,
       "unleaded": 143.9,
       "diesel": 162.9,
-      "updated": "2026-03-12T13:19:21.900Z",
+      "updated": "2026-03-12T13:51:24.595Z",
       "cached": false,
       "distance": 7.8
     },
@@ -1214,19 +668,6 @@
       "updated": "2026-03-12T10:13:21.207Z",
       "cached": false,
       "distance": 5.1
-    },
-    {
-      "name": "Lobitos",
-      "brand": "Esso",
-      "address": "",
-      "postcode": "CH8 9JS",
-      "lat": 53.342343,
-      "lng": -3.3371063,
-      "unleaded": 153.9,
-      "diesel": 159.9,
-      "updated": "2026-03-11T07:15:15.548Z",
-      "cached": false,
-      "distance": 16.0
     },
     {
       "name": "SAINSBURYS WREXHAM",
