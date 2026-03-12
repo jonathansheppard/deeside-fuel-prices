@@ -52,6 +52,7 @@
       const now=Date.now();
       const fresh=d.stations.filter(s=>{
         if(!s.unleaded||s.unleaded<=0)return false;
+        if(s.distance<=0||s.distance>8)return false;
         if(!s.updated)return false;
         const hrs=(now-new Date(s.updated).getTime())/3600000;
         return hrs<120; // exclude 5 days+ stale
