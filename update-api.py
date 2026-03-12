@@ -3,6 +3,7 @@ import json
 import os
 import csv
 import io
+from math import radians, sin, cos, sqrt, atan2
 from datetime import datetime, timezone
 
 # ── Credentials ───────────────────────────────────────────────────────────────
@@ -28,6 +29,16 @@ LNG_MIN, LNG_MAX = -3.35, -2.80
 
 # ── Price floor ───────────────────────────────────────────────────────────────
 PRICE_FLOOR = 115.0
+CENTRE_LAT = 53.1900
+CENTRE_LNG = -3.0333
+
+def haversine(lat1, lng1, lat2, lng2):
+    R = 3958.8
+    lat1, lng1, lat2, lng2 = map(radians, [lat1, lng1, lat2, lng2])
+    dlat = lat2 - lat1
+    dlng = lng2 - lng1
+    a = sin(dlat/2)**2 + cos(lat1) * cos(lat2) * sin(dlng/2)**2
+    return round(R * 2 * atan2(sqrt(a), sqrt(1-a)), 1)
 
 
 def log(msg):
@@ -141,6 +152,7 @@ def main():
             "postcode": loc.get("postcode", ""),
             "lat":      float(lat),
             "lng":      float(lng),
+            "distance": haversine(CENTRE_LAT, CENTRE_LNG, float(lat), float(lng)),
             "unleaded": None,
             "diesel":   None,
             "updated":  None,
@@ -273,3 +285,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+# patched
