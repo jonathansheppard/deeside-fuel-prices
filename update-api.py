@@ -199,7 +199,13 @@ def main():
             changed = True
         if changed:
             station["cached"] = True
-            station["updated"] = row.get("date", "")
+            raw_date = row.get("date", "")
+            try:
+                from datetime import datetime as dt
+                parsed = dt.strptime(raw_date, "%d/%m/%Y")
+                station["updated"] = parsed.strftime("%Y-%m-%dT00:00:00.000Z")
+            except:
+                station["updated"] = raw_date
             fallback_count += 1
             log(f"  Sheets fallback used for: {name}")
 
