@@ -9,7 +9,7 @@ from datetime import datetime, timezone
 CLIENT_ID     = "OXaCtJ25MBEQs0OHobvSf8l3A5ztgsM2"
 CLIENT_SECRET = "XMYqgyjvqSjy4MS5BDS6zrKty8nluY29JEOLaXRyXBRHMz6tWmyWTD8Nl7qIeRAE"
 
-BASE_URL      = "https://api.fuelfinder.service.gov.uk"
+BASE_URL      = "https://www.fuel-finder.service.gov.uk"
 TOKEN_URL     = f"{BASE_URL}/api/v1/oauth/generate_access_token"
 PRICES_URL    = f"{BASE_URL}/api/v1/pfs/fuel-prices"
 INFO_URL      = f"{BASE_URL}/api/v1/pfs"
