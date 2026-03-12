@@ -1,10 +1,10 @@
 {
   "nationalAvg": {
-    "unleaded": 142.4,
-    "diesel": 160.9
+    "unleaded": 142.5,
+    "diesel": 161.1
   },
-  "lastUpdated": "2026-03-12T09:30:13.204985+00:00",
-  "stationCount": 4,
+  "lastUpdated": "2026-03-12T09:37:16.809614+00:00",
+  "stationCount": 5,
   "stations": [
     {
       "name": "SAINSBURYS PENSBY ROAD THINGWALL",
@@ -46,7 +46,7 @@
       "unleaded": 139.9,
       "diesel": 158.9,
       "updated": "2026-03-09T16:10:51.177Z",
-      "id": 3
+      "id": 4
     },
     {
       "name": "SHELL CO-OP WREXHAM",
@@ -60,7 +60,21 @@
       "unleaded": 142.9,
       "diesel": 156.9,
       "updated": "2026-03-11T17:56:03.024Z",
-      "id": 4
+      "id": 5
+    },
+    {
+      "name": "PGG EGREMONT",
+      "brand": "VALERO EGREMONT",
+      "address": "109 KING STREET, WALLASEY, CH44 0BZ",
+      "lat": 53.42099,
+      "lng": -3.02968,
+      "distance": 14.7,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 143.9,
+      "diesel": 173.9,
+      "updated": "2026-03-12T09:34:26.862Z",
+      "id": 3
     }
   ]
 }
