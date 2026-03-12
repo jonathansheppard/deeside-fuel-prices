@@ -3,7 +3,7 @@
     "unleaded": 141.0,
     "diesel": 160.3
   },
-  "lastUpdated": "2026-03-12T16:02:01.206857+00:00",
+  "lastUpdated": "2026-03-12T16:15:23.552534+00:00",
   "stationCount": 96,
   "stations": [
     {
@@ -16,7 +16,8 @@
       "unleaded": 136.9,
       "diesel": 155.9,
       "updated": "2026-03-11T22:55:23.752Z",
-      "cached": false
+      "cached": false,
+      "distance": 10.6
     },
     {
       "name": "MFG MORRISONS WEST KIRBY",
@@ -28,7 +29,8 @@
       "unleaded": 136.9,
       "diesel": 153.9,
       "updated": "2026-03-12T12:58:15.094Z",
-      "cached": false
+      "cached": false,
+      "distance": 13.3
     },
     {
       "name": "H W Oultram & Co",
@@ -40,7 +42,8 @@
       "unleaded": 139.9,
       "diesel": 158.9,
       "updated": "2026-03-09T16:10:51.177Z",
-      "cached": false
+      "cached": false,
+      "distance": 1.7
     },
     {
       "name": "SHELL CO-OP WREXHAM",
@@ -49,10 +52,11 @@
       "postcode": "LL11 2AF",
       "lat": 53.051908,
       "lng": -3.006356,
-      "unleaded": 142.9,
-      "diesel": 156.9,
-      "updated": "2026-03-11T17:56:03.024Z",
-      "cached": false
+      "unleaded": 144.9,
+      "diesel": 159.9,
+      "updated": "2026-03-12T16:04:26.112Z",
+      "cached": false,
+      "distance": 10.6
     },
     {
       "name": "MFG MORRISONS LIVERPOOL BELLE VALE",
@@ -64,7 +68,8 @@
       "unleaded": 135.9,
       "diesel": 155.9,
       "updated": "2026-03-12T15:56:50.637Z",
-      "cached": false
+      "cached": false,
+      "distance": 14.5
     },
     {
       "name": "PGG LEVERHULME",
@@ -76,7 +81,8 @@
       "unleaded": 143.9,
       "diesel": 173.9,
       "updated": "2026-03-12T13:04:21.892Z",
-      "cached": false
+      "cached": false,
+      "distance": 8.6
     },
     {
       "name": "ASCONA HOLYWELL SERVICE STATION",
@@ -88,7 +94,8 @@
       "unleaded": 144.0,
       "diesel": 160.0,
       "updated": "2026-03-12T11:42:33.760Z",
-      "cached": false
+      "cached": false,
+      "distance": 10.3
     },
     {
       "name": "BP HARVEST ENERGY GRASSENDALE",
@@ -100,7 +107,8 @@
       "unleaded": 138.9,
       "diesel": 158.9,
       "updated": "2026-03-11T09:36:50.408Z",
-      "cached": false
+      "cached": false,
+      "distance": 11.8
     },
     {
       "name": "BP HARVEST ENERGY OVERPOOL",
@@ -112,7 +120,8 @@
       "unleaded": 139.9,
       "diesel": 169.9,
       "updated": "2026-03-10T10:55:49.720Z",
-      "cached": false
+      "cached": false,
+      "distance": 6.3
     },
     {
       "name": "MFG GREASBY",
@@ -124,7 +133,8 @@
       "unleaded": 139.9,
       "diesel": 157.9,
       "updated": "2026-03-12T12:20:44.765Z",
-      "cached": false
+      "cached": false,
+      "distance": 12.6
     },
     {
       "name": "SAINSBURYS CHESTER",
@@ -136,7 +146,8 @@
       "unleaded": 136.9,
       "diesel": 155.9,
       "updated": "2026-03-11T22:26:30.693Z",
-      "cached": false
+      "cached": false,
+      "distance": 7.2
     },
     {
       "name": "JACOBS WELL SERVICE STATION",
@@ -148,7 +159,8 @@
       "unleaded": 139.9,
       "diesel": 159.9,
       "updated": "2026-03-09T11:58:20.700Z",
-      "cached": false
+      "cached": false,
+      "distance": 6.8
     },
     {
       "name": "MFG BEBINGTON",
@@ -160,7 +172,8 @@
       "unleaded": 136.9,
       "diesel": 155.9,
       "updated": "2026-03-12T09:16:04.754Z",
-      "cached": false
+      "cached": false,
+      "distance": 10.7
     },
     {
       "name": "SHELL CHESTER",
@@ -171,8 +184,9 @@
       "lng": -2.856604,
       "unleaded": 146.9,
       "diesel": 164.9,
-      "updated": "2026-03-12T12:36:26.848Z",
-      "cached": false
+      "updated": "2026-03-12T12:46:40.719Z",
+      "cached": false,
+      "distance": 7.1
     },
     {
       "name": "MFG MORRISONS CHESTER LIVERPOOL ROAD",
@@ -184,7 +198,8 @@
       "unleaded": 136.9,
       "diesel": 155.9,
       "updated": "2026-03-12T15:58:02.119Z",
-      "cached": false
+      "cached": false,
+      "distance": 5.5
     },
     {
       "name": "MFG ROWTON",
@@ -196,7 +211,8 @@
       "unleaded": 141.9,
       "diesel": 159.9,
       "updated": "2026-03-12T09:57:32.027Z",
-      "cached": false
+      "cached": false,
+      "distance": 8.5
     },
     {
       "name": "SAINSBURYS ELLESMERE PORT",
@@ -208,7 +224,8 @@
       "unleaded": 137.9,
       "diesel": 155.9,
       "updated": "2026-03-11T21:50:27.778Z",
-      "cached": false
+      "cached": false,
+      "distance": 7.2
     },
     {
       "name": "BR Gwersyllt",
@@ -220,7 +237,8 @@
       "unleaded": 141.9,
       "diesel": 155.9,
       "updated": "2026-03-11T11:57:10.016Z",
-      "cached": false
+      "cached": false,
+      "distance": 8.7
     },
     {
       "name": "SHELL CARLETT",
@@ -231,8 +249,9 @@
       "lng": -2.963826,
       "unleaded": 145.9,
       "diesel": 174.9,
-      "updated": "2026-03-12T13:04:22.803Z",
-      "cached": false
+      "updated": "2026-03-12T12:45:25.356Z",
+      "cached": false,
+      "distance": 8.0
     },
     {
       "name": "INCH FILLING STATION",
@@ -244,7 +263,8 @@
       "unleaded": 142.9,
       "diesel": 162.9,
       "updated": "2026-03-12T11:10:04.372Z",
-      "cached": false
+      "cached": false,
+      "distance": 8.6
     },
     {
       "name": "MFG MORRISONS SALTNEY",
@@ -256,7 +276,8 @@
       "unleaded": 135.9,
       "diesel": 155.9,
       "updated": "2026-03-12T13:15:31.422Z",
-      "cached": false
+      "cached": false,
+      "distance": 4.2
     },
     {
       "name": "ESSAR GATEACRE SERVICE STATION",
@@ -268,7 +289,8 @@
       "unleaded": 137.9,
       "diesel": 156.9,
       "updated": "2026-03-12T09:17:10.557Z",
-      "cached": false
+      "cached": false,
+      "distance": 14.4
     },
     {
       "name": "SAINSBURYS UPTON",
@@ -280,7 +302,8 @@
       "unleaded": 138.9,
       "diesel": 153.9,
       "updated": "2026-03-11T21:52:54.005Z",
-      "cached": false
+      "cached": false,
+      "distance": 12.5
     },
     {
       "name": "SHELL NORTHOP",
@@ -291,8 +314,9 @@
       "lng": -3.081794,
       "unleaded": 151.9,
       "diesel": 174.9,
-      "updated": "2026-03-12T12:37:48.708Z",
-      "cached": false
+      "updated": "2026-03-12T12:40:09.200Z",
+      "cached": false,
+      "distance": 2.4
     },
     {
       "name": "SHELL NORTHOP HALL",
@@ -303,8 +327,9 @@
       "lng": -3.088915,
       "unleaded": 151.9,
       "diesel": 174.9,
-      "updated": "2026-03-12T14:08:14.513Z",
-      "cached": false
+      "updated": "2026-03-12T14:02:30.218Z",
+      "cached": false,
+      "distance": 2.6
     },
     {
       "name": "MFG STRAWBERRY",
@@ -316,7 +341,8 @@
       "unleaded": 139.9,
       "diesel": 165.9,
       "updated": "2026-03-12T13:08:58.795Z",
-      "cached": false
+      "cached": false,
+      "distance": 6.0
     },
     {
       "name": "SHELL SMITHDOWN ROAD",
@@ -328,7 +354,8 @@
       "unleaded": 139.9,
       "diesel": 156.9,
       "updated": "2026-03-12T12:35:13.448Z",
-      "cached": false
+      "cached": false,
+      "distance": 13.4
     },
     {
       "name": "MFG MORRISONS LIVERPOOL SPEKE",
@@ -340,7 +367,8 @@
       "unleaded": 135.9,
       "diesel": 155.9,
       "updated": "2026-03-12T15:59:38.114Z",
-      "cached": false
+      "cached": false,
+      "distance": 12.5
     },
     {
       "name": "Plas Acton Fuel Station",
@@ -352,7 +380,8 @@
       "unleaded": 139.9,
       "diesel": 159.9,
       "updated": "2026-03-09T13:58:25.292Z",
-      "cached": false
+      "cached": false,
+      "distance": 9.4
     },
     {
       "name": "ASDA COEDPOETH EXPRESS PETROL",
@@ -364,7 +393,8 @@
       "unleaded": 143.9,
       "diesel": 159.9,
       "updated": "2026-03-11T17:51:05.291Z",
-      "cached": false
+      "cached": false,
+      "distance": 10.5
     },
     {
       "name": "ASDA HOLT ROAD EXPRESS PETROL",
@@ -376,7 +406,8 @@
       "unleaded": null,
       "diesel": null,
       "updated": null,
-      "cached": false
+      "cached": false,
+      "distance": 10.4
     },
     {
       "name": "Dyffryn Service Station",
@@ -388,7 +419,8 @@
       "unleaded": 156.9,
       "diesel": 159.9,
       "updated": "2026-03-10T07:31:29.762Z",
-      "cached": false
+      "cached": false,
+      "distance": 13.8
     },
     {
       "name": "ASDA SINGING KETTLE S/STN EXPRESS PETROL",
@@ -400,7 +432,8 @@
       "unleaded": 152.9,
       "diesel": 171.9,
       "updated": "2026-03-11T13:56:46.514Z",
-      "cached": false
+      "cached": false,
+      "distance": 12.0
     },
     {
       "name": "ASDA TREFFYNNON EXPRESS PETROL",
@@ -412,7 +445,8 @@
       "unleaded": 143.9,
       "diesel": 161.9,
       "updated": "2026-03-11T17:54:58.377Z",
-      "cached": false
+      "cached": false,
+      "distance": 8.9
     },
     {
       "name": "RONTEC HOYLAKE",
@@ -424,7 +458,8 @@
       "unleaded": 141.9,
       "diesel": 159.9,
       "updated": "2026-03-12T12:23:06.900Z",
-      "cached": false
+      "cached": false,
+      "distance": 14.6
     },
     {
       "name": "ASDA WYLFA EXPRESS PETROL",
@@ -436,7 +471,8 @@
       "unleaded": 141.9,
       "diesel": 158.9,
       "updated": "2026-03-12T12:25:11.078Z",
-      "cached": false
+      "cached": false,
+      "distance": 5.2
     },
     {
       "name": "EG MOLD PFS",
@@ -448,7 +484,8 @@
       "unleaded": null,
       "diesel": null,
       "updated": null,
-      "cached": false
+      "cached": false,
+      "distance": 5.2
     },
     {
       "name": "EG PONTBLYDDYN PFS",
@@ -460,7 +497,8 @@
       "unleaded": 141.7,
       "diesel": 161.7,
       "updated": "2026-03-11T16:28:24.724Z",
-      "cached": false
+      "cached": false,
+      "distance": 5.2
     },
     {
       "name": "Dobshill Service Station",
@@ -472,7 +510,8 @@
       "unleaded": 145.9,
       "diesel": 161.9,
       "updated": "2026-03-11T14:48:42.239Z",
-      "cached": false
+      "cached": false,
+      "distance": 2.9
     },
     {
       "name": "ASDA QUEENSFERRY",
@@ -481,10 +520,11 @@
       "postcode": "CH5 1TP",
       "lat": 53.2049518,
       "lng": -3.0265271,
-      "unleaded": 135.9,
-      "diesel": 155.9,
-      "updated": "2026-03-11T16:47:49.317Z",
-      "cached": false
+      "unleaded": 137.9,
+      "diesel": 157.9,
+      "updated": "2026-03-12T16:11:24.113Z",
+      "cached": false,
+      "distance": 0.0
     },
     {
       "name": "ASDA QUAY EXPRESS PETROL",
@@ -496,7 +536,8 @@
       "unleaded": 141.9,
       "diesel": 158.9,
       "updated": "2026-03-11T14:14:59.640Z",
-      "cached": false
+      "cached": false,
+      "distance": 2.3
     },
     {
       "name": "ASDA DEESIDE EXPRESS PETROL",
@@ -508,7 +549,8 @@
       "unleaded": 142.9,
       "diesel": 171.9,
       "updated": "2026-03-11T14:08:19.835Z",
-      "cached": false
+      "cached": false,
+      "distance": 2.0
     },
     {
       "name": "ASDA WREXHAM ROAD EXPRESS PETROL",
@@ -520,7 +562,8 @@
       "unleaded": 143.9,
       "diesel": 171.9,
       "updated": "2026-03-12T14:13:35.719Z",
-      "cached": false
+      "cached": false,
+      "distance": 5.7
     },
     {
       "name": "ASDA PARKGATE EXPRESS PETROL",
@@ -532,7 +575,8 @@
       "unleaded": 141.9,
       "diesel": 158.9,
       "updated": "2026-03-12T14:07:01.299Z",
-      "cached": false
+      "cached": false,
+      "distance": 5.1
     },
     {
       "name": "ASDA RED ENSIGN EXPRESS PETROL",
@@ -544,7 +588,8 @@
       "unleaded": 149.9,
       "diesel": 171.9,
       "updated": "2026-03-12T14:13:02.796Z",
-      "cached": false
+      "cached": false,
+      "distance": 4.0
     },
     {
       "name": "COSTCO WHOLESALE CHESTER",
@@ -556,7 +601,8 @@
       "unleaded": 132.9,
       "diesel": 150.9,
       "updated": "2026-03-11T18:00:39.665Z",
-      "cached": false
+      "cached": false,
+      "distance": 4.8
     },
     {
       "name": "ASDA HANDBRIDGE EXPRESS PETROL",
@@ -568,7 +614,8 @@
       "unleaded": 141.9,
       "diesel": 159.9,
       "updated": "2026-03-12T12:49:56.416Z",
-      "cached": false
+      "cached": false,
+      "distance": 5.9
     },
     {
       "name": "EG MOSTON PFS",
@@ -580,7 +627,8 @@
       "unleaded": null,
       "diesel": null,
       "updated": null,
-      "cached": false
+      "cached": false,
+      "distance": 5.7
     },
     {
       "name": "Gordale Service Station",
@@ -592,7 +640,8 @@
       "unleaded": 137.9,
       "diesel": 145.9,
       "updated": "3/9/2026",
-      "cached": true
+      "cached": true,
+      "distance": 4.9
     },
     {
       "name": "SPITAL SF CONNECT",
@@ -604,7 +653,8 @@
       "unleaded": 138.9,
       "diesel": 158.9,
       "updated": "2026-03-12T12:37:06.346Z",
-      "cached": false
+      "cached": false,
+      "distance": 9.5
     },
     {
       "name": "RONTEC BEBINGTON",
@@ -616,7 +666,8 @@
       "unleaded": 137.9,
       "diesel": 159.9,
       "updated": "2026-03-12T11:02:14.847Z",
-      "cached": false
+      "cached": false,
+      "distance": 9.9
     },
     {
       "name": "ASDA ARROWE PARK SUPERSTORE",
@@ -628,7 +679,8 @@
       "unleaded": 135.9,
       "diesel": 155.9,
       "updated": "2026-03-11T16:56:31.019Z",
-      "cached": false
+      "cached": false,
+      "distance": 11.6
     },
     {
       "name": "ASDA LAIRDS EXPRESS PETROL",
@@ -640,7 +692,8 @@
       "unleaded": 141.9,
       "diesel": 158.9,
       "updated": "2026-03-12T14:07:45.102Z",
-      "cached": false
+      "cached": false,
+      "distance": 12.1
     },
     {
       "name": "ASDA GREENLANE EXPRESS PETROL",
@@ -652,7 +705,8 @@
       "unleaded": 141.9,
       "diesel": 158.9,
       "updated": "2026-03-11T14:05:53.781Z",
-      "cached": false
+      "cached": false,
+      "distance": 12.4
     },
     {
       "name": "ASDA ELLESMERE PORT EXPRESS PETROL",
@@ -664,7 +718,8 @@
       "unleaded": 141.9,
       "diesel": 158.9,
       "updated": "2026-03-11T17:54:39.061Z",
-      "cached": false
+      "cached": false,
+      "distance": 7.1
     },
     {
       "name": "Ellesmere Port Service Station",
@@ -676,7 +731,8 @@
       "unleaded": 139.9,
       "diesel": 155.9,
       "updated": "2026-03-09T12:44:44.325Z",
-      "cached": false
+      "cached": false,
+      "distance": 7.6
     },
     {
       "name": "ASDA BROMBOROUGH SUPERSTORE",
@@ -688,7 +744,8 @@
       "unleaded": 135.9,
       "diesel": 155.7,
       "updated": "2026-03-12T13:53:17.592Z",
-      "cached": false
+      "cached": false,
+      "distance": 9.6
     },
     {
       "name": "EG SPEKE PFS",
@@ -700,7 +757,8 @@
       "unleaded": 138.7,
       "diesel": 157.7,
       "updated": "2026-03-11T16:37:33.782Z",
-      "cached": false
+      "cached": false,
+      "distance": 12.1
     },
     {
       "name": "ASDA AIGBURTH ROAD EXPRESS PETROL",
@@ -712,7 +770,8 @@
       "unleaded": 141.9,
       "diesel": 158.9,
       "updated": "2026-03-12T14:25:18.771Z",
-      "cached": false
+      "cached": false,
+      "distance": 12.5
     },
     {
       "name": "ASDA SEFTON PARK SUPERSTORE",
@@ -724,7 +783,8 @@
       "unleaded": 136.9,
       "diesel": 155.9,
       "updated": "2026-03-12T13:47:57.001Z",
-      "cached": false
+      "cached": false,
+      "distance": 13.6
     },
     {
       "name": "ASDA HUNTS CROSS SUPERSTORE",
@@ -736,7 +796,8 @@
       "unleaded": 137.9,
       "diesel": 155.9,
       "updated": "2026-03-11T17:01:00.539Z",
-      "cached": false
+      "cached": false,
+      "distance": 12.5
     },
     {
       "name": "ASDA GOWY EXPRESS PETROL",
@@ -748,7 +809,8 @@
       "unleaded": 144.9,
       "diesel": 161.9,
       "updated": "2026-03-12T14:06:37.689Z",
-      "cached": false
+      "cached": false,
+      "distance": 9.3
     },
     {
       "name": "EG BEACON 62 PFS",
@@ -760,7 +822,8 @@
       "unleaded": null,
       "diesel": null,
       "updated": null,
-      "cached": false
+      "cached": false,
+      "distance": 16.1
     },
     {
       "name": "HILLCREST MOTOR CO LTD",
@@ -772,7 +835,8 @@
       "unleaded": 141.9,
       "diesel": 159.9,
       "updated": "2026-03-11T09:53:21.523Z",
-      "cached": false
+      "cached": false,
+      "distance": 8.5
     },
     {
       "name": "SHELL HAPSFORD MWSA",
@@ -783,8 +847,9 @@
       "lng": -2.801322,
       "unleaded": 161.9,
       "diesel": 179.9,
-      "updated": "2026-03-12T15:00:55.463Z",
-      "cached": false
+      "updated": "2026-03-12T14:37:50.244Z",
+      "cached": false,
+      "distance": 10.3
     },
     {
       "name": "SHELL LITTLE WAITROSE HINDERTON",
@@ -795,8 +860,9 @@
       "lng": -3.042575,
       "unleaded": 141.9,
       "diesel": 161.9,
-      "updated": "2026-03-12T15:51:14.115Z",
-      "cached": false
+      "updated": "2026-03-12T15:50:41.103Z",
+      "cached": false,
+      "distance": 6.2
     },
     {
       "name": "SHELL CO-OP MOLD",
@@ -808,7 +874,8 @@
       "unleaded": 147.9,
       "diesel": 166.9,
       "updated": "2026-03-12T12:33:15.762Z",
-      "cached": false
+      "cached": false,
+      "distance": 3.9
     },
     {
       "name": "BR Flint",
@@ -820,7 +887,8 @@
       "unleaded": 141.9,
       "diesel": 165.9,
       "updated": "2026-03-10T11:27:09.898Z",
-      "cached": false
+      "cached": false,
+      "distance": 4.8
     },
     {
       "name": "Esso - Saltney Service Station",
@@ -832,7 +900,8 @@
       "unleaded": 136.9,
       "diesel": 159.9,
       "updated": "2026-03-09T11:40:18.467Z",
-      "cached": false
+      "cached": false,
+      "distance": 4.7
     },
     {
       "name": "LIVERPOOL ALLERTON RD SUPERSTORE - PETROL FILLING STATION",
@@ -844,7 +913,8 @@
       "unleaded": 136.9,
       "diesel": 154.9,
       "updated": "2026-03-12T14:35:11.445Z",
-      "cached": false
+      "cached": false,
+      "distance": 13.1
     },
     {
       "name": "Esso - Queensferry Service Station",
@@ -856,7 +926,8 @@
       "unleaded": 136.9,
       "diesel": 159.9,
       "updated": "2026-03-09T13:45:35.066Z",
-      "cached": false
+      "cached": false,
+      "distance": 0.4
     },
     {
       "name": "SHELL HUNTS CROSS",
@@ -867,8 +938,9 @@
       "lng": -2.854618,
       "unleaded": 140.9,
       "diesel": 159.9,
-      "updated": "2026-03-12T15:03:12.061Z",
-      "cached": false
+      "updated": "2026-03-12T15:10:03.154Z",
+      "cached": false,
+      "distance": 12.8
     },
     {
       "name": "MFG COLESHILL",
@@ -880,7 +952,8 @@
       "unleaded": 141.9,
       "diesel": 165.9,
       "updated": "2026-03-12T13:42:50.506Z",
-      "cached": false
+      "cached": false,
+      "distance": 5.8
     },
     {
       "name": "SMITHY VIEW SERVICE STATION ACTON",
@@ -892,7 +965,8 @@
       "unleaded": 139.7,
       "diesel": 159.7,
       "updated": "2026-03-12T15:57:50.301Z",
-      "cached": false
+      "cached": false,
+      "distance": 9.5
     },
     {
       "name": "MOLD SUPERSTORE - PETROL FILLING STATION",
@@ -904,7 +978,8 @@
       "unleaded": 141.9,
       "diesel": 158.9,
       "updated": "2026-03-11T18:18:47.679Z",
-      "cached": false
+      "cached": false,
+      "distance": 5.3
     },
     {
       "name": "MFG HALEWOOD",
@@ -916,7 +991,8 @@
       "unleaded": 137.9,
       "diesel": 155.9,
       "updated": "2026-03-12T14:38:02.942Z",
-      "cached": false
+      "cached": false,
+      "distance": 13.2
     },
     {
       "name": "SHELL GAYTON",
@@ -927,8 +1003,9 @@
       "lng": -3.084409,
       "unleaded": 143.9,
       "diesel": 161.9,
-      "updated": "2026-03-12T13:04:49.205Z",
-      "cached": false
+      "updated": "2026-03-12T13:01:12.408Z",
+      "cached": false,
+      "distance": 8.4
     },
     {
       "name": "BROUGHTON CHESTER EXTRA - PETROL FILLING STATION",
@@ -940,7 +1017,8 @@
       "unleaded": 138.9,
       "diesel": 156.9,
       "updated": "2026-03-11T18:11:34.611Z",
-      "cached": false
+      "cached": false,
+      "distance": 3.3
     },
     {
       "name": "Rhydymwyn Service Station",
@@ -952,7 +1030,8 @@
       "unleaded": 137.9,
       "diesel": 159.9,
       "updated": "2026-03-11T13:44:25.138Z",
-      "cached": false
+      "cached": false,
+      "distance": 6.8
     },
     {
       "name": "BP HARVEST ENERGY HOYLAKE",
@@ -964,7 +1043,8 @@
       "unleaded": 141.9,
       "diesel": 158.9,
       "updated": "2026-03-11T13:22:23.640Z",
-      "cached": false
+      "cached": false,
+      "distance": 13.9
     },
     {
       "name": "SAINSBURYS BIRKENHEAD",
@@ -976,7 +1056,8 @@
       "unleaded": 137.9,
       "diesel": 155.9,
       "updated": "2026-03-11T21:44:47.569Z",
-      "cached": false
+      "cached": false,
+      "distance": 11.8
     },
     {
       "name": "SAINSBURYS KINGS ROAD BEBINGTON",
@@ -988,7 +1069,8 @@
       "unleaded": 136.9,
       "diesel": 155.9,
       "updated": "2026-03-11T22:56:10.318Z",
-      "cached": false
+      "cached": false,
+      "distance": 10.5
     },
     {
       "name": "SHELL UPTON",
@@ -1000,7 +1082,8 @@
       "unleaded": 144.9,
       "diesel": 160.9,
       "updated": "2026-03-12T12:33:12.558Z",
-      "cached": false
+      "cached": false,
+      "distance": 12.6
     },
     {
       "name": "FOUR ACES FILLING STATION",
@@ -1012,7 +1095,8 @@
       "unleaded": 139.9,
       "diesel": 159.9,
       "updated": "2026-03-10T02:50:52.198Z",
-      "cached": false
+      "cached": false,
+      "distance": 8.2
     },
     {
       "name": "TARBOCK WOODLANDS ESSO EXPRESS",
@@ -1024,7 +1108,8 @@
       "unleaded": 141.9,
       "diesel": 159.9,
       "updated": "2026-03-12T15:15:43.645Z",
-      "cached": false
+      "cached": false,
+      "distance": 15.9
     },
     {
       "name": "RUTHIN",
@@ -1036,7 +1121,8 @@
       "unleaded": 139.9,
       "diesel": 164.9,
       "updated": "2026-03-12T11:28:36.112Z",
-      "cached": false
+      "cached": false,
+      "distance": 13.6
     },
     {
       "name": "MFG MORRISONS ELLESMERE PORT",
@@ -1048,7 +1134,8 @@
       "unleaded": 136.9,
       "diesel": 155.9,
       "updated": "2026-03-12T12:58:09.815Z",
-      "cached": false
+      "cached": false,
+      "distance": 6.8
     },
     {
       "name": "SHELL WIRRAL WAY",
@@ -1060,7 +1147,8 @@
       "unleaded": 144.9,
       "diesel": 161.9,
       "updated": "2026-03-12T12:33:12.761Z",
-      "cached": false
+      "cached": false,
+      "distance": 12.4
     },
     {
       "name": "SHELL HOOLE ROAD",
@@ -1071,8 +1159,9 @@
       "lng": -2.878935,
       "unleaded": 144.9,
       "diesel": 162.9,
-      "updated": "2026-03-12T15:33:02.330Z",
-      "cached": false
+      "updated": "2026-03-12T12:44:50.838Z",
+      "cached": false,
+      "distance": 6.1
     },
     {
       "name": "HELMINGTON ROW FILLING STATION",
@@ -1083,8 +1172,9 @@
       "lng": -3.0946933,
       "unleaded": 137.9,
       "diesel": 157.9,
-      "updated": "2026-03-12T14:15:58.290Z",
-      "cached": false
+      "updated": "2026-03-12T14:38:21.171Z",
+      "cached": false,
+      "distance": 10.2
     },
     {
       "name": "BP HARVEST ENERGY SPEKE",
@@ -1096,7 +1186,8 @@
       "unleaded": 135.9,
       "diesel": 161.9,
       "updated": "2026-03-09T14:34:22.640Z",
-      "cached": false
+      "cached": false,
+      "distance": 12.3
     },
     {
       "name": "SHELL MERSEY VIEW",
@@ -1107,8 +1198,9 @@
       "lng": -2.89441,
       "unleaded": 143.9,
       "diesel": 162.9,
-      "updated": "2026-03-12T13:04:38.797Z",
-      "cached": false
+      "updated": "2026-03-12T13:19:21.900Z",
+      "cached": false,
+      "distance": 7.8
     },
     {
       "name": "IVANHOE SERVICE STATION",
@@ -1120,7 +1212,8 @@
       "unleaded": 142.9,
       "diesel": 163.9,
       "updated": "2026-03-12T10:13:21.207Z",
-      "cached": false
+      "cached": false,
+      "distance": 5.1
     },
     {
       "name": "Lobitos",
@@ -1132,7 +1225,8 @@
       "unleaded": 153.9,
       "diesel": 159.9,
       "updated": "2026-03-11T07:15:15.548Z",
-      "cached": false
+      "cached": false,
+      "distance": 16.0
     },
     {
       "name": "SAINSBURYS WREXHAM",
@@ -1144,7 +1238,8 @@
       "unleaded": 138.9,
       "diesel": 153.9,
       "updated": "2026-03-11T22:03:19.722Z",
-      "cached": false
+      "cached": false,
+      "distance": 10.3
     },
     {
       "name": "BR Buckley",
@@ -1156,7 +1251,8 @@
       "unleaded": 144.9,
       "diesel": 161.9,
       "updated": "2026-03-10T12:58:49.505Z",
-      "cached": false
+      "cached": false,
+      "distance": 3.6
     }
   ]
 }
