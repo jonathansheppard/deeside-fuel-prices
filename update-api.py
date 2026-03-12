@@ -202,7 +202,7 @@ def main():
             raw_date = row.get("date", "")
             try:
                 from datetime import datetime as dt
-                parsed = dt.strptime(raw_date, "%d/%m/%Y")
+                parsed = dt.strptime(raw_date, "%m/%d/%Y")
                 station["updated"] = parsed.strftime("%Y-%m-%dT00:00:00.000Z")
             except:
                 station["updated"] = raw_date
