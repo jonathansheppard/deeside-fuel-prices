@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
-    "unleaded": 140.3,
+    "unleaded": 140.4,
     "diesel": 159.3
   },
-  "lastUpdated": "2026-03-12T07:02:00.531311+00:00",
+  "lastUpdated": "2026-03-12T07:30:38.218049+00:00",
   "stationCount": 99,
   "stations": [
     {
@@ -301,6 +301,20 @@
       "id": 16
     },
     {
+      "name": "Gordale Service Station",
+      "brand": "GORDALE SERVICE STATION",
+      "address": "GORDALE SERVICE STATION, CHESTER HIGH ROAD, BURTON, NESTON, CH64 8TF, NESTON, CH64 8TF",
+      "lat": 53.2741984,
+      "lng": -3.0014083,
+      "distance": 4.7,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 137.9,
+      "diesel": 159.9,
+      "updated": "2026-03-12T07:10:21.106Z",
+      "id": 54
+    },
+    {
       "name": "BIRKENHEAD BIDSTON MOSS EXTRA - PETROL FILLING STATION",
       "brand": "TESCO",
       "address": "BIDSTON LINK ROAD, BIRKENHEAD, CH43 7AA",
@@ -551,20 +565,6 @@
       "diesel": 157.9,
       "updated": "2026-03-11T18:42:59.442Z",
       "id": 29
-    },
-    {
-      "name": "Gordale Service Station",
-      "brand": "GORDALE SERVICE STATION",
-      "address": "GORDALE SERVICE STATION, CHESTER HIGH ROAD, BURTON, NESTON, CH64 8TF, NESTON, CH64 8TF",
-      "lat": 53.2741984,
-      "lng": -3.0014083,
-      "distance": 4.7,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 139.9,
-      "diesel": 169.9,
-      "updated": "2026-03-11T09:33:04.654Z",
-      "id": 54
     },
     {
       "name": "Ellesmere Port Service Station",
