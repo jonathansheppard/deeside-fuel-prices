@@ -20,7 +20,7 @@ SHEET_GID     = "1435371472"
 SHEET_CSV_URL = f"https://docs.google.com/spreadsheets/d/{SHEET_ID}/export?format=csv&gid={SHEET_GID}"
 
 # ── Output ────────────────────────────────────────────────────────────────────
-OUTPUT_FILE   = os.path.expanduser("~/stations.json")
+OUTPUT_FILE   = os.path.expanduser("~/deeside-fuel-prices/stations.json")
 
 # ── Geographic filter ─────────────────────────────────────────────────────────
 LAT_MIN, LAT_MAX = 53.05, 53.40
