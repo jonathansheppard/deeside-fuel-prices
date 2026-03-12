@@ -829,7 +829,7 @@ async function loadStationData() {
     nationalAvg = data.nationalAvg;
     fixedThresholds.unleaded = { low: nationalAvg.unleaded, high: nationalAvg.unleaded + 5 };
     fixedThresholds.diesel   = { low: nationalAvg.diesel,   high: nationalAvg.diesel   + 5 };
-    stations = data.stations;
+    stations = data.stations.filter(s => s.lat !== 0 && s.lng !== 0).map((s, i) => ({ ...s, id: i }));
     dataLastUpdated = data.lastUpdated;
     if (dataLastUpdated) {
       const d = new Date(dataLastUpdated);
