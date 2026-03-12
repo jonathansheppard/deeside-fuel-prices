@@ -112,7 +112,18 @@ def load_sheets_fallback():
                 continue
             date_str = row.get("date", "")
             # Keep the most recent row per station
-            if name not in stations or date_str > stations[name]["date"]:
+            if name not in stations:
+                stations[name] = row
+            else:
+                try:
+                    from datetime import datetime as dt
+                    d1 = dt.strptime(date_str, "%m/%d/%Y")
+                    d2 = dt.strptime(stations[name]["date"], "%m/%d/%Y")
+                    if d1 > d2:
+                        stations[name] = row
+                except:
+                    if date_str > stations[name]["date"]:
+                        stations[name] = row
                 stations[name] = row
         log(f"Sheets fallback: {len(stations)} stations loaded")
         return stations

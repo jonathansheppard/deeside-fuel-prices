@@ -3,7 +3,7 @@
     "unleaded": 142.5,
     "diesel": 167.1
   },
-  "lastUpdated": "2026-03-12T11:43:11.175370+00:00",
+  "lastUpdated": "2026-03-12T11:46:37.351534+00:00",
   "stationCount": 126,
   "stations": [
     {
@@ -92,9 +92,9 @@
       "lat": 53.279441,
       "lng": -3.2410974,
       "distance": 10.6,
-      "unleaded": 140.0,
-      "diesel": 150.0,
-      "updated": "2026-03-09T00:00:00.000Z",
+      "unleaded": 144.0,
+      "diesel": 156.0,
+      "updated": "2026-03-12T00:00:00.000Z",
       "cached": true
     },
     {
@@ -118,9 +118,9 @@
       "lat": 53.2714848,
       "lng": -2.9206747,
       "distance": 7.3,
-      "unleaded": 137.9,
-      "diesel": 159.9,
-      "updated": "2026-03-09T00:00:00.000Z",
+      "unleaded": 139.9,
+      "diesel": 169.9,
+      "updated": "2026-03-12T00:00:00.000Z",
       "cached": true
     },
     {
@@ -131,9 +131,9 @@
       "lat": 53.379848,
       "lng": -3.116135,
       "distance": 13.6,
-      "unleaded": 138.9,
-      "diesel": 147.9,
-      "updated": "2026-03-09T00:00:00.000Z",
+      "unleaded": 139.9,
+      "diesel": 157.9,
+      "updated": "2026-03-12T00:00:00.000Z",
       "cached": true
     },
     {
@@ -144,9 +144,9 @@
       "lat": 53.18467,
       "lng": -2.85543,
       "distance": 7.4,
-      "unleaded": 134.9,
-      "diesel": 147.9,
-      "updated": "2026-03-09T00:00:00.000Z",
+      "unleaded": 136.9,
+      "diesel": 155.9,
+      "updated": "2026-03-12T00:00:00.000Z",
       "cached": true
     },
     {
@@ -170,9 +170,9 @@
       "lat": 53.359963,
       "lng": -3.006007,
       "distance": 11.8,
-      "unleaded": 133.9,
-      "diesel": 145.9,
-      "updated": "2026-03-09T00:00:00.000Z",
+      "unleaded": 136.9,
+      "diesel": 155.9,
+      "updated": "2026-03-12T00:00:00.000Z",
       "cached": true
     },
     {
@@ -183,9 +183,9 @@
       "lat": 53.193526,
       "lng": -2.856604,
       "distance": 7.3,
-      "unleaded": 141.9,
-      "diesel": 155.9,
-      "updated": "2026-03-09T00:00:00.000Z",
+      "unleaded": 144.9,
+      "diesel": 161.9,
+      "updated": "2026-03-12T00:00:00.000Z",
       "cached": true
     },
     {
@@ -196,9 +196,9 @@
       "lat": 53.209038,
       "lng": -2.894566,
       "distance": 5.9,
-      "unleaded": 133.9,
-      "diesel": 145.9,
-      "updated": "2026-03-09T00:00:00.000Z",
+      "unleaded": 136.9,
+      "diesel": 155.9,
+      "updated": "2026-03-12T00:00:00.000Z",
       "cached": true
     },
     {
@@ -209,9 +209,9 @@
       "lat": 53.176188,
       "lng": -2.825907,
       "distance": 8.6,
-      "unleaded": 138.9,
-      "diesel": 151.9,
-      "updated": "2026-03-09T00:00:00.000Z",
+      "unleaded": 141.9,
+      "diesel": 159.9,
+      "updated": "2026-03-12T00:00:00.000Z",
       "cached": true
     },
     {
@@ -222,9 +222,9 @@
       "lat": 53.26233,
       "lng": -2.88042,
       "distance": 8.1,
-      "unleaded": 134.9,
-      "diesel": 147.9,
-      "updated": "2026-03-09T00:00:00.000Z",
+      "unleaded": 137.9,
+      "diesel": 155.9,
+      "updated": "2026-03-12T00:00:00.000Z",
       "cached": true
     },
     {
@@ -235,9 +235,9 @@
       "lat": 53.0792616,
       "lng": -3.021987,
       "distance": 7.7,
-      "unleaded": 139.9,
-      "diesel": 149.9,
-      "updated": "2026-03-09T00:00:00.000Z",
+      "unleaded": 141.9,
+      "diesel": 155.9,
+      "updated": "2026-03-12T00:00:00.000Z",
       "cached": true
     },
     {
@@ -248,9 +248,9 @@
       "lat": 53.314799,
       "lng": -2.963826,
       "distance": 9.1,
-      "unleaded": 138.9,
-      "diesel": 162.9,
-      "updated": "2026-03-09T00:00:00.000Z",
+      "unleaded": 143.9,
+      "diesel": 171.9,
+      "updated": "2026-03-12T00:00:00.000Z",
       "cached": true
     },
     {
@@ -274,9 +274,9 @@
       "lat": 53.178287,
       "lng": -2.935342,
       "distance": 4.1,
-      "unleaded": 133.9,
-      "diesel": 148.9,
-      "updated": "2026-03-09T00:00:00.000Z",
+      "unleaded": 135.9,
+      "diesel": 155.9,
+      "updated": "2026-03-12T00:00:00.000Z",
       "cached": true
     },
     {
@@ -300,9 +300,9 @@
       "lat": 53.37986,
       "lng": -3.09998,
       "distance": 13.4,
-      "unleaded": 136.9,
-      "diesel": 146.9,
-      "updated": "2026-03-09T00:00:00.000Z",
+      "unleaded": 138.9,
+      "diesel": 153.9,
+      "updated": "2026-03-12T00:00:00.000Z",
       "cached": true
     },
     {
@@ -313,9 +313,9 @@
       "lat": 53.192913,
       "lng": -3.081794,
       "distance": 2.0,
-      "unleaded": 148.9,
-      "diesel": 165.9,
-      "updated": "2026-03-09T00:00:00.000Z",
+      "unleaded": 149.9,
+      "diesel": 171.9,
+      "updated": "2026-03-12T00:00:00.000Z",
       "cached": true
     },
     {
@@ -339,9 +339,9 @@
       "lat": 53.256833,
       "lng": -2.909397,
       "distance": 6.9,
-      "unleaded": 137.9,
-      "diesel": 159.9,
-      "updated": "2026-03-09T00:00:00.000Z",
+      "unleaded": 139.9,
+      "diesel": 165.9,
+      "updated": "2026-03-12T00:00:00.000Z",
       "cached": true
     },
     {
@@ -378,9 +378,9 @@
       "lat": 53.0701313,
       "lng": -2.9897412,
       "distance": 8.5,
-      "unleaded": 135.9,
-      "diesel": 145.9,
-      "updated": "2026-03-09T00:00:00.000Z",
+      "unleaded": 139.9,
+      "diesel": 159.9,
+      "updated": "2026-03-12T00:00:00.000Z",
       "cached": true
     },
     {
@@ -418,8 +418,8 @@
       "lng": -3.3249443,
       "distance": 13.1,
       "unleaded": 156.9,
-      "diesel": 148.9,
-      "updated": "2026-03-09T00:00:00.000Z",
+      "diesel": 159.9,
+      "updated": "2026-03-12T00:00:00.000Z",
       "cached": true
     },
     {
@@ -456,9 +456,9 @@
       "lat": 53.39785,
       "lng": -3.16973,
       "distance": 15.4,
-      "unleaded": 135.9,
-      "diesel": 152.9,
-      "updated": "2026-03-09T00:00:00.000Z",
+      "unleaded": 138.9,
+      "diesel": 158.9,
+      "updated": "2026-03-12T00:00:00.000Z",
       "cached": true
     },
     {
@@ -508,9 +508,9 @@
       "lat": 53.1636207,
       "lng": -3.039481,
       "distance": 1.8,
-      "unleaded": 139.9,
-      "diesel": 154.9,
-      "updated": "2026-03-09T00:00:00.000Z",
+      "unleaded": 145.9,
+      "diesel": 161.9,
+      "updated": "2026-03-12T00:00:00.000Z",
       "cached": true
     },
     {
@@ -599,9 +599,9 @@
       "lat": 53.24496,
       "lng": -2.93034,
       "distance": 5.7,
-      "unleaded": 127.9,
-      "diesel": 139.9,
-      "updated": "2026-03-09T00:00:00.000Z",
+      "unleaded": 132.9,
+      "diesel": 150.9,
+      "updated": "2026-03-12T00:00:00.000Z",
       "cached": true
     },
     {
@@ -638,9 +638,9 @@
       "lat": 53.2741984,
       "lng": -3.0014083,
       "distance": 6.0,
-      "unleaded": 132.9,
-      "diesel": 145.9,
-      "updated": "2026-03-09T00:00:00.000Z",
+      "unleaded": 139.9,
+      "diesel": 169.9,
+      "updated": "2026-03-12T00:00:00.000Z",
       "cached": true
     },
     {
@@ -651,9 +651,9 @@
       "lat": 53.34132,
       "lng": -3.00749,
       "distance": 10.5,
-      "unleaded": 136.9,
-      "diesel": 148.9,
-      "updated": "2026-03-09T00:00:00.000Z",
+      "unleaded": 138.9,
+      "diesel": 156.9,
+      "updated": "2026-03-12T00:00:00.000Z",
       "cached": true
     },
     {
@@ -664,9 +664,9 @@
       "lat": 53.34781,
       "lng": -2.99834,
       "distance": 11.0,
-      "unleaded": 132.9,
-      "diesel": 147.9,
-      "updated": "2026-03-09T00:00:00.000Z",
+      "unleaded": 136.9,
+      "diesel": 156.9,
+      "updated": "2026-03-12T00:00:00.000Z",
       "cached": true
     },
     {
@@ -730,8 +730,8 @@
       "lng": -2.9077945,
       "distance": 8.6,
       "unleaded": 139.9,
-      "diesel": 152.9,
-      "updated": "2026-03-09T00:00:00.000Z",
+      "diesel": 155.9,
+      "updated": "2026-03-12T00:00:00.000Z",
       "cached": true
     },
     {
@@ -833,9 +833,9 @@
       "lat": 53.26136,
       "lng": -3.20879,
       "distance": 8.8,
-      "unleaded": 136.9,
-      "diesel": 146.9,
-      "updated": "2026-03-09T00:00:00.000Z",
+      "unleaded": 141.9,
+      "diesel": 159.9,
+      "updated": "2026-03-12T00:00:00.000Z",
       "cached": true
     },
     {
@@ -846,9 +846,9 @@
       "lat": 53.268277,
       "lng": -2.801322,
       "distance": 11.0,
-      "unleaded": 158.9,
-      "diesel": 178.9,
-      "updated": "2026-03-09T00:00:00.000Z",
+      "unleaded": 159.9,
+      "diesel": 179.9,
+      "updated": "2026-03-12T00:00:00.000Z",
       "cached": true
     },
     {
@@ -859,9 +859,9 @@
       "lat": 53.294253,
       "lng": -3.042575,
       "distance": 7.2,
-      "unleaded": 137.9,
-      "diesel": 152.9,
-      "updated": "2026-03-09T00:00:00.000Z",
+      "unleaded": 139.9,
+      "diesel": 158.9,
+      "updated": "2026-03-12T00:00:00.000Z",
       "cached": true
     },
     {
@@ -872,9 +872,9 @@
       "lat": 53.181156,
       "lng": -3.111588,
       "distance": 3.3,
-      "unleaded": 143.9,
-      "diesel": 158.9,
-      "updated": "2026-03-09T00:00:00.000Z",
+      "unleaded": 145.9,
+      "diesel": 163.9,
+      "updated": "2026-03-12T00:00:00.000Z",
       "cached": true
     },
     {
@@ -885,9 +885,9 @@
       "lat": 53.2443473,
       "lng": -3.1222575,
       "distance": 5.3,
-      "unleaded": 139.9,
-      "diesel": 152.9,
-      "updated": "2026-03-09T00:00:00.000Z",
+      "unleaded": 141.9,
+      "diesel": 165.9,
+      "updated": "2026-03-12T00:00:00.000Z",
       "cached": true
     },
     {
@@ -898,9 +898,9 @@
       "lat": 53.178903,
       "lng": -2.922518,
       "distance": 4.7,
-      "unleaded": 130.9,
-      "diesel": 142.9,
-      "updated": "2026-03-09T00:00:00.000Z",
+      "unleaded": 136.9,
+      "diesel": 159.9,
+      "updated": "2026-03-12T00:00:00.000Z",
       "cached": true
     },
     {
@@ -924,9 +924,9 @@
       "lat": 53.2088991,
       "lng": -3.0326318,
       "distance": 1.3,
-      "unleaded": 132.9,
-      "diesel": 144.9,
-      "updated": "2026-03-09T00:00:00.000Z",
+      "unleaded": 136.9,
+      "diesel": 159.9,
+      "updated": "2026-03-12T00:00:00.000Z",
       "cached": true
     },
     {
@@ -950,9 +950,9 @@
       "lat": 53.253768,
       "lng": -3.14176,
       "distance": 6.3,
-      "unleaded": 139.9,
-      "diesel": 159.9,
-      "updated": "2026-03-09T00:00:00.000Z",
+      "unleaded": 141.9,
+      "diesel": 165.9,
+      "updated": "2026-03-12T00:00:00.000Z",
       "cached": true
     },
     {
@@ -965,7 +965,7 @@
       "distance": 8.6,
       "unleaded": 125.9,
       "diesel": 134.9,
-      "updated": "2026-03-09T00:00:00.000Z",
+      "updated": "2026-03-12T00:00:00.000Z",
       "cached": true
     },
     {
@@ -976,9 +976,9 @@
       "lat": 53.16708,
       "lng": -3.13754,
       "distance": 4.6,
-      "unleaded": 140.9,
-      "diesel": 150.9,
-      "updated": "2026-03-09T00:00:00.000Z",
+      "unleaded": 141.9,
+      "diesel": 158.9,
+      "updated": "2026-03-12T00:00:00.000Z",
       "cached": true
     },
     {
@@ -1002,9 +1002,9 @@
       "lat": 53.322022,
       "lng": -3.084409,
       "distance": 9.4,
-      "unleaded": 139.9,
-      "diesel": 152.9,
-      "updated": "2026-03-09T00:00:00.000Z",
+      "unleaded": 141.9,
+      "diesel": 158.9,
+      "updated": "2026-03-12T00:00:00.000Z",
       "cached": true
     },
     {
@@ -1015,9 +1015,9 @@
       "lat": 53.16935,
       "lng": -2.9739,
       "distance": 2.8,
-      "unleaded": 132.9,
-      "diesel": 146.9,
-      "updated": "2026-03-09T00:00:00.000Z",
+      "unleaded": 138.9,
+      "diesel": 156.9,
+      "updated": "2026-03-12T00:00:00.000Z",
       "cached": true
     },
     {
@@ -1029,8 +1029,8 @@
       "lng": -3.1889389,
       "distance": 6.4,
       "unleaded": 137.9,
-      "diesel": 147.8,
-      "updated": "2026-03-09T00:00:00.000Z",
+      "diesel": 159.9,
+      "updated": "2026-03-12T00:00:00.000Z",
       "cached": true
     },
     {
@@ -1041,9 +1041,9 @@
       "lat": 53.3961782,
       "lng": -3.1318942,
       "distance": 14.8,
-      "unleaded": 136.9,
-      "diesel": 151.9,
-      "updated": "2026-03-09T00:00:00.000Z",
+      "unleaded": 141.9,
+      "diesel": 158.9,
+      "updated": "2026-03-12T00:00:00.000Z",
       "cached": true
     },
     {
@@ -1054,9 +1054,9 @@
       "lat": 53.37472,
       "lng": -3.04765,
       "distance": 12.8,
-      "unleaded": 135.9,
-      "diesel": 145.9,
-      "updated": "2026-03-09T00:00:00.000Z",
+      "unleaded": 137.9,
+      "diesel": 155.9,
+      "updated": "2026-03-12T00:00:00.000Z",
       "cached": true
     },
     {
@@ -1067,9 +1067,9 @@
       "lat": 53.35656,
       "lng": -3.02542,
       "distance": 11.5,
-      "unleaded": 133.9,
-      "diesel": 145.9,
-      "updated": "2026-03-09T00:00:00.000Z",
+      "unleaded": 136.9,
+      "diesel": 155.9,
+      "updated": "2026-03-12T00:00:00.000Z",
       "cached": true
     },
     {
@@ -1080,9 +1080,9 @@
       "lat": 53.381566,
       "lng": -3.09902,
       "distance": 13.5,
-      "unleaded": 139.9,
-      "diesel": 151.9,
-      "updated": "2026-03-09T00:00:00.000Z",
+      "unleaded": 142.9,
+      "diesel": 157.9,
+      "updated": "2026-03-12T00:00:00.000Z",
       "cached": true
     },
     {
@@ -1120,8 +1120,8 @@
       "lng": -3.31576,
       "distance": 12.8,
       "unleaded": 139.9,
-      "diesel": 159.9,
-      "updated": "2026-03-09T00:00:00.000Z",
+      "diesel": 164.9,
+      "updated": "2026-03-12T00:00:00.000Z",
       "cached": true
     },
     {
@@ -1132,9 +1132,9 @@
       "lat": 53.273606,
       "lng": -2.910218,
       "distance": 7.7,
-      "unleaded": 135.9,
-      "diesel": 150.9,
-      "updated": "2026-03-09T00:00:00.000Z",
+      "unleaded": 136.9,
+      "diesel": 155.9,
+      "updated": "2026-03-12T00:00:00.000Z",
       "cached": true
     },
     {
@@ -1145,9 +1145,9 @@
       "lat": 53.384042,
       "lng": -3.032912,
       "distance": 13.4,
-      "unleaded": 137.9,
-      "diesel": 151.9,
-      "updated": "2026-03-09T00:00:00.000Z",
+      "unleaded": 142.9,
+      "diesel": 158.9,
+      "updated": "2026-03-12T00:00:00.000Z",
       "cached": true
     },
     {
@@ -1158,9 +1158,9 @@
       "lat": 53.199234,
       "lng": -2.878935,
       "distance": 6.4,
-      "unleaded": 141.9,
-      "diesel": 154.9,
-      "updated": "2026-03-09T00:00:00.000Z",
+      "unleaded": 142.9,
+      "diesel": 159.9,
+      "updated": "2026-03-12T00:00:00.000Z",
       "cached": true
     },
     {
@@ -1197,9 +1197,9 @@
       "lat": 53.284662,
       "lng": -2.89441,
       "distance": 8.7,
-      "unleaded": 138.9,
-      "diesel": 154.9,
-      "updated": "2026-03-09T00:00:00.000Z",
+      "unleaded": 141.9,
+      "diesel": 159.9,
+      "updated": "2026-03-12T00:00:00.000Z",
       "cached": true
     },
     {
@@ -1224,8 +1224,8 @@
       "lng": -3.3371063,
       "distance": 16.4,
       "unleaded": 153.9,
-      "diesel": 153.9,
-      "updated": "2026-03-09T00:00:00.000Z",
+      "diesel": 159.9,
+      "updated": "2026-03-12T00:00:00.000Z",
       "cached": true
     },
     {
@@ -1236,9 +1236,9 @@
       "lat": 53.05571,
       "lng": -3.00904,
       "distance": 9.3,
-      "unleaded": 136.9,
-      "diesel": 146.9,
-      "updated": "2026-03-09T00:00:00.000Z",
+      "unleaded": 138.9,
+      "diesel": 153.9,
+      "updated": "2026-03-12T00:00:00.000Z",
       "cached": true
     },
     {
@@ -1249,9 +1249,9 @@
       "lat": 53.1685643,
       "lng": -3.0885872,
       "distance": 2.7,
-      "unleaded": 149.9,
-      "diesel": null,
-      "updated": "2026-03-09T00:00:00.000Z",
+      "unleaded": 144.9,
+      "diesel": 161.9,
+      "updated": "2026-03-12T00:00:00.000Z",
       "cached": true
     },
     {
@@ -1263,7 +1263,7 @@
       "lng": 0.0,
       "unleaded": 130.9,
       "diesel": 138.9,
-      "updated": "3/9/2026",
+      "updated": "3/12/2026",
       "cached": true
     },
     {
@@ -1273,9 +1273,9 @@
       "postcode": "",
       "lat": 0.0,
       "lng": 0.0,
-      "unleaded": 132.9,
-      "diesel": 141.9,
-      "updated": "3/9/2026",
+      "unleaded": 137.9,
+      "diesel": 151.9,
+      "updated": "3/12/2026",
       "cached": true
     },
     {
@@ -1285,9 +1285,9 @@
       "postcode": "",
       "lat": 0.0,
       "lng": 0.0,
-      "unleaded": 135.9,
-      "diesel": 148.9,
-      "updated": "3/9/2026",
+      "unleaded": 137.9,
+      "diesel": 155.9,
+      "updated": "3/12/2026",
       "cached": true
     },
     {
@@ -1297,9 +1297,9 @@
       "postcode": "",
       "lat": 0.0,
       "lng": 0.0,
-      "unleaded": 134.9,
-      "diesel": 145.9,
-      "updated": "3/9/2026",
+      "unleaded": 138.9,
+      "diesel": 152.9,
+      "updated": "3/12/2026",
       "cached": true
     },
     {
@@ -1309,9 +1309,9 @@
       "postcode": "",
       "lat": 0.0,
       "lng": 0.0,
-      "unleaded": 135.9,
-      "diesel": 145.9,
-      "updated": "3/9/2026",
+      "unleaded": 137.9,
+      "diesel": 151.9,
+      "updated": "3/12/2026",
       "cached": true
     },
     {
@@ -1321,9 +1321,9 @@
       "postcode": "",
       "lat": 0.0,
       "lng": 0.0,
-      "unleaded": 138.9,
-      "diesel": 154.9,
-      "updated": "3/9/2026",
+      "unleaded": 140.9,
+      "diesel": 159.9,
+      "updated": "3/12/2026",
       "cached": true
     },
     {
@@ -1333,9 +1333,9 @@
       "postcode": "",
       "lat": 0.0,
       "lng": 0.0,
-      "unleaded": 136.9,
-      "diesel": 159.9,
-      "updated": "3/9/2026",
+      "unleaded": 139.9,
+      "diesel": 165.9,
+      "updated": "3/12/2026",
       "cached": true
     },
     {
@@ -1345,9 +1345,9 @@
       "postcode": "",
       "lat": 0.0,
       "lng": 0.0,
-      "unleaded": 139.9,
-      "diesel": 154.9,
-      "updated": "3/9/2026",
+      "unleaded": 141.9,
+      "diesel": 159.9,
+      "updated": "3/12/2026",
       "cached": true
     },
     {
@@ -1357,9 +1357,9 @@
       "postcode": "",
       "lat": 0.0,
       "lng": 0.0,
-      "unleaded": 137.9,
-      "diesel": 152.9,
-      "updated": "3/9/2026",
+      "unleaded": 141.9,
+      "diesel": 157.9,
+      "updated": "3/12/2026",
       "cached": true
     },
     {
@@ -1369,9 +1369,9 @@
       "postcode": "",
       "lat": 0.0,
       "lng": 0.0,
-      "unleaded": 137.9,
-      "diesel": 152.9,
-      "updated": "3/9/2026",
+      "unleaded": 141.9,
+      "diesel": 157.9,
+      "updated": "3/12/2026",
       "cached": true
     },
     {
@@ -1381,9 +1381,9 @@
       "postcode": "",
       "lat": 0.0,
       "lng": 0.0,
-      "unleaded": 137.9,
-      "diesel": 146.9,
-      "updated": "3/9/2026",
+      "unleaded": 149.9,
+      "diesel": 172.9,
+      "updated": "3/12/2026",
       "cached": true
     },
     {
@@ -1393,9 +1393,9 @@
       "postcode": "",
       "lat": 0.0,
       "lng": 0.0,
-      "unleaded": 138.9,
-      "diesel": 151.9,
-      "updated": "3/9/2026",
+      "unleaded": 141.9,
+      "diesel": 158.9,
+      "updated": "3/12/2026",
       "cached": true
     },
     {
@@ -1406,8 +1406,8 @@
       "lat": 0.0,
       "lng": 0.0,
       "unleaded": 138.9,
-      "diesel": 152.9,
-      "updated": "3/9/2026",
+      "diesel": 159.9,
+      "updated": "3/12/2026",
       "cached": true
     },
     {
@@ -1417,9 +1417,9 @@
       "postcode": "",
       "lat": 0.0,
       "lng": 0.0,
-      "unleaded": 138.9,
-      "diesel": 150.9,
-      "updated": "3/9/2026",
+      "unleaded": 139.9,
+      "diesel": 157.9,
+      "updated": "3/12/2026",
       "cached": true
     },
     {
@@ -1429,9 +1429,9 @@
       "postcode": "",
       "lat": 0.0,
       "lng": 0.0,
-      "unleaded": 138.9,
-      "diesel": 152.9,
-      "updated": "3/9/2026",
+      "unleaded": 140.9,
+      "diesel": 158.9,
+      "updated": "3/12/2026",
       "cached": true
     },
     {
@@ -1441,9 +1441,9 @@
       "postcode": "",
       "lat": 0.0,
       "lng": 0.0,
-      "unleaded": 139.9,
-      "diesel": 159.9,
-      "updated": "3/9/2026",
+      "unleaded": 143.9,
+      "diesel": 163.9,
+      "updated": "3/12/2026",
       "cached": true
     },
     {
@@ -1454,8 +1454,8 @@
       "lat": 0.0,
       "lng": 0.0,
       "unleaded": 139.9,
-      "diesel": 159.9,
-      "updated": "3/9/2026",
+      "diesel": 165.9,
+      "updated": "3/12/2026",
       "cached": true
     },
     {
@@ -1465,9 +1465,9 @@
       "postcode": "",
       "lat": 0.0,
       "lng": 0.0,
-      "unleaded": 141.9,
-      "diesel": 154.9,
-      "updated": "3/9/2026",
+      "unleaded": 144.9,
+      "diesel": 157.9,
+      "updated": "3/12/2026",
       "cached": true
     },
     {
@@ -1477,9 +1477,9 @@
       "postcode": "",
       "lat": 0.0,
       "lng": 0.0,
-      "unleaded": 141.9,
-      "diesel": 155.9,
-      "updated": "3/9/2026",
+      "unleaded": 144.9,
+      "diesel": 159.9,
+      "updated": "3/12/2026",
       "cached": true
     },
     {
@@ -1490,8 +1490,8 @@
       "lat": 0.0,
       "lng": 0.0,
       "unleaded": 141.9,
-      "diesel": 159.9,
-      "updated": "3/9/2026",
+      "diesel": 165.9,
+      "updated": "3/12/2026",
       "cached": true
     },
     {
@@ -1502,8 +1502,8 @@
       "lat": 0.0,
       "lng": 0.0,
       "unleaded": 144.9,
-      "diesel": 160.9,
-      "updated": "3/9/2026",
+      "diesel": 162.9,
+      "updated": "3/12/2026",
       "cached": true
     },
     {
