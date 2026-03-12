@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
-    "unleaded": 141.4,
-    "diesel": 160.5
+    "unleaded": 141.0,
+    "diesel": 160.3
   },
-  "lastUpdated": "2026-03-12T16:00:06.011955+00:00",
+  "lastUpdated": "2026-03-12T16:02:01.206857+00:00",
   "stationCount": 96,
   "stations": [
     {
@@ -747,8 +747,8 @@
       "lng": -2.802,
       "unleaded": 144.9,
       "diesel": 161.9,
-      "updated": "3/12/2026",
-      "cached": true
+      "updated": "2026-03-12T14:06:37.689Z",
+      "cached": false
     },
     {
       "name": "EG BEACON 62 PFS",
@@ -769,10 +769,10 @@
       "postcode": "CH8 7SJ",
       "lat": 53.26136,
       "lng": -3.20879,
-      "unleaded": 136.9,
-      "diesel": 146.9,
-      "updated": "3/9/2026",
-      "cached": true
+      "unleaded": 141.9,
+      "diesel": 159.9,
+      "updated": "2026-03-11T09:53:21.523Z",
+      "cached": false
     },
     {
       "name": "SHELL HAPSFORD MWSA",
@@ -781,10 +781,10 @@
       "postcode": "CH2 4QZ",
       "lat": 53.268277,
       "lng": -2.801322,
-      "unleaded": 158.9,
-      "diesel": 178.9,
-      "updated": "3/9/2026",
-      "cached": true
+      "unleaded": 161.9,
+      "diesel": 179.9,
+      "updated": "2026-03-12T15:00:55.463Z",
+      "cached": false
     },
     {
       "name": "SHELL LITTLE WAITROSE HINDERTON",
@@ -793,10 +793,10 @@
       "postcode": "CH64 7TA",
       "lat": 53.294253,
       "lng": -3.042575,
-      "unleaded": 137.9,
-      "diesel": 152.9,
-      "updated": "3/9/2026",
-      "cached": true
+      "unleaded": 141.9,
+      "diesel": 161.9,
+      "updated": "2026-03-12T15:51:14.115Z",
+      "cached": false
     },
     {
       "name": "SHELL CO-OP MOLD",
@@ -805,10 +805,10 @@
       "postcode": "CH7 6LQ",
       "lat": 53.181156,
       "lng": -3.111588,
-      "unleaded": 143.9,
-      "diesel": 158.9,
-      "updated": "3/9/2026",
-      "cached": true
+      "unleaded": 147.9,
+      "diesel": 166.9,
+      "updated": "2026-03-12T12:33:15.762Z",
+      "cached": false
     },
     {
       "name": "BR Flint",
@@ -817,10 +817,10 @@
       "postcode": "CH6 5DZ",
       "lat": 53.2443473,
       "lng": -3.1222575,
-      "unleaded": 139.9,
-      "diesel": 152.9,
-      "updated": "3/9/2026",
-      "cached": true
+      "unleaded": 141.9,
+      "diesel": 165.9,
+      "updated": "2026-03-10T11:27:09.898Z",
+      "cached": false
     },
     {
       "name": "Esso - Saltney Service Station",
@@ -829,10 +829,10 @@
       "postcode": "CH4 8SJ",
       "lat": 53.178903,
       "lng": -2.922518,
-      "unleaded": 130.9,
-      "diesel": 142.9,
-      "updated": "3/9/2026",
-      "cached": true
+      "unleaded": 136.9,
+      "diesel": 159.9,
+      "updated": "2026-03-09T11:40:18.467Z",
+      "cached": false
     },
     {
       "name": "LIVERPOOL ALLERTON RD SUPERSTORE - PETROL FILLING STATION",
@@ -841,9 +841,9 @@
       "postcode": "L18 6HF",
       "lat": 53.38121,
       "lng": -2.90916,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
+      "unleaded": 136.9,
+      "diesel": 154.9,
+      "updated": "2026-03-12T14:35:11.445Z",
       "cached": false
     },
     {
@@ -853,10 +853,10 @@
       "postcode": "CH5 1QD",
       "lat": 53.2088991,
       "lng": -3.0326318,
-      "unleaded": 132.9,
-      "diesel": 144.9,
-      "updated": "3/9/2026",
-      "cached": true
+      "unleaded": 136.9,
+      "diesel": 159.9,
+      "updated": "2026-03-09T13:45:35.066Z",
+      "cached": false
     },
     {
       "name": "SHELL HUNTS CROSS",
@@ -865,9 +865,9 @@
       "postcode": "L25 0NS",
       "lat": 53.359789,
       "lng": -2.854618,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
+      "unleaded": 140.9,
+      "diesel": 159.9,
+      "updated": "2026-03-12T15:03:12.061Z",
       "cached": false
     },
     {
@@ -877,10 +877,10 @@
       "postcode": "CH6 5RR",
       "lat": 53.253768,
       "lng": -3.14176,
-      "unleaded": 139.9,
-      "diesel": 159.9,
-      "updated": "3/9/2026",
-      "cached": true
+      "unleaded": 141.9,
+      "diesel": 165.9,
+      "updated": "2026-03-12T13:42:50.506Z",
+      "cached": false
     },
     {
       "name": "SMITHY VIEW SERVICE STATION ACTON",
@@ -889,10 +889,10 @@
       "postcode": "LL12 8DY",
       "lat": 53.0687749,
       "lng": -2.9908063,
-      "unleaded": 125.9,
-      "diesel": 134.9,
-      "updated": "3/9/2026",
-      "cached": true
+      "unleaded": 139.7,
+      "diesel": 159.7,
+      "updated": "2026-03-12T15:57:50.301Z",
+      "cached": false
     },
     {
       "name": "MOLD SUPERSTORE - PETROL FILLING STATION",
@@ -901,10 +901,10 @@
       "postcode": "CH7 1UB",
       "lat": 53.16708,
       "lng": -3.13754,
-      "unleaded": 140.9,
-      "diesel": 150.9,
-      "updated": "3/9/2026",
-      "cached": true
+      "unleaded": 141.9,
+      "diesel": 158.9,
+      "updated": "2026-03-11T18:18:47.679Z",
+      "cached": false
     },
     {
       "name": "MFG HALEWOOD",
@@ -913,9 +913,9 @@
       "postcode": "L26 1UN",
       "lat": 53.357973,
       "lng": -2.834598,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
+      "unleaded": 137.9,
+      "diesel": 155.9,
+      "updated": "2026-03-12T14:38:02.942Z",
       "cached": false
     },
     {
@@ -925,10 +925,10 @@
       "postcode": "CH60 3RY",
       "lat": 53.322022,
       "lng": -3.084409,
-      "unleaded": 139.9,
-      "diesel": 152.9,
-      "updated": "3/9/2026",
-      "cached": true
+      "unleaded": 143.9,
+      "diesel": 161.9,
+      "updated": "2026-03-12T13:04:49.205Z",
+      "cached": false
     },
     {
       "name": "BROUGHTON CHESTER EXTRA - PETROL FILLING STATION",
@@ -937,10 +937,10 @@
       "postcode": "CH4 0DP",
       "lat": 53.16935,
       "lng": -2.9739,
-      "unleaded": 132.9,
-      "diesel": 146.9,
-      "updated": "3/9/2026",
-      "cached": true
+      "unleaded": 138.9,
+      "diesel": 156.9,
+      "updated": "2026-03-11T18:11:34.611Z",
+      "cached": false
     },
     {
       "name": "Rhydymwyn Service Station",
@@ -950,9 +950,9 @@
       "lat": 53.1928694,
       "lng": -3.1889389,
       "unleaded": 137.9,
-      "diesel": 147.8,
-      "updated": "3/9/2026",
-      "cached": true
+      "diesel": 159.9,
+      "updated": "2026-03-11T13:44:25.138Z",
+      "cached": false
     },
     {
       "name": "BP HARVEST ENERGY HOYLAKE",
@@ -961,10 +961,10 @@
       "postcode": "CH46 5NA",
       "lat": 53.3961782,
       "lng": -3.1318942,
-      "unleaded": 136.9,
-      "diesel": 151.9,
-      "updated": "3/9/2026",
-      "cached": true
+      "unleaded": 141.9,
+      "diesel": 158.9,
+      "updated": "2026-03-11T13:22:23.640Z",
+      "cached": false
     },
     {
       "name": "SAINSBURYS BIRKENHEAD",
@@ -973,10 +973,10 @@
       "postcode": "CH42 8PQ",
       "lat": 53.37472,
       "lng": -3.04765,
-      "unleaded": 135.9,
-      "diesel": 145.9,
-      "updated": "3/9/2026",
-      "cached": true
+      "unleaded": 137.9,
+      "diesel": 155.9,
+      "updated": "2026-03-11T21:44:47.569Z",
+      "cached": false
     },
     {
       "name": "SAINSBURYS KINGS ROAD BEBINGTON",
@@ -985,10 +985,10 @@
       "postcode": "CH63 8PZ",
       "lat": 53.35656,
       "lng": -3.02542,
-      "unleaded": 133.9,
-      "diesel": 145.9,
-      "updated": "3/9/2026",
-      "cached": true
+      "unleaded": 136.9,
+      "diesel": 155.9,
+      "updated": "2026-03-11T22:56:10.318Z",
+      "cached": false
     },
     {
       "name": "SHELL UPTON",
@@ -997,10 +997,10 @@
       "postcode": "CH49 0UE",
       "lat": 53.381566,
       "lng": -3.09902,
-      "unleaded": 139.9,
-      "diesel": 151.9,
-      "updated": "3/9/2026",
-      "cached": true
+      "unleaded": 144.9,
+      "diesel": 160.9,
+      "updated": "2026-03-12T12:33:12.558Z",
+      "cached": false
     },
     {
       "name": "FOUR ACES FILLING STATION",
@@ -1009,9 +1009,9 @@
       "postcode": "NE10 8YB",
       "lat": 53.1526091,
       "lng": -3.2031627,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
+      "unleaded": 139.9,
+      "diesel": 159.9,
+      "updated": "2026-03-10T02:50:52.198Z",
       "cached": false
     },
     {
@@ -1021,9 +1021,9 @@
       "postcode": "L35 1QY",
       "lat": 53.39817,
       "lng": -2.81805,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
+      "unleaded": 141.9,
+      "diesel": 159.9,
+      "updated": "2026-03-12T15:15:43.645Z",
       "cached": false
     },
     {
@@ -1034,9 +1034,9 @@
       "lat": 53.1134,
       "lng": -3.31576,
       "unleaded": 139.9,
-      "diesel": 159.9,
-      "updated": "3/9/2026",
-      "cached": true
+      "diesel": 164.9,
+      "updated": "2026-03-12T11:28:36.112Z",
+      "cached": false
     },
     {
       "name": "MFG MORRISONS ELLESMERE PORT",
@@ -1045,10 +1045,10 @@
       "postcode": "CH65 6RU",
       "lat": 53.273606,
       "lng": -2.910218,
-      "unleaded": 135.9,
-      "diesel": 150.9,
-      "updated": "3/9/2026",
-      "cached": true
+      "unleaded": 136.9,
+      "diesel": 155.9,
+      "updated": "2026-03-12T12:58:09.815Z",
+      "cached": false
     },
     {
       "name": "SHELL WIRRAL WAY",
@@ -1057,10 +1057,10 @@
       "postcode": "CH42 0HA",
       "lat": 53.384042,
       "lng": -3.032912,
-      "unleaded": 137.9,
-      "diesel": 151.9,
-      "updated": "3/9/2026",
-      "cached": true
+      "unleaded": 144.9,
+      "diesel": 161.9,
+      "updated": "2026-03-12T12:33:12.761Z",
+      "cached": false
     },
     {
       "name": "SHELL HOOLE ROAD",
@@ -1069,10 +1069,10 @@
       "postcode": "CH2 3NH",
       "lat": 53.199234,
       "lng": -2.878935,
-      "unleaded": 141.9,
-      "diesel": 154.9,
-      "updated": "3/9/2026",
-      "cached": true
+      "unleaded": 144.9,
+      "diesel": 162.9,
+      "updated": "2026-03-12T15:33:02.330Z",
+      "cached": false
     },
     {
       "name": "HELMINGTON ROW FILLING STATION",
@@ -1081,9 +1081,9 @@
       "postcode": "DL15 0RW",
       "lat": 53.3463137,
       "lng": -3.0946933,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
+      "unleaded": 137.9,
+      "diesel": 157.9,
+      "updated": "2026-03-12T14:15:58.290Z",
       "cached": false
     },
     {
@@ -1093,9 +1093,9 @@
       "postcode": "L24 9HD",
       "lat": 53.3548148,
       "lng": -2.8647401,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
+      "unleaded": 135.9,
+      "diesel": 161.9,
+      "updated": "2026-03-09T14:34:22.640Z",
       "cached": false
     },
     {
@@ -1105,10 +1105,10 @@
       "postcode": "CH65 4AX",
       "lat": 53.284662,
       "lng": -2.89441,
-      "unleaded": 138.9,
-      "diesel": 154.9,
-      "updated": "3/9/2026",
-      "cached": true
+      "unleaded": 143.9,
+      "diesel": 162.9,
+      "updated": "2026-03-12T13:04:38.797Z",
+      "cached": false
     },
     {
       "name": "IVANHOE SERVICE STATION",
@@ -1117,9 +1117,9 @@
       "postcode": "DL2 1TD",
       "lat": 53.238044,
       "lng": -3.1376907,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
+      "unleaded": 142.9,
+      "diesel": 163.9,
+      "updated": "2026-03-12T10:13:21.207Z",
       "cached": false
     },
     {
@@ -1130,9 +1130,9 @@
       "lat": 53.342343,
       "lng": -3.3371063,
       "unleaded": 153.9,
-      "diesel": 153.9,
-      "updated": "3/9/2026",
-      "cached": true
+      "diesel": 159.9,
+      "updated": "2026-03-11T07:15:15.548Z",
+      "cached": false
     },
     {
       "name": "SAINSBURYS WREXHAM",
@@ -1141,10 +1141,10 @@
       "postcode": "LL11 2BA",
       "lat": 53.05571,
       "lng": -3.00904,
-      "unleaded": 136.9,
-      "diesel": 146.9,
-      "updated": "3/9/2026",
-      "cached": true
+      "unleaded": 138.9,
+      "diesel": 153.9,
+      "updated": "2026-03-11T22:03:19.722Z",
+      "cached": false
     },
     {
       "name": "BR Buckley",
@@ -1153,10 +1153,10 @@
       "postcode": "CH7 2NJ",
       "lat": 53.1685643,
       "lng": -3.0885872,
-      "unleaded": 149.9,
-      "diesel": null,
-      "updated": "3/9/2026",
-      "cached": true
+      "unleaded": 144.9,
+      "diesel": 161.9,
+      "updated": "2026-03-10T12:58:49.505Z",
+      "cached": false
     }
   ]
 }
