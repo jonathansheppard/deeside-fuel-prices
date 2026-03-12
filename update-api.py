@@ -161,12 +161,12 @@ def main():
         for fp in p.get("fuel_prices", []):
             fuel_type = fp.get("fuel_type", "").upper()
             price     = fp.get("price")
-            updated   = fp.get("effective_from") or fp.get("last_updated")
+            updated = fp.get("price_change_effective_timestamp") or fp.get("price_last_updated") or fp.get("effective_from")
             if not valid_price(price):
                 continue
-            if fuel_type == "E10":
+            if "E10" in fuel_type:
                 local_stations[node_id]["unleaded"] = float(price)
-            elif fuel_type in ("B7", "DIESEL"):
+            elif "B7" in fuel_type or "DIESEL" in fuel_type:
                 local_stations[node_id]["diesel"] = float(price)
             if updated:
                 local_stations[node_id]["updated"] = updated
@@ -232,9 +232,9 @@ def main():
             price     = fp.get("price")
             if not valid_price(price):
                 continue
-            if fuel_type == "E10":
+            if "E10" in fuel_type:
                 all_unleaded.append(float(price))
-            elif fuel_type in ("B7", "DIESEL"):
+            elif "B7" in fuel_type or "DIESEL" in fuel_type:
                 all_diesel.append(float(price))
 
     national_avg = {
