@@ -3,10 +3,11 @@
     "unleaded": 141.1,
     "diesel": 160.4
   },
-  "lastUpdated": "2026-03-12T16:38:28.404678+00:00",
+  "lastUpdated": "2026-03-12T16:45:15.536348+00:00",
   "stationCount": 53,
   "stations": [
     {
+      "id": "a6dbf2da92dde055916327b41b3f26aad835a2a04e148e6fb99734b28c8d430a",
       "name": "H W Oultram & Co",
       "brand": "Oil 4 Wales",
       "address": "",
@@ -20,6 +21,7 @@
       "distance": 1.7
     },
     {
+      "id": "da6980253782e98a1802436a37575a9e561fd32600e3cc3f3acf2f57ae0d2947",
       "name": "SHELL CO-OP WREXHAM",
       "brand": "SHELL",
       "address": "",
@@ -28,11 +30,12 @@
       "lng": -3.006356,
       "unleaded": 144.9,
       "diesel": 159.9,
-      "updated": "2026-03-12T16:37:32.603Z",
+      "updated": "2026-03-12T16:36:19.399Z",
       "cached": false,
       "distance": 10.6
     },
     {
+      "id": "80bd1d38796954915e9f3aa3bf7a952a751811c21df4ea42913cd79a33a745a7",
       "name": "ASCONA HOLYWELL SERVICE STATION",
       "brand": "VALERO",
       "address": "",
@@ -46,6 +49,7 @@
       "distance": 10.3
     },
     {
+      "id": "bc85c084bd3335a4aee66e23b59536645aaf26731487b90532b1d380ee66cd01",
       "name": "BP HARVEST ENERGY OVERPOOL",
       "brand": "BP HARVEST ENERGY",
       "address": "",
@@ -59,6 +63,7 @@
       "distance": 6.3
     },
     {
+      "id": "47e0252a9b4c1be4b3e3271c670d12e9e3c8e32066a0daa86c84953cdccd55ae",
       "name": "JACOBS WELL SERVICE STATION",
       "brand": "JET",
       "address": "",
@@ -72,6 +77,7 @@
       "distance": 6.8
     },
     {
+      "id": "d8e546ff352fd5c4cca2b52e6b8966b09ca957160e840df011681a4e5e0bdd52",
       "name": "MFG MORRISONS CHESTER LIVERPOOL ROAD",
       "brand": "MORRISONS",
       "address": "",
@@ -85,6 +91,7 @@
       "distance": 5.5
     },
     {
+      "id": "de32ba52985fb55b747be8c6230cdd2431c418562767b43e7cb72239e1402d58",
       "name": "SAINSBURYS ELLESMERE PORT",
       "brand": "SAINSBURY'S",
       "address": "",
@@ -98,6 +105,7 @@
       "distance": 7.2
     },
     {
+      "id": "b43bafc5ee7cfc90898824b4c696d576d77bba29b5c65954eef598faf7e6bc40",
       "name": "BR Gwersyllt",
       "brand": "Spar",
       "address": "",
@@ -111,6 +119,7 @@
       "distance": 8.7
     },
     {
+      "id": "304d35b34c53fd20be90ba355808429f3e72b55a6154712b70065fdebfaa3e4d",
       "name": "INCH FILLING STATION",
       "brand": "ESSO",
       "address": "",
@@ -124,6 +133,7 @@
       "distance": 8.6
     },
     {
+      "id": "857de1a36363a878332716ab06ca5f861e17ac64ff0e6baa537c9938bc4b6ada",
       "name": "MFG MORRISONS SALTNEY",
       "brand": "MORRISONS",
       "address": "",
@@ -137,6 +147,7 @@
       "distance": 4.2
     },
     {
+      "id": "cee3a494db1a07597382f2abfc04b56ab750631ce8157b11732e2b6515ef26cb",
       "name": "SHELL NORTHOP",
       "brand": "SHELL",
       "address": "",
@@ -145,11 +156,12 @@
       "lng": -3.081794,
       "unleaded": 151.9,
       "diesel": 174.9,
-      "updated": "2026-03-12T12:44:27.247Z",
+      "updated": "2026-03-12T12:40:09.200Z",
       "cached": false,
       "distance": 2.4
     },
     {
+      "id": "6baa912820f943b0a2d9ca6c1d18f86dab4f5078997a790a72c9189e083a0190",
       "name": "SHELL NORTHOP HALL",
       "brand": "SHELL",
       "address": "",
@@ -158,11 +170,12 @@
       "lng": -3.088915,
       "unleaded": 151.9,
       "diesel": 174.9,
-      "updated": "2026-03-12T14:08:14.513Z",
+      "updated": "2026-03-12T14:07:01.606Z",
       "cached": false,
       "distance": 2.6
     },
     {
+      "id": "b11aa0c09561cf900ecf06e7473dbdfcb9dd10010083cc22ac49dcd316dde32f",
       "name": "MFG STRAWBERRY",
       "brand": "BP",
       "address": "",
@@ -176,6 +189,7 @@
       "distance": 6.0
     },
     {
+      "id": "d8beadcbbd2f158a16ade792bc11d58ced957e251be41af823fc8ea15ca76315",
       "name": "Plas Acton Fuel Station",
       "brand": "Gulf",
       "address": "",
@@ -189,6 +203,7 @@
       "distance": 9.4
     },
     {
+      "id": "a0e6dedb05ccc0c5fa573420d9750cb938fb9a5268cf09e42c5dfcbe574b3fd1",
       "name": "ASDA COEDPOETH EXPRESS PETROL",
       "brand": "ASDA EXPRESS",
       "address": "",
@@ -202,6 +217,7 @@
       "distance": 10.5
     },
     {
+      "id": "fa4b2e235c6e064cc5780a532e89770ec5fce630d01d036ac2af171dce17d9f4",
       "name": "ASDA HOLT ROAD EXPRESS PETROL",
       "brand": "ESSO",
       "address": "",
@@ -215,6 +231,7 @@
       "distance": 10.4
     },
     {
+      "id": "fbb879ff35abc78a1a33e659469aa814ff23b41fc67d664d99344e298630f26b",
       "name": "Dyffryn Service Station",
       "brand": "Esso",
       "address": "",
@@ -228,6 +245,7 @@
       "distance": 13.8
     },
     {
+      "id": "d942cacce981454b56188d19f52f71ac5da48bca49080951901c825661122412",
       "name": "ASDA SINGING KETTLE S/STN EXPRESS PETROL",
       "brand": "BP",
       "address": "",
@@ -241,6 +259,7 @@
       "distance": 12.0
     },
     {
+      "id": "eddb870e5e823f993ff5c961ca8aed2da3089ba356cec9d5b611fba575d101a1",
       "name": "ASDA TREFFYNNON EXPRESS PETROL",
       "brand": "ESSO",
       "address": "",
@@ -254,6 +273,7 @@
       "distance": 8.9
     },
     {
+      "id": "9a6b63c48b364f8ce3ee90cfcff54b44e62979044dabb71e7a57a0adcbc0b011",
       "name": "ASDA WYLFA EXPRESS PETROL",
       "brand": "ESSO",
       "address": "",
@@ -267,6 +287,7 @@
       "distance": 5.2
     },
     {
+      "id": "a60195ec2d7b00cf2bd611e0f65a0afdc06b80fc9ac9123b90e75a8775289ffc",
       "name": "EG MOLD PFS",
       "brand": "EG ON THE MOVE",
       "address": "",
@@ -280,6 +301,7 @@
       "distance": 5.2
     },
     {
+      "id": "70cc3725ae353608db4a7d090358ce58c9481cb3ee40635f01e2ae0b207e968f",
       "name": "EG PONTBLYDDYN PFS",
       "brand": "EG ON THE MOVE",
       "address": "",
@@ -293,6 +315,7 @@
       "distance": 5.2
     },
     {
+      "id": "543aab15a1da23f2dd0e087ba2bfbd0bebb070ab5d3bb8ede6bd9b38c52d5b56",
       "name": "Dobshill Service Station",
       "brand": "Dobshill Service Station",
       "address": "",
@@ -306,6 +329,7 @@
       "distance": 2.9
     },
     {
+      "id": "ba93319864538614ccd03c9559c1c99e11729dd4a35855dfde3fdf5b0a2054d5",
       "name": "ASDA QUEENSFERRY",
       "brand": "ASDA",
       "address": "",
@@ -319,6 +343,7 @@
       "distance": 0.0
     },
     {
+      "id": "cc0824567b8c0c5dc6fbd3fdd8fdcffe43f1cc9f59ca19fd70c206fa84d21d14",
       "name": "ASDA QUAY EXPRESS PETROL",
       "brand": "ESSO",
       "address": "",
@@ -332,6 +357,7 @@
       "distance": 2.3
     },
     {
+      "id": "efbf3cb7c6e2d05dc727315e4dd255670503b8193ce6c58a99a4e7f247e5fcd5",
       "name": "ASDA DEESIDE EXPRESS PETROL",
       "brand": "BP",
       "address": "",
@@ -345,6 +371,7 @@
       "distance": 2.0
     },
     {
+      "id": "135f351200091a46b189eb7dca477174d6d2ee2f123b9811d574557d6032e284",
       "name": "ASDA WREXHAM ROAD EXPRESS PETROL",
       "brand": "BP",
       "address": "",
@@ -358,6 +385,7 @@
       "distance": 5.7
     },
     {
+      "id": "36e2c41a1233239e1a4060baac60fdfcef7ea78201a4e0cd6fde23ac282b14fa",
       "name": "ASDA PARKGATE EXPRESS PETROL",
       "brand": "ESSO",
       "address": "",
@@ -371,6 +399,7 @@
       "distance": 5.1
     },
     {
+      "id": "aea56d7e6a2a0e2e17e3b60c2918b3bfb4d8589e5e559ab63208a3e0f362a658",
       "name": "Asda Parkgate Road, Chester",
       "brand": "BP",
       "address": "",
@@ -384,6 +413,7 @@
       "distance": 4.0
     },
     {
+      "id": "82da9b8017801f8c3f63c5a1e6fde62c613ecb8041a0830cfcd019160551c892",
       "name": "COSTCO WHOLESALE CHESTER",
       "brand": "COSTCO WHOLESALE",
       "address": "",
@@ -397,6 +427,7 @@
       "distance": 4.8
     },
     {
+      "id": "806062a0ebb200a886430a8b5de92a39fc012a6c10f09f601205989b6719f8b9",
       "name": "ASDA HANDBRIDGE EXPRESS PETROL",
       "brand": "ASDA EXPRESS",
       "address": "",
@@ -410,6 +441,7 @@
       "distance": 5.9
     },
     {
+      "id": "0733b13f4e95824d1db01e38ce47a87439e5b7462ba530c517f228a27e61d283",
       "name": "EG MOSTON PFS",
       "brand": "EG ON THE MOVE",
       "address": "",
@@ -423,6 +455,7 @@
       "distance": 5.7
     },
     {
+      "id": "e49c4b7d58eb0086c319611d8208bc326ff22127500cd38b5653fb7bad6c1eb3",
       "name": "Gordale Service Station",
       "brand": "Gordale Service Station",
       "address": "",
@@ -436,6 +469,7 @@
       "distance": 4.9
     },
     {
+      "id": "d8c00e703238d508fba619b5099d4d45a20bb36166b283ffed41047e3b5653cf",
       "name": "ASDA ELLESMERE PORT EXPRESS PETROL",
       "brand": "ESSO",
       "address": "",
@@ -449,6 +483,7 @@
       "distance": 7.1
     },
     {
+      "id": "acadb0d633e2a14bd2a931160b9073088c855031ecbdf9771aa1091bc87bc01b",
       "name": "Ellesmere Port Service Station",
       "brand": "Ellesmere Port Service Station",
       "address": "",
@@ -462,6 +497,7 @@
       "distance": 7.6
     },
     {
+      "id": "bb980e486287fcfb38b6360841434b3841592df6632490ed611d0d242043bba5",
       "name": "HILLCREST MOTOR CO LTD",
       "brand": "GULF",
       "address": "",
@@ -475,6 +511,7 @@
       "distance": 8.5
     },
     {
+      "id": "26e9361dd7901da3a3afd83504bc63c68092d72e48c0ebab87f592382cda95ea",
       "name": "SHELL LITTLE WAITROSE HINDERTON",
       "brand": "SHELL",
       "address": "",
@@ -483,11 +520,12 @@
       "lng": -3.042575,
       "unleaded": 141.9,
       "diesel": 161.9,
-      "updated": "2026-03-12T16:06:30.518Z",
+      "updated": "2026-03-12T16:31:06.005Z",
       "cached": false,
       "distance": 6.2
     },
     {
+      "id": "d60f939383f0266c6109cf2520de29a516ed6b5cf43cbcba77283338010c9b93",
       "name": "SHELL CO-OP MOLD",
       "brand": "SHELL",
       "address": "",
@@ -501,6 +539,7 @@
       "distance": 3.9
     },
     {
+      "id": "810bdae8b3959a35d95d90182dbb0defb5afe50a10f01f0f934bd01e7029d8e4",
       "name": "BR Flint",
       "brand": "Spar",
       "address": "",
@@ -514,6 +553,7 @@
       "distance": 4.8
     },
     {
+      "id": "72f843049279ae13b6138241e0aeaaea1c87e962a9b3b59d6d54b88d56e7aad8",
       "name": "Esso - Saltney Service Station",
       "brand": "Saltney Service Station",
       "address": "",
@@ -527,6 +567,7 @@
       "distance": 4.7
     },
     {
+      "id": "8a0eed0f092aa5a2f422dbccdb4704e24ec4c2e13128358b055fb93d46773c12",
       "name": "Esso - Queensferry Service Station",
       "brand": "Queensferry Service Station",
       "address": "",
@@ -540,6 +581,7 @@
       "distance": 0.4
     },
     {
+      "id": "a61af0fe0d03ebf6236f4df10e383856d227d1da9393ab58c26467a1fe4a0b30",
       "name": "MFG COLESHILL",
       "brand": "SHELL",
       "address": "",
@@ -553,6 +595,7 @@
       "distance": 5.8
     },
     {
+      "id": "25e74db35497d2a373117899c09515861cd7ba5f6a6597d235afc85b835ba629",
       "name": "SMITHY VIEW SERVICE STATION ACTON",
       "brand": "SMITHY VIEW SERVICE STATION ACTON",
       "address": "",
@@ -566,6 +609,7 @@
       "distance": 9.5
     },
     {
+      "id": "9fd407a85b1befff2d7f6bca51d93e879ee6d6031b7e922ce36744c6bd54cebc",
       "name": "MOLD SUPERSTORE - PETROL FILLING STATION",
       "brand": "TESCO",
       "address": "",
@@ -579,6 +623,7 @@
       "distance": 5.3
     },
     {
+      "id": "fd20c8e99484f6e759eae93619cab8f79ccff10fa59c77c12679cd0d585b60f4",
       "name": "BROUGHTON CHESTER EXTRA - PETROL FILLING STATION",
       "brand": "TESCO",
       "address": "",
@@ -592,6 +637,7 @@
       "distance": 3.3
     },
     {
+      "id": "de751076565959972cd5aa22ed8ad16c1b990aca50eaa6abe694af815e42e6d9",
       "name": "Rhydymwyn Service Station",
       "brand": "Rhydymwyn Service Station",
       "address": "",
@@ -605,6 +651,7 @@
       "distance": 6.8
     },
     {
+      "id": "27288fd74b51e0aff2c26e78c38f8fe4d60ffdbf8b6b097970a4ca3ae60b36f0",
       "name": "FOUR ACES FILLING STATION",
       "brand": "JET",
       "address": "",
@@ -618,6 +665,7 @@
       "distance": 8.2
     },
     {
+      "id": "90e7c60c1ff497cfa3be5809481d6846995953f77c0ca53eac3c6a96d34a7c2a",
       "name": "RUTHIN",
       "brand": "TEXACO",
       "address": "",
@@ -631,6 +679,7 @@
       "distance": 13.6
     },
     {
+      "id": "03912468dd4c99239ab4b88a053ab3123d1c191ccea88d1833a032e282c22595",
       "name": "MFG MORRISONS ELLESMERE PORT",
       "brand": "MORRISONS",
       "address": "",
@@ -644,6 +693,7 @@
       "distance": 6.8
     },
     {
+      "id": "ec10d667058b4b928ed9c26bf1f2829273680479b27ef5f8f78df1b365df90ad",
       "name": "SHELL MERSEY VIEW",
       "brand": "SHELL",
       "address": "",
@@ -652,11 +702,12 @@
       "lng": -2.89441,
       "unleaded": 143.9,
       "diesel": 162.9,
-      "updated": "2026-03-12T13:25:08.590Z",
+      "updated": "2026-03-12T12:54:07.406Z",
       "cached": false,
       "distance": 7.8
     },
     {
+      "id": "67014f0a91451ded6395e3cae9f23c8f76aa961a3b43887cca7e6316775052f5",
       "name": "IVANHOE SERVICE STATION",
       "brand": "BP",
       "address": "",
@@ -670,6 +721,7 @@
       "distance": 5.1
     },
     {
+      "id": "db831fa91a8b5b61ca51295369900d3140d4c6d5da262930799f2e765dcd952d",
       "name": "SAINSBURYS WREXHAM",
       "brand": "SAINSBURY'S",
       "address": "",
@@ -683,6 +735,7 @@
       "distance": 10.3
     },
     {
+      "id": "2781eba3566004e8005f6db238b4a261b9ef6f97edf3ef83e07574d84d106b64",
       "name": "BR Buckley",
       "brand": "Spar",
       "address": "",
