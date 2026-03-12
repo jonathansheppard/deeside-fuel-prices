@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
-    "unleaded": 141.1,
+    "unleaded": 141.0,
     "diesel": 160.4
   },
-  "lastUpdated": "2026-03-12T17:00:49.334012+00:00",
+  "lastUpdated": "2026-03-12T17:30:30.495300+00:00",
   "stationCount": 53,
   "stations": [
     {
@@ -30,7 +30,7 @@
       "lng": -3.006356,
       "unleaded": 144.9,
       "diesel": 159.9,
-      "updated": "2026-03-12T16:12:51.090Z",
+      "updated": "2026-03-12T17:24:27.398Z",
       "cached": false,
       "distance": 10.6
     },
@@ -156,7 +156,7 @@
       "lng": -3.081794,
       "unleaded": 151.9,
       "diesel": 174.9,
-      "updated": "2026-03-12T12:37:39.507Z",
+      "updated": "2026-03-12T17:17:30.097Z",
       "cached": false,
       "distance": 2.4
     },
@@ -170,7 +170,7 @@
       "lng": -3.088915,
       "unleaded": 151.9,
       "diesel": 174.9,
-      "updated": "2026-03-12T16:41:49.699Z",
+      "updated": "2026-03-12T17:13:59.109Z",
       "cached": false,
       "distance": 2.6
     },
@@ -224,9 +224,9 @@
       "postcode": "LL13 9SB",
       "lat": 53.061185,
       "lng": -2.953648,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
+      "unleaded": 142.9,
+      "diesel": 171.9,
+      "updated": "2026-03-12T17:24:00.813Z",
       "cached": false,
       "distance": 10.4
     },
@@ -520,7 +520,7 @@
       "lng": -3.042575,
       "unleaded": 141.9,
       "diesel": 161.9,
-      "updated": "2026-03-12T15:35:51.442Z",
+      "updated": "2026-03-12T17:24:27.016Z",
       "cached": false,
       "distance": 6.2
     },
@@ -534,7 +534,7 @@
       "lng": -3.111588,
       "unleaded": 147.9,
       "diesel": 166.9,
-      "updated": "2026-03-12T12:33:15.762Z",
+      "updated": "2026-03-12T17:20:44.194Z",
       "cached": false,
       "distance": 3.9
     },
@@ -702,7 +702,7 @@
       "lng": -2.89441,
       "unleaded": 143.9,
       "diesel": 162.9,
-      "updated": "2026-03-12T13:43:43.802Z",
+      "updated": "2026-03-12T17:23:17.500Z",
       "cached": false,
       "distance": 7.8
     },
