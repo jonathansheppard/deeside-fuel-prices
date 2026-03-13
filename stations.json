@@ -3,7 +3,7 @@
     "unleaded": 141.2,
     "diesel": 160.7
   },
-  "lastUpdated": "2026-03-13T11:30:17.812163+00:00",
+  "lastUpdated": "2026-03-13T12:30:18.163292+00:00",
   "stationCount": 53,
   "stations": [
     {
@@ -30,7 +30,7 @@
       "lng": -3.006356,
       "unleaded": 144.9,
       "diesel": 159.9,
-      "updated": "2026-03-13T07:26:23.171Z",
+      "updated": "2026-03-12T17:24:27.398Z",
       "cached": false,
       "distance": 10.6
     },
@@ -71,8 +71,8 @@
       "lat": 53.2922431,
       "lng": -2.9523846,
       "unleaded": 139.9,
-      "diesel": 159.9,
-      "updated": "2026-03-09T11:58:20.700Z",
+      "diesel": 161.9,
+      "updated": "2026-03-13T11:36:32.857Z",
       "cached": false,
       "distance": 6.8
     },
@@ -86,7 +86,7 @@
       "lng": -2.894566,
       "unleaded": 136.9,
       "diesel": 155.9,
-      "updated": "2026-03-13T07:58:41.598Z",
+      "updated": "2026-03-13T12:25:06.906Z",
       "cached": false,
       "distance": 5.5
     },
@@ -156,7 +156,7 @@
       "lng": -3.081794,
       "unleaded": 151.9,
       "diesel": 174.9,
-      "updated": "2026-03-13T01:04:34.075Z",
+      "updated": "2026-03-13T01:08:26.380Z",
       "cached": false,
       "distance": 2.4
     },
@@ -170,7 +170,7 @@
       "lng": -3.088915,
       "unleaded": 151.9,
       "diesel": 174.9,
-      "updated": "2026-03-12T17:38:29.918Z",
+      "updated": "2026-03-13T10:10:59.949Z",
       "cached": false,
       "distance": 2.6
     },
@@ -282,7 +282,7 @@
       "lng": -3.133838,
       "unleaded": 141.9,
       "diesel": 159.9,
-      "updated": "2026-03-12T20:56:10.900Z",
+      "updated": "2026-03-13T12:26:58.706Z",
       "cached": false,
       "distance": 5.2
     },
@@ -462,7 +462,7 @@
       "postcode": "CH64 8TF",
       "lat": 53.2741984,
       "lng": -3.0014083,
-      "unleaded": 137.9,
+      "unleaded": 141.9,
       "diesel": 145.9,
       "updated": "3/9/2026",
       "cached": true,
@@ -520,7 +520,7 @@
       "lng": -3.042575,
       "unleaded": 141.9,
       "diesel": 161.9,
-      "updated": "2026-03-12T17:35:42.819Z",
+      "updated": "2026-03-12T17:24:47.406Z",
       "cached": false,
       "distance": 6.2
     },
@@ -534,7 +534,7 @@
       "lng": -3.111588,
       "unleaded": 147.9,
       "diesel": 166.9,
-      "updated": "2026-03-12T17:32:58.217Z",
+      "updated": "2026-03-13T01:03:08.478Z",
       "cached": false,
       "distance": 3.9
     },
@@ -702,7 +702,7 @@
       "lng": -2.89441,
       "unleaded": 143.9,
       "diesel": 162.9,
-      "updated": "2026-03-13T09:01:56.505Z",
+      "updated": "2026-03-13T08:59:51.907Z",
       "cached": false,
       "distance": 7.8
     },
