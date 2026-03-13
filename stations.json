@@ -3,8 +3,8 @@
     "unleaded": 141.5,
     "diesel": 161.2
   },
-  "lastUpdated": "2026-03-13T21:30:21.056996+00:00",
-  "stationCount": 53,
+  "lastUpdated": "2026-03-13T22:01:41.045196+00:00",
+  "stationCount": 54,
   "stations": [
     {
       "id": "a6dbf2da92dde055916327b41b3f26aad835a2a04e148e6fb99734b28c8d430a",
@@ -30,7 +30,7 @@
       "lng": -3.006356,
       "unleaded": 144.9,
       "diesel": 159.9,
-      "updated": "2026-03-12T17:24:27.398Z",
+      "updated": "2026-03-13T10:28:25.451Z",
       "cached": false,
       "distance": 10.6
     },
@@ -156,7 +156,7 @@
       "lng": -3.081794,
       "unleaded": 151.9,
       "diesel": 174.9,
-      "updated": "2026-03-12T17:35:25.604Z",
+      "updated": "2026-03-13T08:57:20.818Z",
       "cached": false,
       "distance": 2.4
     },
@@ -170,7 +170,7 @@
       "lng": -3.088915,
       "unleaded": 151.9,
       "diesel": 174.9,
-      "updated": "2026-03-13T14:10:21.754Z",
+      "updated": "2026-03-12T17:34:13.491Z",
       "cached": false,
       "distance": 2.6
     },
@@ -520,7 +520,7 @@
       "lng": -3.042575,
       "unleaded": 141.9,
       "diesel": 162.9,
-      "updated": "2026-03-13T17:01:59.414Z",
+      "updated": "2026-03-13T17:52:43.413Z",
       "cached": false,
       "distance": 6.2
     },
@@ -534,7 +534,7 @@
       "lng": -3.111588,
       "unleaded": 147.9,
       "diesel": 166.9,
-      "updated": "2026-03-12T17:37:15.013Z",
+      "updated": "2026-03-12T17:32:26.213Z",
       "cached": false,
       "distance": 3.9
     },
@@ -693,6 +693,20 @@
       "distance": 6.8
     },
     {
+      "id": "ddb1e16196dbe98801f59b43fbdcc12162c17adafe43c978b6492020bda16dd7",
+      "name": "Caegwrle Filling Station",
+      "brand": "Gulf Caegwrle",
+      "address": "",
+      "postcode": "LL12 9LP",
+      "lat": 53.1117892,
+      "lng": -3.0416579,
+      "unleaded": 136.9,
+      "diesel": 159.9,
+      "updated": "2026-03-13T21:37:29.240Z",
+      "cached": false,
+      "distance": 6.5
+    },
+    {
       "id": "ec10d667058b4b928ed9c26bf1f2829273680479b27ef5f8f78df1b365df90ad",
       "name": "SHELL MERSEY VIEW",
       "brand": "SHELL",
@@ -702,7 +716,7 @@
       "lng": -2.89441,
       "unleaded": 143.9,
       "diesel": 162.9,
-      "updated": "2026-03-13T08:57:42.588Z",
+      "updated": "2026-03-12T17:41:32.696Z",
       "cached": false,
       "distance": 7.8
     },
