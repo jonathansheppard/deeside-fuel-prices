@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
-    "unleaded": 141.0,
+    "unleaded": 141.1,
     "diesel": 160.5
   },
-  "lastUpdated": "2026-03-12T23:30:20.855588+00:00",
+  "lastUpdated": "2026-03-13T00:01:36.676625+00:00",
   "stationCount": 53,
   "stations": [
     {
@@ -30,7 +30,7 @@
       "lng": -3.006356,
       "unleaded": 144.9,
       "diesel": 159.9,
-      "updated": "2026-03-12T17:36:22.805Z",
+      "updated": "2026-03-12T17:24:06.402Z",
       "cached": false,
       "distance": 10.6
     },
@@ -86,7 +86,7 @@
       "lng": -2.894566,
       "unleaded": 136.9,
       "diesel": 155.9,
-      "updated": "2026-03-12T19:58:27.672Z",
+      "updated": "2026-03-12T23:58:29.376Z",
       "cached": false,
       "distance": 5.5
     },
@@ -156,7 +156,7 @@
       "lng": -3.081794,
       "unleaded": 151.9,
       "diesel": 174.9,
-      "updated": "2026-03-12T17:35:11.103Z",
+      "updated": "2026-03-12T17:34:55.300Z",
       "cached": false,
       "distance": 2.4
     },
@@ -520,7 +520,7 @@
       "lng": -3.042575,
       "unleaded": 141.9,
       "diesel": 161.9,
-      "updated": "2026-03-12T17:24:47.406Z",
+      "updated": "2026-03-12T17:24:27.016Z",
       "cached": false,
       "distance": 6.2
     },
@@ -534,7 +534,7 @@
       "lng": -3.111588,
       "unleaded": 147.9,
       "diesel": 166.9,
-      "updated": "2026-03-12T17:37:15.013Z",
+      "updated": "2026-03-12T17:31:33.107Z",
       "cached": false,
       "distance": 3.9
     },
@@ -702,7 +702,7 @@
       "lng": -2.89441,
       "unleaded": 143.9,
       "diesel": 162.9,
-      "updated": "2026-03-12T17:31:29.197Z",
+      "updated": "2026-03-12T13:07:18.006Z",
       "cached": false,
       "distance": 7.8
     },
