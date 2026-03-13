@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
-    "unleaded": 141.5,
+    "unleaded": 141.4,
     "diesel": 161.2
   },
-  "lastUpdated": "2026-03-13T22:01:41.045196+00:00",
+  "lastUpdated": "2026-03-13T22:30:29.708535+00:00",
   "stationCount": 54,
   "stations": [
     {
@@ -30,7 +30,7 @@
       "lng": -3.006356,
       "unleaded": 144.9,
       "diesel": 159.9,
-      "updated": "2026-03-13T10:28:25.451Z",
+      "updated": "2026-03-12T17:35:17.018Z",
       "cached": false,
       "distance": 10.6
     },
@@ -98,9 +98,9 @@
       "postcode": "CH65 9HN",
       "lat": 53.26233,
       "lng": -2.88042,
-      "unleaded": 137.9,
-      "diesel": 155.9,
-      "updated": "2026-03-11T21:50:27.778Z",
+      "unleaded": 138.9,
+      "diesel": 157.9,
+      "updated": "2026-03-13T22:09:53.959Z",
       "cached": false,
       "distance": 7.2
     },
@@ -156,7 +156,7 @@
       "lng": -3.081794,
       "unleaded": 151.9,
       "diesel": 174.9,
-      "updated": "2026-03-13T08:57:20.818Z",
+      "updated": "2026-03-12T17:35:25.604Z",
       "cached": false,
       "distance": 2.4
     },
@@ -170,7 +170,7 @@
       "lng": -3.088915,
       "unleaded": 151.9,
       "diesel": 174.9,
-      "updated": "2026-03-12T17:34:13.491Z",
+      "updated": "2026-03-12T17:38:13.218Z",
       "cached": false,
       "distance": 2.6
     },
@@ -520,7 +520,7 @@
       "lng": -3.042575,
       "unleaded": 141.9,
       "diesel": 162.9,
-      "updated": "2026-03-13T17:52:43.413Z",
+      "updated": "2026-03-13T16:57:40.678Z",
       "cached": false,
       "distance": 6.2
     },
@@ -534,7 +534,7 @@
       "lng": -3.111588,
       "unleaded": 147.9,
       "diesel": 166.9,
-      "updated": "2026-03-12T17:32:26.213Z",
+      "updated": "2026-03-12T17:37:29.622Z",
       "cached": false,
       "distance": 3.9
     },
@@ -716,7 +716,7 @@
       "lng": -2.89441,
       "unleaded": 143.9,
       "diesel": 162.9,
-      "updated": "2026-03-12T17:41:32.696Z",
+      "updated": "2026-03-13T01:10:49.079Z",
       "cached": false,
       "distance": 7.8
     },
