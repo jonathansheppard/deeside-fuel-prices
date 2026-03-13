@@ -3,7 +3,7 @@
     "unleaded": 141.0,
     "diesel": 160.5
   },
-  "lastUpdated": "2026-03-13T04:30:25.552886+00:00",
+  "lastUpdated": "2026-03-13T05:00:25.704294+00:00",
   "stationCount": 53,
   "stations": [
     {
@@ -30,7 +30,7 @@
       "lng": -3.006356,
       "unleaded": 144.9,
       "diesel": 159.9,
-      "updated": "2026-03-12T17:24:06.402Z",
+      "updated": "2026-03-12T17:36:39.322Z",
       "cached": false,
       "distance": 10.6
     },
@@ -156,7 +156,7 @@
       "lng": -3.081794,
       "unleaded": 151.9,
       "diesel": 174.9,
-      "updated": "2026-03-12T17:26:51.903Z",
+      "updated": "2026-03-13T01:04:02.075Z",
       "cached": false,
       "distance": 2.4
     },
@@ -534,7 +534,7 @@
       "lng": -3.111588,
       "unleaded": 147.9,
       "diesel": 166.9,
-      "updated": "2026-03-12T17:37:15.013Z",
+      "updated": "2026-03-12T17:32:26.213Z",
       "cached": false,
       "distance": 3.9
     },
@@ -702,7 +702,7 @@
       "lng": -2.89441,
       "unleaded": 143.9,
       "diesel": 162.9,
-      "updated": "2026-03-12T17:31:06.191Z",
+      "updated": "2026-03-12T17:31:29.197Z",
       "cached": false,
       "distance": 7.8
     },
