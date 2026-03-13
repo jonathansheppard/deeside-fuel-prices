@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
-    "unleaded": 141.4,
+    "unleaded": 141.3,
     "diesel": 160.9
   },
-  "lastUpdated": "2026-03-13T14:31:51.156979+00:00",
+  "lastUpdated": "2026-03-13T15:00:23.274249+00:00",
   "stationCount": 53,
   "stations": [
     {
@@ -30,7 +30,7 @@
       "lng": -3.006356,
       "unleaded": 144.9,
       "diesel": 159.9,
-      "updated": "2026-03-13T14:12:07.571Z",
+      "updated": "2026-03-12T17:24:06.402Z",
       "cached": false,
       "distance": 10.6
     },
@@ -86,7 +86,7 @@
       "lng": -2.894566,
       "unleaded": 136.9,
       "diesel": 155.9,
-      "updated": "2026-03-13T12:25:06.906Z",
+      "updated": "2026-03-13T14:37:24.892Z",
       "cached": false,
       "distance": 5.5
     },
@@ -156,7 +156,7 @@
       "lng": -3.081794,
       "unleaded": 151.9,
       "diesel": 174.9,
-      "updated": "2026-03-12T17:24:24.923Z",
+      "updated": "2026-03-12T17:26:51.903Z",
       "cached": false,
       "distance": 2.4
     },
@@ -170,7 +170,7 @@
       "lng": -3.088915,
       "unleaded": 151.9,
       "diesel": 174.9,
-      "updated": "2026-03-13T01:03:50.763Z",
+      "updated": "2026-03-12T17:37:49.523Z",
       "cached": false,
       "distance": 2.6
     },
@@ -520,7 +520,7 @@
       "lng": -3.042575,
       "unleaded": 141.9,
       "diesel": 161.9,
-      "updated": "2026-03-12T17:24:27.016Z",
+      "updated": "2026-03-12T17:36:49.306Z",
       "cached": false,
       "distance": 6.2
     },
@@ -534,7 +534,7 @@
       "lng": -3.111588,
       "unleaded": 147.9,
       "diesel": 166.9,
-      "updated": "2026-03-13T14:09:37.783Z",
+      "updated": "2026-03-12T17:31:33.107Z",
       "cached": false,
       "distance": 3.9
     },
@@ -702,7 +702,7 @@
       "lng": -2.89441,
       "unleaded": 143.9,
       "diesel": 162.9,
-      "updated": "2026-03-13T01:07:00.786Z",
+      "updated": "2026-03-13T01:06:16.873Z",
       "cached": false,
       "distance": 7.8
     },
@@ -743,8 +743,8 @@
       "lat": 53.1685643,
       "lng": -3.0885872,
       "unleaded": 144.9,
-      "diesel": 161.9,
-      "updated": "2026-03-10T12:58:49.505Z",
+      "diesel": 159.9,
+      "updated": "2026-03-13T14:36:37.725Z",
       "cached": false,
       "distance": 3.6
     }
