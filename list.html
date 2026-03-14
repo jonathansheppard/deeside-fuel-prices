@@ -539,7 +539,7 @@ function formatUpdated(s) {
   const days = Math.floor(hrs / 24);
   const dateStr = d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
   if (hrs < 24) return { text: dateStr, cls: 'fresh' };
-  if (hrs < STALE_HOURS) return { text: days <= 1 ? 'Yesterday' : days + ' days ago', cls: 'aging' };
+  if (hrs < STALE_HOURS) return { text: dateStr, cls: 'aging' };
   return { text: dateStr, cls: 'stale' };
 }
 
