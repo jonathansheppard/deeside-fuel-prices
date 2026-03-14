@@ -550,7 +550,7 @@ const DATA_URL = 'https://deeside-fuel-prices.netlify.app/stations.json';
 const MAP_URL = 'https://deeside-fuel-prices.netlify.app/';
 const PRICE_FLOOR = 115;
 const STALE_HOURS = 120;
-const LIST_RADIUS = 15;
+const LIST_RADIUS = 12;
 const TANK_SIZE = 55;
 
 let stations = [];
@@ -754,7 +754,7 @@ async function init() {
   try {
     const res = await fetch(DATA_URL, { cache: 'no-cache' });
     const data = await res.json();
-    stations = data.stations.filter(s => s.distance <= LIST_RADIUS);
+    stations = data.stations.filter(s => s.distance > 0 && s.distance <= LIST_RADIUS);
     nationalAvg = data.nationalAvg;
     lastUpdated = data.lastUpdated;
     renderSummary();
