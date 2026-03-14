@@ -520,6 +520,7 @@ h1 {
   <div class="toggle-row">
     <button class="toggle-btn active" id="btnUnleaded" onclick="setFuel('unleaded')">Unleaded</button>
     <button class="toggle-btn" id="btnDiesel" onclick="setFuel('diesel')">Diesel</button>
+    <button class="toggle-btn" id="btnFlintshire" onclick="setFlintshire()" style="border-color:rgba(99,179,237,.4);color:#93c5fd">🏴󠁧󠁢󠁷󠁬󠁳󠁿 Flintshire</button>
     <span class="station-count" id="stationCount"></span>
     <a class="map-link" href="https://deeside-fuel-prices.netlify.app/" target="_blank">View map →</a>
   </div>
@@ -557,6 +558,16 @@ let stations = [];
 let nationalAvg = {};
 let currentFuel = 'unleaded';
 let lastUpdated = '';
+let flintshireOnly = false;
+
+const FLINTSHIRE_PREFIXES = ['CH5', 'CH6', 'CH7', 'CH8'];
+function isFlintshire(s) {
+  const pc = (s.postcode || '').trim().toUpperCase();
+  return FLINTSHIRE_PREFIXES.some(p => pc.startsWith(p));
+}
+function getActiveStations() {
+  return flintshireOnly ? stations.filter(isFlintshire) : stations;
+}
 
 function isFresh(s) {
   if (!s.updated) return false;
@@ -605,11 +616,12 @@ function renderSummary() {
   const avg_u = nationalAvg.unleaded;
   const avg_d = nationalAvg.diesel;
 
-  const freshU = stations.filter(s => s.unleaded && s.unleaded >= PRICE_FLOOR && isFresh(s) && !isCostco(s)).sort((a,b) => a.unleaded - b.unleaded);
-  const freshD = stations.filter(s => s.diesel && s.diesel >= PRICE_FLOOR && isFresh(s) && !isCostco(s)).sort((a,b) => a.diesel - b.diesel);
+  const activeStations = getActiveStations();
+  const freshU = activeStations.filter(s => s.unleaded && s.unleaded >= PRICE_FLOOR && isFresh(s) && !isCostco(s)).sort((a,b) => a.unleaded - b.unleaded);
+  const freshD = activeStations.filter(s => s.diesel && s.diesel >= PRICE_FLOOR && isFresh(s) && !isCostco(s)).sort((a,b) => a.diesel - b.diesel);
 
-  const costcoU = stations.filter(s => s.unleaded && s.unleaded >= PRICE_FLOOR && isFresh(s) && isCostco(s)).sort((a,b) => a.unleaded - b.unleaded);
-  const costcoD = stations.filter(s => s.diesel && s.diesel >= PRICE_FLOOR && isFresh(s) && isCostco(s)).sort((a,b) => a.diesel - b.diesel);
+  const costcoU = activeStations.filter(s => s.unleaded && s.unleaded >= PRICE_FLOOR && isFresh(s) && isCostco(s)).sort((a,b) => a.unleaded - b.unleaded);
+  const costcoD = activeStations.filter(s => s.diesel && s.diesel >= PRICE_FLOOR && isFresh(s) && isCostco(s)).sort((a,b) => a.diesel - b.diesel);
 
   if (freshU.length) {
     const cheapU = freshU[0];
@@ -666,7 +678,7 @@ function renderSummary() {
 
 function renderTable() {
   const avg = nationalAvg[currentFuel];
-  const sorted = [...stations].sort((a, b) => {
+  const sorted = [...getActiveStations()].sort((a, b) => {
     const pa = getPrice(a), pb = getPrice(b);
     const aUnavail = !pa || !isFresh(a);
     const bUnavail = !pb || !isFresh(b);
@@ -742,6 +754,17 @@ function renderTable() {
   `;
 }
 
+function setFlintshire() {
+  flintshireOnly = !flintshireOnly;
+  const btn = document.getElementById('btnFlintshire');
+  btn.className = 'toggle-btn' + (flintshireOnly ? ' active' : '');
+  btn.style.borderColor = flintshireOnly ? '' : 'rgba(99,179,237,.4)';
+  btn.style.color = flintshireOnly ? '' : '#93c5fd';
+  renderSummary();
+  renderTable();
+  renderChart();
+}
+
 function setFuel(fuel) {
   currentFuel = fuel;
   document.getElementById('btnUnleaded').className = 'toggle-btn' + (fuel === 'unleaded' ? ' active' : '');
@@ -777,7 +800,7 @@ function renderChart() {
   const fuel = currentFuel;
   const avg = nationalAvg[fuel];
 
-  const allSorted = stations
+  const allSorted = getActiveStations()
     .filter(s => {
       const p = fuel === 'unleaded' ? s.unleaded : s.diesel;
       if (!p || p < PRICE_FLOOR) return false;
