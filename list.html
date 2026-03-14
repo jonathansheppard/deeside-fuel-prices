@@ -663,7 +663,7 @@ function renderTable() {
     const unavail = isNoData || !fresh;
     const upd = formatUpdated(s);
     const costco = isCostco(s);
-    const isCheapest = !costco && cheapest && s.id === cheapest.id;
+    const isCheapest = !costco && cheapest && (s.postcode === cheapest.postcode || s.name === cheapest.name) && getPrice(s) === getPrice(cheapest);
     const mapUrl = `https://www.google.com/maps/search/${encodeURIComponent(s.name + ', ' + s.address)}`;
 
     const priceClass = s.note || !p ? 'none' : (!fresh ? 'stale' : (costco ? 'costco' : getPriceClass(p, avg)));
