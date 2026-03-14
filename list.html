@@ -520,7 +520,7 @@ h1 {
   <div class="toggle-row">
     <button class="toggle-btn active" id="btnUnleaded" onclick="setFuel('unleaded')">Unleaded</button>
     <button class="toggle-btn" id="btnDiesel" onclick="setFuel('diesel')">Diesel</button>
-    <button class="toggle-btn" id="btnFlintshire" onclick="setFlintshire()" style="border-color:rgba(99,179,237,.4);color:#93c5fd">🏴󠁧󠁢󠁷󠁬󠁳󠁿 Flintshire</button>
+    <button class="toggle-btn active" id="btnFlintshire" onclick="setFlintshire()" style="border-color:rgba(99,179,237,.4);color:#93c5fd">🏴󠁧󠁢󠁷󠁬󠁳󠁿 Flintshire</button>
     <span class="station-count" id="stationCount"></span>
     <a class="map-link" href="https://deeside-fuel-prices.netlify.app/" target="_blank">View map →</a>
   </div>
@@ -558,7 +558,7 @@ let stations = [];
 let nationalAvg = {};
 let currentFuel = 'unleaded';
 let lastUpdated = '';
-let flintshireOnly = false;
+let flintshireOnly = true;
 
 const FLINTSHIRE_PREFIXES = ['CH5', 'CH6', 'CH7', 'CH8'];
 function isFlintshire(s) {
