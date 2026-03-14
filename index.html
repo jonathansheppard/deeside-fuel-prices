@@ -917,7 +917,7 @@ function getSortedStations() {
 }
 
 function getStats() {
-  const CORE_RADIUS = 8;
+  const CORE_RADIUS = 9;
   const core     = stations.filter(s => s.distance <= CORE_RADIUS && !s.is_motorway && !isCostco(s));
   const nonStale = core.filter(s => getStaleState(s) !== 'stale');
   const pool     = nonStale.length > 0 ? nonStale : core;
@@ -965,7 +965,7 @@ function getStaleState(station) {
 function render() {
   if (!stations.length) return;
 
-  const CORE_RADIUS = 8;
+  const CORE_RADIUS = 9;
   const extendedStations = stations.filter(s => s.distance > CORE_RADIUS);
   const sorted = getSortedStations().filter(s => s.distance <= CORE_RADIUS && (getPrice(s) > 0 || s.note));
   const stats = getStats();
