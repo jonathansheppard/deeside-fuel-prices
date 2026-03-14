@@ -509,7 +509,7 @@ let currentFuel = 'unleaded';
 let lastUpdated = '';
 let flintshireOnly = true;
 
-const FLINTSHIRE_PREFIXES = ['CH5', 'CH6', 'CH7', 'CH8'];
+const FLINTSHIRE_PREFIXES = ['CH4', 'CH5', 'CH6', 'CH7', 'CH8'];
 function isFlintshire(s) {
   const pc = (s.postcode || '').trim().toUpperCase();
   return FLINTSHIRE_PREFIXES.some(p => pc.startsWith(p + ' '));
