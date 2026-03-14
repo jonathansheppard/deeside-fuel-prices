@@ -666,7 +666,7 @@ function renderTable() {
     const isCheapest = !costco && cheapest && s.id === cheapest.id;
     const mapUrl = `https://www.google.com/maps/search/${encodeURIComponent(s.name + ', ' + s.address)}`;
 
-    const priceClass = unavail ? 'none' : (costco ? 'costco' : getPriceClass(p, avg));
+    const priceClass = s.note || !p ? 'none' : (!fresh ? 'stale' : (costco ? 'costco' : getPriceClass(p, avg)));
     const delta = p ? (p - avg) : 0;
     const deltaStr = !unavail && p ? (delta < 0 ? delta.toFixed(1) + 'p' : '+' + delta.toFixed(1) + 'p') : '';
     const deltaClass = unavail ? 'none' : (costco ? 'costco' : getPriceClass(p, avg));
@@ -679,7 +679,7 @@ function renderTable() {
       </td>
       <td class="brand-cell">${s.brand || '—'}${costco ? ' <span class="tag tag-members">Members</span>' : ''}${isCheapest ? ' <span class="tag tag-cheapest">★ Cheapest</span>' : ''}</td>
       <td class="price-cell ${priceClass} right">
-        ${unavail ? (s.note ? 'Not reporting' : 'Unavailable') : p.toFixed(1)}
+        ${s.note ? 'Not reporting' : (!p ? 'Unavailable' : (fresh ? p.toFixed(1) : p.toFixed(1) + '<span style="font-size:10px;color:var(--muted);font-weight:400;margin-left:4px">on ' + new Date(s.updated).toLocaleDateString('en-GB',{day:'numeric',month:'short'}) + '</span>'))}
       </td>
       <td class="price-cell ${deltaClass} right" style="font-size:12px">
         ${unavail ? '' : deltaStr}
