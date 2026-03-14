@@ -37,8 +37,9 @@ SHEET_CSV_URL = f"https://docs.google.com/spreadsheets/d/{SHEET_ID}/export?forma
 OUTPUT_FILE   = os.path.expanduser("~/deeside-fuel-prices/stations.json")
 
 # ── Geographic filter ─────────────────────────────────────────────────────────
-LAT_MIN, LAT_MAX = 53.05, 53.40
-LNG_MIN, LNG_MAX = -3.35, -2.80
+# Widened west to -3.45 to capture Prestatyn / Rhyl direction
+LAT_MIN, LAT_MAX = 53.05, 53.45
+LNG_MIN, LNG_MAX = -3.45, -2.80
 
 # ── Centre point for distance calculation (Queensferry roundabout) ────────────
 CENTRE_LAT = 53.1900
@@ -46,6 +47,14 @@ CENTRE_LNG = -3.0333
 
 # ── Price floor ───────────────────────────────────────────────────────────────
 PRICE_FLOOR = 115.0
+
+# ── Excluded stations (by postcode) ──────────────────────────────────────────
+# Add postcodes here to permanently suppress a station from the output.
+# Dyffryn Service Station (LL15 1PE) — Ruthin area, outside editorial scope
+EXCLUDED_POSTCODES = {
+    "LL15 1PE",   # Dyffryn Service Station, Ruthin
+    "LL12 8DY",   # Smithy View Acton - unreliable cached prices
+}
 
 
 def log(msg):
@@ -93,8 +102,6 @@ def fetch_all_batches(url, token, extra_params=None):
             break
         all_records.extend(data)
         log(f"  Batch {batch}: {len(data)} items (total: {len(all_records)})")
-        if len(data) < 500:
-            break
         batch += 1
     log(f"Total records fetched: {len(all_records)}")
     return all_records
@@ -105,6 +112,10 @@ def in_area(lat, lng):
         return LAT_MIN <= float(lat) <= LAT_MAX and LNG_MIN <= float(lng) <= LNG_MAX
     except (TypeError, ValueError):
         return False
+
+
+def is_excluded(postcode):
+    return (postcode or "").strip().upper() in EXCLUDED_POSTCODES
 
 
 def valid_price(p):
@@ -142,6 +153,9 @@ def load_retailer_feeds():
 
                 postcode = (s.get("postcode") or "").strip().upper()
                 if not postcode:
+                    continue
+
+                if is_excluded(postcode):
                     continue
 
                 prices = s.get("prices", {})
@@ -205,19 +219,19 @@ def load_sheets_fallback():
                     d2 = datetime.strptime(stations[name]["date"], "%m/%d/%Y")
                     if d1 > d2:
                         stations[name] = row
-                except Exception:
-                    if date_str > stations[name]["date"]:
-                        stations[name] = row
+                except ValueError:
+                    pass
         log(f"Sheets fallback: {len(stations)} stations loaded")
         return stations
     except Exception as e:
-        log(f"Warning: Could not load Sheets fallback — {e}")
+        log(f"Sheets fallback failed: {e}")
         return {}
 
 
 def parse_sheets_date(date_str):
     try:
-        return datetime.strptime(date_str, "%m/%d/%Y").strftime("%Y-%m-%dT00:00:00.000Z")
+        dt = datetime.strptime(date_str, "%m/%d/%Y")
+        return dt.replace(tzinfo=timezone.utc).isoformat()
     except Exception:
         return date_str
 
@@ -245,6 +259,8 @@ def main():
         lat_f = float(lat)
         lng_f = float(lng)
         postcode = (loc.get("postcode") or "").strip().upper()
+        if is_excluded(postcode):
+            continue
         node_id = s["node_id"]
         local_stations[node_id] = {
             "node_id":        node_id,
