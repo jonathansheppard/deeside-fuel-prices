@@ -958,7 +958,7 @@ function getStaleState(station) {
   if (isNaN(d.getTime())) return 'stale';
   const hours = (Date.now() - d.getTime()) / 3600000;
   if (hours < 24) return 'fresh';
-  if (hours < 120) return 'aging';
+  if (hours < 96) return 'aging';
   return 'stale';
 }
 
