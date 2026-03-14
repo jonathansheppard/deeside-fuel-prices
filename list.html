@@ -807,11 +807,8 @@ function renderChart() {
       if (!s.updated) return false;
       return (Date.now() - new Date(s.updated).getTime()) / 3600000 < STALE_HOURS;
     })
-    .map(s => {
-      let n = (s.name || '');
-      n = n.replace(/^Esso - /, 'Esso ').replace(/^Esso – /, 'Esso ').replace(/ Service Station$/, '').replace(/ Superstore.*$/, '').replace(/ Extra.*$/, '').replace(/ Petrol.*$/, '');
-      return {
-      name: n.slice(0, 22),
+    .map(s => ({
+      name: (s.name || '').slice(0, 24),
       price: fuel === 'unleaded' ? s.unleaded : s.diesel,
       costco: (s.brand || '').includes('COSTCO')
     }))
