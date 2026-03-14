@@ -520,7 +520,7 @@ h1 {
   <div class="toggle-row">
     <button class="toggle-btn active" id="btnUnleaded" onclick="setFuel('unleaded')">Unleaded</button>
     <button class="toggle-btn" id="btnDiesel" onclick="setFuel('diesel')">Diesel</button>
-    <button class="toggle-btn active" id="btnFlintshire" onclick="setFlintshire()" style="border-color:rgba(99,179,237,.4);color:#93c5fd">🏴󠁧󠁢󠁷󠁬󠁳󠁿 Flintshire</button>
+    <button class="toggle-btn" id="btnFlintshire" onclick="setFlintshire()" style="background:#1d4ed8;border-color:#3b82f6;color:#fff">🏴󠁧󠁢󠁷󠁬󠁳󠁥 Flintshire</button>
     <span class="station-count" id="stationCount"></span>
     <a class="map-link" href="https://deeside-fuel-prices.netlify.app/" target="_blank">View map →</a>
   </div>
@@ -757,9 +757,9 @@ function renderTable() {
 function setFlintshire() {
   flintshireOnly = !flintshireOnly;
   const btn = document.getElementById('btnFlintshire');
-  btn.className = 'toggle-btn' + (flintshireOnly ? ' active' : '');
-  btn.style.borderColor = flintshireOnly ? '' : 'rgba(99,179,237,.4)';
-  btn.style.color = flintshireOnly ? '' : '#93c5fd';
+  btn.style.background = flintshireOnly ? '#1d4ed8' : 'transparent';
+  btn.style.borderColor = flintshireOnly ? '#3b82f6' : 'rgba(99,179,237,.4)';
+  btn.style.color = flintshireOnly ? '#fff' : '#93c5fd';
   renderSummary();
   renderTable();
   renderChart();
