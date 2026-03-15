@@ -1086,7 +1086,9 @@ function renderChart() {
     const byDate = {};
     rows.forEach(r => {
       const brand = (r.brand || '').toUpperCase();
+      const name = (r.station_name || r.station_nam || '').toUpperCase();
       if (brand.includes('COSTCO')) return;
+      if (name.includes('MWSA') || name.includes('MOTORWAY') || name.includes('SERVICES')) return;
       const date = r.date;
       if (!date) return;
       const u = parseFloat(r.unleaded);
