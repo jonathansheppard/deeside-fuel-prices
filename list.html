@@ -1086,16 +1086,14 @@ function renderChart() {
     const byDate = {};
     rows.forEach(r => {
       const brand = (r.brand || '').toUpperCase();
-      const name = (r.station_name || r.station_nam || '').toUpperCase();
       if (brand.includes('COSTCO')) return;
-      if (name.includes('MWSA') || name.includes('MOTORWAY') || name.includes('SERVICES')) return;
       const date = r.date;
       if (!date) return;
       const u = parseFloat(r.unleaded);
       const d = parseFloat(r.diesel);
       if (!byDate[date]) byDate[date] = { u: [], d: [] };
-      if (!isNaN(u) && u >= PRICE_FLOOR) byDate[date].u.push(u);
-      if (!isNaN(d) && d >= PRICE_FLOOR) byDate[date].d.push(d);
+      if (!isNaN(u) && u >= PRICE_FLOOR && u < 155) byDate[date].u.push(u);
+      if (!isNaN(d) && d >= PRICE_FLOOR && d < 160) byDate[date].d.push(d);
     });
     return Object.entries(byDate)
       .sort(([a],[b]) => new Date(a) - new Date(b))
