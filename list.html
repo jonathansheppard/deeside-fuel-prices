@@ -161,6 +161,140 @@ h1 {
   border: 1px solid rgba(52,211,153,.15);
 }
 
+/* ── TREND PANEL ── */
+.trend-panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 24px;
+  display: none;
+}
+
+.trend-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.trend-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.trend-title {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.trend-daterange {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: rgba(107,114,128,.6);
+}
+
+.trend-toggles {
+  display: flex;
+  gap: 6px;
+}
+
+.trend-btn {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 14px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  transition: all .15s;
+}
+
+.trend-btn.active-u {
+  background: rgba(52,211,153,.15);
+  color: var(--green);
+  border-color: rgba(52,211,153,.3);
+}
+
+.trend-btn.active-d {
+  background: rgba(251,191,36,.12);
+  color: var(--amber);
+  border-color: rgba(251,191,36,.25);
+}
+
+.trend-legend {
+  display: flex;
+  gap: 16px;
+  font-size: 10px;
+  color: var(--muted);
+  font-family: 'JetBrains Mono', monospace;
+  margin-bottom: 12px;
+  align-items: center;
+}
+
+.trend-legend-line {
+  display: inline-block;
+  width: 18px;
+  height: 2px;
+  border-radius: 1px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.trend-legend-dash {
+  display: inline-block;
+  width: 18px;
+  height: 0;
+  border-top: 2px dashed rgba(107,114,128,.5);
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.trend-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.trend-stat {
+  background: rgba(255,255,255,.03);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px 14px;
+}
+
+.trend-stat-label {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.trend-stat-value {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.trend-stat-sub {
+  font-size: 10px;
+  color: var(--muted);
+  margin-top: 3px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
 /* ── TOGGLE ── */
 .toggle-row {
   display: flex;
@@ -434,6 +568,8 @@ h1 {
   .app-header { padding: 10px 16px; }
   .ad-text { font-size: 16px; }
   .header-ad { gap: 10px; }
+  .trend-stats { grid-template-columns: repeat(3, minmax(0,1fr)); gap: 6px; }
+  .trend-stat-value { font-size: 1.1rem; }
 }
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
@@ -469,7 +605,31 @@ h1 {
     <div class="summary-card diesel" id="summaryDiesel"></div>
   </div>
 
-  <!-- Jump to prices signpost -->
+  <!-- ── PRICE TREND PANEL ── -->
+  <div class="trend-panel" id="trendPanel">
+    <div class="trend-header">
+      <div class="trend-meta">
+        <div class="trend-title">Average price · Flintshire stations · p/litre</div>
+        <div class="trend-daterange" id="trendDaterange"></div>
+      </div>
+      <div class="trend-toggles">
+        <button class="trend-btn active-u" id="trendBtnU" onclick="setTrendFuel('unleaded')">Unleaded</button>
+        <button class="trend-btn" id="trendBtnD" onclick="setTrendFuel('diesel')">Diesel</button>
+      </div>
+    </div>
+
+    <div class="trend-legend">
+      <span><span class="trend-legend-line" id="trendLegLine"></span><span id="trendLegLabel">Unleaded</span></span>
+      <span><span class="trend-legend-dash"></span>UK avg</span>
+      <span style="font-size:9px;color:rgba(107,114,128,.5);margin-left:4px">Costco excluded</span>
+    </div>
+
+    <div style="position:relative;height:190px;">
+      <canvas id="trendChart"></canvas>
+    </div>
+
+    <div class="trend-stats" id="trendStats"></div>
+  </div>
 
   <!-- 5 Cheapest vs 5 Most Expensive bar chart -->
   <div class="chart-panel" id="chartPanel">
@@ -498,6 +658,7 @@ h1 {
 <script>
 const DATA_URL = 'https://deeside-fuel-prices.netlify.app/stations.json';
 const MAP_URL = 'https://deeside-fuel-prices.netlify.app/';
+const SHEET_CSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vT3dnZjD5yNBcUicXNAE2dmEjHuhIUO83j3n1OMH6qT43dFXj6lZfXLCq2qjwNwwvbLv5ShC8hAV4Bi/pub?gid=1435371472&single=true&output=csv';
 const PRICE_FLOOR = 115;
 const STALE_HOURS = 96;
 const LIST_RADIUS = 12;
@@ -736,9 +897,10 @@ async function init() {
     document.getElementById('tableWrap').innerHTML = 
       '<div class="loading">Unable to load fuel prices. <a href="' + MAP_URL + '" style="color:var(--green)">Try the map →</a></div>';
   }
+  loadTrend();
 }
 
-// ── CHART ──
+// ── BAR CHART ──
 let chartInstance = null;
 
 function renderChart() {
@@ -781,7 +943,6 @@ function renderChart() {
   const prices = chartStations.map(s => s.price);
 
   const barColors = chartStations.map(s => {
-
     if (s.costco) return 'rgba(96,165,250,0.7)';
     const delta = s.price - avg;
     if (delta < -1.0) return 'rgba(52,211,153,0.7)';
@@ -790,7 +951,6 @@ function renderChart() {
   });
 
   const borderColors = chartStations.map(s => {
-
     if (s.costco) return '#60a5fa';
     const delta = s.price - avg;
     if (delta < -1.0) return '#34d399';
@@ -904,6 +1064,192 @@ function renderChart() {
     }
   });
 }
+
+// ── TREND CHART ──
+(function() {
+  let trendFuel = 'unleaded';
+  let trendChart = null;
+  let trendHistory = [];
+
+  function parseCSV(text) {
+    const lines = text.trim().split('\n');
+    const headers = lines[0].split(',').map(h => h.replace(/"/g,'').trim().toLowerCase());
+    return lines.slice(1).map(line => {
+      const vals = line.match(/(".*?"|[^,]+)/g) || [];
+      const row = {};
+      headers.forEach((h, i) => row[h] = (vals[i] || '').replace(/"/g,'').trim());
+      return row;
+    });
+  }
+
+  function buildHistory(rows) {
+    const byDate = {};
+    rows.forEach(r => {
+      const brand = (r.brand || '').toUpperCase();
+      if (brand.includes('COSTCO')) return;
+      const date = r.date;
+      if (!date) return;
+      const u = parseFloat(r.unleaded);
+      const d = parseFloat(r.diesel);
+      if (!byDate[date]) byDate[date] = { u: [], d: [] };
+      if (!isNaN(u) && u >= PRICE_FLOOR) byDate[date].u.push(u);
+      if (!isNaN(d) && d >= PRICE_FLOOR) byDate[date].d.push(d);
+    });
+    return Object.entries(byDate)
+      .sort(([a],[b]) => new Date(a) - new Date(b))
+      .slice(-30)
+      .map(([date, v]) => ({
+        date,
+        unleaded: v.u.length ? +(v.u.reduce((a,b) => a+b, 0) / v.u.length).toFixed(1) : null,
+        diesel:   v.d.length ? +(v.d.reduce((a,b) => a+b, 0) / v.d.length).toFixed(1) : null,
+      }));
+  }
+
+  function fmtDate(d) {
+    return new Date(d).toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
+  }
+
+  function renderTrend() {
+    const vals   = trendHistory.map(d => d[trendFuel]);
+    const labels = trendHistory.map(d => fmtDate(d.date));
+    const ukAvg  = nationalAvg[trendFuel] || (trendFuel === 'unleaded' ? 142.8 : 151.4);
+    const lineCol = trendFuel === 'unleaded' ? '#34d399' : '#fbbf24';
+
+    // Buttons
+    document.getElementById('trendBtnU').className = 'trend-btn' + (trendFuel === 'unleaded' ? ' active-u' : '');
+    document.getElementById('trendBtnD').className = 'trend-btn' + (trendFuel === 'diesel' ? ' active-d' : '');
+
+    // Legend
+    document.getElementById('trendLegLine').style.background = lineCol;
+    document.getElementById('trendLegLabel').textContent = trendFuel === 'unleaded' ? 'Unleaded' : 'Diesel';
+
+    // Date range
+    if (labels.length >= 2) {
+      document.getElementById('trendDaterange').textContent = labels[0] + ' – ' + labels[labels.length - 1];
+    }
+
+    // Stats
+    const valid  = vals.filter(v => v !== null);
+    if (!valid.length) return;
+    const low    = Math.min(...valid);
+    const high   = Math.max(...valid);
+    const lowI   = vals.indexOf(low);
+    const highI  = vals.indexOf(high);
+    const change = +(vals[vals.length - 1] - vals[0]).toFixed(1);
+    const changeCol   = change > 0 ? '#f87171' : change < 0 ? '#34d399' : '#6b7280';
+    const changeArrow = change > 0 ? '↑ rising' : change < 0 ? '↓ falling' : '→ stable';
+
+    document.getElementById('trendStats').innerHTML = `
+      <div class="trend-stat">
+        <div class="trend-stat-label">Week low</div>
+        <div class="trend-stat-value" style="color:#34d399">${low.toFixed(1)}p</div>
+        <div class="trend-stat-sub">${labels[lowI]}</div>
+      </div>
+      <div class="trend-stat">
+        <div class="trend-stat-label">Week high</div>
+        <div class="trend-stat-value" style="color:#f87171">${high.toFixed(1)}p</div>
+        <div class="trend-stat-sub">${labels[highI]}</div>
+      </div>
+      <div class="trend-stat">
+        <div class="trend-stat-label">7-day change</div>
+        <div class="trend-stat-value" style="color:${changeCol}">${change >= 0 ? '+' : ''}${change}p</div>
+        <div class="trend-stat-sub">${changeArrow}</div>
+      </div>`;
+
+    // UK avg dot only on last point
+    const ukData = vals.map((v, i) => i === vals.length - 1 ? ukAvg : null);
+
+    const ctx = document.getElementById('trendChart').getContext('2d');
+    if (trendChart) trendChart.destroy();
+    trendChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels,
+        datasets: [
+          {
+            data: vals,
+            borderColor: lineCol,
+            backgroundColor: lineCol + '18',
+            borderWidth: 2,
+            pointRadius: 3,
+            pointBackgroundColor: lineCol,
+            tension: 0.3,
+            fill: true,
+            spanGaps: true
+          },
+          {
+            data: ukData,
+            borderColor: 'rgba(255,255,255,0.35)',
+            borderDash: [5,4],
+            borderWidth: 1.5,
+            pointRadius: 5,
+            pointStyle: 'circle',
+            pointBackgroundColor: '#161922',
+            pointBorderColor: 'rgba(255,255,255,0.4)',
+            pointBorderWidth: 1.5,
+            fill: false,
+            spanGaps: false
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        animation: { duration: 300 },
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            backgroundColor: '#1a1d28',
+            titleColor: '#e4e6ee',
+            bodyColor: '#e4e6ee',
+            borderColor: 'rgba(255,255,255,.1)',
+            borderWidth: 1,
+            filter: item => item.parsed.y !== null,
+            callbacks: {
+              label: ctx => ['Local avg', 'UK avg'][ctx.datasetIndex] + ': ' + ctx.parsed.y.toFixed(1) + 'p'
+            }
+          }
+        },
+        scales: {
+          x: {
+            grid: { display: false },
+            ticks: {
+              color: '#6b7280',
+              font: { size: 10, family: "'JetBrains Mono'" },
+              maxRotation: 0,
+              autoSkip: true,
+              maxTicksLimit: 8
+            }
+          },
+          y: {
+            ticks: {
+              callback: v => v + 'p',
+              color: '#6b7280',
+              font: { size: 10, family: "'JetBrains Mono'" }
+            },
+            grid: { color: 'rgba(255,255,255,.04)' }
+          }
+        }
+      }
+    });
+  }
+
+  window.setTrendFuel = function(f) { trendFuel = f; renderTrend(); };
+
+  window.loadTrend = function() {
+    fetch(SHEET_CSV)
+      .then(r => r.text())
+      .then(text => {
+        const rows = parseCSV(text);
+        trendHistory = buildHistory(rows);
+        if (trendHistory.length > 1) {
+          document.getElementById('trendPanel').style.display = 'block';
+          renderTrend();
+        }
+      })
+      .catch(() => {});
+  };
+})();
 
 init();
 
