@@ -1013,7 +1013,7 @@ function render() {
 
     const marker = L.marker([station.lat, station.lng], {
       icon: markerIcon,
-      opacity: (isNoData || staleState === 'stale') ? 1.0 : (isExtended ? 0.7 : 1.0)
+      opacity: (isNoData || staleState === 'stale') ? 1.0 : (isExtended ? 0.3 : 1.0)
     }).addTo(map);
 
     let popupHtml = '<div class="map-popup">';
