@@ -1,10 +1,10 @@
 {
   "nationalAvg": {
-    "unleaded": 142.9,
-    "diesel": 170.4
+    "unleaded": 143.3,
+    "diesel": 170.7
   },
-  "lastUpdated": "2026-03-17T12:52:10.256753+00:00",
-  "stationCount": 152,
+  "lastUpdated": "2026-03-17T17:15:58.871079+00:00",
+  "stationCount": 157,
   "stations": [
     {
       "name": "SAINSBURYS PENSBY ROAD THINGWALL",
@@ -121,7 +121,7 @@
       "distance": 9.6,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 145.9,
+      "unleaded": 147.9,
       "diesel": 184.9,
       "updated": "2026-03-12T16:56:00.000Z",
       "cached": false
@@ -182,8 +182,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 146.0,
-      "diesel": 162.0,
-      "updated": "2026-03-16T10:49:14.000Z",
+      "diesel": 164.0,
+      "updated": "2026-03-17T14:50:01.000Z",
       "cached": false
     },
     {
@@ -196,7 +196,7 @@
       "distance": 15.6,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 146.9,
+      "unleaded": 147.9,
       "diesel": 194.9,
       "updated": "2026-03-16T17:35:00.000Z",
       "cached": false
@@ -232,6 +232,36 @@
       "cached": false
     },
     {
+      "name": "THORNTON SERVICE STATION",
+      "brand": "TEXACO",
+      "address": "",
+      "postcode": "CH66 1QF",
+      "lat": 53.29228,
+      "lng": -2.9525,
+      "distance": 7.8,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 145.9,
+      "diesel": 166.9,
+      "updated": "2026-03-17T12:57:31.000Z",
+      "cached": false
+    },
+    {
+      "name": "LOGGERHEAD SERVICE STATION",
+      "brand": "ESSAR",
+      "address": "",
+      "postcode": "CH7 5SA",
+      "lat": 53.15271,
+      "lng": -3.20312,
+      "distance": 7.5,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 143.9,
+      "diesel": 163.9,
+      "updated": "2026-03-17T11:18:40.000Z",
+      "cached": false
+    },
+    {
       "name": "MFG GREASBY",
       "brand": "ESSO",
       "address": "",
@@ -247,6 +277,21 @@
       "cached": false
     },
     {
+      "name": "PENSBY SERVICE STATION",
+      "brand": "TEXACO",
+      "address": "",
+      "postcode": "CH61 9NF",
+      "lat": 53.34639,
+      "lng": -3.09472,
+      "distance": 11.1,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 142.9,
+      "diesel": 184.9,
+      "updated": "2026-03-17T06:02:33.000Z",
+      "cached": false
+    },
+    {
       "name": "SAINSBURYS CHESTER",
       "brand": "SAINSBURY'S",
       "address": "",
@@ -259,21 +304,6 @@
       "unleaded": 139.9,
       "diesel": 158.9,
       "updated": "2026-03-13T20:00:50.000Z",
-      "cached": false
-    },
-    {
-      "name": "JACOBS WELL SERVICE STATION",
-      "brand": "JET",
-      "address": "",
-      "postcode": "WF1 3NS",
-      "lat": 53.2922431,
-      "lng": -2.9523846,
-      "distance": 7.8,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 142.9,
-      "diesel": 184.9,
-      "updated": "2026-03-16T14:08:48.000Z",
       "cached": false
     },
     {
@@ -331,9 +361,9 @@
       "distance": 7.3,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 149.9,
-      "diesel": 189.9,
-      "updated": "2026-03-12T16:50:00.000Z",
+      "unleaded": 151.9,
+      "diesel": 194.9,
+      "updated": "2026-03-17T16:00:00.000Z",
       "cached": false
     },
     {
@@ -361,9 +391,9 @@
       "distance": 17.6,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 132.8,
-      "diesel": 156.8,
-      "updated": "2026-03-12T09:17:33.000Z",
+      "unleaded": 134.8,
+      "diesel": 158.8,
+      "updated": "2026-03-17T15:15:26.000Z",
       "cached": false
     },
     {
@@ -391,7 +421,7 @@
       "distance": 15.8,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 143.9,
+      "unleaded": 145.9,
       "diesel": 184.9,
       "updated": "2026-03-13T12:37:00.000Z",
       "cached": false
@@ -451,7 +481,7 @@
       "distance": 9.1,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 148.9,
+      "unleaded": 149.9,
       "diesel": 194.9,
       "updated": "2026-03-12T16:50:00.000Z",
       "cached": false
@@ -469,21 +499,6 @@
       "unleaded": 139.9,
       "diesel": 189.9,
       "updated": "2026-03-13T16:11:47.000Z",
-      "cached": false
-    },
-    {
-      "name": "INCH FILLING STATION",
-      "brand": "ESSO",
-      "address": "",
-      "postcode": "DG9 8RY",
-      "lat": 53.0845618,
-      "lng": -2.9738553,
-      "distance": 7.7,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 144.9,
-      "diesel": 184.9,
-      "updated": "2026-03-16T14:07:50.000Z",
       "cached": false
     },
     {
@@ -511,9 +526,9 @@
       "distance": 15.5,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 137.9,
-      "diesel": 156.9,
-      "updated": "2026-03-12T09:17:10.000Z",
+      "unleaded": 140.9,
+      "diesel": 160.9,
+      "updated": "2026-03-17T15:17:39.000Z",
       "cached": false
     },
     {
@@ -556,7 +571,7 @@
       "distance": 2.0,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 151.9,
+      "unleaded": 153.9,
       "diesel": 194.9,
       "updated": "2026-03-12T17:05:00.000Z",
       "cached": false
@@ -571,7 +586,7 @@
       "distance": 2.4,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 151.9,
+      "unleaded": 153.9,
       "diesel": 194.9,
       "updated": "2026-03-12T16:50:00.000Z",
       "cached": false
@@ -916,9 +931,9 @@
       "distance": 6.1,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 143.9,
-      "diesel": 177.9,
-      "updated": "2026-03-16T14:07:30.000Z",
+      "unleaded": 145.9,
+      "diesel": 180.9,
+      "updated": "2026-03-17T16:15:20.000Z",
       "cached": false
     },
     {
@@ -1006,9 +1021,9 @@
       "distance": 14.9,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 143.9,
-      "diesel": 180.9,
-      "updated": "2026-03-17T02:19:16.000Z",
+      "unleaded": 144.9,
+      "diesel": 181.9,
+      "updated": "2026-03-17T15:15:09.000Z",
       "cached": false
     },
     {
@@ -1171,9 +1186,9 @@
       "distance": 15.5,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 137.9,
-      "diesel": 157.9,
-      "updated": "2026-03-12T12:12:02.000Z",
+      "unleaded": 140.9,
+      "diesel": 164.9,
+      "updated": "2026-03-17T14:26:43.000Z",
       "cached": false
     },
     {
@@ -1366,7 +1381,7 @@
       "distance": 11.0,
       "is_supermarket": false,
       "is_motorway": true,
-      "unleaded": 161.9,
+      "unleaded": 163.9,
       "diesel": 194.9,
       "updated": "2026-03-12T16:51:00.000Z",
       "cached": false
@@ -1381,7 +1396,7 @@
       "distance": 7.2,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 144.9,
+      "unleaded": 146.9,
       "diesel": 189.9,
       "updated": "2026-03-16T17:20:00.000Z",
       "cached": false
@@ -1396,9 +1411,9 @@
       "distance": 3.3,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 147.9,
+      "unleaded": 149.9,
       "diesel": 194.9,
-      "updated": "2026-03-16T17:21:00.000Z",
+      "updated": "2026-03-17T16:20:00.000Z",
       "cached": false
     },
     {
@@ -1456,9 +1471,9 @@
       "distance": 17.2,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 137.9,
-      "diesel": 182.9,
-      "updated": "2026-03-11T10:10:55.000Z",
+      "unleaded": 146.9,
+      "diesel": 189.9,
+      "updated": "2026-03-17T12:52:00.000Z",
       "cached": false
     },
     {
@@ -1533,7 +1548,7 @@
       "is_motorway": false,
       "unleaded": 144.9,
       "diesel": 189.9,
-      "updated": "2026-03-16T17:20:00.000Z",
+      "updated": "2026-03-17T16:01:00.000Z",
       "cached": false
     },
     {
@@ -1546,7 +1561,7 @@
       "distance": 13.9,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 143.9,
+      "unleaded": 144.9,
       "diesel": 179.9,
       "updated": "2026-03-12T12:35:00.000Z",
       "cached": false
@@ -1564,6 +1579,21 @@
       "unleaded": 141.9,
       "diesel": 189.9,
       "updated": "2026-03-12T13:39:49.000Z",
+      "cached": false
+    },
+    {
+      "name": "FLINT SERVICE STATION",
+      "brand": "JET",
+      "address": "",
+      "postcode": "CH6 5QG",
+      "lat": 53.23824,
+      "lng": -3.13773,
+      "distance": 5.5,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 143.9,
+      "diesel": 184.9,
+      "updated": "2026-03-16T14:05:21.000Z",
       "cached": false
     },
     {
@@ -1621,7 +1651,7 @@
       "distance": 9.4,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 146.9,
+      "unleaded": 148.9,
       "diesel": 189.9,
       "updated": "2026-03-16T17:25:00.000Z",
       "cached": false
@@ -1666,7 +1696,7 @@
       "distance": 14.8,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 143.9,
+      "unleaded": 144.9,
       "diesel": 181.9,
       "updated": "2026-03-16T10:48:57.000Z",
       "cached": false
@@ -1711,24 +1741,9 @@
       "distance": 13.5,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 144.9,
-      "diesel": 179.9,
-      "updated": "2026-03-12T12:30:00.000Z",
-      "cached": false
-    },
-    {
-      "name": "FOUR ACES FILLING STATION",
-      "brand": "JET",
-      "address": "",
-      "postcode": "NE10 8YB",
-      "lat": 53.1526091,
-      "lng": -3.2031627,
-      "distance": 7.5,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 141.9,
-      "diesel": 163.9,
-      "updated": "2026-03-17T10:12:14.000Z",
+      "unleaded": 146.9,
+      "diesel": 184.9,
+      "updated": "2026-03-17T16:00:00.000Z",
       "cached": false
     },
     {
@@ -1786,7 +1801,7 @@
       "distance": 13.4,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 147.9,
+      "unleaded": 149.9,
       "diesel": 189.9,
       "updated": "2026-03-16T17:20:00.000Z",
       "cached": false
@@ -1801,24 +1816,9 @@
       "distance": 6.4,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 147.9,
+      "unleaded": 149.9,
       "diesel": 189.9,
       "updated": "2026-03-16T17:25:00.000Z",
-      "cached": false
-    },
-    {
-      "name": "HELMINGTON ROW FILLING STATION",
-      "brand": "ESSO",
-      "address": "",
-      "postcode": "DL15 0RW",
-      "lat": 53.3463137,
-      "lng": -3.0946933,
-      "distance": 11.1,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 142.9,
-      "diesel": 184.9,
-      "updated": "2026-03-17T10:05:04.000Z",
       "cached": false
     },
     {
@@ -1861,24 +1861,9 @@
       "distance": 8.7,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 146.9,
+      "unleaded": 148.9,
       "diesel": 189.9,
       "updated": "2026-03-16T17:40:00.000Z",
-      "cached": false
-    },
-    {
-      "name": "IVANHOE SERVICE STATION",
-      "brand": "BP",
-      "address": "",
-      "postcode": "DL2 1TD",
-      "lat": 53.238044,
-      "lng": -3.1376907,
-      "distance": 5.4,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 144.9,
-      "diesel": 184.9,
-      "updated": "2026-03-16T15:03:32.000Z",
       "cached": false
     },
     {
@@ -1912,6 +1897,21 @@
       "cached": false
     },
     {
+      "name": "GRESFORD SERVICE STATION",
+      "brand": "TEXACO",
+      "address": "",
+      "postcode": "LL12 8TL",
+      "lat": 53.08468,
+      "lng": -2.97378,
+      "distance": 7.7,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 143.9,
+      "diesel": 184.9,
+      "updated": "2026-03-17T10:11:32.000Z",
+      "cached": false
+    },
+    {
       "name": "BR Buckley",
       "brand": "Spar",
       "address": "",
@@ -1936,7 +1936,7 @@
       "distance": 18.5,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 141.9,
+      "unleaded": 143.9,
       "diesel": 185.9,
       "updated": "2026-03-13T16:16:45.000Z",
       "cached": false
@@ -1951,7 +1951,7 @@
       "distance": 17.6,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 145.9,
+      "unleaded": 147.9,
       "diesel": 189.9,
       "updated": "2026-03-12T16:55:00.000Z",
       "cached": false
@@ -1968,7 +1968,7 @@
       "is_motorway": false,
       "unleaded": 145.9,
       "diesel": 169.9,
-      "updated": "2026-03-17T12:52:09.397216+00:00",
+      "updated": "2026-03-17T17:15:57.644541+00:00",
       "cached": false
     },
     {
@@ -2283,6 +2283,81 @@
       "is_motorway": false,
       "unleaded": 135.7,
       "diesel": 155.7,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
+    },
+    {
+      "name": "JACOBS WELL SERVICE STATION",
+      "brand": "JET",
+      "address": "",
+      "postcode": "",
+      "lat": 0.0,
+      "lng": 0.0,
+      "distance": 0,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 139.9,
+      "diesel": 159.9,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
+    },
+    {
+      "name": "INCH FILLING STATION",
+      "brand": "ESSO",
+      "address": "",
+      "postcode": "",
+      "lat": 0.0,
+      "lng": 0.0,
+      "distance": 0,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 142.9,
+      "diesel": 162.9,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
+    },
+    {
+      "name": "FOUR ACES FILLING STATION",
+      "brand": "JET",
+      "address": "",
+      "postcode": "",
+      "lat": 0.0,
+      "lng": 0.0,
+      "distance": 0,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 139.9,
+      "diesel": 159.9,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
+    },
+    {
+      "name": "HELMINGTON ROW FILLING STATION",
+      "brand": "ESSO",
+      "address": "",
+      "postcode": "",
+      "lat": 0.0,
+      "lng": 0.0,
+      "distance": 0,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 137.9,
+      "diesel": 157.9,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
+    },
+    {
+      "name": "IVANHOE SERVICE STATION",
+      "brand": "BP",
+      "address": "",
+      "postcode": "",
+      "lat": 0.0,
+      "lng": 0.0,
+      "distance": 0,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 142.9,
+      "diesel": 163.9,
       "updated": "2026-03-13T00:00:00+00:00",
       "cached": true
     }
