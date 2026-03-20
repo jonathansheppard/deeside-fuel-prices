@@ -551,6 +551,59 @@ h1 {
   background: #6ee7b7;
 }
 
+/* ── LIVE AVG PANEL ── */
+.live-avg-panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin-bottom: 24px;
+  display: none;
+}
+.live-avg-header {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+.live-avg-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.live-avg-card {
+  background: rgba(255,255,255,.03);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px 14px;
+}
+.live-avg-label {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+.live-avg-value {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.live-avg-delta {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  margin-top: 4px;
+}
+.live-avg-note {
+  font-size: 10px;
+  color: var(--muted);
+  margin-top: 10px;
+}
+
 /* ── LOADING ── */
 .loading {
   padding: 40px;
@@ -605,6 +658,13 @@ h1 {
     <div class="summary-card diesel" id="summaryDiesel"></div>
   </div>
 
+  <!-- ── LIVE AVERAGE PANEL ── -->
+  <div class="live-avg-panel" id="liveAvgPanel">
+    <div class="live-avg-header">Flintshire average today · live from station data · Costco excluded</div>
+    <div class="live-avg-grid" id="liveAvgGrid"></div>
+    <div class="live-avg-note" id="liveAvgNote"></div>
+  </div>
+
   <!-- ── PRICE TREND PANEL ── -->
   <div class="trend-panel" id="trendPanel">
     <div class="trend-header">
@@ -621,7 +681,7 @@ h1 {
     <div class="trend-legend">
       <span><span class="trend-legend-line" id="trendLegLine"></span><span id="trendLegLabel">Unleaded</span></span>
       <span><span class="trend-legend-dash"></span>UK avg</span>
-      <span style="font-size:9px;color:rgba(107,114,128,.5);margin-left:4px">Costco excluded</span>
+      <span style="font-size:9px;color:rgba(107,114,128,.5);margin-left:4px">Costco excluded · gap = data unavailable · ● today = live</span>
     </div>
 
     <div style="position:relative;height:190px;">
@@ -1239,18 +1299,80 @@ function renderChart() {
 
   window.setTrendFuel = function(f) { trendFuel = f; renderTrend(); };
 
+  function renderLiveAvg() {
+    const avgU = nationalAvg.unleaded;
+    const avgD = nationalAvg.diesel;
+    const fl = stations.filter(isFlintshire);
+    const freshU = fl.filter(s => s.unleaded && s.unleaded >= PRICE_FLOOR && isFresh(s) && !isCostco(s));
+    const freshD = fl.filter(s => s.diesel && s.diesel >= PRICE_FLOOR && isFresh(s) && !isCostco(s));
+    if (!freshU.length && !freshD.length) return;
+
+    const liveU = freshU.length ? +(freshU.reduce((a,s) => a + s.unleaded, 0) / freshU.length).toFixed(1) : null;
+    const liveD = freshD.length ? +(freshD.reduce((a,s) => a + s.diesel, 0) / freshD.length).toFixed(1) : null;
+
+    function deltaHtml(live, avg, col) {
+      if (!live || !avg) return '';
+      const d = +(live - avg).toFixed(1);
+      const sign = d > 0 ? '+' : '';
+      const cls = d < -1 ? 'var(--green)' : d <= 0.5 ? 'var(--amber)' : 'var(--red)';
+      return `<div class="live-avg-delta" style="color:${cls}">${sign}${d}p vs UK avg</div>`;
+    }
+
+    document.getElementById('liveAvgGrid').innerHTML = `
+      <div class="live-avg-card">
+        <div class="live-avg-label">Unleaded avg (${freshU.length} stations)</div>
+        <div class="live-avg-value" style="color:var(--green)">${liveU ? liveU.toFixed(1) + 'p' : '—'}</div>
+        ${deltaHtml(liveU, avgU)}
+      </div>
+      <div class="live-avg-card">
+        <div class="live-avg-label">Diesel avg (${freshD.length} stations)</div>
+        <div class="live-avg-value" style="color:var(--amber)">${liveD ? liveD.toFixed(1) + 'p' : '—'}</div>
+        ${deltaHtml(liveD, avgD)}
+      </div>
+    `;
+    document.getElementById('liveAvgNote').textContent =
+      'Average computed from all fresh Flintshire stations reporting today. Excludes Costco (members only).';
+    document.getElementById('liveAvgPanel').style.display = 'block';
+  }
+
   window.loadTrend = function() {
     fetch(SHEET_CSV)
       .then(r => r.text())
       .then(text => {
         const rows = parseCSV(text);
         trendHistory = buildHistory(rows);
-        // Trend panel temporarily hidden — insufficient clean data
-        // Reinstate once Sheet has 7+ days of complete snapshots
-        // if (trendHistory.length > 1) {
-        //   document.getElementById('trendPanel').style.display = 'block';
-        //   renderTrend();
-        // }
+
+        // Compute today's live average from stations.json
+        const fl = stations.filter(isFlintshire);
+        const freshU = fl.filter(s => s.unleaded && s.unleaded >= PRICE_FLOOR && isFresh(s) && !isCostco(s));
+        const freshD = fl.filter(s => s.diesel && s.diesel >= PRICE_FLOOR && isFresh(s) && !isCostco(s));
+        const liveU = freshU.length ? +(freshU.reduce((a,s) => a + s.unleaded, 0) / freshU.length).toFixed(1) : null;
+        const liveD = freshD.length ? +(freshD.reduce((a,s) => a + s.diesel, 0) / freshD.length).toFixed(1) : null;
+
+        if (trendHistory.length > 1) {
+          // Fill gap with nulls between last Sheet date and today
+          const lastDate = new Date(trendHistory[trendHistory.length - 1].date);
+          const today = new Date(); today.setHours(0,0,0,0);
+          let cursor = new Date(lastDate);
+          cursor.setDate(cursor.getDate() + 1);
+          while (cursor < today) {
+            trendHistory.push({
+              date: (cursor.getMonth()+1) + '/' + cursor.getDate() + '/' + cursor.getFullYear(),
+              unleaded: null, diesel: null
+            });
+            cursor.setDate(cursor.getDate() + 1);
+          }
+          // Append today's live point
+          trendHistory.push({
+            date: (today.getMonth()+1) + '/' + today.getDate() + '/' + today.getFullYear(),
+            unleaded: liveU, diesel: liveD, live: true
+          });
+
+          document.getElementById('trendPanel').style.display = 'block';
+          renderTrend();
+        }
+
+        renderLiveAvg();
       })
       .catch(() => {});
   };
