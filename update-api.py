@@ -3,6 +3,7 @@ import json
 import os
 import csv
 import io
+import subprocess
 from math import radians, sin, cos, sqrt, atan2
 from datetime import datetime, timezone
 
@@ -35,9 +36,14 @@ SHEET_CSV_URL = f"https://docs.google.com/spreadsheets/d/{SHEET_ID}/export?forma
 
 # ── Output ────────────────────────────────────────────────────────────────────
 OUTPUT_FILE   = os.path.expanduser("~/deeside-fuel-prices/stations.json")
+REPO_DIR      = os.path.expanduser("~/deeside-fuel-prices")
+
+# ── GitHub token ──────────────────────────────────────────────────────────────
+# Set in ~/.zshrc: export GITHUB_TOKEN=your_token_here
+GITHUB_TOKEN  = os.environ.get("GITHUB_TOKEN", "")
+GITHUB_REMOTE = f"https://{GITHUB_TOKEN}@github.com/jonathansheppard/deeside-fuel-prices.git"
 
 # ── Geographic filter ─────────────────────────────────────────────────────────
-# Widened west to -3.45 to capture Prestatyn / Rhyl direction
 LAT_MIN, LAT_MAX = 53.05, 53.45
 LNG_MIN, LNG_MAX = -3.45, -2.80
 
@@ -49,8 +55,6 @@ CENTRE_LNG = -3.0333
 PRICE_FLOOR = 115.0
 
 # ── Excluded stations (by postcode) ──────────────────────────────────────────
-# Add postcodes here to permanently suppress a station from the output.
-# Dyffryn Service Station (LL15 1PE) — Ruthin area, outside editorial scope
 EXCLUDED_POSTCODES = {
     "LL15 1PE",   # Dyffryn Service Station, Ruthin
     "LL12 8DY",   # Smithy View Acton - unreliable cached prices
@@ -126,9 +130,8 @@ def valid_price(p):
 
 
 def load_retailer_feeds():
-    """Fetch voluntary retailer JSON feeds and return local stations keyed by postcode."""
     log("Fetching voluntary retailer feeds...")
-    retailer_stations = {}  # keyed by postcode
+    retailer_stations = {}
 
     for feed in RETAILER_FEEDS:
         try:
@@ -138,7 +141,6 @@ def load_retailer_feeds():
             r.raise_for_status()
             data = r.json()
 
-            # All retailer feeds use the same CMA format
             stations = data.get("stations", [])
             count = 0
             for s in stations:
@@ -199,7 +201,6 @@ def load_retailer_feeds():
 
 
 def load_sheets_fallback():
-    """Read most recent price per station from Google Sheets."""
     log("Loading Google Sheets fallback data...")
     try:
         r = requests.get(SHEET_CSV_URL, timeout=15)
@@ -236,6 +237,40 @@ def parse_sheets_date(date_str):
         return date_str
 
 
+def git_push():
+    """Commit and push stations.json to GitHub."""
+    if not GITHUB_TOKEN:
+        log("Git: GITHUB_TOKEN not set — skipping push")
+        return
+    try:
+        # Stage stations.json only
+        subprocess.run(
+            ["git", "-C", REPO_DIR, "add", "stations.json"],
+            check=True, capture_output=True
+        )
+        # Commit — exits non-zero if nothing changed, handle gracefully
+        result = subprocess.run(
+            ["git", "-C", REPO_DIR, "commit", "-m",
+             f"Auto-update {datetime.now().strftime('%Y-%m-%d %H:%M')} UTC"],
+            capture_output=True, text=True
+        )
+        if "nothing to commit" in result.stdout or result.returncode != 0:
+            log("Git: no changes to commit")
+            return
+        # Pull rebase to avoid conflicts, then push
+        subprocess.run(
+            ["git", "-C", REPO_DIR, "pull", "--rebase", GITHUB_REMOTE, "main"],
+            check=True, capture_output=True
+        )
+        subprocess.run(
+            ["git", "-C", REPO_DIR, "push", GITHUB_REMOTE, "main"],
+            check=True, capture_output=True
+        )
+        log("Git: stations.json pushed to GitHub ✓")
+    except subprocess.CalledProcessError as e:
+        log(f"Git push failed: {e}")
+
+
 def main():
     log("=" * 50)
     log("Deeside Fuel Prices — API Update")
@@ -247,8 +282,8 @@ def main():
     log("Fetching station info from new API...")
     all_info = fetch_all_batches(INFO_URL, token)
 
-    local_stations = {}  # keyed by node_id
-    postcode_index = {}  # postcode -> node_id for merging
+    local_stations = {}
+    postcode_index = {}
 
     for s in all_info:
         loc = s.get("location", {})
@@ -310,7 +345,6 @@ def main():
     retailer_filled = 0
     for postcode, rs in retailer_data.items():
         if postcode in postcode_index:
-            # Station exists in new API — fill any missing prices
             node_id = postcode_index[postcode]
             changed = False
             if local_stations[node_id]["unleaded"] is None and rs["unleaded"]:
@@ -323,7 +357,6 @@ def main():
                 local_stations[node_id]["updated"] = rs["updated"]
                 retailer_filled += 1
         else:
-            # Station not in new API — add it from retailer feed
             local_stations["retailer_" + postcode] = rs
             retailer_added += 1
 
@@ -351,7 +384,6 @@ def main():
             station["updated"] = parse_sheets_date(row.get("date", ""))
             fallback_count += 1
 
-    # Add Sheets-only stations not found anywhere else
     extra_count = 0
     for name, row in sheets_data.items():
         if name in api_names:
@@ -384,7 +416,7 @@ def main():
 
     log(f"Sheets fallback: {fallback_count} gaps filled, {extra_count} stations added")
 
-    # ── National averages from new API ────────────────────────────────────────
+    # ── National averages ─────────────────────────────────────────────────────
     log("Processing and filtering...")
     all_unleaded, all_diesel = [], []
     for p in all_prices:
@@ -435,6 +467,9 @@ def main():
     with open(OUTPUT_FILE, "w") as f:
         json.dump(output, f, indent=2)
     log(f"Saved to {OUTPUT_FILE}")
+
+    # ── Git commit and push ───────────────────────────────────────────────────
+    git_push()
 
 
 if __name__ == "__main__":
