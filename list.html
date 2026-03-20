@@ -1245,10 +1245,12 @@ function renderChart() {
       .then(text => {
         const rows = parseCSV(text);
         trendHistory = buildHistory(rows);
-        if (trendHistory.length > 1) {
-          document.getElementById('trendPanel').style.display = 'block';
-          renderTrend();
-        }
+        // Trend panel temporarily hidden — insufficient clean data
+        // Reinstate once Sheet has 7+ days of complete snapshots
+        // if (trendHistory.length > 1) {
+        //   document.getElementById('trendPanel').style.display = 'block';
+        //   renderTrend();
+        // }
       })
       .catch(() => {});
   };
