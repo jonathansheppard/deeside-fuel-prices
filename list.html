@@ -1160,7 +1160,7 @@ function renderChart() {
       </div>`;
 
     // UK avg dot only on last point
-    const ukData = vals.map((v, i) => i === vals.length - 1 ? ukAvg : null);
+    const ukData = vals.map(() => ukAvg);
 
     const ctx = document.getElementById('trendChart').getContext('2d');
     if (trendChart) trendChart.destroy();
