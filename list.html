@@ -1349,28 +1349,9 @@ function renderChart() {
         const liveU = freshU.length ? +(freshU.reduce((a,s) => a + s.unleaded, 0) / freshU.length).toFixed(1) : null;
         const liveD = freshD.length ? +(freshD.reduce((a,s) => a + s.diesel, 0) / freshD.length).toFixed(1) : null;
 
-        if (trendHistory.length > 1) {
-          // Fill gap with nulls between last Sheet date and today
-          const lastDate = new Date(trendHistory[trendHistory.length - 1].date);
-          const today = new Date(); today.setHours(0,0,0,0);
-          let cursor = new Date(lastDate);
-          cursor.setDate(cursor.getDate() + 1);
-          while (cursor < today) {
-            trendHistory.push({
-              date: (cursor.getMonth()+1) + '/' + cursor.getDate() + '/' + cursor.getFullYear(),
-              unleaded: null, diesel: null
-            });
-            cursor.setDate(cursor.getDate() + 1);
-          }
-          // Append today's live point
-          trendHistory.push({
-            date: (today.getMonth()+1) + '/' + today.getDate() + '/' + today.getFullYear(),
-            unleaded: liveU, diesel: liveD, live: true
-          });
-
-          document.getElementById('trendPanel').style.display = 'block';
-          renderTrend();
-        }
+        // Trend chart hidden — gap in data makes chart misleading
+        // Reinstate once Sheet has clean continuous daily data
+        // if (trendHistory.length > 1) { ... }
 
         renderLiveAvg();
       })
