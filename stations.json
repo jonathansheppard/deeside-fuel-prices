@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
-    "unleaded": 149.1,
+    "unleaded": 149.2,
     "diesel": 182.0
   },
-  "lastUpdated": "2026-03-24T21:32:45.632452+00:00",
+  "lastUpdated": "2026-03-24T22:02:11.288775+00:00",
   "stationCount": 159,
   "stations": [
     {
@@ -167,8 +167,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 147.9,
-      "diesel": 171.9,
-      "updated": "2026-03-24T01:09:03.000Z",
+      "diesel": 172.9,
+      "updated": "2026-03-24T21:31:28.000Z",
       "cached": false
     },
     {
@@ -451,9 +451,9 @@
       "distance": 8.1,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 143.9,
-      "diesel": 170.9,
-      "updated": "2026-03-23T21:51:53.000Z",
+      "unleaded": 144.9,
+      "diesel": 171.9,
+      "updated": "2026-03-24T21:50:27.000Z",
       "cached": false
     },
     {
@@ -556,9 +556,9 @@
       "distance": 13.4,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 145.9,
-      "diesel": 171.9,
-      "updated": "2026-03-23T21:54:04.000Z",
+      "unleaded": 146.9,
+      "diesel": 172.9,
+      "updated": "2026-03-24T21:50:22.000Z",
       "cached": false
     },
     {
@@ -1711,9 +1711,9 @@
       "distance": 12.8,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 144.9,
-      "diesel": 170.9,
-      "updated": "2026-03-23T21:47:29.000Z",
+      "unleaded": 146.9,
+      "diesel": 171.9,
+      "updated": "2026-03-24T21:47:20.000Z",
       "cached": false
     },
     {
@@ -1968,7 +1968,7 @@
       "is_motorway": false,
       "unleaded": 149.9,
       "diesel": 182.9,
-      "updated": "2026-03-24T21:32:44.594125+00:00",
+      "updated": "2026-03-24T22:02:10.022350+00:00",
       "cached": false
     },
     {
