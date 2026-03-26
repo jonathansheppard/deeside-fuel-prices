@@ -1,10 +1,10 @@
 {
   "nationalAvg": {
     "unleaded": 150.0,
-    "diesel": 183.5
+    "diesel": 183.6
   },
-  "lastUpdated": "2026-03-26T10:02:39.866062+00:00",
-  "stationCount": 159,
+  "lastUpdated": "2026-03-26T10:31:59.711391+00:00",
+  "stationCount": 160,
   "stations": [
     {
       "name": "SAINSBURYS PENSBY ROAD THINGWALL",
@@ -256,9 +256,9 @@
       "distance": 7.5,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 149.9,
-      "diesel": 176.9,
-      "updated": "2026-03-25T10:55:22.000Z",
+      "unleaded": 152.9,
+      "diesel": 184.9,
+      "updated": "2026-03-26T10:19:13.000Z",
       "cached": false
     },
     {
@@ -1552,6 +1552,21 @@
       "cached": false
     },
     {
+      "name": "BP CHILDWALL VALLEY SERVICE STATION",
+      "brand": "BP CHILDWALL VALLEY SERVICE STATION",
+      "address": "",
+      "postcode": "L25 2RJ",
+      "lat": 53.3902412,
+      "lng": -2.8503635,
+      "distance": 15.8,
+      "is_supermarket": true,
+      "is_motorway": false,
+      "unleaded": null,
+      "diesel": null,
+      "updated": null,
+      "cached": false
+    },
+    {
       "name": "SHELL HUNTS CROSS",
       "brand": "SHELL",
       "address": "",
@@ -1968,7 +1983,7 @@
       "is_motorway": false,
       "unleaded": 149.9,
       "diesel": 182.9,
-      "updated": "2026-03-26T10:02:38.578736+00:00",
+      "updated": "2026-03-26T10:31:58.707136+00:00",
       "cached": false
     },
     {
