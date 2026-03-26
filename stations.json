@@ -1,10 +1,10 @@
 {
   "nationalAvg": {
     "unleaded": 150.0,
-    "diesel": 183.6
+    "diesel": 183.7
   },
-  "lastUpdated": "2026-03-26T11:02:12.196981+00:00",
-  "stationCount": 160,
+  "lastUpdated": "2026-03-26T11:31:33.488171+00:00",
+  "stationCount": 163,
   "stations": [
     {
       "name": "SAINSBURYS PENSBY ROAD THINGWALL",
@@ -259,6 +259,21 @@
       "unleaded": 152.9,
       "diesel": 184.9,
       "updated": "2026-03-26T10:19:13.000Z",
+      "cached": false
+    },
+    {
+      "name": "ESSO VICTORIA SERVICE STATION",
+      "brand": "ESSO VICTORIA SERVICE STATION",
+      "address": "",
+      "postcode": "L17 8FW",
+      "lat": 53.3850184,
+      "lng": -2.9504827,
+      "distance": 13.9,
+      "is_supermarket": true,
+      "is_motorway": false,
+      "unleaded": null,
+      "diesel": null,
+      "updated": null,
       "cached": false
     },
     {
@@ -1217,8 +1232,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 148.9,
-      "diesel": 179.9,
-      "updated": "2026-03-25T12:05:21.000Z",
+      "diesel": 181.9,
+      "updated": "2026-03-26T11:13:56.000Z",
       "cached": false
     },
     {
@@ -1642,6 +1657,36 @@
       "cached": false
     },
     {
+      "name": "BP ATLANTIC SERVICE STATION",
+      "brand": "BP ATLANTIC SERVICE STATION",
+      "address": "",
+      "postcode": "L20 1AD",
+      "lat": 53.4476476,
+      "lng": -3.0012967,
+      "distance": 17.9,
+      "is_supermarket": true,
+      "is_motorway": false,
+      "unleaded": null,
+      "diesel": null,
+      "updated": null,
+      "cached": false
+    },
+    {
+      "name": "BP SCOTLAND ROAD SERVICE STATION",
+      "brand": "BP SCOTLAND ROAD SERVICE STATION",
+      "address": "",
+      "postcode": "L5 5AQ",
+      "lat": 53.42122,
+      "lng": -2.9811903,
+      "distance": 16.1,
+      "is_supermarket": true,
+      "is_motorway": false,
+      "unleaded": null,
+      "diesel": null,
+      "updated": null,
+      "cached": false
+    },
+    {
       "name": "MFG HALEWOOD",
       "brand": "ESSO",
       "address": "",
@@ -1983,7 +2028,7 @@
       "is_motorway": false,
       "unleaded": 149.9,
       "diesel": 182.9,
-      "updated": "2026-03-26T11:02:11.116998+00:00",
+      "updated": "2026-03-26T11:31:32.594628+00:00",
       "cached": false
     },
     {
