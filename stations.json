@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
-    "unleaded": 150.9,
-    "diesel": 185.5
+    "unleaded": 151.0,
+    "diesel": 185.6
   },
-  "lastUpdated": "2026-03-27T22:32:50.797708+00:00",
+  "lastUpdated": "2026-03-27T23:03:17.194611+00:00",
   "stationCount": 163,
   "stations": [
     {
@@ -16,9 +16,9 @@
       "distance": 11.5,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 141.9,
-      "diesel": 163.9,
-      "updated": "2026-03-25T22:58:39.000Z",
+      "unleaded": 143.9,
+      "diesel": 167.9,
+      "updated": "2026-03-27T22:58:14.000Z",
       "cached": false
     },
     {
@@ -31,9 +31,9 @@
       "distance": 16.3,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 140.9,
-      "diesel": 162.9,
-      "updated": "2026-03-25T22:35:29.000Z",
+      "unleaded": 142.9,
+      "diesel": 166.9,
+      "updated": "2026-03-27T22:31:41.000Z",
       "cached": false
     },
     {
@@ -646,9 +646,9 @@
       "distance": 13.5,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 144.9,
-      "diesel": 170.9,
-      "updated": "2026-03-26T22:37:49.000Z",
+      "unleaded": 146.9,
+      "diesel": 175.9,
+      "updated": "2026-03-27T22:42:23.000Z",
       "cached": false
     },
     {
@@ -1786,9 +1786,9 @@
       "distance": 11.5,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 140.9,
-      "diesel": 164.9,
-      "updated": "2026-03-25T22:53:47.000Z",
+      "unleaded": 142.9,
+      "diesel": 168.9,
+      "updated": "2026-03-27T22:52:27.000Z",
       "cached": false
     },
     {
@@ -1846,9 +1846,9 @@
       "distance": 7.7,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 144.9,
-      "diesel": 173.9,
-      "updated": "2026-03-25T22:05:47.000Z",
+      "unleaded": 146.9,
+      "diesel": 178.9,
+      "updated": "2026-03-27T22:54:52.000Z",
       "cached": false
     },
     {
@@ -2028,7 +2028,7 @@
       "is_motorway": false,
       "unleaded": 149.9,
       "diesel": 182.9,
-      "updated": "2026-03-27T22:32:49.906877+00:00",
+      "updated": "2026-03-27T23:03:16.130926+00:00",
       "cached": false
     },
     {
