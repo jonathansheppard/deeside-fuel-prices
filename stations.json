@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
     "unleaded": 151.2,
-    "diesel": 186.1
+    "diesel": 186.2
   },
-  "lastUpdated": "2026-03-28T00:03:06.720041+00:00",
+  "lastUpdated": "2026-03-28T00:32:46.755824+00:00",
   "stationCount": 163,
   "stations": [
     {
@@ -46,9 +46,9 @@
       "distance": 17.3,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 146.9,
-      "diesel": 189.9,
-      "updated": "2026-03-23T10:11:55.000Z",
+      "unleaded": 147.9,
+      "diesel": 195.9,
+      "updated": "2026-03-28T00:03:42.000Z",
       "cached": false
     },
     {
@@ -421,9 +421,9 @@
       "distance": 8.6,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 151.9,
-      "diesel": 195.9,
-      "updated": "2026-03-23T10:11:55.000Z",
+      "unleaded": 153.9,
+      "diesel": 199.9,
+      "updated": "2026-03-28T00:06:21.000Z",
       "cached": false
     },
     {
@@ -511,7 +511,7 @@
       "distance": 15.5,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 151.9,
+      "unleaded": 154.9,
       "diesel": 199.9,
       "updated": "2026-03-22T09:48:47.000Z",
       "cached": false
@@ -616,9 +616,9 @@
       "distance": 6.9,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 149.9,
-      "diesel": 179.9,
-      "updated": "2026-03-22T09:48:47.000Z",
+      "unleaded": 152.9,
+      "diesel": 185.9,
+      "updated": "2026-03-28T00:02:17.000Z",
       "cached": false
     },
     {
@@ -1516,9 +1516,9 @@
       "distance": 16.1,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 151.9,
-      "diesel": 195.9,
-      "updated": "2026-03-22T09:48:47.000Z",
+      "unleaded": 152.9,
+      "diesel": 199.9,
+      "updated": "2026-03-28T00:27:20.000Z",
       "cached": false
     },
     {
@@ -2028,7 +2028,7 @@
       "is_motorway": false,
       "unleaded": 149.9,
       "diesel": 182.9,
-      "updated": "2026-03-28T00:03:05.449878+00:00",
+      "updated": "2026-03-28T00:32:45.783454+00:00",
       "cached": false
     },
     {
