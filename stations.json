@@ -3,7 +3,7 @@
     "unleaded": 155.5,
     "diesel": 192.9
   },
-  "lastUpdated": "2026-04-03T07:02:39.020254+00:00",
+  "lastUpdated": "2026-04-03T07:32:17.818907+00:00",
   "stationCount": 164,
   "stations": [
     {
@@ -752,8 +752,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 159.9,
-      "diesel": 207.9,
-      "updated": "2026-03-30T20:32:36.000Z",
+      "diesel": 209.9,
+      "updated": "2026-04-03T07:17:41.000Z",
       "cached": false
     },
     {
@@ -782,8 +782,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 154.9,
-      "diesel": 204.9,
-      "updated": "2026-03-30T20:41:32.000Z",
+      "diesel": 207.9,
+      "updated": "2026-04-03T07:27:48.000Z",
       "cached": false
     },
     {
@@ -902,8 +902,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 154.9,
-      "diesel": 204.9,
-      "updated": "2026-04-01T16:06:01.000Z",
+      "diesel": 206.9,
+      "updated": "2026-04-03T07:27:30.000Z",
       "cached": false
     },
     {
@@ -1052,8 +1052,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 156.9,
-      "diesel": 206.9,
-      "updated": "2026-03-30T19:18:31.000Z",
+      "diesel": 208.9,
+      "updated": "2026-04-03T07:28:09.000Z",
       "cached": false
     },
     {
@@ -1067,8 +1067,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 158.9,
-      "diesel": 208.9,
-      "updated": "2026-04-01T16:06:11.000Z",
+      "diesel": 210.9,
+      "updated": "2026-04-03T07:26:23.000Z",
       "cached": false
     },
     {
@@ -1127,8 +1127,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 156.9,
-      "diesel": 202.9,
-      "updated": "2026-03-30T19:05:34.000Z",
+      "diesel": 203.9,
+      "updated": "2026-04-03T07:16:00.000Z",
       "cached": false
     },
     {
@@ -2028,7 +2028,7 @@
       "is_motorway": false,
       "unleaded": 154.9,
       "diesel": 184.9,
-      "updated": "2026-04-03T07:02:37.644504+00:00",
+      "updated": "2026-04-03T07:32:16.697064+00:00",
       "cached": false
     },
     {
