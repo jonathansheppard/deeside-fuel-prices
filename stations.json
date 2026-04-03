@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
     "unleaded": 155.5,
-    "diesel": 192.9
+    "diesel": 193.0
   },
-  "lastUpdated": "2026-04-03T07:32:17.818907+00:00",
+  "lastUpdated": "2026-04-03T08:04:34.438154+00:00",
   "stationCount": 164,
   "stations": [
     {
@@ -841,9 +841,9 @@
       "distance": 1.1,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 152.9,
-      "diesel": 184.9,
-      "updated": "2026-04-01T16:40:50.000Z",
+      "unleaded": 153.9,
+      "diesel": 187.9,
+      "updated": "2026-04-03T07:41:27.000Z",
       "cached": false
     },
     {
@@ -857,8 +857,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 158.9,
-      "diesel": 207.9,
-      "updated": "2026-04-01T16:12:26.000Z",
+      "diesel": 208.9,
+      "updated": "2026-04-03T07:34:36.000Z",
       "cached": false
     },
     {
@@ -1021,9 +1021,9 @@
       "distance": 12.6,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 153.7,
-      "diesel": 181.7,
-      "updated": "2026-04-01T16:42:10.000Z",
+      "unleaded": 154.7,
+      "diesel": 184.7,
+      "updated": "2026-04-03T07:42:37.000Z",
       "cached": false
     },
     {
@@ -1187,8 +1187,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 156.9,
-      "diesel": 204.9,
-      "updated": "2026-03-30T18:03:35.000Z",
+      "diesel": 207.9,
+      "updated": "2026-04-03T07:38:19.000Z",
       "cached": false
     },
     {
@@ -1216,9 +1216,9 @@
       "distance": 16.3,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 150.9,
-      "diesel": 180.7,
-      "updated": "2026-04-01T16:45:25.000Z",
+      "unleaded": 151.9,
+      "diesel": 183.7,
+      "updated": "2026-04-03T07:46:40.000Z",
       "cached": false
     },
     {
@@ -2028,7 +2028,7 @@
       "is_motorway": false,
       "unleaded": 154.9,
       "diesel": 184.9,
-      "updated": "2026-04-03T07:32:16.697064+00:00",
+      "updated": "2026-04-03T08:04:33.564422+00:00",
       "cached": false
     },
     {
