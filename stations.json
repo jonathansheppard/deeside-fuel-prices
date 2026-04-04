@@ -3,7 +3,7 @@
     "unleaded": 156.1,
     "diesel": 193.9
   },
-  "lastUpdated": "2026-04-04T08:34:03.983838+00:00",
+  "lastUpdated": "2026-04-04T09:03:58.004561+00:00",
   "stationCount": 164,
   "stations": [
     {
@@ -211,9 +211,9 @@
       "distance": 12.8,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 154.9,
-      "diesel": 185.9,
-      "updated": "2026-04-02T14:05:58.000Z",
+      "unleaded": 156.9,
+      "diesel": 187.9,
+      "updated": "2026-04-04T08:54:44.000Z",
       "cached": false
     },
     {
@@ -676,9 +676,9 @@
       "distance": 14.6,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 159.9,
-      "diesel": 189.9,
-      "updated": "2026-04-02T14:11:51.000Z",
+      "unleaded": 161.9,
+      "diesel": 191.9,
+      "updated": "2026-04-04T08:58:28.000Z",
       "cached": false
     },
     {
@@ -1232,8 +1232,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 154.9,
-      "diesel": 189.9,
-      "updated": "2026-04-02T11:35:09.000Z",
+      "diesel": 190.9,
+      "updated": "2026-04-04T08:38:30.000Z",
       "cached": false
     },
     {
@@ -1636,9 +1636,9 @@
       "distance": 16.0,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 157.9,
-      "diesel": 189.9,
-      "updated": "2026-04-01T08:18:33.000Z",
+      "unleaded": 159.9,
+      "diesel": 192.9,
+      "updated": "2026-04-04T08:34:37.000Z",
       "cached": false
     },
     {
@@ -1757,8 +1757,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 157.9,
-      "diesel": 203.9,
-      "updated": "2026-04-02T14:10:11.000Z",
+      "diesel": 205.9,
+      "updated": "2026-04-04T08:56:34.000Z",
       "cached": false
     },
     {
@@ -2028,7 +2028,7 @@
       "is_motorway": false,
       "unleaded": 154.9,
       "diesel": 184.9,
-      "updated": "2026-04-04T08:34:02.079259+00:00",
+      "updated": "2026-04-04T09:03:56.960962+00:00",
       "cached": false
     },
     {
