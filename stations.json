@@ -1,10 +1,10 @@
 {
   "nationalAvg": {
-    "unleaded": 157.3,
+    "unleaded": 157.4,
     "diesel": 196.4
   },
-  "lastUpdated": "2026-04-07T12:34:32.789644+00:00",
-  "stationCount": 164,
+  "lastUpdated": "2026-04-07T13:05:32.828728+00:00",
+  "stationCount": 166,
   "stations": [
     {
       "name": "SAINSBURYS PENSBY ROAD THINGWALL",
@@ -812,8 +812,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 155.9,
-      "diesel": 183.9,
-      "updated": "2026-03-30T12:21:49.000Z",
+      "diesel": 190.9,
+      "updated": "2026-04-07T12:32:27.000Z",
       "cached": false
     },
     {
@@ -1507,6 +1507,21 @@
       "cached": false
     },
     {
+      "name": "Longacres Filling Station LTD",
+      "brand": "Texaco",
+      "address": "",
+      "postcode": "LL18 6EB",
+      "lat": 53.3044625,
+      "lng": -3.3550369,
+      "distance": 15.5,
+      "is_supermarket": true,
+      "is_motorway": false,
+      "unleaded": 164.0,
+      "diesel": 207.0,
+      "updated": "2026-04-07T12:53:31.000Z",
+      "cached": false
+    },
+    {
       "name": "MFG WALLASEY VILLAGE",
       "brand": "BP",
       "address": "",
@@ -1594,6 +1609,21 @@
       "unleaded": 158.9,
       "diesel": 214.9,
       "updated": "2026-04-05T13:05:00.000Z",
+      "cached": false
+    },
+    {
+      "name": "Cottage Service Station",
+      "brand": "Texaco",
+      "address": "",
+      "postcode": "CH1 6BS",
+      "lat": 53.2022201,
+      "lng": -2.9485061,
+      "distance": 3.6,
+      "is_supermarket": true,
+      "is_motorway": false,
+      "unleaded": 164.0,
+      "diesel": 207.0,
+      "updated": "2026-04-07T13:01:55.000Z",
       "cached": false
     },
     {
@@ -2028,7 +2058,7 @@
       "is_motorway": false,
       "unleaded": 157.9,
       "diesel": 189.9,
-      "updated": "2026-04-07T12:34:31.763451+00:00",
+      "updated": "2026-04-07T13:05:31.254510+00:00",
       "cached": false
     },
     {
