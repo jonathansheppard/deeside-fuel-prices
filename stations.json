@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
     "unleaded": 157.9,
-    "diesel": 197.7
+    "diesel": 197.8
   },
-  "lastUpdated": "2026-04-08T08:32:50.486174+00:00",
+  "lastUpdated": "2026-04-08T09:33:24.643875+00:00",
   "stationCount": 166,
   "stations": [
     {
@@ -68,7 +68,7 @@
     },
     {
       "name": "PGG EGREMONT",
-      "brand": "VALERO EGREMONT",
+      "brand": "VALERO",
       "address": "",
       "postcode": "CH44 0BZ",
       "lat": 53.42099,
@@ -143,7 +143,7 @@
     },
     {
       "name": "PGG LEVERHULME",
-      "brand": "VALERO LEVERHULME",
+      "brand": "VALERO",
       "address": "",
       "postcode": "CH62 6AT",
       "lat": 53.32585,
@@ -241,9 +241,9 @@
       "distance": 7.8,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 157.9,
-      "diesel": 189.9,
-      "updated": "2026-04-07T09:14:30.000Z",
+      "unleaded": 159.9,
+      "diesel": 194.9,
+      "updated": "2026-04-08T09:24:13.000Z",
       "cached": false
     },
     {
@@ -991,7 +991,7 @@
       "distance": 10.5,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 159.9,
+      "unleaded": 161.9,
       "diesel": 214.9,
       "updated": "2026-04-07T13:30:08.000Z",
       "cached": false
@@ -1442,8 +1442,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 159.9,
-      "diesel": 189.9,
-      "updated": "2026-03-30T12:56:29.000Z",
+      "diesel": 191.9,
+      "updated": "2026-04-08T08:38:40.000Z",
       "cached": false
     },
     {
@@ -2058,7 +2058,7 @@
       "is_motorway": false,
       "unleaded": 157.9,
       "diesel": 189.9,
-      "updated": "2026-04-08T08:32:49.542600+00:00",
+      "updated": "2026-04-08T09:33:23.551410+00:00",
       "cached": false
     },
     {
