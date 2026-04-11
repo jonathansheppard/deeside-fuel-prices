@@ -3,8 +3,8 @@
     "unleaded": 158.4,
     "diesel": 198.4
   },
-  "lastUpdated": "2026-04-11T11:33:15.459209+00:00",
-  "stationCount": 166,
+  "lastUpdated": "2026-04-11T12:33:23.976453+00:00",
+  "stationCount": 167,
   "stations": [
     {
       "name": "SAINSBURYS PENSBY ROAD THINGWALL",
@@ -124,6 +124,21 @@
       "unleaded": 161.9,
       "diesel": 219.9,
       "updated": "2026-04-07T19:29:00.000Z",
+      "cached": false
+    },
+    {
+      "name": "Essar Sefton St",
+      "brand": "Essar Sefton St",
+      "address": "",
+      "postcode": "L8 6UD",
+      "lat": 53.390138,
+      "lng": -2.9809864,
+      "distance": 14.0,
+      "is_supermarket": true,
+      "is_motorway": false,
+      "unleaded": 171.9,
+      "diesel": 191.9,
+      "updated": "2026-04-11T12:14:31.000Z",
       "cached": false
     },
     {
@@ -2058,7 +2073,7 @@
       "is_motorway": false,
       "unleaded": 157.9,
       "diesel": 194.9,
-      "updated": "2026-04-11T11:33:14.340840+00:00",
+      "updated": "2026-04-11T12:33:22.883522+00:00",
       "cached": false
     },
     {
