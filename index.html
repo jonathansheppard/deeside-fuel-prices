@@ -209,7 +209,7 @@
       <span class="key-item"><span class="key-dot key-green"></span> Below UK avg</span>
       <span class="key-item"><span class="key-dot key-amber"></span> Up to 5p above</span>
       <span class="key-item"><span class="key-dot key-red"></span> 5p+ above avg</span>
-      <span class="key-item"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:transparent;border:2px solid #4a4e5a;margin-right:4px;vertical-align:middle"></span> Price not current</span>
+      <span class="key-item"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#2a2e3d;border:2px solid #5a5e6a;margin-right:4px;vertical-align:middle"></span> Price not current</span>
       <span class="key-item"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#3a3a3a;border:2px solid #E8A838;margin-right:4px;vertical-align:middle"></span> Not reporting</span>
     </div>
     <div class="sidebar-scroll">
@@ -291,24 +291,25 @@ function createNoDataMarkerIcon(isActive) {
   });
 }
 
-// stale = grey outline ring only — station exists, price suppressed
+// stale = small filled grey dot — station is present and clickable, but clearly not a priced marker
 function createStaleMarkerIcon(isActive) {
-  const size = isActive ? 18 : 14;
+  const size = isActive ? 24 : 18;
   return L.divIcon({
     className: 'custom-marker',
-    html: '<div style="width:' + size + 'px;height:' + size + 'px;border-radius:50%;background:transparent;border:2px solid #4a4e5a"></div>',
+    html: '<div style="width:' + size + 'px;height:' + size + 'px;border-radius:50%;background:#2a2e3d;border:2px solid #5a5e6a"></div>',
     iconSize: [size, size], iconAnchor: [size/2, size/2], popupAnchor: [0, -size/2 - 4]
   });
 }
 
-function createMarkerIcon(price, priceClass, isActive, isCheapest) {
+function createMarkerIcon(price, priceClass, isActive, isCheapest, isHighest) {
   const colorMap = { 'price-low': '#34d399', 'price-mid': '#fbbf24', 'price-high': '#f87171' };
   const baseColor   = colorMap[priceClass] || '#8b8fa3';
-  const borderColor = isCheapest ? '#34d399' : (isActive ? '#38bdf8' : baseColor);
-  const bgColor     = isCheapest ? 'rgba(52,211,153,0.15)' : (isActive ? 'rgba(56,189,248,0.15)' : 'rgba(15,17,23,0.9)');
+  const borderColor = isCheapest ? '#34d399' : isHighest ? '#f87171' : isActive ? '#38bdf8' : baseColor;
+  const bgColor2 = isCheapest ? 'rgba(52,211,153,0.15)' : isHighest ? 'rgba(248,113,113,0.12)' : isActive ? 'rgba(56,189,248,0.15)' : 'rgba(15,17,23,0.9)';
+  const bgColor = bgColor2;
   const size        = isActive ? 52 : 44;
   const fontSize    = isActive ? 13 : 11;
-  const textColor   = isCheapest ? '#34d399' : '#e4e6ee';
+  const textColor   = isCheapest ? '#34d399' : isHighest ? '#f87171' : '#e4e6ee';
   return L.divIcon({
     className: 'custom-marker',
     html: '<div style="width:' + size + 'px;height:' + size + 'px;border-radius:50%;background:' + bgColor + ';border:2.5px solid ' + borderColor + ';display:flex;align-items:center;justify-content:center;font-family:\'JetBrains Mono\',monospace;font-size:' + fontSize + 'px;font-weight:700;color:' + textColor + ';box-shadow:0 4px 16px rgba(0,0,0,0.4);backdrop-filter:blur(4px);transition:all 0.2s">' + price.toFixed(1) + '</div>',
@@ -423,13 +424,14 @@ function render() {
     const isNoData   = !price || price <= 0;
     const staleState = isNoData ? 'stale' : getStaleState(station);
     const isCheapestMarker = !isNoData && staleState !== 'stale' && !isCostco(station) && price === cheapestPrice;
+    const isHighestMarker  = !isNoData && staleState !== 'stale' && !isCostco(station) && price === highestPrice;
     const isActive   = activeStation === station.id;
     const isExtended = station.distance > CORE_RADIUS;
     const markerPriceClass = (isNoData || staleState === 'stale') ? 'price-mid' : getPriceClass(price, stats);
 
     const markerIcon = isNoData ? createNoDataMarkerIcon(isActive) :
                        staleState === 'stale' ? createStaleMarkerIcon(isActive) :
-                       createMarkerIcon(price, markerPriceClass, isActive, isCheapestMarker);
+                       createMarkerIcon(price, markerPriceClass, isActive, isCheapestMarker, isHighestMarker);
 
     // Stale core stations dimmed (were 1.0). No-data slightly dimmed. Extended unchanged at 0.3.
     const markerOpacity = isNoData ? 0.65
