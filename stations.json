@@ -1,10 +1,10 @@
 {
   "nationalAvg": {
-    "unleaded": 158.3,
-    "diesel": 197.8
+    "unleaded": 158.4,
+    "diesel": 198.1
   },
-  "lastUpdated": "2026-04-17T14:33:52.235868+00:00",
-  "stationCount": 167,
+  "lastUpdated": "2026-04-17T20:36:06.601930+00:00",
+  "stationCount": 168,
   "stations": [
     {
       "name": "SAINSBURYS PENSBY ROAD THINGWALL",
@@ -94,6 +94,21 @@
       "unleaded": 155.9,
       "diesel": 187.9,
       "updated": "2026-04-13T06:29:27.000Z",
+      "cached": false
+    },
+    {
+      "name": "BP Old Hall Service Station",
+      "brand": "BP ",
+      "address": "",
+      "postcode": "CH62 3PB",
+      "lat": 53.3324532,
+      "lng": -2.9742105,
+      "distance": 10.1,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 1569.0,
+      "diesel": 1999.0,
+      "updated": "2026-04-17T14:46:14.000Z",
       "cached": false
     },
     {
@@ -946,7 +961,7 @@
       "distance": 5.7,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 151.9,
+      "unleaded": 148.9,
       "diesel": 176.9,
       "updated": "2026-04-16T09:51:50.000Z",
       "cached": false
@@ -1577,8 +1592,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 153.9,
-      "diesel": 186.9,
-      "updated": "2026-04-07T16:46:01.000Z",
+      "diesel": 185.9,
+      "updated": "2026-04-17T15:27:26.000Z",
       "cached": false
     },
     {
@@ -2073,7 +2088,7 @@
       "is_motorway": false,
       "unleaded": 157.9,
       "diesel": 194.9,
-      "updated": "2026-04-17T14:33:50.998094+00:00",
+      "updated": "2026-04-17T20:36:05.475124+00:00",
       "cached": false
     },
     {
