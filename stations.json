@@ -3,7 +3,7 @@
     "unleaded": null,
     "diesel": null
   },
-  "lastUpdated": "2026-04-22T09:01:04.905043+00:00",
+  "lastUpdated": "2026-04-22T09:32:55.703852+00:00",
   "stationCount": 171,
   "stations": [
     {
@@ -18,7 +18,7 @@
       "is_motorway": false,
       "unleaded": 157.9,
       "diesel": 187.9,
-      "updated": "2026-04-22T09:01:01.984600+00:00",
+      "updated": "2026-04-22T09:32:53.056215+00:00",
       "cached": false
     },
     {
@@ -33,7 +33,7 @@
       "is_motorway": false,
       "unleaded": 153.9,
       "diesel": 185.9,
-      "updated": "2026-04-22T09:01:01.984726+00:00",
+      "updated": "2026-04-22T09:32:53.056310+00:00",
       "cached": false
     },
     {
@@ -48,7 +48,7 @@
       "is_motorway": false,
       "unleaded": 155.9,
       "diesel": 189.9,
-      "updated": "2026-04-22T09:01:01.984804+00:00",
+      "updated": "2026-04-22T09:32:53.056369+00:00",
       "cached": false
     },
     {
@@ -63,7 +63,7 @@
       "is_motorway": false,
       "unleaded": 154.9,
       "diesel": 185.9,
-      "updated": "2026-04-22T09:01:01.984850+00:00",
+      "updated": "2026-04-22T09:32:53.056398+00:00",
       "cached": false
     },
     {
@@ -78,7 +78,7 @@
       "is_motorway": false,
       "unleaded": 156.9,
       "diesel": 190.9,
-      "updated": "2026-04-22T09:01:01.985157+00:00",
+      "updated": "2026-04-22T09:32:53.056655+00:00",
       "cached": false
     },
     {
@@ -93,7 +93,7 @@
       "is_motorway": false,
       "unleaded": 156.9,
       "diesel": 191.9,
-      "updated": "2026-04-22T09:01:01.985395+00:00",
+      "updated": "2026-04-22T09:32:53.056894+00:00",
       "cached": false
     },
     {
@@ -108,7 +108,7 @@
       "is_motorway": false,
       "unleaded": 155.9,
       "diesel": 187.9,
-      "updated": "2026-04-22T09:01:02.289049+00:00",
+      "updated": "2026-04-22T09:32:53.452449+00:00",
       "cached": false
     },
     {
@@ -123,7 +123,7 @@
       "is_motorway": false,
       "unleaded": 158.9,
       "diesel": 190.9,
-      "updated": "2026-04-22T09:01:02.289322+00:00",
+      "updated": "2026-04-22T09:32:53.452660+00:00",
       "cached": false
     },
     {
@@ -138,7 +138,7 @@
       "is_motorway": false,
       "unleaded": 156.9,
       "diesel": 189.9,
-      "updated": "2026-04-22T09:01:02.289382+00:00",
+      "updated": "2026-04-22T09:32:53.452693+00:00",
       "cached": false
     },
     {
@@ -153,7 +153,7 @@
       "is_motorway": false,
       "unleaded": 156.9,
       "diesel": 188.9,
-      "updated": "2026-04-22T09:01:02.289434+00:00",
+      "updated": "2026-04-22T09:32:53.452733+00:00",
       "cached": false
     },
     {
@@ -168,7 +168,7 @@
       "is_motorway": false,
       "unleaded": 153.9,
       "diesel": 185.9,
-      "updated": "2026-04-22T09:01:02.289472+00:00",
+      "updated": "2026-04-22T09:32:53.452766+00:00",
       "cached": false
     },
     {
@@ -183,7 +183,7 @@
       "is_motorway": false,
       "unleaded": 153.9,
       "diesel": 188.9,
-      "updated": "2026-04-22T09:01:02.289504+00:00",
+      "updated": "2026-04-22T09:32:53.452796+00:00",
       "cached": false
     },
     {
@@ -198,7 +198,7 @@
       "is_motorway": false,
       "unleaded": 157.9,
       "diesel": 189.9,
-      "updated": "2026-04-22T09:01:02.289562+00:00",
+      "updated": "2026-04-22T09:32:53.452843+00:00",
       "cached": false
     },
     {
@@ -213,7 +213,7 @@
       "is_motorway": false,
       "unleaded": 156.9,
       "diesel": 190.9,
-      "updated": "2026-04-22T09:01:02.289606+00:00",
+      "updated": "2026-04-22T09:32:53.452882+00:00",
       "cached": false
     },
     {
@@ -228,7 +228,7 @@
       "is_motorway": false,
       "unleaded": 157.9,
       "diesel": 189.9,
-      "updated": "2026-04-22T09:01:02.289626+00:00",
+      "updated": "2026-04-22T09:32:53.452902+00:00",
       "cached": false
     },
     {
@@ -243,7 +243,7 @@
       "is_motorway": false,
       "unleaded": 159.9,
       "diesel": 194.9,
-      "updated": "2026-04-22T09:01:02.549755+00:00",
+      "updated": "2026-04-22T09:32:53.591244+00:00",
       "cached": false
     },
     {
@@ -258,7 +258,7 @@
       "is_motorway": false,
       "unleaded": 156.7,
       "diesel": 188.7,
-      "updated": "2026-04-22T09:01:02.549853+00:00",
+      "updated": "2026-04-22T09:32:53.591315+00:00",
       "cached": false
     },
     {
@@ -273,7 +273,7 @@
       "is_motorway": false,
       "unleaded": 153.9,
       "diesel": 185.7,
-      "updated": "2026-04-22T09:01:02.549993+00:00",
+      "updated": "2026-04-22T09:32:53.591414+00:00",
       "cached": false
     },
     {
@@ -288,7 +288,7 @@
       "is_motorway": false,
       "unleaded": 156.9,
       "diesel": 189.7,
-      "updated": "2026-04-22T09:01:02.550032+00:00",
+      "updated": "2026-04-22T09:32:53.591443+00:00",
       "cached": false
     },
     {
@@ -303,7 +303,7 @@
       "is_motorway": false,
       "unleaded": 157.9,
       "diesel": 189.9,
-      "updated": "2026-04-22T09:01:02.550111+00:00",
+      "updated": "2026-04-22T09:32:53.591507+00:00",
       "cached": false
     },
     {
@@ -318,7 +318,7 @@
       "is_motorway": false,
       "unleaded": 160.9,
       "diesel": 194.9,
-      "updated": "2026-04-22T09:01:02.550169+00:00",
+      "updated": "2026-04-22T09:32:53.591553+00:00",
       "cached": false
     },
     {
@@ -333,7 +333,7 @@
       "is_motorway": false,
       "unleaded": 157.9,
       "diesel": 189.9,
-      "updated": "2026-04-22T09:01:02.550227+00:00",
+      "updated": "2026-04-22T09:32:53.591598+00:00",
       "cached": false
     },
     {
@@ -348,7 +348,7 @@
       "is_motorway": false,
       "unleaded": 163.9,
       "diesel": 198.9,
-      "updated": "2026-04-22T09:01:02.550307+00:00",
+      "updated": "2026-04-22T09:32:53.591660+00:00",
       "cached": false
     },
     {
@@ -363,7 +363,7 @@
       "is_motorway": false,
       "unleaded": 160.9,
       "diesel": 195.9,
-      "updated": "2026-04-22T09:01:02.550335+00:00",
+      "updated": "2026-04-22T09:32:53.591681+00:00",
       "cached": false
     },
     {
@@ -378,7 +378,7 @@
       "is_motorway": false,
       "unleaded": 157.9,
       "diesel": 192.9,
-      "updated": "2026-04-22T09:01:02.550363+00:00",
+      "updated": "2026-04-22T09:32:53.591705+00:00",
       "cached": false
     },
     {
@@ -393,7 +393,7 @@
       "is_motorway": false,
       "unleaded": 160.9,
       "diesel": 197.9,
-      "updated": "2026-04-22T09:01:02.550429+00:00",
+      "updated": "2026-04-22T09:32:53.591758+00:00",
       "cached": false
     },
     {
@@ -408,7 +408,7 @@
       "is_motorway": false,
       "unleaded": 154.7,
       "diesel": 185.7,
-      "updated": "2026-04-22T09:01:02.550459+00:00",
+      "updated": "2026-04-22T09:32:53.591781+00:00",
       "cached": false
     },
     {
@@ -423,7 +423,7 @@
       "is_motorway": false,
       "unleaded": 153.7,
       "diesel": 185.7,
-      "updated": "2026-04-22T09:01:02.550472+00:00",
+      "updated": "2026-04-22T09:32:53.591791+00:00",
       "cached": false
     },
     {
@@ -438,7 +438,7 @@
       "is_motorway": false,
       "unleaded": 156.9,
       "diesel": 190.9,
-      "updated": "2026-04-22T09:01:02.550534+00:00",
+      "updated": "2026-04-22T09:32:53.591834+00:00",
       "cached": false
     },
     {
@@ -453,7 +453,7 @@
       "is_motorway": false,
       "unleaded": 157.9,
       "diesel": 187.9,
-      "updated": "2026-04-22T09:01:02.550576+00:00",
+      "updated": "2026-04-22T09:32:53.591864+00:00",
       "cached": false
     },
     {
@@ -468,7 +468,7 @@
       "is_motorway": false,
       "unleaded": 159.9,
       "diesel": 190.9,
-      "updated": "2026-04-22T09:01:02.550662+00:00",
+      "updated": "2026-04-22T09:32:53.591928+00:00",
       "cached": false
     },
     {
@@ -483,7 +483,7 @@
       "is_motorway": false,
       "unleaded": 156.9,
       "diesel": 193.9,
-      "updated": "2026-04-22T09:01:02.550738+00:00",
+      "updated": "2026-04-22T09:32:53.591985+00:00",
       "cached": false
     },
     {
@@ -498,7 +498,7 @@
       "is_motorway": false,
       "unleaded": 161.9,
       "diesel": 193.9,
-      "updated": "2026-04-22T09:01:02.550796+00:00",
+      "updated": "2026-04-22T09:32:53.592029+00:00",
       "cached": false
     },
     {
@@ -513,7 +513,7 @@
       "is_motorway": false,
       "unleaded": 155.9,
       "diesel": 189.9,
-      "updated": "2026-04-22T09:01:02.550809+00:00",
+      "updated": "2026-04-22T09:32:53.592040+00:00",
       "cached": false
     },
     {
@@ -528,7 +528,7 @@
       "is_motorway": false,
       "unleaded": 170.9,
       "diesel": 194.9,
-      "updated": "2026-04-22T09:01:02.550834+00:00",
+      "updated": "2026-04-22T09:32:53.592061+00:00",
       "cached": false
     },
     {
@@ -543,7 +543,7 @@
       "is_motorway": false,
       "unleaded": 154.9,
       "diesel": 185.9,
-      "updated": "2026-04-22T09:01:02.550895+00:00",
+      "updated": "2026-04-22T09:32:53.592109+00:00",
       "cached": false
     },
     {
@@ -558,7 +558,7 @@
       "is_motorway": false,
       "unleaded": 172.9,
       "diesel": 198.9,
-      "updated": "2026-04-22T09:01:02.550939+00:00",
+      "updated": "2026-04-22T09:32:53.592141+00:00",
       "cached": false
     },
     {
@@ -573,7 +573,7 @@
       "is_motorway": false,
       "unleaded": 154.9,
       "diesel": 193.9,
-      "updated": "2026-04-22T09:01:02.551076+00:00",
+      "updated": "2026-04-22T09:32:53.592250+00:00",
       "cached": false
     },
     {
@@ -588,7 +588,7 @@
       "is_motorway": false,
       "unleaded": 153.9,
       "diesel": 185.7,
-      "updated": "2026-04-22T09:01:02.551104+00:00",
+      "updated": "2026-04-22T09:32:53.592270+00:00",
       "cached": false
     },
     {
@@ -603,7 +603,7 @@
       "is_motorway": false,
       "unleaded": 158.9,
       "diesel": 194.9,
-      "updated": "2026-04-22T09:01:02.551180+00:00",
+      "updated": "2026-04-22T09:32:53.592326+00:00",
       "cached": false
     },
     {
@@ -618,7 +618,7 @@
       "is_motorway": false,
       "unleaded": 157.9,
       "diesel": 192.9,
-      "updated": "2026-04-22T09:01:02.551195+00:00",
+      "updated": "2026-04-22T09:32:53.592338+00:00",
       "cached": false
     },
     {
@@ -633,7 +633,7 @@
       "is_motorway": false,
       "unleaded": 155.9,
       "diesel": 189.9,
-      "updated": "2026-04-22T09:01:02.955465+00:00",
+      "updated": "2026-04-22T09:32:54.053327+00:00",
       "cached": false
     },
     {
@@ -648,7 +648,7 @@
       "is_motorway": false,
       "unleaded": 157.9,
       "diesel": 189.9,
-      "updated": "2026-04-22T09:01:02.955645+00:00",
+      "updated": "2026-04-22T09:32:54.053477+00:00",
       "cached": false
     },
     {
@@ -663,7 +663,7 @@
       "is_motorway": false,
       "unleaded": 158.9,
       "diesel": 189.9,
-      "updated": "2026-04-22T09:01:02.955746+00:00",
+      "updated": "2026-04-22T09:32:54.053591+00:00",
       "cached": false
     },
     {
@@ -678,7 +678,7 @@
       "is_motorway": false,
       "unleaded": 159.9,
       "diesel": 194.9,
-      "updated": "2026-04-22T09:01:02.955782+00:00",
+      "updated": "2026-04-22T09:32:54.053635+00:00",
       "cached": false
     },
     {
@@ -693,7 +693,7 @@
       "is_motorway": false,
       "unleaded": 159.9,
       "diesel": 192.9,
-      "updated": "2026-04-22T09:01:03.204916+00:00",
+      "updated": "2026-04-22T09:32:54.503248+00:00",
       "cached": false
     },
     {
@@ -708,7 +708,7 @@
       "is_motorway": false,
       "unleaded": 157.9,
       "diesel": 190.9,
-      "updated": "2026-04-22T09:01:03.205127+00:00",
+      "updated": "2026-04-22T09:32:54.503411+00:00",
       "cached": false
     },
     {
@@ -723,7 +723,7 @@
       "is_motorway": false,
       "unleaded": 158.9,
       "diesel": 192.9,
-      "updated": "2026-04-22T09:01:03.559442+00:00",
+      "updated": "2026-04-22T09:32:54.665492+00:00",
       "cached": false
     },
     {
@@ -738,7 +738,7 @@
       "is_motorway": false,
       "unleaded": 157.9,
       "diesel": 193.9,
-      "updated": "2026-04-22T09:01:03.559613+00:00",
+      "updated": "2026-04-22T09:32:54.665596+00:00",
       "cached": false
     },
     {
