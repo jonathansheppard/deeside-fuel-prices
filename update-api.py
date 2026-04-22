@@ -40,7 +40,7 @@ REPO_DIR      = os.path.expanduser("~/deeside-fuel-prices")
 
 # ── GitHub token ──────────────────────────────────────────────────────────────
 # Set in ~/.zshrc: export GITHUB_TOKEN=your_token_here
-GITHUB_TOKEN  = os.environ.get("GITHUB_TOKEN", "")
+GITHUB_TOKEN  = "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"
 GITHUB_REMOTE = f"https://{GITHUB_TOKEN}@github.com/jonathansheppard/deeside-fuel-prices.git"
 
 # ── Geographic filter ─────────────────────────────────────────────────────────
@@ -79,7 +79,7 @@ def get_token():
     r = requests.post(TOKEN_URL, json={
         "client_id": CLIENT_ID,
         "client_secret": CLIENT_SECRET
-    }, timeout=15)
+    }, timeout=45)
     r.raise_for_status()
     data = r.json()
     token = data.get("data", {}).get("access_token") or data.get("access_token")
@@ -97,7 +97,7 @@ def fetch_all_batches(url, token, extra_params=None):
         params = {"batch-number": batch}
         if extra_params:
             params.update(extra_params)
-        r = requests.get(url, headers=headers, params=params, timeout=15)
+        r = requests.get(url, headers=headers, params=params, timeout=45)
         if r.status_code in (400, 403, 404):
             break
         r.raise_for_status()
@@ -135,7 +135,7 @@ def load_retailer_feeds():
 
     for feed in RETAILER_FEEDS:
         try:
-            r = requests.get(feed["url"], timeout=15, headers={
+            r = requests.get(feed["url"], timeout=45, headers={
                 "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
             })
             r.raise_for_status()
@@ -203,7 +203,7 @@ def load_retailer_feeds():
 def load_sheets_fallback():
     log("Loading Google Sheets fallback data...")
     try:
-        r = requests.get(SHEET_CSV_URL, timeout=15)
+        r = requests.get(SHEET_CSV_URL, timeout=45)
         r.raise_for_status()
         reader = csv.DictReader(io.StringIO(r.text))
         stations = {}
@@ -259,7 +259,6 @@ def git_push():
             return
         # Pull rebase to avoid conflicts, then push
         subprocess.run(
-            ["git", "-C", REPO_DIR, "pull", "--rebase", GITHUB_REMOTE, "main"],
             check=True, capture_output=True
         )
         subprocess.run(
