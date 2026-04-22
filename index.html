@@ -85,7 +85,6 @@
   .station-card.below-avg { background: rgba(52, 211, 153, 0.04); border-color: rgba(52, 211, 153, 0.1); }
   .station-card.expensive { background: var(--red-bg); border-color: rgba(248, 113, 113, 0.15); }
   .station-card.active { border-color: var(--accent); background: var(--accent-glow); }
-  /* STALE: opacity only — no amber border. no-data keeps amber border (different problem). */
   .station-card.stale { opacity: 0.6; }
   .station-card.no-data { border-left: 3px solid #E8A838; }
   .station-card.costco-card { background: rgba(96, 165, 250, 0.06); border-color: rgba(96, 165, 250, 0.2); }
@@ -245,7 +244,10 @@ async function loadStationData() {
   try {
     const resp = await fetch('stations.json?t=' + Date.now());
     const data = await resp.json();
-    nationalAvg = data.nationalAvg;
+    nationalAvg = {
+      unleaded: data.nationalAvg.unleaded || 131.7,
+      diesel:   data.nationalAvg.diesel   || 141.5
+    };
     fixedThresholds.unleaded = { low: nationalAvg.unleaded, high: nationalAvg.unleaded + 5 };
     fixedThresholds.diesel   = { low: nationalAvg.diesel,   high: nationalAvg.diesel   + 5 };
     stations = data.stations.filter(s => s.lat !== 0 && s.lng !== 0).map((s, i) => ({ ...s, id: i }));
@@ -281,7 +283,6 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
   maxZoom: 19
 }).addTo(map);
 
-// no-data = amber-bordered dark dot (station not participating in GOV.UK scheme)
 function createNoDataMarkerIcon(isActive) {
   const size = isActive ? 18 : 14;
   return L.divIcon({
@@ -291,7 +292,6 @@ function createNoDataMarkerIcon(isActive) {
   });
 }
 
-// stale = small filled grey dot — station is present and clickable, but clearly not a priced marker
 function createStaleMarkerIcon(isActive) {
   const size = isActive ? 24 : 18;
   return L.divIcon({
@@ -371,8 +371,6 @@ function timeAgo(dateStr) {
   return date.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
 }
 
-// Stale threshold: fresh < 24h, aging 24-48h (price shown with warning), stale 48h+ (price suppressed).
-// Was 96h — reduced to 48h. Petrol prices can move significantly in two days.
 function getStaleState(station) {
   if (!station.updated) return 'stale';
   const d = new Date(station.updated);
@@ -433,7 +431,6 @@ function render() {
                        staleState === 'stale' ? createStaleMarkerIcon(isActive) :
                        createMarkerIcon(price, markerPriceClass, isActive, isCheapestMarker, isHighestMarker);
 
-    // Stale core stations dimmed (were 1.0). No-data slightly dimmed. Extended unchanged at 0.3.
     const markerOpacity = isNoData ? 0.65
                         : staleState === 'stale' ? 0.4
                         : isExtended ? 0.3
@@ -532,7 +529,6 @@ function render() {
     const priceStyle       = (isNoData || staleState === 'stale') ? ' style="color:#9CA3AF"' : '';
     const dotClass         = (isNoData || staleState === 'stale') ? '' : priceClass.replace('price-', 'dot-');
 
-    // Dot treatment: fresh = coloured square, stale = grey outline circle, no-data = amber-bordered dark square
     let dotHtml;
     if (dotClass) {
       dotHtml = '<span class="brand-dot ' + dotClass + '"></span>';
@@ -549,7 +545,6 @@ function render() {
       return '<div class="price-diff level">approx UK average</div>';
     })() : '';
 
-    // Price column: fresh = figure + unit, stale = suppress price entirely, no-data = amber warning
     let priceColHtml;
     if (isNoData) {
       priceColHtml = '<div style="color:#E8A838;font-size:13px;font-weight:600">Not reporting</div><div style="font-size:10px;color:#9CA3AF;margin-top:2px">Last checked: today</div>';
@@ -645,5 +640,19 @@ document.getElementById('sortSelect').addEventListener('change', function(e) {
 loadStationData();
 setInterval(loadStationData, 15 * 60 * 1000);
 </script>
+
+<script>
+/* ── EMBED MODE: hide headers when loaded inside WordPress page template ── */
+(function() {
+  if (new URLSearchParams(window.location.search).get('embed') !== 'true') return;
+  var style = document.createElement('style');
+  style.textContent =
+    '.app-header { display: none !important; }' +
+    '.sub-header  { display: none !important; }' +
+    '.main-layout { height: 100vh !important; }';
+  document.head.appendChild(style);
+})();
+</script>
+
 </body>
 </html>
