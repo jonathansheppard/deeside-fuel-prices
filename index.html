@@ -371,13 +371,15 @@ function timeAgo(dateStr) {
   return date.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
 }
 
+// Stale threshold: fresh < 24h, aging 24h-7 days (price shown with warning), stale 7+ days (price suppressed).
+// Extended to 7 days to match the typical refresh cadence of independent stations in the GOV.UK scheme.
 function getStaleState(station) {
   if (!station.updated) return 'stale';
   const d = new Date(station.updated);
   if (isNaN(d.getTime())) return 'stale';
   const hours = (Date.now() - d.getTime()) / 3600000;
   if (hours < 24) return 'fresh';
-  if (hours < 48) return 'aging';
+  if (hours < 168) return 'aging';
   return 'stale';
 }
 
