@@ -40,7 +40,7 @@ REPO_DIR      = os.path.expanduser("~/deeside-fuel-prices")
 
 # ── GitHub token ──────────────────────────────────────────────────────────────
 # Set in ~/.zshrc: export GITHUB_TOKEN=your_token_here
-GITHUB_TOKEN  = "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"
+GITHUB_TOKEN  = os.environ.get("GITHUB_TOKEN", "")
 GITHUB_REMOTE = f"https://{GITHUB_TOKEN}@github.com/jonathansheppard/deeside-fuel-prices.git"
 
 # ── Geographic filter ─────────────────────────────────────────────────────────
@@ -79,7 +79,7 @@ def get_token():
     r = requests.post(TOKEN_URL, json={
         "client_id": CLIENT_ID,
         "client_secret": CLIENT_SECRET
-    }, timeout=45)
+    }, timeout=15)
     r.raise_for_status()
     data = r.json()
     token = data.get("data", {}).get("access_token") or data.get("access_token")
@@ -97,7 +97,7 @@ def fetch_all_batches(url, token, extra_params=None):
         params = {"batch-number": batch}
         if extra_params:
             params.update(extra_params)
-        r = requests.get(url, headers=headers, params=params, timeout=45)
+        r = requests.get(url, headers=headers, params=params, timeout=15)
         if r.status_code in (400, 403, 404):
             break
         r.raise_for_status()
@@ -135,7 +135,7 @@ def load_retailer_feeds():
 
     for feed in RETAILER_FEEDS:
         try:
-            r = requests.get(feed["url"], timeout=45, headers={
+            r = requests.get(feed["url"], timeout=15, headers={
                 "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
             })
             r.raise_for_status()
@@ -203,7 +203,7 @@ def load_retailer_feeds():
 def load_sheets_fallback():
     log("Loading Google Sheets fallback data...")
     try:
-        r = requests.get(SHEET_CSV_URL, timeout=45)
+        r = requests.get(SHEET_CSV_URL, timeout=15)
         r.raise_for_status()
         reader = csv.DictReader(io.StringIO(r.text))
         stations = {}
@@ -238,36 +238,38 @@ def parse_sheets_date(date_str):
 
 
 def git_push():
-    """Commit and push stations.json to GitHub."""
+    """Commit and push stations.json to GitHub. Uses os.system for Python 3.14 compatibility."""
     if not GITHUB_TOKEN:
         log("Git: GITHUB_TOKEN not set — skipping push")
         return
-    try:
-        # Stage stations.json only
-        subprocess.run(
-            ["git", "-C", REPO_DIR, "add", "stations.json"],
-            check=True, capture_output=True
-        )
-        # Commit — exits non-zero if nothing changed, handle gracefully
-        result = subprocess.run(
-            ["git", "-C", REPO_DIR, "commit", "-m",
-             f"Auto-update {datetime.now().strftime('%Y-%m-%d %H:%M')} UTC"],
-            capture_output=True, text=True
-        )
-        if "nothing to commit" in result.stdout or result.returncode != 0:
-            log("Git: no changes to commit")
-            return
-        # Pull rebase to avoid conflicts, then push
-        subprocess.run(
-            check=True, capture_output=True
-        )
-        subprocess.run(
-            ["git", "-C", REPO_DIR, "push", GITHUB_REMOTE, "main"],
-            check=True, capture_output=True
-        )
+
+    # Stage stations.json
+    os.system(f'cd "{REPO_DIR}" && git add stations.json')
+
+    # Check if there's anything to commit
+    status = os.popen(f'cd "{REPO_DIR}" && git status --porcelain stations.json').read().strip()
+    if not status:
+        log("Git: no changes to commit")
+        return
+
+    # Commit
+    commit_msg = f"Auto-update {datetime.now().strftime('%Y-%m-%d %H:%M')} UTC"
+    commit_exit = os.system(f'cd "{REPO_DIR}" && git commit -m "{commit_msg}"')
+    if commit_exit != 0:
+        log(f"Git: commit failed with exit code {commit_exit}")
+        return
+
+    # Pull rebase then push
+    pull_exit = os.system(f'cd "{REPO_DIR}" && git pull --rebase {GITHUB_REMOTE} main 2>&1')
+    if pull_exit != 0:
+        log(f"Git: pull --rebase failed with exit code {pull_exit}")
+        return
+
+    push_exit = os.system(f'cd "{REPO_DIR}" && git push {GITHUB_REMOTE} main 2>&1')
+    if push_exit == 0:
         log("Git: stations.json pushed to GitHub ✓")
-    except subprocess.CalledProcessError as e:
-        log(f"Git push failed: {e}")
+    else:
+        log(f"Git: push failed with exit code {push_exit}")
 
 
 def main():
@@ -336,6 +338,13 @@ def main():
                 local_stations[node_id]["diesel"] = float(price)
             if updated:
                 local_stations[node_id]["updated"] = updated
+
+    # ── Diagnostic: which stations got no prices from API? ──────────────────
+    null_price = [s for s in local_stations.values()
+                  if s.get("unleaded") is None and s.get("diesel") is None]
+    log(f"DIAGNOSTIC: {len(null_price)} of {len(local_stations)} local stations have NO prices after API match")
+    for s in null_price[:20]:
+        log(f"  MISSING: {s['name']:<40} | {s['postcode']:<10} | node_id: {s.get('node_id', 'none')}")
 
     # ── Source 2: Voluntary retailer feeds ───────────────────────────────────
     retailer_data = load_retailer_feeds()
@@ -416,7 +425,7 @@ def main():
     log(f"Sheets fallback: {fallback_count} gaps filled, {extra_count} stations added")
 
     # ── National averages ─────────────────────────────────────────────────────
-    log("Processing and filtering...")
+    log("Calculating national averages...")
     all_unleaded, all_diesel = [], []
     for p in all_prices:
         for fp in p.get("fuel_prices", []):
@@ -434,7 +443,25 @@ def main():
         "diesel":   round(sum(all_diesel)   / len(all_diesel),   1) if all_diesel   else None
     }
 
+    # Fallback: if mandatory API returned no prices, derive average from local station data
+    if national_avg["unleaded"] is None:
+        local_ul = [s["unleaded"] for s in local_stations.values()
+                    if s.get("unleaded") and s["unleaded"] >= PRICE_FLOOR]
+        national_avg["unleaded"] = round(sum(local_ul) / len(local_ul), 1) if local_ul else None
+        if national_avg["unleaded"]:
+            log(f"National avg fallback (local data): unleaded={national_avg['unleaded']}p")
+
+    if national_avg["diesel"] is None:
+        local_di = [s["diesel"] for s in local_stations.values()
+                    if s.get("diesel") and s["diesel"] >= PRICE_FLOOR]
+        national_avg["diesel"] = round(sum(local_di) / len(local_di), 1) if local_di else None
+        if national_avg["diesel"]:
+            log(f"National avg fallback (local data): diesel={national_avg['diesel']}p")
+
+    log(f"National averages: unleaded={national_avg['unleaded']}p, diesel={national_avg['diesel']}p")
+
     # ── Build output ──────────────────────────────────────────────────────────
+    log("Processing and filtering...")
     stations_list = list(local_stations.values())
     for s in stations_list:
         s.pop("node_id", None)
