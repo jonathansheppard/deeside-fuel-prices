@@ -93,11 +93,23 @@ def fetch_all_batches(url, token, extra_params=None):
     headers = {"Authorization": f"Bearer {token}"}
     all_records = []
     batch = 1
+    MAX_RETRIES = 3
     while True:
         params = {"batch-number": batch}
         if extra_params:
             params.update(extra_params)
-        r = requests.get(url, headers=headers, params=params, timeout=15)
+        # Retry loop — API is occasionally slow, don't let one slow batch kill the run
+        r = None
+        for attempt in range(1, MAX_RETRIES + 1):
+            try:
+                r = requests.get(url, headers=headers, params=params, timeout=60)
+                break
+            except (requests.exceptions.ReadTimeout, requests.exceptions.ConnectionError) as e:
+                if attempt < MAX_RETRIES:
+                    log(f"  Batch {batch} attempt {attempt} timed out, retrying...")
+                    continue
+                log(f"  Batch {batch} failed after {MAX_RETRIES} attempts: {e}")
+                raise
         if r.status_code in (400, 403, 404):
             break
         r.raise_for_status()
