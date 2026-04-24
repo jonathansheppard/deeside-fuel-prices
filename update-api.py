@@ -79,7 +79,7 @@ def get_token():
     r = requests.post(TOKEN_URL, json={
         "client_id": CLIENT_ID,
         "client_secret": CLIENT_SECRET
-    }, timeout=30)
+    }, timeout=90)
     r.raise_for_status()
     data = r.json()
     token = data.get("data", {}).get("access_token") or data.get("access_token")
