@@ -3,8 +3,8 @@
     "unleaded": 157.2,
     "diesel": 195.6
   },
-  "lastUpdated": "2026-04-30T22:35:34.554352+00:00",
-  "stationCount": 171,
+  "lastUpdated": "2026-04-30T23:38:31.541053+00:00",
+  "stationCount": 172,
   "stations": [
     {
       "name": "SAINSBURYS PENSBY ROAD THINGWALL",
@@ -457,6 +457,21 @@
       "cached": false
     },
     {
+      "name": "Go Garston Way",
+      "brand": "Go",
+      "address": "",
+      "postcode": "L19 2JA",
+      "lat": 53.3566,
+      "lng": -2.90426,
+      "distance": 12.7,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 148.9,
+      "diesel": 186.9,
+      "updated": "2026-04-30T22:46:05.000Z",
+      "cached": false
+    },
+    {
       "name": "MFG ROWTON",
       "brand": "ESSO",
       "address": "",
@@ -466,7 +481,7 @@
       "distance": 8.6,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 159.9,
+      "unleaded": 158.9,
       "diesel": 209.9,
       "updated": "2026-04-07T22:47:41.000Z",
       "cached": false
@@ -2133,7 +2148,7 @@
       "is_motorway": false,
       "unleaded": 158.9,
       "diesel": 190.9,
-      "updated": "2026-04-30T22:35:32.941824+00:00",
+      "updated": "2026-04-30T23:38:30.585701+00:00",
       "cached": false
     },
     {
