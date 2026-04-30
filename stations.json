@@ -3,8 +3,8 @@
     "unleaded": 157.2,
     "diesel": 195.7
   },
-  "lastUpdated": "2026-04-30T21:13:42.707608+00:00",
-  "stationCount": 168,
+  "lastUpdated": "2026-04-30T21:41:38.133551+00:00",
+  "stationCount": 171,
   "stations": [
     {
       "name": "SAINSBURYS PENSBY ROAD THINGWALL",
@@ -214,6 +214,21 @@
       "unleaded": 157.0,
       "diesel": 190.0,
       "updated": "2026-04-21T08:18:28.000Z",
+      "cached": false
+    },
+    {
+      "name": "Go Kirkdale",
+      "brand": "Go Kirkdale",
+      "address": "",
+      "postcode": "L4 3TL",
+      "lat": 53.44228,
+      "lng": -2.97823,
+      "distance": 17.6,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 148.9,
+      "diesel": 186.9,
+      "updated": "2026-04-30T21:28:24.000Z",
       "cached": false
     },
     {
@@ -1762,6 +1777,21 @@
       "cached": false
     },
     {
+      "name": "Go St. Marys",
+      "brand": "Go",
+      "address": "",
+      "postcode": "L19 0NE",
+      "lat": 53.35922,
+      "lng": -2.90988,
+      "distance": 12.8,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 148.9,
+      "diesel": 186.9,
+      "updated": "2026-04-30T21:11:55.000Z",
+      "cached": false
+    },
+    {
       "name": "SHELL GAYTON",
       "brand": "SHELL",
       "address": "",
@@ -1927,6 +1957,21 @@
       "cached": false
     },
     {
+      "name": "Go Tranmere",
+      "brand": "Go",
+      "address": "",
+      "postcode": "CH41 9BN",
+      "lat": 53.3788502,
+      "lng": -3.011648,
+      "distance": 13.1,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 148.9,
+      "diesel": 186.9,
+      "updated": "2026-04-30T21:20:13.000Z",
+      "cached": false
+    },
+    {
       "name": "SHELL HOOLE ROAD",
       "brand": "SHELL",
       "address": "",
@@ -2088,7 +2133,7 @@
       "is_motorway": false,
       "unleaded": 158.9,
       "diesel": 190.9,
-      "updated": "2026-04-30T21:13:41.498450+00:00",
+      "updated": "2026-04-30T21:41:37.053756+00:00",
       "cached": false
     },
     {
