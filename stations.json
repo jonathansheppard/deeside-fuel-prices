@@ -3,7 +3,7 @@
     "unleaded": 157.2,
     "diesel": 195.6
   },
-  "lastUpdated": "2026-05-01T09:10:09.756340+00:00",
+  "lastUpdated": "2026-05-01T09:50:47.877563+00:00",
   "stationCount": 172,
   "stations": [
     {
@@ -461,8 +461,8 @@
       "brand": "Go",
       "address": "",
       "postcode": "L19 2JA",
-      "lat": 53.3566,
-      "lng": -2.90426,
+      "lat": 53.35626,
+      "lng": -2.90421,
       "distance": 12.7,
       "is_supermarket": false,
       "is_motorway": false,
@@ -1891,9 +1891,9 @@
       "distance": 11.5,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 157.9,
-      "diesel": 189.9,
-      "updated": "2026-04-13T22:53:56.000Z",
+      "unleaded": 156.9,
+      "diesel": 188.9,
+      "updated": "2026-05-01T09:42:20.000Z",
       "cached": false
     },
     {
@@ -2148,7 +2148,7 @@
       "is_motorway": false,
       "unleaded": 158.9,
       "diesel": 190.9,
-      "updated": "2026-05-01T09:10:08.133840+00:00",
+      "updated": "2026-05-01T09:50:46.701129+00:00",
       "cached": false
     },
     {
