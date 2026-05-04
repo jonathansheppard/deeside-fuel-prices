@@ -3,7 +3,7 @@
     "unleaded": 157.5,
     "diesel": 195.8
   },
-  "lastUpdated": "2026-05-04T14:39:28.560252+00:00",
+  "lastUpdated": "2026-05-04T15:12:03.905646+00:00",
   "stationCount": 173,
   "stations": [
     {
@@ -871,9 +871,9 @@
       "distance": 4.6,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 157.8,
-      "diesel": 191.8,
-      "updated": "2026-05-04T10:18:42.000Z",
+      "unleaded": 157.9,
+      "diesel": 191.9,
+      "updated": "2026-05-04T14:49:05.000Z",
       "cached": false
     },
     {
@@ -886,9 +886,9 @@
       "distance": 4.2,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 157.8,
-      "diesel": 189.8,
-      "updated": "2026-05-04T09:56:37.000Z",
+      "unleaded": 157.9,
+      "diesel": 189.9,
+      "updated": "2026-05-04T14:45:55.000Z",
       "cached": false
     },
     {
@@ -1186,9 +1186,9 @@
       "distance": 15.8,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 155.8,
-      "diesel": 208.8,
-      "updated": "2026-05-04T10:04:44.000Z",
+      "unleaded": 155.9,
+      "diesel": 208.9,
+      "updated": "2026-05-04T14:50:41.000Z",
       "cached": false
     },
     {
@@ -1381,9 +1381,9 @@
       "distance": 18.5,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 157.8,
-      "diesel": 209.8,
-      "updated": "2026-05-04T09:54:51.000Z",
+      "unleaded": 157.9,
+      "diesel": 209.9,
+      "updated": "2026-05-04T15:02:13.000Z",
       "cached": false
     },
     {
@@ -1411,9 +1411,9 @@
       "distance": 17.1,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 155.8,
-      "diesel": 211.8,
-      "updated": "2026-05-04T10:09:30.000Z",
+      "unleaded": 155.9,
+      "diesel": 211.9,
+      "updated": "2026-05-04T15:02:16.000Z",
       "cached": false
     },
     {
@@ -2163,7 +2163,7 @@
       "is_motorway": false,
       "unleaded": 158.9,
       "diesel": 190.9,
-      "updated": "2026-05-04T14:39:27.403934+00:00",
+      "updated": "2026-05-04T15:12:02.768567+00:00",
       "cached": false
     },
     {
