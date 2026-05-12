@@ -3,8 +3,8 @@
     "unleaded": 158.7,
     "diesel": 195.4
   },
-  "lastUpdated": "2026-05-12T08:04:58.280228+00:00",
-  "stationCount": 174,
+  "lastUpdated": "2026-05-12T08:33:32.222867+00:00",
+  "stationCount": 173,
   "stations": [
     {
       "name": "SAINSBURYS PENSBY ROAD THINGWALL",
@@ -1117,6 +1117,21 @@
       "cached": false
     },
     {
+      "name": "ASDA LAIRDS EXPRESS PETROL",
+      "brand": "ESSO",
+      "address": "",
+      "postcode": "CH41 9BW",
+      "lat": 53.379868,
+      "lng": -3.01265,
+      "distance": 13.1,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 156.9,
+      "diesel": 211.9,
+      "updated": "2026-04-30T07:42:34.000Z",
+      "cached": false
+    },
+    {
       "name": "ASDA GREENLANE EXPRESS PETROL",
       "brand": "ESSO",
       "address": "",
@@ -1218,7 +1233,7 @@
       "is_motorway": false,
       "unleaded": 155.9,
       "diesel": 188.7,
-      "updated": "2026-05-12T08:04:56.070978+00:00",
+      "updated": "2026-04-29T15:00:21.000Z",
       "cached": false
     },
     {
@@ -2137,21 +2152,6 @@
       "cached": false
     },
     {
-      "name": "Esso ",
-      "brand": "Esso",
-      "address": "117 New Chester Road, Birkenhead",
-      "postcode": "CH41 9BW",
-      "lat": 53.379958,
-      "lng": -3.01276,
-      "distance": 13.2,
-      "is_supermarket": true,
-      "is_motorway": false,
-      "unleaded": 156.9,
-      "diesel": 192.9,
-      "updated": "2026-05-12T08:04:56.071299+00:00",
-      "cached": false
-    },
-    {
       "name": "TEXACO ",
       "brand": "TEXACO",
       "address": "Park Road, Ruthin, Denbighshire",
@@ -2163,7 +2163,7 @@
       "is_motorway": false,
       "unleaded": 158.9,
       "diesel": 190.9,
-      "updated": "2026-05-12T08:04:57.140849+00:00",
+      "updated": "2026-05-12T08:33:30.814987+00:00",
       "cached": false
     },
     {
@@ -2433,21 +2433,6 @@
       "is_motorway": false,
       "unleaded": 145.9,
       "diesel": 161.9,
-      "updated": "2026-03-13T00:00:00+00:00",
-      "cached": true
-    },
-    {
-      "name": "ASDA LAIRDS EXPRESS PETROL",
-      "brand": "ESSO",
-      "address": "",
-      "postcode": "",
-      "lat": 0.0,
-      "lng": 0.0,
-      "distance": 0,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 141.9,
-      "diesel": 158.9,
       "updated": "2026-03-13T00:00:00+00:00",
       "cached": true
     },
