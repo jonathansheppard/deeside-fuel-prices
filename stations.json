@@ -3,7 +3,7 @@
     "unleaded": 158.6,
     "diesel": 194.1
   },
-  "lastUpdated": "2026-05-15T14:31:58.013002+00:00",
+  "lastUpdated": "2026-05-15T15:02:33.208882+00:00",
   "stationCount": 173,
   "stations": [
     {
@@ -676,9 +676,9 @@
       "distance": 2.4,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 172.9,
-      "diesel": 219.9,
-      "updated": "2026-04-05T13:00:00.000Z",
+      "unleaded": null,
+      "diesel": null,
+      "updated": null,
       "cached": false
     },
     {
@@ -811,9 +811,9 @@
       "distance": 12.2,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 175.9,
-      "diesel": 215.9,
-      "updated": "2026-04-30T07:30:33.000Z",
+      "unleaded": 173.9,
+      "diesel": 196.9,
+      "updated": "2026-05-15T15:02:30.733592+00:00",
       "cached": false
     },
     {
@@ -857,8 +857,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 156.9,
-      "diesel": 207.9,
-      "updated": "2026-05-15T14:23:40.000Z",
+      "diesel": 189.9,
+      "updated": "2026-05-15T15:02:30.733750+00:00",
       "cached": false
     },
     {
@@ -932,8 +932,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 157.9,
-      "diesel": 208.9,
-      "updated": "2026-05-07T23:14:22.000Z",
+      "diesel": 189.9,
+      "updated": "2026-05-15T15:02:30.733493+00:00",
       "cached": false
     },
     {
@@ -961,9 +961,9 @@
       "distance": 5.5,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 159.9,
-      "diesel": 209.9,
-      "updated": "2026-05-07T23:08:10.000Z",
+      "unleaded": 158.9,
+      "diesel": 190.9,
+      "updated": "2026-05-15T15:02:30.733740+00:00",
       "cached": false
     },
     {
@@ -1066,10 +1066,10 @@
       "distance": 10.5,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 159.9,
-      "diesel": 210.9,
-      "updated": "2026-05-15T14:00:06.000Z",
-      "cached": false
+      "unleaded": 138.9,
+      "diesel": 158.9,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
     },
     {
       "name": "RONTEC BEBINGTON",
@@ -1141,9 +1141,9 @@
       "distance": 13.4,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 161.9,
-      "diesel": 213.9,
-      "updated": "2026-05-07T07:26:01.000Z",
+      "unleaded": 160.9,
+      "diesel": 194.9,
+      "updated": "2026-05-15T15:02:30.733185+00:00",
       "cached": false
     },
     {
@@ -1262,8 +1262,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 158.9,
-      "diesel": 209.9,
-      "updated": "2026-05-14T18:17:38.000Z",
+      "diesel": 190.9,
+      "updated": "2026-05-15T15:02:30.732786+00:00",
       "cached": false
     },
     {
@@ -2116,10 +2116,10 @@
       "distance": 2.7,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 157.9,
-      "diesel": 188.9,
-      "updated": "2026-05-15T13:58:11.000Z",
-      "cached": false
+      "unleaded": 144.9,
+      "diesel": 161.9,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
     },
     {
       "name": "MFG PRESTATYN",
@@ -2146,9 +2146,9 @@
       "distance": 17.6,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 159.9,
-      "diesel": 214.9,
-      "updated": "2026-05-01T10:22:00.000Z",
+      "unleaded": null,
+      "diesel": null,
+      "updated": null,
       "cached": false
     },
     {
@@ -2163,7 +2163,7 @@
       "is_motorway": false,
       "unleaded": 159.9,
       "diesel": 189.9,
-      "updated": "2026-05-15T14:31:56.899021+00:00",
+      "updated": "2026-05-15T15:02:31.776477+00:00",
       "cached": false
     },
     {
