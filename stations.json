@@ -3,7 +3,7 @@
     "unleaded": 159.0,
     "diesel": 193.3
   },
-  "lastUpdated": "2026-05-19T04:31:39.391511+00:00",
+  "lastUpdated": "2026-05-19T05:31:42.919772+00:00",
   "stationCount": 173,
   "stations": [
     {
@@ -218,7 +218,7 @@
     },
     {
       "name": "Go Kirkdale",
-      "brand": "Go Kirkdale",
+      "brand": "Go Forecourt",
       "address": "",
       "postcode": "L4 3TL",
       "lat": 53.44228,
@@ -1261,9 +1261,9 @@
       "distance": 13.6,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 160.9,
-      "diesel": 211.9,
-      "updated": "2026-05-15T21:17:48.000Z",
+      "unleaded": 161.9,
+      "diesel": 212.9,
+      "updated": "2026-05-19T05:11:10.000Z",
       "cached": false
     },
     {
@@ -2163,7 +2163,7 @@
       "is_motorway": false,
       "unleaded": 159.9,
       "diesel": 189.9,
-      "updated": "2026-05-19T04:31:38.315714+00:00",
+      "updated": "2026-05-19T05:31:41.984674+00:00",
       "cached": false
     },
     {
