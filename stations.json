@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
-    "unleaded": 159.0,
-    "diesel": 193.4
+    "unleaded": 158.9,
+    "diesel": 193.1
   },
-  "lastUpdated": "2026-05-19T02:02:15.824017+00:00",
+  "lastUpdated": "2026-05-19T03:02:25.917633+00:00",
   "stationCount": 173,
   "stations": [
     {
@@ -136,10 +136,10 @@
       "distance": 9.6,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 158.9,
-      "diesel": 214.9,
-      "updated": "2026-04-26T16:23:00.000Z",
-      "cached": false
+      "unleaded": 144.9,
+      "diesel": 159.9,
+      "updated": "2026-04-23T00:00:00+00:00",
+      "cached": true
     },
     {
       "name": "Essar Sefton St",
@@ -436,10 +436,10 @@
       "distance": 7.3,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 162.9,
-      "diesel": 214.9,
-      "updated": "2026-04-30T11:42:00.000Z",
-      "cached": false
+      "unleaded": 146.9,
+      "diesel": 164.9,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
     },
     {
       "name": "MFG MORRISONS CHESTER LIVERPOOL ROAD",
@@ -587,8 +587,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 161.9,
-      "diesel": 205.9,
-      "updated": "2026-05-18T23:15:10.000Z",
+      "diesel": 186.9,
+      "updated": "2026-05-19T03:02:24.170026+00:00",
       "cached": false
     },
     {
@@ -692,8 +692,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 161.9,
-      "diesel": 205.9,
-      "updated": "2026-05-18T23:00:22.000Z",
+      "diesel": 187.9,
+      "updated": "2026-05-19T03:02:24.169962+00:00",
       "cached": false
     },
     {
@@ -931,9 +931,9 @@
       "distance": 2.9,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 161.9,
-      "diesel": 209.9,
-      "updated": "2026-05-18T22:55:43.000Z",
+      "unleaded": 159.9,
+      "diesel": 189.9,
+      "updated": "2026-05-19T03:02:23.894005+00:00",
       "cached": false
     },
     {
@@ -1486,10 +1486,10 @@
       "distance": 7.2,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 162.9,
-      "diesel": 219.9,
-      "updated": "2026-04-05T13:05:00.000Z",
-      "cached": false
+      "unleaded": 141.9,
+      "diesel": 161.9,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
     },
     {
       "name": "SHELL CO-OP MOLD",
@@ -1831,10 +1831,10 @@
       "distance": 9.4,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 164.9,
-      "diesel": 219.9,
-      "updated": "2026-04-05T13:00:00.000Z",
-      "cached": false
+      "unleaded": 143.9,
+      "diesel": 161.9,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
     },
     {
       "name": "BROUGHTON CHESTER EXTRA - PETROL FILLING STATION",
@@ -2011,10 +2011,10 @@
       "distance": 6.4,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 162.9,
-      "diesel": 214.9,
-      "updated": "2026-05-16T09:45:00.000Z",
-      "cached": false
+      "unleaded": 144.9,
+      "diesel": 162.9,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
     },
     {
       "name": "BP HARVEST ENERGY SPEKE",
@@ -2163,7 +2163,7 @@
       "is_motorway": false,
       "unleaded": 159.9,
       "diesel": 189.9,
-      "updated": "2026-05-19T02:02:14.294835+00:00",
+      "updated": "2026-05-19T03:02:24.883140+00:00",
       "cached": false
     },
     {
