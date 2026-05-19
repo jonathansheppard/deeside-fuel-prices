@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
     "unleaded": 159.2,
-    "diesel": 193.3
+    "diesel": 193.2
   },
-  "lastUpdated": "2026-05-19T16:02:08.869250+00:00",
+  "lastUpdated": "2026-05-19T16:31:27.899145+00:00",
   "stationCount": 173,
   "stations": [
     {
@@ -211,10 +211,10 @@
       "distance": 10.6,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 144.0,
-      "diesel": 160.0,
-      "updated": "2026-03-13T00:00:00+00:00",
-      "cached": true
+      "unleaded": 156.0,
+      "diesel": 190.0,
+      "updated": "2026-05-18T09:51:09.000Z",
+      "cached": false
     },
     {
       "name": "Go Kirkdale",
@@ -331,9 +331,9 @@
       "distance": 13.9,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
+      "unleaded": 157.9,
+      "diesel": 188.9,
+      "updated": "2026-05-12T11:29:27.000Z",
       "cached": false
     },
     {
@@ -766,10 +766,10 @@
       "distance": 8.5,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 139.9,
-      "diesel": 159.9,
-      "updated": "2026-03-13T00:00:00+00:00",
-      "cached": true
+      "unleaded": 157.9,
+      "diesel": 181.9,
+      "updated": "2026-05-19T10:30:00.000Z",
+      "cached": false
     },
     {
       "name": "ASDA COEDPOETH EXPRESS PETROL",
@@ -841,9 +841,9 @@
       "distance": 15.4,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 159.9,
-      "diesel": 189.9,
-      "updated": "2026-05-19T16:02:07.434084+00:00",
+      "unleaded": 161.9,
+      "diesel": 207.9,
+      "updated": "2026-05-19T15:02:01.000Z",
       "cached": false
     },
     {
@@ -976,9 +976,9 @@
       "distance": 5.5,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 156.9,
-      "diesel": 190.9,
-      "updated": "2026-05-19T16:02:06.885369+00:00",
+      "unleaded": 158.9,
+      "diesel": 209.9,
+      "updated": "2026-05-07T07:26:23.000Z",
       "cached": false
     },
     {
@@ -1141,9 +1141,9 @@
       "distance": 13.4,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 162.9,
-      "diesel": 194.9,
-      "updated": "2026-05-19T16:02:06.885187+00:00",
+      "unleaded": 165.9,
+      "diesel": 214.9,
+      "updated": "2026-05-19T07:24:42.000Z",
       "cached": false
     },
     {
@@ -1186,9 +1186,9 @@
       "distance": 15.8,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
+      "unleaded": 155.9,
+      "diesel": 205.9,
+      "updated": "2026-05-19T14:39:19.000Z",
       "cached": false
     },
     {
@@ -1306,9 +1306,9 @@
       "distance": 16.7,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 155.9,
-      "diesel": 189.9,
-      "updated": "2026-05-19T16:02:07.433986+00:00",
+      "unleaded": 157.9,
+      "diesel": 184.9,
+      "updated": "2026-05-19T13:43:02.000Z",
       "cached": false
     },
     {
@@ -1666,9 +1666,9 @@
       "distance": 15.8,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
+      "unleaded": 157.9,
+      "diesel": 207.9,
+      "updated": "2026-05-04T09:47:44.000Z",
       "cached": false
     },
     {
@@ -1771,9 +1771,9 @@
       "distance": 17.9,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
+      "unleaded": 157.9,
+      "diesel": 207.9,
+      "updated": "2026-05-12T11:51:29.000Z",
       "cached": false
     },
     {
@@ -1786,9 +1786,9 @@
       "distance": 16.1,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
+      "unleaded": 157.9,
+      "diesel": 205.9,
+      "updated": "2026-05-18T12:43:25.000Z",
       "cached": false
     },
     {
@@ -2163,7 +2163,7 @@
       "is_motorway": false,
       "unleaded": 159.9,
       "diesel": 189.9,
-      "updated": "2026-05-19T16:02:07.914611+00:00",
+      "updated": "2026-05-19T16:31:26.786610+00:00",
       "cached": false
     },
     {
