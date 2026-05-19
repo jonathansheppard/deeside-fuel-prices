@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
-    "unleaded": 159.2,
-    "diesel": 193.2
+    "unleaded": 159.0,
+    "diesel": 192.6
   },
-  "lastUpdated": "2026-05-19T20:01:54.725363+00:00",
+  "lastUpdated": "2026-05-19T20:31:35.944435+00:00",
   "stationCount": 173,
   "stations": [
     {
@@ -47,8 +47,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 157.9,
-      "diesel": 199.9,
-      "updated": "2026-05-19T03:44:58.000Z",
+      "diesel": 184.9,
+      "updated": "2026-05-19T20:31:34.252018+00:00",
       "cached": false
     },
     {
@@ -136,10 +136,10 @@
       "distance": 9.6,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 158.9,
-      "diesel": 214.9,
-      "updated": "2026-04-26T16:23:00.000Z",
-      "cached": false
+      "unleaded": 144.9,
+      "diesel": 159.9,
+      "updated": "2026-04-23T00:00:00+00:00",
+      "cached": true
     },
     {
       "name": "Essar Sefton St",
@@ -211,10 +211,10 @@
       "distance": 10.6,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 156.0,
-      "diesel": 190.0,
-      "updated": "2026-05-18T09:51:09.000Z",
-      "cached": false
+      "unleaded": 144.0,
+      "diesel": 160.0,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
     },
     {
       "name": "Go Kirkdale",
@@ -331,9 +331,9 @@
       "distance": 13.9,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 157.9,
-      "diesel": 188.9,
-      "updated": "2026-05-12T11:29:27.000Z",
+      "unleaded": null,
+      "diesel": null,
+      "updated": null,
       "cached": false
     },
     {
@@ -347,8 +347,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 161.9,
-      "diesel": 205.9,
-      "updated": "2026-05-18T21:12:08.000Z",
+      "diesel": 187.9,
+      "updated": "2026-05-19T20:31:34.251874+00:00",
       "cached": false
     },
     {
@@ -407,8 +407,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 159.9,
-      "diesel": 199.9,
-      "updated": "2026-05-18T21:49:41.000Z",
+      "diesel": 187.9,
+      "updated": "2026-05-19T20:31:34.251735+00:00",
       "cached": false
     },
     {
@@ -436,10 +436,10 @@
       "distance": 7.3,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 162.9,
-      "diesel": 214.9,
-      "updated": "2026-04-30T11:42:00.000Z",
-      "cached": false
+      "unleaded": 146.9,
+      "diesel": 164.9,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
     },
     {
       "name": "MFG MORRISONS CHESTER LIVERPOOL ROAD",
@@ -453,7 +453,7 @@
       "is_motorway": false,
       "unleaded": 156.9,
       "diesel": 183.9,
-      "updated": "2026-05-18T22:21:20.000Z",
+      "updated": "2026-05-19T20:31:34.252112+00:00",
       "cached": false
     },
     {
@@ -497,8 +497,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 159.9,
-      "diesel": 205.9,
-      "updated": "2026-05-18T22:46:55.000Z",
+      "diesel": 188.9,
+      "updated": "2026-05-19T20:31:34.251848+00:00",
       "cached": false
     },
     {
@@ -587,8 +587,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 161.9,
-      "diesel": 205.9,
-      "updated": "2026-05-18T23:15:10.000Z",
+      "diesel": 186.9,
+      "updated": "2026-05-19T20:31:34.251704+00:00",
       "cached": false
     },
     {
@@ -602,8 +602,8 @@
       "is_supermarket": true,
       "is_motorway": false,
       "unleaded": 156.9,
-      "diesel": 192.9,
-      "updated": "2026-05-18T22:02:47.000Z",
+      "diesel": 182.9,
+      "updated": "2026-05-19T20:31:34.252223+00:00",
       "cached": false
     },
     {
@@ -692,8 +692,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 161.9,
-      "diesel": 205.9,
-      "updated": "2026-05-18T23:00:22.000Z",
+      "diesel": 187.9,
+      "updated": "2026-05-19T20:31:34.251663+00:00",
       "cached": false
     },
     {
@@ -766,10 +766,10 @@
       "distance": 8.5,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 157.9,
-      "diesel": 181.9,
-      "updated": "2026-05-19T10:30:00.000Z",
-      "cached": false
+      "unleaded": 139.9,
+      "diesel": 159.9,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
     },
     {
       "name": "ASDA COEDPOETH EXPRESS PETROL",
@@ -796,9 +796,9 @@
       "distance": 9.5,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 160.9,
-      "diesel": 210.9,
-      "updated": "2026-05-19T07:17:37.000Z",
+      "unleaded": 158.9,
+      "diesel": 190.9,
+      "updated": "2026-05-19T20:31:33.842367+00:00",
       "cached": false
     },
     {
@@ -812,8 +812,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 176.9,
-      "diesel": 216.9,
-      "updated": "2026-05-19T07:20:54.000Z",
+      "diesel": 196.9,
+      "updated": "2026-05-19T20:31:33.842654+00:00",
       "cached": false
     },
     {
@@ -826,9 +826,9 @@
       "distance": 9.2,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 155.9,
-      "diesel": 209.9,
-      "updated": "2026-05-19T07:17:19.000Z",
+      "unleaded": 154.9,
+      "diesel": 189.9,
+      "updated": "2026-05-19T20:31:33.842724+00:00",
       "cached": false
     },
     {
@@ -841,9 +841,9 @@
       "distance": 15.4,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 161.9,
-      "diesel": 207.9,
-      "updated": "2026-05-19T15:02:01.000Z",
+      "unleaded": 159.9,
+      "diesel": 189.9,
+      "updated": "2026-05-19T20:31:34.540761+00:00",
       "cached": false
     },
     {
@@ -856,9 +856,9 @@
       "distance": 4.5,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 157.9,
-      "diesel": 204.9,
-      "updated": "2026-05-15T20:50:04.000Z",
+      "unleaded": 156.9,
+      "diesel": 185.9,
+      "updated": "2026-05-19T20:31:33.842787+00:00",
       "cached": false
     },
     {
@@ -931,9 +931,9 @@
       "distance": 2.9,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 161.9,
-      "diesel": 209.9,
-      "updated": "2026-05-18T22:55:43.000Z",
+      "unleaded": 159.9,
+      "diesel": 189.9,
+      "updated": "2026-05-19T20:31:33.842567+00:00",
       "cached": false
     },
     {
@@ -946,9 +946,9 @@
       "distance": 3.1,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 159.9,
-      "diesel": 208.9,
-      "updated": "2026-05-07T23:07:04.000Z",
+      "unleaded": 157.9,
+      "diesel": 189.9,
+      "updated": "2026-05-19T20:31:33.842191+00:00",
       "cached": false
     },
     {
@@ -961,9 +961,9 @@
       "distance": 5.5,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 161.9,
-      "diesel": 209.9,
-      "updated": "2026-05-07T23:08:10.000Z",
+      "unleaded": 160.9,
+      "diesel": 190.9,
+      "updated": "2026-05-19T20:31:33.842778+00:00",
       "cached": false
     },
     {
@@ -976,9 +976,9 @@
       "distance": 5.5,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 158.9,
-      "diesel": 209.9,
-      "updated": "2026-05-07T07:26:23.000Z",
+      "unleaded": 156.9,
+      "diesel": 190.9,
+      "updated": "2026-05-19T20:31:33.842539+00:00",
       "cached": false
     },
     {
@@ -1111,9 +1111,9 @@
       "distance": 14.9,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 160.9,
-      "diesel": 209.9,
-      "updated": "2026-05-01T14:02:24.000Z",
+      "unleaded": 159.9,
+      "diesel": 190.9,
+      "updated": "2026-05-19T20:31:33.842499+00:00",
       "cached": false
     },
     {
@@ -1141,9 +1141,9 @@
       "distance": 13.4,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 165.9,
-      "diesel": 214.9,
-      "updated": "2026-05-19T07:24:42.000Z",
+      "unleaded": 162.9,
+      "diesel": 194.9,
+      "updated": "2026-05-19T20:31:33.842298+00:00",
       "cached": false
     },
     {
@@ -1186,9 +1186,9 @@
       "distance": 15.8,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 155.9,
-      "diesel": 205.9,
-      "updated": "2026-05-19T14:39:19.000Z",
+      "unleaded": null,
+      "diesel": null,
+      "updated": null,
       "cached": false
     },
     {
@@ -1201,9 +1201,9 @@
       "distance": 8.1,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 157.9,
-      "diesel": 203.9,
-      "updated": "2026-04-30T07:16:09.000Z",
+      "unleaded": 156.9,
+      "diesel": 184.9,
+      "updated": "2026-05-19T20:31:33.842227+00:00",
       "cached": false
     },
     {
@@ -1261,9 +1261,9 @@
       "distance": 13.6,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 161.9,
-      "diesel": 212.9,
-      "updated": "2026-05-19T05:11:10.000Z",
+      "unleaded": 160.9,
+      "diesel": 192.9,
+      "updated": "2026-05-19T20:31:33.841904+00:00",
       "cached": false
     },
     {
@@ -1306,9 +1306,9 @@
       "distance": 16.7,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 157.9,
-      "diesel": 184.9,
-      "updated": "2026-05-19T13:43:02.000Z",
+      "unleaded": 155.9,
+      "diesel": 189.9,
+      "updated": "2026-05-19T20:31:34.540595+00:00",
       "cached": false
     },
     {
@@ -1486,10 +1486,10 @@
       "distance": 7.2,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 162.9,
-      "diesel": 219.9,
-      "updated": "2026-04-05T13:05:00.000Z",
-      "cached": false
+      "unleaded": 141.9,
+      "diesel": 161.9,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
     },
     {
       "name": "SHELL CO-OP MOLD",
@@ -1607,8 +1607,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 161.9,
-      "diesel": 205.9,
-      "updated": "2026-05-18T22:50:12.000Z",
+      "diesel": 187.9,
+      "updated": "2026-05-19T20:31:34.251696+00:00",
       "cached": false
     },
     {
@@ -1666,9 +1666,9 @@
       "distance": 15.8,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 157.9,
-      "diesel": 207.9,
-      "updated": "2026-05-04T09:47:44.000Z",
+      "unleaded": null,
+      "diesel": null,
+      "updated": null,
       "cached": false
     },
     {
@@ -1712,8 +1712,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 161.9,
-      "diesel": 205.9,
-      "updated": "2026-05-18T22:48:35.000Z",
+      "diesel": 188.9,
+      "updated": "2026-05-19T20:31:34.251815+00:00",
       "cached": false
     },
     {
@@ -1771,9 +1771,9 @@
       "distance": 17.9,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 157.9,
-      "diesel": 207.9,
-      "updated": "2026-05-12T11:51:29.000Z",
+      "unleaded": null,
+      "diesel": null,
+      "updated": null,
       "cached": false
     },
     {
@@ -1786,9 +1786,9 @@
       "distance": 16.1,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 157.9,
-      "diesel": 205.9,
-      "updated": "2026-05-18T12:43:25.000Z",
+      "unleaded": null,
+      "diesel": null,
+      "updated": null,
       "cached": false
     },
     {
@@ -1802,8 +1802,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 159.9,
-      "diesel": 205.9,
-      "updated": "2026-05-18T22:49:48.000Z",
+      "diesel": 186.9,
+      "updated": "2026-05-19T20:31:34.251768+00:00",
       "cached": false
     },
     {
@@ -1831,10 +1831,10 @@
       "distance": 9.4,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 164.9,
-      "diesel": 219.9,
-      "updated": "2026-04-05T13:00:00.000Z",
-      "cached": false
+      "unleaded": 143.9,
+      "diesel": 161.9,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
     },
     {
       "name": "BROUGHTON CHESTER EXTRA - PETROL FILLING STATION",
@@ -2011,10 +2011,10 @@
       "distance": 6.4,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 162.9,
-      "diesel": 214.9,
-      "updated": "2026-05-16T09:45:00.000Z",
-      "cached": false
+      "unleaded": 144.9,
+      "diesel": 162.9,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
     },
     {
       "name": "BP HARVEST ENERGY SPEKE",
@@ -2132,8 +2132,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 160.9,
-      "diesel": 205.9,
-      "updated": "2026-05-18T22:36:55.000Z",
+      "diesel": 186.9,
+      "updated": "2026-05-19T20:31:34.251749+00:00",
       "cached": false
     },
     {
@@ -2163,7 +2163,7 @@
       "is_motorway": false,
       "unleaded": 159.9,
       "diesel": 189.9,
-      "updated": "2026-05-19T20:01:53.748538+00:00",
+      "updated": "2026-05-19T20:31:34.897248+00:00",
       "cached": false
     },
     {
