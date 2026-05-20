@@ -3,7 +3,7 @@
     "unleaded": 159.3,
     "diesel": 193.2
   },
-  "lastUpdated": "2026-05-20T02:31:22.133109+00:00",
+  "lastUpdated": "2026-05-20T03:02:32.751388+00:00",
   "stationCount": 173,
   "stations": [
     {
@@ -47,8 +47,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 157.9,
-      "diesel": 184.9,
-      "updated": "2026-05-20T02:31:20.287715+00:00",
+      "diesel": 199.9,
+      "updated": "2026-05-19T03:44:58.000Z",
       "cached": false
     },
     {
@@ -168,7 +168,7 @@
       "is_motorway": false,
       "unleaded": 155.9,
       "diesel": 181.9,
-      "updated": "2026-05-20T02:31:20.287827+00:00",
+      "updated": "2026-05-15T21:30:57.000Z",
       "cached": false
     },
     {
@@ -211,10 +211,10 @@
       "distance": 10.6,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 144.0,
-      "diesel": 160.0,
-      "updated": "2026-03-13T00:00:00+00:00",
-      "cached": true
+      "unleaded": 156.0,
+      "diesel": 190.0,
+      "updated": "2026-05-18T09:51:09.000Z",
+      "cached": false
     },
     {
       "name": "Go Kirkdale",
@@ -331,9 +331,9 @@
       "distance": 13.9,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
+      "unleaded": 157.9,
+      "diesel": 188.9,
+      "updated": "2026-05-12T11:29:27.000Z",
       "cached": false
     },
     {
@@ -497,8 +497,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 159.9,
-      "diesel": 187.9,
-      "updated": "2026-05-20T02:31:20.287482+00:00",
+      "diesel": 205.9,
+      "updated": "2026-05-18T22:46:55.000Z",
       "cached": false
     },
     {
@@ -571,10 +571,10 @@
       "distance": 9.1,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 145.9,
-      "diesel": 174.9,
-      "updated": "2026-03-13T00:00:00+00:00",
-      "cached": true
+      "unleaded": 161.9,
+      "diesel": 214.9,
+      "updated": "2026-04-16T11:59:00.000Z",
+      "cached": false
     },
     {
       "name": "MFG LISCARD",
@@ -723,7 +723,7 @@
       "is_motorway": false,
       "unleaded": 155.9,
       "diesel": 179.9,
-      "updated": "2026-05-20T02:31:20.287869+00:00",
+      "updated": "2026-05-19T21:56:21.000Z",
       "cached": false
     },
     {
@@ -766,10 +766,10 @@
       "distance": 8.5,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 139.9,
-      "diesel": 159.9,
-      "updated": "2026-03-13T00:00:00+00:00",
-      "cached": true
+      "unleaded": 157.9,
+      "diesel": 181.9,
+      "updated": "2026-05-19T10:30:00.000Z",
+      "cached": false
     },
     {
       "name": "ASDA COEDPOETH EXPRESS PETROL",
@@ -796,9 +796,9 @@
       "distance": 9.5,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 158.9,
-      "diesel": 190.9,
-      "updated": "2026-05-20T02:31:20.037853+00:00",
+      "unleaded": 160.9,
+      "diesel": 210.9,
+      "updated": "2026-05-19T07:17:37.000Z",
       "cached": false
     },
     {
@@ -812,8 +812,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 176.9,
-      "diesel": 196.9,
-      "updated": "2026-05-20T02:31:20.038136+00:00",
+      "diesel": 216.9,
+      "updated": "2026-05-19T07:20:54.000Z",
       "cached": false
     },
     {
@@ -826,9 +826,9 @@
       "distance": 9.2,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 154.9,
-      "diesel": 189.9,
-      "updated": "2026-05-20T02:31:20.038207+00:00",
+      "unleaded": 155.9,
+      "diesel": 209.9,
+      "updated": "2026-05-19T07:17:19.000Z",
       "cached": false
     },
     {
@@ -841,9 +841,9 @@
       "distance": 15.4,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 159.9,
-      "diesel": 189.9,
-      "updated": "2026-05-20T02:31:20.571540+00:00",
+      "unleaded": 161.9,
+      "diesel": 207.9,
+      "updated": "2026-05-19T15:02:01.000Z",
       "cached": false
     },
     {
@@ -976,9 +976,9 @@
       "distance": 5.5,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 156.9,
-      "diesel": 190.9,
-      "updated": "2026-05-20T02:31:20.038029+00:00",
+      "unleaded": 158.9,
+      "diesel": 209.9,
+      "updated": "2026-05-07T07:26:23.000Z",
       "cached": false
     },
     {
@@ -1141,9 +1141,9 @@
       "distance": 13.4,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 162.9,
-      "diesel": 194.9,
-      "updated": "2026-05-20T02:31:20.037782+00:00",
+      "unleaded": 165.9,
+      "diesel": 214.9,
+      "updated": "2026-05-19T07:24:42.000Z",
       "cached": false
     },
     {
@@ -1186,9 +1186,9 @@
       "distance": 15.8,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
+      "unleaded": 155.9,
+      "diesel": 205.9,
+      "updated": "2026-05-19T14:39:19.000Z",
       "cached": false
     },
     {
@@ -1201,9 +1201,9 @@
       "distance": 8.1,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 156.9,
-      "diesel": 184.9,
-      "updated": "2026-05-20T02:31:20.037702+00:00",
+      "unleaded": 157.9,
+      "diesel": 203.9,
+      "updated": "2026-04-30T07:16:09.000Z",
       "cached": false
     },
     {
@@ -1261,9 +1261,9 @@
       "distance": 13.6,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 160.9,
-      "diesel": 192.9,
-      "updated": "2026-05-20T02:31:20.037461+00:00",
+      "unleaded": 161.9,
+      "diesel": 212.9,
+      "updated": "2026-05-19T05:11:10.000Z",
       "cached": false
     },
     {
@@ -1306,9 +1306,9 @@
       "distance": 16.7,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 155.9,
-      "diesel": 189.9,
-      "updated": "2026-05-20T02:31:20.571436+00:00",
+      "unleaded": 157.9,
+      "diesel": 184.9,
+      "updated": "2026-05-19T13:43:02.000Z",
       "cached": false
     },
     {
@@ -1666,9 +1666,9 @@
       "distance": 15.8,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
+      "unleaded": 157.9,
+      "diesel": 207.9,
+      "updated": "2026-05-04T09:47:44.000Z",
       "cached": false
     },
     {
@@ -1771,9 +1771,9 @@
       "distance": 17.9,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
+      "unleaded": 157.9,
+      "diesel": 207.9,
+      "updated": "2026-05-12T11:51:29.000Z",
       "cached": false
     },
     {
@@ -1786,9 +1786,9 @@
       "distance": 16.1,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
+      "unleaded": 157.9,
+      "diesel": 205.9,
+      "updated": "2026-05-18T12:43:25.000Z",
       "cached": false
     },
     {
@@ -1968,7 +1968,7 @@
       "is_motorway": false,
       "unleaded": 158.9,
       "diesel": 183.9,
-      "updated": "2026-05-20T02:31:20.287917+00:00",
+      "updated": "2026-05-11T21:31:51.000Z",
       "cached": false
     },
     {
@@ -2086,9 +2086,9 @@
       "distance": 9.3,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 153.9,
+      "unleaded": 154.9,
       "diesel": 182.9,
-      "updated": "2026-05-20T02:31:19.856170+00:00",
+      "updated": "2026-05-17T22:08:20.000Z",
       "cached": false
     },
     {
@@ -2132,8 +2132,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 161.9,
-      "diesel": 185.9,
-      "updated": "2026-05-20T02:31:20.287332+00:00",
+      "diesel": 205.9,
+      "updated": "2026-05-18T22:36:55.000Z",
       "cached": false
     },
     {
@@ -2163,7 +2163,7 @@
       "is_motorway": false,
       "unleaded": 159.9,
       "diesel": 189.9,
-      "updated": "2026-05-20T02:31:21.016722+00:00",
+      "updated": "2026-05-20T03:02:31.548844+00:00",
       "cached": false
     },
     {
