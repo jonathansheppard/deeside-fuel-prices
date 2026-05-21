@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
-    "unleaded": 159.5,
-    "diesel": 193.0
+    "unleaded": 159.6,
+    "diesel": 193.1
   },
-  "lastUpdated": "2026-05-21T02:02:01.607572+00:00",
+  "lastUpdated": "2026-05-21T02:31:33.017248+00:00",
   "stationCount": 173,
   "stations": [
     {
@@ -47,8 +47,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 157.9,
-      "diesel": 199.9,
-      "updated": "2026-05-19T03:44:58.000Z",
+      "diesel": 183.9,
+      "updated": "2026-05-21T02:31:30.899177+00:00",
       "cached": false
     },
     {
@@ -136,10 +136,10 @@
       "distance": 9.6,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 158.9,
-      "diesel": 214.9,
-      "updated": "2026-04-26T16:23:00.000Z",
-      "cached": false
+      "unleaded": 144.9,
+      "diesel": 159.9,
+      "updated": "2026-04-23T00:00:00+00:00",
+      "cached": true
     },
     {
       "name": "Essar Sefton St",
@@ -316,9 +316,9 @@
       "distance": 11.0,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 156.9,
-      "diesel": 208.9,
-      "updated": "2026-05-01T12:25:29.000Z",
+      "unleaded": null,
+      "diesel": null,
+      "updated": null,
       "cached": false
     },
     {
@@ -407,8 +407,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 159.9,
-      "diesel": 199.9,
-      "updated": "2026-05-18T21:49:41.000Z",
+      "diesel": 186.9,
+      "updated": "2026-05-21T02:31:30.898573+00:00",
       "cached": false
     },
     {
@@ -421,9 +421,9 @@
       "distance": 16.8,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 157.9,
-      "diesel": 201.9,
-      "updated": "2026-05-20T15:53:45.000Z",
+      "unleaded": null,
+      "diesel": null,
+      "updated": null,
       "cached": false
     },
     {
@@ -497,8 +497,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 161.9,
-      "diesel": 205.9,
-      "updated": "2026-05-18T22:46:55.000Z",
+      "diesel": 186.9,
+      "updated": "2026-05-21T02:31:30.898832+00:00",
       "cached": false
     },
     {
@@ -587,8 +587,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 163.9,
-      "diesel": 205.9,
-      "updated": "2026-05-18T23:15:10.000Z",
+      "diesel": 185.9,
+      "updated": "2026-05-21T02:31:30.898501+00:00",
       "cached": false
     },
     {
@@ -692,8 +692,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 161.9,
-      "diesel": 205.9,
-      "updated": "2026-05-18T23:00:22.000Z",
+      "diesel": 186.9,
+      "updated": "2026-05-21T02:31:30.898422+00:00",
       "cached": false
     },
     {
@@ -723,7 +723,7 @@
       "is_motorway": false,
       "unleaded": 156.9,
       "diesel": 179.9,
-      "updated": "2026-05-19T21:56:21.000Z",
+      "updated": "2026-05-21T02:31:30.899399+00:00",
       "cached": false
     },
     {
@@ -781,9 +781,9 @@
       "distance": 9.5,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 159.9,
-      "diesel": 205.9,
-      "updated": "2026-05-20T21:57:26.000Z",
+      "unleaded": 158.9,
+      "diesel": 190.9,
+      "updated": "2026-05-21T02:31:30.642780+00:00",
       "cached": false
     },
     {
@@ -871,9 +871,9 @@
       "distance": 4.6,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 156.9,
-      "diesel": 187.9,
-      "updated": "2026-05-20T15:52:47.000Z",
+      "unleaded": null,
+      "diesel": null,
+      "updated": null,
       "cached": false
     },
     {
@@ -886,10 +886,10 @@
       "distance": 4.2,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 157.9,
-      "diesel": 188.9,
-      "updated": "2026-05-20T15:54:03.000Z",
-      "cached": false
+      "unleaded": 141.7,
+      "diesel": 161.7,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
     },
     {
       "name": "Dobshill Service Station",
@@ -1006,10 +1006,10 @@
       "distance": 5.7,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 154.9,
-      "diesel": 175.9,
-      "updated": "2026-05-08T14:22:38.000Z",
-      "cached": false
+      "unleaded": 132.9,
+      "diesel": 150.9,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
     },
     {
       "name": "ASDA HANDBRIDGE EXPRESS PETROL",
@@ -1021,9 +1021,9 @@
       "distance": 6.1,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 159.9,
-      "diesel": 203.9,
-      "updated": "2026-05-20T17:33:47.000Z",
+      "unleaded": 158.9,
+      "diesel": 188.9,
+      "updated": "2026-05-21T02:31:30.642968+00:00",
       "cached": false
     },
     {
@@ -1322,8 +1322,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 154.9,
-      "diesel": 181.9,
-      "updated": "2026-05-20T17:56:35.000Z",
+      "diesel": 182.9,
+      "updated": "2026-05-21T02:31:30.643372+00:00",
       "cached": false
     },
     {
@@ -1607,8 +1607,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 163.9,
-      "diesel": 205.9,
-      "updated": "2026-05-18T22:50:12.000Z",
+      "diesel": 185.9,
+      "updated": "2026-05-21T02:31:30.898481+00:00",
       "cached": false
     },
     {
@@ -1802,8 +1802,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 161.9,
-      "diesel": 205.9,
-      "updated": "2026-05-18T22:49:48.000Z",
+      "diesel": 184.9,
+      "updated": "2026-05-21T02:31:30.898656+00:00",
       "cached": false
     },
     {
@@ -1892,8 +1892,8 @@
       "is_supermarket": true,
       "is_motorway": false,
       "unleaded": 158.9,
-      "diesel": 188.9,
-      "updated": "2026-05-20T21:59:44.000Z",
+      "diesel": 189.9,
+      "updated": "2026-05-21T02:31:30.378779+00:00",
       "cached": false
     },
     {
@@ -2163,7 +2163,7 @@
       "is_motorway": false,
       "unleaded": 159.9,
       "diesel": 189.9,
-      "updated": "2026-05-21T02:02:00.650684+00:00",
+      "updated": "2026-05-21T02:31:31.640706+00:00",
       "cached": false
     },
     {
