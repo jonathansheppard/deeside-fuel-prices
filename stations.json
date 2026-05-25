@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
     "unleaded": 160.0,
-    "diesel": 192.6
+    "diesel": 192.5
   },
-  "lastUpdated": "2026-05-25T06:31:44.040396+00:00",
+  "lastUpdated": "2026-05-25T07:02:33.620869+00:00",
   "stationCount": 173,
   "stations": [
     {
@@ -151,9 +151,9 @@
       "distance": 14.0,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
+      "unleaded": 157.9,
+      "diesel": 188.9,
+      "updated": "2026-05-23T18:21:24.000Z",
       "cached": false
     },
     {
@@ -361,9 +361,9 @@
       "distance": 11.1,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
+      "unleaded": 157.9,
+      "diesel": 199.9,
+      "updated": "2026-05-24T06:06:59.000Z",
       "cached": false
     },
     {
@@ -378,7 +378,7 @@
       "is_motorway": false,
       "unleaded": 157.9,
       "diesel": 182.9,
-      "updated": "2026-05-25T06:31:41.092219+00:00",
+      "updated": "2026-05-22T22:21:11.000Z",
       "cached": false
     },
     {
@@ -466,9 +466,9 @@
       "distance": 17.6,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
+      "unleaded": 152.1,
+      "diesel": 182.1,
+      "updated": "2026-05-08T11:34:16.000Z",
       "cached": false
     },
     {
@@ -543,7 +543,7 @@
       "is_motorway": false,
       "unleaded": 157.9,
       "diesel": 183.9,
-      "updated": "2026-05-25T06:31:41.092167+00:00",
+      "updated": "2026-05-23T21:53:38.000Z",
       "cached": false
     },
     {
@@ -616,10 +616,10 @@
       "distance": 15.5,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 137.9,
-      "diesel": 156.9,
-      "updated": "2026-03-13T00:00:00+00:00",
-      "cached": true
+      "unleaded": 153.4,
+      "diesel": 183.4,
+      "updated": "2026-05-23T17:25:47.000Z",
+      "cached": false
     },
     {
       "name": "PRESTATYN SUPERSTORE - PETROL FILLING STATION",
@@ -661,10 +661,10 @@
       "distance": 2.0,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 151.9,
-      "diesel": 174.9,
-      "updated": "2026-03-13T00:00:00+00:00",
-      "cached": true
+      "unleaded": 169.9,
+      "diesel": 214.9,
+      "updated": "2026-05-23T12:50:00.000Z",
+      "cached": false
     },
     {
       "name": "SHELL CO-OP NORTHOP HALL",
@@ -676,9 +676,9 @@
       "distance": 2.4,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
+      "unleaded": 169.9,
+      "diesel": 219.9,
+      "updated": "2026-04-05T13:00:00.000Z",
       "cached": false
     },
     {
@@ -962,8 +962,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 161.9,
-      "diesel": 190.9,
-      "updated": "2026-05-25T06:31:41.278703+00:00",
+      "diesel": 209.9,
+      "updated": "2026-05-07T23:08:10.000Z",
       "cached": false
     },
     {
@@ -1051,10 +1051,10 @@
       "distance": 6.0,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 137.9,
-      "diesel": 145.9,
-      "updated": "2026-03-13T00:00:00+00:00",
-      "cached": true
+      "unleaded": 155.9,
+      "diesel": 176.9,
+      "updated": "2026-05-08T04:39:34.000Z",
+      "cached": false
     },
     {
       "name": "SPITAL SF CONNECT",
@@ -2163,7 +2163,7 @@
       "is_motorway": false,
       "unleaded": 159.9,
       "diesel": 189.9,
-      "updated": "2026-05-25T06:31:42.143259+00:00",
+      "updated": "2026-05-25T07:02:32.736188+00:00",
       "cached": false
     },
     {
