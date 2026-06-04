@@ -123,7 +123,63 @@ def fetch_all_batches(url, token, extra_params=None):
     return all_records
 
 
+<<<<<<< Updated upstream
 def in_area(lat, lng):
+=======
+def matches_postcode(postcode):
+    pc = postcode.upper().strip()
+    return any(pc.startswith(p) for p in TARGET_POSTCODES)
+
+
+def process_data(stations_raw, prices_raw):
+    """Merge station info with prices, filter to local area."""
+    
+    # Build station lookup
+    station_map = {}
+    for s in stations_raw:
+        loc = s.get("location", {})
+        pc = loc.get("postcode", "")
+        if not matches_postcode(pc):
+            continue
+        if s.get("permanent_closure") or s.get("temporary_closure"):
+            continue
+        
+        lat = loc.get("latitude")
+        lng = loc.get("longitude")
+        if not lat or not lng:
+            continue
+        station_map[nid]["diesel"] = diesel
+        station_map[nid]["updated"] = latest_update or ""
+    
+    # Build final list
+    stations = []
+    sid = 1
+    for nid, s in station_map.items():
+        if s.get("unleaded") is None and s.get("diesel") is None:
+            continue
+        s["id"] = sid
+        stations.append(s)
+        sid += 1
+    
+    stations.sort(key=lambda x: x.get("unleaded") or 999)
+    return stations
+
+
+def commit_to_github(json_content):
+    """Commit stations.json to GitHub."""
+    if GITHUB_TOKEN == "YOUR_TOKEN_HERE":
+        log("No GITHUB_TOKEN set. Saving locally only.")
+        return False
+    
+    api_url = f"https://api.github.com/repos/{GITHUB_REPO}/contents/{GITHUB_FILE}"
+    headers = {
+        "Authorization": f"token {GITHUB_TOKEN}",
+        "Content-Type": "application/json",
+        "User-Agent": "Deeside-Fuel-Updater"
+    }
+    
+    # Get current SHA
+>>>>>>> Stashed changes
     try:
         return LAT_MIN <= float(lat) <= LAT_MAX and LNG_MIN <= float(lng) <= LNG_MAX
     except (TypeError, ValueError):
