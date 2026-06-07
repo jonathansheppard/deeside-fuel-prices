@@ -123,9 +123,13 @@ def fetch_all_batches(url, token, extra_params=None):
     return all_records
 
 
-<<<<<<< Updated upstream
+
 def in_area(lat, lng):
-=======
+    try:
+        return LAT_MIN <= float(lat) <= LAT_MAX and LNG_MIN <= float(lng) <= LNG_MAX
+    except:
+        return False
+
 def matches_postcode(postcode):
     pc = postcode.upper().strip()
     return any(pc.startswith(p) for p in TARGET_POSTCODES)
@@ -179,7 +183,6 @@ def commit_to_github(json_content):
     }
     
     # Get current SHA
->>>>>>> Stashed changes
     try:
         return LAT_MIN <= float(lat) <= LAT_MAX and LNG_MIN <= float(lng) <= LNG_MAX
     except (TypeError, ValueError):
