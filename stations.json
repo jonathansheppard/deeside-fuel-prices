@@ -1,10 +1,10 @@
 {
   "nationalAvg": {
-    "unleaded": 155.1,
-    "diesel": 183.7
+    "unleaded": 155.0,
+    "diesel": 184.2
   },
-  "lastUpdated": "2026-06-14T14:02:37.061208+00:00",
-  "stationCount": 174,
+  "lastUpdated": "2026-06-14T15:02:09.806784+00:00",
+  "stationCount": 175,
   "stations": [
     {
       "name": "SAINSBURYS PENSBY ROAD THINGWALL",
@@ -16,10 +16,10 @@
       "distance": 11.5,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 154.9,
-      "diesel": 176.9,
-      "updated": "2026-06-11T22:57:42.000Z",
-      "cached": false
+      "unleaded": 136.9,
+      "diesel": 155.9,
+      "updated": "2026-04-23T00:00:00+00:00",
+      "cached": true
     },
     {
       "name": "SAINSBURYS LIVERPOOL GREAT HOMER STREET",
@@ -47,8 +47,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 152.9,
-      "diesel": 195.9,
-      "updated": "2026-06-10T07:44:24.000Z",
+      "diesel": 173.9,
+      "updated": "2026-06-14T15:02:08.060323+00:00",
       "cached": false
     },
     {
@@ -316,9 +316,9 @@
       "distance": 11.0,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 153.9,
-      "diesel": 190.9,
-      "updated": "2026-06-11T11:26:54.000Z",
+      "unleaded": null,
+      "diesel": null,
+      "updated": null,
       "cached": false
     },
     {
@@ -361,9 +361,9 @@
       "distance": 11.1,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 154.9,
-      "diesel": 199.9,
-      "updated": "2026-05-24T06:06:59.000Z",
+      "unleaded": null,
+      "diesel": null,
+      "updated": null,
       "cached": false
     },
     {
@@ -421,9 +421,9 @@
       "distance": 16.8,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 153.9,
-      "diesel": 189.9,
-      "updated": "2026-06-12T15:23:19.000Z",
+      "unleaded": null,
+      "diesel": null,
+      "updated": null,
       "cached": false
     },
     {
@@ -556,10 +556,10 @@
       "distance": 7.7,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 156.9,
-      "diesel": 185.9,
-      "updated": "2026-06-12T09:22:33.000Z",
-      "cached": false
+      "unleaded": 141.9,
+      "diesel": 155.9,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
     },
     {
       "name": "SHELL CARLETT",
@@ -631,9 +631,9 @@
       "distance": 18.3,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 155.9,
-      "diesel": 173.9,
-      "updated": "2026-06-11T17:52:22.000Z",
+      "unleaded": 156.9,
+      "diesel": 189.9,
+      "updated": "2026-06-14T15:02:07.300403+00:00",
       "cached": false
     },
     {
@@ -693,7 +693,7 @@
       "is_motorway": false,
       "unleaded": 156.9,
       "diesel": 177.9,
-      "updated": "2026-06-14T14:02:35.168468+00:00",
+      "updated": "2026-06-14T15:02:08.060029+00:00",
       "cached": false
     },
     {
@@ -706,10 +706,10 @@
       "distance": 14.5,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 155.9,
-      "diesel": 204.9,
-      "updated": "2026-06-12T10:40:00.000Z",
-      "cached": false
+      "unleaded": 139.9,
+      "diesel": 156.9,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
     },
     {
       "name": "MFG MORRISONS LIVERPOOL SPEKE",
@@ -841,9 +841,9 @@
       "distance": 15.4,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 158.9,
-      "diesel": 198.9,
-      "updated": "2026-06-11T14:18:53.000Z",
+      "unleaded": 159.9,
+      "diesel": 189.9,
+      "updated": "2026-06-14T15:02:08.334934+00:00",
       "cached": false
     },
     {
@@ -856,9 +856,9 @@
       "distance": 4.5,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 156.9,
-      "diesel": 200.9,
-      "updated": "2026-06-11T22:41:17.000Z",
+      "unleaded": 157.9,
+      "diesel": 182.9,
+      "updated": "2026-06-14T15:02:07.782492+00:00",
       "cached": false
     },
     {
@@ -871,9 +871,9 @@
       "distance": 4.6,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 156.9,
-      "diesel": 179.9,
-      "updated": "2026-06-12T08:36:52.000Z",
+      "unleaded": null,
+      "diesel": null,
+      "updated": null,
       "cached": false
     },
     {
@@ -886,10 +886,10 @@
       "distance": 4.2,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 157.9,
-      "diesel": 182.9,
-      "updated": "2026-06-12T13:20:19.000Z",
-      "cached": false
+      "unleaded": 141.7,
+      "diesel": 161.7,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
     },
     {
       "name": "Dobshill Service Station",
@@ -901,10 +901,10 @@
       "distance": 1.8,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 158.9,
-      "diesel": 203.9,
-      "updated": "2026-06-12T12:52:53.000Z",
-      "cached": false
+      "unleaded": 145.9,
+      "diesel": 161.9,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
     },
     {
       "name": "ASDA QUEENSFERRY",
@@ -916,9 +916,9 @@
       "distance": 1.1,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 156.9,
-      "diesel": 174.9,
-      "updated": "2026-06-12T15:18:03.000Z",
+      "unleaded": 157.9,
+      "diesel": 181.9,
+      "updated": "2026-06-14T15:02:07.782369+00:00",
       "cached": false
     },
     {
@@ -1036,9 +1036,9 @@
       "distance": 6.3,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 156.9,
-      "diesel": 194.9,
-      "updated": "2026-06-12T11:39:57.000Z",
+      "unleaded": null,
+      "diesel": null,
+      "updated": null,
       "cached": false
     },
     {
@@ -1083,7 +1083,7 @@
       "is_motorway": false,
       "unleaded": 157.9,
       "diesel": 189.9,
-      "updated": "2026-06-14T14:02:35.342994+00:00",
+      "updated": "2026-06-14T15:02:08.334890+00:00",
       "cached": false
     },
     {
@@ -1096,9 +1096,9 @@
       "distance": 12.6,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 154.7,
-      "diesel": 176.7,
-      "updated": "2026-06-12T15:18:44.000Z",
+      "unleaded": 158.7,
+      "diesel": 187.7,
+      "updated": "2026-06-14T15:02:07.782086+00:00",
       "cached": false
     },
     {
@@ -1171,9 +1171,9 @@
       "distance": 15.5,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 147.9,
-      "diesel": 169.9,
-      "updated": "2026-06-12T13:01:34.000Z",
+      "unleaded": null,
+      "diesel": null,
+      "updated": null,
       "cached": false
     },
     {
@@ -1186,9 +1186,9 @@
       "distance": 15.8,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 153.9,
-      "diesel": 199.9,
-      "updated": "2026-06-11T15:42:13.000Z",
+      "unleaded": null,
+      "diesel": null,
+      "updated": null,
       "cached": false
     },
     {
@@ -1216,10 +1216,10 @@
       "distance": 8.6,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 158.9,
-      "diesel": 199.9,
-      "updated": "2026-06-12T12:18:30.000Z",
-      "cached": false
+      "unleaded": 139.9,
+      "diesel": 155.9,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
     },
     {
       "name": "ASDA BROMBOROUGH SUPERSTORE",
@@ -1276,9 +1276,9 @@
       "distance": 15.5,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 151.9,
-      "diesel": 174.9,
-      "updated": "2026-06-11T14:34:28.000Z",
+      "unleaded": 157.9,
+      "diesel": 188.9,
+      "updated": "2026-06-14T15:02:08.334922+00:00",
       "cached": false
     },
     {
@@ -1291,9 +1291,9 @@
       "distance": 16.3,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 150.9,
-      "diesel": 171.7,
-      "updated": "2026-06-12T15:21:43.000Z",
+      "unleaded": 153.9,
+      "diesel": 182.7,
+      "updated": "2026-06-14T15:02:07.782129+00:00",
       "cached": false
     },
     {
@@ -1308,7 +1308,7 @@
       "is_motorway": false,
       "unleaded": 155.9,
       "diesel": 189.9,
-      "updated": "2026-06-14T14:02:35.342906+00:00",
+      "updated": "2026-06-14T15:02:08.334839+00:00",
       "cached": false
     },
     {
@@ -1338,7 +1338,7 @@
       "is_motorway": false,
       "unleaded": 153.9,
       "diesel": 174.9,
-      "updated": "2026-06-14T14:02:35.659184+00:00",
+      "updated": "2026-06-14T15:02:08.542952+00:00",
       "cached": false
     },
     {
@@ -1381,9 +1381,9 @@
       "distance": 18.5,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 156.9,
-      "diesel": 199.9,
-      "updated": "2026-06-12T11:40:26.000Z",
+      "unleaded": null,
+      "diesel": null,
+      "updated": null,
       "cached": false
     },
     {
@@ -1411,9 +1411,9 @@
       "distance": 17.1,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 157.9,
-      "diesel": 197.9,
-      "updated": "2026-06-12T11:43:23.000Z",
+      "unleaded": null,
+      "diesel": null,
+      "updated": null,
       "cached": false
     },
     {
@@ -1428,7 +1428,7 @@
       "is_motorway": false,
       "unleaded": 153.9,
       "diesel": 182.7,
-      "updated": "2026-06-14T14:02:34.748413+00:00",
+      "updated": "2026-06-14T15:02:07.782457+00:00",
       "cached": false
     },
     {
@@ -1441,9 +1441,9 @@
       "distance": 8.6,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 157.9,
-      "diesel": 205.9,
-      "updated": "2026-06-09T20:19:09.000Z",
+      "unleaded": null,
+      "diesel": null,
+      "updated": null,
       "cached": false
     },
     {
@@ -1471,9 +1471,9 @@
       "distance": 15.1,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 156.9,
-      "diesel": 175.9,
-      "updated": "2026-06-11T17:33:06.000Z",
+      "unleaded": 157.9,
+      "diesel": 187.9,
+      "updated": "2026-06-14T15:02:07.298639+00:00",
       "cached": false
     },
     {
@@ -1486,10 +1486,10 @@
       "distance": 11.0,
       "is_supermarket": false,
       "is_motorway": true,
-      "unleaded": 177.9,
-      "diesel": 219.9,
-      "updated": "2026-04-05T13:00:00.000Z",
-      "cached": false
+      "unleaded": 161.9,
+      "diesel": 179.9,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
     },
     {
       "name": "SHELL LITTLE WAITROSE HINDERTON",
@@ -1546,10 +1546,10 @@
       "distance": 4.7,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 157.9,
-      "diesel": 199.9,
-      "updated": "2026-04-17T09:35:04.000Z",
-      "cached": false
+      "unleaded": 136.9,
+      "diesel": 159.9,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
     },
     {
       "name": "LIVERPOOL ALLERTON RD SUPERSTORE - PETROL FILLING STATION",
@@ -1562,8 +1562,8 @@
       "is_supermarket": true,
       "is_motorway": false,
       "unleaded": 153.9,
-      "diesel": 172.9,
-      "updated": "2026-06-11T17:25:56.000Z",
+      "diesel": 185.9,
+      "updated": "2026-06-14T15:02:07.300086+00:00",
       "cached": false
     },
     {
@@ -1623,7 +1623,7 @@
       "is_motorway": false,
       "unleaded": 157.9,
       "diesel": 177.9,
-      "updated": "2026-06-14T14:02:35.168499+00:00",
+      "updated": "2026-06-14T15:02:08.060057+00:00",
       "cached": false
     },
     {
@@ -1651,9 +1651,9 @@
       "distance": 18.9,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 151.9,
-      "diesel": 172.9,
-      "updated": "2026-06-11T17:13:06.000Z",
+      "unleaded": 152.9,
+      "diesel": 184.9,
+      "updated": "2026-06-14T15:02:07.299999+00:00",
       "cached": false
     },
     {
@@ -1681,9 +1681,9 @@
       "distance": 15.8,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 153.9,
-      "diesel": 196.9,
-      "updated": "2026-06-12T15:05:16.000Z",
+      "unleaded": null,
+      "diesel": null,
+      "updated": null,
       "cached": false
     },
     {
@@ -1741,9 +1741,9 @@
       "distance": 5.5,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 156.9,
-      "diesel": 199.9,
-      "updated": "2026-05-22T08:51:30.000Z",
+      "unleaded": null,
+      "diesel": null,
+      "updated": null,
       "cached": false
     },
     {
@@ -1762,6 +1762,21 @@
       "cached": false
     },
     {
+      "name": "TAURUS SERVICE STATION",
+      "brand": "Esso",
+      "address": "",
+      "postcode": "LL13 9EB",
+      "lat": 53.0529319,
+      "lng": -2.9710745,
+      "distance": 9.8,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 151.9,
+      "diesel": 170.9,
+      "updated": "2026-06-14T14:02:38.000Z",
+      "cached": false
+    },
+    {
       "name": "MOLD SUPERSTORE - PETROL FILLING STATION",
       "brand": "TESCO",
       "address": "",
@@ -1773,7 +1788,7 @@
       "is_motorway": false,
       "unleaded": 156.9,
       "diesel": 190.9,
-      "updated": "2026-06-14T14:02:34.339330+00:00",
+      "updated": "2026-06-14T15:02:07.300265+00:00",
       "cached": false
     },
     {
@@ -1786,9 +1801,9 @@
       "distance": 17.9,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 153.9,
-      "diesel": 195.9,
-      "updated": "2026-06-12T15:06:29.000Z",
+      "unleaded": null,
+      "diesel": null,
+      "updated": null,
       "cached": false
     },
     {
@@ -1801,9 +1816,9 @@
       "distance": 16.1,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 153.9,
-      "diesel": 195.9,
-      "updated": "2026-06-12T10:36:36.000Z",
+      "unleaded": null,
+      "diesel": null,
+      "updated": null,
       "cached": false
     },
     {
@@ -1861,9 +1876,9 @@
       "distance": 2.8,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 156.9,
-      "diesel": 174.9,
-      "updated": "2026-06-11T17:27:50.000Z",
+      "unleaded": 155.9,
+      "diesel": 188.9,
+      "updated": "2026-06-14T15:02:07.300057+00:00",
       "cached": false
     },
     {
@@ -1952,8 +1967,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 157.9,
-      "diesel": 194.9,
-      "updated": "2026-06-12T15:41:01.000Z",
+      "diesel": 179.9,
+      "updated": "2026-06-14T15:02:08.542902+00:00",
       "cached": false
     },
     {
@@ -2131,10 +2146,10 @@
       "distance": 2.7,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 156.9,
-      "diesel": 179.9,
-      "updated": "2026-06-12T10:25:04.000Z",
-      "cached": false
+      "unleaded": 144.9,
+      "diesel": 161.9,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
     },
     {
       "name": "MFG PRESTATYN",
@@ -2147,8 +2162,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 157.9,
-      "diesel": 199.9,
-      "updated": "2026-05-28T22:33:39.000Z",
+      "diesel": 177.9,
+      "updated": "2026-06-14T15:02:08.060107+00:00",
       "cached": false
     },
     {
@@ -2178,7 +2193,7 @@
       "is_motorway": false,
       "unleaded": 157.9,
       "diesel": 179.9,
-      "updated": "2026-06-14T14:02:35.918633+00:00",
+      "updated": "2026-06-14T15:02:08.702476+00:00",
       "cached": false
     },
     {
