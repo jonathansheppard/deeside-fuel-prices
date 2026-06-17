@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
-    "unleaded": 155.1,
-    "diesel": 182.1
+    "unleaded": 154.2,
+    "diesel": 181.0
   },
-  "lastUpdated": "2026-06-17T16:02:47.223157+00:00",
+  "lastUpdated": "2026-06-17T17:02:50.634525+00:00",
   "stationCount": 175,
   "stations": [
     {
@@ -16,10 +16,10 @@
       "distance": 11.5,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 154.9,
-      "diesel": 176.9,
-      "updated": "2026-06-11T22:57:42.000Z",
-      "cached": false
+      "unleaded": 136.9,
+      "diesel": 155.9,
+      "updated": "2026-04-23T00:00:00+00:00",
+      "cached": true
     },
     {
       "name": "SAINSBURYS LIVERPOOL GREAT HOMER STREET",
@@ -256,9 +256,9 @@
       "distance": 12.8,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 154.9,
-      "diesel": 176.9,
-      "updated": "2026-06-16T14:50:22.000Z",
+      "unleaded": 152.9,
+      "diesel": 173.9,
+      "updated": "2026-06-17T16:04:34.000Z",
       "cached": false
     },
     {
@@ -271,9 +271,9 @@
       "distance": 7.3,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 156.9,
-      "diesel": 198.9,
-      "updated": "2026-06-15T14:37:50.000Z",
+      "unleaded": 155.9,
+      "diesel": 195.9,
+      "updated": "2026-06-17T16:24:05.000Z",
       "cached": false
     },
     {
@@ -751,9 +751,9 @@
       "distance": 14.6,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 158.9,
-      "diesel": 179.9,
-      "updated": "2026-06-16T14:53:49.000Z",
+      "unleaded": 156.9,
+      "diesel": 175.9,
+      "updated": "2026-06-17T16:09:35.000Z",
       "cached": false
     },
     {
@@ -766,10 +766,10 @@
       "distance": 8.5,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 153.9,
-      "diesel": 176.9,
-      "updated": "2026-06-02T09:33:33.000Z",
-      "cached": false
+      "unleaded": 139.9,
+      "diesel": 159.9,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
     },
     {
       "name": "ASDA COEDPOETH EXPRESS PETROL",
@@ -841,9 +841,9 @@
       "distance": 15.4,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 158.9,
-      "diesel": 198.9,
-      "updated": "2026-06-11T14:18:53.000Z",
+      "unleaded": 159.9,
+      "diesel": 189.9,
+      "updated": "2026-06-17T17:02:48.625243+00:00",
       "cached": false
     },
     {
@@ -1081,9 +1081,9 @@
       "distance": 11.0,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 155.9,
-      "diesel": 179.9,
-      "updated": "2026-06-11T12:00:37.000Z",
+      "unleaded": 157.9,
+      "diesel": 189.9,
+      "updated": "2026-06-17T17:02:48.625159+00:00",
       "cached": false
     },
     {
@@ -1276,9 +1276,9 @@
       "distance": 15.5,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 151.9,
-      "diesel": 174.9,
-      "updated": "2026-06-11T14:34:28.000Z",
+      "unleaded": 157.9,
+      "diesel": 188.9,
+      "updated": "2026-06-17T17:02:48.625217+00:00",
       "cached": false
     },
     {
@@ -1306,9 +1306,9 @@
       "distance": 16.7,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 152.9,
-      "diesel": 174.9,
-      "updated": "2026-06-11T11:53:23.000Z",
+      "unleaded": 155.9,
+      "diesel": 189.9,
+      "updated": "2026-06-17T17:02:48.625071+00:00",
       "cached": false
     },
     {
@@ -1426,9 +1426,9 @@
       "distance": 17.8,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 154.9,
-      "diesel": 184.7,
-      "updated": "2026-05-12T19:27:50.000Z",
+      "unleaded": 153.9,
+      "diesel": 182.7,
+      "updated": "2026-06-17T17:02:48.068652+00:00",
       "cached": false
     },
     {
@@ -1606,9 +1606,9 @@
       "distance": 15.5,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 159.9,
-      "diesel": 195.9,
-      "updated": "2026-06-05T11:35:58.000Z",
+      "unleaded": null,
+      "diesel": null,
+      "updated": null,
       "cached": false
     },
     {
@@ -1711,9 +1711,9 @@
       "distance": 3.6,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 159.9,
-      "diesel": 196.9,
-      "updated": "2026-06-04T22:12:50.000Z",
+      "unleaded": null,
+      "diesel": null,
+      "updated": null,
       "cached": false
     },
     {
@@ -1906,9 +1906,9 @@
       "distance": 14.8,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 156.9,
-      "diesel": 194.9,
-      "updated": "2026-06-16T14:55:51.000Z",
+      "unleaded": 154.9,
+      "diesel": 191.9,
+      "updated": "2026-06-17T16:06:04.000Z",
       "cached": false
     },
     {
@@ -1981,9 +1981,9 @@
       "distance": 12.8,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 157.9,
-      "diesel": 200.9,
-      "updated": "2026-06-06T10:36:11.000Z",
+      "unleaded": null,
+      "diesel": null,
+      "updated": null,
       "cached": false
     },
     {
@@ -2057,8 +2057,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 156.9,
-      "diesel": 175.9,
-      "updated": "2026-06-16T15:01:47.000Z",
+      "diesel": 173.9,
+      "updated": "2026-06-17T16:39:38.000Z",
       "cached": false
     },
     {
@@ -2071,9 +2071,9 @@
       "distance": 5.4,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 154.9,
-      "diesel": 179.9,
-      "updated": "2026-06-02T11:10:10.000Z",
+      "unleaded": null,
+      "diesel": null,
+      "updated": null,
       "cached": false
     },
     {
@@ -2101,10 +2101,10 @@
       "distance": 16.4,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 159.9,
-      "diesel": 179.9,
-      "updated": "2026-06-11T06:23:06.000Z",
-      "cached": false
+      "unleaded": 153.9,
+      "diesel": 159.9,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
     },
     {
       "name": "SAINSBURYS WREXHAM",
@@ -2193,7 +2193,7 @@
       "is_motorway": false,
       "unleaded": 157.9,
       "diesel": 179.9,
-      "updated": "2026-06-17T16:02:46.049910+00:00",
+      "updated": "2026-06-17T17:02:49.186935+00:00",
       "cached": false
     },
     {
