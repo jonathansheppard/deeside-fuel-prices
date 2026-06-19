@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
-    "unleaded": 154.6,
-    "diesel": 181.0
+    "unleaded": 153.8,
+    "diesel": 180.2
   },
-  "lastUpdated": "2026-06-19T15:03:17.133435+00:00",
+  "lastUpdated": "2026-06-19T16:02:56.694009+00:00",
   "stationCount": 175,
   "stations": [
     {
@@ -256,7 +256,7 @@
       "distance": 12.8,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 152.9,
+      "unleaded": 151.9,
       "diesel": 173.9,
       "updated": "2026-06-17T16:04:34.000Z",
       "cached": false
@@ -541,10 +541,10 @@
       "distance": 8.1,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 153.9,
-      "diesel": 168.9,
-      "updated": "2026-06-11T21:54:21.000Z",
-      "cached": false
+      "unleaded": 137.9,
+      "diesel": 155.9,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
     },
     {
       "name": "BR Gwersyllt",
@@ -1021,9 +1021,9 @@
       "distance": 6.1,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 157.9,
-      "diesel": 189.9,
-      "updated": "2026-06-18T17:35:51.000Z",
+      "unleaded": 156.9,
+      "diesel": 188.9,
+      "updated": "2026-06-19T15:35:45.000Z",
       "cached": false
     },
     {
@@ -1426,9 +1426,9 @@
       "distance": 17.8,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 154.9,
-      "diesel": 184.7,
-      "updated": "2026-05-12T19:27:50.000Z",
+      "unleaded": 153.9,
+      "diesel": 182.7,
+      "updated": "2026-06-19T16:02:54.373344+00:00",
       "cached": false
     },
     {
@@ -1711,9 +1711,9 @@
       "distance": 3.6,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 159.9,
-      "diesel": 196.9,
-      "updated": "2026-06-04T22:12:50.000Z",
+      "unleaded": null,
+      "diesel": null,
+      "updated": null,
       "cached": false
     },
     {
@@ -1907,8 +1907,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 154.9,
-      "diesel": 191.9,
-      "updated": "2026-06-17T16:06:04.000Z",
+      "diesel": 189.9,
+      "updated": "2026-06-19T15:44:57.000Z",
       "cached": false
     },
     {
@@ -1921,10 +1921,10 @@
       "distance": 12.8,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 154.9,
-      "diesel": 176.9,
-      "updated": "2026-06-11T21:52:16.000Z",
-      "cached": false
+      "unleaded": 137.9,
+      "diesel": 155.9,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
     },
     {
       "name": "SAINSBURYS KINGS ROAD BEBINGTON",
@@ -1967,8 +1967,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 153.9,
-      "diesel": 189.9,
-      "updated": "2026-06-17T15:05:59.000Z",
+      "diesel": 188.9,
+      "updated": "2026-06-19T15:13:48.000Z",
       "cached": false
     },
     {
@@ -2071,9 +2071,9 @@
       "distance": 5.4,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 154.9,
-      "diesel": 179.9,
-      "updated": "2026-06-02T11:10:10.000Z",
+      "unleaded": null,
+      "diesel": null,
+      "updated": null,
       "cached": false
     },
     {
@@ -2193,7 +2193,7 @@
       "is_motorway": false,
       "unleaded": 157.9,
       "diesel": 179.9,
-      "updated": "2026-06-19T15:03:15.763204+00:00",
+      "updated": "2026-06-19T16:02:55.476410+00:00",
       "cached": false
     },
     {
