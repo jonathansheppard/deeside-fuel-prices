@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
-    "unleaded": 154.3,
-    "diesel": 180.6
+    "unleaded": 153.4,
+    "diesel": 179.6
   },
-  "lastUpdated": "2026-06-19T22:02:43.409081+00:00",
+  "lastUpdated": "2026-06-19T23:03:17.344867+00:00",
   "stationCount": 175,
   "stations": [
     {
@@ -46,7 +46,7 @@
       "distance": 17.3,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 151.9,
+      "unleaded": 149.9,
       "diesel": 189.9,
       "updated": "2026-06-15T23:00:57.000Z",
       "cached": false
@@ -451,7 +451,7 @@
       "distance": 5.9,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 155.9,
+      "unleaded": 154.9,
       "diesel": 169.9,
       "updated": "2026-06-16T22:43:00.000Z",
       "cached": false
@@ -496,7 +496,7 @@
       "distance": 8.6,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 157.9,
+      "unleaded": 155.9,
       "diesel": 195.9,
       "updated": "2026-06-15T22:47:50.000Z",
       "cached": false
@@ -541,10 +541,10 @@
       "distance": 8.1,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 153.9,
-      "diesel": 168.9,
-      "updated": "2026-06-11T21:54:21.000Z",
-      "cached": false
+      "unleaded": 137.9,
+      "diesel": 155.9,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
     },
     {
       "name": "BR Gwersyllt",
@@ -601,9 +601,9 @@
       "distance": 4.1,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 155.9,
-      "diesel": 179.9,
-      "updated": "2026-06-18T22:14:52.000Z",
+      "unleaded": 154.9,
+      "diesel": 178.9,
+      "updated": "2026-06-19T22:00:30.000Z",
       "cached": false
     },
     {
@@ -691,7 +691,7 @@
       "distance": 6.9,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 154.9,
+      "unleaded": 153.9,
       "diesel": 195.9,
       "updated": "2026-06-15T22:55:56.000Z",
       "cached": false
@@ -1006,10 +1006,10 @@
       "distance": 5.7,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 148.9,
-      "diesel": 164.9,
-      "updated": "2026-06-15T09:56:27.000Z",
-      "cached": false
+      "unleaded": 132.9,
+      "diesel": 150.9,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
     },
     {
       "name": "ASDA HANDBRIDGE EXPRESS PETROL",
@@ -1036,9 +1036,9 @@
       "distance": 6.3,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 155.9,
-      "diesel": 191.9,
-      "updated": "2026-06-16T09:07:09.000Z",
+      "unleaded": null,
+      "diesel": null,
+      "updated": null,
       "cached": false
     },
     {
@@ -1051,10 +1051,10 @@
       "distance": 6.0,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 149.9,
-      "diesel": 165.9,
-      "updated": "2026-06-15T06:14:36.000Z",
-      "cached": false
+      "unleaded": 137.9,
+      "diesel": 145.9,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
     },
     {
       "name": "SPITAL SF CONNECT",
@@ -1066,10 +1066,10 @@
       "distance": 10.5,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 157.9,
-      "diesel": 200.9,
-      "updated": "2026-06-14T10:00:00.000Z",
-      "cached": false
+      "unleaded": 138.9,
+      "diesel": 158.9,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
     },
     {
       "name": "RONTEC BEBINGTON",
@@ -1336,9 +1336,9 @@
       "distance": 17.1,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 154.9,
-      "diesel": 198.9,
-      "updated": "2026-06-15T11:21:44.000Z",
+      "unleaded": 152.9,
+      "diesel": 171.9,
+      "updated": "2026-06-19T23:03:15.384106+00:00",
       "cached": false
     },
     {
@@ -1426,9 +1426,9 @@
       "distance": 17.8,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 154.9,
-      "diesel": 184.7,
-      "updated": "2026-05-12T19:27:50.000Z",
+      "unleaded": 153.9,
+      "diesel": 182.7,
+      "updated": "2026-06-19T23:03:14.317607+00:00",
       "cached": false
     },
     {
@@ -1441,9 +1441,9 @@
       "distance": 8.6,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 156.9,
-      "diesel": 205.9,
-      "updated": "2026-06-09T20:19:09.000Z",
+      "unleaded": null,
+      "diesel": null,
+      "updated": null,
       "cached": false
     },
     {
@@ -1621,7 +1621,7 @@
       "distance": 16.1,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 153.9,
+      "unleaded": 151.9,
       "diesel": 195.9,
       "updated": "2026-06-15T22:43:57.000Z",
       "cached": false
@@ -1726,7 +1726,7 @@
       "distance": 6.3,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 155.9,
+      "unleaded": 153.9,
       "diesel": 199.9,
       "updated": "2026-05-28T23:02:29.000Z",
       "cached": false
@@ -1831,7 +1831,7 @@
       "distance": 14.2,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 155.9,
+      "unleaded": 153.9,
       "diesel": 195.9,
       "updated": "2026-06-19T09:14:54.000Z",
       "cached": false
@@ -1921,10 +1921,10 @@
       "distance": 12.8,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 154.9,
-      "diesel": 176.9,
-      "updated": "2026-06-11T21:52:16.000Z",
-      "cached": false
+      "unleaded": 137.9,
+      "diesel": 155.9,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
     },
     {
       "name": "SAINSBURYS KINGS ROAD BEBINGTON",
@@ -2071,9 +2071,9 @@
       "distance": 5.4,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 154.9,
-      "diesel": 179.9,
-      "updated": "2026-06-02T11:10:10.000Z",
+      "unleaded": null,
+      "diesel": null,
+      "updated": null,
       "cached": false
     },
     {
@@ -2161,7 +2161,7 @@
       "distance": 18.5,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 155.9,
+      "unleaded": 153.9,
       "diesel": 195.9,
       "updated": "2026-06-15T22:37:21.000Z",
       "cached": false
@@ -2193,7 +2193,7 @@
       "is_motorway": false,
       "unleaded": 157.9,
       "diesel": 179.9,
-      "updated": "2026-06-19T22:02:42.283930+00:00",
+      "updated": "2026-06-19T23:03:15.888464+00:00",
       "cached": false
     },
     {
