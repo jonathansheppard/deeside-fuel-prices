@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
-    "unleaded": 151.4,
-    "diesel": 175.0
+    "unleaded": 151.2,
+    "diesel": 174.9
   },
-  "lastUpdated": "2026-06-26T23:31:19.616918+00:00",
+  "lastUpdated": "2026-06-27T00:02:47.108340+00:00",
   "stationCount": 176,
   "stations": [
     {
@@ -541,9 +541,9 @@
       "distance": 17.6,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 153.9,
-      "diesel": 171.9,
-      "updated": "2026-06-15T09:03:01.000Z",
+      "unleaded": null,
+      "diesel": null,
+      "updated": null,
       "cached": false
     },
     {
@@ -766,10 +766,10 @@
       "distance": 14.6,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 156.9,
-      "diesel": 175.9,
-      "updated": "2026-06-17T16:09:35.000Z",
-      "cached": false
+      "unleaded": 138.9,
+      "diesel": 152.9,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
     },
     {
       "name": "Plas Acton Fuel Station",
@@ -812,8 +812,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 153.9,
-      "diesel": 192.9,
-      "updated": "2026-06-19T19:51:45.000Z",
+      "diesel": 173.9,
+      "updated": "2026-06-27T00:02:43.506496+00:00",
       "cached": false
     },
     {
@@ -827,8 +827,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 164.9,
-      "diesel": 200.9,
-      "updated": "2026-06-19T19:55:40.000Z",
+      "diesel": 181.9,
+      "updated": "2026-06-27T00:02:43.506831+00:00",
       "cached": false
     },
     {
@@ -842,8 +842,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 154.9,
-      "diesel": 194.9,
-      "updated": "2026-06-18T17:36:23.000Z",
+      "diesel": 175.9,
+      "updated": "2026-06-27T00:02:43.506914+00:00",
       "cached": false
     },
     {
@@ -872,8 +872,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 156.9,
-      "diesel": 194.9,
-      "updated": "2026-06-18T16:15:15.000Z",
+      "diesel": 175.9,
+      "updated": "2026-06-27T00:02:43.506995+00:00",
       "cached": false
     },
     {
@@ -947,8 +947,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 157.9,
-      "diesel": 193.9,
-      "updated": "2026-06-19T20:17:46.000Z",
+      "diesel": 174.9,
+      "updated": "2026-06-27T00:02:43.506734+00:00",
       "cached": false
     },
     {
@@ -962,8 +962,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 157.9,
-      "diesel": 193.9,
-      "updated": "2026-06-19T20:12:22.000Z",
+      "diesel": 174.9,
+      "updated": "2026-06-27T00:02:43.506325+00:00",
       "cached": false
     },
     {
@@ -1127,8 +1127,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 154.9,
-      "diesel": 192.9,
-      "updated": "2026-06-18T16:16:40.000Z",
+      "diesel": 173.9,
+      "updated": "2026-06-27T00:02:43.506649+00:00",
       "cached": false
     },
     {
@@ -1142,8 +1142,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 153.9,
-      "diesel": 198.9,
-      "updated": "2026-06-19T20:07:05.000Z",
+      "diesel": 179.9,
+      "updated": "2026-06-27T00:02:43.506565+00:00",
       "cached": false
     },
     {
@@ -1157,8 +1157,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 156.9,
-      "diesel": 200.9,
-      "updated": "2026-06-19T20:04:30.000Z",
+      "diesel": 181.9,
+      "updated": "2026-06-27T00:02:43.506430+00:00",
       "cached": false
     },
     {
@@ -1231,10 +1231,10 @@
       "distance": 8.6,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 158.9,
-      "diesel": 193.9,
-      "updated": "2026-06-19T10:49:44.000Z",
-      "cached": false
+      "unleaded": 139.9,
+      "diesel": 155.9,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
     },
     {
       "name": "ASDA BROMBOROUGH SUPERSTORE",
@@ -1277,8 +1277,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 155.9,
-      "diesel": 198.9,
-      "updated": "2026-06-19T20:23:46.000Z",
+      "diesel": 179.9,
+      "updated": "2026-06-27T00:02:43.506160+00:00",
       "cached": false
     },
     {
@@ -1412,8 +1412,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 158.9,
-      "diesel": 192.9,
-      "updated": "2026-06-19T20:03:51.000Z",
+      "diesel": 173.9,
+      "updated": "2026-06-27T00:02:43.506410+00:00",
       "cached": false
     },
     {
@@ -1561,10 +1561,10 @@
       "distance": 4.7,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 153.9,
-      "diesel": 189.9,
-      "updated": "2026-06-22T10:45:33.000Z",
-      "cached": false
+      "unleaded": 136.9,
+      "diesel": 159.9,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
     },
     {
       "name": "LIVERPOOL ALLERTON RD SUPERSTORE - PETROL FILLING STATION",
@@ -1591,9 +1591,9 @@
       "distance": 17.2,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 149.9,
-      "diesel": 184.9,
-      "updated": "2026-06-22T11:11:48.000Z",
+      "unleaded": null,
+      "diesel": null,
+      "updated": null,
       "cached": false
     },
     {
@@ -1621,9 +1621,9 @@
       "distance": 15.5,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 154.9,
-      "diesel": 184.9,
-      "updated": "2026-06-19T09:52:38.000Z",
+      "unleaded": null,
+      "diesel": null,
+      "updated": null,
       "cached": false
     },
     {
@@ -1726,9 +1726,9 @@
       "distance": 3.6,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 159.9,
-      "diesel": 189.9,
-      "updated": "2026-06-19T17:21:17.000Z",
+      "unleaded": null,
+      "diesel": null,
+      "updated": null,
       "cached": false
     },
     {
@@ -1906,10 +1906,10 @@
       "distance": 6.4,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 148.9,
-      "diesel": 160.8,
-      "updated": "2026-06-21T12:25:14.000Z",
-      "cached": false
+      "unleaded": 137.9,
+      "diesel": 159.9,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
     },
     {
       "name": "BP HARVEST ENERGY HOYLAKE",
@@ -1921,10 +1921,10 @@
       "distance": 14.8,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 154.9,
-      "diesel": 189.9,
-      "updated": "2026-06-19T15:44:57.000Z",
-      "cached": false
+      "unleaded": 141.9,
+      "diesel": 158.9,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
     },
     {
       "name": "SAINSBURYS BIRKENHEAD",
@@ -2208,7 +2208,7 @@
       "is_motorway": false,
       "unleaded": 154.9,
       "diesel": 169.9,
-      "updated": "2026-06-26T23:31:18.542855+00:00",
+      "updated": "2026-06-27T00:02:45.871824+00:00",
       "cached": false
     },
     {
