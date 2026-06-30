@@ -1,10 +1,10 @@
 {
   "nationalAvg": {
-    "unleaded": 150.9,
-    "diesel": 173.9
+    "unleaded": 151.6,
+    "diesel": 174.9
   },
-  "lastUpdated": "2026-06-30T07:32:58.298539+00:00",
-  "stationCount": 175,
+  "lastUpdated": "2026-06-30T08:03:02.914623+00:00",
+  "stationCount": 176,
   "stations": [
     {
       "name": "SAINSBURYS PENSBY ROAD THINGWALL",
@@ -541,9 +541,9 @@
       "distance": 17.6,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
+      "unleaded": 153.9,
+      "diesel": 171.9,
+      "updated": "2026-06-15T09:03:01.000Z",
       "cached": false
     },
     {
@@ -812,8 +812,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 153.9,
-      "diesel": 173.9,
-      "updated": "2026-06-30T07:32:40.828774+00:00",
+      "diesel": 192.9,
+      "updated": "2026-06-19T19:51:45.000Z",
       "cached": false
     },
     {
@@ -827,8 +827,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 164.9,
-      "diesel": 181.9,
-      "updated": "2026-06-30T07:32:40.829179+00:00",
+      "diesel": 200.9,
+      "updated": "2026-06-19T19:55:40.000Z",
       "cached": false
     },
     {
@@ -842,8 +842,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 154.9,
-      "diesel": 175.9,
-      "updated": "2026-06-30T07:32:40.829277+00:00",
+      "diesel": 194.9,
+      "updated": "2026-06-18T17:36:23.000Z",
       "cached": false
     },
     {
@@ -872,8 +872,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 156.9,
-      "diesel": 175.9,
-      "updated": "2026-06-30T07:32:40.829366+00:00",
+      "diesel": 194.9,
+      "updated": "2026-06-18T16:15:15.000Z",
       "cached": false
     },
     {
@@ -947,8 +947,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 157.9,
-      "diesel": 174.9,
-      "updated": "2026-06-30T07:32:40.829060+00:00",
+      "diesel": 193.9,
+      "updated": "2026-06-19T20:17:46.000Z",
       "cached": false
     },
     {
@@ -962,8 +962,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 157.9,
-      "diesel": 174.9,
-      "updated": "2026-06-30T07:32:40.828570+00:00",
+      "diesel": 193.9,
+      "updated": "2026-06-19T20:12:22.000Z",
       "cached": false
     },
     {
@@ -1127,8 +1127,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 154.9,
-      "diesel": 173.9,
-      "updated": "2026-06-30T07:32:40.828952+00:00",
+      "diesel": 192.9,
+      "updated": "2026-06-18T16:16:40.000Z",
       "cached": false
     },
     {
@@ -1142,8 +1142,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 153.9,
-      "diesel": 179.9,
-      "updated": "2026-06-30T07:32:40.828850+00:00",
+      "diesel": 198.9,
+      "updated": "2026-06-19T20:07:05.000Z",
       "cached": false
     },
     {
@@ -1157,8 +1157,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 156.9,
-      "diesel": 181.9,
-      "updated": "2026-06-30T07:32:40.828692+00:00",
+      "diesel": 200.9,
+      "updated": "2026-06-19T20:04:30.000Z",
       "cached": false
     },
     {
@@ -1277,8 +1277,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 155.9,
-      "diesel": 179.9,
-      "updated": "2026-06-30T07:32:40.828261+00:00",
+      "diesel": 198.9,
+      "updated": "2026-06-19T20:23:46.000Z",
       "cached": false
     },
     {
@@ -1412,8 +1412,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 158.9,
-      "diesel": 173.9,
-      "updated": "2026-06-30T07:32:40.828671+00:00",
+      "diesel": 192.9,
+      "updated": "2026-06-19T20:03:51.000Z",
       "cached": false
     },
     {
@@ -1621,9 +1621,9 @@
       "distance": 15.5,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
+      "unleaded": 154.9,
+      "diesel": 184.9,
+      "updated": "2026-06-19T09:52:38.000Z",
       "cached": false
     },
     {
@@ -1726,9 +1726,9 @@
       "distance": 3.6,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
+      "unleaded": 159.9,
+      "diesel": 189.9,
+      "updated": "2026-06-19T17:21:17.000Z",
       "cached": false
     },
     {
@@ -1906,10 +1906,10 @@
       "distance": 6.4,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 137.9,
-      "diesel": 159.9,
-      "updated": "2026-03-13T00:00:00+00:00",
-      "cached": true
+      "unleaded": 148.9,
+      "diesel": 160.8,
+      "updated": "2026-06-21T12:25:14.000Z",
+      "cached": false
     },
     {
       "name": "BP HARVEST ENERGY HOYLAKE",
@@ -1921,10 +1921,10 @@
       "distance": 14.8,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 141.9,
-      "diesel": 158.9,
-      "updated": "2026-03-13T00:00:00+00:00",
-      "cached": true
+      "unleaded": 154.9,
+      "diesel": 189.9,
+      "updated": "2026-06-19T15:44:57.000Z",
+      "cached": false
     },
     {
       "name": "SAINSBURYS BIRKENHEAD",
@@ -2086,9 +2086,9 @@
       "distance": 5.4,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
+      "unleaded": 154.9,
+      "diesel": 179.9,
+      "updated": "2026-06-02T11:10:10.000Z",
       "cached": false
     },
     {
@@ -2194,6 +2194,21 @@
       "unleaded": 153.9,
       "diesel": 194.9,
       "updated": "2026-06-24T12:38:00.000Z",
+      "cached": false
+    },
+    {
+      "name": "TEXACO ",
+      "brand": "TEXACO",
+      "address": "Park Road, Ruthin, Denbighshire",
+      "postcode": "LL15 1NB",
+      "lat": 53.1135285,
+      "lng": -3.3177116,
+      "distance": 12.9,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 151.9,
+      "diesel": 167.9,
+      "updated": "2026-06-30T08:03:01.879680+00:00",
       "cached": false
     },
     {
