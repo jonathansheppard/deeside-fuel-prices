@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
-    "unleaded": 149.9,
-    "diesel": 171.9
+    "unleaded": 150.0,
+    "diesel": 172.1
   },
-  "lastUpdated": "2026-07-06T05:31:55.881780+00:00",
+  "lastUpdated": "2026-07-06T06:03:17.510363+00:00",
   "stationCount": 177,
   "stations": [
     {
@@ -393,7 +393,7 @@
       "is_motorway": false,
       "unleaded": 151.9,
       "diesel": 163.9,
-      "updated": "2026-07-06T05:31:54.734334+00:00",
+      "updated": "2026-07-06T06:03:16.507906+00:00",
       "cached": false
     },
     {
@@ -571,10 +571,10 @@
       "distance": 7.7,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 141.9,
-      "diesel": 155.9,
-      "updated": "2026-03-13T00:00:00+00:00",
-      "cached": true
+      "unleaded": 163.9,
+      "diesel": 174.9,
+      "updated": "2026-07-01T10:10:14.000Z",
+      "cached": false
     },
     {
       "name": "SHELL CARLETT",
@@ -797,8 +797,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 153.9,
-      "diesel": 168.9,
-      "updated": "2026-07-06T05:31:53.562763+00:00",
+      "diesel": 184.9,
+      "updated": "2026-06-30T22:10:58.000Z",
       "cached": false
     },
     {
@@ -841,9 +841,9 @@
       "distance": 9.2,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 154.9,
-      "diesel": 175.9,
-      "updated": "2026-07-06T05:31:53.563594+00:00",
+      "unleaded": 152.9,
+      "diesel": 188.9,
+      "updated": "2026-07-01T04:56:52.000Z",
       "cached": false
     },
     {
@@ -946,9 +946,9 @@
       "distance": 2.9,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 157.9,
-      "diesel": 174.9,
-      "updated": "2026-07-06T05:31:53.563388+00:00",
+      "unleaded": 154.9,
+      "diesel": 187.9,
+      "updated": "2026-06-30T22:54:41.000Z",
       "cached": false
     },
     {
@@ -961,9 +961,9 @@
       "distance": 3.1,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 157.9,
-      "diesel": 174.9,
-      "updated": "2026-07-06T05:31:53.562825+00:00",
+      "unleaded": 155.9,
+      "diesel": 188.9,
+      "updated": "2026-06-30T22:45:29.000Z",
       "cached": false
     },
     {
@@ -976,9 +976,9 @@
       "distance": 5.5,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 156.9,
-      "diesel": 172.9,
-      "updated": "2026-07-06T05:31:53.563667+00:00",
+      "unleaded": 153.9,
+      "diesel": 185.9,
+      "updated": "2026-06-30T22:47:38.000Z",
       "cached": false
     },
     {
@@ -1006,9 +1006,9 @@
       "distance": 4.8,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 165.9,
-      "diesel": 184.9,
-      "updated": "2026-07-06T05:31:53.563419+00:00",
+      "unleaded": 163.9,
+      "diesel": 198.9,
+      "updated": "2026-06-30T22:46:16.000Z",
       "cached": false
     },
     {
@@ -1038,7 +1038,7 @@
       "is_motorway": false,
       "unleaded": 154.9,
       "diesel": 166.9,
-      "updated": "2026-07-06T05:31:53.562987+00:00",
+      "updated": "2026-07-06T06:03:15.473115+00:00",
       "cached": false
     },
     {
@@ -1126,9 +1126,9 @@
       "distance": 14.9,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 154.9,
-      "diesel": 173.9,
-      "updated": "2026-07-06T05:31:53.563276+00:00",
+      "unleaded": 151.9,
+      "diesel": 186.9,
+      "updated": "2026-06-30T22:37:46.000Z",
       "cached": false
     },
     {
@@ -1173,7 +1173,7 @@
       "is_motorway": false,
       "unleaded": 148.9,
       "diesel": 165.9,
-      "updated": "2026-07-06T05:31:53.563211+00:00",
+      "updated": "2026-07-06T06:03:15.473235+00:00",
       "cached": false
     },
     {
@@ -1218,7 +1218,7 @@
       "is_motorway": false,
       "unleaded": 151.9,
       "diesel": 167.9,
-      "updated": "2026-07-06T05:31:53.562868+00:00",
+      "updated": "2026-07-06T06:03:15.473055+00:00",
       "cached": false
     },
     {
@@ -1231,10 +1231,10 @@
       "distance": 8.6,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 139.9,
-      "diesel": 155.9,
-      "updated": "2026-03-13T00:00:00+00:00",
-      "cached": true
+      "unleaded": 154.9,
+      "diesel": 187.9,
+      "updated": "2026-07-01T12:27:45.000Z",
+      "cached": false
     },
     {
       "name": "ASDA BROMBOROUGH SUPERSTORE",
@@ -1293,7 +1293,7 @@
       "is_motorway": false,
       "unleaded": 157.9,
       "diesel": 188.9,
-      "updated": "2026-07-06T05:31:54.261592+00:00",
+      "updated": "2026-07-06T06:03:16.028061+00:00",
       "cached": false
     },
     {
@@ -1323,7 +1323,7 @@
       "is_motorway": false,
       "unleaded": 155.9,
       "diesel": 189.9,
-      "updated": "2026-07-06T05:31:54.261408+00:00",
+      "updated": "2026-07-06T06:03:16.027945+00:00",
       "cached": false
     },
     {
@@ -1668,7 +1668,7 @@
       "is_motorway": false,
       "unleaded": 152.9,
       "diesel": 184.9,
-      "updated": "2026-07-06T05:31:53.024482+00:00",
+      "updated": "2026-07-06T06:03:14.895166+00:00",
       "cached": false
     },
     {
@@ -1756,9 +1756,9 @@
       "distance": 5.5,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
+      "unleaded": 150.9,
+      "diesel": 189.9,
+      "updated": "2026-07-01T11:30:10.000Z",
       "cached": false
     },
     {
@@ -1906,10 +1906,10 @@
       "distance": 6.4,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 137.9,
-      "diesel": 159.9,
-      "updated": "2026-03-13T00:00:00+00:00",
-      "cached": true
+      "unleaded": 147.9,
+      "diesel": 159.8,
+      "updated": "2026-07-01T09:22:48.000Z",
+      "cached": false
     },
     {
       "name": "BP HARVEST ENERGY HOYLAKE",
@@ -2161,9 +2161,9 @@
       "distance": 7.7,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
+      "unleaded": 148.9,
+      "diesel": 179.9,
+      "updated": "2026-07-01T11:46:34.000Z",
       "cached": false
     },
     {
@@ -2176,10 +2176,10 @@
       "distance": 2.7,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 144.9,
-      "diesel": 161.9,
-      "updated": "2026-03-13T00:00:00+00:00",
-      "cached": true
+      "unleaded": 152.9,
+      "diesel": 165.9,
+      "updated": "2026-07-01T10:10:56.000Z",
+      "cached": false
     },
     {
       "name": "MFG PRESTATYN",
@@ -2223,7 +2223,7 @@
       "is_motorway": false,
       "unleaded": 151.9,
       "diesel": 167.9,
-      "updated": "2026-07-06T05:31:54.734444+00:00",
+      "updated": "2026-07-06T06:03:16.508013+00:00",
       "cached": false
     },
     {
