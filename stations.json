@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
-    "unleaded": 151.0,
-    "diesel": 171.8
+    "unleaded": 151.1,
+    "diesel": 172.2
   },
-  "lastUpdated": "2026-07-12T05:32:10.584413+00:00",
+  "lastUpdated": "2026-07-12T06:03:23.788159+00:00",
   "stationCount": 177,
   "stations": [
     {
@@ -541,9 +541,9 @@
       "distance": 17.6,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
+      "unleaded": 153.9,
+      "diesel": 171.9,
+      "updated": "2026-06-15T09:03:01.000Z",
       "cached": false
     },
     {
@@ -1471,10 +1471,10 @@
       "distance": 8.8,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 141.9,
-      "diesel": 159.9,
-      "updated": "2026-03-13T00:00:00+00:00",
-      "cached": true
+      "unleaded": 152.9,
+      "diesel": 169.9,
+      "updated": "2026-06-24T08:02:37.000Z",
+      "cached": false
     },
     {
       "name": "BIRKENHEAD BIDSTON MOSS EXTRA - PETROL FILLING STATION",
@@ -1726,9 +1726,9 @@
       "distance": 3.6,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": null,
-      "diesel": null,
-      "updated": null,
+      "unleaded": 159.9,
+      "diesel": 189.9,
+      "updated": "2026-06-19T17:21:17.000Z",
       "cached": false
     },
     {
@@ -2223,7 +2223,7 @@
       "is_motorway": false,
       "unleaded": 151.9,
       "diesel": 167.9,
-      "updated": "2026-07-12T05:32:08.788780+00:00",
+      "updated": "2026-07-12T06:03:22.725775+00:00",
       "cached": false
     },
     {
