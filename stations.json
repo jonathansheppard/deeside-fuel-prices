@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
     "unleaded": 155.4,
-    "diesel": 178.5
+    "diesel": 178.6
   },
-  "lastUpdated": "2026-07-22T21:32:16.091113+00:00",
+  "lastUpdated": "2026-07-22T22:03:53.384233+00:00",
   "stationCount": 177,
   "stations": [
     {
@@ -167,8 +167,8 @@
       "is_supermarket": true,
       "is_motorway": false,
       "unleaded": 151.9,
-      "diesel": 166.9,
-      "updated": "2026-07-18T21:30:05.000Z",
+      "diesel": 167.9,
+      "updated": "2026-07-22T21:36:58.000Z",
       "cached": false
     },
     {
@@ -556,9 +556,9 @@
       "distance": 8.1,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 153.9,
-      "diesel": 166.9,
-      "updated": "2026-07-21T21:53:03.000Z",
+      "unleaded": 154.9,
+      "diesel": 168.9,
+      "updated": "2026-07-22T21:46:55.000Z",
       "cached": false
     },
     {
@@ -662,8 +662,8 @@
       "is_supermarket": true,
       "is_motorway": false,
       "unleaded": 156.9,
-      "diesel": 170.9,
-      "updated": "2026-07-21T21:57:25.000Z",
+      "diesel": 172.9,
+      "updated": "2026-07-22T21:55:50.000Z",
       "cached": false
     },
     {
@@ -736,9 +736,9 @@
       "distance": 13.5,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 151.9,
-      "diesel": 167.9,
-      "updated": "2026-07-20T21:38:24.000Z",
+      "unleaded": 152.9,
+      "diesel": 168.9,
+      "updated": "2026-07-22T21:47:23.000Z",
       "cached": false
     },
     {
@@ -1936,9 +1936,9 @@
       "distance": 12.8,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 155.9,
-      "diesel": 168.9,
-      "updated": "2026-07-21T21:58:10.000Z",
+      "unleaded": 156.9,
+      "diesel": 170.9,
+      "updated": "2026-07-22T21:56:13.000Z",
       "cached": false
     },
     {
@@ -2146,10 +2146,10 @@
       "distance": 9.3,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 152.9,
-      "diesel": 165.9,
-      "updated": "2026-07-19T22:03:40.000Z",
-      "cached": false
+      "unleaded": 138.9,
+      "diesel": 153.9,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
     },
     {
       "name": "GRESFORD SERVICE STATION",
@@ -2223,7 +2223,7 @@
       "is_motorway": false,
       "unleaded": 151.9,
       "diesel": 167.9,
-      "updated": "2026-07-22T21:32:14.964342+00:00",
+      "updated": "2026-07-22T22:03:51.751539+00:00",
       "cached": false
     },
     {
