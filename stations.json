@@ -3,7 +3,7 @@
     "unleaded": 155.4,
     "diesel": 178.5
   },
-  "lastUpdated": "2026-07-22T21:02:49.637754+00:00",
+  "lastUpdated": "2026-07-22T21:32:16.091113+00:00",
   "stationCount": 177,
   "stations": [
     {
@@ -931,9 +931,9 @@
       "distance": 1.1,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 153.9,
-      "diesel": 165.9,
-      "updated": "2026-07-21T16:02:10.000Z",
+      "unleaded": 154.9,
+      "diesel": 169.9,
+      "updated": "2026-07-22T21:08:46.000Z",
       "cached": false
     },
     {
@@ -1111,9 +1111,9 @@
       "distance": 12.6,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 155.7,
-      "diesel": 168.7,
-      "updated": "2026-07-14T16:27:25.000Z",
+      "unleaded": 156.7,
+      "diesel": 170.7,
+      "updated": "2026-07-22T21:08:35.000Z",
       "cached": false
     },
     {
@@ -1247,8 +1247,8 @@
       "is_supermarket": true,
       "is_motorway": false,
       "unleaded": 154.9,
-      "diesel": 167.7,
-      "updated": "2026-07-14T16:39:36.000Z",
+      "diesel": 168.7,
+      "updated": "2026-07-22T21:18:03.000Z",
       "cached": false
     },
     {
@@ -1306,9 +1306,9 @@
       "distance": 16.3,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 147.9,
-      "diesel": 163.7,
-      "updated": "2026-07-14T16:31:00.000Z",
+      "unleaded": 148.9,
+      "diesel": 164.7,
+      "updated": "2026-07-22T21:10:50.000Z",
       "cached": false
     },
     {
@@ -2011,9 +2011,9 @@
       "distance": 7.7,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 154.9,
-      "diesel": 166.9,
-      "updated": "2026-07-20T21:12:38.000Z",
+      "unleaded": 155.9,
+      "diesel": 168.9,
+      "updated": "2026-07-22T21:08:33.000Z",
       "cached": false
     },
     {
@@ -2223,7 +2223,7 @@
       "is_motorway": false,
       "unleaded": 151.9,
       "diesel": 167.9,
-      "updated": "2026-07-22T21:02:45.941550+00:00",
+      "updated": "2026-07-22T21:32:14.964342+00:00",
       "cached": false
     },
     {
