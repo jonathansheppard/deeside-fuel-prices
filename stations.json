@@ -3,7 +3,7 @@
     "unleaded": 156.1,
     "diesel": 179.5
   },
-  "lastUpdated": "2026-07-23T23:02:53.814528+00:00",
+  "lastUpdated": "2026-07-23T23:31:54.791276+00:00",
   "stationCount": 177,
   "stations": [
     {
@@ -16,10 +16,10 @@
       "distance": 11.5,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 136.9,
-      "diesel": 155.9,
-      "updated": "2026-04-23T00:00:00+00:00",
-      "cached": true
+      "unleaded": 157.9,
+      "diesel": 172.9,
+      "updated": "2026-07-23T22:57:32.000Z",
+      "cached": false
     },
     {
       "name": "SAINSBURYS LIVERPOOL GREAT HOMER STREET",
@@ -706,7 +706,7 @@
       "distance": 6.9,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 156.9,
+      "unleaded": 157.9,
       "diesel": 189.9,
       "updated": "2026-07-20T22:55:24.000Z",
       "cached": false
@@ -2223,7 +2223,7 @@
       "is_motorway": false,
       "unleaded": 156.9,
       "diesel": 174.9,
-      "updated": "2026-07-23T23:02:52.879648+00:00",
+      "updated": "2026-07-23T23:31:53.675950+00:00",
       "cached": false
     },
     {
