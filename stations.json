@@ -3,7 +3,7 @@
     "unleaded": 155.7,
     "diesel": 179.0
   },
-  "lastUpdated": "2026-07-23T11:02:56.897279+00:00",
+  "lastUpdated": "2026-07-23T11:32:12.252612+00:00",
   "stationCount": 177,
   "stations": [
     {
@@ -271,9 +271,9 @@
       "distance": 7.3,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 156.9,
-      "diesel": 192.9,
-      "updated": "2026-07-22T08:14:14.000Z",
+      "unleaded": 159.9,
+      "diesel": 197.9,
+      "updated": "2026-07-23T11:12:19.000Z",
       "cached": false
     },
     {
@@ -391,9 +391,9 @@
       "distance": 15.5,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 154.9,
-      "diesel": 190.9,
-      "updated": "2026-07-16T09:47:26.000Z",
+      "unleaded": 155.9,
+      "diesel": 192.9,
+      "updated": "2026-07-23T11:02:07.000Z",
       "cached": false
     },
     {
@@ -766,9 +766,9 @@
       "distance": 14.6,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 162.9,
-      "diesel": 175.9,
-      "updated": "2026-07-21T16:07:51.000Z",
+      "unleaded": 164.9,
+      "diesel": 178.9,
+      "updated": "2026-07-23T11:08:43.000Z",
       "cached": false
     },
     {
@@ -1996,9 +1996,9 @@
       "distance": 12.8,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 151.9,
-      "diesel": 188.9,
-      "updated": "2026-06-29T10:32:19.000Z",
+      "unleaded": 156.9,
+      "diesel": 195.9,
+      "updated": "2026-07-23T11:03:26.000Z",
       "cached": false
     },
     {
@@ -2071,9 +2071,9 @@
       "distance": 13.3,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 156.9,
-      "diesel": 173.9,
-      "updated": "2026-07-21T16:19:57.000Z",
+      "unleaded": 159.9,
+      "diesel": 175.9,
+      "updated": "2026-07-23T11:15:30.000Z",
       "cached": false
     },
     {
@@ -2223,7 +2223,7 @@
       "is_motorway": false,
       "unleaded": 151.9,
       "diesel": 167.9,
-      "updated": "2026-07-23T11:02:55.873387+00:00",
+      "updated": "2026-07-23T11:32:11.268966+00:00",
       "cached": false
     },
     {
