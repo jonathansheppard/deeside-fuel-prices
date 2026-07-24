@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
-    "unleaded": 156.4,
-    "diesel": 180.1
+    "unleaded": 156.5,
+    "diesel": 180.2
   },
-  "lastUpdated": "2026-07-24T12:32:16.279395+00:00",
+  "lastUpdated": "2026-07-24T13:02:52.313949+00:00",
   "stationCount": 177,
   "stations": [
     {
@@ -976,7 +976,7 @@
       "distance": 5.5,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 157.9,
+      "unleaded": 158.9,
       "diesel": 192.9,
       "updated": "2026-07-23T15:10:17.000Z",
       "cached": false
@@ -1021,10 +1021,10 @@
       "distance": 5.7,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 152.9,
-      "diesel": 165.9,
-      "updated": "2026-07-23T13:09:51.000Z",
-      "cached": false
+      "unleaded": 132.9,
+      "diesel": 150.9,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
     },
     {
       "name": "ASDA HANDBRIDGE EXPRESS PETROL",
@@ -1186,7 +1186,7 @@
       "distance": 15.5,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 145.9,
+      "unleaded": 146.9,
       "diesel": 162.9,
       "updated": "2026-07-23T13:27:15.000Z",
       "cached": false
@@ -1486,9 +1486,9 @@
       "distance": 15.1,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 155.9,
-      "diesel": 171.9,
-      "updated": "2026-07-23T09:25:22.000Z",
+      "unleaded": 158.9,
+      "diesel": 174.9,
+      "updated": "2026-07-24T12:40:43.000Z",
       "cached": false
     },
     {
@@ -1891,9 +1891,9 @@
       "distance": 2.8,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 155.9,
-      "diesel": 167.9,
-      "updated": "2026-07-20T14:48:35.000Z",
+      "unleaded": 158.9,
+      "diesel": 171.9,
+      "updated": "2026-07-24T12:37:52.000Z",
       "cached": false
     },
     {
@@ -2223,7 +2223,7 @@
       "is_motorway": false,
       "unleaded": 156.9,
       "diesel": 174.9,
-      "updated": "2026-07-24T12:32:15.032255+00:00",
+      "updated": "2026-07-24T13:02:50.528943+00:00",
       "cached": false
     },
     {
