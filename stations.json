@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
-    "unleaded": 156.4,
+    "unleaded": 156.5,
     "diesel": 180.1
   },
-  "lastUpdated": "2026-07-24T11:32:09.691478+00:00",
+  "lastUpdated": "2026-07-24T12:03:05.488382+00:00",
   "stationCount": 177,
   "stations": [
     {
@@ -856,9 +856,9 @@
       "distance": 15.4,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 159.9,
-      "diesel": 191.9,
-      "updated": "2026-07-22T15:12:52.000Z",
+      "unleaded": 162.9,
+      "diesel": 195.9,
+      "updated": "2026-07-24T11:45:00.000Z",
       "cached": false
     },
     {
@@ -1066,10 +1066,10 @@
       "distance": 6.0,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 137.9,
-      "diesel": 145.9,
-      "updated": "2026-03-13T00:00:00+00:00",
-      "cached": true
+      "unleaded": 159.9,
+      "diesel": 179.9,
+      "updated": "2026-07-24T11:28:47.000Z",
+      "cached": false
     },
     {
       "name": "SPITAL SF CONNECT",
@@ -2223,7 +2223,7 @@
       "is_motorway": false,
       "unleaded": 156.9,
       "diesel": 174.9,
-      "updated": "2026-07-24T11:32:08.632090+00:00",
+      "updated": "2026-07-24T12:03:04.542448+00:00",
       "cached": false
     },
     {
