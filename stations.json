@@ -3,7 +3,7 @@
     "unleaded": 157.2,
     "diesel": 181.5
   },
-  "lastUpdated": "2026-07-25T09:02:56.099769+00:00",
+  "lastUpdated": "2026-07-25T09:32:17.981161+00:00",
   "stationCount": 177,
   "stations": [
     {
@@ -136,10 +136,10 @@
       "distance": 9.6,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 156.9,
-      "diesel": 194.9,
-      "updated": "2026-07-20T16:36:00.000Z",
-      "cached": false
+      "unleaded": 144.9,
+      "diesel": 159.9,
+      "updated": "2026-04-23T00:00:00+00:00",
+      "cached": true
     },
     {
       "name": "Essar Sefton St",
@@ -2223,7 +2223,7 @@
       "is_motorway": false,
       "unleaded": 156.9,
       "diesel": 174.9,
-      "updated": "2026-07-25T09:02:54.418681+00:00",
+      "updated": "2026-07-25T09:32:16.855833+00:00",
       "cached": false
     },
     {
