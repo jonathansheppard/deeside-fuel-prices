@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
     "unleaded": 158.5,
-    "diesel": 183.3
+    "diesel": 183.4
   },
-  "lastUpdated": "2026-07-27T23:02:50.833766+00:00",
+  "lastUpdated": "2026-07-27T23:32:04.851714+00:00",
   "stationCount": 177,
   "stations": [
     {
@@ -211,10 +211,10 @@
       "distance": 10.6,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 144.0,
-      "diesel": 160.0,
-      "updated": "2026-03-13T00:00:00+00:00",
-      "cached": true
+      "unleaded": 159.7,
+      "diesel": 179.7,
+      "updated": "2026-07-27T22:57:32.000Z",
+      "cached": false
     },
     {
       "name": "Go Kirkdale",
@@ -2223,7 +2223,7 @@
       "is_motorway": false,
       "unleaded": 156.9,
       "diesel": 174.9,
-      "updated": "2026-07-27T23:02:49.152018+00:00",
+      "updated": "2026-07-27T23:32:03.541822+00:00",
       "cached": false
     },
     {
