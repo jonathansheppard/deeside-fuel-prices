@@ -3,7 +3,7 @@
     "unleaded": 159.0,
     "diesel": 184.2
   },
-  "lastUpdated": "2026-07-29T07:31:39.827070+00:00",
+  "lastUpdated": "2026-07-29T08:01:50.384827+00:00",
   "stationCount": 177,
   "stations": [
     {
@@ -257,8 +257,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 159.9,
-      "diesel": 175.9,
-      "updated": "2026-07-24T10:43:07.000Z",
+      "diesel": 177.9,
+      "updated": "2026-07-29T07:57:32.000Z",
       "cached": false
     },
     {
@@ -1081,10 +1081,10 @@
       "distance": 10.5,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 163.9,
-      "diesel": 198.9,
-      "updated": "2026-07-25T10:30:01.000Z",
-      "cached": false
+      "unleaded": 138.9,
+      "diesel": 158.9,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
     },
     {
       "name": "RONTEC BEBINGTON",
@@ -2223,7 +2223,7 @@
       "is_motorway": false,
       "unleaded": 156.9,
       "diesel": 174.9,
-      "updated": "2026-07-29T07:31:38.711882+00:00",
+      "updated": "2026-07-29T08:01:47.229543+00:00",
       "cached": false
     },
     {
