@@ -3,7 +3,7 @@
     "unleaded": 160.7,
     "diesel": 186.3
   },
-  "lastUpdated": "2026-08-02T09:03:00.763336+00:00",
+  "lastUpdated": "2026-08-02T09:32:15.656032+00:00",
   "stationCount": 177,
   "stations": [
     {
@@ -571,10 +571,10 @@
       "distance": 7.7,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 141.9,
-      "diesel": 155.9,
-      "updated": "2026-03-13T00:00:00+00:00",
-      "cached": true
+      "unleaded": 162.9,
+      "diesel": 188.9,
+      "updated": "2026-07-27T11:41:36.000Z",
+      "cached": false
     },
     {
       "name": "SHELL CARLETT",
@@ -2176,7 +2176,7 @@
       "distance": 2.7,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 159.9,
+      "unleaded": 162.9,
       "diesel": 179.9,
       "updated": "2026-07-31T11:45:21.000Z",
       "cached": false
@@ -2223,7 +2223,7 @@
       "is_motorway": false,
       "unleaded": 158.9,
       "diesel": 179.9,
-      "updated": "2026-08-02T09:02:59.702050+00:00",
+      "updated": "2026-08-02T09:32:14.718533+00:00",
       "cached": false
     },
     {
