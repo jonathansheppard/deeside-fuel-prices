@@ -3,7 +3,7 @@
     "unleaded": 161.3,
     "diesel": 187.6
   },
-  "lastUpdated": "2026-08-04T14:31:51.428210+00:00",
+  "lastUpdated": "2026-08-04T15:02:58.991344+00:00",
   "stationCount": 177,
   "stations": [
     {
@@ -1178,7 +1178,7 @@
     },
     {
       "name": "COSTCO WHOLESALE LIVERPOOL",
-      "brand": "COSTCO WHOLESALE",
+      "brand": "COSTCO WHOLESALE LIVERPOOL",
       "address": "",
       "postcode": "L3 7HY",
       "lat": 53.41303,
@@ -2223,7 +2223,7 @@
       "is_motorway": false,
       "unleaded": 162.9,
       "diesel": 183.9,
-      "updated": "2026-08-04T14:31:50.015587+00:00",
+      "updated": "2026-08-04T15:02:56.995420+00:00",
       "cached": false
     },
     {
