@@ -3,7 +3,7 @@
     "unleaded": 161.3,
     "diesel": 187.5
   },
-  "lastUpdated": "2026-08-04T10:31:16.576521+00:00",
+  "lastUpdated": "2026-08-04T11:02:34.281867+00:00",
   "stationCount": 177,
   "stations": [
     {
@@ -256,10 +256,10 @@
       "distance": 12.8,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 138.9,
-      "diesel": 158.9,
-      "updated": "2026-03-13T00:00:00+00:00",
-      "cached": true
+      "unleaded": 159.9,
+      "diesel": 180.9,
+      "updated": "2026-08-04T10:28:41.000Z",
+      "cached": false
     },
     {
       "name": "BP HARVEST ENERGY OVERPOOL",
@@ -271,7 +271,7 @@
       "distance": 7.3,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 161.9,
+      "unleaded": 163.9,
       "diesel": 205.9,
       "updated": "2026-08-03T08:51:58.000Z",
       "cached": false
@@ -286,9 +286,9 @@
       "distance": 7.8,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 159.9,
-      "diesel": 179.9,
-      "updated": "2026-07-29T06:56:47.000Z",
+      "unleaded": 161.9,
+      "diesel": 182.9,
+      "updated": "2026-08-04T10:52:41.000Z",
       "cached": false
     },
     {
@@ -361,7 +361,7 @@
       "distance": 11.1,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 161.9,
+      "unleaded": 163.9,
       "diesel": 199.9,
       "updated": "2026-07-31T11:25:53.000Z",
       "cached": false
@@ -781,9 +781,9 @@
       "distance": 8.5,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 156.9,
-      "diesel": 176.9,
-      "updated": "2026-07-30T09:29:11.000Z",
+      "unleaded": 162.9,
+      "diesel": 179.9,
+      "updated": "2026-08-04T10:37:46.000Z",
       "cached": false
     },
     {
@@ -2223,7 +2223,7 @@
       "is_motorway": false,
       "unleaded": 158.9,
       "diesel": 179.9,
-      "updated": "2026-08-04T10:31:15.477650+00:00",
+      "updated": "2026-08-04T11:02:33.464076+00:00",
       "cached": false
     },
     {
