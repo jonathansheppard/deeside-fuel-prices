@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
-    "unleaded": 162.2,
-    "diesel": 188.4
+    "unleaded": 162.1,
+    "diesel": 188.2
   },
-  "lastUpdated": "2026-08-06T17:31:20.838441+00:00",
+  "lastUpdated": "2026-08-06T18:02:22.485810+00:00",
   "stationCount": 177,
   "stations": [
     {
@@ -137,8 +137,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 164.9,
-      "diesel": 204.9,
-      "updated": "2026-08-02T08:45:00.000Z",
+      "diesel": 199.9,
+      "updated": "2026-08-06T17:45:00.000Z",
       "cached": false
     },
     {
@@ -242,8 +242,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 165.9,
-      "diesel": 204.9,
-      "updated": "2026-08-03T16:25:00.000Z",
+      "diesel": 199.9,
+      "updated": "2026-08-06T17:50:00.000Z",
       "cached": false
     },
     {
@@ -437,8 +437,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 168.9,
-      "diesel": 204.9,
-      "updated": "2026-08-03T16:25:00.000Z",
+      "diesel": 199.9,
+      "updated": "2026-08-06T17:50:00.000Z",
       "cached": false
     },
     {
@@ -527,8 +527,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 163.9,
-      "diesel": 204.9,
-      "updated": "2026-08-03T16:25:00.000Z",
+      "diesel": 199.9,
+      "updated": "2026-08-06T17:45:00.000Z",
       "cached": false
     },
     {
@@ -587,8 +587,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 165.9,
-      "diesel": 204.9,
-      "updated": "2026-08-03T16:25:00.000Z",
+      "diesel": 199.9,
+      "updated": "2026-08-06T17:45:00.000Z",
       "cached": false
     },
     {
@@ -1517,8 +1517,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 163.9,
-      "diesel": 204.9,
-      "updated": "2026-08-03T16:25:00.000Z",
+      "diesel": 199.9,
+      "updated": "2026-08-06T17:45:00.000Z",
       "cached": false
     },
     {
@@ -1532,8 +1532,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 165.9,
-      "diesel": 204.9,
-      "updated": "2026-08-03T16:35:00.000Z",
+      "diesel": 199.9,
+      "updated": "2026-08-06T17:45:00.000Z",
       "cached": false
     },
     {
@@ -1712,8 +1712,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 164.9,
-      "diesel": 204.9,
-      "updated": "2026-08-03T16:35:00.000Z",
+      "diesel": 199.9,
+      "updated": "2026-08-06T17:45:00.000Z",
       "cached": false
     },
     {
@@ -1877,8 +1877,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 165.9,
-      "diesel": 204.9,
-      "updated": "2026-08-03T16:35:00.000Z",
+      "diesel": 199.9,
+      "updated": "2026-08-06T17:45:00.000Z",
       "cached": false
     },
     {
@@ -1967,8 +1967,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 168.9,
-      "diesel": 204.9,
-      "updated": "2026-08-03T16:25:00.000Z",
+      "diesel": 199.9,
+      "updated": "2026-08-06T17:45:00.000Z",
       "cached": false
     },
     {
@@ -2027,8 +2027,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 170.9,
-      "diesel": 204.9,
-      "updated": "2026-08-03T16:25:00.000Z",
+      "diesel": 199.9,
+      "updated": "2026-08-06T17:45:00.000Z",
       "cached": false
     },
     {
@@ -2057,8 +2057,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 167.9,
-      "diesel": 204.9,
-      "updated": "2026-08-03T16:25:00.000Z",
+      "diesel": 199.9,
+      "updated": "2026-08-06T17:46:00.000Z",
       "cached": false
     },
     {
@@ -2116,10 +2116,10 @@
       "distance": 8.7,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 166.9,
-      "diesel": 204.9,
-      "updated": "2026-08-03T16:25:00.000Z",
-      "cached": false
+      "unleaded": 143.9,
+      "diesel": 162.9,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
     },
     {
       "name": "Lobitos",
@@ -2207,8 +2207,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 163.9,
-      "diesel": 204.9,
-      "updated": "2026-08-03T16:25:00.000Z",
+      "diesel": 199.9,
+      "updated": "2026-08-06T17:45:00.000Z",
       "cached": false
     },
     {
@@ -2223,7 +2223,7 @@
       "is_motorway": false,
       "unleaded": 162.9,
       "diesel": 183.9,
-      "updated": "2026-08-06T17:31:19.826306+00:00",
+      "updated": "2026-08-06T18:02:21.401194+00:00",
       "cached": false
     },
     {
