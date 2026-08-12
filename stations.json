@@ -3,7 +3,7 @@
     "unleaded": 161.8,
     "diesel": 188.0
   },
-  "lastUpdated": "2026-08-12T15:32:41.949098+00:00",
+  "lastUpdated": "2026-08-12T16:02:50.281782+00:00",
   "stationCount": 177,
   "stations": [
     {
@@ -766,9 +766,9 @@
       "distance": 14.6,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 167.9,
-      "diesel": 184.9,
-      "updated": "2026-08-07T11:45:23.000Z",
+      "unleaded": 163.9,
+      "diesel": 183.9,
+      "updated": "2026-08-12T15:39:44.000Z",
       "cached": false
     },
     {
@@ -1921,10 +1921,10 @@
       "distance": 14.8,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 141.9,
-      "diesel": 158.9,
-      "updated": "2026-03-13T00:00:00+00:00",
-      "cached": true
+      "unleaded": 163.9,
+      "diesel": 199.9,
+      "updated": "2026-08-12T15:28:49.000Z",
+      "cached": false
     },
     {
       "name": "SAINSBURYS BIRKENHEAD",
@@ -2072,8 +2072,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 163.9,
-      "diesel": 181.9,
-      "updated": "2026-07-31T09:05:49.000Z",
+      "diesel": 184.9,
+      "updated": "2026-08-12T15:39:56.000Z",
       "cached": false
     },
     {
@@ -2223,7 +2223,7 @@
       "is_motorway": false,
       "unleaded": 162.9,
       "diesel": 183.9,
-      "updated": "2026-08-12T15:32:40.892571+00:00",
+      "updated": "2026-08-12T16:02:49.111601+00:00",
       "cached": false
     },
     {
