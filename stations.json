@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
     "unleaded": 161.8,
-    "diesel": 188.1
+    "diesel": 188.0
   },
-  "lastUpdated": "2026-08-12T15:02:41.375548+00:00",
+  "lastUpdated": "2026-08-12T15:32:41.949098+00:00",
   "stationCount": 177,
   "stations": [
     {
@@ -1441,9 +1441,9 @@
       "distance": 17.8,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 158.9,
-      "diesel": 177.7,
-      "updated": "2026-08-06T18:43:29.000Z",
+      "unleaded": 157.9,
+      "diesel": 176.7,
+      "updated": "2026-08-12T15:05:23.000Z",
       "cached": false
     },
     {
@@ -1921,10 +1921,10 @@
       "distance": 14.8,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 163.9,
-      "diesel": 198.9,
-      "updated": "2026-08-05T11:06:54.000Z",
-      "cached": false
+      "unleaded": 141.9,
+      "diesel": 158.9,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
     },
     {
       "name": "SAINSBURYS BIRKENHEAD",
@@ -2223,7 +2223,7 @@
       "is_motorway": false,
       "unleaded": 162.9,
       "diesel": 183.9,
-      "updated": "2026-08-12T15:02:40.010705+00:00",
+      "updated": "2026-08-12T15:32:40.892571+00:00",
       "cached": false
     },
     {
