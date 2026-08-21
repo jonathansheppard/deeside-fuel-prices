@@ -3,7 +3,7 @@
     "unleaded": 161.4,
     "diesel": 189.0
   },
-  "lastUpdated": "2026-08-21T19:32:12.022758+00:00",
+  "lastUpdated": "2026-08-21T20:03:01.715914+00:00",
   "stationCount": 177,
   "stations": [
     {
@@ -1531,10 +1531,10 @@
       "distance": 3.3,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 147.9,
-      "diesel": 166.9,
-      "updated": "2026-03-13T00:00:00+00:00",
-      "cached": true
+      "unleaded": 168.9,
+      "diesel": 214.9,
+      "updated": "2026-08-21T19:26:00.000Z",
+      "cached": false
     },
     {
       "name": "BR Flint",
@@ -2223,7 +2223,7 @@
       "is_motorway": false,
       "unleaded": 162.9,
       "diesel": 183.9,
-      "updated": "2026-08-21T19:32:10.902745+00:00",
+      "updated": "2026-08-21T20:03:00.558095+00:00",
       "cached": false
     },
     {
