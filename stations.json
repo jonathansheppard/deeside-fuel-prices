@@ -3,12 +3,12 @@
     "unleaded": 161.3,
     "diesel": 188.5
   },
-  "lastUpdated": "2026-08-21T14:32:23.483783+00:00",
+  "lastUpdated": "2026-08-21T15:03:23.065917+00:00",
   "stationCount": 177,
   "stations": [
     {
       "name": "SAINSBURYS PENSBY ROAD THINGWALL",
-      "brand": "SAINSBURY'S",
+      "brand": "SAINSBURYS PENSBY ROAD THINGWALL",
       "address": "",
       "postcode": "CH61 7UB",
       "lat": 53.35295,
@@ -23,7 +23,7 @@
     },
     {
       "name": "SAINSBURYS LIVERPOOL GREAT HOMER STREET",
-      "brand": "SAINSBURY'S",
+      "brand": "SAINSBURYS LIVERPOOL GREAT HOMER STREET",
       "address": "",
       "postcode": "L5 3LQ",
       "lat": 53.4245,
@@ -83,7 +83,7 @@
     },
     {
       "name": "SAINSBURYS EAST PRESCOT ROAD",
-      "brand": "SAINSBURY'S",
+      "brand": "SAINSBURYS EAST PRESCOT ROAD",
       "address": "",
       "postcode": "L14 5PT",
       "lat": 53.41626,
@@ -368,7 +368,7 @@
     },
     {
       "name": "SAINSBURYS CHESTER",
-      "brand": "SAINSBURY'S",
+      "brand": "SAINSBURYS CHESTER",
       "address": "",
       "postcode": "CH3 5QJ",
       "lat": 53.18467,
@@ -548,7 +548,7 @@
     },
     {
       "name": "SAINSBURYS ELLESMERE PORT",
-      "brand": "SAINSBURY'S",
+      "brand": "SAINSBURYS ELLESMERE PORT",
       "address": "",
       "postcode": "CH65 9HN",
       "lat": 53.26233,
@@ -653,7 +653,7 @@
     },
     {
       "name": "SAINSBURYS UPTON",
-      "brand": "SAINSBURY'S",
+      "brand": "SAINSBURYS UPTON",
       "address": "",
       "postcode": "CH49 6QG",
       "lat": 53.37986,
@@ -1516,7 +1516,7 @@
       "distance": 7.2,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 167.9,
+      "unleaded": 166.9,
       "diesel": 204.9,
       "updated": "2026-08-21T09:27:00.000Z",
       "cached": false
@@ -1928,7 +1928,7 @@
     },
     {
       "name": "SAINSBURYS BIRKENHEAD",
-      "brand": "SAINSBURY'S",
+      "brand": "SAINSBURYS BIRKENHEAD",
       "address": "",
       "postcode": "CH42 8PQ",
       "lat": 53.37472,
@@ -1943,7 +1943,7 @@
     },
     {
       "name": "SAINSBURYS KINGS ROAD BEBINGTON",
-      "brand": "SAINSBURY'S",
+      "brand": "SAINSBURYS KINGS ROAD BEBINGTON",
       "address": "",
       "postcode": "CH63 8PZ",
       "lat": 53.35656,
@@ -2057,8 +2057,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 169.9,
-      "diesel": 199.9,
-      "updated": "2026-08-06T17:46:00.000Z",
+      "diesel": 209.9,
+      "updated": "2026-08-21T14:48:00.000Z",
       "cached": false
     },
     {
@@ -2138,7 +2138,7 @@
     },
     {
       "name": "SAINSBURYS WREXHAM",
-      "brand": "SAINSBURY'S",
+      "brand": "SAINSBURYS WREXHAM",
       "address": "",
       "postcode": "LL11 2BA",
       "lat": 53.05571,
@@ -2223,7 +2223,7 @@
       "is_motorway": false,
       "unleaded": 162.9,
       "diesel": 183.9,
-      "updated": "2026-08-21T14:32:21.975527+00:00",
+      "updated": "2026-08-21T15:03:21.555991+00:00",
       "cached": false
     },
     {
