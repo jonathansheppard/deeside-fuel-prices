@@ -3,7 +3,7 @@
     "unleaded": 161.4,
     "diesel": 189.0
   },
-  "lastUpdated": "2026-08-21T21:02:44.863558+00:00",
+  "lastUpdated": "2026-08-21T21:32:24.563674+00:00",
   "stationCount": 177,
   "stations": [
     {
@@ -721,10 +721,10 @@
       "distance": 14.5,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 165.9,
-      "diesel": 199.9,
-      "updated": "2026-08-06T20:30:00.000Z",
-      "cached": false
+      "unleaded": 139.9,
+      "diesel": 156.9,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
     },
     {
       "name": "MFG MORRISONS LIVERPOOL SPEKE",
@@ -2223,7 +2223,7 @@
       "is_motorway": false,
       "unleaded": 162.9,
       "diesel": 183.9,
-      "updated": "2026-08-21T21:02:43.310087+00:00",
+      "updated": "2026-08-21T21:32:23.198419+00:00",
       "cached": false
     },
     {
