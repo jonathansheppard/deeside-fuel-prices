@@ -3,8 +3,8 @@
     "unleaded": 161.6,
     "diesel": 189.6
   },
-  "lastUpdated": "2026-08-25T18:32:00.444647+00:00",
-  "stationCount": 176,
+  "lastUpdated": "2026-08-25T19:02:14.069447+00:00",
+  "stationCount": 177,
   "stations": [
     {
       "name": "SAINSBURYS PENSBY ROAD THINGWALL",
@@ -481,9 +481,9 @@
       "distance": 17.6,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 153.9,
-      "diesel": 172.9,
-      "updated": "2026-08-25T06:10:35.000Z",
+      "unleaded": 157.9,
+      "diesel": 177.9,
+      "updated": "2026-08-25T18:35:07.000Z",
       "cached": false
     },
     {
@@ -632,8 +632,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 159.9,
-      "diesel": 181.9,
-      "updated": "2026-08-25T14:35:17.000Z",
+      "diesel": 180.9,
+      "updated": "2026-08-25T18:35:08.000Z",
       "cached": false
     },
     {
@@ -2209,6 +2209,21 @@
       "unleaded": 165.9,
       "diesel": 214.9,
       "updated": "2026-08-21T17:10:00.000Z",
+      "cached": false
+    },
+    {
+      "name": "TEXACO ",
+      "brand": "TEXACO",
+      "address": "Park Road, Ruthin, Denbighshire",
+      "postcode": "LL15 1NB",
+      "lat": 53.1135285,
+      "lng": -3.3177116,
+      "distance": 12.9,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 162.9,
+      "diesel": 183.9,
+      "updated": "2026-08-25T19:02:12.741557+00:00",
       "cached": false
     },
     {
