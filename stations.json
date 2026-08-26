@@ -3,8 +3,8 @@
     "unleaded": 161.6,
     "diesel": 189.7
   },
-  "lastUpdated": "2026-08-26T10:02:32.581963+00:00",
-  "stationCount": 176,
+  "lastUpdated": "2026-08-26T10:31:44.817376+00:00",
+  "stationCount": 177,
   "stations": [
     {
       "name": "SAINSBURYS PENSBY ROAD THINGWALL",
@@ -361,7 +361,7 @@
       "distance": 11.1,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 163.9,
+      "unleaded": 164.9,
       "diesel": 199.9,
       "updated": "2026-07-31T11:25:53.000Z",
       "cached": false
@@ -751,7 +751,7 @@
       "distance": 15.9,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 164.9,
+      "unleaded": 165.9,
       "diesel": 209.9,
       "updated": "2026-08-22T09:54:20.000Z",
       "cached": false
@@ -1397,8 +1397,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 164.9,
-      "diesel": 204.9,
-      "updated": "2026-08-25T11:02:34.000Z",
+      "diesel": 205.9,
+      "updated": "2026-08-26T10:17:19.000Z",
       "cached": false
     },
     {
@@ -1771,9 +1771,9 @@
       "distance": 16.0,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 164.9,
-      "diesel": 187.9,
-      "updated": "2026-08-22T09:59:18.000Z",
+      "unleaded": 165.9,
+      "diesel": 189.9,
+      "updated": "2026-08-26T10:08:17.000Z",
       "cached": false
     },
     {
@@ -1906,7 +1906,7 @@
       "distance": 6.4,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 156.8,
+      "unleaded": 158.5,
       "diesel": 180.2,
       "updated": "2026-08-17T08:50:11.000Z",
       "cached": false
@@ -2209,6 +2209,21 @@
       "unleaded": 165.9,
       "diesel": 214.9,
       "updated": "2026-08-21T17:10:00.000Z",
+      "cached": false
+    },
+    {
+      "name": "TEXACO ",
+      "brand": "TEXACO",
+      "address": "Park Road, Ruthin, Denbighshire",
+      "postcode": "LL15 1NB",
+      "lat": 53.1135285,
+      "lng": -3.3177116,
+      "distance": 12.9,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 162.9,
+      "diesel": 183.9,
+      "updated": "2026-08-26T10:31:43.688426+00:00",
       "cached": false
     },
     {
