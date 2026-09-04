@@ -3,7 +3,7 @@
     "unleaded": 164.1,
     "diesel": 191.9
   },
-  "lastUpdated": "2026-09-04T22:03:15.901724+00:00",
+  "lastUpdated": "2026-09-04T22:32:26.200483+00:00",
   "stationCount": 177,
   "stations": [
     {
@@ -92,8 +92,8 @@
       "is_supermarket": true,
       "is_motorway": false,
       "unleaded": 159.9,
-      "diesel": 177.9,
-      "updated": "2026-09-04T07:58:02.000Z",
+      "diesel": 181.9,
+      "updated": "2026-09-04T22:02:00.000Z",
       "cached": false
     },
     {
@@ -151,8 +151,8 @@
       "distance": 14.0,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 161.9,
-      "diesel": 183.9,
+      "unleaded": 164.9,
+      "diesel": 186.9,
       "updated": "2026-09-01T15:30:37.000Z",
       "cached": false
     },
@@ -376,9 +376,9 @@
       "distance": 7.4,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 160.9,
-      "diesel": 182.9,
-      "updated": "2026-09-02T22:24:58.000Z",
+      "unleaded": 162.9,
+      "diesel": 183.9,
+      "updated": "2026-09-04T22:28:52.000Z",
       "cached": false
     },
     {
@@ -452,8 +452,8 @@
       "is_supermarket": true,
       "is_motorway": false,
       "unleaded": 161.9,
-      "diesel": 182.9,
-      "updated": "2026-09-03T21:58:53.000Z",
+      "diesel": 183.9,
+      "updated": "2026-09-04T22:03:19.000Z",
       "cached": false
     },
     {
@@ -481,9 +481,9 @@
       "distance": 17.6,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 157.9,
-      "diesel": 177.9,
-      "updated": "2026-09-04T06:04:10.000Z",
+      "unleaded": 160.9,
+      "diesel": 180.9,
+      "updated": "2026-09-04T22:18:54.000Z",
       "cached": false
     },
     {
@@ -617,8 +617,8 @@
       "is_supermarket": true,
       "is_motorway": false,
       "unleaded": 161.9,
-      "diesel": 192.9,
-      "updated": "2026-09-02T21:52:22.000Z",
+      "diesel": 193.9,
+      "updated": "2026-09-04T22:02:41.000Z",
       "cached": false
     },
     {
@@ -661,10 +661,10 @@
       "distance": 13.4,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 138.9,
-      "diesel": 153.9,
-      "updated": "2026-03-13T00:00:00+00:00",
-      "cached": true
+      "unleaded": 166.9,
+      "diesel": 187.9,
+      "updated": "2026-09-02T21:54:47.000Z",
+      "cached": false
     },
     {
       "name": "SHELL NORTHOP",
@@ -1936,9 +1936,9 @@
       "distance": 12.8,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 163.9,
-      "diesel": 183.9,
-      "updated": "2026-09-04T06:41:42.000Z",
+      "unleaded": 164.9,
+      "diesel": 185.9,
+      "updated": "2026-09-04T22:00:51.000Z",
       "cached": false
     },
     {
@@ -2146,7 +2146,7 @@
       "distance": 9.3,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 161.9,
+      "unleaded": 160.9,
       "diesel": 181.9,
       "updated": "2026-09-02T22:02:00.000Z",
       "cached": false
@@ -2223,7 +2223,7 @@
       "is_motorway": false,
       "unleaded": 167.9,
       "diesel": 189.9,
-      "updated": "2026-09-04T22:03:14.507926+00:00",
+      "updated": "2026-09-04T22:32:25.247029+00:00",
       "cached": false
     },
     {
