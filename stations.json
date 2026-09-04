@@ -1,10 +1,10 @@
 {
   "nationalAvg": {
     "unleaded": 164.1,
-    "diesel": 191.8
+    "diesel": 191.9
   },
-  "lastUpdated": "2026-09-04T21:32:49.408570+00:00",
-  "stationCount": 176,
+  "lastUpdated": "2026-09-04T22:03:15.901724+00:00",
+  "stationCount": 177,
   "stations": [
     {
       "name": "SAINSBURYS PENSBY ROAD THINGWALL",
@@ -166,9 +166,9 @@
       "distance": 15.5,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 160.9,
-      "diesel": 181.9,
-      "updated": "2026-09-03T21:35:07.000Z",
+      "unleaded": 161.9,
+      "diesel": 182.9,
+      "updated": "2026-09-04T21:32:34.000Z",
       "cached": false
     },
     {
@@ -406,7 +406,7 @@
       "distance": 11.8,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 162.9,
+      "unleaded": 163.9,
       "diesel": 195.9,
       "updated": "2026-07-27T22:00:12.000Z",
       "cached": false
@@ -556,9 +556,9 @@
       "distance": 8.1,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 160.9,
-      "diesel": 182.9,
-      "updated": "2026-09-02T21:45:25.000Z",
+      "unleaded": 162.9,
+      "diesel": 183.9,
+      "updated": "2026-09-04T21:49:27.000Z",
       "cached": false
     },
     {
@@ -661,10 +661,10 @@
       "distance": 13.4,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 165.9,
-      "diesel": 187.9,
-      "updated": "2026-09-02T21:54:47.000Z",
-      "cached": false
+      "unleaded": 138.9,
+      "diesel": 153.9,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
     },
     {
       "name": "SHELL NORTHOP",
@@ -736,9 +736,9 @@
       "distance": 13.5,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 161.9,
-      "diesel": 182.9,
-      "updated": "2026-09-03T21:49:43.000Z",
+      "unleaded": 162.9,
+      "diesel": 183.9,
+      "updated": "2026-09-04T21:52:14.000Z",
       "cached": false
     },
     {
@@ -2209,6 +2209,21 @@
       "unleaded": 168.9,
       "diesel": 214.9,
       "updated": "2026-08-21T17:10:00.000Z",
+      "cached": false
+    },
+    {
+      "name": "TEXACO ",
+      "brand": "TEXACO",
+      "address": "Park Road, Ruthin, Denbighshire",
+      "postcode": "LL15 1NB",
+      "lat": 53.1135285,
+      "lng": -3.3177116,
+      "distance": 12.9,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 167.9,
+      "diesel": 189.9,
+      "updated": "2026-09-04T22:03:14.507926+00:00",
       "cached": false
     },
     {
