@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
     "unleaded": 165.3,
-    "diesel": 192.9
+    "diesel": 193.0
   },
-  "lastUpdated": "2026-09-07T09:03:49.358327+00:00",
+  "lastUpdated": "2026-09-07T09:32:47.452309+00:00",
   "stationCount": 176,
   "stations": [
     {
@@ -142,8 +142,8 @@
       "cached": false
     },
     {
-      "name": "Essar Sefton St",
-      "brand": "Essar Sefton St",
+      "name": "ESSAR SEFTON ST",
+      "brand": "ESSAR SEFTON ST",
       "address": "",
       "postcode": "L8 6UD",
       "lat": 53.390138,
@@ -301,9 +301,9 @@
       "distance": 7.5,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 163.9,
-      "diesel": 184.9,
-      "updated": "2026-08-26T09:04:36.000Z",
+      "unleaded": 166.9,
+      "diesel": 187.9,
+      "updated": "2026-09-07T09:00:43.000Z",
       "cached": false
     },
     {
@@ -473,7 +473,7 @@
     },
     {
       "name": "ESSAR BREWSTER STREET SERVICE STATRION",
-      "brand": "ESSAR",
+      "brand": "ESSAR BREWSTER STREET SERVICE STATRION",
       "address": "",
       "postcode": "L4 3TL",
       "lat": 53.4427363,
@@ -623,7 +623,7 @@
     },
     {
       "name": "ESSAR GATEACRE SERVICE STATION",
-      "brand": "ESSAR",
+      "brand": "ESSAR GATEACRE SERVICE STATION",
       "address": "",
       "postcode": "L25 1PG",
       "lat": 53.3921211,
@@ -1396,9 +1396,9 @@
       "distance": 18.5,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 169.9,
-      "diesel": 210.9,
-      "updated": "2026-09-04T10:36:40.000Z",
+      "unleaded": 171.9,
+      "diesel": 212.9,
+      "updated": "2026-09-07T09:08:07.000Z",
       "cached": false
     },
     {
@@ -1651,7 +1651,7 @@
       "distance": 19.4,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 167.9,
+      "unleaded": 169.9,
       "diesel": 199.9,
       "updated": "2026-08-13T15:07:45.000Z",
       "cached": false
@@ -2161,7 +2161,7 @@
       "distance": 7.7,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 161.9,
+      "unleaded": 163.9,
       "diesel": 199.9,
       "updated": "2026-09-03T08:34:15.000Z",
       "cached": false
