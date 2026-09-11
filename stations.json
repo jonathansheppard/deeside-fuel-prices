@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
     "unleaded": 168.5,
-    "diesel": 196.5
+    "diesel": 196.6
   },
-  "lastUpdated": "2026-09-11T07:03:16.207585+00:00",
+  "lastUpdated": "2026-09-11T07:32:51.101139+00:00",
   "stationCount": 177,
   "stations": [
     {
@@ -1051,9 +1051,9 @@
       "distance": 6.3,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 169.9,
-      "diesel": 211.9,
-      "updated": "2026-09-10T09:34:03.000Z",
+      "unleaded": 171.9,
+      "diesel": 213.9,
+      "updated": "2026-09-11T07:20:08.000Z",
       "cached": false
     },
     {
@@ -1261,7 +1261,7 @@
       "distance": 13.1,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 168.9,
+      "unleaded": 169.9,
       "diesel": 209.9,
       "updated": "2026-09-05T12:41:49.000Z",
       "cached": false
@@ -1351,9 +1351,9 @@
       "distance": 17.1,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 171.9,
-      "diesel": 212.9,
-      "updated": "2026-09-10T09:28:27.000Z",
+      "unleaded": 172.9,
+      "diesel": 213.9,
+      "updated": "2026-09-11T07:06:12.000Z",
       "cached": false
     },
     {
@@ -1396,9 +1396,9 @@
       "distance": 18.5,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 174.9,
-      "diesel": 215.9,
-      "updated": "2026-09-10T09:32:49.000Z",
+      "unleaded": 175.9,
+      "diesel": 216.9,
+      "updated": "2026-09-11T07:21:20.000Z",
       "cached": false
     },
     {
@@ -1426,9 +1426,9 @@
       "distance": 17.1,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 169.9,
-      "diesel": 211.9,
-      "updated": "2026-09-10T09:30:41.000Z",
+      "unleaded": 171.9,
+      "diesel": 213.9,
+      "updated": "2026-09-11T07:21:36.000Z",
       "cached": false
     },
     {
@@ -2223,7 +2223,7 @@
       "is_motorway": false,
       "unleaded": 169.9,
       "diesel": 189.9,
-      "updated": "2026-09-11T07:03:15.108446+00:00",
+      "updated": "2026-09-11T07:32:49.745659+00:00",
       "cached": false
     },
     {
