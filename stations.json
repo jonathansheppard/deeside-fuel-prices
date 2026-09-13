@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
-    "unleaded": 169.5,
+    "unleaded": 169.6,
     "diesel": 197.9
   },
-  "lastUpdated": "2026-09-13T14:32:33.500094+00:00",
+  "lastUpdated": "2026-09-13T15:03:01.008543+00:00",
   "stationCount": 177,
   "stations": [
     {
@@ -1082,8 +1082,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 172.9,
-      "diesel": 213.9,
-      "updated": "2026-09-11T09:00:09.000Z",
+      "diesel": 215.9,
+      "updated": "2026-09-13T14:45:06.000Z",
       "cached": false
     },
     {
@@ -2223,7 +2223,7 @@
       "is_motorway": false,
       "unleaded": 171.9,
       "diesel": 191.9,
-      "updated": "2026-09-13T14:32:32.212905+00:00",
+      "updated": "2026-09-13T15:03:00.083856+00:00",
       "cached": false
     },
     {
