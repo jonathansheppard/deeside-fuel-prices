@@ -3,7 +3,7 @@
     "unleaded": 171.8,
     "diesel": 201.5
   },
-  "lastUpdated": "2026-09-17T10:03:10.055285+00:00",
+  "lastUpdated": "2026-09-17T10:32:10.852960+00:00",
   "stationCount": 177,
   "stations": [
     {
@@ -1081,9 +1081,9 @@
       "distance": 10.5,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 174.9,
-      "diesel": 217.9,
-      "updated": "2026-09-15T08:00:00.000Z",
+      "unleaded": 173.9,
+      "diesel": 216.9,
+      "updated": "2026-09-17T10:15:01.000Z",
       "cached": false
     },
     {
@@ -1606,10 +1606,10 @@
       "distance": 1.3,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 136.9,
-      "diesel": 159.9,
-      "updated": "2026-03-13T00:00:00+00:00",
-      "cached": true
+      "unleaded": 171.9,
+      "diesel": 195.9,
+      "updated": "2026-09-17T10:00:23.000Z",
+      "cached": false
     },
     {
       "name": "Longacres Filling Station LTD",
@@ -2223,7 +2223,7 @@
       "is_motorway": false,
       "unleaded": 173.9,
       "diesel": 193.9,
-      "updated": "2026-09-17T10:03:08.981314+00:00",
+      "updated": "2026-09-17T10:32:09.734532+00:00",
       "cached": false
     },
     {
