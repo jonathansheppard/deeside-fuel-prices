@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
     "unleaded": 172.0,
-    "diesel": 201.9
+    "diesel": 202.0
   },
-  "lastUpdated": "2026-09-18T08:32:20.129386+00:00",
+  "lastUpdated": "2026-09-18T09:02:55.018503+00:00",
   "stationCount": 177,
   "stations": [
     {
@@ -781,10 +781,10 @@
       "distance": 8.5,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 139.9,
-      "diesel": 159.9,
-      "updated": "2026-03-13T00:00:00+00:00",
-      "cached": true
+      "unleaded": 169.9,
+      "diesel": 192.9,
+      "updated": "2026-09-18T08:29:55.000Z",
+      "cached": false
     },
     {
       "name": "ASDA COEDPOETH EXPRESS PETROL",
@@ -2223,7 +2223,7 @@
       "is_motorway": false,
       "unleaded": 175.9,
       "diesel": 197.9,
-      "updated": "2026-09-18T08:32:18.740001+00:00",
+      "updated": "2026-09-18T09:02:53.698191+00:00",
       "cached": false
     },
     {
