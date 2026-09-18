@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
-    "unleaded": 172.1,
-    "diesel": 202.1
+    "unleaded": 172.2,
+    "diesel": 202.2
   },
-  "lastUpdated": "2026-09-18T13:02:46.910792+00:00",
+  "lastUpdated": "2026-09-18T13:32:13.406072+00:00",
   "stationCount": 177,
   "stations": [
     {
@@ -916,10 +916,10 @@
       "distance": 1.8,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 145.9,
-      "diesel": 161.9,
-      "updated": "2026-03-13T00:00:00+00:00",
-      "cached": true
+      "unleaded": 172.9,
+      "diesel": 213.9,
+      "updated": "2026-09-18T12:59:43.000Z",
+      "cached": false
     },
     {
       "name": "ASDA QUEENSFERRY",
@@ -2223,7 +2223,7 @@
       "is_motorway": false,
       "unleaded": 175.9,
       "diesel": 197.9,
-      "updated": "2026-09-18T13:02:45.788839+00:00",
+      "updated": "2026-09-18T13:32:12.325896+00:00",
       "cached": false
     },
     {
