@@ -3,7 +3,7 @@
     "unleaded": 172.3,
     "diesel": 202.4
   },
-  "lastUpdated": "2026-09-19T07:32:24.251562+00:00",
+  "lastUpdated": "2026-09-19T08:02:45.942809+00:00",
   "stationCount": 177,
   "stations": [
     {
@@ -901,10 +901,10 @@
       "distance": 4.2,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 141.7,
-      "diesel": 161.7,
-      "updated": "2026-03-13T00:00:00+00:00",
-      "cached": true
+      "unleaded": 171.9,
+      "diesel": 195.9,
+      "updated": "2026-09-19T07:27:43.000Z",
+      "cached": false
     },
     {
       "name": "Dobshill Service Station",
@@ -1037,8 +1037,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 178.9,
-      "diesel": 215.9,
-      "updated": "2026-09-16T17:42:40.000Z",
+      "diesel": 199.9,
+      "updated": "2026-09-19T08:02:43.627458+00:00",
       "cached": false
     },
     {
@@ -1052,8 +1052,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 172.9,
-      "diesel": 215.9,
-      "updated": "2026-09-16T10:51:59.000Z",
+      "diesel": 216.9,
+      "updated": "2026-09-19T07:57:37.000Z",
       "cached": false
     },
     {
@@ -1262,8 +1262,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 173.9,
-      "diesel": 214.9,
-      "updated": "2026-09-18T09:11:15.000Z",
+      "diesel": 215.9,
+      "updated": "2026-09-19T07:57:27.000Z",
       "cached": false
     },
     {
@@ -1351,9 +1351,9 @@
       "distance": 17.1,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 175.9,
-      "diesel": 219.9,
-      "updated": "2026-09-16T10:27:16.000Z",
+      "unleaded": 169.9,
+      "diesel": 193.9,
+      "updated": "2026-09-19T08:02:44.496914+00:00",
       "cached": false
     },
     {
@@ -1396,9 +1396,9 @@
       "distance": 18.5,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 178.9,
-      "diesel": 219.9,
-      "updated": "2026-09-16T10:56:41.000Z",
+      "unleaded": null,
+      "diesel": null,
+      "updated": null,
       "cached": false
     },
     {
@@ -2223,7 +2223,7 @@
       "is_motorway": false,
       "unleaded": 175.9,
       "diesel": 197.9,
-      "updated": "2026-09-19T07:32:23.113215+00:00",
+      "updated": "2026-09-19T08:02:44.639022+00:00",
       "cached": false
     },
     {
