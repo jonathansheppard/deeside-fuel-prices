@@ -3,7 +3,7 @@
     "unleaded": 172.4,
     "diesel": 202.6
   },
-  "lastUpdated": "2026-09-20T07:32:33.937470+00:00",
+  "lastUpdated": "2026-09-20T08:02:49.121943+00:00",
   "stationCount": 177,
   "stations": [
     {
@@ -556,7 +556,7 @@
       "distance": 8.1,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 170.9,
+      "unleaded": 171.9,
       "diesel": 193.9,
       "updated": "2026-09-15T21:47:39.000Z",
       "cached": false
@@ -661,10 +661,10 @@
       "distance": 13.4,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 173.9,
-      "diesel": 195.9,
-      "updated": "2026-09-11T21:59:07.000Z",
-      "cached": false
+      "unleaded": 138.9,
+      "diesel": 153.9,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
     },
     {
       "name": "SHELL NORTHOP",
@@ -2223,7 +2223,7 @@
       "is_motorway": false,
       "unleaded": 175.9,
       "diesel": 197.9,
-      "updated": "2026-09-20T07:32:32.858163+00:00",
+      "updated": "2026-09-20T08:02:47.932017+00:00",
       "cached": false
     },
     {
