@@ -3,7 +3,7 @@
     "unleaded": 173.9,
     "diesel": 205.0
   },
-  "lastUpdated": "2026-09-25T22:32:44.858099+00:00",
+  "lastUpdated": "2026-09-25T23:03:19.598909+00:00",
   "stationCount": 177,
   "stations": [
     {
@@ -2191,7 +2191,7 @@
       "distance": 18.5,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 174.9,
+      "unleaded": 175.9,
       "diesel": 215.9,
       "updated": "2026-09-16T22:34:10.000Z",
       "cached": false
