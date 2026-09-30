@@ -3,8 +3,8 @@
     "unleaded": 174.6,
     "diesel": 206.1
   },
-  "lastUpdated": "2026-09-30T12:32:11.134482+00:00",
-  "stationCount": 179,
+  "lastUpdated": "2026-09-30T13:03:33.571687+00:00",
+  "stationCount": 182,
   "stations": [
     {
       "name": "SAINSBURYS PENSBY ROAD THINGWALL",
@@ -586,7 +586,7 @@
       "distance": 9.1,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 179.9,
+      "unleaded": 178.9,
       "diesel": 224.9,
       "updated": "2026-09-16T16:50:00.000Z",
       "cached": false
@@ -754,6 +754,21 @@
       "unleaded": 178.9,
       "diesel": 224.9,
       "updated": "2026-09-23T10:10:06.000Z",
+      "cached": false
+    },
+    {
+      "name": "EG LAIRD STREET PFS",
+      "brand": "BP ",
+      "address": "",
+      "postcode": "CH41 7AJ",
+      "lat": 53.4007873,
+      "lng": -3.0556847,
+      "distance": 14.6,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": null,
+      "diesel": null,
+      "updated": null,
       "cached": false
     },
     {
@@ -1382,8 +1397,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 178.9,
-      "diesel": 221.9,
-      "updated": "2026-09-23T12:16:34.000Z",
+      "diesel": 219.9,
+      "updated": "2026-09-30T12:31:32.000Z",
       "cached": false
     },
     {
@@ -1897,6 +1912,21 @@
       "cached": false
     },
     {
+      "name": "EG HOYLAKE PFS",
+      "brand": "BP ",
+      "address": "",
+      "postcode": "CH46 5NA",
+      "lat": 53.3961782,
+      "lng": -3.1318942,
+      "distance": 14.8,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": null,
+      "diesel": null,
+      "updated": null,
+      "cached": false
+    },
+    {
       "name": "SAINSBURYS BIRKENHEAD",
       "brand": "SAINSBURYS",
       "address": "",
@@ -2030,6 +2060,21 @@
       "diesel": 224.9,
       "updated": "2026-09-14T16:35:00.000Z",
       "cached": false
+    },
+    {
+      "name": "EG SPEKE PFS",
+      "brand": "BP ",
+      "address": "",
+      "postcode": "L24 9HD",
+      "lat": 53.3548148,
+      "lng": -2.8647401,
+      "distance": 13.3,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 138.7,
+      "diesel": 157.7,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
     },
     {
       "name": "Prescot fuel service station",
@@ -2178,7 +2223,7 @@
       "is_motorway": false,
       "unleaded": 175.9,
       "diesel": 198.9,
-      "updated": "2026-09-30T12:32:09.873664+00:00",
+      "updated": "2026-09-30T13:03:31.771002+00:00",
       "cached": false
     },
     {
