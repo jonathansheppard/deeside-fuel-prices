@@ -3,7 +3,7 @@
     "unleaded": 174.6,
     "diesel": 206.1
   },
-  "lastUpdated": "2026-09-30T11:32:27.201353+00:00",
+  "lastUpdated": "2026-09-30T12:04:05.714241+00:00",
   "stationCount": 179,
   "stations": [
     {
@@ -766,10 +766,10 @@
       "distance": 14.6,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 179.9,
-      "diesel": 199.9,
-      "updated": "2026-09-16T12:36:56.000Z",
-      "cached": false
+      "unleaded": 138.9,
+      "diesel": 152.9,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
     },
     {
       "name": "Plas Acton Fuel Station",
@@ -1546,7 +1546,7 @@
       "distance": 5.3,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 176.9,
+      "unleaded": 178.9,
       "diesel": 199.9,
       "updated": "2026-09-18T10:50:08.000Z",
       "cached": false
@@ -1912,21 +1912,6 @@
       "cached": false
     },
     {
-      "name": "BP HARVEST ENERGY HOYLAKE",
-      "brand": "BP HARVEST ENERGY",
-      "address": "",
-      "postcode": "CH46 5NA",
-      "lat": 53.3961782,
-      "lng": -3.1318942,
-      "distance": 14.8,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 173.9,
-      "diesel": 213.9,
-      "updated": "2026-09-17T14:53:50.000Z",
-      "cached": false
-    },
-    {
       "name": "SAINSBURYS BIRKENHEAD",
       "brand": "SAINSBURYS",
       "address": "",
@@ -2071,10 +2056,10 @@
       "distance": 13.3,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 175.9,
-      "diesel": 199.9,
-      "updated": "2026-09-22T11:21:27.000Z",
-      "cached": false
+      "unleaded": 135.9,
+      "diesel": 161.9,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
     },
     {
       "name": "Prescot fuel service station",
@@ -2176,9 +2161,9 @@
       "distance": 2.7,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 175.9,
-      "diesel": 198.9,
-      "updated": "2026-09-26T07:32:12.000Z",
+      "unleaded": 176.9,
+      "diesel": 199.9,
+      "updated": "2026-09-30T11:43:17.000Z",
       "cached": false
     },
     {
@@ -2223,7 +2208,7 @@
       "is_motorway": false,
       "unleaded": 175.9,
       "diesel": 198.9,
-      "updated": "2026-09-30T11:32:26.080744+00:00",
+      "updated": "2026-09-30T12:04:02.049057+00:00",
       "cached": false
     },
     {
@@ -2313,6 +2298,21 @@
       "is_motorway": false,
       "unleaded": 138.9,
       "diesel": 154.9,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
+    },
+    {
+      "name": "BP HARVEST ENERGY HOYLAKE",
+      "brand": "BP HARVEST ENERGY",
+      "address": "",
+      "postcode": "",
+      "lat": 0.0,
+      "lng": 0.0,
+      "distance": 0,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 141.9,
+      "diesel": 158.9,
       "updated": "2026-03-13T00:00:00+00:00",
       "cached": true
     },
