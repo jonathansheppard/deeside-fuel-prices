@@ -3,7 +3,7 @@
     "unleaded": 174.6,
     "diesel": 206.1
   },
-  "lastUpdated": "2026-09-30T12:04:05.714241+00:00",
+  "lastUpdated": "2026-09-30T12:32:11.134482+00:00",
   "stationCount": 179,
   "stations": [
     {
@@ -755,21 +755,6 @@
       "diesel": 224.9,
       "updated": "2026-09-23T10:10:06.000Z",
       "cached": false
-    },
-    {
-      "name": "BP HARVEST ENERGY LAIRD STREET",
-      "brand": "BP HARVEST ENERGY",
-      "address": "",
-      "postcode": "CH41 7AJ",
-      "lat": 53.4007873,
-      "lng": -3.0556847,
-      "distance": 14.6,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 138.9,
-      "diesel": 152.9,
-      "updated": "2026-03-13T00:00:00+00:00",
-      "cached": true
     },
     {
       "name": "Plas Acton Fuel Station",
@@ -2047,21 +2032,6 @@
       "cached": false
     },
     {
-      "name": "BP HARVEST ENERGY SPEKE",
-      "brand": "BP HARVEST ENERGY",
-      "address": "",
-      "postcode": "L24 9HD",
-      "lat": 53.3548148,
-      "lng": -2.8647401,
-      "distance": 13.3,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 135.9,
-      "diesel": 161.9,
-      "updated": "2026-03-13T00:00:00+00:00",
-      "cached": true
-    },
-    {
       "name": "Prescot fuel service station",
       "brand": "Texaco",
       "address": "",
@@ -2208,7 +2178,7 @@
       "is_motorway": false,
       "unleaded": 175.9,
       "diesel": 198.9,
-      "updated": "2026-09-30T12:04:02.049057+00:00",
+      "updated": "2026-09-30T12:32:09.873664+00:00",
       "cached": false
     },
     {
@@ -2373,6 +2343,21 @@
       "is_motorway": false,
       "unleaded": 137.9,
       "diesel": 146.9,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
+    },
+    {
+      "name": "BP HARVEST ENERGY LAIRD STREET",
+      "brand": "BP HARVEST ENERGY",
+      "address": "LAIRD STREET, BIRKENHEAD, CH41 7AJ",
+      "postcode": "",
+      "lat": 0.0,
+      "lng": 0.0,
+      "distance": 0,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 138.9,
+      "diesel": 152.9,
       "updated": "2026-03-13T00:00:00+00:00",
       "cached": true
     },
@@ -2673,6 +2658,21 @@
       "is_motorway": false,
       "unleaded": 137.9,
       "diesel": 157.9,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
+    },
+    {
+      "name": "BP HARVEST ENERGY SPEKE",
+      "brand": "BP HARVEST ENERGY",
+      "address": "",
+      "postcode": "",
+      "lat": 0.0,
+      "lng": 0.0,
+      "distance": 0,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 135.9,
+      "diesel": 161.9,
       "updated": "2026-03-13T00:00:00+00:00",
       "cached": true
     },
