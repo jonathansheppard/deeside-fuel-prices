@@ -3,7 +3,7 @@
     "unleaded": 174.6,
     "diesel": 206.2
   },
-  "lastUpdated": "2026-10-01T21:32:57.597167+00:00",
+  "lastUpdated": "2026-10-01T22:04:16.704277+00:00",
   "stationCount": 182,
   "stations": [
     {
@@ -167,8 +167,8 @@
       "is_supermarket": true,
       "is_motorway": false,
       "unleaded": 172.9,
-      "diesel": 196.9,
-      "updated": "2026-09-27T19:54:50.000Z",
+      "diesel": 197.9,
+      "updated": "2026-10-01T21:32:44.000Z",
       "cached": false
     },
     {
@@ -406,7 +406,7 @@
       "distance": 11.8,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 174.9,
+      "unleaded": 175.9,
       "diesel": 215.9,
       "updated": "2026-09-28T21:59:38.000Z",
       "cached": false
@@ -616,9 +616,9 @@
       "distance": 4.1,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 172.9,
-      "diesel": 208.9,
-      "updated": "2026-09-29T22:16:18.000Z",
+      "unleaded": 173.9,
+      "diesel": 209.9,
+      "updated": "2026-10-01T21:59:36.000Z",
       "cached": false
     },
     {
@@ -931,7 +931,7 @@
       "distance": 1.1,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 173.9,
+      "unleaded": 171.9,
       "diesel": 197.9,
       "updated": "2026-09-28T15:13:50.000Z",
       "cached": false
@@ -1111,7 +1111,7 @@
       "distance": 12.6,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 176.7,
+      "unleaded": 175.7,
       "diesel": 199.7,
       "updated": "2026-09-28T15:14:39.000Z",
       "cached": false
@@ -1171,7 +1171,7 @@
       "distance": 16.2,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 175.9,
+      "unleaded": 173.9,
       "diesel": 199.9,
       "updated": "2026-09-28T14:07:41.000Z",
       "cached": false
@@ -2223,7 +2223,7 @@
       "is_motorway": false,
       "unleaded": 175.9,
       "diesel": 198.9,
-      "updated": "2026-10-01T21:32:56.352290+00:00",
+      "updated": "2026-10-01T22:04:15.608390+00:00",
       "cached": false
     },
     {
