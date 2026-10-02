@@ -3,7 +3,7 @@
     "unleaded": 174.7,
     "diesel": 206.2
   },
-  "lastUpdated": "2026-10-02T13:33:26.949058+00:00",
+  "lastUpdated": "2026-10-02T14:33:45.076928+00:00",
   "stationCount": 182,
   "stations": [
     {
@@ -586,7 +586,7 @@
       "distance": 9.1,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 178.9,
+      "unleaded": 177.9,
       "diesel": 224.9,
       "updated": "2026-09-16T16:50:00.000Z",
       "cached": false
@@ -676,7 +676,7 @@
       "distance": 2.0,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 182.9,
+      "unleaded": 181.9,
       "diesel": 224.9,
       "updated": "2026-09-07T14:00:00.000Z",
       "cached": false
@@ -788,7 +788,7 @@
     },
     {
       "name": "ASDA COEDPOETH EXPRESS PETROL",
-      "brand": "ASDA EXPRESS",
+      "brand": "ASDA COEDPOETH EXPRESS PETROL",
       "address": "",
       "postcode": "LL11 3UF",
       "lat": 53.0553979,
@@ -923,7 +923,7 @@
     },
     {
       "name": "ASDA QUEENSFERRY",
-      "brand": "ASDA",
+      "brand": "ASDA QUEENSFERRY",
       "address": "",
       "postcode": "CH5 1TP",
       "lat": 53.2049518,
@@ -1028,7 +1028,7 @@
     },
     {
       "name": "ASDA HANDBRIDGE EXPRESS PETROL",
-      "brand": "ASDA EXPRESS",
+      "brand": "ASDA HANDBRIDGE EXPRESS PETROL",
       "address": "",
       "postcode": "CH4 7JF",
       "lat": 53.183942,
@@ -1103,7 +1103,7 @@
     },
     {
       "name": "ASDA ARROWE PARK SUPERSTORE",
-      "brand": "ASDA",
+      "brand": "ASDA ARROWE PARK SUPERSTORE",
       "address": "",
       "postcode": "CH49 5PD",
       "lat": 53.3700696,
@@ -1163,7 +1163,7 @@
     },
     {
       "name": "ASDA LISCARD SUPERSTORE",
-      "brand": "ASDA",
+      "brand": "ASDA LISCARD SUPERSTORE",
       "address": "",
       "postcode": "CH45 4NZ",
       "lat": 53.4242714,
@@ -1238,7 +1238,7 @@
     },
     {
       "name": "ASDA BROMBOROUGH SUPERSTORE",
-      "brand": "ASDA",
+      "brand": "ASDA BROMBOROUGH SUPERSTORE",
       "address": "",
       "postcode": "CH62 3QP",
       "lat": 53.3406587,
@@ -1298,7 +1298,7 @@
     },
     {
       "name": "ASDA BRECK ROAD SUPERSTORE",
-      "brand": "ASDA",
+      "brand": "ASDA BRECK ROAD SUPERSTORE",
       "address": "",
       "postcode": "L6 5DR",
       "lat": 53.4208486,
@@ -1328,7 +1328,7 @@
     },
     {
       "name": "ASDA SEFTON PARK SUPERSTORE",
-      "brand": "ASDA",
+      "brand": "ASDA SEFTON PARK SUPERSTORE",
       "address": "",
       "postcode": "L15 3JR",
       "lat": 53.3941578,
@@ -1358,7 +1358,7 @@
     },
     {
       "name": "ASDA HUNTS CROSS SUPERSTORE",
-      "brand": "ASDA",
+      "brand": "ASDA HUNTS CROSS SUPERSTORE",
       "address": "",
       "postcode": "L24 9WA",
       "lat": 53.3582927,
@@ -1373,7 +1373,7 @@
     },
     {
       "name": "ASDA HUYTON SUPERCENTRE",
-      "brand": "ASDA",
+      "brand": "ASDA HUYTON SUPERCENTRE",
       "address": "",
       "postcode": "L36 7TX",
       "lat": 53.41144,
@@ -1433,7 +1433,7 @@
     },
     {
       "name": "ASDA WALTON SUPERSTORE",
-      "brand": "ASDA",
+      "brand": "ASDA WALTON SUPERSTORE",
       "address": "",
       "postcode": "L4 9XU",
       "lat": 53.4408839,
@@ -1576,7 +1576,7 @@
       "distance": 14.2,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 171.9,
+      "unleaded": 172.9,
       "diesel": 195.9,
       "updated": "2026-09-28T17:35:19.000Z",
       "cached": false
@@ -2057,8 +2057,8 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 178.9,
-      "diesel": 229.9,
-      "updated": "2026-10-02T12:57:00.000Z",
+      "diesel": 224.9,
+      "updated": "2026-10-02T14:08:00.000Z",
       "cached": false
     },
     {
@@ -2223,7 +2223,7 @@
       "is_motorway": false,
       "unleaded": 175.9,
       "diesel": 198.9,
-      "updated": "2026-10-02T13:33:23.966464+00:00",
+      "updated": "2026-10-02T14:33:43.525020+00:00",
       "cached": false
     },
     {
