@@ -3,7 +3,7 @@
     "unleaded": 174.7,
     "diesel": 206.2
   },
-  "lastUpdated": "2026-10-02T12:33:21.478007+00:00",
+  "lastUpdated": "2026-10-02T13:04:04.721621+00:00",
   "stationCount": 182,
   "stations": [
     {
@@ -2026,9 +2026,9 @@
       "distance": 13.4,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 179.9,
-      "diesel": 224.9,
-      "updated": "2026-09-11T08:55:00.000Z",
+      "unleaded": 181.9,
+      "diesel": 229.9,
+      "updated": "2026-10-02T12:52:00.000Z",
       "cached": false
     },
     {
@@ -2116,10 +2116,10 @@
       "distance": 8.7,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 177.9,
-      "diesel": 224.9,
-      "updated": "2026-09-14T17:01:00.000Z",
-      "cached": false
+      "unleaded": 143.9,
+      "diesel": 162.9,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
     },
     {
       "name": "Lobitos",
@@ -2223,7 +2223,7 @@
       "is_motorway": false,
       "unleaded": 175.9,
       "diesel": 198.9,
-      "updated": "2026-10-02T12:33:20.281965+00:00",
+      "updated": "2026-10-02T13:04:03.258827+00:00",
       "cached": false
     },
     {
