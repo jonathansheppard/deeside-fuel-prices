@@ -3,7 +3,7 @@
     "unleaded": 174.7,
     "diesel": 206.2
   },
-  "lastUpdated": "2026-10-07T12:02:54.876638+00:00",
+  "lastUpdated": "2026-10-07T12:31:49.355557+00:00",
   "stationCount": 183,
   "stations": [
     {
@@ -1882,21 +1882,6 @@
       "cached": false
     },
     {
-      "name": "SHELL GAYTON",
-      "brand": "SHELL",
-      "address": "",
-      "postcode": "CH60 3RY",
-      "lat": 53.322022,
-      "lng": -3.084409,
-      "distance": 9.4,
-      "is_supermarket": false,
-      "is_motorway": false,
-      "unleaded": 176.9,
-      "diesel": 224.9,
-      "updated": "2026-09-14T16:55:00.000Z",
-      "cached": false
-    },
-    {
       "name": "BROUGHTON CHESTER EXTRA - PETROL FILLING STATION",
       "brand": "TESCO",
       "address": "",
@@ -2238,7 +2223,7 @@
       "is_motorway": false,
       "unleaded": 175.9,
       "diesel": 198.9,
-      "updated": "2026-10-07T12:02:47.622716+00:00",
+      "updated": "2026-10-07T12:31:47.754262+00:00",
       "cached": false
     },
     {
@@ -2463,6 +2448,21 @@
       "is_motorway": false,
       "unleaded": 139.9,
       "diesel": 159.9,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
+    },
+    {
+      "name": "SHELL GAYTON",
+      "brand": "SHELL",
+      "address": "",
+      "postcode": "",
+      "lat": 0.0,
+      "lng": 0.0,
+      "distance": 0,
+      "is_supermarket": false,
+      "is_motorway": false,
+      "unleaded": 143.9,
+      "diesel": 161.9,
       "updated": "2026-03-13T00:00:00+00:00",
       "cached": true
     },
