@@ -3,7 +3,7 @@
     "unleaded": 174.5,
     "diesel": 206.0
   },
-  "lastUpdated": "2026-10-13T05:33:14.592943+00:00",
+  "lastUpdated": "2026-10-13T06:03:40.434330+00:00",
   "stationCount": 183,
   "stations": [
     {
@@ -376,9 +376,9 @@
       "distance": 7.4,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 173.9,
-      "diesel": 199.9,
-      "updated": "2026-10-11T07:21:46.000Z",
+      "unleaded": 172.9,
+      "diesel": 198.9,
+      "updated": "2026-10-13T05:44:13.000Z",
       "cached": false
     },
     {
@@ -556,9 +556,9 @@
       "distance": 8.1,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 174.9,
-      "diesel": 197.9,
-      "updated": "2026-10-11T14:25:41.000Z",
+      "unleaded": 173.9,
+      "diesel": 196.9,
+      "updated": "2026-10-13T05:50:43.000Z",
       "cached": false
     },
     {
@@ -631,10 +631,10 @@
       "distance": 15.5,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 172.9,
-      "diesel": 197.9,
-      "updated": "2026-10-02T05:45:13.000Z",
-      "cached": false
+      "unleaded": 137.9,
+      "diesel": 156.9,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
     },
     {
       "name": "PRESTATYN SUPERSTORE - PETROL FILLING STATION",
@@ -2238,7 +2238,7 @@
       "is_motorway": false,
       "unleaded": 175.9,
       "diesel": 198.9,
-      "updated": "2026-10-13T05:33:13.072412+00:00",
+      "updated": "2026-10-13T06:03:39.274591+00:00",
       "cached": false
     },
     {
