@@ -3,7 +3,7 @@
     "unleaded": 174.4,
     "diesel": 205.9
   },
-  "lastUpdated": "2026-10-13T21:02:44.643854+00:00",
+  "lastUpdated": "2026-10-14T04:03:38.314930+00:00",
   "stationCount": 183,
   "stations": [
     {
@@ -62,8 +62,8 @@
       "is_supermarket": true,
       "is_motorway": false,
       "unleaded": 174.9,
-      "diesel": 208.9,
-      "updated": "2026-10-08T21:35:23.000Z",
+      "diesel": 207.9,
+      "updated": "2026-10-13T21:39:54.000Z",
       "cached": false
     },
     {
@@ -151,8 +151,8 @@
       "distance": 14.0,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 172.9,
-      "diesel": 205.9,
+      "unleaded": 176.9,
+      "diesel": 209.9,
       "updated": "2026-09-01T15:30:37.000Z",
       "cached": false
     },
@@ -167,8 +167,8 @@
       "is_supermarket": true,
       "is_motorway": false,
       "unleaded": 171.9,
-      "diesel": 197.9,
-      "updated": "2026-10-01T21:32:44.000Z",
+      "diesel": 196.9,
+      "updated": "2026-10-13T21:39:14.000Z",
       "cached": false
     },
     {
@@ -451,7 +451,7 @@
       "distance": 5.9,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 173.9,
+      "unleaded": 172.9,
       "diesel": 198.9,
       "updated": "2026-10-09T21:58:06.000Z",
       "cached": false
@@ -481,9 +481,9 @@
       "distance": 17.6,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 164.9,
-      "diesel": 194.9,
-      "updated": "2026-10-13T06:11:48.000Z",
+      "unleaded": 168.9,
+      "diesel": 197.9,
+      "updated": "2026-10-13T22:20:05.000Z",
       "cached": false
     },
     {
@@ -737,8 +737,8 @@
       "is_supermarket": true,
       "is_motorway": false,
       "unleaded": 171.9,
-      "diesel": 197.9,
-      "updated": "2026-09-29T21:49:43.000Z",
+      "diesel": 196.9,
+      "updated": "2026-10-13T21:48:05.000Z",
       "cached": false
     },
     {
@@ -2027,8 +2027,8 @@
       "is_supermarket": true,
       "is_motorway": false,
       "unleaded": 173.9,
-      "diesel": 197.9,
-      "updated": "2026-10-12T21:05:22.000Z",
+      "diesel": 196.9,
+      "updated": "2026-10-13T21:27:49.000Z",
       "cached": false
     },
     {
@@ -2238,7 +2238,7 @@
       "is_motorway": false,
       "unleaded": 175.9,
       "diesel": 198.9,
-      "updated": "2026-10-13T21:02:43.559902+00:00",
+      "updated": "2026-10-14T04:03:37.034422+00:00",
       "cached": false
     },
     {
