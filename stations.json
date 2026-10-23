@@ -3,7 +3,7 @@
     "unleaded": 173.9,
     "diesel": 205.6
   },
-  "lastUpdated": "2026-10-23T10:03:43.808661+00:00",
+  "lastUpdated": "2026-10-23T10:32:43.695778+00:00",
   "stationCount": 183,
   "stations": [
     {
@@ -136,7 +136,7 @@
       "distance": 9.6,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 178.9,
+      "unleaded": 176.9,
       "diesel": 224.9,
       "updated": "2026-09-26T08:47:00.000Z",
       "cached": false
@@ -436,7 +436,7 @@
       "distance": 7.3,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 179.9,
+      "unleaded": 178.9,
       "diesel": 229.9,
       "updated": "2026-10-12T16:25:00.000Z",
       "cached": false
@@ -676,10 +676,10 @@
       "distance": 2.0,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 179.9,
-      "diesel": 229.9,
-      "updated": "2026-10-05T16:12:00.000Z",
-      "cached": false
+      "unleaded": 151.9,
+      "diesel": 174.9,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
     },
     {
       "name": "SHELL CO-OP NORTHOP HALL",
@@ -1516,7 +1516,7 @@
       "distance": 7.2,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 176.9,
+      "unleaded": 174.9,
       "diesel": 224.9,
       "updated": "2026-09-15T08:45:00.000Z",
       "cached": false
@@ -1531,7 +1531,7 @@
       "distance": 3.3,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 180.9,
+      "unleaded": 178.9,
       "diesel": 229.9,
       "updated": "2026-10-13T09:58:00.000Z",
       "cached": false
@@ -1891,7 +1891,7 @@
       "distance": 9.4,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 178.9,
+      "unleaded": 176.9,
       "diesel": 224.9,
       "updated": "2026-09-14T16:55:00.000Z",
       "cached": false
@@ -2071,7 +2071,7 @@
       "distance": 6.4,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 179.9,
+      "unleaded": 178.9,
       "diesel": 229.9,
       "updated": "2026-10-08T14:52:00.000Z",
       "cached": false
@@ -2131,10 +2131,10 @@
       "distance": 8.7,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 178.9,
-      "diesel": 229.9,
-      "updated": "2026-10-02T12:57:00.000Z",
-      "cached": false
+      "unleaded": 143.9,
+      "diesel": 162.9,
+      "updated": "2026-03-13T00:00:00+00:00",
+      "cached": true
     },
     {
       "name": "Lobitos",
@@ -2238,7 +2238,7 @@
       "is_motorway": false,
       "unleaded": 175.9,
       "diesel": 198.9,
-      "updated": "2026-10-23T10:03:42.754641+00:00",
+      "updated": "2026-10-23T10:32:42.405930+00:00",
       "cached": false
     },
     {
