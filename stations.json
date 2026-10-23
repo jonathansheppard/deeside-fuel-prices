@@ -3,7 +3,7 @@
     "unleaded": 173.9,
     "diesel": 205.6
   },
-  "lastUpdated": "2026-10-23T10:32:43.695778+00:00",
+  "lastUpdated": "2026-10-23T11:03:39.402673+00:00",
   "stationCount": 183,
   "stations": [
     {
@@ -676,10 +676,10 @@
       "distance": 2.0,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 151.9,
-      "diesel": 174.9,
-      "updated": "2026-03-13T00:00:00+00:00",
-      "cached": true
+      "unleaded": 178.9,
+      "diesel": 229.9,
+      "updated": "2026-10-05T16:12:00.000Z",
+      "cached": false
     },
     {
       "name": "SHELL CO-OP NORTHOP HALL",
@@ -1591,7 +1591,7 @@
       "distance": 17.2,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 172.9,
+      "unleaded": 170.9,
       "diesel": 212.9,
       "updated": "2026-10-14T11:11:51.000Z",
       "cached": false
@@ -1981,7 +1981,7 @@
       "distance": 13.5,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 178.9,
+      "unleaded": 177.9,
       "diesel": 224.9,
       "updated": "2026-09-27T12:18:00.000Z",
       "cached": false
@@ -2041,7 +2041,7 @@
       "distance": 13.4,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 181.9,
+      "unleaded": 179.9,
       "diesel": 229.9,
       "updated": "2026-10-02T12:52:00.000Z",
       "cached": false
@@ -2131,10 +2131,10 @@
       "distance": 8.7,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 143.9,
-      "diesel": 162.9,
-      "updated": "2026-03-13T00:00:00+00:00",
-      "cached": true
+      "unleaded": 177.9,
+      "diesel": 229.9,
+      "updated": "2026-10-02T12:57:00.000Z",
+      "cached": false
     },
     {
       "name": "Lobitos",
@@ -2238,7 +2238,7 @@
       "is_motorway": false,
       "unleaded": 175.9,
       "diesel": 198.9,
-      "updated": "2026-10-23T10:32:42.405930+00:00",
+      "updated": "2026-10-23T11:03:38.329296+00:00",
       "cached": false
     },
     {
