@@ -17,7 +17,7 @@ a { color: inherit; text-decoration: none; }
 .card-hd { display: flex; justify-content: space-between; align-items: baseline; padding: 12px 14px 10px; border-bottom: 1px solid var(--rule); }
 .card-hd h3 { font-size: 17px; font-weight: 800; color: var(--head); letter-spacing: -.2px; }
 .card-hd .upd { font-size: 11px; color: var(--muted); }
-.card-ft { display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; border-top: 1px solid var(--rule); font-size: 13px; font-weight: 700; color: var(--green-dk); }
+.card-ft { display: flex; justify-content: space-between; align-items: center; padding: 11px 14px 13px; border-top: 1px solid var(--rule); font-size: 13px; font-weight: 700; color: var(--green-dk); }
 .card-ft small { font-size: 10.5px; font-weight: 400; color: var(--muted); }
 .card:hover .card-ft span:first-child { text-decoration: underline; }
 .note { padding: 9px 14px; font-size: 12.5px; border-bottom: 1px solid var(--rule); line-height: 1.4; }
@@ -68,8 +68,20 @@ fetch(DATA_URL, {cache: 'no-cache'}).then(r => r.json()).then(data => {
     </div>
     ${saving > 0 ? `<div class="save">Filling 50 litres of petrol here saves £${saving.toFixed(2)} on the UK average</div>` : ''}
     <div class="card-ft"><span>Compare all ${data.stations.length} local stations</span></div>`;
-  try { parent.postMessage({deesideWidget: 'fuel', height: document.getElementById('w').offsetHeight}, '*'); } catch (e) {}
+  try { parent.postMessage({deesideWidget: 'fuel', height: document.getElementById('w').offsetHeight + 6}, '*'); } catch (e) {}
 }).catch(() => { document.getElementById('body').textContent = 'Prices are unavailable right now.'; });
+</script>
+
+<script>
+/* Keep the frame on deeside.com exactly the right height, including after fonts load on phones */
+(function () {
+  var el = document.getElementById('w'), key = 'fuel';
+  function post() { try { parent.postMessage({deesideWidget: key, height: Math.ceil(el.getBoundingClientRect().height) + 6}, '*'); } catch (e) {} }
+  if (window.ResizeObserver) new ResizeObserver(post).observe(el);
+  addEventListener('load', post); addEventListener('resize', post);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(post);
+  setTimeout(post, 1500); setTimeout(post, 4000);
+})();
 </script>
 </body>
 </html>
