@@ -371,16 +371,16 @@ function timeAgo(dateStr) {
   return date.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
 }
 
-// Stale threshold: fresh < 24h, aging 24h-7 days (price shown with warning), stale 7+ days (price suppressed).
-// Extended to 7 days to match the typical refresh cadence of independent stations in the GOV.UK scheme.
+// station.updated is when the price last CHANGED, not when the station last reported.
+// A station holding the same price for weeks is still reporting, so never suppress on age:
+// fresh < 24h, aging after that (price shown with "Price set" date). Stale only when there is no valid timestamp.
 function getStaleState(station) {
   if (!station.updated) return 'stale';
   const d = new Date(station.updated);
   if (isNaN(d.getTime())) return 'stale';
   const hours = (Date.now() - d.getTime()) / 3600000;
   if (hours < 24) return 'fresh';
-  if (hours < 168) return 'aging';
-  return 'stale';
+  return 'aging';
 }
 
 function render() {
@@ -458,10 +458,10 @@ function render() {
       popupHtml += '<div class="popup-brand">' + station.name + '</div><div class="popup-address">' + station.address + '</div>';
       if (isCostco(station)) popupHtml += '<div style="font-size:10px;color:#60a5fa;margin:4px 0">Costco membership required</div>';
       popupHtml += '<div class="popup-price" style="color:' + (isCheapestMarker ? '#16a34a' : '#1e293b') + '">' + price.toFixed(1) + 'p</div><div class="popup-label">' + (currentFuel === 'unleaded' ? 'Unleaded' : 'Diesel') + ' per litre</div><div style="font-size:11px;margin-top:4px;font-family:\'JetBrains Mono\',monospace">' + diffStr + '</div><div style="font-size:10px;color:#888;margin-top:4px">' + station.distance + ' miles from Queensferry</div>';
-      if (staleState === 'fresh') popupHtml += '<div style="font-size:10px;color:#34d399;margin-top:4px">Updated ' + timeAgo(station.updated) + '</div>';
+      if (staleState === 'fresh') popupHtml += '<div style="font-size:10px;color:#34d399;margin-top:4px">Price changed ' + timeAgo(station.updated) + '</div>';
       else if (staleState === 'aging') {
-        const ageDays = Math.floor((Date.now() - new Date(station.updated).getTime()) / 86400000);
-        popupHtml += '<div style="font-size:10px;color:#F59E0B;margin-top:4px">Updated ' + (ageDays <= 1 ? 'yesterday' : ageDays + ' days ago') + '</div>';
+        const setDateStr = new Date(station.updated).toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
+        popupHtml += '<div style="font-size:10px;color:#F59E0B;margin-top:4px">Price set ' + setDateStr + '</div>';
       }
     }
     popupHtml += '</div>';
@@ -522,7 +522,7 @@ function render() {
         const dateStr = d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
         const staleDays = Math.floor((Date.now() - d.getTime()) / 86400000);
         if (staleState === 'fresh') timestampHtml = '<div class="timestamp-fresh">Price set ' + dateStr + '</div>';
-        else if (staleState === 'aging') timestampHtml = '<div class="timestamp-aging">Updated ' + (staleDays <= 1 ? 'yesterday' : staleDays + ' days ago') + '</div>';
+        else if (staleState === 'aging') timestampHtml = '<div class="timestamp-aging">Price set ' + dateStr + '</div>';
         else timestampHtml = '<div class="timestamp-stale">Last reported ' + dateStr + '</div>';
       }
     }
