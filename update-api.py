@@ -351,7 +351,7 @@ def git_push():
         return
 
     # Pull rebase first, in case anything else has committed (e.g. GitHub adding CNAME)
-    pull_exit = os.system(f'cd "{REPO_DIR}" && git pull --rebase {GITHUB_REMOTE} main 2>&1')
+    pull_exit = os.system(f'cd "{REPO_DIR}" && git pull --rebase --autostash {GITHUB_REMOTE} main 2>&1')
     if pull_exit != 0:
         os.system(f'cd "{REPO_DIR}" && git rebase --abort 2>/dev/null')
         log(f"Git: pull --rebase failed with exit code {pull_exit}")
