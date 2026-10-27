@@ -7,9 +7,20 @@ import subprocess
 from math import radians, sin, cos, sqrt, atan2
 from datetime import datetime, timezone
 
-# ── Credentials ───────────────────────────────────────────────────────────────
-CLIENT_ID     = "OXaCtJ25MBEQs0OHobvSf8l3A5ztgsM2"
-CLIENT_SECRET = "XMYqgyjvqSjy4MS5BDS6zrKty8nluY29JEOLaXRyXBRHMz6tWmyWTD8Nl7qIeRAE"
+# ── Credentials (from .env, never committed) ─────────────────────────────────
+def _load_env(path=os.path.expanduser("~/deeside-fuel-prices/.env")):
+    try:
+        for line in open(path):
+            line = line.strip()
+            if line and not line.startswith("#") and "=" in line:
+                k, v = line.split("=", 1)
+                os.environ.setdefault(k.strip(), v.strip())
+    except FileNotFoundError:
+        pass
+
+_load_env()
+CLIENT_ID     = os.environ.get("FUEL_CLIENT_ID", "")
+CLIENT_SECRET = os.environ.get("FUEL_CLIENT_SECRET", "")
 
 BASE_URL      = "https://www.fuel-finder.service.gov.uk"
 TOKEN_URL     = f"{BASE_URL}/api/v1/oauth/generate_access_token"
@@ -39,7 +50,7 @@ OUTPUT_FILE   = os.path.expanduser("~/deeside-fuel-prices/stations.json")
 REPO_DIR      = os.path.expanduser("~/deeside-fuel-prices")
 
 # ── GitHub token ──────────────────────────────────────────────────────────────
-# Set in ~/.zshrc: export GITHUB_TOKEN=your_token_here
+# Read from .env above
 GITHUB_TOKEN  = os.environ.get("GITHUB_TOKEN", "")
 GITHUB_REMOTE = f"https://{GITHUB_TOKEN}@github.com/jonathansheppard/deeside-fuel-prices.git"
 
@@ -75,16 +86,25 @@ def haversine(lat1, lng1, lat2, lng2):
 
 
 def get_token():
-    log("Authenticating with new Fuel Finder API...")
-    r = requests.post(TOKEN_URL, json={
+    log("Authenticating with new Fuel Finder API (via curl)...")
+    payload = json.dumps({
         "client_id": CLIENT_ID,
         "client_secret": CLIENT_SECRET
-    }, timeout=90)
-    r.raise_for_status()
-    data = r.json()
+    })
+    result = subprocess.run(
+        [
+            "curl", "-s", "-X", "POST", TOKEN_URL,
+            "-H", "Content-Type: application/json",
+            "-d", payload
+        ],
+        capture_output=True, text=True, timeout=90
+    )
+    if result.returncode != 0:
+        raise RuntimeError("curl failed: " + result.stderr)
+    data = json.loads(result.stdout)
     token = data.get("data", {}).get("access_token") or data.get("access_token")
     if not token:
-        raise ValueError(f"No token in response: {data}")
+        raise ValueError("No token in response: " + str(data))
     log("Token obtained successfully")
     return token
 
@@ -328,12 +348,6 @@ def git_push():
     commit_exit = os.system(f'cd "{REPO_DIR}" && git commit -m "{commit_msg}"')
     if commit_exit != 0:
         log(f"Git: commit failed with exit code {commit_exit}")
-        return
-
-    # Pull rebase then push
-    pull_exit = os.system(f'cd "{REPO_DIR}" && git pull --rebase {GITHUB_REMOTE} main 2>&1')
-    if pull_exit != 0:
-        log(f"Git: pull --rebase failed with exit code {pull_exit}")
         return
 
     push_exit = os.system(f'cd "{REPO_DIR}" && git push {GITHUB_REMOTE} main 2>&1')
