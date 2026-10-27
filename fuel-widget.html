@@ -41,12 +41,12 @@ a { color: inherit; text-decoration: none; }
 </style>
 </head>
 <body>
-<a class="card" id="w" href="https://deeside-fuel-prices.netlify.app/" target="_blank" rel="noopener">
+<a class="card" id="w" href="https://fuel.deeside.com/" target="_blank" rel="noopener">
   <div class="card-hd"><h3>Deeside fuel prices</h3><span class="upd" id="upd"></span></div>
   <div class="load" id="body">Loading…</div>
 </a>
 <script>
-const DATA_URL = 'https://deeside-fuel-prices.netlify.app/stations.json', STALE_HOURS = 120;
+const DATA_URL = 'https://fuel.deeside.com/stations.json', STALE_HOURS = 120;
 const fresh = s => s.updated && (Date.now() - new Date(s.updated)) / 3600000 < STALE_HOURS;
 const title = n => (n || '').toLowerCase().replace(/\b\w/g, c => c.toUpperCase()).trim().slice(0, 30);
 function vs(price, avg) {

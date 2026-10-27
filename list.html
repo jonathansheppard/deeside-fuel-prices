@@ -704,7 +704,7 @@ h1 {
     <button class="toggle-btn active" id="btnUnleaded" onclick="setFuel('unleaded')">Unleaded</button>
     <button class="toggle-btn" id="btnDiesel" onclick="setFuel('diesel')">Diesel</button>
     <span class="station-count" id="stationCount"></span>
-    <a class="map-link" href="https://deeside-fuel-prices.netlify.app/" target="_blank">View map →</a>
+    <a class="map-link" href="https://fuel.deeside.com/" target="_blank">View map →</a>
   </div>
   <div style="display:flex;justify-content:flex-end;margin-bottom:12px;margin-top:6px"><button id="btnFlintshire" onclick="setFlintshire()" style="display:flex;align-items:center;gap:7px;padding:5px 14px;font-family:DM Sans,sans-serif;font-size:12px;font-weight:600;border-radius:20px;cursor:pointer;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.06);color:#e4e6ee"><span id="fDot" style="width:8px;height:8px;border-radius:50%;background:#34d399;box-shadow:0 0 6px rgba(52,211,153,.6);display:inline-block"></span>Flintshire only</button></div>
 
@@ -716,8 +716,8 @@ h1 {
 </div>
 
 <script>
-const DATA_URL = 'https://deeside-fuel-prices.netlify.app/stations.json';
-const MAP_URL = 'https://deeside-fuel-prices.netlify.app/';
+const DATA_URL = 'https://fuel.deeside.com/stations.json';
+const MAP_URL = 'https://fuel.deeside.com/';
 const SHEET_CSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vT3dnZjD5yNBcUicXNAE2dmEjHuhIUO83j3n1OMH6qT43dFXj6lZfXLCq2qjwNwwvbLv5ShC8hAV4Bi/pub?gid=1435371472&single=true&output=csv';
 const PRICE_FLOOR = 115;
 const STALE_HOURS = 96;
