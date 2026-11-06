@@ -2,11 +2,12 @@
 <html lang="en-GB">
 <head>
 <meta charset="UTF-8">
+<script>window.__e = fetch('https://fuel.deeside.com/stations.json', {cache: 'no-cache'}).then(function (r) { return r.json(); });</script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap"></noscript>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Deeside fuel prices</title>
 <style>
 /* Deeside.com house style for sidebar widgets: matches the site (Open Sans, white cards, site green) */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root { --ink: #212529; --head: #2d2d2d; --muted: #6c757d; --rule: #e9ecef; --green: #88c425; --green-dk: #4d7a0c;
   --amber-bg: #fff4e0; --amber: #b45309; --red-bg: #fdecec; --red: #b91c1c; --blue: #1d6fb8; }
@@ -53,7 +54,7 @@ function vs(price, avg) {
   const d = +(price - avg).toFixed(1);
   return d < 0 ? ['green', `${Math.abs(d)}p below UK average`] : [d < 5 ? 'amber' : 'red', `${d}p above UK average`];
 }
-fetch(DATA_URL, {cache: 'no-cache'}).then(r => r.json()).then(data => {
+(window.__e || fetch(DATA_URL, {cache: 'no-cache'}).then(r => r.json())).then(data => {
   const open = data.stations.filter(s => !(s.name || '').toUpperCase().includes('COSTCO') && s.distance > 0 && s.distance <= 8 && fresh(s));
   const u = open.filter(s => s.unleaded >= 115).sort((a, b) => a.unleaded - b.unleaded)[0];
   const d = open.filter(s => s.diesel >= 115).sort((a, b) => a.diesel - b.diesel)[0];
