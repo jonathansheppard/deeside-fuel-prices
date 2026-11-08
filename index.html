@@ -575,10 +575,13 @@ function render() {
       '</div></div>';
   }
 
+  // 8 Nov 2026: the three affiliate placeholders (AA, GoCompare, fuel cards) linked nowhere and earned nothing.
+  // House ads selling the space instead, until a paying advertiser takes a slot.
+  const ADV = 'https://www.deeside.com/advertise/?utm_source=fuelmap&utm_medium=house_ad&utm_content=';
   const inlineAds = [
-    { icon: '&#128737;', title: 'AA Breakdown Cover',    desc: 'From &pound;4.50/month. Cover starts immediately.',   cta: 'Get quote &rarr;', href: '#', id: 'aff-breakdown' },
-    { icon: '&#128664;', title: 'Compare car insurance', desc: 'Check GoCompare for cheaper cover in minutes.',       cta: 'Compare &rarr;',   href: '#', id: 'aff-insurance' },
-    { icon: '&#128179;', title: 'Business fuel cards',    desc: 'Fixed weekly prices, no transaction fees.',           cta: 'Apply &rarr;',     href: '#', id: 'aff-fuelcard'  }
+    { icon: '&#9981;',   title: 'Your business here',                desc: 'Reach drivers checking fuel prices across Deeside every day.',      cta: 'Advertise &rarr;', href: ADV + 'drivers', id: 'house-drivers' },
+    { icon: '&#128295;', title: 'Garage, MOT centre or car wash?',    desc: 'Put your name in front of local drivers right here.',              cta: 'Find out more &rarr;', href: ADV + 'motoring', id: 'house-motoring' },
+    { icon: '&#128205;', title: 'Sponsor the Deeside fuel map',       desc: 'One local business, seen every time someone checks prices.',       cta: 'Get in touch &rarr;', href: ADV + 'sponsor', id: 'house-sponsor' }
   ];
   const adSlots     = [4, 9, 14];
   const adBaseIndex = Math.floor(Date.now() / 60000) % inlineAds.length;
@@ -589,8 +592,8 @@ function render() {
     const slotIndex = adSlots.indexOf(index);
     if (slotIndex !== -1 && sorted.length > index + 1) {
       const ad = inlineAds[(adBaseIndex + slotIndex) % inlineAds.length];
-      html += '<div class="inline-ad"><span class="inline-ad-label">Sponsored</span>' +
-        '<a href="' + ad.href + '" target="_blank" rel="noopener sponsored" id="' + ad.id + '">' +
+      html += '<div class="inline-ad"><span class="inline-ad-label">Advertise with Deeside.com</span>' +
+        '<a href="' + ad.href + '" target="_blank" rel="noopener" id="' + ad.id + '">' +
         '<div class="inline-ad-icon">' + ad.icon + '</div>' +
         '<div class="inline-ad-text"><div class="inline-ad-title">' + ad.title + '</div><div class="inline-ad-desc">' + ad.desc + '</div></div>' +
         '<div class="inline-ad-cta">' + ad.cta + '</div></a></div>';
