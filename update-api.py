@@ -31,11 +31,8 @@ INFO_URL      = f"{BASE_URL}/api/v1/pfs"
 RETAILER_FEEDS = [
     {"name": "Tesco",       "url": "https://www.tesco.com/fuel_prices/fuel_prices_data.json"},
     {"name": "Morrisons",   "url": "https://www.morrisons.com/fuel-prices/fuel.json"},
-    {"name": "Sainsbury's", "url": "https://api.sainsburys.co.uk/v1/exports/latest/fuel_prices_data.json"},
     {"name": "Asda",        "url": "https://storelocator.asda.com/fuel_prices_data.json"},
-    {"name": "MFG",         "url": "https://fuel.motorfuelgroup.com/fuel_prices_data.json"},
     {"name": "Rontec",      "url": "https://www.rontec-servicestations.co.uk/fuel-prices/data/fuel_prices_data.json"},
-    {"name": "Jet",         "url": "https://jetlocal.co.uk/fuel_prices_data.json"},
     {"name": "Esso/Tesco",  "url": "https://fuelprices.esso.co.uk/latestdata.json"},
     {"name": "SGN",         "url": "https://www.sgnretail.uk/files/data/SGN_daily_fuel_prices.json"},
 ]
@@ -45,6 +42,7 @@ SHEET_ID      = "1HE-K4RVMbwWOuF6hy-CJg1G5kFWtChpK4w1WKnWqjTQ"
 SHEET_GID     = "1435371472"
 SHEET_CSV_URL = f"https://docs.google.com/spreadsheets/d/{SHEET_ID}/export?format=csv&gid={SHEET_GID}"
 SHEET_MAX_AGE_DAYS = 14   # older sheet prices are ignored
+FEED_MAX_AGE_DAYS = 7     # retailer feeds older than this are ignored
 
 # ── Output ────────────────────────────────────────────────────────────────────
 OUTPUT_FILE   = os.path.expanduser("~/deeside-fuel-prices/stations.json")
@@ -233,6 +231,17 @@ def load_retailer_feeds():
             r.raise_for_status()
             data = r.json()
 
+            # 8 Nov 2026: stations in these feeds carry no timestamp of their own, so they used to be stamped
+            # "now", making months-old prices (Tesco feed last updated April) look fresh. Use the feed's date.
+            try:
+                feed_dt = datetime.strptime(str(data.get("last_updated", "")), "%d/%m/%Y %H:%M:%S")
+            except ValueError:
+                feed_dt = None
+            if feed_dt is None or feed_dt < datetime.now() - timedelta(days=FEED_MAX_AGE_DAYS):
+                log(f"  {feed['name']}: skipped, feed last updated {data.get('last_updated') or 'unknown'}")
+                continue
+            feed_iso = feed_dt.replace(tzinfo=timezone.utc).isoformat()
+
             stations = data.get("stations", [])
             count = 0
             for s in stations:
@@ -264,7 +273,7 @@ def load_retailer_feeds():
                 if not unleaded and not diesel:
                     continue
 
-                last_updated = s.get("last_updated") or datetime.now(timezone.utc).isoformat()
+                last_updated = s.get("last_updated") or feed_iso
 
                 retailer_stations[postcode] = {
                     "name":           s.get("brand", feed["name"]) + " " + s.get("name", "").strip(),
