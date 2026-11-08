@@ -444,12 +444,21 @@ def main():
             updated   = fp.get("price_change_effective_timestamp") or fp.get("price_last_updated")
             if not valid_price(price):
                 continue
+            # 8 Nov 2026: each fuel keeps its own date. Before, whichever fuel came last overwrote "updated",
+            # so an unleaded price set on 4 Nov showed the diesel date of 22 Sept (H W Oultram, Ewloe).
+            st = local_stations[node_id]
             if "E10" in fuel_type:
-                local_stations[node_id]["unleaded"] = float(price)
+                st["unleaded"] = float(price)
+                if updated:
+                    st["unleaded_updated"] = updated
             elif "B7" in fuel_type or "DIESEL" in fuel_type:
-                local_stations[node_id]["diesel"] = float(price)
-            if updated:
-                local_stations[node_id]["updated"] = updated
+                st["diesel"] = float(price)
+                if updated:
+                    st["diesel_updated"] = updated
+            else:
+                continue
+            if updated and (not st.get("updated") or updated > st["updated"]):
+                st["updated"] = updated   # newest of the station's prices
 
     # ── Diagnostic: which stations got no prices from API? ──────────────────
     null_price = [s for s in local_stations.values()

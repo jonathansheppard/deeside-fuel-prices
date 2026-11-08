@@ -320,6 +320,11 @@ function createMarkerIcon(price, priceClass, isActive, isCheapest, isHighest) {
   });
 }
 
+// Date the price of the fuel on screen was set (falls back to the station's newest date for older data)
+function fuelDate(station) {
+  return station[currentFuel + '_updated'] || station.updated;
+}
+
 function getPrice(station) {
   const p = currentFuel === 'unleaded' ? station.unleaded : station.diesel;
   if (p && p < PRICE_FLOOR) return null;
@@ -379,8 +384,8 @@ function timeAgo(dateStr) {
 // fresh < 24h, aging after that (price shown with "Price set" date). Stale only when there is no valid timestamp.
 function getStaleState(station) {
   if (station.cached) return 'stale';   // 8 Nov 2026: backup prices are never ranked as cheapest
-  if (!station.updated) return 'stale';
-  const d = new Date(station.updated);
+  if (!fuelDate(station)) return 'stale';
+  const d = new Date(fuelDate(station));
   if (isNaN(d.getTime())) return 'stale';
   const hours = (Date.now() - d.getTime()) / 3600000;
   if (hours < 24) return 'fresh';
@@ -451,7 +456,7 @@ function render() {
     if (isNoData) {
       popupHtml += '<div class="popup-brand">' + station.name + '</div><div class="popup-address">' + station.address + '</div><div style="font-size:12px;color:#E8A838;font-weight:600;margin:8px 0">Not reporting prices</div><div style="font-size:11px;color:#9CA3AF;line-height:1.5">This station has not submitted prices to the GOV.UK Fuel Finder scheme.</div><div style="font-size:10px;color:#888;margin-top:6px">' + station.distance + ' miles from Queensferry</div>';
     } else if (staleState === 'stale') {
-      const updDate = station.updated ? new Date(station.updated) : null;
+      const updDate = fuelDate(station) ? new Date(fuelDate(station)) : null;
       const updDateStr = updDate && !isNaN(updDate.getTime()) ? updDate.toLocaleDateString('en-GB', {day:'numeric',month:'short',year:'numeric'}) : 'unknown';
       popupHtml += '<div class="popup-brand">' + station.name + '</div><div class="popup-address">' + station.address + '</div><div style="font-size:13px;color:#9CA3AF;font-weight:500;margin:8px 0">Price not current</div><div style="font-size:11px;color:#9CA3AF;line-height:1.5">Last reported ' + updDateStr + '. Check at the pump for the current price.</div><div style="font-size:10px;color:#888;margin-top:6px">' + station.distance + ' miles from Queensferry</div>';
     } else {
@@ -462,9 +467,9 @@ function render() {
       popupHtml += '<div class="popup-brand">' + station.name + '</div><div class="popup-address">' + station.address + '</div>';
       if (isCostco(station)) popupHtml += '<div style="font-size:10px;color:#60a5fa;margin:4px 0">Costco membership required</div>';
       popupHtml += '<div class="popup-price" style="color:' + (isCheapestMarker ? '#16a34a' : '#1e293b') + '">' + price.toFixed(1) + 'p</div><div class="popup-label">' + (currentFuel === 'unleaded' ? 'Unleaded' : 'Diesel') + ' per litre</div><div style="font-size:11px;margin-top:4px;font-family:\'JetBrains Mono\',monospace">' + diffStr + '</div><div style="font-size:10px;color:#888;margin-top:4px">' + station.distance + ' miles from Queensferry</div>';
-      if (staleState === 'fresh') popupHtml += '<div style="font-size:10px;color:#34d399;margin-top:4px">Price changed ' + timeAgo(station.updated) + '</div>';
+      if (staleState === 'fresh') popupHtml += '<div style="font-size:10px;color:#34d399;margin-top:4px">Price changed ' + timeAgo(fuelDate(station)) + '</div>';
       else if (staleState === 'aging') {
-        const setDateStr = new Date(station.updated).toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
+        const setDateStr = new Date(fuelDate(station)).toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
         popupHtml += '<div style="font-size:10px;color:#F59E0B;margin-top:4px">Price set ' + setDateStr + '</div>';
       }
     }
@@ -488,8 +493,8 @@ function render() {
       const savingTxt    = savingPer50 ? ' &middot; saves &pound;' + savingPer50 + ' vs cheapest open station' : '';
       const isActive     = activeStation === station.id;
       let updatedTxt = '';
-      if (station.updated) {
-        const d = new Date(station.updated);
+      if (fuelDate(station)) {
+        const d = new Date(fuelDate(station));
         if (!isNaN(d.getTime())) updatedTxt = 'Updated today ' + d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
       }
       return '<div class="station-card costco-card' + (isActive ? ' active' : '') + '" data-id="' + station.id + '">' +
@@ -520,8 +525,8 @@ function render() {
     let timestampHtml = '';
     if (isNoData) {
       timestampHtml = '<div style="font-size:12px;color:#F59E0B">Not reporting prices</div>';
-    } else if (station.updated) {
-      const d = new Date(station.updated);
+    } else if (fuelDate(station)) {
+      const d = new Date(fuelDate(station));
       if (!isNaN(d.getTime())) {
         const dateStr = d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
         const staleDays = Math.floor((Date.now() - d.getTime()) / 86400000);
