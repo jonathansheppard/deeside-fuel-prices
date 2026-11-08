@@ -412,7 +412,13 @@ def main():
         if s.get("temporary_closure") or s.get("permanent_closure"):
             continue   # 8 Nov 2026: closed forecourts are left off the map
         node_id = s["node_id"]
+        # 8 Nov 2026: compact opening hours, mon..sun as [open, close, is_24_hours]
+        hours = {}
+        for day, v in ((s.get("opening_times") or {}).get("usual_days") or {}).items():
+            if isinstance(v, dict):
+                hours[day[:3]] = [(v.get("open") or "")[:5], (v.get("close") or "")[:5], bool(v.get("is_24_hours"))]
         local_stations[node_id] = {
+            "hours":          hours or None,
             "node_id":        node_id,
             "name":           s.get("trading_name", ""),
             "brand":          s.get("brand_name", s.get("trading_name", "")),
@@ -605,6 +611,24 @@ def main():
         log(f"Unleaded: {min(ul_prices)}p - {max(ul_prices)}p")
     if di_prices:
         log(f"Diesel: {min(di_prices)}p - {max(di_prices)}p")
+
+    # 8 Nov 2026: each station's prices from a week ago, from this repo's own history
+    try:
+        sha = subprocess.run(["git", "-C", REPO_DIR, "rev-list", "-1", "--before=7 days ago", "HEAD", "--", "stations.json"],
+                             capture_output=True, text=True, timeout=30).stdout.strip()
+        old_json = json.loads(subprocess.run(["git", "-C", REPO_DIR, "show", f"{sha}:stations.json"],
+                                             capture_output=True, text=True, timeout=30).stdout) if sha else {}
+        then = {}
+        for o in old_json.get("stations", []):
+            then[o.get("node_id") or ("name:" + o.get("name", ""))] = o
+        for st in stations_list:
+            o = then.get(st.get("node_id")) or then.get("name:" + st.get("name", ""))
+            if o and not o.get("cached"):
+                st["unleaded_week"] = o.get("unleaded")
+                st["diesel_week"] = o.get("diesel")
+        log(f"Week-ago prices matched for {sum(1 for x in stations_list if x.get('unleaded_week') or x.get('diesel_week'))} stations")
+    except Exception as e:
+        log(f"Week-ago prices skipped: {e}")
 
     cached = sum(1 for s in stations_list if s.get("cached"))
     live   = len(stations_list) - cached
