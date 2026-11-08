@@ -378,6 +378,7 @@ function timeAgo(dateStr) {
 // A station holding the same price for weeks is still reporting, so never suppress on age:
 // fresh < 24h, aging after that (price shown with "Price set" date). Stale only when there is no valid timestamp.
 function getStaleState(station) {
+  if (station.cached) return 'stale';   // 8 Nov 2026: backup prices are never ranked as cheapest
   if (!station.updated) return 'stale';
   const d = new Date(station.updated);
   if (isNaN(d.getTime())) return 'stale';

@@ -5,7 +5,7 @@ import csv
 import io
 import subprocess
 from math import radians, sin, cos, sqrt, atan2
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 
 # ── Credentials (from .env, never committed) ─────────────────────────────────
 def _load_env(path=os.path.expanduser("~/deeside-fuel-prices/.env")):
@@ -44,6 +44,7 @@ RETAILER_FEEDS = [
 SHEET_ID      = "1HE-K4RVMbwWOuF6hy-CJg1G5kFWtChpK4w1WKnWqjTQ"
 SHEET_GID     = "1435371472"
 SHEET_CSV_URL = f"https://docs.google.com/spreadsheets/d/{SHEET_ID}/export?format=csv&gid={SHEET_GID}"
+SHEET_MAX_AGE_DAYS = 14   # older sheet prices are ignored
 
 # ── Output ────────────────────────────────────────────────────────────────────
 OUTPUT_FILE   = os.path.expanduser("~/deeside-fuel-prices/stations.json")
@@ -313,8 +314,18 @@ def load_sheets_fallback():
                         stations[name] = row
                 except ValueError:
                     pass
-        log(f"Sheets fallback: {len(stations)} stations loaded")
-        return stations
+        # 8 Nov 2026: the sheet stopped being updated in March. Old rows were filling gaps with March prices
+        # (and adding stations with no location, so distance 0), which the map then ranked as cheapest.
+        cutoff = datetime.now() - timedelta(days=SHEET_MAX_AGE_DAYS)
+        fresh = {}
+        for name, row in stations.items():
+            try:
+                if datetime.strptime(row.get("date", ""), "%m/%d/%Y") >= cutoff:
+                    fresh[name] = row
+            except ValueError:
+                pass
+        log(f"Sheets fallback: {len(stations)} stations loaded, {len(fresh)} with a price from the last {SHEET_MAX_AGE_DAYS} days")
+        return fresh
     except Exception as e:
         log(f"Sheets fallback failed: {e}")
         return {}
