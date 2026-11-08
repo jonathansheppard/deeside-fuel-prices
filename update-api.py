@@ -355,10 +355,10 @@ def git_push():
         return
 
     # Stage stations.json
-    os.system(f'cd "{REPO_DIR}" && git add stations.json')
+    os.system(f'cd "{REPO_DIR}" && git add stations.json feed.xml')
 
     # Check if there's anything to commit
-    status = os.popen(f'cd "{REPO_DIR}" && git status --porcelain stations.json').read().strip()
+    status = os.popen(f'cd "{REPO_DIR}" && git status --porcelain stations.json feed.xml').read().strip()
     if not status:
         log("Git: no changes to commit")
         return
@@ -645,6 +645,14 @@ def main():
     log(f"Saved to {OUTPUT_FILE}")
 
     # ── Git commit and push ───────────────────────────────────────────────────
+    # 8 Nov 2026: news feed of price moves for the newsroom reader (feed.xml)
+    try:
+        import importlib.util
+        spec = importlib.util.spec_from_file_location("fuel_feed", os.path.join(REPO_DIR, "fuel_feed.py"))
+        ff = importlib.util.module_from_spec(spec); spec.loader.exec_module(ff)
+        ff.build(log)
+    except Exception as e:
+        log(f"Feed: failed: {e}")
     git_push()
 
 
