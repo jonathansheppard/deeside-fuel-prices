@@ -409,6 +409,8 @@ def main():
         postcode = (loc.get("postcode") or "").strip().upper()
         if is_excluded(postcode):
             continue
+        if s.get("temporary_closure") or s.get("permanent_closure"):
+            continue   # 8 Nov 2026: closed forecourts are left off the map
         node_id = s["node_id"]
         local_stations[node_id] = {
             "node_id":        node_id,
@@ -433,6 +435,9 @@ def main():
 
     log("Fetching fuel prices from new API...")
     all_prices = fetch_all_batches(PRICES_URL, token)
+    if len(all_prices) < 0.9 * len(all_info):
+        log(f"ABORT: only {len(all_prices)} price records for {len(all_info)} stations; keeping the last good stations.json")
+        return
 
     for p in all_prices:
         node_id = p.get("node_id")
