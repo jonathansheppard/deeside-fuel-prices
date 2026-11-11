@@ -462,7 +462,7 @@ def main():
                 st["unleaded"] = float(price)
                 if updated:
                     st["unleaded_updated"] = updated
-            elif "B7" in fuel_type or "DIESEL" in fuel_type:
+            elif fuel_type == "B7_STANDARD":
                 st["diesel"] = float(price)
                 if updated:
                     st["diesel_updated"] = updated
@@ -567,7 +567,7 @@ def main():
                 continue
             if "E10" in fuel_type:
                 all_unleaded.append(float(price))
-            elif "B7" in fuel_type or "DIESEL" in fuel_type:
+            elif fuel_type == "B7_STANDARD":
                 all_diesel.append(float(price))
 
     national_avg = {

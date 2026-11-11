@@ -64,8 +64,8 @@ function vs(price, avg) {
   document.getElementById('upd').textContent = 'Updated ' + new Date(data.lastUpdated).toLocaleTimeString('en-GB', {timeZone: 'Europe/London', hour: '2-digit', minute: '2-digit'});
   document.getElementById('body').outerHTML = `
     <div class="prices">
-      <div class="p"><div class="lbl">Petrol</div><div class="num">${u.unleaded.toFixed(1)}<span>p</span></div><div class="vs ${uc}">${ut}</div><div class="stn">${title(u.name)}</div></div>
-      <div class="p"><div class="lbl">Diesel</div><div class="num">${d.diesel.toFixed(1)}<span>p</span></div><div class="vs ${dc}">${dt}</div><div class="stn">${title(d.name)}</div></div>
+      <div class="p"><div class="lbl">Cheapest petrol</div><div class="num">${u.unleaded.toFixed(1)}<span>p</span></div><div class="vs ${uc}">${ut}</div><div class="stn">${title(u.name)}</div></div>
+      <div class="p"><div class="lbl">Cheapest diesel</div><div class="num">${d.diesel.toFixed(1)}<span>p</span></div><div class="vs ${dc}">${dt}</div><div class="stn">${title(d.name)}</div></div>
     </div>
     ${saving > 0 ? `<div class="save">Filling 50 litres of petrol here saves £${saving.toFixed(2)} on the UK average</div>` : ''}
     <div class="card-ft"><span>Compare all ${data.stations.length} local stations</span></div>`;
