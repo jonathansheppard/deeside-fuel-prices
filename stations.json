@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
     "unleaded": 167.6,
-    "diesel": 197.0
+    "diesel": 196.9
   },
-  "lastUpdated": "2026-11-12T06:32:26.517640+00:00",
+  "lastUpdated": "2026-11-12T07:03:34.833832+00:00",
   "stationCount": 148,
   "stations": [
     {
@@ -563,8 +563,8 @@
       "cached": false,
       "unleaded_updated": "2026-11-12T06:12:13.000Z",
       "diesel_updated": "2026-11-12T06:12:03.000Z",
-      "unleaded_week": 174.9,
-      "diesel_week": 208.9
+      "unleaded_week": 170.9,
+      "diesel_week": 205.9
     },
     {
       "hours": {
@@ -1795,8 +1795,8 @@
       "cached": false,
       "unleaded_updated": "2026-11-12T06:12:02.000Z",
       "diesel_updated": "2026-11-12T06:12:06.000Z",
-      "unleaded_week": 168.9,
-      "diesel_week": 196.9
+      "unleaded_week": 164.9,
+      "diesel_week": 193.9
     },
     {
       "hours": {
@@ -7221,12 +7221,12 @@
       "distance": 12.8,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 167.9,
-      "diesel": 195.9,
-      "updated": "2026-11-11T06:13:58.000Z",
+      "unleaded": 163.9,
+      "diesel": 194.9,
+      "updated": "2026-11-12T06:32:25.000Z",
       "cached": false,
-      "unleaded_updated": "2026-11-11T06:13:58.000Z",
-      "diesel_updated": "2026-11-10T06:23:40.000Z",
+      "unleaded_updated": "2026-11-12T06:32:25.000Z",
+      "diesel_updated": "2026-11-12T06:32:25.000Z",
       "unleaded_week": 171.9,
       "diesel_week": 198.9
     },
@@ -7781,12 +7781,12 @@
       "distance": 19.2,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 167.9,
-      "diesel": 198.9,
-      "updated": "2026-11-08T17:28:28.000Z",
+      "unleaded": 165.9,
+      "diesel": 196.9,
+      "updated": "2026-11-12T06:35:28.000Z",
       "cached": false,
-      "unleaded_updated": "2026-11-08T17:28:28.000Z",
-      "diesel_updated": "2026-09-17T18:48:35.000Z",
+      "unleaded_updated": "2026-11-12T06:35:09.000Z",
+      "diesel_updated": "2026-11-12T06:35:28.000Z",
       "unleaded_week": 173.9,
       "diesel_week": 198.9
     },
