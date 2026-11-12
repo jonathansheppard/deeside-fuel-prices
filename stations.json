@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
-    "unleaded": 167.7,
+    "unleaded": 167.6,
     "diesel": 197.0
   },
-  "lastUpdated": "2026-11-12T06:03:30.324792+00:00",
+  "lastUpdated": "2026-11-12T06:32:26.517640+00:00",
   "stationCount": 148,
   "stations": [
     {
@@ -557,12 +557,12 @@
       "distance": 14.0,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 170.9,
-      "diesel": 198.9,
-      "updated": "2026-11-11T22:24:00.000Z",
+      "unleaded": 166.9,
+      "diesel": 195.9,
+      "updated": "2026-11-12T06:12:13.000Z",
       "cached": false,
-      "unleaded_updated": "2026-11-11T22:24:00.000Z",
-      "diesel_updated": "2026-11-11T22:23:54.000Z",
+      "unleaded_updated": "2026-11-12T06:12:13.000Z",
+      "diesel_updated": "2026-11-12T06:12:03.000Z",
       "unleaded_week": 174.9,
       "diesel_week": 208.9
     },
@@ -1789,12 +1789,12 @@
       "distance": 17.6,
       "is_supermarket": false,
       "is_motorway": false,
-      "unleaded": 163.9,
-      "diesel": 188.9,
-      "updated": "2026-11-11T22:24:47.000Z",
+      "unleaded": 159.9,
+      "diesel": 185.9,
+      "updated": "2026-11-12T06:12:06.000Z",
       "cached": false,
-      "unleaded_updated": "2026-11-11T22:24:44.000Z",
-      "diesel_updated": "2026-11-11T22:24:47.000Z",
+      "unleaded_updated": "2026-11-12T06:12:02.000Z",
+      "diesel_updated": "2026-11-12T06:12:06.000Z",
       "unleaded_week": 168.9,
       "diesel_week": 196.9
     },
@@ -2075,7 +2075,7 @@
       "cached": false,
       "unleaded_updated": "2026-11-11T05:45:39.000Z",
       "diesel_updated": "2026-11-09T05:52:23.000Z",
-      "unleaded_week": 170.9,
+      "unleaded_week": 168.9,
       "diesel_week": 197.9
     },
     {
@@ -2462,11 +2462,11 @@
       "is_supermarket": true,
       "is_motorway": false,
       "unleaded": 168.9,
-      "diesel": 195.9,
-      "updated": "2026-11-11T06:12:40.000Z",
+      "diesel": 194.9,
+      "updated": "2026-11-12T06:21:17.000Z",
       "cached": false,
       "unleaded_updated": "2026-11-11T06:12:40.000Z",
-      "diesel_updated": "2026-11-11T06:12:40.000Z",
+      "diesel_updated": "2026-11-12T06:21:17.000Z",
       "unleaded_week": 173.9,
       "diesel_week": 197.9
     },
@@ -7278,11 +7278,11 @@
       "is_supermarket": false,
       "is_motorway": false,
       "unleaded": 160.9,
-      "diesel": 189.9,
-      "updated": "2026-11-11T06:26:07.000Z",
+      "diesel": 186.9,
+      "updated": "2026-11-12T06:25:49.000Z",
       "cached": false,
       "unleaded_updated": "2026-11-09T08:28:08.000Z",
-      "diesel_updated": "2026-11-11T06:26:07.000Z",
+      "diesel_updated": "2026-11-12T06:25:49.000Z",
       "unleaded_week": 169.9,
       "diesel_week": 196.9
     },
