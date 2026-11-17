@@ -3,7 +3,7 @@
     "unleaded": 164.1,
     "diesel": 194.6
   },
-  "lastUpdated": "2026-11-17T10:32:48.351076+00:00",
+  "lastUpdated": "2026-11-17T11:03:14.830299+00:00",
   "stationCount": 149,
   "stations": [
     {
@@ -844,7 +844,7 @@
       "unleaded_updated": "2026-11-17T10:26:00.000Z",
       "diesel_updated": "2026-11-17T10:26:00.000Z",
       "unleaded_week": 159.9,
-      "diesel_week": 196.9
+      "diesel_week": 192.9
     },
     {
       "hours": {
@@ -1852,7 +1852,7 @@
       "unleaded_updated": "2026-11-17T10:26:00.000Z",
       "diesel_updated": "2026-11-17T10:26:00.000Z",
       "unleaded_week": 159.9,
-      "diesel_week": 196.9
+      "diesel_week": 192.9
     },
     {
       "hours": {
@@ -7002,7 +7002,7 @@
       "unleaded_updated": "2026-11-17T10:26:00.000Z",
       "diesel_updated": "2026-11-17T10:26:00.000Z",
       "unleaded_week": 159.9,
-      "diesel_week": 196.9
+      "diesel_week": 192.9
     },
     {
       "hours": {
@@ -7674,7 +7674,7 @@
       "unleaded_updated": "2026-11-17T10:26:00.000Z",
       "diesel_updated": "2026-11-17T10:26:00.000Z",
       "unleaded_week": 159.9,
-      "diesel_week": 196.9
+      "diesel_week": 192.9
     },
     {
       "hours": {
