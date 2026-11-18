@@ -2,7 +2,8 @@
 <html lang="en-GB">
 <head>
 <meta charset="UTF-8">
-<script>window.__e = fetch('https://fuel.deeside.com/stations.json', {cache: 'no-cache'}).then(function (r) { return r.json(); });</script>
+<script>window.__e = fetch('https://fuel.deeside.com/stations.json', {cache: 'no-cache'}).then(function (r) { return r.json(); });
+window.__h = fetch('https://fuel.deeside.com/history.json', {cache: 'no-cache'}).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; });</script>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap"></noscript>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Deeside fuel prices</title>
@@ -38,6 +39,9 @@ a { color: inherit; text-decoration: none; }
 .vs { font-size: 11.5px; font-weight: 600; margin-top: 2px; }
 .vs.green { color: var(--green-dk); } .vs.amber { color: var(--amber); } .vs.red { color: var(--red); }
 .stn { font-size: 11.5px; color: var(--muted); margin-top: 3px; line-height: 1.3; }
+.spark { margin-top: 8px; }
+.spark svg { display: block; width: 100%; height: 24px; overflow: visible; }
+.spark small { display: block; font-size: 10.5px; color: var(--muted); margin-top: 2px; white-space: nowrap; }
 .save { padding: 8px 14px; font-size: 12px; color: var(--ink); background: #f6faee; border-top: 1px solid var(--rule); }
 </style>
 </head>
@@ -54,18 +58,30 @@ function vs(price, avg) {
   const d = +(price - avg).toFixed(1);
   return d < 0 ? ['green', `${Math.abs(d)}p below UK average`] : [d < 5 ? 'amber' : 'red', `${d}p above UK average`];
 }
-(window.__e || fetch(DATA_URL, {cache: 'no-cache'}).then(r => r.json())).then(data => {
+function spark(vals) {
+  vals = (vals || []).filter(v => typeof v === 'number');
+  if (vals.length < 7) return '';
+  const W = 140, Hh = 24, lo = Math.min(...vals), hi = Math.max(...vals), r = (hi - lo) || 1;
+  const pts = vals.map((v, i) => [i / (vals.length - 1) * W, 2 + (1 - (v - lo) / r) * (Hh - 4)]);
+  const d = pts.map((p, i) => (i ? 'L' : 'M') + p[0].toFixed(1) + ' ' + p[1].toFixed(1)).join(' ');
+  const [ex, ey] = pts[pts.length - 1], ch = +(vals[vals.length - 1] - vals[0]).toFixed(1);
+  const txt = '30-day local trend: ' + (ch === 0 ? 'no change' : (ch < 0 ? `down ${Math.abs(ch)}p` : `up ${ch}p`));
+  return `<div class="spark"><svg viewBox="0 0 ${W} ${Hh}" preserveAspectRatio="none" aria-hidden="true"><path d="${d}" fill="none" stroke="#adb5bd" stroke-width="1.6" vector-effect="non-scaling-stroke" stroke-linejoin="round"/><circle cx="${ex}" cy="${ey}" r="3" fill="#88c425"/></svg><small>${txt}</small></div>`;
+}
+Promise.all([(window.__e || fetch(DATA_URL, {cache: 'no-cache'}).then(r => r.json())), window.__h || Promise.resolve(null)]).then(([data, hist]) => {
   const open = data.stations.filter(s => !(s.name || '').toUpperCase().includes('COSTCO') && s.distance > 0 && s.distance <= 8 && fresh(s));
   const u = open.filter(s => s.unleaded >= 115).sort((a, b) => a.unleaded - b.unleaded)[0];
   const d = open.filter(s => s.diesel >= 115).sort((a, b) => a.diesel - b.diesel)[0];
   if (!u || !d) throw new Error('no prices');
   const [uc, ut] = vs(u.unleaded, data.nationalAvg.unleaded), [dc, dt] = vs(d.diesel, data.nationalAvg.diesel);
   const saving = (data.nationalAvg.unleaded - u.unleaded) / 100 * 50;
+  const days = (hist && hist.days) || [];
+  const su = spark([...days.map(x => x.unleaded), u.unleaded]), sd = spark([...days.map(x => x.diesel), d.diesel]);
   document.getElementById('upd').textContent = 'Updated ' + new Date(data.lastUpdated).toLocaleTimeString('en-GB', {timeZone: 'Europe/London', hour: '2-digit', minute: '2-digit'});
   document.getElementById('body').outerHTML = `
     <div class="prices">
-      <div class="p"><div class="lbl">Cheapest petrol</div><div class="num">${u.unleaded.toFixed(1)}<span>p</span></div><div class="vs ${uc}">${ut}</div><div class="stn">${title(u.name)}</div></div>
-      <div class="p"><div class="lbl">Cheapest diesel</div><div class="num">${d.diesel.toFixed(1)}<span>p</span></div><div class="vs ${dc}">${dt}</div><div class="stn">${title(d.name)}</div></div>
+      <div class="p"><div class="lbl">Cheapest petrol</div><div class="num">${u.unleaded.toFixed(1)}<span>p</span></div><div class="vs ${uc}">${ut}</div><div class="stn">${title(u.name)}</div>${su}</div>
+      <div class="p"><div class="lbl">Cheapest diesel</div><div class="num">${d.diesel.toFixed(1)}<span>p</span></div><div class="vs ${dc}">${dt}</div><div class="stn">${title(d.name)}</div>${sd}</div>
     </div>
     ${saving > 0 ? `<div class="save">Filling 50 litres of petrol here saves £${saving.toFixed(2)} on the UK average</div>` : ''}
     <div class="card-ft"><span>Compare all ${data.stations.length} local stations</span></div>`;

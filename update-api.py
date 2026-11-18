@@ -355,10 +355,10 @@ def git_push():
         return
 
     # Stage stations.json
-    os.system(f'cd "{REPO_DIR}" && git add stations.json feed.xml')
+    os.system(f'cd "{REPO_DIR}" && git add stations.json feed.xml history.json')
 
     # Check if there's anything to commit
-    status = os.popen(f'cd "{REPO_DIR}" && git status --porcelain stations.json feed.xml').read().strip()
+    status = os.popen(f'cd "{REPO_DIR}" && git status --porcelain stations.json feed.xml history.json').read().strip()
     if not status:
         log("Git: no changes to commit")
         return
