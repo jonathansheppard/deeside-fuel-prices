@@ -423,6 +423,7 @@ function getStaleState(station) {
   if (isNaN(d.getTime())) return 'stale';
   const hours = (Date.now() - d.getTime()) / 3600000;
   if (hours < 24) return 'fresh';
+  if (hours > 14 * 24) return 'stale';   // 18 Nov 2026: Fuel Finder has no separate last-reported date; 14 days unchanged is treated as not reporting
   return 'aging';
 }
 
