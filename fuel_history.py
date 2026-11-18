@@ -7,7 +7,7 @@ Run daily from cron; update-api.py commits history.json with its next push."""
 import json, os, subprocess, urllib.request, datetime as dt
 
 REPO = os.path.expanduser("~/deeside-fuel-prices")
-STALE_H, DAYS = 120, 30
+STALE_H, DAYS, MIN_STATIONS = 120, 29, 10  # skip days with too few Flintshire stations reporting
 
 def flintshire_postcodes():
     st = json.load(open(os.path.join(REPO, "stations.json")))["stations"]
@@ -30,6 +30,7 @@ def pick(data):
         return (t0 - u).total_seconds() / 3600 < STALE_H
     ok = [s for s in data["stations"] if "COSTCO" not in (s.get("name") or "").upper()
           and (s.get("postcode") or "").strip().upper() in FLINT and fresh(s)]
+    if len(ok) < MIN_STATIONS: return None, None
     u = min([s["unleaded"] for s in ok if (s.get("unleaded") or 0) >= 115], default=None)
     d = min([s["diesel"] for s in ok if (s.get("diesel") or 0) >= 115], default=None)
     return u, d
@@ -55,6 +56,7 @@ for k in range(DAYS, 0, -1):
                                               capture_output=True, text=True).stdout))
     except Exception as e:
         print("skip", day, e); continue
+    if u is None or d is None: continue
     rows.append([day.isoformat(), u, d])
 u, d = clean([r[1] for r in rows]), clean([r[2] for r in rows])
 out = {"updated": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"), "flintshire": sorted(FLINT),
