@@ -6,7 +6,7 @@
 window.__h = fetch('https://fuel.deeside.com/history.json', {cache: 'no-cache'}).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; });</script>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap"></noscript>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Deeside fuel prices</title>
+<title>Flintshire fuel prices</title>
 <style>
 /* Deeside.com house style for sidebar widgets: matches the site (Open Sans, white cards, site green) */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -48,7 +48,7 @@ a { color: inherit; text-decoration: none; }
 </head>
 <body>
 <a class="card" id="w" href="https://fuel.deeside.com/" target="_blank" rel="noopener">
-  <div class="card-hd"><h3>Deeside fuel prices</h3><span class="upd" id="upd"></span></div>
+  <div class="card-hd"><h3>Flintshire fuel prices</h3><span class="upd" id="upd"></span></div>
   <div class="load" id="body">Loading…</div>
 </a>
 <script>
