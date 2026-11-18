@@ -525,19 +525,20 @@ function render() {
         .map(s => getPrice(s));
       const cheapestOpen = openLivePrices.length ? Math.min(...openLivePrices) : null;
       const savingPer50  = (cheapestOpen && price < cheapestOpen) ? ((cheapestOpen - price) / 100 * 50).toFixed(2) : null;
-      const savingTxt    = savingPer50 ? ' &middot; saves &pound;' + savingPer50 + ' vs cheapest open station' : '';
+      const costcoOld = fuelDate(station) && (Date.now() - new Date(fuelDate(station)).getTime()) > 7 * 24 * 3600000;
+      const savingTxt    = (savingPer50 && !costcoOld) ? ' &middot; saves &pound;' + savingPer50 + ' vs cheapest open station' : '';
       const isActive     = activeStation === station.id;
       let updatedTxt = '';
       if (fuelDate(station)) {
         const d = new Date(fuelDate(station));
         if (!isNaN(d.getTime())) updatedTxt = 'Updated ' + (d.toDateString() === new Date().toDateString() ? 'today ' : d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' }) + ' ') + d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
       }
-      return '<div class="station-card costco-card' + (isActive ? ' active' : '') + '" data-id="' + station.id + '">' +
+      return '<div class="station-card costco-card' + (costcoOld ? ' stale' : '') + (isActive ? ' active' : '') + '" data-id="' + station.id + '">' +
         '<div class="station-info"><div class="station-brand" style="align-items:baseline;gap:0">' +
         '<span class="costco-name">&#128274; ' + station.name + '</span>' +
         '<span class="costco-members-tag">Members Only</span></div>' +
         '<div class="costco-sub">' + price.toFixed(1) + 'p/litre' + savingTxt + ' &middot; ' + station.distance + ' mi</div>' +
-        (updatedTxt ? '<div class="timestamp-fresh" style="margin-top:3px">' + updatedTxt + '</div>' : '') +
+        (updatedTxt ? '<div class="' + (costcoOld ? 'timestamp-stale' : 'timestamp-fresh') + '" style="margin-top:3px">' + updatedTxt + '</div>' : '') +
         '</div><div class="station-price"><div class="costco-price">' + price.toFixed(1) + '<small style="font-size:12px">p</small></div></div></div>';
     }
 
