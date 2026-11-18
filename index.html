@@ -530,7 +530,7 @@ function render() {
       let updatedTxt = '';
       if (fuelDate(station)) {
         const d = new Date(fuelDate(station));
-        if (!isNaN(d.getTime())) updatedTxt = 'Updated today ' + d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
+        if (!isNaN(d.getTime())) updatedTxt = 'Updated ' + (d.toDateString() === new Date().toDateString() ? 'today ' : d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' }) + ' ') + d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
       }
       return '<div class="station-card costco-card' + (isActive ? ' active' : '') + '" data-id="' + station.id + '">' +
         '<div class="station-info"><div class="station-brand" style="align-items:baseline;gap:0">' +
