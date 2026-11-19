@@ -3,7 +3,7 @@
     "unleaded": 162.2,
     "diesel": 193.4
   },
-  "lastUpdated": "2026-11-19T21:31:30.199762+00:00",
+  "lastUpdated": "2026-11-19T22:34:04.168220+00:00",
   "stationCount": 149,
   "stations": [
     {
@@ -563,8 +563,8 @@
       "cached": false,
       "unleaded_updated": "2026-11-18T22:32:05.000Z",
       "diesel_updated": "2026-11-18T22:31:58.000Z",
-      "unleaded_week": 164.9,
-      "diesel_week": 193.9
+      "unleaded_week": 168.9,
+      "diesel_week": 196.9
     },
     {
       "hours": {
@@ -619,8 +619,8 @@
       "cached": false,
       "unleaded_updated": "2026-11-15T20:58:12.000Z",
       "diesel_updated": "2026-11-16T22:31:41.000Z",
-      "unleaded_week": 162.9,
-      "diesel_week": 193.9
+      "unleaded_week": 161.9,
+      "diesel_week": 192.9
     },
     {
       "hours": {
@@ -731,7 +731,7 @@
       "cached": false,
       "unleaded_updated": "2026-11-18T21:44:20.000Z",
       "diesel_updated": "2026-11-16T21:33:16.000Z",
-      "unleaded_week": 169.9,
+      "unleaded_week": 168.9,
       "diesel_week": 197.9
     },
     {
@@ -1291,7 +1291,7 @@
       "cached": false,
       "unleaded_updated": "2026-11-18T21:47:53.000Z",
       "diesel_updated": "2026-11-18T21:47:53.000Z",
-      "unleaded_week": 169.9,
+      "unleaded_week": 168.9,
       "diesel_week": 197.9
     },
     {
@@ -1795,8 +1795,8 @@
       "cached": false,
       "unleaded_updated": "2026-11-18T22:29:04.000Z",
       "diesel_updated": "2026-11-18T22:29:08.000Z",
-      "unleaded_week": 159.9,
-      "diesel_week": 185.9
+      "unleaded_week": 163.9,
+      "diesel_week": 188.9
     },
     {
       "hours": {
@@ -6157,12 +6157,12 @@
       "distance": 19.4,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 166.9,
-      "diesel": 195.9,
-      "updated": "2026-11-16T11:48:52.000Z",
+      "unleaded": 165.9,
+      "diesel": 193.9,
+      "updated": "2026-11-19T21:43:24.000Z",
       "cached": false,
-      "unleaded_updated": "2026-11-16T11:48:52.000Z",
-      "diesel_updated": "2026-11-16T11:48:52.000Z",
+      "unleaded_updated": "2026-11-19T21:43:24.000Z",
+      "diesel_updated": "2026-11-19T21:43:24.000Z",
       "unleaded_week": 169.9,
       "diesel_week": 198.9
     },
@@ -7561,8 +7561,8 @@
       "cached": false,
       "unleaded_updated": "2026-11-18T22:23:55.000Z",
       "diesel_updated": "2026-11-18T22:23:55.000Z",
-      "unleaded_week": 165.9,
-      "diesel_week": 195.9
+      "unleaded_week": 162.9,
+      "diesel_week": 192.9
     },
     {
       "hours": {
