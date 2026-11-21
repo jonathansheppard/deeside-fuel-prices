@@ -3,7 +3,7 @@
     "unleaded": 161.1,
     "diesel": 192.5
   },
-  "lastUpdated": "2026-11-21T17:32:55.391268+00:00",
+  "lastUpdated": "2026-11-21T18:03:07.511666+00:00",
   "stationCount": 149,
   "stations": [
     {
@@ -395,8 +395,8 @@
       "cached": false,
       "unleaded_updated": "2026-11-20T13:35:49.000Z",
       "diesel_updated": "2026-11-20T13:35:49.000Z",
-      "unleaded_week": 162.9,
-      "diesel_week": 192.9
+      "unleaded_week": 161.9,
+      "diesel_week": 191.9
     },
     {
       "hours": {
