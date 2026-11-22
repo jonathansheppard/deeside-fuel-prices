@@ -3,7 +3,7 @@
     "unleaded": 160.9,
     "diesel": 192.4
   },
-  "lastUpdated": "2026-11-22T22:32:38.927290+00:00",
+  "lastUpdated": "2026-11-22T23:03:14.022873+00:00",
   "stationCount": 149,
   "stations": [
     {
@@ -221,14 +221,14 @@
       "distance": 14.1,
       "is_supermarket": true,
       "is_motorway": false,
-      "unleaded": 156.9,
+      "unleaded": 155.9,
       "diesel": 187.9,
-      "updated": "2026-11-21T22:39:21.000Z",
+      "updated": "2026-11-22T22:38:50.000Z",
       "cached": false,
-      "unleaded_updated": "2026-11-21T22:39:21.000Z",
+      "unleaded_updated": "2026-11-22T22:38:50.000Z",
       "diesel_updated": "2026-11-20T22:40:53.000Z",
       "unleaded_week": 159.9,
-      "diesel_week": 192.9
+      "diesel_week": 191.9
     },
     {
       "hours": {
