@@ -1,9 +1,9 @@
 {
   "nationalAvg": {
-    "unleaded": 160.9,
+    "unleaded": 160.8,
     "diesel": 192.4
   },
-  "lastUpdated": "2026-11-22T23:31:44.716896+00:00",
+  "lastUpdated": "2026-11-23T00:31:43.211196+00:00",
   "stationCount": 149,
   "stations": [
     {
@@ -1683,8 +1683,8 @@
       "cached": false,
       "unleaded_updated": "2026-11-22T23:09:20.000Z",
       "diesel_updated": "2026-11-20T23:20:21.000Z",
-      "unleaded_week": 161.9,
-      "diesel_week": 193.9
+      "unleaded_week": 159.9,
+      "diesel_week": 191.9
     },
     {
       "hours": {
@@ -2300,7 +2300,7 @@
       "unleaded_updated": "2026-11-20T22:56:56.000Z",
       "diesel_updated": "2026-11-16T22:56:19.000Z",
       "unleaded_week": 159.9,
-      "diesel_week": 193.9
+      "diesel_week": 191.9
     },
     {
       "hours": {
